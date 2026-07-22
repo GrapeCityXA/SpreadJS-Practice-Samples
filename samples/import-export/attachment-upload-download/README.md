@@ -1,5 +1,3 @@
-# 上传、导出附件
-
 # SpreadJS Attachment Upload and Export
 
 This example demonstrates how to implement attachment management in a SpreadJS worksheet, including uploading attachments to cells, downloading cell attachments, clearing attachments, and exporting the workbook along with all attachments as a ZIP file. This functionality is achieved through custom commands, cell tags, and hyperlink mechanisms. It is suitable for business scenarios that require associating external files with spreadsheet data, such as contract management and expense reports.
