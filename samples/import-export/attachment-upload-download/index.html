@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SpreadJS in TypeScript</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.grapecity.com.cn/SpreadJS/package-contents/19.0.3/spread-sheets/styles/gc.spread.sheets.excel2013white.css"
+    />
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/file-saver/src/FileSaver.js"></script>
+    <script src="node_modules/jszip/dist/jszip.min.js"></script>
+    <script src="systemjs.config.js"></script>
+    <div style="margin-bottom: 8px">
+      <button id="uploadAttach">上传附件</button>
+      <button id="removeAttach">清除附件</button>
+      <button id="fileSaver">文件保存</button>
+      <button id="loadSubmitFile">加载文件</button>
+      <button id="loadPackage">打包下载</button>
+    </div>
+    <div
+      id="fileOperate"
+      style="
+        visibility: hidden;
+        position: absolute;
+        top: 100px;
+        left: 300px;
+        z-index: 10;
+        background-color: #eee;
+        padding: 16px;
+      "
+    >
+      <label for="choseFile">选择文件</label>
+      <input type="file" id="choseFile" name="choseFile" />
+      <button id="submit">提交</button>
+      <button id="cancel">取消</button>
+    </div>
+    <div
+      id="ss"
+      style="width: 100%; height: 85vh; border: 1px solid darkgray"
+    ></div>
+    <script>
+      System.import("./src/app.js");
+    </script>
+  </head>
+  <body></body>
+</html>
