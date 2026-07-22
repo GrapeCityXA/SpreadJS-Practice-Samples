@@ -1,0 +1,14 @@
+# 清除单元格后背景变色
+
+Online demo: https://demo.grapecity.com.cn/spreadjs/practice/events/change-bgcolor-after-clear-content
+
+## Local Code
+
+The local code for this example is being organized.
+
+## What To Expect
+
+- Runnable demo files.
+- Local assets required by the example.
+- Notes about key SpreadJS APIs and behavior.
+- Verification steps.
