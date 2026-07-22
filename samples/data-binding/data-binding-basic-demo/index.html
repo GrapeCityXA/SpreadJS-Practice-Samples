@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpreadJS Designer in Javascript</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.grapecity.com.cn/SpreadJS/package-contents/19.0.3/spread-sheets/styles/gc.spread.sheets.excel2013white.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.grapecity.com.cn/SpreadJS/package-contents/19.0.3/spread-sheets-designer/styles/gc.spread.sheets.designer.light.min.css"
+    />
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import("./src/app.js");
+    </script>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+      }
+      #designer-container {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">获取数据源（打开f12控制台查看）</button>
+    <div id="designer-container"></div>
+  </body>
+</html>
