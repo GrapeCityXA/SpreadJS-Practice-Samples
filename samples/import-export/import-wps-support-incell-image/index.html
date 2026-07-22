@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpreadJS in Javascript</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.grapecity.com.cn/SpreadJS/package-contents/19.0.3/spread-sheets/styles/gc.spread.sheets.excel2013white.css"
+    />
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+
+    <script src="https://unpkg.com/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #ss {
+        height: 80%;
+        width: 100%;
+      }
+
+      button {
+        padding: 4px 8px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <span>请选择一个包含单元格内图片的Excel文件，或直接点此下载：</span>
+      <a href="wps单元格内图片.xlsx">下载模板</a>
+    </div>
+    <div>
+      <input type="file" id="xlsxFile" accept=".xlsx" />
+      <button id="import">解析并导入</button>
+    </div>
+    <div id="ss"></div>
+  </body>
+
+  <script>
+    System.import("./src/app.js");
+  </script>
+</html>
