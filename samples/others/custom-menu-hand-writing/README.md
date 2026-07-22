@@ -1,14 +1,151 @@
-# 自定义右键菜单—手写签名
+# Custom Context Menu — Handwritten Signature in SpreadJS
 
-Online demo: https://demo.grapecity.com.cn/spreadjs/practice/others/custom-menu-hand-writing
+This example demonstrates how to customize the context menu in SpreadJS to implement a handwritten signature feature. Users can open the signature panel via the right-click context menu, perform a handwritten signature using a mouse or touch-enabled device, and automatically insert the completed signature into the active cell as an image shape. This example combines SpreadJS's custom menu APIs with Canvas drawing technologies to deliver a practical electronic signature solution.
 
-## Local Code
+---
 
-The local code for this example is being organized.
+## Core Scenarios & Solutions
 
-## What To Expect
+- **Electronic Signature Requirements**: Supports scenarios requiring user handwritten signatures within spreadsheets, such as contract approvals, document confirmations, etc.
+- **Context Menu Extension**: Demonstrates how to extend the standard context menu in SpreadJS to include custom functionality.
+- **jSignature Integration**: Details how to convert drawings from the `jSignature` canvas into image data and insert them back into the spreadsheet.
+- **Streamlined User Experience**: Provides an intuitive signature modal with options to rewrite/clear, cancel, or confirm the signature.
 
-- Runnable demo files.
-- Local assets required by the example.
-- Notes about key SpreadJS APIs and behavior.
-- Verification steps.
+---
+
+## Implementation Details
+
+### 1. Add Custom Context Menu Items
+
+Register a custom command in the SpreadJS `commandManager` and push the item description into the `contextMenu.menuData` array:
+
+```javascript
+var commandManager = spread.commandManager();
+commandManager.register("openSignaturePanel", {
+  canUndo: false,
+  execute: function (context, options, isUndo) {
+    if (document.getElementById("signArea")) {
+      document.getElementById("signArea").style.visibility = "visible";
+    }
+  },
+});
+
+spread.contextMenu.menuData.push({
+  text: "Handwritten Signature",
+  name: "customSignature",
+  command: "openSignaturePanel",
+  workArea: "viewport",
+});
+```
+
+### 2. Configure jSignature Canvas Panel
+
+Include jQuery and the jSignature libraries in your HTML:
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.3/jSignature.min.js"></script>
+```
+
+### 3. Convert Canvas to Image and Insert into Worksheet
+
+Fetch the canvas drawing data as a base64-encoded string, create a new picture shape, and anchor its boundaries to the active cell coordinates:
+
+```javascript
+document.getElementById("confirm").onclick = function () {
+  let datapair = "data:" + $("#sign").jSignature("getData");
+  let sheet = spread.getActiveSheet();
+  let row = sheet.getActiveRowIndex();
+  let col = sheet.getActiveColumnIndex();
+  let picture = sheet.shapes.addPictureShape(
+    `${sheet.name()}-${row}-${col}`,
+    datapair,
+    0,
+    0,
+    100,
+    100,
+  );
+  picture.startRow(row);
+  picture.endRow(row + 1);
+  picture.startColumn(col);
+  picture.endColumn(col + 1);
+  picture.startRowOffset(0);
+  picture.startColumnOffset(0);
+  picture.endRowOffset(0);
+  picture.endColumnOffset(0);
+  picture.allowResize(false);
+  picture.allowMove(false);
+  picture.allowRotate(false);
+  $("#sign").jSignature("reset");
+  document.getElementById("signArea").style.visibility = "hidden";
+};
+```
+
+---
+
+## Technology Stack
+
+- **SpreadJS**: Core spreadsheet engine, managing cell actions, custom menus, and shapes API.
+- **jSignature**: Free/open drawing canvas library specifically optimized for capturing signatures.
+- **Vanilla JavaScript & HTML5**: DOM manipulations and modal dialog handlers.
+
+---
+
+## How to Run
+
+### Run Locally
+
+Open `index.html` directly in your browser. No local package installations are required as libraries are loaded via CDN.
+
+### Steps to Test
+
+1. Click any cell in the sheet to make it the active selection.
+2. Right-click to open the context menu and select the **Handwritten Signature** option.
+3. Draw your signature using the mouse (or fingers/stylus on touch screens) in the popped-up modal area.
+4. Click **Clear** (or "重写") to wipe the canvas and start over.
+5. Click **Confirm** (or "确认") to overlay the signature as a static shape in the cell, locking it from moving/resizing.
+6. Click **Cancel** (or "取消") to close the modal.
+
+---
+
+## Features & Recommendations
+
+### Pros
+
+- **Native UX Integration**: Leverages native spreadsheet context menus for a professional user experience.
+- **Simple Integration**: Easily converts canvas pixel data into standard Base64-encoded image formats.
+- **Cell Anchoring**: Locks the signature precisely inside the coordinates of the target cell.
+- **Compatibility**: Works across major modern web browsers.
+
+### Limitations & Recommendations for Production
+
+- **Mobile Optimizations**: Capture touch coordinates correctly to support high-density pen/touch inputs on tablets and phones.
+- **Line Smoothing**: Apply Bézier curve interpolation to smooth out jagged lines generated by rapid drawing.
+- **Storage/Security**: In secure document systems, sign the drawing data with cryptographic hashes on the backend, rather than simply saving loose images.
+- **Reusable Signatures**: Allow users to optionally save their signatures to their profile to quickly sign future spreadsheets.
+
+---
+
+## Key Code Snippets
+
+### Resetting the Canvas Drawing Area
+
+```javascript
+document.getElementById("clear").onclick = function () {
+  $("#sign").jSignature("reset");
+};
+```
+
+---
+
+## Summary
+
+This case study demonstrates how custom commands interact with HTML elements outside the spreadsheet to modify cells. Key learning points:
+
+1. Registering custom SpreadJS action commands.
+2. Adding new options into the built-in context menus.
+3. Fetching raw canvas drawing representations.
+4. Rendering image objects as worksheet shapes.
+5. Implementing overlay modals.
+
+This design pattern is suitable for business solutions needing document sign-offs, workflow approvals, online forms, and drawing annotations.
