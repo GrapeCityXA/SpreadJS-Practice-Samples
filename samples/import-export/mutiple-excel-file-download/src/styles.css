@@ -1,0 +1,11 @@
+#ss {
+  height: 400px;
+  width: 100%;
+}
+p {
+  color: #336699;
+  text-align: center;
+}
+button {
+  margin-bottom: 8px;
+}
