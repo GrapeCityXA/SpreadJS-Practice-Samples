@@ -66,7 +66,7 @@ activeSheet.setArray(0, 0, [
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet engine.
+- **SpreadJS 19.0.3**: Core spreadsheet engine.
 - **SpreadJS Designer 15.0.0**: Interactive designer component.
 - **SpreadJS ExcelIO 15.0.0**: File importing and exporting handlers.
 - **TypeScript 4.1.2**: Script compile configurations.

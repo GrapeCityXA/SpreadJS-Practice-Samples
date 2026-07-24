@@ -11,6 +11,7 @@ The goal is to make practical SpreadJS examples easy to find, run, study, and re
 ## What Is Here
 
 - `samples/` organizes examples by category and demo slug.
+- `samples/shared/` contains shared runtime configuration used by runnable demos.
 - `docs/demo-catalog.md` lists the available examples and links to their online counterparts.
 - `samples/_template/` shows the recommended shape for a runnable local demo.
 
@@ -20,6 +21,8 @@ The goal is to make practical SpreadJS examples easy to find, run, study, and re
 2. Open the matching folder under `samples/<category>/<demo-slug>/`.
 3. Read that demo's `README.md`.
 4. Run the demo according to its local instructions.
+
+When using a local development server, serve the repository root or the `samples/` directory so the shared runtime config under `samples/shared/` is reachable.
 
 Some folders may initially contain only an online demo link while the local code is being organized.
 
@@ -34,6 +37,14 @@ Each completed demo should include:
 - `assets/` for local data, images, workbooks, fonts, or other required files.
 
 Keep folder names aligned with the source URL slug. If a source slug has a typo, keep it for traceability and mention the corrected wording in the demo README.
+
+Use the shared SystemJS config at `samples/shared/systemjs.config.js` for static demos unless a demo has a genuinely unique loader requirement.
+
+## Dependency Rules
+
+Runnable demos should declare their runtime dependencies in the local `package.json` and load them from `node_modules`. Do not use the GrapeCity CDN or other public CDNs as runtime dependencies for demos that are released from this repository.
+
+Keep SpreadJS package versions pinned consistently across demos. When a demo needs an add-on such as IO, Designer, PDF, or Charts, add the matching `@grapecity-software/*` package explicitly.
 
 ## SpreadJS License
 

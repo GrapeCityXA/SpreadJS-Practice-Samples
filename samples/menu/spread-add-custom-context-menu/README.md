@@ -89,7 +89,7 @@ spread.commandManager().register("customCommand", {
 
 ## Technology Stack
 
-- **SpreadJS 16.0.1**: The core spreadsheet engine.
+- **SpreadJS 19.0.3**: The core spreadsheet engine.
 - **SystemJS 0.19.22**: JavaScript module loading framework.
 - **TypeScript 4.1.2**: Scripting environment setups.
 

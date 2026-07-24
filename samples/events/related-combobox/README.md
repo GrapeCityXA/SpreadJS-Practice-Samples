@@ -91,7 +91,7 @@ sheet.bind(GC.Spread.Sheets.Events.ValueChanged, function (e, info) {
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet components.
+- **SpreadJS 19.0.3**: Core spreadsheet components.
 - **SystemJS 0.19.22**: JavaScript module loading framework.
 - **TypeScript 4.1.2**: Type compiler environment.
 

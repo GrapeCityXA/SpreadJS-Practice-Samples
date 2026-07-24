@@ -4,7 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SpreadJS Demo</title>
+  <link
+    rel="stylesheet"
+    href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css"
+  >
   <link rel="stylesheet" href="./src/styles.css">
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="../shared/systemjs.config.js"></script>
 </head>
 <body>
   <main class="demo-shell">
@@ -14,6 +20,8 @@
     </header>
     <section id="spread-host" class="spread-host" aria-label="SpreadJS workbook"></section>
   </main>
-  <script src="./src/app.js"></script>
+  <script>
+    System.import("./src/app");
+  </script>
 </body>
 </html>

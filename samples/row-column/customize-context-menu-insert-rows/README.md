@@ -148,7 +148,7 @@ function createInput() {
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet framework.
+- **SpreadJS 19.0.3**: Core spreadsheet framework.
 - **SystemJS**: Module loader.
 - **TypeScript 4.1.2**: Typed language support.
 

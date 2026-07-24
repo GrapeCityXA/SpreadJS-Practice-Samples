@@ -1,5 +1,5 @@
 {
-  "name": "spread-designer-js",
+  "name": "spreadjs-demo-template",
   "dependencies": {
     "plugin-typescript": "^8.0.0",
     "systemjs": "^0.19.22",

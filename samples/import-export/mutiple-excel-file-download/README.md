@@ -105,8 +105,8 @@ saveAs(content, "spreads.zip");
 
 ## Technology Stack
 
-- **SpreadJS 16.2.0**: The core spreadsheet component.
-- **@grapecity/spread-sheets-io 16.2.0**: Handles Excel import and export.
+- **SpreadJS 19.0.3**: The core spreadsheet component.
+- **@grapecity-software/spread-sheets-io 19.0.3**: Handles Excel import and export.
 - **JSZip 3.1.5**: Client-side ZIP file generation.
 - **FileSaver.js**: Client-side file downloading helper.
 - **jQuery 3.6.1**: Simplifies DOM traversal and events.

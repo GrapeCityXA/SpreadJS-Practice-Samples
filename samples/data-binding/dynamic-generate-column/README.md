@@ -121,7 +121,7 @@ spread.resumeCalcService(true);
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet components.
+- **SpreadJS 19.0.3**: Core spreadsheet components.
 - **jQuery 3.1.1**: Event triggers.
 - **SystemJS 0.19.22**: JavaScript module loading.
 - **TypeScript 4.1.2**: Typed configurations.

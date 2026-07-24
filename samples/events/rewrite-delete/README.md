@@ -86,7 +86,7 @@ spread
 
 ## Technology Stack
 
-- **SpreadJS 16.0.1**: Core spreadsheet library.
+- **SpreadJS 19.0.3**: Core spreadsheet library.
 - **TypeScript 4.1.2**: Scripting language support.
 - **SystemJS 0.19.22**: JavaScript module loader.
 

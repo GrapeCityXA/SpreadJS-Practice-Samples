@@ -3,6 +3,17 @@
   "dependencies": {
     "plugin-typescript": "^8.0.0",
     "systemjs": "^0.19.22",
-    "typescript": "^4.1.2"
+    "typescript": "^4.1.2",
+    "@grapecity-software/spread-sheets": "19.0.3",
+    "@grapecity-software/spread-sheets-barcode": "19.0.3",
+    "@grapecity-software/spread-sheets-charts": "19.0.3",
+    "@grapecity-software/spread-sheets-designer": "19.0.3",
+    "@grapecity-software/spread-sheets-designer-resources-cn": "19.0.3",
+    "@grapecity-software/spread-sheets-languagepackages": "19.0.3",
+    "@grapecity-software/spread-sheets-pdf": "19.0.3",
+    "@grapecity-software/spread-sheets-pivot-addon": "19.0.3",
+    "@grapecity-software/spread-sheets-print": "19.0.3",
+    "@grapecity-software/spread-sheets-resources-zh": "19.0.3",
+    "@grapecity-software/spread-sheets-shapes": "19.0.3"
   }
 }

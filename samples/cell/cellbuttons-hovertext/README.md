@@ -149,7 +149,7 @@ setCellButtons(spread.getActiveSheet(), 1, 1, cellButtons);
 
 ## Technology Stack
 
-- **SpreadJS 16.0.1**: Core spreadsheet library.
+- **SpreadJS 19.0.3**: Core spreadsheet library.
 - **SystemJS 0.19.22**: JavaScript module loading framework.
 - **TypeScript 4.1.2**: Script compile tools.
 

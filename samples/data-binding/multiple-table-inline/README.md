@@ -149,7 +149,7 @@ sheet
 
 ## Technology Stack
 
-- **@grapecity/spread-sheets**: 15.0.0 (Core Engine).
+- **@grapecity-software/spread-sheets**: 15.0.0 (Core Engine).
 - **jQuery**: 3.6.1.
 - **SystemJS**: 0.19.22.
 - **TypeScript**: 4.1.2.

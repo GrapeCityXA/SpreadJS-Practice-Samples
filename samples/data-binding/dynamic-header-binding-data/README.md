@@ -128,7 +128,7 @@ $("#binddata").click(function () {
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: The core spreadsheet component.
+- **SpreadJS 19.0.3**: The core spreadsheet component.
 - **jQuery 3.6.1**: Simplified DOM manipulation and event handling.
 - **SystemJS**: JavaScript module loader.
 

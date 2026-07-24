@@ -87,7 +87,7 @@ img.onload = function () {
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet component.
+- **SpreadJS 19.0.3**: Core spreadsheet component.
 - **SystemJS**: Module loader.
 - **TypeScript 4.1.2**: Compilation script language.
 

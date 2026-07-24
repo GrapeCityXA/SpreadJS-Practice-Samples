@@ -97,7 +97,7 @@ The Designer supports three data keys:
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet component.
+- **SpreadJS 19.0.3**: Core spreadsheet component.
 - **SpreadJS Designer 15.0.0**: Spreadsheet designer component.
 - **SystemJS**: Module loader.
 - **TypeScript 4.1.2**: Development scripting language.

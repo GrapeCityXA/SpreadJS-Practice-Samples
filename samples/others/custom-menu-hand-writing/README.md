@@ -43,8 +43,8 @@ spread.contextMenu.menuData.push({
 Include jQuery and the jSignature libraries in your HTML:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.3/jSignature.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/jsignature/libs/jSignature.min.js"></script>
 ```
 
 ### 3. Convert Canvas to Image and Insert into Worksheet

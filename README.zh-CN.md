@@ -11,6 +11,7 @@ English version: [README.md](README.md).
 ## 仓库内容
 
 - `samples/`：按示例分类和 demo slug 组织的本地代码目录。
+- `samples/shared/`：保存可运行 demo 复用的运行时配置。
 - `docs/demo-catalog.md`：列出可查看的示例，并提供在线示例链接。
 - `samples/_template/`：展示一个可运行本地 demo 的推荐结构。
 
@@ -20,6 +21,8 @@ English version: [README.md](README.md).
 2. 进入 `samples/<分类>/<demo-slug>/` 对应目录。
 3. 阅读该 demo 的 `README.md`。
 4. 按本地 README 运行示例。
+
+使用本地开发服务器时，建议从仓库根目录或 `samples/` 目录启动，确保浏览器可以访问 `samples/shared/` 下的共享运行时配置。
 
 部分目录初期可能只包含在线示例链接，本地代码会逐步整理补充。
 
@@ -34,6 +37,14 @@ English version: [README.md](README.md).
 - `assets/`：保存本示例所需的数据、图片、工作簿、字体等资源。
 
 目录名保持与来源 URL slug 一致。若来源 slug 存在拼写问题，仍优先保留原 slug，便于对照；可在 demo README 中补充正确写法。
+
+静态 demo 默认复用 `samples/shared/systemjs.config.js`。只有 demo 存在确实不同的加载需求时，才单独添加专用配置。
+
+## 依赖约定
+
+可运行 demo 应在本地 `package.json` 中声明运行时依赖，并从 `node_modules` 加载资源。对外发布的 demo 不应使用葡萄城 CDN 或其他公共 CDN 作为运行时依赖来源。
+
+SpreadJS 包版本应在各 demo 中保持一致。若 demo 需要 IO、Designer、PDF、Charts 等扩展能力，应显式添加对应的 `@grapecity-software/*` 包。
 
 ## SpreadJS 授权说明
 

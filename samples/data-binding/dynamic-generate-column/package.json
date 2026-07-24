@@ -4,6 +4,7 @@
     "plugin-typescript": "^8.0.0",
     "systemjs": "^0.19.22",
     "typescript": "^4.1.2",
-    "@grapecity/spread-sheets": "15.0.0"
+    "@grapecity-software/spread-sheets": "19.0.3",
+    "jquery": "3.1.1"
   }
 }

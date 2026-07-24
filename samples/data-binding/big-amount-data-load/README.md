@@ -96,7 +96,7 @@ sheet.bind(GC.Spread.Sheets.Events.RowChanging, function (e, info) {
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet component.
+- **SpreadJS 19.0.3**: Core spreadsheet component.
 - **jQuery 3.6.1**: Simplified DOM operations and event handling.
 - **SystemJS 0.19.22**: JavaScript module loader.
 - **TypeScript 4.1.2**: Scripting configurations.

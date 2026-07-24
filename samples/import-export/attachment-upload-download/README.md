@@ -138,7 +138,7 @@ function loadAllFiles() {
 
 ## Technology Stack
 
-- **SpreadJS 16.2.0**: Core spreadsheet component.
+- **SpreadJS 19.0.3**: Core spreadsheet component.
 - **SpreadJS IO 16.2.0**: Excel import and export features.
 - **JSZip 3.10.0**: ZIP file generation.
 - **FileSaver 2.0.5**: File saving functionality.

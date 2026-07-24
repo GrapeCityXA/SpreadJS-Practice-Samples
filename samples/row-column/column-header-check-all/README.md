@@ -155,7 +155,7 @@ spread.bind(GC.Spread.Sheets.Events.ButtonClicked, function (e, args) {
 
 ## Technology Stack
 
-- **SpreadJS 16.0.1**: Core spreadsheet component.
+- **SpreadJS 19.0.3**: Core spreadsheet component.
 - **jQuery 3.3.1**: Helper library for DOM utilities.
 - **SystemJS**: Module loader.
 - **TypeScript 4.1.2**: Script configurations.

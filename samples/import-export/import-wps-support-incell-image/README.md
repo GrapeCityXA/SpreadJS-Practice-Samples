@@ -180,7 +180,7 @@ spread.import(file, function () {
 
 ## Technology Stack
 
-- **SpreadJS 17.0.8**: Spreadsheet engine.
+- **SpreadJS 19.0.3**: Spreadsheet engine.
 - **SpreadJS IO 17.0.8**: Handles Excel imports/exports.
 - **JSZip 3.10.1**: ZIP compression parsing.
 - **SheetJS (XLSX) 0.18.5**: Excel file format parser.
