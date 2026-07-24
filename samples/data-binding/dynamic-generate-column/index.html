@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SpreadJS in TypeScript</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="node_modules/@grapecity/spread-sheets/styles/gc.spread.sheets.excel2013white.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./src/styles.css" />
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <p>表格动态列数据绑定</p>
+    <button id="bind_btn">绑定</button>
+    <div
+      id="ss"
+      style="width: 100%; height: 98vh; border: 1px solid darkgray"
+    ></div>
+    <script>
+      System.import("./src/app");
+    </script>
+  </head>
+
+  <body></body>
+</html>
