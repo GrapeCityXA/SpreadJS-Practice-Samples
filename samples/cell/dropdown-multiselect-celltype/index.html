@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpreadJS in Javascript</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.grapecity.com.cn/SpreadJS/package-contents/19.0.3/spread-sheets/styles/gc.spread.sheets.excel2013white.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/layui@2.6.2/dist/css/layui.min.css"
+      rel="stylesheet"
+    />
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/layui@2.6.2/dist/layui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xm-select@0.0.3/dist/xm-select.min.js"></script>
+    <script>
+      System.import("./src/app.js");
+    </script>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #ss {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="ss"></div>
+  </body>
+</html>
