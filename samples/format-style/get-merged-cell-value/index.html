@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SpreadJS in TypeScript</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.grapecity.com.cn/SpreadJS/package-contents/19.0.3/spread-sheets/styles/gc.spread.sheets.excel2013white.css"
+    />
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <p>
+      合并的单元格仅左上角有值，其他单元格的值为null。此demo可以用合并区域内的任意行列号获取到左上角的值。
+    </p>
+    <div>
+      目标行索引:<input type="number" id="row" /> 目标列索引：<input
+        type="number"
+        id="col"
+      />
+      <button id="get_value">获取值</button>
+    </div>
+    <div
+      id="ss"
+      style="width: 100%; height: 80vh; border: 1px solid darkgray"
+    ></div>
+    <script>
+      System.import("./src/app");
+    </script>
+  </head>
+
+  <body></body>
+</html>
