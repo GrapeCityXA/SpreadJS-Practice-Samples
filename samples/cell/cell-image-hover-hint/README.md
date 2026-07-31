@@ -214,7 +214,7 @@ sheet
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet components.
+- **SpreadJS 19.0.3**: Core spreadsheet components.
 - **jQuery 3.6.1**: DOM query and animation handlers.
 - **TypeScript 4.1.2**: Typed configurations.
 - **SystemJS**: Script module loader.

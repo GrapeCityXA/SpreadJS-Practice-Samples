@@ -94,7 +94,7 @@ By querying `getCellRect`, the script retrieves the cell's offset coordinates re
 
 ## Technology Stack
 
-- **SpreadJS 16.0.1**: Core spreadsheet engine.
+- **SpreadJS 19.0.3**: Core spreadsheet engine.
 - **jQuery 3.6.3**: Event handling and DOM selectors.
 - **jQuery UI 1.13.2**: Datepicker component.
 - **TypeScript 4.1.2**: Script configurations.

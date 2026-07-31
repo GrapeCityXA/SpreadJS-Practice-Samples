@@ -148,7 +148,7 @@ ComboTreeCellType.prototype.findNode = function (nodes, name) {
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet components.
+- **SpreadJS 19.0.3**: Core spreadsheet components.
 - **zTree 3.5.42**: Tree component library.
 - **jQuery 3.6.1**: Dependency for zTree DOM utilities.
 - **SystemJS 0.19.22**: JavaScript module loading.

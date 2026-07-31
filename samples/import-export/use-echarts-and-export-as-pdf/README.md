@@ -163,9 +163,9 @@ $("#exportPDF").click(function () {
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet components.
-- **@grapecity/spread-sheets-pdf 15.0.0**: Workbook-to-PDF export handlers.
-- **@grapecity/spread-sheets-print 15.0.0**: Sheet pagination configurations.
+- **SpreadJS 19.0.3**: Core spreadsheet components.
+- **@grapecity-software/spread-sheets-pdf 19.0.3**: Workbook-to-PDF export handlers.
+- **@grapecity-software/spread-sheets-print 19.0.3**: Sheet pagination configurations.
 - **ECharts (latest)**: Interactive visualization charting engine.
 - **file-saver 2.0.5**: Client-side downloader helper.
 - **jQuery 3.6.1**: DOM manipulations.

@@ -19,6 +19,10 @@
     map: {
       typescript: "node_modules/typescript/lib/typescript.js",
       "plugin-typescript": "node_modules/plugin-typescript/lib/plugin.js",
+      jquery: "node_modules/jquery/dist/jquery.min.js",
+      "jquery-ui-dist": "node_modules/jquery-ui-dist/jquery-ui.min.js",
+      "file-saver": "node_modules/file-saver/dist/FileSaver.min.js",
+      echarts: "node_modules/echarts/dist/echarts.min.js",
       "@grapecity-software/spread-sheets":
         "node_modules/@grapecity-software/spread-sheets/dist/gc.spread.sheets.all.min.js",
       "@grapecity-software/spread-excelio":

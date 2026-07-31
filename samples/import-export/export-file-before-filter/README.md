@@ -69,8 +69,8 @@ tempSpread.export(
 
 ## Technology Stack
 
-- **SpreadJS 16.2.0**: Core spreadsheet components.
-- **@grapecity/spread-sheets-io 16.2.0**: Excel file import/export handlers.
+- **SpreadJS 19.0.3**: Core spreadsheet components.
+- **@grapecity-software/spread-sheets-io 19.0.3**: Excel file import/export handlers.
 - **FileSaver.js 2.0.0**: Client-side download assistant.
 - **SystemJS 0.19.22**: JavaScript module loading.
 

@@ -73,7 +73,7 @@ Calling `invalidateLayout()` and `repaint()` ensures the UI updates to show only
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet components.
+- **SpreadJS 19.0.3**: Core spreadsheet components.
 - **jQuery 3.6.1**: Simplified DOM operations and event handling.
 - **SystemJS**: Module loading engine.
 - **TypeScript 4.1.2**: Script build compiler configurations.

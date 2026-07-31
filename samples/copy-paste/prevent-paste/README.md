@@ -87,7 +87,7 @@ In this data schema, column A has validation rules pre-configured in its JSON co
 
 ## Technology Stack
 
-- **@grapecity/spread-sheets**: 15.0.0 (Core Engine).
+- **@grapecity-software/spread-sheets**: 15.0.0 (Core Engine).
 - **SystemJS**: 0.19.22 (Module Loader).
 - **TypeScript**: 4.1.2.
 

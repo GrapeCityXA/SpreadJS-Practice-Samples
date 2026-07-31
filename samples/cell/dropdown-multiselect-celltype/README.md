@@ -133,7 +133,7 @@ This design lets you display human-readable labels to users while keeping numeri
 
 ## Technology Stack
 
-- **SpreadJS 17.0.8**: Core spreadsheet engine.
+- **SpreadJS 19.0.3**: Core spreadsheet engine.
 - **xm-select 0.0.3**: Dropdown multi-select component.
 - **jQuery 3.7.1**: DOM manipulations and event bindings.
 - **layui 2.6.2**: UI style framework.
