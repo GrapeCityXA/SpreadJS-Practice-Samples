@@ -109,7 +109,7 @@ This paints a cell every 20 milliseconds, drawing the character progressively ov
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet components.
+- **SpreadJS 19.0.3**: Core spreadsheet components.
 - **SystemJS 0.19.22**: JavaScript module loading.
 - **TypeScript 4.1.2**: Script build compiler setups.
 

@@ -5,9 +5,8 @@ import "file-saver";
 import * as echarts from "echarts";
 GC.Spread.Sheets.LicenseKey = "";
 /**
- * 需要引入三方库： https://lib.baomitu.com/echarts/5.1.0/echarts.simple.js
- * 点击外部资源，在展开的输入框中输入三方库地址，之后点击+号添加链接
- * 点击运行，看看效果吧
+ * 需要引入三方库：echarts
+ * 该依赖通过当前 demo 的 package.json 安装，并由共享 SystemJS 配置加载。
  **/
 
 GC.Spread.Common.CultureManager.culture("zh-cn");
@@ -428,32 +427,7 @@ spread.bind(GC.Spread.Sheets.Events.TopRowChanged, function (s, e) {
   }
 });
 
-$("#exportPDF").click(async function () {
-  // 加载包含完整中文字符集的真实中文字体（楷体 simkai.ttf）
-  if (!window.loadedChineseFontBuffer) {
-    try {
-      const res = await fetch("./simkai.ttf");
-      window.loadedChineseFontBuffer = await res.arrayBuffer();
-    } catch (e) {
-      console.error("加载中文字体失败:", e);
-    }
-  }
-
-  if (window.loadedChineseFontBuffer) {
-    var chineseFont = { normal: window.loadedChineseFontBuffer };
-    GC.Spread.Sheets.PDF.PDFFontsManager.registerFont("SimSun", chineseFont);
-    GC.Spread.Sheets.PDF.PDFFontsManager.registerFont("宋体", chineseFont);
-    GC.Spread.Sheets.PDF.PDFFontsManager.registerFont(
-      "customFont1",
-      chineseFont,
-    );
-
-    // 设置备用字体，确保任意字体下的中文均可正常渲染
-    GC.Spread.Sheets.PDF.PDFFontsManager.fallbackFont = function (font) {
-      return window.loadedChineseFontBuffer;
-    };
-  }
-
+$("#exportPDF").click(function () {
   // 深拷贝工作簿状态
   tempSpread.fromJSON(
     JSON.parse(

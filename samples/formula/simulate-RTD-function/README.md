@@ -113,7 +113,7 @@ GC.Spread.Sheets.getTypeFromString = function (typeString) {
 
 ## Technology Stack
 
-- **SpreadJS 17.0.8**: Core spreadsheet engine.
+- **SpreadJS 19.0.3**: Core spreadsheet engine.
 - **SpreadJS Designer 17.0.8**: Interactive editor container.
 - **SystemJS 0.19.22**: Module loading.
 

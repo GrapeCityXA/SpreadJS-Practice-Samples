@@ -140,7 +140,7 @@ The Table appends a new row at the bottom and copies formulas onto it.
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet engine.
+- **SpreadJS 19.0.3**: Core spreadsheet engine.
 - **jQuery 3.6.1**: Event triggers.
 - **SystemJS 0.19.22**: JavaScript module loading.
 - **TypeScript 4.1.2**: Script build compiler setups.

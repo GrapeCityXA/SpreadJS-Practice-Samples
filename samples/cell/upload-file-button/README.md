@@ -93,7 +93,7 @@ $("#file").change(function () {
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: The core spreadsheet engine.
+- **SpreadJS 19.0.3**: The core spreadsheet engine.
 - **jQuery 3.6.1**: Simplified DOM querying and event binding.
 - **SystemJS 0.19.22**: JavaScript module loading.
 - **TypeScript 4.1.2**: Script compile setups.

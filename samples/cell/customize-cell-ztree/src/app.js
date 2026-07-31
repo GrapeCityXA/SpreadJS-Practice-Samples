@@ -1,8 +1,7 @@
 import * as GC from "@grapecity-software/spread-sheets";
 GC.Spread.Sheets.LicenseKey = "";
 //需要引入ztree css js
-//css: https://lib.baomitu.com/zTree.v3/3.5.42/css/zTreeStyle/zTreeStyle.min.css
-//js:  https://lib.baomitu.com/zTree.v3/3.5.42/js/jquery.ztree.all.min.js
+// zTree is loaded from the local @ztree/ztree_v3 npm package in index.html.
 var keyword_null = null,
   keyword_undefined = undefined;
 var DefaultDropDownButtonWidth = 17;

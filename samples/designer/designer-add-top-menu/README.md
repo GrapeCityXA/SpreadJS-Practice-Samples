@@ -133,7 +133,7 @@ Load button background images using standard CSS definitions:
 
 ## Technology Stack
 
-- **SpreadJS 15.0.0**: Core spreadsheet engine.
+- **SpreadJS 19.0.3**: Core spreadsheet engine.
 - **SpreadJS Designer 15.0.0**: Interactive designer component.
 - **SystemJS**: Module loading framework.
 - **TypeScript 4.1.2**: Script build compilation compiler configurations.

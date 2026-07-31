@@ -104,7 +104,7 @@ The Unicode `\e735` maps to a pencil icon within the true-type font file.
 
 ## Technology Stack
 
-- **SpreadJS 16.0.1**: Core spreadsheet components.
+- **SpreadJS 19.0.3**: Core spreadsheet components.
 - **SystemJS**: Module loading engine.
 - **TypeScript 4.1.2**: Script build compiler configurations.
 - **iconfont**: Icon library.
@@ -161,7 +161,7 @@ Open `index.html` directly in your browser.
 ### Full Core Script Implementation
 
 ```javascript
-import * as GC from "@grapecity/spread-sheets";
+import * as GC from "@grapecity-software/spread-sheets";
 
 let spread = new GC.Spread.Sheets.Workbook(document.getElementById("ss"));
 let sheet = spread.getActiveSheet();

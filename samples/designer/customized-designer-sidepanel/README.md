@@ -172,7 +172,7 @@ config.sidePanels.push(sidePanelsAuditConfig);
 ## Technology Stack
 
 - **SpreadJS Designer 16.0.1**: Built-in designer elements.
-- **SpreadJS 16.0.1**: Core spreadsheet components.
+- **SpreadJS 19.0.3**: Core spreadsheet components.
 - **SystemJS**: JavaScript module loading.
 - **TypeScript 4.1.2**: Script build compiler configurations.
 
