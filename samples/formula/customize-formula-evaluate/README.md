@@ -78,7 +78,7 @@ sheet.setFormula(3, 0, '=EVALUATE("SUM(A1:A2)")');
 
 ## Technology Stack
 
-- **@grapecity/spread-sheets**: 15.0.0 (Core Engine).
+- **@grapecity-software/spread-sheets**: 19.0.3 (Core Engine).
 - **SystemJS**: 0.19.22 (Module Loader).
 - **TypeScript**: 4.1.2.
 
