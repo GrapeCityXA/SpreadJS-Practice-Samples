@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>SpreadJS in TypeScript</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+     <link rel="stylesheet type="text/css" href="node_modules/@grapecity-software/spread-sheets-designer/styles/gc.spread.sheets.designer.min.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script> 
+    <p>请复制粘贴单元格查看效果</p>
+    <div id="designer-container" style="width:100%;height:95vh;border:1px solid darkgray"></div>
+    <script>
+        System.import('./src/app');
+    </script>
+    <style>
+        .gc-ui-contextmenu-icon.gc-spread-transposePaste {
+            background-image: url(./src/Transpose.png);
+            background-size: 24px 24px;
+        }
+        .gc-ui-contextmenu-disable .gc-ui-contextmenu-icon.gc-spread-transposePaste {
+            background-image: url(./src/Transpose_disable.png);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>

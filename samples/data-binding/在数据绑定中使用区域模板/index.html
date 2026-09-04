@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpreadJS in Javascript</title>
+    <link rel="stylesheet" type="text/css"
+        href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('./src/app.js');
+    </script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #ss {
+            height: 100%;
+            width: 100%;
+        }
+
+        #editorDialog {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #aaaaaaaa;
+            display: none;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ss"></div>
+    <div id="editorDialog">
+        <div style="height: 80%; width: 80%;margin: 50px auto;background-color:white">
+            <button id='dialogOK'>确定</button>
+            <button id='dialogCancel'>取消</button>
+            <div id='dialogSS' style="width:100%;height:90%;border:1px solid darkgray"></div>
+        </div>
+    </div>
+</body>
+
+</html>

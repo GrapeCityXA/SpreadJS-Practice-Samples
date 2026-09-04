@@ -1,0 +1,117 @@
+﻿#CustomNamePopBox {
+    display: none;
+}
+
+.name-mgr-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.name-mgr-list {
+    text-align: center;
+    position: absolute;
+    width: 600px;
+    z-index: 100;
+    border: 1px solid #000;
+}
+
+.edit-box {
+    position: absolute;
+    display: none;
+    width: 350px;
+    z-index: 101;
+    border: 1px solid #000;
+}
+
+.normal-box {
+    background-color: #f0f0f0;
+}
+
+.normal-box .title {
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+    cursor: move;
+}
+
+.normal-box .content-box {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.name-mgr-list .btn-list {
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.name-mgr-list .btn-list .btn {
+    margin-right: 15px;
+    border: 1px solid #b1b1b1;
+    width: 75px;
+    font-size: 12px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.name-mgr-list .content-box .list-box {
+    background-color: #fff;
+    min-height: 200px;
+}
+
+.normal-box .footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.normal-box .footer .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 26px;
+    background-color: #e6e6e6;
+    border: 1px solid #d3d3d3;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.fill-pair {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.fill-pair .key {
+    width: 80px;
+    font-size: 14px;
+}
+
+.fill-pair input,
+.fill-pair textarea,
+.fill-pair #c-range {
+    flex: 1;
+    height: 22px;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #000;
+    font-size: 14px;
+}
+.fill-pair  select{
+    width: 150px;
+}
+
+.fill-pair textarea {
+    height: 100px !important;
+}

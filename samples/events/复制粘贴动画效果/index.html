@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>SpreadJS in TypeScript</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script> 
+    <style>
+        #loadingModal{
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            z-index: 10;
+            top: 100px;
+            left: 50px;
+            background: blueviolet;
+            display: none;
+        }
+    </style>
+    <div id='loadingModal'>
+        <div>loading...</div>
+    </div>
+    <p>请尝试复制粘贴单元格</p>
+    <div id="ss" style="width:100%;height:90vh;border:1px solid darkgray"></div>
+    <script>
+        System.import('./src/app');
+    </script>
+</head>
+<body>
+</body>
+</html>

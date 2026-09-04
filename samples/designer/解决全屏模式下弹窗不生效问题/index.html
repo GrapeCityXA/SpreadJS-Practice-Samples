@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpreadJS Designer in Javascript</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #designer-iframe {
+            width: 100%;
+            height: 90%;
+            outline: none;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">开启全屏</button>
+    <iframe id="designer-iframe" src="./iframe.html" />
+</body>
+</html>
+<script>
+    document.getElementById("btn").addEventListener("click", function() {
+        document.getElementById("designer-iframe").requestFullscreen()
+    })
+</script>

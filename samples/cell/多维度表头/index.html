@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpreadJS with Typescript</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/@grapecity/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/@grapecity/spread-sheets-designer/styles/gc.spread.sheets.designer.min.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #app {
+            height: 100%;
+        }
+        #setHeader{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: #e9e9e9;
+            z-index:1000;
+            padding: 20px 
+        }
+        .item-div{
+            padding: 6px 10px
+        }
+        .item-div input{
+           border:none;
+           padding: 4px 2px
+        }
+
+        .item-div button{
+            padding: 2px 16px;
+            margin-left: 10px;
+    
+        }
+        
+        
+        .divide-area{
+            background: url("https://img95.699pic.com/element/40120/7587.png_300.png");
+        }
+        #confirm{
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="setHeader" >
+        <div>
+            <div class="item-div" style="font-size: 12px">使用说明:分区数量>=2,分区内容之间用|分割</div>
+            <div class="item-div" style="font-size: 12px">示例：分区数量<span style="color: blue;font-weight: bold">2</span>,分区内容<span style="color: blue;font-weight: bold">草莓|香蕉</span></div>
+        </div>
+        <div class="item-div"><label>分区数量：</label><input min="2" type="number" id="area-count" /></div>
+        <div class="item-div"><label>分区内容：</label><input type="text" id="area-content" /></div>
+        <div class="item-div">
+            <button id="confirm">确认</button>
+            <button id="cancel">取消</button>
+        </div>
+    </div>
+    <div id="app"></div>
+    <script>
+        System.import('./src/app');
+    </script>
+</body>
+
+</html>

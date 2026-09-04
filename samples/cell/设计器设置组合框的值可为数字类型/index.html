@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpreadJS Designer in Javascript</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets-designer/styles/gc.spread.sheets.designer.min.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('./src/app.js');
+    </script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #designer-container {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <p>请选中B2后，选择“开始”-“样式”-“单元格编辑器”-“单元格类型”-“组合框”，并设置编辑值类型为“值”，添加两个项目，其中一个的值为1，点击确定</p>
+    <div id="designer-container"></div>
+</body>
+</html>

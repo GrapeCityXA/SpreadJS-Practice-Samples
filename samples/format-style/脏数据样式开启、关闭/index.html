@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpreadJS in Javascript</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('./src/app.js');
+    </script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #ss {
+            height: 80%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="button1">开启</button>
+    <button id="button2">关闭</button>
+    <p>请在sheet中随机输入一些值之后，点击上方按钮查看效果</p>
+    <div id="ss"></div>
+</body>
+
+</html>

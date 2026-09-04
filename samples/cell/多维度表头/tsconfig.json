@@ -1,0 +1,19 @@
+﻿{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "System",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": true,
+        "noImplicitAny": true,
+        "lib": [
+            "ES2022",
+            "dom"
+        ],
+        "noEmit": true,
+        "forceConsistentCasingInFileNames": true
+    }
+}

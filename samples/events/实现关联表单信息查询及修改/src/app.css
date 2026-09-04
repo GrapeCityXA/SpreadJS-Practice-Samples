@@ -1,0 +1,20 @@
+﻿#ss {
+    height: 620px;
+    width: 100%
+}
+
+h4 {
+    color: #336699;
+    text-align: center;
+}
+
+#info{
+        padding: 20px 18px;
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 20%;
+        z-index: 10;
+        border: 1px solid #ddd;
+        background-color: rgba(120,120,120,.75);
+    }

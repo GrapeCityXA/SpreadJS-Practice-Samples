@@ -1,0 +1,30 @@
+﻿p{
+    color:#336699;
+    text-align: center;
+}
+
+.options-container {
+    position: relative;
+}
+
+.option-row{
+    position: absolute;
+    width: 180px;
+    padding: 12px;
+    background: #e8e8e8;
+    top: 124px;
+    right: 20px;
+    font-size:12px
+}
+
+input{
+    padding: 2px 6px;
+    margin: 4px;
+}
+input[type="button"]{
+    border: none;
+    background: #336699;
+    border-radius: 4px;
+    color: #fff;
+}
+

@@ -1,0 +1,62 @@
+﻿        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        
+        .sample-tutorial {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .sample-spreadsheets {
+            width: calc(100% - 180px);
+            height: 500px;
+            overflow: hidden;
+            float: left;
+        }
+        
+        .options-container {
+            float: right;
+            width: 180px;
+            padding: 12px;
+            height: 100%;
+            box-sizing: border-box;
+            background: #fbfbfb;
+            overflow: auto;
+        }
+        
+        .sample-options {
+            z-index: 1000;
+        }
+        
+        .inputContainer {
+            width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+            padding: 6px 12px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        .input {
+            font-size: 14px;
+            height: 20px;
+            border: 0;
+            outline: none;
+            background: transparent;
+        }
+        
+        .button {
+            height: 30px;
+            padding: 6px 12px;
+            width: 80px;
+            margin-top: 6px;
+        }
+        
+        .group {
+            padding: 12px;
+        }
+        
+        .group input {
+            padding: 4px 12px;
+        }

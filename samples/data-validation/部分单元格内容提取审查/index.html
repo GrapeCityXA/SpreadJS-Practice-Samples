@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<title>SpreadJS in TypeScript</title>
+	<link rel="stylesheet" type="text/css"
+		href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+	<link rel="stylesheet" type="text/css" href="./src/style.css" />
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="systemjs.config.js"></script>
+	<script>
+		System.import('./src/app');
+	</script>
+</head>
+
+<body>
+	<div class="sample-tutorial">
+		<div class="options-container">
+			<div class="option-row">
+				<label style="background-color:#F4F8EB;">按住“Ctrl”键，选择多行数据，点击“提取审查按钮”，将提取出选择的数据进行审查</label>
+			</div>
+			<input type="button" id="changeDataSource" value="提取审查" title="Toggle table binding's data source" />
+		</div>
+		<div id="ss" class="sample-spreadsheets"></div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+﻿{
+  "name": "spread-designer-js",
+  "type": "module",
+  "dependencies": {
+    "plugin-typescript": "^8.0.0",
+    "systemjs": "^0.19.22",
+    "typescript": "^4.1.2",
+    "@grapecity-software/spread-sheets": "19.1.0",
+    "@grapecity-software/spread-sheets-datacharts-addon": "19.1.0",
+    "@grapecity-software/spread-sheets-formula-panel": "19.1.0",
+    "@grapecity-software/spread-sheets-ganttsheet": "19.1.0",
+    "@grapecity-software/spread-sheets-io": "19.1.0",
+    "@grapecity-software/spread-sheets-pivot-addon": "19.1.0",
+    "@grapecity-software/spread-sheets-print": "19.1.0",
+    "@grapecity-software/spread-sheets-reportsheet-addon": "19.1.0",
+    "@grapecity-software/spread-sheets-resources-zh": "19.1.0",
+    "@grapecity-software/spread-sheets-shapes": "19.1.0",
+    "@grapecity-software/spread-sheets-slicers": "19.1.0",
+    "@grapecity-software/spread-sheets-tablesheet": "19.1.0"
+  }
+}

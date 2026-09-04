@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpreadJS in Javascript</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('./src/app.js');
+    </script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #ss {
+            height: 80%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <p>请直接复制A1单元格，然后在其他单元格粘贴</p>
+    <p>请双击B1单元格，复制input框中的文本，并在其他单元格粘贴测试</p>
+    <div id="ss"></div>
+</body>
+
+</html>

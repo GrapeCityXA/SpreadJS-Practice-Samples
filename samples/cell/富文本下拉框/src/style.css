@@ -1,0 +1,253 @@
+﻿:root {
+    --surface: rgba(255, 255, 255, 0.94);
+    --border: rgba(24, 38, 52, 0.12);
+    --text: #1d2936;
+    --soft: #627486;
+    --accent: #235c66;
+    --brand: #c76336;
+    --danger: #b23f3f;
+    --shadow: 0 18px 44px rgba(24, 36, 48, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Aptos", "Microsoft YaHei", sans-serif;
+    color: var(--text);
+    background: var(--surface);
+}
+
+.page {
+    min-height: 100vh;
+}
+
+.workspace {
+    position: relative;
+    min-height: 100vh;
+    background: var(--surface);
+}
+
+.hint,
+.modal-header span,
+.dropdown-popup header span {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--soft);
+}
+
+#designer-container {
+    height: 720px;
+}
+
+.button {
+    border: 0;
+    border-radius: 12px;
+    padding: 9px 13px;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+}
+
+.button-primary {
+    background: linear-gradient(135deg, var(--accent), #2d7b87);
+}
+
+.button-secondary {
+    color: var(--text);
+    background: #eef3f5;
+}
+
+.button-danger {
+    background: linear-gradient(135deg, var(--danger), #d15a4f);
+}
+
+.dropdown-popup {
+    position: absolute;
+    z-index: 50;
+    width: 380px;
+    max-width: calc(100% - 28px);
+    padding: 16px;
+    border: 1px solid rgba(24, 38, 52, 0.12);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 22px 44px rgba(24, 36, 48, 0.22);
+}
+
+.dropdown-popup.hidden,
+.modal.hidden {
+    display: none;
+}
+
+.dropdown-popup header,
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.dropdown-popup header strong,
+.modal-header strong {
+    display: block;
+}
+
+.popup-items,
+.config-option-list {
+    display: grid;
+    gap: 12px;
+}
+
+.popup-items {
+    max-height: 360px;
+    overflow: auto;
+}
+
+.popup-item,
+.config-option-item {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid rgba(24, 38, 52, 0.08);
+    border-radius: 14px;
+    background: rgba(247, 249, 250, 0.96);
+    text-align: left;
+    cursor: pointer;
+}
+
+.popup-item:hover,
+.config-option-item.active {
+    border-color: rgba(35, 92, 102, 0.26);
+    background: rgba(240, 247, 248, 0.96);
+}
+
+.rich-preview {
+    font-family: "Cambria Math", "Times New Roman", serif;
+    font-size: 22px;
+    line-height: 1.35;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 8000;
+    background: rgba(20, 29, 38, 0.42);
+    backdrop-filter: blur(6px);
+}
+
+.modal-dialog {
+    width: min(1040px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    margin: 16px auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 26px 60px rgba(12, 22, 32, 0.28);
+}
+
+.modal-header,
+.modal-footer {
+    padding: 16px 20px;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(24, 38, 52, 0.08);
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 16px;
+    padding: 18px 20px;
+    overflow: auto;
+}
+
+.card {
+    padding: 16px;
+    border: 1px solid rgba(24, 38, 52, 0.1);
+    border-radius: 18px;
+    background: rgba(250, 248, 244, 0.72);
+}
+
+.card+.card {
+    margin-top: 14px;
+}
+
+.card h2 {
+    margin: 0 0 12px;
+    font-size: 15px;
+}
+
+.button-row,
+.editor-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tool-btn {
+    min-width: 44px;
+}
+
+.tool-color {
+    width: 48px;
+    min-height: 40px;
+    padding: 4px;
+    border: 1px solid rgba(24, 38, 52, 0.14);
+    border-radius: 12px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.rich-editor {
+    min-height: 220px;
+    margin-top: 12px;
+    padding: 14px;
+    border: 1px solid rgba(24, 38, 52, 0.14);
+    border-radius: 16px;
+    background: #fff;
+    font-family: "Cambria Math", "Times New Roman", serif;
+    font-size: 24px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow: auto;
+}
+
+.rich-editor:focus {
+    outline: 2px solid rgba(35, 92, 102, 0.18);
+    border-color: rgba(35, 92, 102, 0.28);
+}
+
+
+.rich-dropdown-ribbon-icon-set {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2016%2016%27%3E%3Cg%20fill%3D%27none%27%3E%3Cpath%20fill%3D%27%23367FC9%27%20d%3D%27M2%202h12v9H2z%27/%3E%3Cpath%20fill%3D%27%23fff%27%20d%3D%27M3%203h10v7H3z%27/%3E%3Cpath%20fill%3D%27%23898989%27%20d%3D%27M4%205h8v1H4zm0%202h5v1H4z%27/%3E%3Cpath%20fill%3D%27%23F6912F%27%20d%3D%27m5%2012%203%203%203-3z%27/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.rich-dropdown-ribbon-icon-edit {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2016%2016%27%3E%3Cg%20fill%3D%27none%27%3E%3Cpath%20fill%3D%27%23367FC9%27%20d%3D%27M2%202h9v12H2z%27/%3E%3Cpath%20fill%3D%27%23fff%27%20d%3D%27M3%203h7v10H3z%27/%3E%3Cpath%20fill%3D%27%23898989%27%20d%3D%27M4%205h5v1H4zm0%202h4v1H4z%27/%3E%3Cpath%20fill%3D%27%23F6912F%27%20d%3D%27m10.8%204.2%201%201L7%2010l-2%20.5.5-2z%27/%3E%3Cpath%20fill%3D%27%23D85D2A%27%20d%3D%27m11.7%203.3%201%201-.7.7-1-1z%27/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.rich-dropdown-ribbon-icon-clear {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2016%2016%27%3E%3Cg%20fill%3D%27none%27%3E%3Cpath%20fill%3D%27%23898989%27%20d%3D%27M4%205h8l-.7%209H4.7z%27/%3E%3Cpath%20fill%3D%27%23fff%27%20d%3D%27M5.5%206h5l-.5%207H6z%27/%3E%3Cpath%20fill%3D%27%23E65249%27%20d%3D%27M3%204h10v1H3zm3-2h4v1H6zM6%207h1v5H6zm3%200h1v5H9z%27/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid rgba(24, 38, 52, 0.08);
+}
+
+@media (max-width: 980px) {
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+}

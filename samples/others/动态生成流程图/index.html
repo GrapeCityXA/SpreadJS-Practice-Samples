@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <title>SpreadJS in TypeScript</title>
+    <link rel="stylesheet" type="text/css"
+        href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <link rel="stylesheet" type="text/css"
+        href="node_modules/@grapecity-software/spread-sheets-designer/styles/gc.spread.sheets.designer.min.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <style>
+        .ribbon-button-in-process {
+            background: url(./in-process.png);
+        }
+
+        .ribbon-button-unstart-process {
+            background: url(./unstart.png);
+        }
+
+        .ribbon-button-finish-process {
+            background: url(./finish.png);
+        }
+
+        .ribbon-button-export {
+            background: url(./export.png);
+        }
+
+        .ribbon-button-print-json {
+            background: url(./json.png);
+        }
+    </style>
+    <script>
+        System.import('./src/app');
+    </script>
+</head>
+
+<body>
+    <div id="designer-container" style="width:100%;height:600px;border:1px solid darkgray"></div>
+</body>
+
+</html>

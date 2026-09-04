@@ -1,0 +1,21 @@
+﻿#ss {
+    height: 400px;
+    width: 100%
+}
+p{
+    color: #336699;
+    text-align: center;
+}
+
+.sample-tutorial {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cornerDiv {
+    background: #336699;
+    top: 0;
+    left: 0;
+    position: absolute;
+}

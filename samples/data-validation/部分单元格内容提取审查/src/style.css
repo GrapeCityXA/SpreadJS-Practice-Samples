@@ -1,0 +1,49 @@
+﻿.sample-tutorial {
+     position: relative;
+     height: 100vh;
+     overflow: hidden;
+}
+
+.sample-spreadsheets {
+    width: calc(100% - 280px);
+    height: 100vh;
+    overflow: hidden;
+    float: left;
+}
+
+.options-container {
+    float: right;
+    width: 280px;
+    padding: 12px;
+    height: 100%;
+    box-sizing: border-box;
+    background: #fbfbfb;
+    overflow: auto;
+}
+
+.option-row {
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    padding: 4px 6px;
+}
+
+input[type=button] {
+    margin-top: 6px;
+    display: block;
+}
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

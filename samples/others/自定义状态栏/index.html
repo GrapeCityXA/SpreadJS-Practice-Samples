@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<title>SpreadJS in TypeScript</title>
+	<link rel="stylesheet" type="text/css"
+		href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+	<link rel="stylesheet" type="text/css" href="./src/app.css" />
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="systemjs.config.js"></script>
+
+	<h4>根据单元格输入内容更新状态栏显示信息</h4>
+	<div class="sample-tutorial">
+		<div class="sample-container">
+			<div id="ss" class="sample-spreadsheets"></div>
+			<div id="statusBar"></div>
+		</div>
+		<div class="sample-options">
+			<div class="options-container">
+				<p class="summary">
+					输入数值点击更新按钮
+				</p>
+				<div class="option-row">
+					<label for="inputValue">输入数值:</label>
+					<input type="text" id="inputValue" />
+            </div>
+					<div class="option-row">
+						<div class="input-container">
+							<input type="button" id="update" value="更新" class="button">
+
+                </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				System.import('./src/app');
+			</script>
+</head>
+
+<body>
+</body>
+
+</html>

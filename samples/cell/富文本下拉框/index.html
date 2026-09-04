@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpreadJS Designer 富文本下拉 CellType 实现</title>
+
+  <link href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css" rel="stylesheet" type="text/css" />
+  <link href="node_modules/@grapecity-software/spread-sheets-designer/styles/gc.spread.sheets.designer.min.css" rel="stylesheet" type="text/css" />
+  <link href="src/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="page">
+    <section class="workspace" id="workspace">
+      <div id="designer-container"></div>
+
+      <div class="dropdown-popup hidden" id="dropdown-popup">
+        <header>
+          <div>
+            <strong>富文本下拉选项</strong>
+            <span>点击任一项后，将以富文本形式写入当前单元格。</span>
+          </div>
+          <button class="button button-secondary" id="close-dropdown-popup-btn" type="button">关闭</button>
+        </header>
+        <div class="popup-items" id="popup-items"></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal hidden" id="cell-type-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <strong>设置富文本下拉 CellType</strong>
+          <span id="modal-selection-label">当前选区：未选中</span>
+        </div>
+        <button class="button button-secondary" id="close-cell-type-modal-btn" type="button">关闭</button>
+      </div>
+
+      <div class="modal-body">
+        <aside>
+          <section class="card">
+            <h2>下拉选项</h2>
+            <div class="button-row">
+              <button class="button button-primary" id="add-config-option-btn" type="button">新增选项</button>
+              <button class="button button-danger" id="remove-config-option-btn" type="button">删除当前选项</button>
+            </div>
+            <div class="config-option-list" id="config-option-list" style="margin-top: 12px"></div>
+          </section>
+
+          <section class="card">
+            <h2>当前选项预览</h2>
+            <div class="rich-preview" id="config-option-preview"></div>
+          </section>
+        </aside>
+
+        <section>
+          <section class="card">
+            <h2>富文本编辑框</h2>
+            <div class="editor-toolbar" id="editor-toolbar">
+              <button class="button button-secondary tool-btn" data-command="bold"
+                type="button"><strong>B</strong></button>
+              <button class="button button-secondary tool-btn" data-command="superscript" type="button">x²</button>
+              <button class="button button-secondary tool-btn" data-command="subscript" type="button">x₂</button>
+              <button class="button button-secondary tool-btn" data-command="removeFormat" type="button">清格式</button>
+              <input class="tool-color" id="editor-color-input" type="color" value="#22303c" />
+            </div>
+            <div class="rich-editor" id="config-rich-editor" contenteditable="true"></div>
+            <div class="hint">这个版本的选项配置保存在自定义单元格类型实例里；选择下拉项后，单元格值仍然写成表格控件支持的富文本值。</div>
+          </section>
+        </section>
+      </div>
+
+      <div class="modal-footer">
+        <button class="button button-secondary" id="cancel-cell-type-config-btn" type="button">取消</button>
+        <button class="button button-primary" id="save-cell-type-config-btn" type="button">保存并应用到当前选区</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('./src/app.js');
+  </script>
+</body>
+
+</html>

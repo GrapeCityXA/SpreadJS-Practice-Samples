@@ -1,0 +1,15 @@
+﻿.container {
+    width: 95%;
+    background: rgb(250, 250, 250);
+    margin: 0 auto;
+    height: 400px;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.left {
+    height: 100%;
+    overflow: auto;
+}

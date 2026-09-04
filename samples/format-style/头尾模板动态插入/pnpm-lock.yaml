@@ -1,0 +1,196 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@grapecity-software/spread-excelio':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-barcode':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-charts':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-designer':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-designer-resources-cn':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-designer-resources-en':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-io':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-languagepackages':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-pdf':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-pivot-addon':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-print':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-resources-zh':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-shapes':
+        specifier: 19.1.0
+        version: 19.1.0
+      '@grapecity-software/spread-sheets-tablesheet':
+        specifier: 19.1.0
+        version: 19.1.0
+      plugin-typescript:
+        specifier: ^8.0.0
+        version: 8.0.0(typescript@4.1.2)
+      systemjs:
+        specifier: ^0.19.22
+        version: 0.19.47
+      typescript:
+        specifier: ^4.1.2
+        version: 4.1.2
+
+packages:
+
+  '@grapecity-software/spread-excelio@19.1.0':
+    resolution: {integrity: sha512-mW8Ra4vkfEv2WtGJdBFI1Qu50sMGqYx7yApkIc4IWF1mgt++f7FVP1xT4uDXwOrnhU6AWPPMQWa04kP3jw4WUA==}
+
+  '@grapecity-software/spread-sheets-barcode@19.1.0':
+    resolution: {integrity: sha512-8D5hlCd1vC49cjGxY74U3T0nATKSlOpvpje8AKwIgszjVJaQlEb/7iD3kONjtkjMbpOvEGMvacAxb90R3R0LaA==}
+
+  '@grapecity-software/spread-sheets-charts@19.1.0':
+    resolution: {integrity: sha512-CL1bIyxOqv8KeK2m3Lv5MjDL98N5VQFvpTYU6HqPTGj3xxq5HH2wMMJOvcDdAz1sK9UPKdTSBvVAP9WSwlFQnQ==}
+
+  '@grapecity-software/spread-sheets-designer-resources-cn@19.1.0':
+    resolution: {integrity: sha512-ggnEuUUMDhzZ/lWb4DomahHRs0IdzoVe3srZAbzirCwsCG4n8ldOkhKotqsH1vHtfqoqD0hC9//3ZOu+q6Aihg==}
+
+  '@grapecity-software/spread-sheets-designer-resources-en@19.1.0':
+    resolution: {integrity: sha512-i1Z/ulLejkOSpZLtrTDT9wnaUWJpWug7EhL//ReS2+Mp6hA/cm4lPcnUqaZEwhz7uc2hHbr7ELFHp0sPXF6wMg==}
+
+  '@grapecity-software/spread-sheets-designer@19.1.0':
+    resolution: {integrity: sha512-R2pwpGH4Hemp3UGnusnSomck9XE0cz8QgaIB97YJBHpehwyzDLb5n8xf26riiTkOxIXw4ijquolFM74Xyo0SKg==}
+
+  '@grapecity-software/spread-sheets-io@19.1.0':
+    resolution: {integrity: sha512-kzrUTjjsn15upJ3QaHAFTB+egDA78Bt1ntfYz0WA1dShXgXLeDQi8q5bYkdarwvThFaRxYx67FQBrMhFtEESEA==}
+
+  '@grapecity-software/spread-sheets-languagepackages@19.1.0':
+    resolution: {integrity: sha512-CVttT5nq8glih61PjwgGUY/0Fu5mUVusQYvQn9/XmYhzZJs5n15ZzOmF2SFe6gn6r7ChOii8WXKV2izQHjQODg==}
+
+  '@grapecity-software/spread-sheets-pdf@19.1.0':
+    resolution: {integrity: sha512-G04HF84wXpHTT1y+fk9rjqfwQ8FYisYeU+kc7R//dBzBpm8Y7oRITdqDrqtflWtCXcr0yYSbx6CeWoBVAQSrBQ==}
+
+  '@grapecity-software/spread-sheets-pivot-addon@19.1.0':
+    resolution: {integrity: sha512-zr7DDQce+7IG5r7UP480a/FEvCOGdMxQSpmHj0XmUhux1+3NC21xHWYyBAtE4HrYrLpAHTGgq+cvIwfoFwHzMg==}
+
+  '@grapecity-software/spread-sheets-print@19.1.0':
+    resolution: {integrity: sha512-2rbTA0aepNRgqV79vKdzVIdL9a/bzFWgDRLaTfI70adHmx6i7ZrJ67rOb3QlZciJyEkl0KPGFTaHkLjZb91+rw==}
+
+  '@grapecity-software/spread-sheets-resources-zh@19.1.0':
+    resolution: {integrity: sha512-rMOcFVpRj+oTkyJdhgV6f7dABrMG0d1dYImQQISiP6+DZaghBV0hLr8ubYtMDfBQgk48o/sJJlSyOesjDSTumg==}
+
+  '@grapecity-software/spread-sheets-shapes@19.1.0':
+    resolution: {integrity: sha512-bDx7b36sB8pSiOtfVbNhasy1WXNcRPMyqXHcVxPlHfYCM2fZkS1BFo9mzWCqtEBMVXQpPKHvWMXvztHWyO/TbA==}
+
+  '@grapecity-software/spread-sheets-tablesheet@19.1.0':
+    resolution: {integrity: sha512-Sj8fPxAVWWBtuI0a8WfuowE4dGCq/KC711elQgmux9Bnm3QhziHHLys0icB96mRkDBJJVAW7NK0uRv4zuC4U5w==}
+
+  '@grapecity-software/spread-sheets@19.1.0':
+    resolution: {integrity: sha512-IY1V6awsYc+QgM4AjEfo8BALY8hIuc9fHo+bYYn12ALzOSYELcMtP7fKDiADcbFOslyN3pg0LCnyQiFasrh4zA==}
+
+  plugin-typescript@8.0.0:
+    resolution: {integrity: sha512-9P25tRwjKgk1J1U1VMVJxHhL4OxouurN9otoQ2DJHDoZ8urxKS7G+e9rpiag3pbYpT7EcWqELEYAk/ssOOfQeg==}
+    peerDependencies:
+      typescript: ^2.4.0
+
+  systemjs@0.19.47:
+    resolution: {integrity: sha512-6P+63y7bQhZXqOcim7QU0TKEjCmQArFkKa+CxlDchIerej7wrXLUoyGuWk+L0yC5rYrZ5LI6Eh1QOawttQq5xw==}
+
+  typescript@4.1.2:
+    resolution: {integrity: sha512-thGloWsGH3SOxv1SoY7QojKi0tc+8FnOmiarEGMbd/lar7QOEd3hvlx3Fp5y6FlDUGl9L+pd4n2e+oToGMmhRQ==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+
+  when@3.7.8:
+    resolution: {integrity: sha512-5cZ7mecD3eYcMiCH4wtRPA5iFJZ50BJYDfckI5RRpQiktMiYTcn0ccLTZOvcbBume+1304fQztxeNzNS9Gvrnw==}
+
+snapshots:
+
+  '@grapecity-software/spread-excelio@19.1.0':
+    dependencies:
+      '@grapecity-software/spread-sheets': 19.1.0
+
+  '@grapecity-software/spread-sheets-barcode@19.1.0':
+    dependencies:
+      '@grapecity-software/spread-sheets': 19.1.0
+
+  '@grapecity-software/spread-sheets-charts@19.1.0':
+    dependencies:
+      '@grapecity-software/spread-sheets': 19.1.0
+      '@grapecity-software/spread-sheets-shapes': 19.1.0
+
+  '@grapecity-software/spread-sheets-designer-resources-cn@19.1.0': {}
+
+  '@grapecity-software/spread-sheets-designer-resources-en@19.1.0': {}
+
+  '@grapecity-software/spread-sheets-designer@19.1.0': {}
+
+  '@grapecity-software/spread-sheets-io@19.1.0':
+    dependencies:
+      '@grapecity-software/spread-sheets': 19.1.0
+
+  '@grapecity-software/spread-sheets-languagepackages@19.1.0':
+    dependencies:
+      '@grapecity-software/spread-sheets': 19.1.0
+
+  '@grapecity-software/spread-sheets-pdf@19.1.0':
+    dependencies:
+      '@grapecity-software/spread-sheets': 19.1.0
+      '@grapecity-software/spread-sheets-print': 19.1.0
+
+  '@grapecity-software/spread-sheets-pivot-addon@19.1.0':
+    dependencies:
+      '@grapecity-software/spread-sheets': 19.1.0
+      '@grapecity-software/spread-sheets-shapes': 19.1.0
+
+  '@grapecity-software/spread-sheets-print@19.1.0':
+    dependencies:
+      '@grapecity-software/spread-sheets': 19.1.0
+
+  '@grapecity-software/spread-sheets-resources-zh@19.1.0':
+    dependencies:
+      '@grapecity-software/spread-sheets': 19.1.0
+
+  '@grapecity-software/spread-sheets-shapes@19.1.0':
+    dependencies:
+      '@grapecity-software/spread-sheets': 19.1.0
+
+  '@grapecity-software/spread-sheets-tablesheet@19.1.0':
+    dependencies:
+      '@grapecity-software/spread-sheets': 19.1.0
+
+  '@grapecity-software/spread-sheets@19.1.0': {}
+
+  plugin-typescript@8.0.0(typescript@4.1.2):
+    dependencies:
+      typescript: 4.1.2
+
+  systemjs@0.19.47:
+    dependencies:
+      when: 3.7.8
+
+  typescript@4.1.2: {}
+
+  when@3.7.8: {}

@@ -1,0 +1,21 @@
+﻿{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "es5",
+        // "typeRoots": ["node_modules/@types","types"],
+        "module": "system",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": true,
+        "noImplicitAny": true,
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+        "noEmit": true,
+        "forceConsistentCasingInFileNames": true
+    }
+  }
+  

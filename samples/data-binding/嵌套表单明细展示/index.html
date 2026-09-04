@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<title>SpreadJS in TypeScript</title>
+	<link rel="stylesheet" type="text/css"
+		href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+	<link rel="stylesheet" type="text/css" href="./src/app.css" />
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="systemjs.config.js"></script>
+	<h3>点击单元格内容展示明细表</h3>
+	<p>点击左侧表格绿色或橙色单元格，右侧sheet页会出现明细表，点击明细展示详细数据</p>
+	<div class="left">
+		<div id="ss1"></div>
+	</div>
+	<div class="right">
+		<div id="ss2"></div>
+		<div>
+			<button id="dataInfo">明细</button>
+		</div>
+		<div id="ss3"></div>
+	</div>
+	<script>
+		System.import('./src/app');
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>SpreadJS in TypeScript</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script> 
+    <style>
+        /* 列头样式 */
+        .gc-columnHeader-normal{
+            color: #000;
+            background-color: #ecf5ff;
+            border-style: solid;
+        }
+        /* 列头hover样式 */
+        .gc-columnHeader-hover{
+            color: #000;
+            background-color: #b3d8ff;
+            border-style: solid;
+        }
+        /* 列头选中样式 */
+        .gc-columnHeader-selected{
+            color: #fff;
+            background-image: none;
+            background-color: #409eff;
+            border-style: solid;
+        }
+        /* 列头高亮样式 */
+        .gc-columnHeader-highlight{
+            color: #fff;
+            background-image: none;
+            background-color: #409eff;
+            border-style: solid;
+        }
+        /* 单元格选中样式 */
+        .gc-selection{
+            background-color: rgba(20,20,20,.2);
+            border-color: #f5dab1;
+            color: rgba(240,240,240,.7)
+        }
+      
+    </style>
+    <div id="ss" style="width:100%;height:98vh;border:1px solid darkgray"></div>
+    <script>
+        System.import('./src/app');
+    </script>
+</head>
+<body>
+</body>
+</html>

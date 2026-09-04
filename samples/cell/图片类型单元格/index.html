@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <title>SpreadJS in TypeScript</title>
+    <link rel="stylesheet" type="text/css"
+        href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <style>
+        #selectFileModal {
+            position: fixed;
+            z-index: 100;
+            right: 0;
+            top: 10px;
+            width: 300px;
+            height: 100px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: slategray;
+            display: none;
+        }
+
+        .btn-group {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        #selectFileModal .btn-group button {
+            width: 60px;
+            height: 26px;
+            font-size: 16px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>请点击C5单元格，并上传图片</p>
+    <button id="print">打印数据源</button>
+    <div id="selectFileModal">
+        <input type="file" accept="image/png,image/jpeg" id="file" />
+        <div class="btn-group">
+            <button id="save">确定</button>
+            <button id="cancel">取消</button>
+        </div>
+    </div>
+    <div class="container">
+        <div id="ss" style="width:95vw;height:85vh;border:1px solid darkgray"></div>
+    </div>
+    <script>
+        System.import('./src/app');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpreadJS in Javascript</title>
+    <link rel="stylesheet" type="text/css"
+        href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('./src/app.js');
+    </script>
+    <style>
+        .sample-tutorial {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .sample-spreadsheets {
+            width: calc(100% - 280px);
+            height: 100%;
+            overflow: hidden;
+            float: left;
+        }
+
+        .options-container {
+            float: right;
+            width: 280px;
+            padding: 12px;
+            height: 100%;
+            box-sizing: border-box;
+            background: #fbfbfb;
+            overflow: auto;
+        }
+
+        .option-row {
+            font-size: 14px;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        input {
+            padding: 4px 6px;
+        }
+
+        input[type=button] {
+            margin-top: 6px;
+            display: block;
+        }
+
+        body {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sample-tutorial">
+        <div id="ss" class="sample-spreadsheets"></div>
+        <div class="options-container">
+            <div class="option-row">
+                <label style="background-color:#F4F8EB;">点击绑定数据源按钮.</label>
+            </div>
+            <input type="button" id="changeDataSource" value="绑定数据源" title="Toggle table binding's data source" />
+            <input type="button" id="getDataSource" value="获取数据源" title="Toggle table binding's data source" />
+        </div>
+    </div>
+</body>
+
+</html>

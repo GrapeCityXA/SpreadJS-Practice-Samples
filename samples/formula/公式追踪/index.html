@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<title>SpreadJS in TypeScript</title>
+	<link rel="stylesheet" type="text/css"
+		href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+	<link rel="stylesheet" link="src/style.css" />
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+		integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="systemjs.config.js"></script>
+	<div class="sample-tutorial">
+		<div style="height: 50vh" id="ss" class="sample-spreadsheets"></div>
+
+		<div class="options-container">
+			<div class="option-row">
+				<div class="inputContainer">
+					<label>选择单元格获取公式依赖信息，双击依赖树结点跳转</label>
+					<input type="button" id="trackPrecedentsCell" value="追踪引用单元格" class="button">
+					<input type="button" id="trackDependentsCell" value="追踪从属单元格" class="button">
+					<input type="button" id="trackAllCell" value="追踪所有单元格" class="button">
+				</div>
+			</div>
+			<div>引用单元格：此单元格引用了哪些单元格</div>
+			<div>从属单元格：此单元格被哪些单元格引用</div>
+		</div>
+	</div>
+	<div style="height: 100vh" id="ss1" class="sample-spreadsheets"></div>
+	</div>
+	<script>
+		System.import('./src/app');
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

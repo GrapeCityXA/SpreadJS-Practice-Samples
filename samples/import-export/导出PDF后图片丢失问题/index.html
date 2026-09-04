@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpreadJS Designer in Javascript</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets-designer/styles/gc.spread.sheets.designer.min.css">
+    <script src="//cdn.bootcdn.net/ajax/libs/FileSaver.js/2.0.5/FileSaver.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('./src/app.js');
+    </script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #designer-container {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">直接导出</button>
+    <button id="btn2">转换后导出</button>
+    <span>注意，大部分情况下，直接导出即可，只有当直接导出有问题时，才需要换用转换后导出的代码</span>
+    <div id="designer-container"></div>
+</body>
+</html>

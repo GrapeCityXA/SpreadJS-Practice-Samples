@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="spreadjs culture" content="zh-cn" />
+    <title>SpreadJS 规划求解（Designer 自定义对话框 + 线性规划求解器）</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets-designer/styles/gc.spread.sheets.designer.min.css">
+    <script src="node_modules/typescript/lib/typescript.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #gc-designer-container {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* “规划求解” ribbon 按钮图标（原 global.css） */
+        .ribbon-button-upload {
+            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjI5MyA1MTIuMjkzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMjkzIDUxMi4yOTM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIHN0eWxlPSJmaWxsOiNCQkRFRkI7IiBkPSJNNDAyLjE0OCwxNDkuNjA2QzM4NC4zMzgsNjMuMDU0LDI5OS43MzUsNy4zMjgsMjEzLjE4MywyNS4xMzgNCglDMTM5LjA3LDQwLjM4OSw4NS43NzQsMTA1LjQ3Miw4NS40MzQsMTgxLjEzNmMwLDMuNjA1LDAuMTQ5LDcuMjk2LDAuNDY5LDExLjJDMzMuMTc4LDE5Ny45MTctNS4wNCwyNDUuMTgzLDAuNTQxLDI5Ny45MDgNCgljNS4xNzMsNDguODcsNDYuNDE2LDg1Ljk0Myw5NS41NTksODUuODk1aDExLjJjLTAuMjU2LTMuNTQxLTAuNTMzLTcuMDYxLTAuNTMzLTEwLjY2N2MwLTc2LjU4Myw2Mi4wODMtMTM4LjY2NywxMzguNjY3LTEzOC42NjcNCglTMzg0LjEsMjk2LjU1MywzODQuMSwzNzMuMTM2YzAsMy42MDUtMC4yNzcsNy4xMjUtMC41MzMsMTAuNjY3aDExLjJjNjQuNzMsMC4xNzcsMTE3LjM0OC01Mi4xNTQsMTE3LjUyNS0xMTYuODg1DQoJQzUxMi40NjIsMjA0LjgwNyw0NjQuMTQ4LDE1My4zNDgsNDAyLjE0OCwxNDkuNjA2TDQwMi4xNDgsMTQ5LjYwNnoiLz4NCjxjaXJjbGUgc3R5bGU9ImZpbGw6IzRDQUY1MDsiIGN4PSIyNDUuNDM0IiBjeT0iMzczLjEzNiIgcj0iMTE3LjMzMyIvPg0KPGc+DQoJPHBhdGggc3R5bGU9ImZpbGw6I0ZBRkFGQTsiIGQ9Ik0yNDUuNDM0LDQ0Ny44MDNjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42Njd2LTEyOGMwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3DQoJCXMxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N3YxMjhDMjU2LjEsNDQzLjAyNywyNTEuMzI1LDQ0Ny44MDMsMjQ1LjQzNCw0NDcuODAzeiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNMjg4LjEsMzYyLjQ3Yy0yLjgzMSwwLjAwNS01LjU0OC0xLjExNS03LjU1Mi0zLjExNWwtMzUuMTE1LTM1LjEzNmwtMzUuMTE1LDM1LjEzNg0KCQljLTQuMjM3LDQuMDkzLTEwLjk5LDMuOTc1LTE1LjA4My0wLjI2MmMtMy45OTMtNC4xMzQtMy45OTMtMTAuNjg3LDAtMTQuODIxbDQyLjY2Ny00Mi42NjdjNC4xNjUtNC4xNjQsMTAuOTE3LTQuMTY0LDE1LjA4MywwDQoJbDQyLjY2Nyw0Mi42NjdjNC4xNTksNC4xNzIsNC4xNDksMTAuOTI2LTAuMDI0LDE1LjA4NUMyOTMuNjMsMzYxLjM1LDI5MC45MjMsMzYyLjQ2OSwyODguMSwzNjIuNDd6Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=");
+        }
+    </style>
+</head>
+<body unselectable="on">
+    <div id="gc-designer-container"></div>
+    <!-- 第三方线性规划求解库 javascript-lp-solver（v0.4.24）的浏览器打包版，提前加载并挂到 window.solver -->
+    <script src="src/vendor/javascript-lp-solver/solver.js"></script>
+    <script>
+        System.import('./src/app');
+    </script>
+</body>
+</html>

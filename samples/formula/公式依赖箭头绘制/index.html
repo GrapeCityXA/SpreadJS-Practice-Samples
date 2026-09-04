@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="spreadjs culture" content="zh-cn" />
+    <title>SpreadJS 公式依赖追踪</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets-designer/styles/gc.spread.sheets.designer.min.css">
+    <script src="node_modules/typescript/lib/typescript.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #gc-designer-container {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body unselectable="on">
+    <div id="gc-designer-container"></div>
+    <script>
+        System.import('./src/app');
+    </script>
+</body>
+</html>

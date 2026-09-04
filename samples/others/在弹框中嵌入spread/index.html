@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<title>SpreadJS in TypeScript</title>
+    <link rel="stylesheet" type="text/css" href="./src/弹窗.css">
+	<link rel="stylesheet" type="text/css"
+		href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="systemjs.config.js"></script>
+	<script>
+		System.import('./src/app');
+	</script>
+</head>
+
+<body>
+	<button id="open_btn" class="btn">弹窗</button>
+	<span class="tip">⬅️请点击左侧的按钮</span>
+	<!-- 弹窗内容开始 -->
+	<div id="background" class="back">
+		<div id="div1" class="content">
+			<div id="close">
+				<span id="close-button">×</span>
+				<h2>弹窗头部</h2>
+			</div>
+			<div id="div2">
+				<div id="ss" style="width:1000px;height:300px"></div>
+			</div>
+			<h3 id="foot">底部内容</h3>
+		</div>
+	</div>
+</body>
+
+</html>

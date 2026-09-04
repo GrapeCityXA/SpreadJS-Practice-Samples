@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<title>SpreadJS in TypeScript</title>
+	<link rel="stylesheet" type="text/css"
+		href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+	<link rel="stylesheet" type="text/css" href="./src/styles.css" />
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="systemjs.config.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/spread/source/js/FileSaver.js" type="text/javascript"></script>
+    <p>多文件合并导入同一个WorkBook</p>
+	<h6>多选文件，点击导入按钮后会将ActiveSheet合并到一个WorkBook</h6>
+	<div class="sample-tutorial">
+		<div class="option-row">
+			<div class="inputContainer">
+				<input type="file" id="fileDemo" class="input" multiple=“multiple” accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+				<input type="button" id="loadExcel" value="导入Excel" class="button">
+        </div>
+				<div class="inputContainer">
+					<label>&nbsp;&nbsp;请输入导出文件名称：</label>
+					<input id="exportFileName" value="export.xlsx" class="input">
+					<input type="button" id="saveExcel" value="导出WorkBook" class="button">
+					<input type="button" id="saveActiveSheet" value="导出ActiveSheet" class="button">
+        </div>
+				</div>
+
+				<div id="ss" style="width:100%;height:80vh;border:1px solid darkgray"></div>
+			</div>
+			<script>
+				System.import('./src/app');
+			</script>
+</head>
+
+<body>
+</body>
+
+</html>

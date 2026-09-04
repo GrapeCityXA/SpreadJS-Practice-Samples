@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<title>SpreadJS in TypeScript</title>
+	<link rel="stylesheet" type="text/css"
+		href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./src/app.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="systemjs.config.js"></script>
+    <h6>右键菜单添加编辑富文本选项&双击富文本单元格编辑富文本</h6>
+	<div id="ss" style="width:100%;height:98vh;border:1px solid darkgray"></div>
+	<div class="modal fade" id="subEditor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		gcUIElement="gcEditingInput">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content" style="height:500px;width: 500px;">
+				<div class="modal-header">
+					<h4 class="modal-title" id="exampleModalLabel">富文本</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+
+				</div>
+				<div class="modal-body">
+					<div id="settingsDiv">
+						<div id="richEditor" class="rich-editor"></div>
+						<ul id="fontSizeList" class="list">
+							<li class="fontsize-item" value='1'>10</li>
+							<li class="fontsize-item" value='2'>13</li>
+							<li class="fontsize-item" value='3'>16</li>
+							<li class="fontsize-item" value='4'>18</li>
+							<li class="fontsize-item" value='5'>24</li>
+							<li class="fontsize-item" value='6'>32</li>
+							<li class="fontsize-item" value='7'>48</li>
+						</ul>
+						<ul id="fontFamilyList" class="list fontfamily-list">
+							<li class="fontfamily-item">Segoe UI</li>
+							<li class="fontfamily-item">Arial</li>
+							<li class="fontfamily-item">Calibri</li>
+							<li class="fontfamily-item">Courier New</li>
+							<li class="fontfamily-item">Comic Sans MS</li>
+							<li class="fontfamily-item">Microsoft YaHei</li>
+							<li class="fontfamily-item">Times New Roman</li>
+						</ul>
+						<ul id="colorPicker" class="list">
+							<li class="colorpicker-item" style="background-color:#FFFFFF;"></li>
+							<li class="colorpicker-item" style="background-color: #C00000;"></li>
+							<li class="colorpicker-item" style="background-color: #FF0000;"></li>
+							<li class="colorpicker-item" style="background-color: #FFC003;"></li>
+							<li class="colorpicker-item" style="background-color: #FFFF00;"></li>
+							<li class="colorpicker-item" style="background-color: #94D051;"></li>
+							<li class="colorpicker-item" style="background-color: #00B050;"></li>
+							<li class="colorpicker-item" style="background-color: #00AFF0;"></li>
+							<li class="colorpicker-item" style="background-color: #006EC3;"></li>
+							<li class="colorpicker-item" style="background-color: #001E6E;"></li>
+							<li class="colorpicker-item" style="background-color: #6E32A0;"></li>
+							<li class="colorpicker-item" style="background-color: #000000;"></li>
+						</ul>
+
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="setValue">确定</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		System.import('./src/app');
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

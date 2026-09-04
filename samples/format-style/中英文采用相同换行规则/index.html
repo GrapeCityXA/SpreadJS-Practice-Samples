@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpreadJS in Javascript</title>
+    <link rel="stylesheet" type="text/css"
+        href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('./src/app.js');
+    </script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #ss {
+            height: 80%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <span>是否让中英文换行相同？</span>
+    <select id="select">
+        <option selected>是</option>
+        <option>否</option>
+    </select>
+    <div>
+        <button id="button1">切换为中文换行</button>
+        <button id="button2">切换为英文换行</button>
+        <span>请不要连续点击按钮，点击后要等2秒左右才可以进行下一次点击，否则点击无效</span>
+    </div>
+    <div id="ss"></div>
+</body>
+
+</html>

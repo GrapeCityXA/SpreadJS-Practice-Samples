@@ -1,0 +1,133 @@
+﻿.inputContainer {
+            width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+            padding: 6px 12px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .modal-content{
+            margin-top: 25%; 
+        }
+
+        .list {
+            list-style: none;
+            display: none;
+            position: absolute;
+            box-shadow: 1px 2px 5px 2px rgba(51, 51, 51, .15);
+            background-color: white;
+        }
+        .fontfamily-list{
+            overflow: scroll;
+        }
+        .rich-editor {
+            border: 1px solid rgba(10, 10, 10, 0.1);
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .rich-editor-content {
+            box-sizing: border-box;
+            height: 270px;
+            outline: 0;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .rich-editor-actionbar {
+            background-color: #FFF;
+            border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+        }
+
+        .rich-editor-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            height: 30px;
+            line-height: 30px;
+            outline: 0;
+            width: 30px;
+            display: inline-block;
+            margin: 0 3px;
+            padding:0 2px;
+        }
+
+        .drop-down-arrow {
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+        }
+        .drop-down-arrow:before {
+            display: block;
+            content: '';
+            width: 0;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+            margin-top: 23px;
+            margin-left: 2px;
+        }
+        .rich-editor-button-selected {
+            background-color: #F0F0F0;
+        }
+
+        .color_picker_result {
+            border-bottom: 5px solid black;
+        }
+
+        #fontSizeList {
+            width: 40px;
+
+        }
+
+        #fontFamilyList {
+            width: 140px;
+            height: 300px;
+            top:-30px
+        }
+
+        #colorPicker {
+            width: 70px;
+        }
+
+        .fontsize-item {
+            width: 40px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+            margin-left: -40px;
+        }
+
+        .fontfamily-item {
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            text-align: left;
+            /* padding-left: -13px; */
+            margin-left: -25px;
+            cursor: pointer;
+        }
+
+        .colorpicker-item {
+            width: 16px;
+            height: 16px;
+            margin: 1px;
+            padding: 1px;
+            border: 1px solid transparent;
+            background-clip: content-box;
+            float: left;
+            display: inline-block;
+        }
+
+        .fontsize-item:hover {
+            background-color: #DDDDDDAA;
+        }
+
+        .fontfamily-item:hover {
+            background-color: #DDDDDDAA;
+        }
+
+        .colorpicker-item:hover {
+            box-shadow: 1px 1px 1px 1px rgba(51, 51, 51, .15);
+        }

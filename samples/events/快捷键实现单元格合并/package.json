@@ -1,0 +1,9 @@
+﻿{
+  "name": "spread-designer-js",
+  "type": "module",
+  "dependencies": {
+    "systemjs": "^0.19.22",
+    "typescript": "^4.1.2",
+    "@grapecity-software/spread-sheets": "19.1.0"
+  }
+}

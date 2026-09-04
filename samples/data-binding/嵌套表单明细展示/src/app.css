@@ -1,0 +1,36 @@
+﻿ h3{
+     text-align: center;
+     color: #336699;
+ }
+ p{
+     color: #251746;
+ }
+ .left {
+     width: 28%;
+     height: 700px;
+     margin-left: 2%;
+     float: left;
+ }
+ 
+ 
+ .right {
+     width: 65%;
+     height: 700px;
+     margin-left: 32%;
+ }
+  #ss1 {
+     height: 45%;
+     width: 90%;
+ }
+ 
+ #ss2 {
+     height: 45vh;
+     width: 100%;
+     margin-bottom: 1%;
+ }
+ 
+ #ss3 {
+     margin-top: 1%;
+     height: 45vh;
+     width: 100%;
+ }

@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="spreadjs culture" content="zh-cn" />
+    <title>SpreadJS 更换报表数据源</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        .toolbar {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 10px 14px;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #changeButton {
+            padding: 6px 16px;
+            border: 0;
+            border-radius: 3px;
+            background: #1769aa;
+            color: #fff;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        #changeButton:disabled {
+            opacity: .5;
+            cursor: not-allowed;
+        }
+
+        #status {
+            color: #555;
+            font-size: 13px;
+        }
+
+        #status[data-tone="success"] {
+            color: #087f5b;
+        }
+
+        #ss {
+            width: 100%;
+            height: calc(100vh - 100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <button id="changeButton" type="button">更换数据源</button>
+        <span id="status">正在初始化…</span>
+    </div>
+    <div id="ss"></div>
+    <script>
+        System.import('./src/app');
+    </script>
+</body>
+</html>

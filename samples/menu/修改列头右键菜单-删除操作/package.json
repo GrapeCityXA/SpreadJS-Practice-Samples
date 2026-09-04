@@ -1,0 +1,11 @@
+﻿{
+  "name": "spread-designer-js",
+  "dependencies": {
+    "plugin-typescript": "^8.0.0",
+    "systemjs": "^0.19.22",
+    "typescript": "^4.1.2",
+    "@grapecity-software/spread-sheets": "19.1.0",
+    "@grapecity-software/spread-sheets-resources-zh": "19.1.0",
+    "@grapecity-software/spread-sheets-tablesheet": "19.1.0"
+  }
+}

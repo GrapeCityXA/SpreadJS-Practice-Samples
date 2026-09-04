@@ -1,0 +1,23 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>SpreadJS in TypeScript</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+     <link rel="stylesheet type="text/css" href="node_modules/@grapecity-software/spread-sheets-designer/styles/gc.spread.sheets.designer.min.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script> 
+    <!-- 初始化时默认隐藏 -->
+    <style>
+        .gc-ribbon-bar{
+            display: none;
+        }
+    </style>
+    <button id="changeDisplay">显示切换</button>
+    <div id="designer-container" style="width:100%;height:500px;border:1px solid darkgray"></div>
+    <script>
+        System.import('./src/app');
+    </script>
+</head>
+<body>
+</body>
+</html>

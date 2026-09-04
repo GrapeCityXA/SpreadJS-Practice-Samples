@@ -1,0 +1,25 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<title>SpreadJS in TypeScript</title>
+	<link rel="stylesheet" type="text/css"
+		href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+		integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="systemjs.config.js"></script>
+	<button id="getRangeDetail">获取区域</button>
+	选择一个区域，点击按钮
+	<div id="ss" style="width:100%;height:45vh;border:1px solid darkgray"></div>
+	<div id="ss1" class="sample-spreadsheets" style="width:100%;height: 45vh; margin: 10px; border: 1px solid black;"></div>
+	<script>
+		System.import('./src/app');
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

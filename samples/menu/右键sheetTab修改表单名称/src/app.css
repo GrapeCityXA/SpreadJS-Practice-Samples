@@ -1,0 +1,13 @@
+﻿#dialog {
+    display: none;
+    padding: 16px 30px;
+    position: fixed;
+    top: 160px;
+    left: 100px;
+    border: 1px solid #ccc;
+    background: #9cf;
+}
+
+#operate{
+    margin: 12px 0;
+}

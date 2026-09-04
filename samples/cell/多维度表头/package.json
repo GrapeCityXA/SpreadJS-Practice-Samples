@@ -1,0 +1,22 @@
+﻿{
+    "name": "typescript",
+    "dependencies": {
+        "systemjs": "^0.19.22",
+        "systemjs-plugin-css": "^0.1.37",
+        "typescript": ">=4.8.2 <5.0",
+        "@grapecity/spread-sheets": "17.0.8",
+        "@grapecity/spread-excelio": "17.0.8",
+        "@grapecity/spread-sheets-barcode": "17.0.8",
+        "@grapecity/spread-sheets-charts": "17.0.8",
+        "@grapecity/spread-sheets-designer": "17.0.8",
+        "@grapecity/spread-sheets-designer-resources-cn": "17.0.8",
+        "@grapecity/spread-sheets-io": "17.0.8",
+        "@grapecity/spread-sheets-languagepackages": "17.0.8",
+        "@grapecity/spread-sheets-pdf": "17.0.8",
+        "@grapecity/spread-sheets-pivot-addon": "17.0.8",
+        "@grapecity/spread-sheets-reportsheet-addon":"17.0.8",
+        "@grapecity/spread-sheets-print": "17.0.8",
+        "@grapecity/spread-sheets-shapes": "17.0.8",
+        "@grapecity/spread-sheets-tablesheet": "17.0.8"
+    }
+}

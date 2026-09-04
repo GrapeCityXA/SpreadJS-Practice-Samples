@@ -1,0 +1,135 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <title>SpreadJS in TypeScript</title>
+    <link rel="stylesheet" type="text/css"
+        href="node_modules/@grapecity-software/spread-sheets/styles/gc.spread.sheets.excel2013white.css">
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('./src/app');
+    </script>
+    <style>
+        .sample-tutorial {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .sample-spreadsheets {
+            width: calc(100% - 580px);
+            height: 100%;
+            overflow: hidden;
+            float: left;
+        }
+        .sub-spreadsheets {
+            width: 100%;
+            height: 80%;
+            overflow: hidden;
+            float: left;
+        }
+
+        .options-container {
+            float: right;
+            width: 580px;
+            height: 100%;
+            box-sizing: border-box;
+            background: #fbfbfb;
+            overflow: auto;
+        }
+
+        #formula-input {
+            width: calc(100% - 10px);
+            margin-bottom: 6px;
+        }
+
+        .clear:after {
+            display: block;
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            content: "";
+            clear: both;
+        }
+
+        .button-container>input {
+            width: calc(48%);
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        .option-row {
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #states-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        #states-table td {
+            border: 1px solid grey;
+        }
+    </style>
+
+
+</head>
+
+<body>
+        <div class="sample-tutorial">
+        <div id="ss" class="sample-spreadsheets"></div>
+        <div class="options-container">
+            <div class="option-row">
+                <!-- <h3>Import File</h3> -->
+                <label>导入一个包含跨工作簿引用的excel</label>
+            </div>
+            <div class="option-row">
+                <input type="file" id="importFile" class="input">
+                <input type="button" id="openButton" value="import" class="button">
+            </div>
+            <br>
+            <!-- <h3>Update cross workbook values</h3> -->
+            <div class="option-row"><label>选择你要更新的文件</label></div>
+            <div class="option-row">
+                <table id="states-table">
+                    <tr>
+                        <td>Name</td>
+                        <td>File Path</td>
+                        <td>Update source<br>(supports .ssjson / .xlsx)</td>
+                    </tr>
+                    <tr>
+                        <td>Hover</td>
+                        <td><input type="checkbox" checked="checked" myState="hover" myDirection="row" /></td>
+                        <td><input type="checkbox" checked="checked" myState="hover" myDirection="column" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="option-row">
+                <div id="sub_ss" class="sub-spreadsheets"></div>
+            </div>
+            <div class="option-row">
+                <label>为左侧工作簿的Sheet更新跨工作簿引用的值</label>
+                <input type="button" id="setExtFormula" value="Set External Formula" class="button">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
