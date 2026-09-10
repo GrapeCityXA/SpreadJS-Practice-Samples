@@ -72,9 +72,9 @@ document.getElementById("changeStatus").onclick = function(){
 
 ### 3.5 技术栈
 
-- @grapecity/spread-sheets: 16.0.1（核心表格组件）
-- @grapecity/spread-sheets-designer: 16.0.1（设计器组件）
-- SystemJS: 0.19.22（模块加载器）
+* @grapecity/spread-sheets: 16.0.1（核心表格组件）
+* @grapecity/spread-sheets-designer: 16.0.1（设计器组件）
+* SystemJS: 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -98,27 +98,31 @@ npm install
 
 ### 5.1 优点
 
-- 实现了细粒度的按钮级权限控制
-- 通过重写命令执行方法，不破坏原有功能逻辑
-- 动态切换权限状态，无需重新初始化 Designer
-- 提供清晰的视觉反馈（按钮文本变化）
+* 实现了细粒度的按钮级权限控制
+* 通过重写命令执行方法，不破坏原有功能逻辑
+* 动态切换权限状态，无需重新初始化 Designer
+* 提供清晰的视觉反馈（按钮文本变化）
 
 ### 5.2 扩展建议
 
-- 可以扩展到控制更多按钮的权限（如打印、导出等）
-- 可以集成实际的用户权限系统，根据登录用户角色自动设置权限
-- 可以添加更友好的权限提示 UI，替代简单的 alert 弹窗
-- 可以记录用户的未授权操作尝试，用于安全审计
+* 可以扩展到控制更多按钮的权限（如打印、导出等）
+* 可以集成实际的用户权限系统，根据登录用户角色自动设置权限
+* 可以添加更友好的权限提示 UI，替代简单的 alert 弹窗
+* 可以记录用户的未授权操作尝试，用于安全审计
 
 ## 六、总结
 
 本示例展示了 SpreadJS Designer 命令系统的灵活性，通过获取、修改和重新注册命令对象，可以实现对 Designer 功能的精细化控制。开发者可以学习到：
 
-- 如何获取和重写 Designer 命令对象
-- 如何通过 `commandMap` 注册自定义命令
-- 如何使用 `setConfig()` 和 `refresh()` 动态更新 Designer 配置
-- 如何实现基于权限的功能访问控制
+* 如何获取和重写 Designer 命令对象
+* 如何通过 `commandMap` 注册自定义命令
+* 如何使用 `setConfig()` 和 `refresh()` 动态更新 Designer 配置
+* 如何实现基于权限的功能访问控制
 
 该方案适用于需要根据用户角色限制功能访问的企业级应用，可以有效提升系统的安全性和可控性。
 
-### 在线Demo（[全屏打开](https://jscodemine.grapecity.com/share/7pq6eoZ-5UWRYcgVuMGkug/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

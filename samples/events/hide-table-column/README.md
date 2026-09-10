@@ -5,9 +5,10 @@
 ## 二、解决的问题
 
 在实际业务中，用户可能需要根据不同的查看需求动态调整表格的显示内容。例如：
-- 在数据分析时，临时隐藏不需要关注的列以聚焦核心数据
-- 根据用户权限或偏好设置，动态控制列的可见性
-- 在有限的屏幕空间内，通过隐藏次要列来优化显示效果
+
+* 在数据分析时，临时隐藏不需要关注的列以聚焦核心数据
+* 根据用户权限或偏好设置，动态控制列的可见性
+* 在有限的屏幕空间内，通过隐藏次要列来优化显示效果
 
 本示例提供了一种通过重建 Table 对象来实现列隐藏的解决方案，确保表格结构的完整性和数据的正确绑定。
 
@@ -88,9 +89,10 @@ spread.bind(GC.Spread.Sheets.Events.ButtonClicked,function(s,e){
 ```
 
 关键点：
-- 使用 `suspendPaint()` 和 `resumePaint()` 暂停和恢复绘制，避免闪烁
-- 通过 `table.range()` 保留原 Table 的位置信息
-- 新 Table 的列数由 `tempInfo.length` 决定
+
+* 使用 `suspendPaint()` 和 `resumePaint()` 暂停和恢复绘制，避免闪烁
+* 通过 `table.range()` 保留原 Table 的位置信息
+* 新 Table 的列数由 `tempInfo.length` 决定
 
 #### 3.1.4 恢复初始状态
 
@@ -110,9 +112,9 @@ if(deleteCol === 'reset'){
 
 ### 3.2 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0（核心表格组件）
-- **SystemJS**: 0.19.22（模块加载器）
-- **TypeScript**: 4.1.2（开发语言支持）
+* **@grapecity/spread-sheets**: 15.0.0（核心表格组件）
+* **SystemJS**: 0.19.22（模块加载器）
+* **TypeScript**: 4.1.2（开发语言支持）
 
 ## 四、使用说明
 
@@ -135,17 +137,17 @@ npm install
 
 ### 5.1 优点
 
-- **交互直观**：通过按钮单元格实现操作，用户体验友好
-- **结构完整**：通过重建 Table 而非简单隐藏列，确保表格结构的一致性
-- **可扩展**：可以轻松扩展为支持隐藏多列或动态选择隐藏列的功能
+* **交互直观**：通过按钮单元格实现操作，用户体验友好
+* **结构完整**：通过重建 Table 而非简单隐藏列，确保表格结构的一致性
+* **可扩展**：可以轻松扩展为支持隐藏多列或动态选择隐藏列的功能
 
 ### 5.2 局限性与扩展建议
 
-- **数据丢失风险**：重建 Table 时如果表格中有用户输入的数据，需要先保存数据再恢复
-- **扩展建议**：
-  - 可以添加数据持久化逻辑，在重建 Table 前保存数据
-  - 支持通过下拉菜单或复选框选择要隐藏的列
-  - 使用 `sheet.setColumnVisible()` 方法实现更轻量的列隐藏（适用于非 Table 场景）
+* **数据丢失风险**：重建 Table 时如果表格中有用户输入的数据，需要先保存数据再恢复
+* **扩展建议**：
+    * 可以添加数据持久化逻辑，在重建 Table 前保存数据
+    * 支持通过下拉菜单或复选框选择要隐藏的列
+    * 使用 `sheet.setColumnVisible()` 方法实现更轻量的列隐藏（适用于非 Table 场景）
 
 ## 六、关键代码片段
 
@@ -176,4 +178,8 @@ function findColIndex(deleteCol){
 
 该方案适用于需要动态调整表格显示内容的场景，特别是在数据分析、报表展示等领域具有实用价值。如果需要保留表格数据或实现更复杂的列管理功能，建议结合数据持久化和状态管理机制进行扩展。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/hdTfLXQxGEikMeGlkFLufg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

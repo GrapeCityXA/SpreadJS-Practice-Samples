@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **关联数据查询**：在表格中点击主数据（如姓名），快速查看与之关联的详细信息，无需跳转页面或打开新窗口
-- **数据修改与同步**：通过弹出表单修改关联数据，并将修改结果同步到内存数据源，实现数据的实时更新
-- **用户体验优化**：使用浮动表单代替传统的弹窗或跳转，提供更流畅的交互体验
+* **关联数据查询**：在表格中点击主数据（如姓名），快速查看与之关联的详细信息，无需跳转页面或打开新窗口
+* **数据修改与同步**：通过弹出表单修改关联数据，并将修改结果同步到内存数据源，实现数据的实时更新
+* **用户体验优化**：使用浮动表单代替传统的弹窗或跳转，提供更流畅的交互体验
 
 ## 三、实现思路
 
@@ -111,9 +111,9 @@ document.getElementById('update').onclick = () => {
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0：核心表格组件
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言（编译为 JavaScript）
+* SpreadJS 15.0.0：核心表格组件
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言（编译为 JavaScript）
 
 ## 四、使用说明
 
@@ -140,27 +140,29 @@ npm install
 
 ### 5.1 优点
 
-- **实现简单**：使用原生 DOM 操作和 SpreadJS 事件机制，代码量少，易于理解和维护
-- **交互流畅**：浮动表单设计避免了页面跳转，用户可以快速查看和修改数据
-- **扩展性强**：数据结构清晰，可以轻松扩展更多关联字段或支持更复杂的查询条件
+* **实现简单**：使用原生 DOM 操作和 SpreadJS 事件机制，代码量少，易于理解和维护
+* **交互流畅**：浮动表单设计避免了页面跳转，用户可以快速查看和修改数据
+* **扩展性强**：数据结构清晰，可以轻松扩展更多关联字段或支持更复杂的查询条件
 
 ### 5.2 局限性与扩展建议
 
-- **数据持久化**：当前修改仅保存在内存中，刷新页面后数据丢失。建议集成后端 API 或使用 LocalStorage 实现数据持久化
-- **表单验证**：仅验证了非空，可以增加日期格式、数值范围等更严格的验证规则
-- **批量操作**：当前仅支持单条数据修改，可以扩展为支持多选和批量编辑功能
+* **数据持久化**：当前修改仅保存在内存中，刷新页面后数据丢失。建议集成后端 API 或使用 LocalStorage 实现数据持久化
+* **表单验证**：仅验证了非空，可以增加日期格式、数值范围等更严格的验证规则
+* **批量操作**：当前仅支持单条数据修改，可以扩展为支持多选和批量编辑功能
 
 ## 六、总结
 
 本示例展示了 SpreadJS 中实现主从表数据联动的基本方法，通过 `CellClick` 事件监听和 DOM 操作实现了关联数据的查询与修改功能。开发者可以从中学到：
 
-- SpreadJS 单元格事件的绑定和处理方式
-- 如何通过 `getText()`、`getValue()` 等 API 获取单元格数据
-- 如何使用 `getActiveRowIndex()` 和 `getActiveColumnIndex()` 获取当前活动单元格位置
-- 如何结合原生 HTML/CSS 实现自定义 UI 组件与 SpreadJS 的交互
+* SpreadJS 单元格事件的绑定和处理方式
+* 如何通过 `getText()`、`getValue()` 等 API 获取单元格数据
+* 如何使用 `getActiveRowIndex()` 和 `getActiveColumnIndex()` 获取当前活动单元格位置
+* 如何结合原生 HTML/CSS 实现自定义 UI 组件与 SpreadJS 的交互
 
 该方案适用于需要在表格中快速查看和编辑关联数据的场景，如订单详情查询、客户信息管理等，具有良好的扩展性和实用价值。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Query%20and%20modify%20associated%20form%20information.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/89gkA43vRE6UJ5wNpkF2mQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

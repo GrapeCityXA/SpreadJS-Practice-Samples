@@ -1,9 +1,11 @@
+# cellbuttons-command-register
+
 ### 问题：CellButtons如何注册命令
 
 ***
 
 首先我们先简单学习下 [cellButtons](/spreadjs/help/docs/features/cells/celltypes/cellbutton)
-单元格按钮 cellButtons 是一组多个预定义按钮，可以嵌入到单元各中并可以运行各种命令。
+单元格按钮 cellButtons 是一组多个预定义按钮，可以嵌入到单元各中并可以运行各种命令。 
 它支持多种方式的命令，分为SpreadJS的内置命令，function类型函数，以及自定义命令。
 1\. SpreadJS 内置命令
 
@@ -52,4 +54,8 @@ style3.cellButtons= [{
 sheet.setStyle(5, 3, style3);
 ```
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/K8RtWMHkhkO40DKTVToPOw/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

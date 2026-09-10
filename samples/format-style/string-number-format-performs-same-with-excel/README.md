@@ -92,4 +92,8 @@ npm install
 
 该方案适用于需要严格遵循 Excel 格式化规则的应用场景，特别是在数据导入导出、跨平台数据处理等场景中具有重要价值。通过简单的代码扩展，即可实现复杂的格式化行为定制，体现了 SpreadJS 良好的可扩展性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/6iMlU5sJr0GrI7M7_EIMQw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

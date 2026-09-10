@@ -6,9 +6,9 @@
 
 在实际的数据管理应用中，用户经常需要知道哪些数据行被修改过。传统的表格组件缺乏直观的视觉标识，导致用户难以追踪数据变更。本示例通过在行头显示自定义图标的方式，解决了以下问题：
 
-- 提供直观的视觉反馈，让用户一眼就能看出哪些行被编辑过
-- 在数据审核场景中，帮助审核人员快速定位需要检查的数据行
-- 在批量数据录入时，避免遗漏或重复编辑
+* 提供直观的视觉反馈，让用户一眼就能看出哪些行被编辑过
+* 在数据审核场景中，帮助审核人员快速定位需要检查的数据行
+* 在批量数据录入时，避免遗漏或重复编辑
 
 ## 三、实现思路
 
@@ -36,10 +36,11 @@ sheet.bind(GC.Spread.Sheets.Events.ValueChanged, function (e, info) {
 ```
 
 关键技术点：
-- 从 `info` 对象中获取被修改单元格所在的行号
-- 使用 `String.fromCharCode("0xe735")` 将 Unicode 编码转换为图标字符
-- 通过 `SheetArea.rowHeader` 指定操作区域为行头
-- 设置字体为 `iconfont`，确保图标正确显示
+
+* 从 `info` 对象中获取被修改单元格所在的行号
+* 使用 `String.fromCharCode("0xe735")` 将 Unicode 编码转换为图标字符
+* 通过 `SheetArea.rowHeader` 指定操作区域为行头
+* 设置字体为 `iconfont`，确保图标正确显示
 
 ### 3.3 处理新增行场景
 
@@ -83,10 +84,10 @@ CSS 文件定义了字体：
 
 ### 3.5 技术栈
 
-- SpreadJS 16.0.1：核心表格组件
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言
-- iconfont：字体图标库
+* SpreadJS 16.0.1：核心表格组件
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言
+* iconfont：字体图标库
 
 ## 四、使用说明
 
@@ -112,23 +113,24 @@ npm install
 
 ### 5.1 优点
 
-- 实时响应：图标会在用户修改单元格后立即显示，无延迟
-- 视觉直观：使用图标而非文字，更加简洁美观
-- 实现简单：核心代码不到 20 行，易于理解和维护
-- 扩展性强：可以轻松替换为其他图标或添加更多状态标识
+* 实时响应：图标会在用户修改单元格后立即显示，无延迟
+* 视觉直观：使用图标而非文字，更加简洁美观
+* 实现简单：核心代码不到 20 行，易于理解和维护
+* 扩展性强：可以轻松替换为其他图标或添加更多状态标识
 
 ### 5.2 局限性与扩展建议
 
 当前实现存在以下局限性：
 
-- 图标一旦显示就不会消失，无法区分"已保存"和"未保存"的编辑状态
-- 没有持久化机制，刷新页面后图标会消失
-- 无法撤销图标显示
+* 图标一旦显示就不会消失，无法区分"已保存"和"未保存"的编辑状态
+* 没有持久化机制，刷新页面后图标会消失
+* 无法撤销图标显示
 
 扩展建议：
-- 结合数据保存逻辑，在保存后将图标改为"已保存"状态
-- 添加清除图标的功能，允许用户手动或自动清除标记
-- 将编辑状态存储到数据模型中，实现跨会话的状态保持
+
+* 结合数据保存逻辑，在保存后将图标改为"已保存"状态
+* 添加清除图标的功能，允许用户手动或自动清除标记
+* 将编辑状态存储到数据模型中，实现跨会话的状态保持
 
 ## 六、关键代码片段
 
@@ -163,11 +165,15 @@ sheet.bind(GC.Spread.Sheets.Events.RowChanged, function (e, info) {
 
 本示例展示了如何通过 SpreadJS 的事件监听机制和行头自定义功能，实现一个实用的数据编辑状态标识功能。开发者可以从中学到：
 
-- 如何自定义 SpreadJS 行头的显示内容
-- 如何监听和响应单元格值变更事件
-- 如何在 SpreadJS 中集成和使用字体图标
-- 如何通过 `SheetArea` 参数操作不同的表格区域
+* 如何自定义 SpreadJS 行头的显示内容
+* 如何监听和响应单元格值变更事件
+* 如何在 SpreadJS 中集成和使用字体图标
+* 如何通过 `SheetArea` 参数操作不同的表格区域
 
 该方案适用于需要追踪数据变更的各类应用场景，如数据录入系统、审核工具、协同编辑平台等。通过简单的扩展，还可以实现更复杂的状态管理功能，如多状态标识、状态持久化等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/kgbhS7ceVUmxW4tEP5OOpw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

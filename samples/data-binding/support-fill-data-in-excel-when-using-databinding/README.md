@@ -1,6 +1,6 @@
 ## 一、Demo 概述
 
-本示例演示了如何使用 SpreadJS 实现 Excel 模板的导出、填报和数据绑定功能。用户可以导出一个预设了数据绑定路径的 Excel 模板，在本地 Excel 中填写数据后，再将填写好的文件导入回 SpreadJS，系统会自动将填写的数据绑定到指定的数据源对象中。
+本示例演示了如何使用 SpreadJS 实现 Excel 模板的导出、填报和数据绑定功能。用户可以导出一个预设了数据绑定路径的 Excel 模板，在本地 Excel 中填写数据后，再将填写好的文件导入回 SpreadJS，系统会自动将填写的数据绑定到指定的数据源对象中。 
 
 这种方式特别适用于需要用户在熟悉的 Excel 环境中填写数据，然后将数据导入到 Web 应用中进行后续处理的场景，如数据采集、表单填报、批量数据录入等业务需求。
 
@@ -83,6 +83,7 @@ document.getElementById("file").addEventListener("change", function () {
 ```
 
 关键步骤：
+
 1. 创建临时工作簿导入 Excel 文件
 2. 获取已使用区域的数据数组
 3. 为当前工作表设置空的 `CellBindingSource`
@@ -112,10 +113,10 @@ console.log(curSheet.getDataSource().getSource())
 
 ### 3.3 技术栈
 
-- **@grapecity/spread-sheets**: 16.0.1 - SpreadJS 核心库
-- **@grapecity/spread-sheets-io**: 16.0.1 - Excel 导入导出功能
-- **FileSaver.js**: 2.0.5 - 文件下载功能
-- **SystemJS**: 0.19.22 - 模块加载器
+* **@grapecity/spread-sheets**: 16.0.1 - SpreadJS 核心库
+* **@grapecity/spread-sheets-io**: 16.0.1 - Excel 导入导出功能
+* **FileSaver.js**: 2.0.5 - 文件下载功能
+* **SystemJS**: 0.19.22 - 模块加载器
 
 ## 四、使用说明
 
@@ -151,10 +152,12 @@ npm install
 ### 5.2 局限性与扩展建议
 
 **局限性**：
-- 当前示例仅支持简单的键值对绑定，不支持嵌套对象或数组结构
-- 没有数据验证机制，用户可能填写不符合要求的数据
+
+* 当前示例仅支持简单的键值对绑定，不支持嵌套对象或数组结构
+* 没有数据验证机制，用户可能填写不符合要求的数据
 
 **扩展建议**：
+
 1. 添加数据验证规则，确保用户填写的数据符合业务要求
 2. 支持更复杂的数据结构，如嵌套对象、数组等
 3. 增加错误处理机制，对导入失败的情况给出友好提示
@@ -188,17 +191,23 @@ let arr = tempSheet.getArray(ur.row, ur.col, ur.rowCount, ur.colCount)
 本示例展示了 SpreadJS 在 Excel 模板填报和数据绑定场景中的应用。通过预设 bindingPath，实现了从 Excel 文件到数据源对象的自动映射，大大简化了数据采集和导入的流程。
 
 **学习价值**：
+
 1. 掌握 SpreadJS 的 Excel 导入导出功能
 2. 理解 CellBindingSource 的数据绑定机制
 3. 学习如何通过 bindingPath 实现单元格与数据源的自动映射
 4. 了解 getUsedRange 和 getArray 方法的使用
 
 **适用场景**：
-- 需要用户在 Excel 中填写数据的表单系统
-- 批量数据采集和导入场景
-- 离线数据填报后在线提交的业务流程
-- 需要保留 Excel 操作习惯的 Web 应用
+
+* 需要用户在 Excel 中填写数据的表单系统
+* 批量数据采集和导入场景
+* 离线数据填报后在线提交的业务流程
+* 需要保留 Excel 操作习惯的 Web 应用
 
 该方案特别适合需要结合 Excel 强大的编辑能力和 Web 应用数据处理能力的场景，可以作为企业级数据采集系统的技术参考。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/k1GwLjyhg0eQJzW1u8Cf2A/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

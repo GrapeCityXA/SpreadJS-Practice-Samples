@@ -1,12 +1,12 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中正确导入包含 WPS 单元格内图片的 Excel 文件。WPS Office 使用特殊的 `DISPIMG` 函数来实现单元格内嵌图片功能，这种格式与标准的 Excel 浮动图片不同。该示例通过解析 XLSX 文件的内部 XML 结构，提取图片数据并转换为 SpreadJS 的 `image()` 函数，实现了对 WPS 单元格内图片的完整支持。
+本示例展示了如何在 SpreadJS 中正确导入包含 WPS 单元格内图片的 Excel 文件。WPS Office 使用特殊的 `DISPIMG` 函数来实现单元格内嵌图片功能，这种格式与标准的 Excel 浮动图片不同。该示例通过解析 XLSX 文件的内部 XML 结构，提取图片数据并转换为 SpreadJS 的 `image()` 函数，实现了对 WPS 单元格内图片的完整支持。 
 
 ## 二、解决的问题
 
-- **WPS 格式兼容性**：WPS Office 使用 `DISPIMG` 函数存储单元格内图片，SpreadJS 默认导入时无法识别该函数，导致图片丢失
-- **图片数据提取**：需要从 XLSX 文件的 ZIP 结构中解析 `cellimages.xml` 和关系文件，建立图片 ID 与实际图片文件的映射关系
-- **公式转换**：将 WPS 的 `DISPIMG` 函数转换为 SpreadJS 支持的 `image()` 函数，确保图片正确显示
+* **WPS 格式兼容性**：WPS Office 使用 `DISPIMG` 函数存储单元格内图片，SpreadJS 默认导入时无法识别该函数，导致图片丢失
+* **图片数据提取**：需要从 XLSX 文件的 ZIP 结构中解析 `cellimages.xml` 和关系文件，建立图片 ID 与实际图片文件的映射关系
+* **公式转换**：将 WPS 的 `DISPIMG` 函数转换为 SpreadJS 支持的 `image()` 函数，确保图片正确显示
 
 ## 三、实现思路
 
@@ -172,11 +172,11 @@ spread.import(file, function () {
 
 ### 3.2 技术栈
 
-- **SpreadJS 17.0.8**：电子表格核心库
-- **SpreadJS IO 17.0.8**：Excel 文件导入导出模块
-- **JSZip 3.10.1**：ZIP 文件解析库
-- **SheetJS (XLSX) 0.18.5**：Excel 文件解析库
-- **SystemJS 0.19.22**：模块加载器
+* **SpreadJS 17.0.8**：电子表格核心库
+* **SpreadJS IO 17.0.8**：Excel 文件导入导出模块
+* **JSZip 3.10.1**：ZIP 文件解析库
+* **SheetJS (XLSX) 0.18.5**：Excel 文件解析库
+* **SystemJS 0.19.22**：模块加载器
 
 ## 四、使用说明
 
@@ -199,16 +199,16 @@ npm install
 
 ### 5.1 优点
 
-- **完整的 WPS 格式支持**：能够正确识别和导入 WPS Office 创建的单元格内图片
-- **性能优化**：使用 `suspendPaint()` 和 `resumePaint()` 批量更新，避免频繁重绘
-- **隐藏工作表存储**：将图片 Base64 数据存储在隐藏工作表中，避免污染用户界面
-- **多图片格式支持**：自动识别 PNG、JPEG、GIF、WebP、BMP 等图片格式
+* **完整的 WPS 格式支持**：能够正确识别和导入 WPS Office 创建的单元格内图片
+* **性能优化**：使用 `suspendPaint()` 和 `resumePaint()` 批量更新，避免频繁重绘
+* **隐藏工作表存储**：将图片 Base64 数据存储在隐藏工作表中，避免污染用户界面
+* **多图片格式支持**：自动识别 PNG、JPEG、GIF、WebP、BMP 等图片格式
 
 ### 5.2 局限性与扩展建议
 
-- **依赖第三方库**：需要引入 JSZip 和 SheetJS 库来解析 XLSX 文件结构，增加了文件体积
-- **性能考虑**：对于包含大量图片的文件，解析和转换过程可能较慢
-- **扩展建议**：可以考虑添加进度提示、支持更多 WPS 特有功能、优化大文件处理性能
+* **依赖第三方库**：需要引入 JSZip 和 SheetJS 库来解析 XLSX 文件结构，增加了文件体积
+* **性能考虑**：对于包含大量图片的文件，解析和转换过程可能较慢
+* **扩展建议**：可以考虑添加进度提示、支持更多 WPS 特有功能、优化大文件处理性能
 
 ## 六、关键代码片段
 
@@ -243,13 +243,16 @@ function blobToBase64(blob, imgFile) {
 
 本示例展示了如何通过深入解析 XLSX 文件的内部结构来实现对 WPS 单元格内图片的支持。开发者可以从中学到：
 
-- XLSX 文件的 ZIP 结构和 XML 解析技术
-- WPS Office 的 `DISPIMG` 函数工作原理
-- SpreadJS 的 `image()` 函数使用方法
-- 如何使用隐藏工作表存储辅助数据
-- 性能优化技巧（批量更新、暂停重绘）
+* XLSX 文件的 ZIP 结构和 XML 解析技术
+* WPS Office 的 `DISPIMG` 函数工作原理
+* SpreadJS 的 `image()` 函数使用方法
+* 如何使用隐藏工作表存储辅助数据
+* 性能优化技巧（批量更新、暂停重绘）
 
 该方案适用于需要兼容 WPS Office 文件格式的企业应用场景，具有良好的扩展性，可以进一步支持更多 WPS 特有功能。
 
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/2AH-HMipk0CeBgKX-ZXhfA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

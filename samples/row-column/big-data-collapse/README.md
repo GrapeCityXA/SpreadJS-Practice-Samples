@@ -8,9 +8,9 @@
 
 在处理大数据量的分组列展开折叠时，传统的全量操作方式会导致以下问题：
 
-- **性能瓶颈**：对 5000 行数据全部执行展开/折叠操作会造成明显的卡顿和延迟
-- **用户体验差**：滚动时需要等待所有行的状态更新完成才能看到结果
-- **资源浪费**：用户实际只能看到屏幕可视区域内的 20-30 行，却要处理全部数据
+* **性能瓶颈**：对 5000 行数据全部执行展开/折叠操作会造成明显的卡顿和延迟
+* **用户体验差**：滚动时需要等待所有行的状态更新完成才能看到结果
+* **资源浪费**：用户实际只能看到屏幕可视区域内的 20-30 行，却要处理全部数据
 
 本示例通过"按需处理"的策略，仅对可视区域内的行进行操作，将性能开销降低到可接受范围，实现了大数据量下的流畅交互。
 
@@ -138,21 +138,23 @@ npm install
 
 ### 5.1 优点
 
-- **高性能**：仅处理可视区域内的 20-30 行数据，避免全量操作的性能开销
-- **流畅交互**：使用 `suspendPaint/resumePaint` 批量处理，减少重绘次数
-- **智能定位**：滚动到非一级节点时，自动向上查找最近的父节点进行折叠
-- **动态适配**：监听缩放事件，自动调整可视行数计算
+* **高性能**：仅处理可视区域内的 20-30 行数据，避免全量操作的性能开销
+* **流畅交互**：使用 `suspendPaint/resumePaint` 批量处理，减少重绘次数
+* **智能定位**：滚动到非一级节点时，自动向上查找最近的父节点进行折叠
+* **动态适配**：监听缩放事件，自动调整可视行数计算
 
 ### 5.2 局限性与扩展建议
 
 **局限性**：
-- 当前实现假设一级节点（`textIndent == 1`）为可折叠节点，不支持任意层级的独立折叠
-- 滚动速度过快时，可能出现短暂的状态不一致（新进入区域的行尚未更新）
+
+* 当前实现假设一级节点（`textIndent == 1`）为可折叠节点，不支持任意层级的独立折叠
+* 滚动速度过快时，可能出现短暂的状态不一致（新进入区域的行尚未更新）
 
 **扩展建议**：
-- 可以引入虚拟滚动技术，进一步优化超大数据量（10 万行以上）的场景
-- 支持记忆每个节点的折叠状态，实现更精细的状态管理
-- 添加节点搜索和快速定位功能
+
+* 可以引入虚拟滚动技术，进一步优化超大数据量（10 万行以上）的场景
+* 支持记忆每个节点的折叠状态，实现更精细的状态管理
+* 添加节点搜索和快速定位功能
 
 ## 六、关键代码片段
 
@@ -188,11 +190,15 @@ spread.resumePaint()    // 一次性重绘
 
 本示例展示了在 SpreadJS 中处理大数据量分组列展开折叠的最佳实践，核心思想是"按需处理"——仅对用户可见的区域进行操作。开发者可以从中学到：
 
-- 如何使用 `outlineColumn` API 实现分组列功能
-- 通过 `getViewportTopRow/BottomRow` 计算可视区域的技巧
-- 使用 `suspendPaint/resumePaint` 优化批量操作性能
-- 监听滚动和缩放事件实现动态更新的策略
+* 如何使用 `outlineColumn` API 实现分组列功能
+* 通过 `getViewportTopRow/BottomRow` 计算可视区域的技巧
+* 使用 `suspendPaint/resumePaint` 优化批量操作性能
+* 监听滚动和缩放事件实现动态更新的策略
 
 该方案适用于需要展示层级结构数据且数据量较大的场景，通过局部更新策略将性能开销控制在可接受范围内。在实际项目中，可以根据业务需求扩展为支持任意层级折叠、状态持久化等功能。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/Z4ItMhWG1UK3emwukx14kA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

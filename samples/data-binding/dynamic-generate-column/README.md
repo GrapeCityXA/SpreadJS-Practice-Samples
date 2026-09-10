@@ -4,7 +4,7 @@
 
 ## 二、解决的问题
 
-* **动态列数需求**：业务数据中包含数量不固定的子项（如多个公司的评分），需要根据实际数据动态生成对应的列
+* **动态列数需求**：业务数据中包含数量不固定的子项（如多个公司的评分），需要根据实际数据动态生成对应的列 
 * **模板列复制**：新增的列需要保持与模板列相同的样式、格式和结构
 * **数据扁平化处理**：将嵌套的数组数据（`gongsi` 数组）转换为扁平化的键值对，以适配 SpreadJS 的数据绑定机制
 * **表格区域自动扩展**：动态插入列后，需要同步调整表格（Table）的范围和列配置
@@ -217,8 +217,8 @@ for (let i = range.col, j = 0; i < range.col + range.colCount; i++) {
 
 该方案适用于需要根据业务数据动态调整表格结构的场景，如多维度评价表、动态报表、可配置的数据展示等。通过合理的扩展，可以支持更复杂的动态列生成需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/bbCtQ1yQkkKzygOAXlTPeg/)）
-
-
-
-<br>
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

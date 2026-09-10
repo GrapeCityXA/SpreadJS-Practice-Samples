@@ -6,9 +6,9 @@
 
 在实际业务场景中，某些列可能需要严格的数据验证规则（如下拉列表选择），为了防止用户通过粘贴操作绕过验证规则，需要实现以下功能：
 
-- 禁止向带有条件验证的单元格粘贴数据
-- 禁止直接编辑带有条件验证的单元格
-- 确保数据输入必须通过验证规则（如下拉列表选择）
+* 禁止向带有条件验证的单元格粘贴数据
+* 禁止直接编辑带有条件验证的单元格
+* 确保数据输入必须通过验证规则（如下拉列表选择）
 
 ## 三、实现思路
 
@@ -34,10 +34,11 @@ sheet.bind(GC.Spread.Sheets.Events.ClipboardPasting, function (sender, args) {
 ```
 
 代码逻辑：
-- 获取粘贴的目标单元格区域
-- 遍历区域内的每个单元格
-- 检查单元格是否存在数据验证器且类型为 3（列表验证）
-- 如果存在则设置 `args.cancel = true` 取消粘贴操作
+
+* 获取粘贴的目标单元格区域
+* 遍历区域内的每个单元格
+* 检查单元格是否存在数据验证器且类型为 3（列表验证）
+* 如果存在则设置 `args.cancel = true` 取消粘贴操作
 
 #### 监听编辑事件并拦截
 
@@ -54,9 +55,10 @@ sheet.bind(GC.Spread.Sheets.Events.EditStarting, function (sender, args) {
 ```
 
 代码逻辑：
-- 获取即将编辑的单元格位置
-- 检查该单元格是否存在数据验证器且类型为 3
-- 如果存在则取消编辑操作
+
+* 获取即将编辑的单元格位置
+* 检查该单元格是否存在数据验证器且类型为 3
+* 如果存在则取消编辑操作
 
 #### 设置列表验证规则
 
@@ -76,9 +78,9 @@ sheet.bind(GC.Spread.Sheets.Events.EditStarting, function (sender, args) {
 
 ### 3.2 技术栈
 
-- @grapecity/spread-sheets: 15.0.0
-- SystemJS: 0.19.22（模块加载器）
-- TypeScript: 4.1.2
+* @grapecity/spread-sheets: 15.0.0
+* SystemJS: 0.19.22（模块加载器）
+* TypeScript: 4.1.2
 
 ## 四、使用说明
 
@@ -101,18 +103,19 @@ npm install
 
 ### 5.1 优点
 
-- 数据保护：有效防止用户通过粘贴绕过验证规则
-- 用户体验：通过事件拦截实现无感知的操作限制
-- 灵活性：可以根据验证类型（type）进行精确控制
+* 数据保护：有效防止用户通过粘贴绕过验证规则
+* 用户体验：通过事件拦截实现无感知的操作限制
+* 灵活性：可以根据验证类型（type）进行精确控制
 
 ### 5.2 局限性与扩展建议
 
 当前实现存在一个小 bug：在 `ClipboardPasting` 事件处理函数中，第 16 行代码 `angs.cancel = true` 应为 `args.cancel = true`（变量名拼写错误）。
 
 扩展建议：
-- 可以添加用户提示信息，告知用户为何操作被拦截
-- 可以扩展到其他验证类型（如数字范围验证、日期验证等）
-- 可以根据业务需求，允许特定权限的用户进行粘贴操作
+
+* 可以添加用户提示信息，告知用户为何操作被拦截
+* 可以扩展到其他验证类型（如数字范围验证、日期验证等）
+* 可以根据业务需求，允许特定权限的用户进行粘贴操作
 
 ## 六、关键代码片段
 
@@ -139,11 +142,15 @@ args.cancel = true
 
 本示例展示了如何通过 SpreadJS 的事件机制和数据验证功能，实现对特定单元格的粘贴和编辑限制。开发者可以从中学到：
 
-- 如何使用 `ClipboardPasting` 事件拦截粘贴操作
-- 如何使用 `EditStarting` 事件拦截编辑操作
-- 如何通过 `getDataValidator()` 方法获取单元格的验证规则
-- 如何根据验证类型实现精确的操作控制
+* 如何使用 `ClipboardPasting` 事件拦截粘贴操作
+* 如何使用 `EditStarting` 事件拦截编辑操作
+* 如何通过 `getDataValidator()` 方法获取单元格的验证规则
+* 如何根据验证类型实现精确的操作控制
 
 该方案适用于需要严格数据输入规范的业务场景，如表单填写、数据导入等，可以有效防止用户通过粘贴操作破坏数据验证规则。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/958mhUX0rE2EVmgr7q0bYQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -1,15 +1,15 @@
 ## 一、Demo 概述
 
-本示例演示了如何在 SpreadJS 中创建自定义单元格类型，实现一个只允许输入数字的单元格编辑器。通过继承 `GC.Spread.Sheets.CellTypes.Base` 基类，自定义单元格的编辑行为，在用户输入时自动过滤掉中文字符，确保单元格只接受数字输入。
+本示例演示了如何在 SpreadJS 中创建自定义单元格类型，实现一个只允许输入数字的单元格编辑器。通过继承 `GC.Spread.Sheets.CellTypes.Base` 基类，自定义单元格的编辑行为，在用户输入时自动过滤掉中文字符，确保单元格只接受数字输入。 
 
 ## 二、解决的问题
 
 在实际业务场景中，经常需要对单元格的输入内容进行限制，例如：
 
-- 金额、数量等字段需要严格限制为数字输入
-- 防止用户误输入中文或其他非法字符
-- 提供实时的输入验证，而不是在提交后才报错
-- 自定义单元格的编辑体验，满足特定业务需求
+* 金额、数量等字段需要严格限制为数字输入
+* 防止用户误输入中文或其他非法字符
+* 提供实时的输入验证，而不是在提交后才报错
+* 自定义单元格的编辑体验，满足特定业务需求
 
 ## 三、实现思路
 
@@ -68,9 +68,10 @@ NumberCellType.prototype.activateEditor = function(editorContext, cellStyle, cel
 ```
 
 关键技术点：
-- 使用正则表达式 `/[\u4e00-\u9fa5]/g` 匹配所有中文字符
-- 同时监听 `input` 和 `change` 事件，确保实时过滤
-- 调用基类的 `activateEditor` 方法保留默认行为
+
+* 使用正则表达式 `/[\u4e00-\u9fa5]/g` 匹配所有中文字符
+* 同时监听 `input` 和 `change` 事件，确保实时过滤
+* 调用基类的 `activateEditor` 方法保留默认行为
 
 ### 3.4 编辑器尺寸更新
 
@@ -97,9 +98,9 @@ sheet.setCellType(0, 1, new NumberCellType());
 
 ### 3.6 技术栈
 
-- SpreadJS 17.0.8：核心表格组件
-- SystemJS 0.19.22：模块加载器
-- systemjs-plugin-babel 0.0.25：ES6 转译支持
+* SpreadJS 17.0.8：核心表格组件
+* SystemJS 0.19.22：模块加载器
+* systemjs-plugin-babel 0.0.25：ES6 转译支持
 
 ## 四、使用说明
 
@@ -124,19 +125,19 @@ npm install
 
 ### 5.1 优点
 
-- 实时输入验证，用户体验良好
-- 通过继承基类，保留了 SpreadJS 单元格的默认功能
-- 代码结构清晰，易于扩展和维护
-- 可以根据需求修改正则表达式，实现不同的输入限制
+* 实时输入验证，用户体验良好
+* 通过继承基类，保留了 SpreadJS 单元格的默认功能
+* 代码结构清晰，易于扩展和维护
+* 可以根据需求修改正则表达式，实现不同的输入限制
 
 ### 5.2 局限性与扩展建议
 
 当前实现只过滤了中文字符，可以根据实际需求进行扩展：
 
-- 添加更严格的数字验证（如只允许整数、限制小数位数）
-- 支持数字范围限制（最小值、最大值）
-- 添加输入提示或错误提示
-- 支持千分位分隔符等格式化显示
+* 添加更严格的数字验证（如只允许整数、限制小数位数）
+* 支持数字范围限制（最小值、最大值）
+* 添加输入提示或错误提示
+* 支持千分位分隔符等格式化显示
 
 扩展示例：
 
@@ -201,12 +202,15 @@ NumberCellType.prototype.getEditorValue = function(editor) {
 
 本示例展示了 SpreadJS 自定义单元格类型的核心开发流程，开发者可以从中学到：
 
-- 如何继承 `CellTypes.Base` 基类创建自定义单元格类型
-- 如何重写关键方法（createEditorElement、activateEditor、updateEditor 等）
-- 如何使用 DOM 事件监听实现实时输入验证
-- 如何使用正则表达式过滤特定字符
+* 如何继承 `CellTypes.Base` 基类创建自定义单元格类型
+* 如何重写关键方法（createEditorElement、activateEditor、updateEditor 等）
+* 如何使用 DOM 事件监听实现实时输入验证
+* 如何使用正则表达式过滤特定字符
 
 该方案适用于需要对单元格输入进行严格控制的场景，具有良好的扩展性，可以根据业务需求定制各种输入限制规则。通过自定义单元格类型，可以大大提升表格应用的数据质量和用户体验。
 
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/BNufrdvUCEuxUw2Q3yq7hQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

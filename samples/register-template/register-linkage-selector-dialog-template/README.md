@@ -4,10 +4,10 @@
 
 ## 二、解决的问题
 
-- 在 SpreadJS Designer 中添加自定义业务功能入口，扩展标准工具栏
-- 实现级联选择交互，根据上级选项动态显示下级选项
-- 通过声明式配置创建复杂的弹窗 UI，无需手写 HTML/CSS
-- 实现数据绑定和条件渲染，简化前端交互逻辑
+* 在 SpreadJS Designer 中添加自定义业务功能入口，扩展标准工具栏
+* 实现级联选择交互，根据上级选项动态显示下级选项
+* 通过声明式配置创建复杂的弹窗 UI，无需手写 HTML/CSS
+* 实现数据绑定和条件渲染，简化前端交互逻辑
 
 ## 三、实现思路
 
@@ -147,9 +147,9 @@ GC.Spread.Sheets.Designer.registerTemplate("newTab", selectTemplate);
 
 ### 3.6 技术栈
 
-- SpreadJS v17.0.8（核心表格引擎）
-- SpreadJS Designer v17.0.8（设计器组件）
-- SystemJS 0.19.22（模块加载器）
+* SpreadJS v17.0.8（核心表格引擎）
+* SpreadJS Designer v17.0.8（设计器组件）
+* SystemJS 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -174,17 +174,17 @@ npm install
 
 ### 5.1 优点
 
-- 声明式 UI 配置，无需手写 DOM 操作代码
-- 通过 `visibleWhen` 实现条件渲染，逻辑清晰
-- 数据绑定机制简化了表单数据管理
-- 易于扩展，可以快速添加更多级联层级
+* 声明式 UI 配置，无需手写 DOM 操作代码
+* 通过 `visibleWhen` 实现条件渲染，逻辑清晰
+* 数据绑定机制简化了表单数据管理
+* 易于扩展，可以快速添加更多级联层级
 
 ### 5.2 局限性与扩展建议
 
-- 当前示例中城市数据是硬编码的，实际应用中应从后端 API 动态获取
-- 可以扩展为三级或多级联动（省-市-区）
-- 可以添加数据验证逻辑，确保用户必须选择完整的省市信息
-- 可以将选择结果写入到 SpreadJS 的单元格中，实现与表格数据的联动
+* 当前示例中城市数据是硬编码的，实际应用中应从后端 API 动态获取
+* 可以扩展为三级或多级联动（省-市-区）
+* 可以添加数据验证逻辑，确保用户必须选择完整的省市信息
+* 可以将选择结果写入到 SpreadJS 的单元格中，实现与表格数据的联动
 
 ## 六、关键代码片段
 
@@ -215,11 +215,15 @@ GC.Spread.Sheets.Designer.showDialog("newTab", dialogOptiosn, (result) => {
 
 本示例展示了 SpreadJS Designer 的高级扩展能力，开发者可以学到：
 
-- 如何自定义 Designer 的 Ribbon 菜单和命令
-- 如何使用 JSON 配置创建复杂的弹窗 UI
-- 如何实现条件渲染和数据绑定
-- 如何通过 `visibleWhen` 属性实现级联选择交互
+* 如何自定义 Designer 的 Ribbon 菜单和命令
+* 如何使用 JSON 配置创建复杂的弹窗 UI
+* 如何实现条件渲染和数据绑定
+* 如何通过 `visibleWhen` 属性实现级联选择交互
 
 该方案适用于需要在 SpreadJS Designer 中集成自定义业务逻辑的场景，特别是需要用户输入结构化数据的情况。通过模板注册机制，可以快速构建各种复杂的表单交互，而无需深入了解底层 DOM 操作。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/Bf9QymmO9kuhJAx0ZGIxZQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

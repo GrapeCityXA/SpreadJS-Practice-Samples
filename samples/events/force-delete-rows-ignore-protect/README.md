@@ -6,9 +6,9 @@
 
 在实际业务场景中，工作表保护是常见的数据安全措施，但有时需要在保护状态下允许用户执行特定操作。本示例解决了以下问题：
 
-- 工作表保护后，即使设置了 `allowDeleteRows` 权限，某些场景下仍需要更灵活的删除控制
-- 需要自定义删除行为，绕过默认的保护机制
-- 希望通过右键菜单提供用户友好的删除操作入口
+* 工作表保护后，即使设置了 `allowDeleteRows` 权限，某些场景下仍需要更灵活的删除控制
+* 需要自定义删除行为，绕过默认的保护机制
+* 希望通过右键菜单提供用户友好的删除操作入口
 
 ## 三、实现思路
 
@@ -45,10 +45,11 @@ spread.commandManager().register("forceDeleteRows", forceDeleteRowsCommand);
 ```
 
 该命令的关键点：
-- 支持撤销/重做功能（`canUndo: true`）
-- 使用事务机制（`startTransaction`/`endTransaction`）确保操作的原子性
-- 通过 `suspendPaint`/`resumePaint` 优化渲染性能
-- 直接调用 `sheet.deleteRows()` 方法，绕过保护检查
+
+* 支持撤销/重做功能（`canUndo: true`）
+* 使用事务机制（`startTransaction`/`endTransaction`）确保操作的原子性
+* 通过 `suspendPaint`/`resumePaint` 优化渲染性能
+* 直接调用 `sheet.deleteRows()` 方法，绕过保护检查
 
 ### 3.2 拦截右键菜单
 
@@ -81,9 +82,9 @@ sheet.options.protectionOptions.allowDeleteRows = true
 
 ### 3.4 技术栈
 
-- SpreadJS 17.0.8：核心表格控件
-- SystemJS 0.19.22：模块加载器
-- systemjs-plugin-babel 0.0.25：ES6 语法转译
+* SpreadJS 17.0.8：核心表格控件
+* SystemJS 0.19.22：模块加载器
+* systemjs-plugin-babel 0.0.25：ES6 语法转译
 
 ## 四、使用说明
 
@@ -106,16 +107,16 @@ npm install
 
 ### 5.1 优点
 
-- 灵活的权限控制：可以在保护工作表的同时允许特定的删除操作
-- 支持撤销/重做：自定义命令完整支持 SpreadJS 的撤销重做机制
-- 用户体验友好：通过右键菜单提供直观的操作入口
-- 性能优化：使用 `suspendPaint`/`resumePaint` 避免不必要的重绘
+* 灵活的权限控制：可以在保护工作表的同时允许特定的删除操作
+* 支持撤销/重做：自定义命令完整支持 SpreadJS 的撤销重做机制
+* 用户体验友好：通过右键菜单提供直观的操作入口
+* 性能优化：使用 `suspendPaint`/`resumePaint` 避免不必要的重绘
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现绕过了工作表保护机制，在生产环境中需要结合业务逻辑添加额外的权限验证
-- 可以扩展为支持更多操作类型（如插入行、删除列等）
-- 建议添加操作日志记录，便于审计和追溯
+* 当前实现绕过了工作表保护机制，在生产环境中需要结合业务逻辑添加额外的权限验证
+* 可以扩展为支持更多操作类型（如插入行、删除列等）
+* 建议添加操作日志记录，便于审计和追溯
 
 ## 六、关键代码片段
 
@@ -167,11 +168,15 @@ spread.contextMenu.onOpenMenu = function (menuData, itemsDataForShown, hitInfo, 
 
 本示例展示了 SpreadJS 中自定义命令和菜单拦截的高级用法，开发者可以从中学到：
 
-- 如何使用 `commandManager` 注册自定义命令
-- 如何实现支持撤销/重做的命令
-- 如何拦截和修改右键菜单行为
-- 如何在保护工作表的前提下实现特定操作
+* 如何使用 `commandManager` 注册自定义命令
+* 如何实现支持撤销/重做的命令
+* 如何拦截和修改右键菜单行为
+* 如何在保护工作表的前提下实现特定操作
 
 该方案适用于需要精细化权限控制的场景，可以根据业务需求扩展为更复杂的权限管理系统。在实际应用中，建议结合后端权限验证，确保操作的安全性和可追溯性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/x1cW9e6DWUKvDoNz6GGVjQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

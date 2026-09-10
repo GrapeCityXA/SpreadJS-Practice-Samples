@@ -1,3 +1,5 @@
+# control-designer-button-available
+
 ### 问题：表单保护下如何动态控制工具栏按钮是否禁用？
 
 ***
@@ -11,7 +13,7 @@
 
 借助事件监听和命令重写，动态的去更新表单保护时的相关属性。
 
-```
+```auto
 let config = JSON.parse(JSON.stringify(GC.Spread.Sheets.Designer.DefaultConfig))
 let mergeCenter = GC.Spread.Sheets.Designer.getCommand("mergeCenter")
 mergeCenter.enableContext = "customAllowMerge || " + mergeCenter.enableContext
@@ -35,4 +37,8 @@ sheet.bind(GC.Spread.Sheets.Events.SelectionChanged, function(e, info) {
 最终效果，请关注工具栏的“合并后居中”功能：
 ![](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/GIF%202026-3-23%2017-30-01-20260323.a68b17.gif?width=400)
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/kCTx6vGIHkS61hCmSbsH1Q/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

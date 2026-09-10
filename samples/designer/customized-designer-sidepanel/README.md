@@ -6,10 +6,10 @@
 
 在实际的企业级应用中，开发者经常需要在 SpreadJS Designer 中集成自定义的业务功能面板，例如：
 
-- 审计追踪：记录和展示单元格的操作历史
-- 数据验证：显示当前单元格的校验规则和状态
-- 业务信息：展示与当前选区相关的业务数据
-- 自定义工具：提供特定业务场景下的辅助功能
+* 审计追踪：记录和展示单元格的操作历史
+* 数据验证：显示当前单元格的校验规则和状态
+* 业务信息：展示与当前选区相关的业务数据
+* 自定义工具：提供特定业务场景下的辅助功能
 
 本示例提供了一套完整的解决方案，演示如何扩展 Designer 的 UI 界面，添加自定义侧边栏并实现与表格的交互。
 
@@ -173,10 +173,10 @@ config.sidePanels.push(sidePanelsAuditConfig);
 
 ### 3.3 技术栈
 
-- SpreadJS Designer 16.0.1：提供设计器核心功能
-- SpreadJS 核心库 16.0.1：电子表格引擎
-- SystemJS：模块加载器
-- TypeScript 4.1.2：类型支持
+* SpreadJS Designer 16.0.1：提供设计器核心功能
+* SpreadJS 核心库 16.0.1：电子表格引擎
+* SystemJS：模块加载器
+* TypeScript 4.1.2：类型支持
 
 ## 四、使用说明
 
@@ -202,17 +202,17 @@ npm install
 
 ### 5.1 优点
 
-- 完全集成到 Designer UI：自定义面板与原生界面风格一致
-- 响应式数据绑定：通过 `getState` 方法实现自动更新，无需手动操作 DOM
-- 模块化设计：命令、模板、配置分离，易于维护和扩展
-- 灵活的模板系统：支持复杂的布局结构和样式定义
+* 完全集成到 Designer UI：自定义面板与原生界面风格一致
+* 响应式数据绑定：通过 `getState` 方法实现自动更新，无需手动操作 DOM
+* 模块化设计：命令、模板、配置分离，易于维护和扩展
+* 灵活的模板系统：支持复杂的布局结构和样式定义
 
 ### 5.2 扩展建议
 
-- 可以将 `getState` 方法改为从后端 API 获取真实的审计数据
-- 模板中可以添加更多交互元素（按钮、输入框等）
-- 支持多个侧边栏面板，通过不同的 `visibleContext` 控制显示
-- 可以监听 Spread 的事件（如 `CellChanged`）来触发面板刷新
+* 可以将 `getState` 方法改为从后端 API 获取真实的审计数据
+* 模板中可以添加更多交互元素（按钮、输入框等）
+* 支持多个侧边栏面板，通过不同的 `visibleContext` 控制显示
+* 可以监听 Spread 的事件（如 `CellChanged`）来触发面板刷新
 
 ## 六、关键代码片段
 
@@ -248,4 +248,8 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container", conf
 
 该方案适用于需要在 Designer 中集成业务功能面板的场景，通过 `getState` 方法可以实现与表格数据的实时联动，具有良好的扩展性和可维护性。
 
-### 在线Demo（[全屏打开](https://jscodemine.grapecity.com/share/n14dpmoNNEuo7ve0BKf9KA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

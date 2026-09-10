@@ -6,9 +6,9 @@
 
 在实际业务中，工作表保护是一种常见的权限控制手段，但默认的保护机制会阻止所有编辑操作，包括粘贴。本示例解决了以下问题：
 
-- 如何在保护状态下允许用户执行粘贴操作
-- 如何在不破坏保护机制的前提下临时解除保护
-- 如何通过自定义命令重写系统默认行为
+* 如何在保护状态下允许用户执行粘贴操作
+* 如何在不破坏保护机制的前提下临时解除保护
+* 如何通过自定义命令重写系统默认行为
 
 ## 三、实现思路
 
@@ -57,9 +57,9 @@ spread.commandManager().setShortcutKey("myPaste", GC.Spread.Commands.Key.v, true
 
 ### 3.2 技术栈
 
-- @grapecity/spread-sheets: 16.0.1
-- SystemJS: 0.19.22
-- TypeScript: 4.1.2
+* @grapecity/spread-sheets: 16.0.1
+* SystemJS: 0.19.22
+* TypeScript: 4.1.2
 
 ## 四、使用说明
 
@@ -84,10 +84,10 @@ npm install
 
 ### 5.1 优点
 
-- 保持工作表保护状态的同时允许粘贴操作
-- 通过 `setTimeout` 异步机制确保粘贴操作在解除保护后立即执行
-- 实现简洁，不影响其他保护功能
-- 用户体验良好，无需手动切换保护状态
+* 保持工作表保护状态的同时允许粘贴操作
+* 通过 `setTimeout` 异步机制确保粘贴操作在解除保护后立即执行
+* 实现简洁，不影响其他保护功能
+* 用户体验良好，无需手动切换保护状态
 
 ### 5.2 局限性与扩展建议
 
@@ -113,11 +113,15 @@ spread.commandManager().execute({ cmd: "paste" });
 
 本示例展示了如何通过 SpreadJS 的命令管理器和快捷键机制实现灵活的权限控制。开发者可以从中学到：
 
-- 如何使用 `commandManager` 注册和重写系统命令
-- 如何通过 `setShortcutKey` 自定义快捷键绑定
-- 如何利用异步机制实现临时状态切换
-- 工作表保护机制的灵活应用
+* 如何使用 `commandManager` 注册和重写系统命令
+* 如何通过 `setShortcutKey` 自定义快捷键绑定
+* 如何利用异步机制实现临时状态切换
+* 工作表保护机制的灵活应用
 
 该方案适用于需要精细化权限控制的表格应用场景，可以根据实际需求扩展到其他受限操作的临时授权。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/ztMSCXqZ3EKmdUgQnbPbgw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

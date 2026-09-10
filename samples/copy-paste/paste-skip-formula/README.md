@@ -6,9 +6,9 @@
 
 在日常的电子表格操作中，用户经常需要复制粘贴数据。但在某些场景下，目标区域可能包含重要的公式，直接粘贴会导致这些公式被覆盖。本示例解决了以下问题：
 
-- 防止粘贴操作覆盖目标区域的公式
-- 保护工作表中的计算逻辑不被意外破坏
-- 在数据导入或批量编辑时保持公式完整性
+* 防止粘贴操作覆盖目标区域的公式
+* 保护工作表中的计算逻辑不被意外破坏
+* 在数据导入或批量编辑时保持公式完整性
 
 ## 三、实现思路
 
@@ -78,9 +78,9 @@ function traverseCellRangeIfFormula(sheet, row, col, rowCount, colCount) {
 
 ### 3.3 技术栈
 
-- SpreadJS v17.0.8（核心表格组件）
-- SpreadJS Designer v17.0.8（设计器组件）
-- SystemJS v0.19.22（模块加载器）
+* SpreadJS v17.0.8（核心表格组件）
+* SpreadJS Designer v17.0.8（设计器组件）
+* SystemJS v0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -106,10 +106,10 @@ npm install
 
 ### 5.1 优点
 
-- 自动保护公式不被覆盖，无需手动干预
-- 实现简洁，仅通过两个事件监听即可完成
-- 适用于任意大小的单元格区域
-- 不影响正常的数值和文本粘贴操作
+* 自动保护公式不被覆盖，无需手动干预
+* 实现简洁，仅通过两个事件监听即可完成
+* 适用于任意大小的单元格区域
+* 不影响正常的数值和文本粘贴操作
 
 ### 5.2 局限性与扩展建议
 
@@ -119,11 +119,15 @@ npm install
 
 本示例展示了如何利用 SpreadJS 的剪贴板事件机制实现粘贴跳过公式的功能。开发者可以从中学到：
 
-- ClipboardPasting 和 ClipboardPasted 事件的使用时机
-- 如何在粘贴前后进行数据拦截和处理
-- 单元格公式的提取和恢复方法
-- 事件驱动的数据保护策略
+* ClipboardPasting 和 ClipboardPasted 事件的使用时机
+* 如何在粘贴前后进行数据拦截和处理
+* 单元格公式的提取和恢复方法
+* 事件驱动的数据保护策略
 
 该方案适用于需要保护工作表计算逻辑的场景，可以有效防止用户误操作导致的公式丢失问题，具有良好的实用性和扩展性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/beTJ2Gq0skOk9LvuS7OXkg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

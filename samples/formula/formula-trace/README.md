@@ -8,10 +8,10 @@
 
 在复杂的电子表格应用中，公式之间往往存在多层嵌套的依赖关系。本示例解决了以下核心问题：
 
-- 可视化展示公式的引用单元格（该单元格引用了哪些其他单元格）
-- 可视化展示公式的从属单元格（该单元格被哪些其他单元格引用）
-- 支持递归追踪多层依赖关系，最多追踪 5 层深度
-- 提供交互式导航功能，双击依赖树中的节点可快速跳转到源工作表的对应单元格
+* 可视化展示公式的引用单元格（该单元格引用了哪些其他单元格）
+* 可视化展示公式的从属单元格（该单元格被哪些其他单元格引用）
+* 支持递归追踪多层依赖关系，最多追踪 5 层深度
+* 提供交互式导航功能，双击依赖树中的节点可快速跳转到源工作表的对应单元格
 
 ## 三、实现思路
 
@@ -143,10 +143,10 @@ function workbookDblClicked(e) {
 
 ### 3.3 技术栈
 
-- @grapecity/spread-sheets: 15.0.0（核心表格组件）
-- @grapecity/spread-sheets-shapes: 15.0.0（图形绘制功能）
-- jQuery: 3.6.1（事件处理辅助）
-- SystemJS: 0.19.22（模块加载）
+* @grapecity/spread-sheets: 15.0.0（核心表格组件）
+* @grapecity/spread-sheets-shapes: 15.0.0（图形绘制功能）
+* jQuery: 3.6.1（事件处理辅助）
+* SystemJS: 0.19.22（模块加载）
 
 ## 四、使用说明
 
@@ -172,17 +172,17 @@ npm install
 
 ### 5.1 优点
 
-- 直观的树形可视化展示，清晰呈现公式依赖关系
-- 支持双向追踪（引用和从属），全面了解单元格的依赖链条
-- 递归追踪最多 5 层深度，适应复杂的嵌套公式场景
-- 交互式导航功能，双击节点即可快速定位源单元格
-- 自动布局算法，合理安排节点位置避免重叠
+* 直观的树形可视化展示，清晰呈现公式依赖关系
+* 支持双向追踪（引用和从属），全面了解单元格的依赖链条
+* 递归追踪最多 5 层深度，适应复杂的嵌套公式场景
+* 交互式导航功能，双击节点即可快速定位源单元格
+* 自动布局算法，合理安排节点位置避免重叠
 
 ### 5.2 局限性与扩展建议
 
-- 当前最大追踪深度限制为 5 层，对于超深层嵌套的公式可能无法完全展示
-- 建议扩展：可以添加搜索功能，快速定位特定单元格在依赖树中的位置
-- 建议扩展：支持导出依赖关系为图片或 JSON 格式，便于文档化和分析
+* 当前最大追踪深度限制为 5 层，对于超深层嵌套的公式可能无法完全展示
+* 建议扩展：可以添加搜索功能，快速定位特定单元格在依赖树中的位置
+* 建议扩展：支持导出依赖关系为图片或 JSON 格式，便于文档化和分析
 
 ## 六、关键代码片段
 
@@ -246,12 +246,16 @@ function paintDataTreeFromRoot(sheetForShow, rootNode, childLength, fatherShape,
 
 本示例展示了 SpreadJS 在公式依赖关系可视化方面的强大能力。开发者可以从中学到：
 
-- 如何使用 `getPrecedents()` 和 `getDependents()` API 获取单元格依赖关系
-- 如何使用递归算法构建多层依赖树结构
-- 如何使用 Shapes API 绘制自定义图形和连接线
-- 如何实现 Shape 的交互事件处理和单元格导航功能
-- 如何设计自动布局算法处理复杂的树形结构
+* 如何使用 `getPrecedents()` 和 `getDependents()` API 获取单元格依赖关系
+* 如何使用递归算法构建多层依赖树结构
+* 如何使用 Shapes API 绘制自定义图形和连接线
+* 如何实现 Shape 的交互事件处理和单元格导航功能
+* 如何设计自动布局算法处理复杂的树形结构
 
 该方案适用于需要分析和展示电子表格公式依赖关系的场景，如财务审计工具、数据血缘分析、公式调试器等。通过扩展该示例，可以构建更强大的公式分析和可视化工具。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/dEVRxWai30_izJMQG0sNwA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

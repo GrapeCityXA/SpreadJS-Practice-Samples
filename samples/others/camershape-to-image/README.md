@@ -1,3 +1,5 @@
+# camershape-to-image
+
 ### 问题：如何将照相机选中的区域转换为图片
 
 ***
@@ -11,7 +13,7 @@ spreadjs区域快照功能目前有很多客户在使用，有时候，我们想
 区域快照对象通过cameraShapeBuffer获取到对应的canvas，再通过toDataURL即可转换为对应格式图片的base64数据，比如下面的代码，转换为了png，然后下载即可
 获取到base64数据，注意，新老版本的接口有点变化：
 
-```
+```auto
 // 新版本
 let imgUrl = sheet.shapes.get("camera shape 1").toImageSrc()
 // 老版本
@@ -20,7 +22,7 @@ let imgUrl = sheet.cameraShapes[0].cameraShapeBuffer.toDataURL('image/png')
 
 下载图片，传入上面返回的imgUrl
 
-```
+```auto
 function downloadImg(imgUrl) {
     let aLink = document.createElement("a"); // 创建一个a标签
     let blob = base64ToBlob(imgUrl);
@@ -49,4 +51,8 @@ function base64ToBlob(code) {
 }
 ```
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/kbiAW6lNY0KIIEfkAp4r_Q/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

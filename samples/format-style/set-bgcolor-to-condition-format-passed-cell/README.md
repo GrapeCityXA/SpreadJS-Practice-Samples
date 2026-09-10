@@ -6,9 +6,9 @@
 
 在实际业务场景中，经常需要对表格中的数据进行可视化验证，特别是对于公式计算结果的监控。本示例解决了以下问题：
 
-- 自动识别公式计算结果是否满足特定条件（如结果为 0）
-- 通过背景色变化提供直观的视觉反馈，帮助用户快速定位异常数据
-- 实现动态的条件格式化，当数据源变化导致公式结果改变时，背景色自动更新
+* 自动识别公式计算结果是否满足特定条件（如结果为 0）
+* 通过背景色变化提供直观的视觉反馈，帮助用户快速定位异常数据
+* 实现动态的条件格式化，当数据源变化导致公式结果改变时，背景色自动更新
 
 ## 三、实现思路
 
@@ -47,9 +47,9 @@ for (var i = 0; i < sheet.getRowCount() - 1; i++) {
 
 ### 3.3 技术栈
 
-- @grapecity/spread-sheets: 15.0.0（核心表格组件）
-- SystemJS: 0.19.22（模块加载器）
-- TypeScript: 4.1.2（开发语言支持）
+* @grapecity/spread-sheets: 15.0.0（核心表格组件）
+* SystemJS: 0.19.22（模块加载器）
+* TypeScript: 4.1.2（开发语言支持）
 
 ## 四、使用说明
 
@@ -73,20 +73,24 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单：通过继承和重写 paint 方法即可实现自定义渲染逻辑
-- 性能高效：条件判断在渲染层完成，不需要额外的事件监听或轮询
-- 动态响应：当公式依赖的数据源变化时，背景色自动更新，无需手动刷新
-- 扩展性强：可以轻松扩展条件判断逻辑，支持更复杂的验证规则
+* 实现简单：通过继承和重写 paint 方法即可实现自定义渲染逻辑
+* 性能高效：条件判断在渲染层完成，不需要额外的事件监听或轮询
+* 动态响应：当公式依赖的数据源变化时，背景色自动更新，无需手动刷新
+* 扩展性强：可以轻松扩展条件判断逻辑，支持更复杂的验证规则
 
 ## 六、总结
 
 本示例展示了 SpreadJS 自定义单元格类型的强大能力，开发者可以从中学到：
 
-- 如何通过继承内置单元格类型创建自定义 CellType
-- 如何重写 paint 方法实现自定义渲染逻辑
-- 如何在公式单元格中应用条件格式化
-- 如何通过修改 style 对象动态改变单元格外观
+* 如何通过继承内置单元格类型创建自定义 CellType
+* 如何重写 paint 方法实现自定义渲染逻辑
+* 如何在公式单元格中应用条件格式化
+* 如何通过修改 style 对象动态改变单元格外观
 
 该方案适用于需要对表格数据进行可视化验证的场景，如财务报表异常值标记、数据质量检查、业务规则验证等。通过扩展条件判断逻辑，可以实现更复杂的数据验证和可视化需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/2ql0y8v0zUKK16UwTG-hmw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

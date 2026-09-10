@@ -1,6 +1,6 @@
 ## 一、Demo 概述
 
-本示例展示了如何将 SpreadJS 中的图表转换为图片格式。通过调用 Canvas API 的 `toDataURL` 方法，可以将图表渲染的 Canvas 元素转换为 Base64 编码的 PNG 图片，并支持在新窗口中预览或批量导出所有工作表中的图表图片。
+本示例展示了如何将 SpreadJS 中的图表转换为图片格式。通过调用 Canvas API 的 `toDataURL` 方法，可以将图表渲染的 Canvas 元素转换为 Base64 编码的 PNG 图片，并支持在新窗口中预览或批量导出所有工作表中的图表图片。 
 
 该功能适用于需要将图表导出为图片进行分享、打印或嵌入到其他文档的场景。
 
@@ -173,11 +173,12 @@ spread.bind(GC.Spread.Sheets.Events.FloatingObjectLoaded, function (e, info) {
 
 该方案适用于需要导出图表图片的各类场景，具有良好的扩展性，可根据实际需求添加下载、格式转换等功能。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Get%20a%20screenshot.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/akk5bxZD5EGVWQQwjlQgJQ/){:target="_blank"}）
-
 
 
 <br>
-<br>
+
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

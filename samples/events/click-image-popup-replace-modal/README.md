@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **图片动态更新需求**：在电子表格应用中，用户经常需要更换单元格中的图片，传统方式需要删除后重新插入，操作繁琐
-- **交互体验优化**：通过点击图片直接触发替换操作，提供更直观的用户交互体验
-- **图片管理灵活性**：支持通过 URL 动态加载图片，便于管理远程图片资源
+* **图片动态更新需求**：在电子表格应用中，用户经常需要更换单元格中的图片，传统方式需要删除后重新插入，操作繁琐
+* **交互体验优化**：通过点击图片直接触发替换操作，提供更直观的用户交互体验
+* **图片管理灵活性**：支持通过 URL 动态加载图片，便于管理远程图片资源
 
 ## 三、实现思路
 
@@ -66,9 +66,9 @@ document.getElementById('update').onclick = () => {
 
 ### 3.4 技术栈
 
-- **SpreadJS 15.0.0**：核心电子表格组件库
-- **SystemJS 0.19.22**：模块加载器
-- **TypeScript 4.1.2**：开发语言（编译为 ES5）
+* **SpreadJS 15.0.0**：核心电子表格组件库
+* **SystemJS 0.19.22**：模块加载器
+* **TypeScript 4.1.2**：开发语言（编译为 ES5）
 
 ## 四、使用说明
 
@@ -93,17 +93,17 @@ npm install
 
 ### 5.1 优点
 
-- **交互直观**：点击图片即可触发替换操作，符合用户直觉
-- **实现简洁**：核心代码不到 40 行，易于理解和维护
-- **扩展性强**：可以轻松扩展为支持本地上传、图片库选择等功能
+* **交互直观**：点击图片即可触发替换操作，符合用户直觉
+* **实现简洁**：核心代码不到 40 行，易于理解和维护
+* **扩展性强**：可以轻松扩展为支持本地上传、图片库选择等功能
 
 ### 5.2 局限性与扩展建议
 
-- **当前限制**：仅支持通过 URL 替换图片，不支持本地文件上传
-- **扩展建议**：
-  - 可以集成文件上传功能，将本地图片转为 Base64 或上传到服务器后获取 URL
-  - 可以添加图片预览功能，在替换前显示新图片的缩略图
-  - 可以实现图片历史记录功能，支持撤销和恢复操作
+* **当前限制**：仅支持通过 URL 替换图片，不支持本地文件上传
+* **扩展建议**：
+    * 可以集成文件上传功能，将本地图片转为 Base64 或上传到服务器后获取 URL
+    * 可以添加图片预览功能，在替换前显示新图片的缩略图
+    * 可以实现图片历史记录功能，支持撤销和恢复操作
 
 ## 六、关键代码片段
 
@@ -138,4 +138,8 @@ picture.isSelected(boolean)
 
 该方案适用于需要在电子表格中进行图片管理的场景，如商品目录编辑、图片库管理、报表图片更新等。通过扩展该示例，可以实现更复杂的图片管理功能，如批量替换、图片裁剪、滤镜效果等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/96jiMWdejEujO7_IIXotcg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

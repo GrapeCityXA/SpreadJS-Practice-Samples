@@ -6,10 +6,10 @@
 
 ## 二、解决的问题
 
-- **批量数据复制**：用户无需手动选择整个工作表范围，一键即可复制所有数据
-- **格式保留**：同时复制文本和 HTML 格式，确保粘贴到其他应用时保留原有格式
-- **跨应用数据传输**：通过系统剪贴板实现 SpreadJS 与其他应用程序之间的数据交互
-- **提升用户体验**：简化复制操作流程，提高工作效率
+* **批量数据复制**：用户无需手动选择整个工作表范围，一键即可复制所有数据
+* **格式保留**：同时复制文本和 HTML 格式，确保粘贴到其他应用时保留原有格式
+* **跨应用数据传输**：通过系统剪贴板实现 SpreadJS 与其他应用程序之间的数据交互
+* **提升用户体验**：简化复制操作流程，提高工作效率
 
 ## 三、实现思路
 
@@ -25,8 +25,8 @@ activeSheet.clearSelection()
 activeSheet.addSelection(0, 0, activeSheet.getRowCount(), activeSheet.getColumnCount())
 ```
 
-- `clearSelection()`：清除当前选区，避免与之前的选择冲突
-- `addSelection(0, 0, rowCount, colCount)`：从第一行第一列开始，选择所有行和列
+* `clearSelection()`：清除当前选区，避免与之前的选择冲突
+* `addSelection(0, 0, rowCount, colCount)`：从第一行第一列开始，选择所有行和列
 
 #### 3.1.2 执行复制命令
 
@@ -40,8 +40,8 @@ spread.commandManager().execute({
 })
 ```
 
-- `cmd: "copy"`：指定执行复制命令
-- `ignoreClipboard: true`：关键参数，阻止 SpreadJS 自动写入系统剪贴板，由自定义逻辑处理
+* `cmd: "copy"`：指定执行复制命令
+* `ignoreClipboard: true`：关键参数，阻止 SpreadJS 自动写入系统剪贴板，由自定义逻辑处理
 
 #### 3.1.3 监听剪贴板变化事件并写入系统剪贴板
 
@@ -59,17 +59,17 @@ spread.bind(GC.Spread.Sheets.Events.ClipboardChanged, function (sender, args) {
 });
 ```
 
-- `args.copyData.text`：纯文本格式的复制数据
-- `args.copyData.html`：HTML 格式的复制数据，保留样式和格式
-- `ClipboardItem`：浏览器标准 API，支持多种 MIME 类型
-- `setTimeout`：异步执行，确保剪贴板操作不阻塞主线程
+* `args.copyData.text`：纯文本格式的复制数据
+* `args.copyData.html`：HTML 格式的复制数据，保留样式和格式
+* `ClipboardItem`：浏览器标准 API，支持多种 MIME 类型
+* `setTimeout`：异步执行，确保剪贴板操作不阻塞主线程
 
 ### 3.2 技术栈
 
-- **SpreadJS 16.0.1**：核心电子表格组件
-- **SpreadJS Designer**：提供设计器界面
-- **SystemJS**：模块加载器
-- **Clipboard API**：浏览器原生剪贴板接口
+* **SpreadJS 16.0.1**：核心电子表格组件
+* **SpreadJS Designer**：提供设计器界面
+* **SystemJS**：模块加载器
+* **Clipboard API**：浏览器原生剪贴板接口
 
 ## 四、使用说明
 
@@ -94,26 +94,26 @@ npx http-server
 
 ### 4.3 注意事项
 
-- **HTTPS 要求**：Clipboard API 需要在 HTTPS 环境或 localhost 下运行，否则浏览器会因安全策略禁用剪贴板写入功能
-- **浏览器兼容性**：需要支持 Clipboard API 的现代浏览器（Chrome 76+、Edge 79+、Safari 13.1+）
+* **HTTPS 要求**：Clipboard API 需要在 HTTPS 环境或 localhost 下运行，否则浏览器会因安全策略禁用剪贴板写入功能
+* **浏览器兼容性**：需要支持 Clipboard API 的现代浏览器（Chrome 76+、Edge 79+、Safari 13.1+）
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- **操作简便**：一键完成整个工作表的复制，无需手动选择范围
-- **格式完整**：同时支持纯文本和 HTML 格式，适配不同应用场景
-- **性能优化**：使用异步操作，不阻塞用户界面
-- **标准化实现**：基于浏览器标准 Clipboard API，兼容性好
+* **操作简便**：一键完成整个工作表的复制，无需手动选择范围
+* **格式完整**：同时支持纯文本和 HTML 格式，适配不同应用场景
+* **性能优化**：使用异步操作，不阻塞用户界面
+* **标准化实现**：基于浏览器标准 Clipboard API，兼容性好
 
 ### 5.2 局限性与扩展建议
 
-- **HTTPS 限制**：生产环境必须部署 HTTPS 证书，否则功能无法使用
-- **大数据量性能**：当工作表数据量极大时，复制操作可能耗时较长，建议添加加载提示
-- **扩展方向**：
-  - 添加复制进度提示
-  - 支持复制指定范围而非整个工作表
-  - 提供复制成功/失败的用户反馈
+* **HTTPS 限制**：生产环境必须部署 HTTPS 证书，否则功能无法使用
+* **大数据量性能**：当工作表数据量极大时，复制操作可能耗时较长，建议添加加载提示
+* **扩展方向**：
+    * 添加复制进度提示
+    * 支持复制指定范围而非整个工作表
+    * 提供复制成功/失败的用户反馈
 
 ## 六、关键代码片段
 
@@ -155,11 +155,15 @@ spread.bind(GC.Spread.Sheets.Events.ClipboardChanged, function (sender, args) {
 
 本示例展示了 SpreadJS 与浏览器 Clipboard API 的深度集成，通过监听剪贴板事件和自定义复制逻辑，实现了一键复制整个工作表的功能。开发者可以从中学到：
 
-- SpreadJS 命令管理器的使用方法
-- 剪贴板事件的监听与数据获取
-- 浏览器 Clipboard API 的实际应用
-- 多格式数据的剪贴板写入技巧
+* SpreadJS 命令管理器的使用方法
+* 剪贴板事件的监听与数据获取
+* 浏览器 Clipboard API 的实际应用
+* 多格式数据的剪贴板写入技巧
 
 该方案适用于需要快速导出工作表数据的场景，可扩展为支持自定义范围复制、批量复制多个工作表等高级功能。在实际应用中，建议结合用户权限控制和数据脱敏机制，确保数据安全。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/SAQW8zK2nEqPNYwKvlCYxg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

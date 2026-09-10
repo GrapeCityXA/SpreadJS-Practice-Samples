@@ -8,9 +8,9 @@
 
 在实际应用中，开发者可能需要在 Sheet 标签页上实现自定义的右键菜单功能，例如重命名、删除、复制工作表等操作。如果不禁止右键切换行为，会导致以下问题：
 
-- 右键点击时会同时触发工作表切换和右键菜单，造成用户体验混乱
-- 无法准确判断用户是想切换工作表还是打开右键菜单
-- 自定义右键菜单的上下文可能因为工作表切换而失效
+* 右键点击时会同时触发工作表切换和右键菜单，造成用户体验混乱
+* 无法准确判断用户是想切换工作表还是打开右键菜单
+* 自定义右键菜单的上下文可能因为工作表切换而失效
 
 本示例提供了一种简洁的解决方案，通过事件监听和标志位控制，实现了右键点击时仅触发自定义逻辑而不切换工作表。
 
@@ -68,9 +68,9 @@ function idFuzzySelect(str) {
 
 ### 3.2 技术栈
 
-- @grapecity/spread-sheets: 17.0.8（SpreadJS 核心库）
-- SystemJS: 0.19.22（模块加载器）
-- systemjs-plugin-babel: 0.0.25（ES6 转译支持）
+* @grapecity/spread-sheets: 17.0.8（SpreadJS 核心库）
+* SystemJS: 0.19.22（模块加载器）
+* systemjs-plugin-babel: 0.0.25（ES6 转译支持）
 
 ## 四、使用说明
 
@@ -94,23 +94,23 @@ npm install
 
 ### 5.1 优点
 
-- 实现简洁，代码量少，易于理解和维护
-- 精确拦截右键点击切换行为，不影响左键点击的正常功能
-- 使用标志位和定时器机制，确保事件处理的时序正确性
-- 为后续扩展自定义右键菜单功能预留了空间
+* 实现简洁，代码量少，易于理解和维护
+* 精确拦截右键点击切换行为，不影响左键点击的正常功能
+* 使用标志位和定时器机制，确保事件处理的时序正确性
+* 为后续扩展自定义右键菜单功能预留了空间
 
 ### 5.2 局限性与扩展建议
 
 当前实现使用了 DOM 元素模糊查询的方式来定位 Sheet 标签页，这种方式存在一定的局限性：
 
-- 依赖于 SpreadJS 内部生成的 DOM 结构，如果 SpreadJS 版本升级导致 DOM 结构变化，可能需要调整查询逻辑
-- `querySelectorAll('*')` 会遍历页面所有元素，在复杂页面中可能存在性能问题
+* 依赖于 SpreadJS 内部生成的 DOM 结构，如果 SpreadJS 版本升级导致 DOM 结构变化，可能需要调整查询逻辑
+* `querySelectorAll('*')` 会遍历页面所有元素，在复杂页面中可能存在性能问题
 
 扩展建议：
 
-- 可以在右键点击事件中添加自定义右键菜单的显示逻辑
-- 可以使用更精确的 DOM 选择器（如 class 名称）来定位 Sheet 标签页
-- 可以将该功能封装为可复用的工具函数或插件
+* 可以在右键点击事件中添加自定义右键菜单的显示逻辑
+* 可以使用更精确的 DOM 选择器（如 class 名称）来定位 Sheet 标签页
+* 可以将该功能封装为可复用的工具函数或插件
 
 ## 六、关键代码片段
 
@@ -152,12 +152,15 @@ idFuzzySelect("tabStrip").addEventListener("mouseup", function (arg) {
 
 本示例展示了如何通过事件监听和标志位控制来实现对 SpreadJS 工作表切换行为的精确控制。开发者可以从中学到以下知识点：
 
-- SpreadJS 的 `ActiveSheetChanging` 事件及其取消机制
-- 鼠标事件的 `button` 属性判断（0=左键，1=中键，2=右键）
-- 使用标志位和定时器协调多个异步事件的处理时序
-- 通过 DOM 操作与 SpreadJS 内部元素进行交互
+* SpreadJS 的 `ActiveSheetChanging` 事件及其取消机制
+* 鼠标事件的 `button` 属性判断（0=左键，1=中键，2=右键）
+* 使用标志位和定时器协调多个异步事件的处理时序
+* 通过 DOM 操作与 SpreadJS 内部元素进行交互
 
 该方案适用于需要在 Sheet 标签页上实现自定义右键菜单或其他右键交互功能的场景，具有良好的扩展性。开发者可以在此基础上添加更多的自定义逻辑，例如显示上下文菜单、执行工作表操作等。
 
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/TsTNuzkoCEy58skxSkOhWA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

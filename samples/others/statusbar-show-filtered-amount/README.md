@@ -6,9 +6,9 @@
 
 在使用 SpreadJS 进行数据筛选时，用户往往需要了解筛选后剩余的数据量，以便评估筛选条件是否合理。默认的 SpreadJS 状态栏不提供筛选结果统计功能，本示例通过自定义状态栏项解决了以下问题：
 
-- 实时反馈筛选结果数量，避免用户手动计数
-- 提供清晰的筛选状态提示，增强用户体验
-- 自动显示/隐藏状态栏项，避免无筛选时的冗余信息
+* 实时反馈筛选结果数量，避免用户手动计数
+* 提供清晰的筛选状态提示，增强用户体验
+* 自动显示/隐藏状态栏项，避免无筛选时的冗余信息
 
 ## 三、实现思路
 
@@ -82,10 +82,10 @@ function getFilterResult(sheet) {
 
 ### 3.4 技术栈
 
-- SpreadJS 16.0.1（核心表格组件）
-- SpreadJS Designer 16.0.1（设计器组件）
-- SystemJS 0.19.22（模块加载器）
-- TypeScript 4.1.2（开发语言）
+* SpreadJS 16.0.1（核心表格组件）
+* SpreadJS Designer 16.0.1（设计器组件）
+* SystemJS 0.19.22（模块加载器）
+* TypeScript 4.1.2（开发语言）
 
 ## 四、使用说明
 
@@ -108,18 +108,18 @@ npm install
 
 ### 5.1 优点
 
-- 实时反馈：筛选操作立即触发状态栏更新，无延迟
-- 自动管理：根据筛选状态自动显示/隐藏状态栏项，避免冗余信息
-- 扩展性强：通过继承 StatusItem 类实现，可轻松扩展其他自定义状态栏功能
-- 用户友好：提供清晰的中文提示信息，符合国内用户习惯
+* 实时反馈：筛选操作立即触发状态栏更新，无延迟
+* 自动管理：根据筛选状态自动显示/隐藏状态栏项，避免冗余信息
+* 扩展性强：通过继承 StatusItem 类实现，可轻松扩展其他自定义状态栏功能
+* 用户友好：提供清晰的中文提示信息，符合国内用户习惯
 
 ### 5.2 局限性与扩展建议
 
 当前实现仅统计行数，未考虑多列筛选的复杂场景。可扩展的方向包括：
 
-- 支持显示具体的筛选条件（例如"筛选条件：列 A = 2"）
-- 支持多工作表筛选状态的独立管理
-- 提供筛选历史记录功能，方便用户回溯操作
+* 支持显示具体的筛选条件（例如"筛选条件：列 A = 2"）
+* 支持多工作表筛选状态的独立管理
+* 提供筛选历史记录功能，方便用户回溯操作
 
 ## 六、关键代码片段
 
@@ -148,11 +148,15 @@ let statusBar = GC.Spread.Sheets.StatusBar.findControl(
 
 本示例展示了 SpreadJS 状态栏扩展的核心技术，开发者可以从中学到：
 
-- 如何通过继承 StatusItem 类创建自定义状态栏项
-- 如何监听 RangeFiltered 事件响应筛选操作
-- 如何使用 rowFilter API 获取筛选状态和统计数据
-- 如何动态控制状态栏项的显示/隐藏
+* 如何通过继承 StatusItem 类创建自定义状态栏项
+* 如何监听 RangeFiltered 事件响应筛选操作
+* 如何使用 rowFilter API 获取筛选状态和统计数据
+* 如何动态控制状态栏项的显示/隐藏
 
 该方案适用于需要向用户实时反馈数据操作结果的场景，例如数据分析工具、报表系统等。通过类似的扩展思路，还可以实现其他自定义状态栏功能，如选区统计、公式计算结果显示等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/dqLhUpIkZECm6SXHGBNsmQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

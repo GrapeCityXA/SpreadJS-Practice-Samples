@@ -6,9 +6,9 @@
 
 在使用 SpreadJS 开发电子表格应用时，开发者经常需要创建自定义公式来实现特定的业务逻辑。然而，当用户需要将包含自定义公式的工作簿导出为 Excel 文件时，会遇到以下问题：
 
-- Excel 无法识别 SpreadJS 的自定义公式，导出后公式单元格显示错误或空白
-- 用户无法在导出的 Excel 文件中看到正确的计算结果
-- 需要一种机制在导出时自动将自定义公式转换为静态值，同时保持原工作簿不受影响
+* Excel 无法识别 SpreadJS 的自定义公式，导出后公式单元格显示错误或空白
+* 用户无法在导出的 Excel 文件中看到正确的计算结果
+* 需要一种机制在导出时自动将自定义公式转换为静态值，同时保持原工作簿不受影响
 
 ## 三、实现思路
 
@@ -88,6 +88,7 @@ tempSpread.sheets.forEach((tempSheet, sheetIndex) => {
 ```
 
 关键步骤：
+
 1. 配置搜索条件，指定搜索目标为单元格公式（`cellFormula`）
 2. 使用 `while` 循环遍历所有匹配结果（每次搜索只返回一个结果）
 3. 获取公式的计算结果值
@@ -129,16 +130,16 @@ npm install
 
 ### 5.1 优点
 
-- 无损导出：原始工作簿不受影响，所有操作在临时副本上进行
-- 自动化处理：无需手动查找和替换公式，通过搜索 API 自动定位
-- 可扩展性：支持多个自定义公式，只需在 `customNames` 数组中添加公式名称
-- 完整性保证：使用 `includeBindingSource` 确保数据源绑定信息也被正确处理
+* 无损导出：原始工作簿不受影响，所有操作在临时副本上进行
+* 自动化处理：无需手动查找和替换公式，通过搜索 API 自动定位
+* 可扩展性：支持多个自定义公式，只需在 `customNames` 数组中添加公式名称
+* 完整性保证：使用 `includeBindingSource` 确保数据源绑定信息也被正确处理
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现需要手动维护 `customNames` 数组，如果自定义公式较多，可以考虑自动收集所有已注册的自定义公式名称
-- 搜索操作是逐个单元格进行的，对于大型工作簿可能存在性能问题，可以考虑批量处理优化
-- 如果需要保留部分自定义公式（例如某些公式在 Excel 中有等效实现），可以在 `customNames` 中选择性添加
+* 当前实现需要手动维护 `customNames` 数组，如果自定义公式较多，可以考虑自动收集所有已注册的自定义公式名称
+* 搜索操作是逐个单元格进行的，对于大型工作簿可能存在性能问题，可以考虑批量处理优化
+* 如果需要保留部分自定义公式（例如某些公式在 Excel 中有等效实现），可以在 `customNames` 中选择性添加
 
 ## 六、关键代码片段
 
@@ -165,11 +166,15 @@ tempSheet.setValue(result.foundRowIndex, result.foundColumnIndex, value)
 
 本示例提供了一个实用的解决方案，用于处理 SpreadJS 自定义公式导出到 Excel 的兼容性问题。开发者可以从中学到：
 
-- 如何定义和注册 SpreadJS 自定义公式
-- 使用搜索 API 定位特定类型的单元格内容
-- 通过临时工作簿副本实现无损数据转换
-- 导出前的数据预处理技巧
+* 如何定义和注册 SpreadJS 自定义公式
+* 使用搜索 API 定位特定类型的单元格内容
+* 通过临时工作簿副本实现无损数据转换
+* 导出前的数据预处理技巧
 
 该方案适用于任何需要将 SpreadJS 特有功能转换为 Excel 兼容格式的场景，具有良好的可扩展性和实用价值。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/nP7imZ7zz0Ck6aG90UCcNg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

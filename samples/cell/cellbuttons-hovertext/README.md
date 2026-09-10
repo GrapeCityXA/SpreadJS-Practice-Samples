@@ -1,15 +1,15 @@
 ## 一、Demo 概述
 
-本示例展示了如何为 SpreadJS 单元格按钮添加鼠标悬停提示功能。通过自定义 CellType，实现了当鼠标悬停在单元格按钮上时显示提示文本，并将鼠标指针样式改为 pointer，提升用户交互体验。
+本示例展示了如何为 SpreadJS 单元格按钮添加鼠标悬停提示功能。通过自定义 CellType，实现了当鼠标悬停在单元格按钮上时显示提示文本，并将鼠标指针样式改为 pointer，提升用户交互体验。 
 
 ## 二、解决的问题
 
 SpreadJS 原生的单元格按钮功能虽然强大，但缺少鼠标悬停提示，用户无法直观了解按钮的功能。本示例通过扩展 CellType 解决了以下问题：
 
-- 为单元格按钮添加自定义 hover 提示文本
-- 鼠标悬停时自动显示浮动提示框
-- 鼠标移出时隐藏提示框并恢复鼠标样式
-- 支持多个按钮分别设置不同的提示文本
+* 为单元格按钮添加自定义 hover 提示文本
+* 鼠标悬停时自动显示浮动提示框
+* 鼠标移出时隐藏提示框并恢复鼠标样式
+* 支持多个按钮分别设置不同的提示文本
 
 ## 三、实现思路
 
@@ -122,9 +122,9 @@ setCellButtons(spread.getActiveSheet(), 1, 1, cellButtons)
 
 ### 3.4 技术栈
 
-- SpreadJS 16.0.1
-- SystemJS 0.19.22
-- TypeScript 4.1.2
+* SpreadJS 16.0.1
+* SystemJS 0.19.22
+* TypeScript 4.1.2
 
 ## 四、使用说明
 
@@ -147,26 +147,30 @@ npm install
 
 ### 5.1 优点
 
-- 提升用户体验，通过 hover 提示让按钮功能更直观
-- 实现简单，通过扩展 CellType 即可完成
-- 支持多按钮配置，每个按钮可设置独立的提示文本
-- 提示框样式可自定义，易于调整外观
+* 提升用户体验，通过 hover 提示让按钮功能更直观
+* 实现简单，通过扩展 CellType 即可完成
+* 支持多按钮配置，每个按钮可设置独立的提示文本
+* 提示框样式可自定义，易于调整外观
 
 ### 5.2 扩展建议
 
-- 可以添加提示框显示延迟，避免鼠标快速划过时频繁显示
-- 提示框位置可以根据鼠标位置和屏幕边界动态调整
-- 可以支持 HTML 格式的提示内容，实现更丰富的提示效果
+* 可以添加提示框显示延迟，避免鼠标快速划过时频繁显示
+* 提示框位置可以根据鼠标位置和屏幕边界动态调整
+* 可以支持 HTML 格式的提示内容，实现更丰富的提示效果
 
 ## 六、总结
 
 本示例展示了如何通过自定义 CellType 为 SpreadJS 单元格按钮添加 hover 提示功能。开发者可以学习到：
 
-- 如何扩展 SpreadJS 的 CellType
-- 如何处理鼠标事件（processMouseMove、processMouseLeave）
-- 如何动态创建和管理 DOM 元素
-- 如何通过 CSS 类切换鼠标样式
+* 如何扩展 SpreadJS 的 CellType
+* 如何处理鼠标事件（processMouseMove、processMouseLeave）
+* 如何动态创建和管理 DOM 元素
+* 如何通过 CSS 类切换鼠标样式
 
 该方案适用于需要为单元格按钮提供额外交互提示的场景，具有良好的扩展性和可维护性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/JWa0bQGvtE61zTJJCN9wDA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例演示了在 SpreadJS 表格中重新绑定数据源时，如何保留用户已设置的筛选和排序状态。在实际应用中，当需要刷新或更新表格数据时，通常希望保持用户之前的筛选和排序设置，避免用户体验中断。该示例通过备份和恢复筛选排序状态的方式，实现了数据源更新后状态的无缝保留。
+本示例演示了在 SpreadJS 表格中重新绑定数据源时，如何保留用户已设置的筛选和排序状态。在实际应用中，当需要刷新或更新表格数据时，通常希望保持用户之前的筛选和排序设置，避免用户体验中断。该示例通过备份和恢复筛选排序状态的方式，实现了数据源更新后状态的无缝保留。 
 
 ## 二、解决的问题
 
 在使用 SpreadJS 的数据绑定功能时，直接调用 `setDataSource()` 方法会重置表格的筛选和排序状态，导致用户之前的操作丢失。本示例解决了以下核心问题：
 
-- 数据源更新时筛选条件被清空，用户需要重新设置筛选
-- 排序状态在数据刷新后丢失，影响数据查看体验
-- 需要手动保存和恢复用户的表格操作状态
+* 数据源更新时筛选条件被清空，用户需要重新设置筛选
+* 排序状态在数据刷新后丢失，影响数据查看体验
+* 需要手动保存和恢复用户的表格操作状态
 
 ## 三、实现思路
 
@@ -80,8 +80,8 @@ for (let col = range.col; col < range.col + range.colCount; col++) {
 
 ### 3.4 技术栈
 
-- @grapecity/spread-sheets: 17.0.8
-- SystemJS: 0.19.22（模块加载器）
+* @grapecity/spread-sheets: 17.0.8
+* SystemJS: 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -105,32 +105,36 @@ npm install
 
 ### 5.1 优点
 
-- 提升用户体验：数据刷新时保持用户的操作状态，避免重复设置
-- 实现简单：通过备份和恢复机制，无需修改 SpreadJS 核心逻辑
-- 适用性广：可应用于任何需要动态更新数据源的场景
+* 提升用户体验：数据刷新时保持用户的操作状态，避免重复设置
+* 实现简单：通过备份和恢复机制，无需修改 SpreadJS 核心逻辑
+* 适用性广：可应用于任何需要动态更新数据源的场景
 
 ### 5.2 局限性与扩展建议
 
 当前实现存在以下局限性：
 
-- 代码中存在循环嵌套问题（外层循环变量 `col` 未被使用，内层使用 `forEach` 遍历备份对象）
-- 如果表格结构（列数、列顺序）发生变化，状态恢复可能失效
-- 未处理复杂筛选条件（如自定义筛选器）的备份
+* 代码中存在循环嵌套问题（外层循环变量 `col` 未被使用，内层使用 `forEach` 遍历备份对象）
+* 如果表格结构（列数、列顺序）发生变化，状态恢复可能失效
+* 未处理复杂筛选条件（如自定义筛选器）的备份
 
 扩展建议：
 
-- 优化代码结构，移除不必要的外层循环
-- 增加列结构验证，确保恢复状态时列索引仍然有效
-- 支持更多筛选类型的备份和恢复
+* 优化代码结构，移除不必要的外层循环
+* 增加列结构验证，确保恢复状态时列索引仍然有效
+* 支持更多筛选类型的备份和恢复
 
 ## 六、总结
 
 本示例展示了如何在 SpreadJS 中实现数据源更新时保留筛选和排序状态的功能。开发者可以从中学到：
 
-- 如何使用 `getFilterItems()` 和 `getSortState()` 获取表格状态
-- 如何使用 `addFilterItem()` 和 `sortColumn()` 恢复表格状态
-- 数据绑定与状态管理的协同处理方式
+* 如何使用 `getFilterItems()` 和 `getSortState()` 获取表格状态
+* 如何使用 `addFilterItem()` 和 `sortColumn()` 恢复表格状态
+* 数据绑定与状态管理的协同处理方式
 
 该方案适用于需要频繁刷新数据但希望保持用户操作状态的场景，如实时数据监控、定时数据更新等应用。通过简单的状态备份和恢复机制，可以显著提升用户体验。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/Cnm9844fvUycdUE3DVEHeg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

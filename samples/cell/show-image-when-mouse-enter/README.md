@@ -1,12 +1,12 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中实现鼠标悬停单元格时动态显示图片的交互效果。通过自定义单元格类型（CellType）并重写其鼠标事件处理方法，实现了当鼠标移入单元格时在单元格内显示图片，移出时图片消失的功能。该示例适用于需要在表格中提供视觉反馈或提示信息的场景。
+本示例展示了如何在 SpreadJS 中实现鼠标悬停单元格时动态显示图片的交互效果。通过自定义单元格类型（CellType）并重写其鼠标事件处理方法，实现了当鼠标移入单元格时在单元格内显示图片，移出时图片消失的功能。该示例适用于需要在表格中提供视觉反馈或提示信息的场景。 
 
 ## 二、解决的问题
 
-- 提供单元格级别的交互式视觉反馈，增强用户体验
-- 在不占用额外空间的情况下展示辅助信息（如图标、提示标识）
-- 实现类似 Excel 中鼠标悬停效果的自定义交互逻辑
+* 提供单元格级别的交互式视觉反馈，增强用户体验
+* 在不占用额外空间的情况下展示辅助信息（如图标、提示标识）
+* 实现类似 Excel 中鼠标悬停效果的自定义交互逻辑
 
 ## 三、实现思路
 
@@ -102,9 +102,9 @@ sheet.bindColumns(columnInfo);
 
 ### 3.6 技术栈
 
-- @grapecity/spread-sheets: 15.0.0
-- TypeScript: ^4.1.2
-- SystemJS: ^0.19.22（模块加载器）
+* @grapecity/spread-sheets: 15.0.0
+* TypeScript: ^4.1.2
+* SystemJS: ^0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -127,23 +127,27 @@ npm install
 
 ### 5.1 优点
 
-- 实现简洁，通过继承和重写方法即可完成自定义交互
-- 性能良好，仅在鼠标事件触发时重绘，不影响整体性能
-- 扩展性强，可以轻松修改图片内容、位置和显示逻辑
+* 实现简洁，通过继承和重写方法即可完成自定义交互
+* 性能良好，仅在鼠标事件触发时重绘，不影响整体性能
+* 扩展性强，可以轻松修改图片内容、位置和显示逻辑
 
 ### 5.2 局限性与扩展建议
 
-- 当前图片使用 Base64 编码嵌入代码，对于大量图片场景建议改用外部图片资源
-- 图片位置和尺寸固定，可以扩展为根据单元格大小动态调整
-- 可以进一步扩展为支持不同单元格显示不同图片，或根据单元格值动态选择图片
+* 当前图片使用 Base64 编码嵌入代码，对于大量图片场景建议改用外部图片资源
+* 图片位置和尺寸固定，可以扩展为根据单元格大小动态调整
+* 可以进一步扩展为支持不同单元格显示不同图片，或根据单元格值动态选择图片
 
 ## 六、总结
 
 本示例展示了 SpreadJS 自定义单元格类型的强大能力，通过重写绘制和事件处理方法，开发者可以实现丰富的交互效果。该方案适用于需要在表格中提供动态视觉反馈的场景，如排序指示器、状态图标、操作按钮等。开发者可以从中学习到：
 
-- 如何创建自定义单元格类型
-- 如何处理单元格的鼠标事件
-- 如何在单元格中动态绘制图形元素
-- 如何使用数据绑定应用自定义单元格类型
+* 如何创建自定义单元格类型
+* 如何处理单元格的鼠标事件
+* 如何在单元格中动态绘制图形元素
+* 如何使用数据绑定应用自定义单元格类型
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/n_LC_gG6yk6w05KZ0-Xulw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

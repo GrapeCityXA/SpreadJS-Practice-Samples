@@ -6,10 +6,10 @@
 
 在实际业务场景中，用户经常需要从 Excel 或 WPS 中复制包含图片的单元格内容到 Web 表格应用中。该示例解决了以下核心问题：
 
-- 识别并区分单元格内图片和浮动图片的粘贴操作
-- 从剪贴板中提取图片二进制数据并转换为可用格式
-- 将图片正确插入到当前活动单元格中
-- 保持与 Excel/WPS 一致的用户操作体验
+* 识别并区分单元格内图片和浮动图片的粘贴操作
+* 从剪贴板中提取图片二进制数据并转换为可用格式
+* 将图片正确插入到当前活动单元格中
+* 保持与 Excel/WPS 一致的用户操作体验
 
 ## 三、实现思路
 
@@ -80,9 +80,9 @@ reader.readAsDataURL(blob);
 
 ### 3.2 技术栈
 
-- @grapecity/spread-sheets: 17.0.8（核心表格组件）
-- SystemJS: ^0.19.22（模块加载器）
-- systemjs-plugin-babel: 0.0.25（ES6 转译支持）
+* @grapecity/spread-sheets: 17.0.8（核心表格组件）
+* SystemJS: ^0.19.22（模块加载器）
+* systemjs-plugin-babel: 0.0.25（ES6 转译支持）
 
 ## 四、使用说明
 
@@ -107,18 +107,18 @@ npm install
 
 ### 5.1 优点
 
-- 智能识别单元格内图片和浮动图片，分别处理
-- 使用 SpreadJS 原生 `image()` 公式，保证兼容性和性能
-- 支持从 Excel 和 WPS 两种主流办公软件复制图片
-- 代码简洁，易于理解和维护
+* 智能识别单元格内图片和浮动图片，分别处理
+* 使用 SpreadJS 原生 `image()` 公式，保证兼容性和性能
+* 支持从 Excel 和 WPS 两种主流办公软件复制图片
+* 代码简洁，易于理解和维护
 
 ### 5.2 局限性与扩展建议
 
 当前实现依赖剪贴板文本中的特定关键字来判断图片类型，可能在某些特殊场景下识别不准确。建议扩展方向：
 
-- 增加对更多图片格式的支持（如 SVG）
-- 添加图片尺寸和位置的自定义配置
-- 支持批量粘贴多个单元格内图片
+* 增加对更多图片格式的支持（如 SVG）
+* 添加图片尺寸和位置的自定义配置
+* 支持批量粘贴多个单元格内图片
 
 ## 六、关键代码片段
 
@@ -171,12 +171,16 @@ window.addEventListener("paste", function (e) {
 
 本示例展示了如何通过监听浏览器粘贴事件和解析剪贴板数据，实现从 Excel/WPS 复制单元格内图片到 SpreadJS 的功能。开发者可以从中学到：
 
-- 浏览器剪贴板 API 的使用方法
-- 如何区分和处理不同类型的粘贴数据
-- FileReader API 进行图片数据转换的技巧
-- SpreadJS `image()` 公式的实际应用
-- 事件监听和异步数据处理的最佳实践
+* 浏览器剪贴板 API 的使用方法
+* 如何区分和处理不同类型的粘贴数据
+* FileReader API 进行图片数据转换的技巧
+* SpreadJS `image()` 公式的实际应用
+* 事件监听和异步数据处理的最佳实践
 
 该方案适用于需要在 Web 表格应用中支持 Excel 图片粘贴的场景，具有良好的扩展性，可根据实际需求进行功能增强。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/fG37dy_O40m7PWNOVWixqQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

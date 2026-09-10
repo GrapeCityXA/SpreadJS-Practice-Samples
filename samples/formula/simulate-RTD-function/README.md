@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **异步数据加载**：解决了表格单元格需要从外部接口异步获取数据的需求，避免阻塞主线程
-- **请求频率控制**：通过防抖机制将多个单元格的数据请求合并为一次批量请求，避免频繁调用接口造成性能问题
-- **实时数据更新**：实现了类似 Excel RTD 函数的实时数据刷新能力，数据变化时自动触发重新计算
+* **异步数据加载**：解决了表格单元格需要从外部接口异步获取数据的需求，避免阻塞主线程
+* **请求频率控制**：通过防抖机制将多个单元格的数据请求合并为一次批量请求，避免频繁调用接口造成性能问题
+* **实时数据更新**：实现了类似 Excel RTD 函数的实时数据刷新能力，数据变化时自动触发重新计算
 
 ## 三、实现思路
 
@@ -93,9 +93,9 @@ GC.Spread.Sheets.getTypeFromString = function (typeString) {
 
 ### 3.4 技术栈
 
-- SpreadJS 17.0.8（核心表格引擎）
-- SpreadJS Designer 17.0.8（设计器组件）
-- SystemJS 0.19.22（模块加载器）
+* SpreadJS 17.0.8（核心表格引擎）
+* SpreadJS Designer 17.0.8（设计器组件）
+* SystemJS 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -120,18 +120,18 @@ npm install
 
 ### 5.1 优点
 
-- **性能优化**：通过防抖机制将多次请求合并为一次，有效降低服务器负载
-- **用户体验**：提供 "Loading..." 加载提示，避免用户等待时的困惑
-- **灵活扩展**：可以轻松修改 `fetchData` 函数对接真实的后端接口
-- **自动更新**：依赖单元格变化时自动触发重新计算，无需手动刷新
+* **性能优化**：通过防抖机制将多次请求合并为一次，有效降低服务器负载
+* **用户体验**：提供 "Loading..." 加载提示，避免用户等待时的困惑
+* **灵活扩展**：可以轻松修改 `fetchData` 函数对接真实的后端接口
+* **自动更新**：依赖单元格变化时自动触发重新计算，无需手动刷新
 
 ### 5.2 局限性与扩展建议
 
-- **当前限制**：示例中使用随机数模拟接口返回，实际应用需要对接真实 API
-- **扩展建议**：
-  - 可以添加错误处理机制，当接口请求失败时显示错误信息
-  - 可以增加缓存策略，避免相同参数的重复请求
-  - 可以支持更多参数类型，如字符串、日期等
+* **当前限制**：示例中使用随机数模拟接口返回，实际应用需要对接真实 API
+* **扩展建议**：
+    * 可以添加错误处理机制，当接口请求失败时显示错误信息
+    * 可以增加缓存策略，避免相同参数的重复请求
+    * 可以支持更多参数类型，如字符串、日期等
 
 ## 六、关键代码片段
 
@@ -171,12 +171,16 @@ setTimeout(() => {
 
 本示例展示了 SpreadJS 中自定义异步函数的完整实现方案，通过防抖策略优化了数据请求性能。开发者可以从中学习到：
 
-- 如何继承 `AsyncFunction` 创建自定义异步函数
-- 如何使用 `acceptsReference` 支持单元格引用参数
-- 如何通过 `context.setAsyncResult` 返回异步计算结果
-- 如何使用防抖机制优化批量请求性能
-- 如何注册自定义函数类型以支持序列化
+* 如何继承 `AsyncFunction` 创建自定义异步函数
+* 如何使用 `acceptsReference` 支持单元格引用参数
+* 如何通过 `context.setAsyncResult` 返回异步计算结果
+* 如何使用防抖机制优化批量请求性能
+* 如何注册自定义函数类型以支持序列化
 
 该方案适用于需要实时数据更新的业务场景，具有良好的性能和扩展性，可以直接应用于生产环境中的股票行情、物联网数据监控、实时报表等场景。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/tWnuUgFNhEOxBAgzKRYv5A/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -6,10 +6,10 @@
 
 ## 二、解决的问题
 
-- 在列头区域提供交互式下拉选择功能，突破默认列头只能显示静态文本的限制
-- 实现列头单元格的自定义渲染和事件响应机制
-- 通过 Tag 机制存储和管理列头的状态数据
-- 提供可复用的自定义列头单元格类型，方便在多个列头应用相同的交互模式
+* 在列头区域提供交互式下拉选择功能，突破默认列头只能显示静态文本的限制
+* 实现列头单元格的自定义渲染和事件响应机制
+* 通过 Tag 机制存储和管理列头的状态数据
+* 提供可复用的自定义列头单元格类型，方便在多个列头应用相同的交互模式
 
 ## 三、实现思路
 
@@ -182,9 +182,9 @@ sheet.getCell(0, 1, GC.Spread.Sheets.SheetArea.colHeader).tag({
 
 ### 3.7 技术栈
 
-- SpreadJS 15.2.0：核心表格控件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持（项目配置）
+* SpreadJS 15.2.0：核心表格控件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持（项目配置）
 
 ## 四、使用说明
 
@@ -208,16 +208,16 @@ npm install
 
 ### 5.1 优点
 
-- 扩展了 SpreadJS 列头的交互能力，实现了自定义 UI 组件嵌入
-- 使用 Tag 机制实现状态持久化，数据与视图分离
-- 通过原型继承复用了 ColumnHeader 的基础功能，代码简洁
-- 下拉框位置自动计算，适配不同的单元格尺寸和位置
+* 扩展了 SpreadJS 列头的交互能力，实现了自定义 UI 组件嵌入
+* 使用 Tag 机制实现状态持久化，数据与视图分离
+* 通过原型继承复用了 ColumnHeader 的基础功能，代码简洁
+* 下拉框位置自动计算，适配不同的单元格尺寸和位置
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现使用原生 HTML `<select>` 元素，样式定制能力有限，可以考虑使用第三方 UI 组件库（如 Ant Design、Element UI）替换
-- 下拉框的数据源是静态定义的，可以扩展为支持异步加载或动态更新
-- 可以添加下拉框值变化的事件回调，实现与其他业务逻辑的联动（如根据选中值过滤数据）
+* 当前实现使用原生 HTML `<select>` 元素，样式定制能力有限，可以考虑使用第三方 UI 组件库（如 Ant Design、Element UI）替换
+* 下拉框的数据源是静态定义的，可以扩展为支持异步加载或动态更新
+* 可以添加下拉框值变化的事件回调，实现与其他业务逻辑的联动（如根据选中值过滤数据）
 
 ## 六、关键代码片段
 
@@ -274,4 +274,8 @@ DrowdownHeaderCellType.prototype._closeDropdown = function(host) {
 
 该方案适用于需要在列头进行配置选择、快速筛选等场景，具有良好的扩展性，可以根据实际需求定制下拉框的样式、数据源和交互逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/LYnDTLXQc0mbsuNXdLKyPA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

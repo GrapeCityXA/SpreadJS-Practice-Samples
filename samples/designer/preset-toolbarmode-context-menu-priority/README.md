@@ -1,3 +1,5 @@
+# preset-toolbarmode-context-menu-priority
+
 ### 需求：如何在小屏幕中优先显示必要的工具栏按钮
 
 ***
@@ -18,4 +20,8 @@ ToolbarMode是为了兼容一些小屏设备推出的新的设计器公式栏。
 像这些属于buttonGroupName，当完全展示时这些就不会显示。
 ![image](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/image-20260313.712ec3.png)
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/sdwGo2qcb0yuYmoa0I7CHw/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

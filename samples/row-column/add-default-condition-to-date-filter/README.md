@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **自动化数据视图**：在表格初始化时自动应用筛选条件，避免用户每次打开表格都需要手动设置筛选器
-- **日期数据快速定位**：通过预设的日期筛选条件，快速定位到关键时间点的数据记录
-- **提升用户体验**：减少用户操作步骤，直接呈现最相关的数据内容
+* **自动化数据视图**：在表格初始化时自动应用筛选条件，避免用户每次打开表格都需要手动设置筛选器
+* **日期数据快速定位**：通过预设的日期筛选条件，快速定位到关键时间点的数据记录
+* **提升用户体验**：减少用户操作步骤，直接呈现最相关的数据内容
 
 ## 三、实现思路
 
@@ -25,9 +25,9 @@ sheet.setFormatter(-1, 0, 'YYYY-MM-DD')
 sheet.getCell(-1, 0).width(200)
 ```
 
-- `setArray()` 从第 2 行第 1 列开始填充日期对象数组
-- `setFormatter(-1, 0, 'YYYY-MM-DD')` 对第 1 列所有行（-1 表示整列）应用日期格式
-- `getCell(-1, 0).width(200)` 设置列宽以完整显示日期内容
+* `setArray()` 从第 2 行第 1 列开始填充日期对象数组
+* `setFormatter(-1, 0, 'YYYY-MM-DD')` 对第 1 列所有行（-1 表示整列）应用日期格式
+* `getCell(-1, 0).width(200)` 设置列宽以完整显示日期内容
 
 #### 3.1.2 添加行筛选器
 
@@ -38,8 +38,8 @@ sheet.getCell(-1, 0).width(200)
 sheet.rowFilter(new GC.Spread.Sheets.Filter.HideRowFilter(new GC.Spread.Sheets.Range(1, 0, sheet.getRowCount() - 1, 3)))
 ```
 
-- `HideRowFilter` 通过隐藏行的方式实现筛选效果
-- `Range(1, 0, sheet.getRowCount() - 1, 3)` 定义筛选范围：从第 2 行开始，包含 4 列数据
+* `HideRowFilter` 通过隐藏行的方式实现筛选效果
+* `Range(1, 0, sheet.getRowCount() - 1, 3)` 定义筛选范围：从第 2 行开始，包含 4 列数据
 
 #### 3.1.3 创建并应用默认日期筛选条件
 
@@ -61,17 +61,17 @@ rowFilter.addFilterItem(0, condition)
 rowFilter.filter(0)
 ```
 
-- `ConditionType.dateCondition` 指定为日期类型条件
-- `DateCompareType.equalsTo` 设置比较类型为"等于"
-- `expected` 参数指定要筛选的目标日期
-- `addFilterItem(0, condition)` 将条件添加到第 1 列（索引 0）
-- `filter(0)` 执行筛选操作，应用到第 1 列
+* `ConditionType.dateCondition` 指定为日期类型条件
+* `DateCompareType.equalsTo` 设置比较类型为"等于"
+* `expected` 参数指定要筛选的目标日期
+* `addFilterItem(0, condition)` 将条件添加到第 1 列（索引 0）
+* `filter(0)` 执行筛选操作，应用到第 1 列
 
 ### 3.2 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
-- **SystemJS**: 0.19.22 - 模块加载器
-- **TypeScript**: 4.1.2 - 类型支持
+* **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
+* **SystemJS**: 0.19.22 - 模块加载器
+* **TypeScript**: 4.1.2 - 类型支持
 
 ## 四、使用说明
 
@@ -95,17 +95,17 @@ npm install
 
 ### 5.1 优点
 
-- **即开即用**：页面加载完成后自动应用筛选，无需额外操作
-- **灵活配置**：支持多种日期比较类型（等于、大于、小于、介于等）
-- **代码简洁**：通过条件对象封装筛选逻辑，易于维护和扩展
+* **即开即用**：页面加载完成后自动应用筛选，无需额外操作
+* **灵活配置**：支持多种日期比较类型（等于、大于、小于、介于等）
+* **代码简洁**：通过条件对象封装筛选逻辑，易于维护和扩展
 
 ### 5.2 局限性与扩展建议
 
-- **单一条件限制**：当前示例仅演示单个日期条件，实际应用中可能需要组合多个条件（如日期范围）
-- **扩展建议**：
-  - 可以使用 `DateCompareType.between` 实现日期区间筛选
-  - 结合 `LogicalOperators` 实现多条件组合（AND/OR）
-  - 可以根据当前日期动态计算筛选条件（如最近 7 天）
+* **单一条件限制**：当前示例仅演示单个日期条件，实际应用中可能需要组合多个条件（如日期范围）
+* **扩展建议**：
+    * 可以使用 `DateCompareType.between` 实现日期区间筛选
+    * 结合 `LogicalOperators` 实现多条件组合（AND/OR）
+    * 可以根据当前日期动态计算筛选条件（如最近 7 天）
 
 ## 六、关键代码片段
 
@@ -138,11 +138,15 @@ rowFilter.filter(0)
 
 本示例展示了 SpreadJS 中日期筛选器的编程式配置方法，通过预设筛选条件实现了数据视图的自动化管理。开发者可以从中学到：
 
-- 如何使用 `HideRowFilter` 为表格添加行筛选功能
-- 如何创建和配置日期类型的筛选条件
-- 如何在表格初始化时自动应用筛选规则
-- 日期格式化与筛选器的配合使用
+* 如何使用 `HideRowFilter` 为表格添加行筛选功能
+* 如何创建和配置日期类型的筛选条件
+* 如何在表格初始化时自动应用筛选规则
+* 日期格式化与筛选器的配合使用
 
 该方案适用于需要默认展示特定时间段数据的报表系统、数据监控面板等场景，通过减少用户操作提升了应用的易用性和效率。开发者可以根据实际需求扩展为更复杂的日期范围筛选或多条件组合筛选。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/OeSDNZOQnUytQY2lXaVCxw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

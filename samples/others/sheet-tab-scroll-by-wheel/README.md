@@ -1,3 +1,5 @@
+# sheet-tab-scroll-by-wheel
+
 ### 问题：如何给在下方显示的Sheet标签页也加上滚轮滚动功能
 
 #### 背景
@@ -37,4 +39,8 @@ document.getElementById("ss_tabStrip").onmousewheel = function (args) {
 最终效果：
 ![](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/GIF%202026-3-23%2014-04-53-20260323.26f66c.gif?width=400)
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/-2X-TgmEwk6Lq0bQII7l1Q/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

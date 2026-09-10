@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **自定义设计器菜单**：在 SpreadJS Designer 的 Ribbon 界面中添加自定义操作选项卡和按钮
-- **交互式区域选择**：通过弹窗方式让用户选择单元格区域，提升用户体验
-- **自动公式生成**：根据用户选择的区域自动生成求和公式并填充到指定单元格
+* **自定义设计器菜单**：在 SpreadJS Designer 的 Ribbon 界面中添加自定义操作选项卡和按钮
+* **交互式区域选择**：通过弹窗方式让用户选择单元格区域，提升用户体验
+* **自动公式生成**：根据用户选择的区域自动生成求和公式并填充到指定单元格
 
 ## 三、实现思路
 
@@ -112,9 +112,9 @@ GC.Spread.Sheets.Designer.registerTemplate("newTab", rangeTemplate);
 
 ### 3.3 技术栈
 
-- SpreadJS v17.0.8：核心电子表格引擎
-- SpreadJS Designer v17.0.8：设计器组件
-- SystemJS v0.19.22：模块加载器
+* SpreadJS v17.0.8：核心电子表格引擎
+* SpreadJS Designer v17.0.8：设计器组件
+* SystemJS v0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -141,18 +141,18 @@ npm install
 
 ### 5.1 优点
 
-- **扩展性强**：通过配置化方式轻松扩展设计器功能，无需修改核心代码
-- **用户体验好**：提供可视化的区域选择界面，降低用户操作难度
-- **代码简洁**：使用 Designer API 的模板系统，代码结构清晰易维护
-- **灵活配置**：RangeSelect 组件支持多种配置选项（绝对引用、是否包含工作表名等）
+* **扩展性强**：通过配置化方式轻松扩展设计器功能，无需修改核心代码
+* **用户体验好**：提供可视化的区域选择界面，降低用户操作难度
+* **代码简洁**：使用 Designer API 的模板系统，代码结构清晰易维护
+* **灵活配置**：RangeSelect 组件支持多种配置选项（绝对引用、是否包含工作表名等）
 
 ### 5.2 局限性与扩展建议
 
-- **当前限制**：示例中硬编码了 SUM 函数，实际应用中可能需要支持更多函数类型
-- **扩展建议**：
-  - 可以在对话框中添加下拉菜单让用户选择不同的函数（SUM、AVERAGE、COUNT 等）
-  - 支持多区域选择，生成更复杂的公式
-  - 添加公式预览功能，让用户在确认前查看生成的公式
+* **当前限制**：示例中硬编码了 SUM 函数，实际应用中可能需要支持更多函数类型
+* **扩展建议**：
+    * 可以在对话框中添加下拉菜单让用户选择不同的函数（SUM、AVERAGE、COUNT 等）
+    * 支持多区域选择，生成更复杂的公式
+    * 添加公式预览功能，让用户在确认前查看生成的公式
 
 ## 六、关键代码片段
 
@@ -176,12 +176,16 @@ sheet.setValue(1, 1, 5)
 
 本示例展示了 SpreadJS Designer 的扩展能力，开发者可以学到以下知识点：
 
-- 如何自定义 Designer 的 Ribbon 菜单结构
-- 如何定义和注册自定义命令
-- 如何使用 `registerTemplate` 创建自定义对话框
-- 如何使用 RangeSelect 组件实现区域选择功能
-- 如何通过 API 动态设置单元格公式
+* 如何自定义 Designer 的 Ribbon 菜单结构
+* 如何定义和注册自定义命令
+* 如何使用 `registerTemplate` 创建自定义对话框
+* 如何使用 RangeSelect 组件实现区域选择功能
+* 如何通过 API 动态设置单元格公式
 
 该方案适用于需要在 SpreadJS 设计器中添加自定义业务逻辑的场景，具有良好的扩展性。开发者可以基于此示例实现更复杂的自定义功能，如数据导入、批量处理、自定义计算等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/JzXqZrDln0m2an_v4SAipw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

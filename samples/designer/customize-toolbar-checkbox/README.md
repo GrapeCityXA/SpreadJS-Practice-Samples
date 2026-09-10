@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **自定义工具栏扩展**：在 SpreadJS Designer 默认工具栏基础上添加自定义功能区，满足特定业务需求
-- **复选框状态管理**：实现带状态的复选框按钮，根据当前工作表状态动态显示选中/未选中状态
-- **打印分页线控制**：提供可视化的打印分页线开关，方便用户在编辑时预览打印效果
+* **自定义工具栏扩展**：在 SpreadJS Designer 默认工具栏基础上添加自定义功能区，满足特定业务需求
+* **复选框状态管理**：实现带状态的复选框按钮，根据当前工作表状态动态显示选中/未选中状态
+* **打印分页线控制**：提供可视化的打印分页线开关，方便用户在编辑时预览打印效果
 
 ## 三、实现思路
 
@@ -62,9 +62,10 @@ let changeLineVisibleExec = {
 ```
 
 关键点：
-- `type: "checkbox"` 指定按钮类型为复选框
-- `execute` 方法切换打印分页线的显示状态
-- `getState` 方法返回当前状态，用于同步复选框的选中状态
+
+* `type: "checkbox"` 指定按钮类型为复选框
+* `execute` 方法切换打印分页线的显示状态
+* `getState` 方法返回当前状态，用于同步复选框的选中状态
 
 ### 3.3 注册命令并应用配置
 
@@ -85,10 +86,10 @@ designer.setData(ISENABLED, true)
 
 ### 3.4 技术栈
 
-- SpreadJS 16.0.1：核心电子表格引擎
-- SpreadJS Designer 16.0.1：可视化设计器组件
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 16.0.1：核心电子表格引擎
+* SpreadJS Designer 16.0.1：可视化设计器组件
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -113,9 +114,9 @@ npm install
 
 ### 5.1 优点
 
-- **配置化扩展**：通过 JSON 配置方式扩展工具栏，无需修改 Designer 源码
-- **状态同步**：复选框状态与工作表实际状态实时同步，避免状态不一致
-- **可复用性强**：自定义命令的实现模式可应用于其他类似功能的扩展
+* **配置化扩展**：通过 JSON 配置方式扩展工具栏，无需修改 Designer 源码
+* **状态同步**：复选框状态与工作表实际状态实时同步，避免状态不一致
+* **可复用性强**：自定义命令的实现模式可应用于其他类似功能的扩展
 
 ## 六、关键代码片段
 
@@ -139,11 +140,15 @@ getState: (context) => {
 
 本示例展示了 SpreadJS Designer 工具栏扩展的基本方法，开发者可以学到：
 
-- 如何扩展 Designer 的默认配置并添加自定义 Tab 页
-- 如何定义复选框类型的命令并实现状态管理
-- 如何通过 `commandMap` 注册自定义命令
-- 如何使用 `getState` 方法实现 UI 状态与数据状态的同步
+* 如何扩展 Designer 的默认配置并添加自定义 Tab 页
+* 如何定义复选框类型的命令并实现状态管理
+* 如何通过 `commandMap` 注册自定义命令
+* 如何使用 `getState` 方法实现 UI 状态与数据状态的同步
 
 该方案适用于需要在 SpreadJS Designer 中集成自定义操作的场景，可以根据实际需求扩展更多类型的按钮（如普通按钮、下拉菜单等），实现丰富的业务功能定制。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/dQerT4dlp06W5FW3JKM4ow/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **扩展默认菜单**：SpreadJS 提供了默认的右键菜单，但在实际业务中往往需要添加自定义操作项，本示例展示了如何无缝扩展默认菜单
-- **动态菜单控制**：根据用户当前选择的单元格位置或状态，动态决定显示哪些菜单项，提升用户体验
-- **自定义命令绑定**：为自定义菜单项绑定特定的命令处理逻辑，实现业务功能与 UI 交互的解耦
+* **扩展默认菜单**：SpreadJS 提供了默认的右键菜单，但在实际业务中往往需要添加自定义操作项，本示例展示了如何无缝扩展默认菜单
+* **动态菜单控制**：根据用户当前选择的单元格位置或状态，动态决定显示哪些菜单项，提升用户体验
+* **自定义命令绑定**：为自定义菜单项绑定特定的命令处理逻辑，实现业务功能与 UI 交互的解耦
 
 ## 三、实现思路
 
@@ -34,10 +34,11 @@ spread.contextMenu.onOpenMenu = function (menuData, itemsDataForShown, hitInfo, 
 ```
 
 关键参数说明：
-- `menuData`：菜单的原始数据
-- `itemsDataForShown`：即将显示的菜单项数组，可以通过 `push` 添加新项
-- `hitInfo`：鼠标点击位置的信息
-- `spread`：Workbook 实例
+
+* `menuData`：菜单的原始数据
+* `itemsDataForShown`：即将显示的菜单项数组，可以通过 `push` 添加新项
+* `hitInfo`：鼠标点击位置的信息
+* `spread`：Workbook 实例
 
 ### 3.2 动态控制菜单显示
 
@@ -68,14 +69,15 @@ spread.commandManager().register("customCommand", {
 ```
 
 参数说明：
-- `canUndo`：是否支持撤销操作
-- `execute`：命令执行函数，接收 `spread` 实例和 `options` 参数
+
+* `canUndo`：是否支持撤销操作
+* `execute`：命令执行函数，接收 `spread` 实例和 `options` 参数
 
 ### 3.4 技术栈
 
-- SpreadJS 16.0.1：核心表格控件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持（虽然示例使用 `.js` 文件，但配置了 TypeScript 环境）
+* SpreadJS 16.0.1：核心表格控件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持（虽然示例使用 `.js` 文件，但配置了 TypeScript 环境）
 
 ## 四、使用说明
 
@@ -100,25 +102,29 @@ npm install
 
 ### 5.1 优点
 
-- **无侵入式扩展**：通过拦截原方法并保留原逻辑，不破坏 SpreadJS 的默认行为
-- **灵活的动态控制**：可以根据任意业务逻辑动态调整菜单项的显示与隐藏
-- **命令模式解耦**：使用命令注册机制，将菜单 UI 与业务逻辑分离，便于维护和扩展
+* **无侵入式扩展**：通过拦截原方法并保留原逻辑，不破坏 SpreadJS 的默认行为
+* **灵活的动态控制**：可以根据任意业务逻辑动态调整菜单项的显示与隐藏
+* **命令模式解耦**：使用命令注册机制，将菜单 UI 与业务逻辑分离，便于维护和扩展
 
 ### 5.2 局限性与扩展建议
 
-- **菜单项样式定制**：当前示例仅添加了文本菜单项，如需添加图标、分隔线或子菜单，需要进一步配置 `menuData` 结构
-- **命令参数传递**：示例中的命令执行逻辑较为简单，实际应用中可以通过 `options` 参数传递更多上下文信息（如选中的单元格范围、单元格值等）
-- **国际化支持**：菜单文本可以结合国际化方案，根据用户语言动态切换
+* **菜单项样式定制**：当前示例仅添加了文本菜单项，如需添加图标、分隔线或子菜单，需要进一步配置 `menuData` 结构
+* **命令参数传递**：示例中的命令执行逻辑较为简单，实际应用中可以通过 `options` 参数传递更多上下文信息（如选中的单元格范围、单元格值等）
+* **国际化支持**：菜单文本可以结合国际化方案，根据用户语言动态切换
 
 ## 六、总结
 
 本示例展示了 SpreadJS 中自定义右键菜单的核心实现方式，开发者可以从中学到：
 
-- 如何拦截和扩展 SpreadJS 的右键菜单
-- 如何根据单元格状态动态控制菜单显示
-- 如何使用命令管理器注册自定义命令
-- 如何保留原有功能的同时添加新功能
+* 如何拦截和扩展 SpreadJS 的右键菜单
+* 如何根据单元格状态动态控制菜单显示
+* 如何使用命令管理器注册自定义命令
+* 如何保留原有功能的同时添加新功能
 
 该方案适用于需要在表格应用中提供个性化操作入口的场景，具有良好的扩展性和可维护性。开发者可以在此基础上根据实际业务需求，添加更多复杂的菜单项和命令逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/YM5FTMFcSkWLZfcgmNChbw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

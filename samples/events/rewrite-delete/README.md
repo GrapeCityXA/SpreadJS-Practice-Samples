@@ -150,4 +150,8 @@ sheet.clear(r, c, rc, cc, GC.Spread.Sheets.SheetArea.viewport, GC.Spread.Sheets.
 
 该方案适用于需要对用户操作进行监控、记录或二次确认的场景，如财务系统、数据审计平台等。通过扩展 execute 方法，可以轻松集成更多业务逻辑，实现复杂的数据管理需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/jW8Dy-NeUE6PqHb0QXP9QA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

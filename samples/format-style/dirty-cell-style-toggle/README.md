@@ -6,10 +6,10 @@
 
 在实际的表格应用中，用户经常需要追踪哪些单元格的数据被修改过，特别是在以下场景：
 
-- 数据审核：在批量编辑数据后，需要快速定位哪些单元格被修改过
-- 协同编辑：多人编辑同一份表格时，需要标记出变更的单元格
-- 数据对比：将当前数据与原始数据进行对比，高亮显示差异部分
-- 撤销提示：在提交数据前，让用户确认哪些数据发生了变更
+* 数据审核：在批量编辑数据后，需要快速定位哪些单元格被修改过
+* 协同编辑：多人编辑同一份表格时，需要标记出变更的单元格
+* 数据对比：将当前数据与原始数据进行对比，高亮显示差异部分
+* 撤销提示：在提交数据前，让用户确认哪些数据发生了变更
 
 ## 三、实现思路
 
@@ -62,8 +62,8 @@ sheet.repaint();
 
 ### 3.3 技术栈
 
-- SpreadJS v17.0.8：核心表格组件
-- SystemJS v0.19.22：模块加载器
+* SpreadJS v17.0.8：核心表格组件
+* SystemJS v0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -87,19 +87,19 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单：仅需几行代码即可实现脏数据标记功能
-- 性能高效：Cell States API 是 SpreadJS 内置的高性能状态管理机制
-- 样式可定制：可以自定义脏数据的标记样式（颜色、边框等）
-- 范围灵活：可以针对特定范围或整个工作表进行标记
+* 实现简单：仅需几行代码即可实现脏数据标记功能
+* 性能高效：Cell States API 是 SpreadJS 内置的高性能状态管理机制
+* 样式可定制：可以自定义脏数据的标记样式（颜色、边框等）
+* 范围灵活：可以针对特定范围或整个工作表进行标记
 
 ### 5.2 局限性与扩展建议
 
 当前实现对所有单元格统一标记，实际应用中可以扩展为：
 
-- 仅标记实际被修改过的单元格（通过监听 `CellChanged` 事件）
-- 支持多种状态类型（如 `invalid`、`readonly` 等）
-- 添加状态持久化功能，保存和恢复标记状态
-- 结合数据验证，自动标记不符合规则的单元格
+* 仅标记实际被修改过的单元格（通过监听 `CellChanged` 事件）
+* 支持多种状态类型（如 `invalid`、`readonly` 等）
+* 添加状态持久化功能，保存和恢复标记状态
+* 结合数据验证，自动标记不符合规则的单元格
 
 ## 六、关键代码片段
 
@@ -153,11 +153,15 @@ document.querySelector("#button2").addEventListener("click", function () {
 
 本示例展示了 SpreadJS 中 Cell States API 的基本用法，开发者可以从中学到：
 
-- 如何使用 `cellStates.add()` 为单元格添加状态标记
-- 如何使用 `cellStates.clear()` 清除状态标记
-- 如何创建和应用自定义样式到单元格状态
-- 如何通过 `Range` 对象指定操作范围
+* 如何使用 `cellStates.add()` 为单元格添加状态标记
+* 如何使用 `cellStates.clear()` 清除状态标记
+* 如何创建和应用自定义样式到单元格状态
+* 如何通过 `Range` 对象指定操作范围
 
 该方案适用于需要追踪数据变更的场景，可以扩展为更复杂的数据审核、版本对比等功能。通过结合事件监听和条件判断，可以实现更精细化的脏数据管理机制。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/3r520_sG2E24sb8qSPl-Dw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

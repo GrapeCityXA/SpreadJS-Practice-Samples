@@ -6,9 +6,9 @@
 
 在默认情况下，SpreadJS 的复制操作可能无法完全将格式化数据写入系统剪贴板，导致用户在外部应用程序中粘贴时丢失样式和格式。本示例解决了以下问题：
 
-- 确保右键复制操作能够将 HTML 格式的数据写入系统剪贴板
-- 同时提供纯文本格式作为备选，提高兼容性
-- 实现 SpreadJS 与外部应用程序（如 Excel、Word）之间的无缝数据交换
+* 确保右键复制操作能够将 HTML 格式的数据写入系统剪贴板
+* 同时提供纯文本格式作为备选，提高兼容性
+* 实现 SpreadJS 与外部应用程序（如 Excel、Word）之间的无缝数据交换
 
 ## 三、实现思路
 
@@ -56,10 +56,10 @@ sheet.setStyle(1, 1, style)
 
 ### 3.2 技术栈
 
-- @grapecity/spread-sheets: 17.0.8（核心表格组件）
-- @grapecity/spread-sheets-designer: 17.0.8（设计器组件）
-- SystemJS: 0.19.22（模块加载器）
-- Clipboard API（浏览器原生 API）
+* @grapecity/spread-sheets: 17.0.8（核心表格组件）
+* @grapecity/spread-sheets-designer: 17.0.8（设计器组件）
+* SystemJS: 0.19.22（模块加载器）
+* Clipboard API（浏览器原生 API）
 
 ## 四、使用说明
 
@@ -84,16 +84,16 @@ npm install
 
 ### 5.1 优点
 
-- 支持多格式写入：同时写入 HTML 和纯文本格式，提高兼容性
-- 保留样式信息：HTML 格式能够保留单元格的背景色、字体等样式
-- 无缝集成：与 SpreadJS 的原生复制功能完美配合
-- 跨应用支持：可在 Excel、Word 等多种应用程序中粘贴
+* 支持多格式写入：同时写入 HTML 和纯文本格式，提高兼容性
+* 保留样式信息：HTML 格式能够保留单元格的背景色、字体等样式
+* 无缝集成：与 SpreadJS 的原生复制功能完美配合
+* 跨应用支持：可在 Excel、Word 等多种应用程序中粘贴
 
 ### 5.2 局限性与扩展建议
 
-- 浏览器兼容性：Clipboard API 需要 HTTPS 环境或 localhost，且部分旧版浏览器不支持
-- 权限要求：首次使用时浏览器可能会请求剪贴板访问权限
-- 扩展建议：可以添加错误处理机制，在 Clipboard API 不可用时提供降级方案
+* 浏览器兼容性：Clipboard API 需要 HTTPS 环境或 localhost，且部分旧版浏览器不支持
+* 权限要求：首次使用时浏览器可能会请求剪贴板访问权限
+* 扩展建议：可以添加错误处理机制，在 Clipboard API 不可用时提供降级方案
 
 ## 六、关键代码片段
 
@@ -116,11 +116,15 @@ spread.bind(GC.Spread.Sheets.Events.ClipboardChanging, function (e, info) {
 
 本示例展示了如何通过监听 SpreadJS 的剪贴板事件并结合浏览器的 Clipboard API，实现将表格数据完整地写入系统剪贴板。开发者可以从中学到：
 
-- SpreadJS 剪贴板事件的使用方法
-- 浏览器 Clipboard API 的实际应用
-- 多格式数据的剪贴板写入技巧
-- SpreadJS 与外部应用程序的数据交互方案
+* SpreadJS 剪贴板事件的使用方法
+* 浏览器 Clipboard API 的实际应用
+* 多格式数据的剪贴板写入技巧
+* SpreadJS 与外部应用程序的数据交互方案
 
 该方案适用于需要在 SpreadJS 与其他办公软件之间频繁交换数据的场景，具有良好的扩展性，可以根据实际需求添加更多数据格式或自定义处理逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/_66OF1WOMkO8OvzVYH6QgQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

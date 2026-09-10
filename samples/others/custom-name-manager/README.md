@@ -4,11 +4,11 @@
 
 ## 二、解决的问题
 
-- 提供可视化的名称管理界面，替代通过代码手动调用 API 的方式
-- 支持工作簿级别和工作表级别的自定义名称管理
-- 集成 FormulaTextBox 组件实现直观的单元格范围选择
-- 统一展示自定义名称和表格名称，方便用户查看所有命名对象
-- 支持对名称的批注信息进行编辑和查看
+* 提供可视化的名称管理界面，替代通过代码手动调用 API 的方式
+* 支持工作簿级别和工作表级别的自定义名称管理
+* 集成 FormulaTextBox 组件实现直观的单元格范围选择
+* 统一展示自定义名称和表格名称，方便用户查看所有命名对象
+* 支持对名称的批注信息进行编辑和查看
 
 ## 三、实现思路
 
@@ -237,10 +237,10 @@ document.head.appendChild(script)
 
 ### 3.6 技术栈
 
-- SpreadJS 16.0.1：核心表格控件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持
-- HTML5 Drag API：拖拽功能实现
+* SpreadJS 16.0.1：核心表格控件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持
+* HTML5 Drag API：拖拽功能实现
 
 ## 四、使用说明
 
@@ -256,11 +256,11 @@ npm install
 1. 打开页面后，点击"名称管理器"按钮打开管理界面
 2. 在列表中查看所有自定义名称和表格名称
 3. 点击"新建"按钮创建新名称：
-   - 填写名称
-   - 选择作用范围（工作簿或指定工作表）
-   - 点击引用位置输入框右侧按钮，在表格中选择单元格范围
-   - 可选填写批注信息
-   - 点击"确定"保存
+    * 填写名称
+    * 选择作用范围（工作簿或指定工作表）
+    * 点击引用位置输入框右侧按钮，在表格中选择单元格范围
+    * 可选填写批注信息
+    * 点击"确定"保存
 4. 选中列表中的某一行，点击"编辑"修改名称信息（名称和范围不可修改）
 5. 选中列表中的某一行，点击"删除"移除名称（表格名称不可删除）
 6. 拖拽弹窗标题栏可移动窗口位置
@@ -269,18 +269,18 @@ npm install
 
 ### 5.1 优点
 
-- 提供类似 Excel 的可视化名称管理体验，降低使用门槛
-- 统一管理工作簿级别和工作表级别的名称，层次清晰
-- 集成 FormulaTextBox 组件，支持直观的范围选择交互
-- 使用嵌入式 SpreadJS 实例展示列表，支持列绑定和条件格式化
-- 支持弹窗拖拽，提升用户体验
+* 提供类似 Excel 的可视化名称管理体验，降低使用门槛
+* 统一管理工作簿级别和工作表级别的名称，层次清晰
+* 集成 FormulaTextBox 组件，支持直观的范围选择交互
+* 使用嵌入式 SpreadJS 实例展示列表，支持列绑定和条件格式化
+* 支持弹窗拖拽，提升用户体验
 
 ### 5.2 局限性与扩展建议
 
-- 当前不支持对表格名称的编辑和删除，可扩展表格管理功能
-- 编辑模式下不允许修改名称和作用范围，可考虑支持更灵活的编辑方式
-- 可增加名称搜索和筛选功能，方便在大量名称中快速定位
-- 可支持批量导入导出名称定义
+* 当前不支持对表格名称的编辑和删除，可扩展表格管理功能
+* 编辑模式下不允许修改名称和作用范围，可考虑支持更灵活的编辑方式
+* 可增加名称搜索和筛选功能，方便在大量名称中快速定位
+* 可支持批量导入导出名称定义
 
 ## 六、关键代码片段
 
@@ -323,12 +323,16 @@ let range = GC.Spread.Sheets.CalcEngine.formulaToRange(curSheet, data.range)
 
 本示例展示了如何基于 SpreadJS 构建自定义的名称管理器界面，通过嵌入式 SpreadJS 实例、FormulaTextBox 组件和 HTML5 Drag API 的组合使用，实现了功能完善的可视化管理工具。开发者可以从中学习到：
 
-- 如何使用 SpreadJS 的自定义名称 API（addCustomName、removeCustomName、getCustomNames）
-- 如何集成 FormulaTextBox 组件实现范围选择功能
-- 如何使用列绑定（bindColumns）快速构建数据列表
-- 如何使用条件格式化实现行选中效果
-- 如何通过 CalcEngine 进行范围和公式的相互转换
+* 如何使用 SpreadJS 的自定义名称 API（addCustomName、removeCustomName、getCustomNames）
+* 如何集成 FormulaTextBox 组件实现范围选择功能
+* 如何使用列绑定（bindColumns）快速构建数据列表
+* 如何使用条件格式化实现行选中效果
+* 如何通过 CalcEngine 进行范围和公式的相互转换
 
 该方案适用于需要为用户提供可视化名称管理功能的场景，具有良好的扩展性，可根据实际需求增加搜索、筛选、批量操作等功能。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/kOSDJk7FEEuACuVjtyp3DQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

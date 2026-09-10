@@ -8,9 +8,9 @@
 
 在 SpreadJS 中，行分组（Row Outline）和行隐藏（Row Visible）是两个独立的功能。当隐藏行被包含在分组范围内并收起分组后，展开分组时隐藏行仍然保持隐藏状态，这可能导致用户无法查看完整数据。本示例解决了以下问题：
 
-- 展开分组时，自动显示分组范围内所有被隐藏的行
-- 同时支持行分组和列分组的场景
-- 保持分组功能的正常使用体验
+* 展开分组时，自动显示分组范围内所有被隐藏的行
+* 同时支持行分组和列分组的场景
+* 保持分组功能的正常使用体验
 
 ## 三、实现思路
 
@@ -67,9 +67,10 @@ _sheet.resumePaint()
 ```
 
 关键点：
-- `outline.find()` 的第一个参数需要减 1，因为命令中的 index 是从 1 开始的
-- 使用 `suspendPaint()` 和 `resumePaint()` 包裹批量操作，提升性能
-- 同时支持行和列的处理逻辑
+
+* `outline.find()` 的第一个参数需要减 1，因为命令中的 index 是从 1 开始的
+* 使用 `suspendPaint()` 和 `resumePaint()` 包裹批量操作，提升性能
+* 同时支持行和列的处理逻辑
 
 #### 初始化演示数据
 
@@ -91,9 +92,9 @@ spread.resumePaint()
 
 ### 3.2 技术栈
 
-- @grapecity/spread-sheets: 17.0.8（核心表格组件）
-- SystemJS: ^0.19.22（模块加载器）
-- systemjs-plugin-babel: 0.0.25（ES6 转译支持）
+* @grapecity/spread-sheets: 17.0.8（核心表格组件）
+* SystemJS: ^0.19.22（模块加载器）
+* systemjs-plugin-babel: 0.0.25（ES6 转译支持）
 
 ## 四、使用说明
 
@@ -117,18 +118,18 @@ npm install
 
 ### 5.1 优点
 
-- 解决了行分组与行隐藏功能的冲突问题
-- 同时支持行分组和列分组
-- 代码简洁，易于集成到现有项目
-- 使用命令监听机制，不影响其他功能
+* 解决了行分组与行隐藏功能的冲突问题
+* 同时支持行分组和列分组
+* 代码简洁，易于集成到现有项目
+* 使用命令监听机制，不影响其他功能
 
 ### 5.2 局限性与扩展建议
 
 当前实现会在展开分组时显示所有隐藏行，如果需要保留某些行的隐藏状态，可以考虑以下扩展方案：
 
-- 添加标记机制，区分"需要保持隐藏"和"可以自动显示"的行
-- 提供配置选项，让用户选择是否启用自动显示功能
-- 记录展开前的隐藏状态，在收起分组时恢复原始状态
+* 添加标记机制，区分"需要保持隐藏"和"可以自动显示"的行
+* 提供配置选项，让用户选择是否启用自动显示功能
+* 记录展开前的隐藏状态，在收起分组时恢复原始状态
 
 ## 六、关键代码片段
 
@@ -176,11 +177,15 @@ spread.commandManager().addListener("_", function (info) {
 
 本示例展示了如何通过 SpreadJS 的命令管理器机制解决行分组与行隐藏功能的冲突问题。开发者可以从中学到：
 
-- 使用 `commandManager().addListener()` 监听特定命令
-- 通过 `outline.find()` 获取分组范围信息
-- 批量操作时使用 `suspendPaint()` 和 `resumePaint()` 优化性能
-- 处理行和列分组的通用逻辑
+* 使用 `commandManager().addListener()` 监听特定命令
+* 通过 `outline.find()` 获取分组范围信息
+* 批量操作时使用 `suspendPaint()` 和 `resumePaint()` 优化性能
+* 处理行和列分组的通用逻辑
 
 该方案适用于需要同时使用分组和隐藏功能的场景，代码简洁且易于扩展，可以根据实际需求进行定制化改造。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/FpNvyFAuDkSZiWSEX5x8cw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

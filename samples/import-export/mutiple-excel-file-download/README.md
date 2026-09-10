@@ -6,10 +6,10 @@
 
 在实际业务中，用户可能需要同时导出多个独立的 SpreadJS 工作簿（例如不同部门的报表、多个数据分析结果等）。如果逐个导出，用户需要多次点击下载按钮，操作繁琐且效率低下。本示例通过以下方式解决了这一问题：
 
-- 一键批量导出多个工作簿为独立的 Excel 文件
-- 自动将所有文件打包成 ZIP 压缩包
-- 纯前端实现，无需服务器端处理
-- 提供友好的用户体验，减少操作步骤
+* 一键批量导出多个工作簿为独立的 Excel 文件
+* 自动将所有文件打包成 ZIP 压缩包
+* 纯前端实现，无需服务器端处理
+* 提供友好的用户体验，减少操作步骤
 
 ## 三、实现思路
 
@@ -97,12 +97,12 @@ saveAs(content, "spreads.zip");
 
 ### 3.2 技术栈
 
-- SpreadJS 16.2.0：电子表格组件核心库
-- @grapecity/spread-sheets-io 16.2.0：提供 Excel 导入导出功能
-- JSZip 3.1.5：前端 ZIP 文件生成库
-- FileSaver.js：浏览器文件下载工具库
-- jQuery 3.6.1：简化 DOM 操作和事件绑定
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 16.2.0：电子表格组件核心库
+* @grapecity/spread-sheets-io 16.2.0：提供 Excel 导入导出功能
+* JSZip 3.1.5：前端 ZIP 文件生成库
+* FileSaver.js：浏览器文件下载工具库
+* jQuery 3.6.1：简化 DOM 操作和事件绑定
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -126,18 +126,18 @@ npm install
 
 ### 5.1 优点
 
-- 纯前端实现，无需服务器端支持，降低系统复杂度
-- 一键批量导出，提升用户操作效率
-- 自动打包成 ZIP 文件，方便用户统一管理和分发
-- 代码结构清晰，易于扩展到更多工作簿的批量导出场景
+* 纯前端实现，无需服务器端支持，降低系统复杂度
+* 一键批量导出，提升用户操作效率
+* 自动打包成 ZIP 文件，方便用户统一管理和分发
+* 代码结构清晰，易于扩展到更多工作簿的批量导出场景
 
 ### 5.2 局限性与扩展建议
 
 当前实现使用定时器轮询检测导出完成状态，存在以下局限性：
 
-- 固定的 500ms 轮询间隔可能导致不必要的性能开销
-- 无法准确获知每个工作簿的导出进度
-- 如果某个工作簿导出失败，无法及时发现和处理
+* 固定的 500ms 轮询间隔可能导致不必要的性能开销
+* 无法准确获知每个工作簿的导出进度
+* 如果某个工作簿导出失败，无法及时发现和处理
 
 扩展建议：
 
@@ -196,13 +196,15 @@ $("#saveExcel").click(function () {
 
 本示例展示了如何使用 SpreadJS 结合 JSZip 和 FileSaver.js 实现多个工作簿的批量导出和打包下载功能。开发者可以从中学到：
 
-- SpreadJS 的 export() 方法使用和异步处理
-- JSZip 库在前端进行文件打包的实现方式
-- 异步操作完成检测的轮询机制
-- FileSaver.js 触发浏览器文件下载的方法
+* SpreadJS 的 export() 方法使用和异步处理
+* JSZip 库在前端进行文件打包的实现方式
+* 异步操作完成检测的轮询机制
+* FileSaver.js 触发浏览器文件下载的方法
 
 该方案适用于需要批量导出多个独立报表、数据分析结果或其他 Excel 文件的场景，通过纯前端实现降低了系统复杂度，提升了用户体验。在实际应用中，建议根据业务需求优化异步控制流程和错误处理机制，以提供更稳定可靠的批量导出功能。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Download%20multiple%20Excel%20packaged%20files%20with%20a%20single%20click.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/1C7TzroTqEO3VsXIK2sm8g/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

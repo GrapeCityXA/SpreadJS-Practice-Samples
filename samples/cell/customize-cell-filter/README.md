@@ -1,6 +1,6 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中自定义单元格筛选按钮的外观和行为。通过使用 `cellButtons` 属性，将默认的筛选按钮替换为自定义的搜索图标按钮，并保持筛选对话框的完整功能。示例还演示了如何通过条件格式为不同区域和日期范围的数据添加视觉区分。
+本示例展示了如何在 SpreadJS 中自定义单元格筛选按钮的外观和行为。通过使用 `cellButtons` 属性，将默认的筛选按钮替换为自定义的搜索图标按钮，并保持筛选对话框的完整功能。示例还演示了如何通过条件格式为不同区域和日期范围的数据添加视觉区分。 
 
 该方案适用于需要统一 UI 风格、自定义筛选按钮样式或在特定单元格位置添加筛选功能的场景。
 
@@ -8,10 +8,10 @@
 
 在实际业务场景中，开发者可能需要：
 
-- 自定义筛选按钮的图标样式，使其与应用整体 UI 风格保持一致
-- 在指定单元格位置添加筛选按钮，而不是使用默认的表头筛选按钮
-- 保留筛选对话框的完整功能，同时改变触发方式
-- 通过条件格式增强数据的可视化效果，便于用户快速识别不同类别的数据
+* 自定义筛选按钮的图标样式，使其与应用整体 UI 风格保持一致
+* 在指定单元格位置添加筛选按钮，而不是使用默认的表头筛选按钮
+* 保留筛选对话框的完整功能，同时改变触发方式
+* 通过条件格式增强数据的可视化效果，便于用户快速识别不同类别的数据
 
 ## 三、实现思路
 
@@ -58,10 +58,11 @@ function changeButton() {
 ```
 
 关键点：
-- `filterButtonVisible(false)` 隐藏所有默认筛选按钮
-- `imageType: ButtonImageType.search` 使用搜索图标
-- `command` 回调函数中通过 `openFilterDialog()` 手动打开筛选对话框
-- `filterButtonHitInfo` 对象包含筛选对话框所需的位置和范围信息
+
+* `filterButtonVisible(false)` 隐藏所有默认筛选按钮
+* `imageType: ButtonImageType.search` 使用搜索图标
+* `command` 回调函数中通过 `openFilterDialog()` 手动打开筛选对话框
+* `filterButtonHitInfo` 对象包含筛选对话框所需的位置和范围信息
 
 ### 3.2 初始化行筛选器
 
@@ -103,9 +104,9 @@ sheet.conditionalFormats.addRule(rule2);
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0 — 核心表格组件
-- SystemJS 0.19.22 — 模块加载器
-- TypeScript 4.1.2 — 类型支持
+* SpreadJS 15.0.0 — 核心表格组件
+* SystemJS 0.19.22 — 模块加载器
+* TypeScript 4.1.2 — 类型支持
 
 ## 四、使用说明
 
@@ -131,16 +132,16 @@ npm install
 
 ### 5.1 优点
 
-- 灵活的按钮自定义：可以使用内置图标类型或自定义图标，满足不同 UI 需求
-- 保留完整筛选功能：自定义按钮触发的筛选对话框与默认按钮功能一致
-- 精确的位置控制：可以在任意单元格添加筛选按钮，不局限于表头行
-- 增强的数据可视化：结合条件格式，提升数据的可读性和识别效率
+* 灵活的按钮自定义：可以使用内置图标类型或自定义图标，满足不同 UI 需求
+* 保留完整筛选功能：自定义按钮触发的筛选对话框与默认按钮功能一致
+* 精确的位置控制：可以在任意单元格添加筛选按钮，不局限于表头行
+* 增强的数据可视化：结合条件格式，提升数据的可读性和识别效率
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现仅在 B2 单元格添加了自定义按钮，如需为多个列添加，需要循环设置每个单元格的样式
-- 可以扩展 `command` 回调函数，添加自定义的筛选逻辑或数据验证
-- 可以结合 `cellClick` 事件，实现更复杂的交互逻辑
+* 当前实现仅在 B2 单元格添加了自定义按钮，如需为多个列添加，需要循环设置每个单元格的样式
+* 可以扩展 `command` 回调函数，添加自定义的筛选逻辑或数据验证
+* 可以结合 `cellClick` 事件，实现更复杂的交互逻辑
 
 ## 六、关键代码片段
 
@@ -170,11 +171,15 @@ command: (sheet, row, col, option) => {
 
 开发者可以从中学到：
 
-- 如何使用 `cellButtons` 属性添加自定义单元格按钮
-- 如何手动触发筛选对话框
-- 如何使用条件格式增强数据可视化
-- 如何创建和配置 `HideRowFilter` 行筛选器
+* 如何使用 `cellButtons` 属性添加自定义单元格按钮
+* 如何手动触发筛选对话框
+* 如何使用条件格式增强数据可视化
+* 如何创建和配置 `HideRowFilter` 行筛选器
 
 该方案适用于需要自定义 UI 风格的企业应用、数据分析工具或需要在特定位置提供筛选功能的场景。通过扩展 `command` 回调函数，还可以实现更复杂的业务逻辑和交互体验。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/IimTXBfZKE_pBP0qCqpc6Q/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -6,10 +6,10 @@
 
 ## 二、解决的问题
 
-- 提供直观的行选择视觉反馈，用户可以通过背景色快速识别已选中的数据行
-- 实现列头全选功能，支持批量选择和取消选择操作
-- 通过自定义 CellType 扩展 SpreadJS 的 Checkbox 功能，满足特定的交互需求
-- 实现 Checkbox 状态与行背景色的联动，提升用户体验
+* 提供直观的行选择视觉反馈，用户可以通过背景色快速识别已选中的数据行
+* 实现列头全选功能，支持批量选择和取消选择操作
+* 通过自定义 CellType 扩展 SpreadJS 的 Checkbox 功能，满足特定的交互需求
+* 实现 Checkbox 状态与行背景色的联动，提升用户体验
 
 ## 三、实现思路
 
@@ -119,6 +119,7 @@ spread.bind(GC.Spread.Sheets.Events.ButtonClicked,
 ```
 
 该事件处理函数实现了两个功能：
+
 1. 根据当前行 Checkbox 的选中状态更新行背景色
 2. 检查该列所有 Checkbox 的状态，同步更新列头 Checkbox 的选中状态
 
@@ -145,10 +146,10 @@ for (var i = 0; i < 8; i++) {
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0：核心表格控件
-- jQuery 3.1.1：DOM 操作和事件处理
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格控件
+* jQuery 3.1.1：DOM 操作和事件处理
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -174,17 +175,17 @@ npm install
 
 ### 5.1 优点
 
-- 视觉反馈清晰：通过背景色变化直观展示选中状态
-- 交互逻辑完善：支持全选/取消全选，单个选择与全选状态自动同步
-- 性能优化：使用 `suspendPaint()` 和 `resumePaint()` 批量更新，避免频繁重绘
-- 扩展性强：通过自定义 CellType 实现特定功能，可以进一步扩展其他交互逻辑
+* 视觉反馈清晰：通过背景色变化直观展示选中状态
+* 交互逻辑完善：支持全选/取消全选，单个选择与全选状态自动同步
+* 性能优化：使用 `suspendPaint()` 和 `resumePaint()` 批量更新，避免频繁重绘
+* 扩展性强：通过自定义 CellType 实现特定功能，可以进一步扩展其他交互逻辑
 
 ### 5.2 局限性与扩展建议
 
-- 当前背景色固定为红色，可以扩展为支持自定义颜色配置
-- 仅支持单列 Checkbox，可以扩展为多列独立管理
-- 可以添加行选择后的批量操作功能，例如批量删除、批量导出等
-- 可以将选中状态持久化到数据源，支持页面刷新后恢复选中状态
+* 当前背景色固定为红色，可以扩展为支持自定义颜色配置
+* 仅支持单列 Checkbox，可以扩展为多列独立管理
+* 可以添加行选择后的批量操作功能，例如批量删除、批量导出等
+* 可以将选中状态持久化到数据源，支持页面刷新后恢复选中状态
 
 ## 六、关键代码片段
 
@@ -214,15 +215,17 @@ MyCheckBoxCellType.prototype.getHitInfo = function (x, y, cellStyle, cellRect, c
 
 本示例展示了如何通过自定义 CellType 扩展 SpreadJS 的 Checkbox 功能，实现了选中 Checkbox 时改变行背景色的交互效果。开发者可以从中学到以下知识点：
 
-- 如何继承和扩展 SpreadJS 的内置 CellType
-- 如何重写 `paint`、`processMouseUp`、`getHitInfo` 等关键方法
-- 如何使用 `tag` 属性存储自定义状态
-- 如何监听 `ButtonClicked` 事件处理 Checkbox 点击
-- 如何使用 `suspendPaint()` 和 `resumePaint()` 优化批量更新性能
-- 如何实现列头全选与单个选择的状态同步
+* 如何继承和扩展 SpreadJS 的内置 CellType
+* 如何重写 `paint`、`processMouseUp`、`getHitInfo` 等关键方法
+* 如何使用 `tag` 属性存储自定义状态
+* 如何监听 `ButtonClicked` 事件处理 Checkbox 点击
+* 如何使用 `suspendPaint()` 和 `resumePaint()` 优化批量更新性能
+* 如何实现列头全选与单个选择的状态同步
 
 该方案适用于需要行选择功能的数据表格场景，具有良好的扩展性，可以根据实际需求进一步定制交互逻辑和视觉效果。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Select%20the%20checkbox%20line%20to%20change%20the%20background%20color.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/cd2h13xgPk67FdXke6NePA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

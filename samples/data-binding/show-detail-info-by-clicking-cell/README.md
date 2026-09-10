@@ -1,13 +1,13 @@
 ## 一、Demo 概述
 
-本示例展示了如何使用 SpreadJS 实现三级联动的数据展示系统。通过在主表格中选择不同的数据项，可以在第二个工作簿中展示汇总信息，点击"明细"按钮后在第三个工作簿中展示详细数据。该示例适用于需要分层展示数据的业务场景，如 GDP 数据分析、财务报表钻取等。
+本示例展示了如何使用 SpreadJS 实现三级联动的数据展示系统。通过在主表格中选择不同的数据项，可以在第二个工作簿中展示汇总信息，点击"明细"按钮后在第三个工作簿中展示详细数据。该示例适用于需要分层展示数据的业务场景，如 GDP 数据分析、财务报表钻取等。 
 
 ## 二、解决的问题
 
-- 实现多层级数据的逐级展示，用户可以从概览逐步深入到详细数据
-- 通过可视化的分组列和复选框，让用户灵活选择需要查看的数据维度
-- 在同一页面中协调多个工作簿的数据联动，避免页面跳转带来的操作割裂感
-- 支持动态数据源绑定和列配置，适应不同数据结构的展示需求
+* 实现多层级数据的逐级展示，用户可以从概览逐步深入到详细数据
+* 通过可视化的分组列和复选框，让用户灵活选择需要查看的数据维度
+* 在同一页面中协调多个工作簿的数据联动，避免页面跳转带来的操作割裂感
+* 支持动态数据源绑定和列配置，适应不同数据结构的展示需求
 
 ## 三、实现思路
 
@@ -131,9 +131,9 @@ document.getElementById('dataInfo').addEventListener("click", function () {
 
 ### 3.6 技术栈
 
-- SpreadJS 15.0.0：核心表格组件
-- TypeScript 4.1.2：开发语言
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 15.0.0：核心表格组件
+* TypeScript 4.1.2：开发语言
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -155,17 +155,17 @@ npm install
 
 ### 5.1 优点
 
-- 三级联动设计清晰，用户可以逐层深入查看数据
-- 使用分组列和复选框提供直观的交互方式
-- 支持多选和数据合并，灵活性高
-- 动态列绑定机制可适应不同数据结构
+* 三级联动设计清晰，用户可以逐层深入查看数据
+* 使用分组列和复选框提供直观的交互方式
+* 支持多选和数据合并，灵活性高
+* 动态列绑定机制可适应不同数据结构
 
 ### 5.2 局限性与扩展建议
 
-- 当前数据源是硬编码的常量，实际应用中应改为从后端 API 获取
-- 行索引判断逻辑（`if (i == 5)`）不够灵活，建议使用数据项的唯一标识符（如 ID）进行匹配
-- 可以增加加载状态提示和错误处理机制
-- 建议为第三个工作簿添加分页或虚拟滚动，以支持大数据量展示
+* 当前数据源是硬编码的常量，实际应用中应改为从后端 API 获取
+* 行索引判断逻辑（`if (i == 5)`）不够灵活，建议使用数据项的唯一标识符（如 ID）进行匹配
+* 可以增加加载状态提示和错误处理机制
+* 建议为第三个工作簿添加分页或虚拟滚动，以支持大数据量展示
 
 ## 六、关键代码片段
 
@@ -209,11 +209,15 @@ sheet3.bindColumns(colInfos);
 
 本示例展示了 SpreadJS 在多工作簿联动场景下的应用能力，开发者可以学到：
 
-- 如何使用 `outlineColumn` 实现带复选框的分组列
-- 如何通过事件监听实现多个工作簿之间的数据联动
-- 如何使用 `bindColumns` 实现自定义列配置和动态列生成
-- 如何通过 `textIndent` 实现层级缩进效果
+* 如何使用 `outlineColumn` 实现带复选框的分组列
+* 如何通过事件监听实现多个工作簿之间的数据联动
+* 如何使用 `bindColumns` 实现自定义列配置和动态列生成
+* 如何通过 `textIndent` 实现层级缩进效果
 
 该方案适用于需要分层展示数据的报表系统、数据分析平台等场景，通过合理的数据结构设计和事件处理，可以扩展为更复杂的多级钻取系统。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/ljCxJ5-PXUebp3bkl4inGg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

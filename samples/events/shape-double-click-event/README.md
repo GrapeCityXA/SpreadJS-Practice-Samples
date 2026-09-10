@@ -6,10 +6,10 @@
 
 SpreadJS 的形状对象本身不直接支持双击事件监听，开发者需要通过以下方式实现形状的交互功能：
 
-- 如何捕获工作表中形状的双击事件
-- 如何将鼠标坐标转换为工作表的行列位置
-- 如何判断点击位置是否落在某个形状的范围内
-- 如何在存在冻结行列的情况下准确定位形状
+* 如何捕获工作表中形状的双击事件
+* 如何将鼠标坐标转换为工作表的行列位置
+* 如何判断点击位置是否落在某个形状的范围内
+* 如何在存在冻结行列的情况下准确定位形状
 
 ## 三、实现思路
 
@@ -95,10 +95,10 @@ for (let i = 0; i < sheet.shapes.all().length; i++) {
 
 ### 3.5 技术栈
 
-- @grapecity/spread-sheets: 16.0.1（核心表格组件）
-- @grapecity/spread-sheets-shapes: 16.0.1（形状扩展模块）
-- TypeScript: ^4.1.2（开发语言）
-- SystemJS: ^0.19.22（模块加载器）
+* @grapecity/spread-sheets: 16.0.1（核心表格组件）
+* @grapecity/spread-sheets-shapes: 16.0.1（形状扩展模块）
+* TypeScript: ^4.1.2（开发语言）
+* SystemJS: ^0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -120,17 +120,17 @@ npm install
 
 ### 5.1 优点
 
-- 实现了形状的双击事件监听，弥补了 SpreadJS 形状对象不直接支持事件监听的不足
-- 使用 hitTest API 进行精准的坐标转换，支持冻结行列场景
-- 通过类型判断（instanceof）可以区分不同类型的形状，实现差异化处理
-- 代码逻辑清晰，易于扩展到其他交互场景（如右键菜单、拖拽等）
+* 实现了形状的双击事件监听，弥补了 SpreadJS 形状对象不直接支持事件监听的不足
+* 使用 hitTest API 进行精准的坐标转换，支持冻结行列场景
+* 通过类型判断（instanceof）可以区分不同类型的形状，实现差异化处理
+* 代码逻辑清晰，易于扩展到其他交互场景（如右键菜单、拖拽等）
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现只处理了 PictureShape 类型，如需支持其他形状类型（如 AutoShape、Connector 等），需要添加相应的类型判断
-- `getHitAreaName` 函数中的 switch 语句缺少 break，可能导致逻辑错误
-- 可以考虑将形状事件监听封装为独立的工具函数，支持注册多种事件类型（单击、双击、右键等）
-- 可以添加视觉反馈（如高亮选中的形状），提升用户体验
+* 当前实现只处理了 PictureShape 类型，如需支持其他形状类型（如 AutoShape、Connector 等），需要添加相应的类型判断
+* `getHitAreaName` 函数中的 switch 语句缺少 break，可能导致逻辑错误
+* 可以考虑将形状事件监听封装为独立的工具函数，支持注册多种事件类型（单击、双击、右键等）
+* 可以添加视觉反馈（如高亮选中的形状），提升用户体验
 
 ## 六、关键代码片段
 
@@ -162,11 +162,15 @@ if (row >= startRow && row <= endRow && col >= startColumn && col <= endColumn) 
 
 本示例展示了如何在 SpreadJS 中实现形状的双击事件监听功能，核心技术点包括原生 DOM 事件监听、hitTest API 的使用、形状范围判断等。开发者可以从中学到：
 
-- SpreadJS 的 hitTest API 使用方法
-- 形状对象的位置信息获取方式（startRow、endRow 等）
-- 如何结合原生事件和 SpreadJS API 实现自定义交互
-- 形状类型判断和遍历技巧
+* SpreadJS 的 hitTest API 使用方法
+* 形状对象的位置信息获取方式（startRow、endRow 等）
+* 如何结合原生事件和 SpreadJS API 实现自定义交互
+* 形状类型判断和遍历技巧
 
 该方案适用于需要对工作表中的形状进行交互操作的场景，如图表点击、图片编辑、流程图节点操作等，具有较好的扩展性和实用价值。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/4qPBQe9bEkygYw7A0FJ-uw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

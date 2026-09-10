@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中实现一个特殊的单元格类型，使包含公式的单元格在界面上只显示计算结果值而不显示公式本身，同时在编辑时也保持显示计算值而非公式文本。这种自定义单元格类型通过继承 `CellTypes.Base` 并重写关键方法来实现对单元格渲染和编辑行为的完全控制。
+本示例展示了如何在 SpreadJS 中实现一个特殊的单元格类型，使包含公式的单元格在界面上只显示计算结果值而不显示公式本身，同时在编辑时也保持显示计算值而非公式文本。这种自定义单元格类型通过继承 `CellTypes.Base` 并重写关键方法来实现对单元格渲染和编辑行为的完全控制。 
 
 该示例适用于需要向最终用户隐藏公式逻辑、只展示计算结果的业务场景，例如财务报表、数据看板等对公式保密性有要求的应用。
 
 ## 二、解决的问题
 
-- **公式隐藏需求**：在某些业务场景中，需要向用户展示计算结果，但不希望暴露底层的公式逻辑，避免用户看到或修改计算规则
-- **编辑器行为定制**：默认情况下，双击包含公式的单元格会在编辑器中显示公式文本（如 `=A1+B1`），本示例实现了编辑时仍显示计算值的效果
-- **单元格类型扩展**：演示了如何通过自定义 CellType 来实现复杂的单元格行为控制，为开发者提供了扩展 SpreadJS 功能的标准范式
+* **公式隐藏需求**：在某些业务场景中，需要向用户展示计算结果，但不希望暴露底层的公式逻辑，避免用户看到或修改计算规则
+* **编辑器行为定制**：默认情况下，双击包含公式的单元格会在编辑器中显示公式文本（如 `=A1+B1`），本示例实现了编辑时仍显示计算值的效果
+* **单元格类型扩展**：演示了如何通过自定义 CellType 来实现复杂的单元格行为控制，为开发者提供了扩展 SpreadJS 功能的标准范式
 
 ## 三、实现思路
 
@@ -104,9 +104,9 @@ for (var i = 0; i < sheet.getRowCount() - 1; i++) {
 
 ### 3.6 技术栈
 
-- SpreadJS 15.0.0：核心表格控件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格控件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -130,16 +130,16 @@ npm install
 
 ### 5.1 优点
 
-- **公式保密性**：有效隐藏公式逻辑，保护业务规则不被最终用户查看或修改
-- **用户体验优化**：对于不需要了解公式细节的用户，只显示结果值可以简化界面，降低理解成本
-- **灵活的扩展性**：通过自定义 CellType 的方式，可以根据业务需求灵活定制单元格的渲染和编辑行为
-- **完整的生命周期控制**：覆盖了单元格的渲染（paint）、编辑器创建（createEditorElement）、值读写（getEditorValue/setEditorValue）等完整生命周期
+* **公式保密性**：有效隐藏公式逻辑，保护业务规则不被最终用户查看或修改
+* **用户体验优化**：对于不需要了解公式细节的用户，只显示结果值可以简化界面，降低理解成本
+* **灵活的扩展性**：通过自定义 CellType 的方式，可以根据业务需求灵活定制单元格的渲染和编辑行为
+* **完整的生命周期控制**：覆盖了单元格的渲染（paint）、编辑器创建（createEditorElement）、值读写（getEditorValue/setEditorValue）等完整生命周期
 
 ### 5.2 局限性与扩展建议
 
-- **编辑限制**：当前实现中，用户在编辑器中看到的是计算值，如果用户修改该值，会导致公式丢失。如需保持公式不可编辑，可以在 `setEditorValue` 中设置 `input` 为只读状态
-- **公式可见性**：虽然界面上隐藏了公式，但通过 `getFormula` API 仍可获取公式内容。如需更强的保护，可以结合权限控制或数据加密方案
-- **扩展方向**：可以进一步扩展该 CellType，例如添加自定义的格式化逻辑、验证规则、或者实现更复杂的编辑器交互
+* **编辑限制**：当前实现中，用户在编辑器中看到的是计算值，如果用户修改该值，会导致公式丢失。如需保持公式不可编辑，可以在 `setEditorValue` 中设置 `input` 为只读状态
+* **公式可见性**：虽然界面上隐藏了公式，但通过 `getFormula` API 仍可获取公式内容。如需更强的保护，可以结合权限控制或数据加密方案
+* **扩展方向**：可以进一步扩展该 CellType，例如添加自定义的格式化逻辑、验证规则、或者实现更复杂的编辑器交互
 
 ## 六、关键代码片段
 
@@ -166,6 +166,8 @@ ShowValueCellType.prototype.setEditorValue = function(editorContext, value, cell
 
 这
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Formula%20cell%20does%20not%20display%20formula%20and%20cannot%20be%20changed.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/k2zy0yUf702saxtBCJ6mgw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

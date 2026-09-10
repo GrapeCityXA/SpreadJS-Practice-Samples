@@ -170,4 +170,8 @@ $("#saveExcel").click(function () {
 
 该方案适用于需要整合多个 Excel 文件的数据汇总场景，具有良好的扩展性，可以根据实际需求添加更多的数据处理和校验逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/dAcMDQByDk2xYVj6vIoMNw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

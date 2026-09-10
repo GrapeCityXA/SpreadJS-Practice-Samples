@@ -7,9 +7,10 @@
 ## 二、解决的问题
 
 在实际业务中，常常需要对表格数据进行区间筛选，例如：
-- 筛选销售额在 10000-50000 之间的订单
-- 筛选年龄在 25-40 岁之间的员工
-- 筛选成绩在 60-90 分之间的学生
+
+* 筛选销售额在 10000-50000 之间的订单
+* 筛选年龄在 25-40 岁之间的员工
+* 筛选成绩在 60-90 分之间的学生
 
 传统的单一条件筛选无法满足这种需求，本示例通过组合多个条件（大于某值且小于某值），实现了灵活的数字区间筛选功能。
 
@@ -80,9 +81,9 @@ tableFilter.filter(2);
 
 ### 3.4 技术栈
 
-- `@grapecity/spread-sheets` 17.0.8：SpreadJS 核心库
-- `systemjs` ^0.19.22：模块加载器
-- `systemjs-plugin-babel` 0.0.25：ES6 转译插件
+* `@grapecity/spread-sheets` 17.0.8：SpreadJS 核心库
+* `systemjs` ^0.19.22：模块加载器
+* `systemjs-plugin-babel` 0.0.25：ES6 转译插件
 
 ## 四、使用说明
 
@@ -109,18 +110,18 @@ npm install
 
 ### 5.1 优点
 
-- **灵活的条件组合**：通过 `relationCondition` 和逻辑运算符，可以构建任意复杂的筛选条件
-- **代码简洁清晰**：API 设计符合直觉，条件嵌套结构清晰易懂
-- **易于扩展**：可以进一步组合更多条件（如 OR 关系、多层嵌套等）
+* **灵活的条件组合**：通过 `relationCondition` 和逻辑运算符，可以构建任意复杂的筛选条件
+* **代码简洁清晰**：API 设计符合直觉，条件嵌套结构清晰易懂
+* **易于扩展**：可以进一步组合更多条件（如 OR 关系、多层嵌套等）
 
 ### 5.2 局限性与扩展建议
 
-- **UI 交互限制**：当前示例通过按钮触发固定的筛选条件，实际应用中可以结合输入框，让用户自定义区间范围
-- **扩展方向**：
-  - 添加输入框，支持动态设置筛选区间的上下限
-  - 支持多列组合筛选（例如同时筛选 Age 和 Grade）
-  - 添加"清除筛选"按钮，恢复表格原始状态
-  - 支持 OR 逻辑，例如"Age < 25 或 Age > 40"
+* **UI 交互限制**：当前示例通过按钮触发固定的筛选条件，实际应用中可以结合输入框，让用户自定义区间范围
+* **扩展方向**：
+    * 添加输入框，支持动态设置筛选区间的上下限
+    * 支持多列组合筛选（例如同时筛选 Age 和 Grade）
+    * 添加"清除筛选"按钮，恢复表格原始状态
+    * 支持 OR 逻辑，例如"Age < 25 或 Age > 40"
 
 ## 六、关键代码片段
 
@@ -155,4 +156,8 @@ sheet.setColumnWidth(2, 400)
 
 该方案适用于所有需要数字区间筛选的业务场景。开发者可以基于此示例扩展出更丰富的筛选功能，例如支持日期区间、文本模糊匹配、多条件组合等。通过合理组合 SpreadJS 提供的条件类型和逻辑运算符，可以实现几乎任意复杂度的数据筛选需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/2wvDbZ3Yvk6d7SISXCY85w/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -1,3 +1,5 @@
+# resolve-the-problem-of-full-screen-popup-disappear
+
 ### 问题：解决全屏模式下部分弹窗不生效问题
 
 ***
@@ -42,4 +44,8 @@ let designer = new GC.Spread.Sheets.Designer.Designer(host)
 
 这样设置后，直接使用iframe元素做全屏，可以用最简单的方式实现全屏的效果。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/uLIKziL3Kky5hrouglD9EQ/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

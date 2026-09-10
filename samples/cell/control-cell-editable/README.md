@@ -1,3 +1,5 @@
+# control-cell-editable
+
 # 实现单元格编辑可控
 
 ### 问题：如何用自定义单元格实现编辑可控
@@ -6,7 +8,7 @@
 
 #### 背景
 
-在某些情况下，用户需要通过按钮实现某个单元格是否可编辑（每一个单元格都有对应的一个按钮来控制这个单元格是否可编辑）。
+在某些情况下，用户需要通过按钮实现某个单元格是否可编辑（每一个单元格都有对应的一个按钮来控制这个单元格是否可编辑）。 
 当用户点击按钮后，单元格变为可编辑状态，按钮变成另一个样式作为提示。之后用户在编辑完成之后再次点击按钮，单元格变为不可编辑状态。
 
 #### 实现思路
@@ -151,4 +153,8 @@ sheet.setColumnWidth(0, 100)
 默认加载后单元格不可编辑，按钮为“×”。点击按钮后单元格可编辑，按钮变为“√”。
 ![image](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/image-20260309.ec5c68.png?width=250)
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/NKvOwq3wNEm0zOZkbXxPhQ/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

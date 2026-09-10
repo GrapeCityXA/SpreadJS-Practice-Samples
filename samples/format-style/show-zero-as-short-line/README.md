@@ -76,4 +76,8 @@ sheet.setArray(0, 0, [0, 2, 0, 4, 0]);
 
 该方案适用于各种需要自定义数值显示的场景，如财务报表、数据统计表、考勤表等。通过扩展格式字符串，还可以实现更复杂的显示需求，如千分位分隔符、货币符号、百分比等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/EIeQODoGLUSXAS6jGJLyAg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

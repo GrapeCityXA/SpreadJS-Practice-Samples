@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- 数据录入规范性：确保用户在特定列中只能输入符合要求的数据类型（如数值列只能输入数字）
-- 错误数据可视化：通过高亮显示的方式，让用户直观地看到哪些单元格的数据不符合规则
-- 灵活的校验逻辑：支持开发者根据业务需求自定义复杂的校验条件，不局限于 SpreadJS 内置的校验类型
+* 数据录入规范性：确保用户在特定列中只能输入符合要求的数据类型（如数值列只能输入数字）
+* 错误数据可视化：通过高亮显示的方式，让用户直观地看到哪些单元格的数据不符合规则
+* 灵活的校验逻辑：支持开发者根据业务需求自定义复杂的校验条件，不局限于 SpreadJS 内置的校验类型
 
 ## 三、实现思路
 
@@ -34,10 +34,11 @@ CustomerCondition.prototype.evaluate = function (evaluator, baseRow, baseColumn,
 ```
 
 `evaluate` 方法接收四个参数：
-- `evaluator`：计算器对象
-- `baseRow`：基准行索引
-- `baseColumn`：基准列索引
-- `actualValue`：待校验的单元格值
+
+* `evaluator`：计算器对象
+* `baseRow`：基准行索引
+* `baseColumn`：基准列索引
+* `actualValue`：待校验的单元格值
 
 返回 `true` 表示数据有效，返回 `false` 表示数据无效。
 
@@ -60,15 +61,16 @@ sheet.setDataValidator(-1, 1, validator1);
 ```
 
 关键配置：
-- `highlightInvalidData`：启用无效数据高亮显示
-- `ignoreBlank(false)`：空白单元格也会被校验
-- `setDataValidator(-1, 1, validator1)`：第一个参数 `-1` 表示应用到整列
+
+* `highlightInvalidData`：启用无效数据高亮显示
+* `ignoreBlank(false)`：空白单元格也会被校验
+* `setDataValidator(-1, 1, validator1)`：第一个参数 `-1` 表示应用到整列
 
 ### 3.3 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件
-- TypeScript 4.1.2：开发语言
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 15.0.0：核心电子表格组件
+* TypeScript 4.1.2：开发语言
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -91,16 +93,16 @@ npm install
 
 ### 5.1 优点
 
-- 灵活性高：通过继承 `Condition` 类，可以实现任意复杂的校验逻辑
-- 实时反馈：用户输入后立即显示校验结果，无需额外操作
-- 视觉直观：通过红色圈选标记，用户可以快速定位错误数据
-- 易于扩展：可以为不同列设置不同的校验规则
+* 灵活性高：通过继承 `Condition` 类，可以实现任意复杂的校验逻辑
+* 实时反馈：用户输入后立即显示校验结果，无需额外操作
+* 视觉直观：通过红色圈选标记，用户可以快速定位错误数据
+* 易于扩展：可以为不同列设置不同的校验规则
 
 ### 5.2 局限性与扩展建议
 
-- 当前示例只实现了数字类型校验，可以扩展为更复杂的规则（如日期格式、正则表达式匹配等）
-- 可以添加自定义错误提示信息，在用户输入无效数据时显示具体的错误原因
-- 可以结合 `InputMessage` 和 `ErrorMessage` 提供更友好的用户提示
+* 当前示例只实现了数字类型校验，可以扩展为更复杂的规则（如日期格式、正则表达式匹配等）
+* 可以添加自定义错误提示信息，在用户输入无效数据时显示具体的错误原因
+* 可以结合 `InputMessage` 和 `ErrorMessage` 提供更友好的用户提示
 
 ## 六、关键代码片段
 
@@ -150,4 +152,8 @@ function initSpread(spread, data) {
 
 该方案适用于需要对用户输入进行严格控制的场景，通过自定义校验逻辑，可以满足各种复杂的业务需求。开发者可以在此基础上扩展更多校验规则，如日期范围校验、字符串长度限制、正则表达式匹配等，构建更加健壮的数据录入系统。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/1wD6aLJulEGppT5KEvdK6A/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

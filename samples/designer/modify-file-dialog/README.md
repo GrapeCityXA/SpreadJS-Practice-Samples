@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **自定义保存逻辑**：默认的 Designer 文件菜单不包含自定义保存选项，本示例展示如何添加自定义菜单项并实现自定义保存逻辑
-- **菜单扩展机制**：演示如何通过模板注册机制扩展 Designer 的内置菜单
-- **事件拦截与处理**：展示如何拦截文件菜单的属性变化事件，实现自定义业务逻辑
+* **自定义保存逻辑**：默认的 Designer 文件菜单不包含自定义保存选项，本示例展示如何添加自定义菜单项并实现自定义保存逻辑
+* **菜单扩展机制**：演示如何通过模板注册机制扩展 Designer 的内置菜单
+* **事件拦截与处理**：展示如何拦截文件菜单的属性变化事件，实现自定义业务逻辑
 
 ## 三、实现思路
 
@@ -34,9 +34,10 @@ fileMenu.content[0].children[0].children[0].children[0].children.push({
 ```
 
 关键点：
-- `bindingPath: "saveServer"` 定义了该菜单项的唯一标识符，用于后续事件处理
-- `type: 'List'` 指定组件类型为列表项
-- 通过 `push()` 方法将新菜单项添加到现有菜单结构中
+
+* `bindingPath: "saveServer"` 定义了该菜单项的唯一标识符，用于后续事件处理
+* `type: 'List'` 指定组件类型为列表项
+* 通过 `push()` 方法将新菜单项添加到现有菜单结构中
 
 ### 3.2 注册修改后的模板
 
@@ -71,16 +72,17 @@ GC.Spread.Sheets.Designer.FileMenuHandler.processPropertyChanged = function(cont
 ```
 
 关键点：
-- 保存原始的 `processPropertyChanged` 方法引用，确保其他菜单项的功能不受影响
-- 通过 `propertyName` 参数判断是哪个菜单项被点击
-- 对于自定义菜单项，执行自定义逻辑；对于其他菜单项，调用原始方法
+
+* 保存原始的 `processPropertyChanged` 方法引用，确保其他菜单项的功能不受影响
+* 通过 `propertyName` 参数判断是哪个菜单项被点击
+* 对于自定义菜单项，执行自定义逻辑；对于其他菜单项，调用原始方法
 
 ### 3.4 技术栈
 
-- SpreadJS Designer 16.1.4
-- SpreadJS Core 16.1.4
-- TypeScript 4.1.2
-- SystemJS 0.19.22（模块加载器）
+* SpreadJS Designer 16.1.4
+* SpreadJS Core 16.1.4
+* TypeScript 4.1.2
+* SystemJS 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -103,15 +105,15 @@ npm install
 
 ### 5.1 优点
 
-- **无侵入式扩展**：通过模板注册机制扩展菜单，不影响 Designer 的其他功能
-- **灵活的事件处理**：可以根据 `bindingPath` 区分不同的自定义菜单项
-- **易于集成**：可以方便地集成到现有的 SpreadJS Designer 应用中
+* **无侵入式扩展**：通过模板注册机制扩展菜单，不影响 Designer 的其他功能
+* **灵活的事件处理**：可以根据 `bindingPath` 区分不同的自定义菜单项
+* **易于集成**：可以方便地集成到现有的 SpreadJS Designer 应用中
 
 ### 5.2 扩展建议
 
-- 将 `alert()` 替换为实际的保存逻辑，如调用 RESTful API 将工作簿数据保存到服务器
-- 可以添加加载状态提示，提升用户体验
-- 可以结合 SpreadJS 的序列化 API（如 `toJSON()`）获取工作簿数据进行保存
+* 将 `alert()` 替换为实际的保存逻辑，如调用 RESTful API 将工作簿数据保存到服务器
+* 可以添加加载状态提示，提升用户体验
+* 可以结合 SpreadJS 的序列化 API（如 `toJSON()`）获取工作簿数据进行保存
 
 ## 六、关键代码片段
 
@@ -148,11 +150,15 @@ TemplateListComponent.prototype.onMounted = function (host) {
 
 本示例展示了 SpreadJS Designer 的菜单扩展能力，开发者可以学到：
 
-- 如何获取和修改 Designer 的内置模板
-- 如何注册自定义菜单项
-- 如何拦截和处理菜单事件
-- 如何创建自定义 Designer 组件
+* 如何获取和修改 Designer 的内置模板
+* 如何注册自定义菜单项
+* 如何拦截和处理菜单事件
+* 如何创建自定义 Designer 组件
 
 该方案适用于需要自定义文件操作流程的场景，具有良好的扩展性。开发者可以基于此方案实现更复杂的自定义菜单功能，如添加多级菜单、图标、快捷键等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/w7-8lwkDA066we2yL3yYoQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

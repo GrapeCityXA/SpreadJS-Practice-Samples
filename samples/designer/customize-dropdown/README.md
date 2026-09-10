@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- 扩展设计器默认功能：SpreadJS Designer 提供了丰富的内置功能，但在实际业务场景中，开发者往往需要添加自定义的业务逻辑和操作入口
-- 提供多层级菜单结构：通过下拉框组织相关功能，避免 Ribbon 菜单过于拥挤，提升用户体验
-- 实现两种下拉交互模式：满足不同的业务需求，既可以通过子命令实现功能分组，也可以通过选项列表实现参数选择
+* 扩展设计器默认功能：SpreadJS Designer 提供了丰富的内置功能，但在实际业务场景中，开发者往往需要添加自定义的业务逻辑和操作入口
+* 提供多层级菜单结构：通过下拉框组织相关功能，避免 Ribbon 菜单过于拥挤，提升用户体验
+* 实现两种下拉交互模式：满足不同的业务需求，既可以通过子命令实现功能分组，也可以通过选项列表实现参数选择
 
 ## 三、实现思路
 
@@ -127,10 +127,10 @@ config.ribbon.push({
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件
-- SpreadJS Designer 15.0.0：设计器组件
-- SystemJS 0.19.20：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心电子表格组件
+* SpreadJS Designer 15.0.0：设计器组件
+* SystemJS 0.19.20：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -156,19 +156,19 @@ npm install
 
 ### 5.1 优点
 
-- 灵活的扩展机制：通过配置对象即可实现自定义命令，无需修改设计器源码
-- 两种下拉模式：`children` 适合功能分组，`dropdownList` 适合参数选择，满足不同业务需求
-- 支持分组列表：`dropdownList` 支持 `groupName` 和 `groupItems`，可以实现更复杂的选项组织
-- 易于维护：命令定义和 Ribbon 配置分离，代码结构清晰
+* 灵活的扩展机制：通过配置对象即可实现自定义命令，无需修改设计器源码
+* 两种下拉模式：`children` 适合功能分组，`dropdownList` 适合参数选择，满足不同业务需求
+* 支持分组列表：`dropdownList` 支持 `groupName` 和 `groupItems`，可以实现更复杂的选项组织
+* 易于维护：命令定义和 Ribbon 配置分离，代码结构清晰
 
 ### 5.2 局限性与扩展建议
 
-- 图标样式简单：示例中使用了简单的 CSS 类名，实际项目中建议使用图标字体或 SVG
-- 命令执行逻辑简单：示例中仅使用 `alert` 演示，实际应用中可以调用复杂的业务逻辑
-- 扩展建议：
-  - 可以通过 `context` 参数获取当前设计器和工作簿实例，实现更复杂的操作
-  - 可以动态修改 `dropdownList`，实现根据上下文变化的选项列表
-  - 可以结合自定义对话框，提供更丰富的用户交互
+* 图标样式简单：示例中使用了简单的 CSS 类名，实际项目中建议使用图标字体或 SVG
+* 命令执行逻辑简单：示例中仅使用 `alert` 演示，实际应用中可以调用复杂的业务逻辑
+* 扩展建议：
+    * 可以通过 `context` 参数获取当前设计器和工作簿实例，实现更复杂的操作
+    * 可以动态修改 `dropdownList`，实现根据上下文变化的选项列表
+    * 可以结合自定义对话框，提供更丰富的用户交互
 
 ## 六、关键代码片段
 
@@ -179,8 +179,8 @@ npm install
 // 区别就是字面意思，children是添加子命令，dropdownList是给当前命令添加可选择项
 ```
 
-- `children` 方式：每个子项都是独立的命令，有自己的 `execute` 函数
-- `dropdownList` 方式：所有选项共享父命令的 `execute` 函数，通过 `propertyName` 参数区分选择的值
+* `children` 方式：每个子项都是独立的命令，有自己的 `execute` 函数
+* `dropdownList` 方式：所有选项共享父命令的 `execute` 函数，通过 `propertyName` 参数区分选择的值
 
 ### 6.2 初始化设计器
 
@@ -196,11 +196,15 @@ sheet.setValue(0,0,'grapecity')
 
 本示例展示了 SpreadJS Designer 自定义菜单的核心技术，开发者可以学到：
 
-- 如何通过 `commandMap` 注册自定义命令
-- 如何使用 `children` 和 `dropdownList` 两种方式实现下拉框
-- 如何将自定义命令添加到 Ribbon 菜单的按钮组中
-- 如何创建全新的 Ribbon Tab 页
+* 如何通过 `commandMap` 注册自定义命令
+* 如何使用 `children` 和 `dropdownList` 两种方式实现下拉框
+* 如何将自定义命令添加到 Ribbon 菜单的按钮组中
+* 如何创建全新的 Ribbon Tab 页
 
 该方案适用于需要在设计器中集成自定义业务功能的场景，通过配置化的方式实现了良好的扩展性。开发者可以基于此示例，结合实际业务需求，添加更多自定义命令和交互逻辑，打造符合特定业务场景的电子表格应用。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/PateTA6ybkei6Kj8kQ8Euw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

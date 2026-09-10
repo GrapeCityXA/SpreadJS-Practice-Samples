@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- 默认右键菜单只能一次插入一行，当需要批量插入多行时操作繁琐
-- 提供自定义输入框，让用户可以指定插入的行数，提高操作效率
-- 演示如何扩展 SpreadJS 的右键菜单系统，添加自定义 UI 元素和命令
+* 默认右键菜单只能一次插入一行，当需要批量插入多行时操作繁琐
+* 提供自定义输入框，让用户可以指定插入的行数，提高操作效率
+* 演示如何扩展 SpreadJS 的右键菜单系统，添加自定义 UI 元素和命令
 
 ## 三、实现思路
 
@@ -28,8 +28,9 @@ spread.contextMenu.onOpenMenu = function (menuData, itemsDataForShown, hitInfo, 
 ```
 
 关键点：
-- `visibleContext: "ClickRowHeader"` 确保菜单项仅在点击行标题时显示
-- 保留原有的 `oldOpenMenu` 调用，确保不破坏默认菜单功能
+
+* `visibleContext: "ClickRowHeader"` 确保菜单项仅在点击行标题时显示
+* 保留原有的 `oldOpenMenu` 调用，确保不破坏默认菜单功能
 
 ### 3.2 注册自定义命令
 
@@ -61,9 +62,10 @@ commandManager.register("insertMutiRows", insertRowsByCounts, null, false, false
 ```
 
 技术要点：
-- 使用 `startTransaction` 和 `endTransaction` 包裹操作，支持撤销功能
-- `suspendPaint` 和 `resumePaint` 优化批量插入时的渲染性能
-- `addRows` 方法接收起始行索引和插入行数
+
+* 使用 `startTransaction` 和 `endTransaction` 包裹操作，支持撤销功能
+* `suspendPaint` 和 `resumePaint` 优化批量插入时的渲染性能
+* `addRows` 方法接收起始行索引和插入行数
 
 ### 3.3 自定义菜单项 UI
 
@@ -129,9 +131,10 @@ function createInput() {
 ```
 
 关键实现：
-- `gcUIElement` 属性标识该元素属于 SpreadJS 的 UI 系统
-- `stopPropagation` 防止点击输入框时关闭菜单
-- 回车键触发命令执行并手动关闭菜单
+
+* `gcUIElement` 属性标识该元素属于 SpreadJS 的 UI 系统
+* `stopPropagation` 防止点击输入框时关闭菜单
+* 回车键触发命令执行并手动关闭菜单
 
 ### 3.4 获取命令参数
 
@@ -152,9 +155,9 @@ spread.contextMenu.menuView.getCommandOptions = function (menuItemData, host, ev
 
 ### 3.5 技术栈
 
-- SpreadJS v16.0.1：核心表格控件
-- SystemJS v0.19.22：模块加载器
-- TypeScript v4.1.2：开发语言支持
+* SpreadJS v16.0.1：核心表格控件
+* SystemJS v0.19.22：模块加载器
+* TypeScript v4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -179,17 +182,17 @@ npm install
 
 ### 5.1 优点
 
-- 支持批量插入多行，提高操作效率
-- 自定义 UI 元素集成到原生右键菜单，用户体验流畅
-- 支持撤销/重做功能，操作可逆
-- 使用 `suspendPaint` 和 `resumePaint` 优化性能
+* 支持批量插入多行，提高操作效率
+* 自定义 UI 元素集成到原生右键菜单，用户体验流畅
+* 支持撤销/重做功能，操作可逆
+* 使用 `suspendPaint` 和 `resumePaint` 优化性能
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现仅支持插入行，可扩展为同时支持插入列
-- 输入框未做数字校验，可添加输入限制（只允许正整数）
-- 可以添加快捷键支持，进一步提升操作效率
-- 可以将输入框改为下拉选择框，提供常用行数选项
+* 当前实现仅支持插入行，可扩展为同时支持插入列
+* 输入框未做数字校验，可添加输入限制（只允许正整数）
+* 可以添加快捷键支持，进一步提升操作效率
+* 可以将输入框改为下拉选择框，提供常用行数选项
 
 ## 六、关键代码片段
 
@@ -210,12 +213,16 @@ spread.commandManager().execute({
 
 本示例展示了 SpreadJS 右键菜单系统的高度可扩展性，开发者可以学到：
 
-- 如何扩展 SpreadJS 的右键菜单，添加自定义菜单项
-- 如何注册自定义命令并实现撤销/重做功能
-- 如何在菜单项中嵌入自定义 UI 元素（输入框、按钮等）
-- 如何处理菜单事件和命令参数传递
-- 如何优化批量操作的渲染性能
+* 如何扩展 SpreadJS 的右键菜单，添加自定义菜单项
+* 如何注册自定义命令并实现撤销/重做功能
+* 如何在菜单项中嵌入自定义 UI 元素（输入框、按钮等）
+* 如何处理菜单事件和命令参数传递
+* 如何优化批量操作的渲染性能
 
 该方案适用于需要自定义表格操作菜单的场景，可以根据业务需求灵活扩展，实现更复杂的交互功能。通过类似的方式，开发者可以添加更多自定义菜单项，如批量删除、批量格式化等功能。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/IS943q_7gku_uKolG6kNGA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

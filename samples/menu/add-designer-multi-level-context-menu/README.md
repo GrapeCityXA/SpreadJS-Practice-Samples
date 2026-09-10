@@ -6,10 +6,10 @@
 
 ## 二、解决的问题
 
-- **扩展设计器菜单功能**：SpreadJS Designer 默认提供的右键菜单可能无法满足特定业务需求，需要添加自定义菜单项
-- **实现多层级菜单结构**：业务场景中常需要将相关功能分组展示，通过二级、三级菜单提升用户体验
-- **解决原生限制**：SpreadJS 本身不支持三级菜单，直接配置会导致二级菜单项在鼠标悬停时出现重复高亮的视觉问题
-- **菜单显示控制**：需要在特定上下文（如点击视口区域）时才显示自定义菜单
+* **扩展设计器菜单功能**：SpreadJS Designer 默认提供的右键菜单可能无法满足特定业务需求，需要添加自定义菜单项
+* **实现多层级菜单结构**：业务场景中常需要将相关功能分组展示，通过二级、三级菜单提升用户体验
+* **解决原生限制**：SpreadJS 本身不支持三级菜单，直接配置会导致二级菜单项在鼠标悬停时出现重复高亮的视觉问题
+* **菜单显示控制**：需要在特定上下文（如点击视口区域）时才显示自定义菜单
 
 ## 三、实现思路
 
@@ -111,4 +111,8 @@ spread.contextMenu.menuData = menuData
 
 注
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/5KEGKw2ppUyiGcJjUd3WEQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

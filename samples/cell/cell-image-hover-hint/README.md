@@ -1,13 +1,13 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中实现自定义单元格类型，在单元格中显示图标，并在鼠标悬停时显示动态提示信息。该示例实现了两种自定义单元格类型：一种是在单元格右侧显示单个警告图标，另一种是显示多个图标并支持鼠标悬停时显示对应图标的详细信息。
+本示例展示了如何在 SpreadJS 中实现自定义单元格类型，在单元格中显示图标，并在鼠标悬停时显示动态提示信息。该示例实现了两种自定义单元格类型：一种是在单元格右侧显示单个警告图标，另一种是显示多个图标并支持鼠标悬停时显示对应图标的详细信息。 
 
 ## 二、解决的问题
 
-- 在单元格中嵌入图标，提供视觉化的状态提示
-- 实现鼠标悬停时的动态提示框，增强用户交互体验
-- 支持单元格内多个图标的独立交互，每个图标可显示不同的提示信息
-- 提供可扩展的自定义单元格类型实现方案
+* 在单元格中嵌入图标，提供视觉化的状态提示
+* 实现鼠标悬停时的动态提示框，增强用户交互体验
+* 支持单元格内多个图标的独立交互，每个图标可显示不同的提示信息
+* 提供可扩展的自定义单元格类型实现方案
 
 ## 三、实现思路
 
@@ -147,10 +147,10 @@ sheet.getCell(2, 1).cellType(new IconCellType(img, 3, ["First", "Second", "Third
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0 - 核心表格组件
-- jQuery 3.6.1 - DOM 操作和动画效果
-- TypeScript 4.1.2 - 类型支持
-- SystemJS - 模块加载器
+* SpreadJS 15.0.0 - 核心表格组件
+* jQuery 3.6.1 - DOM 操作和动画效果
+* TypeScript 4.1.2 - 类型支持
+* SystemJS - 模块加载器
 
 ## 四、使用说明
 
@@ -175,17 +175,17 @@ npm install
 
 ### 5.1 优点
 
-- 实现了灵活的自定义单元格类型扩展机制
-- 支持单元格内多个交互元素的独立响应
-- 提示框样式可自定义，支持动画效果
-- 图标使用 Base64 编码，无需额外的图片资源请求
+* 实现了灵活的自定义单元格类型扩展机制
+* 支持单元格内多个交互元素的独立响应
+* 提示框样式可自定义，支持动画效果
+* 图标使用 Base64 编码，无需额外的图片资源请求
 
 ### 5.2 局限性与扩展建议
 
-- 当前提示框位置固定在鼠标右下方，可能在边界位置显示不全，建议增加边界检测和自动调整位置的逻辑
-- 图标大小与单元格高度绑定，可以扩展为支持自定义图标尺寸
-- 可以进一步扩展为支持不同类型的图标（如不同颜色、形状）
-- 提示框内容目前为纯文本，可以扩展为支持 HTML 富文本内容
+* 当前提示框位置固定在鼠标右下方，可能在边界位置显示不全，建议增加边界检测和自动调整位置的逻辑
+* 图标大小与单元格高度绑定，可以扩展为支持自定义图标尺寸
+* 可以进一步扩展为支持不同类型的图标（如不同颜色、形状）
+* 提示框内容目前为纯文本，可以扩展为支持 HTML 富文本内容
 
 ## 六、总结
 
@@ -193,10 +193,14 @@ npm install
 
 开发者可以从中学到：
 
-- 如何创建自定义单元格类型
-- 如何使用 Canvas API 在单元格中绘制自定义内容
-- 如何实现鼠标交互和位置检测
-- 如何动态创建和管理 DOM 元素作为提示框
-- 如何处理图片加载和单元格重绘
+* 如何创建自定义单元格类型
+* 如何使用 Canvas API 在单元格中绘制自定义内容
+* 如何实现鼠标交互和位置检测
+* 如何动态创建和管理 DOM 元素作为提示框
+* 如何处理图片加载和单元格重绘
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/_zKG9Gf8zUmvdeiPNKjljQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

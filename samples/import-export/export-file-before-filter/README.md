@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例演示了如何在 SpreadJS 中导出包含筛选条件的工作簿时，保留筛选前的原始数据。在实际应用中，用户可能对表格数据应用了筛选条件，但在导出 Excel 文件时希望导出完整的原始数据而非筛选后的结果。该示例通过创建工作簿副本并重置筛选条件的方式，实现了导出原始数据的功能。
+本示例演示了如何在 SpreadJS 中导出包含筛选条件的工作簿时，保留筛选前的原始数据。在实际应用中，用户可能对表格数据应用了筛选条件，但在导出 Excel 文件时希望导出完整的原始数据而非筛选后的结果。该示例通过创建工作簿副本并重置筛选条件的方式，实现了导出原始数据的功能。 
 
 ## 二、解决的问题
 
 在使用 SpreadJS 进行数据展示和导出时，经常会遇到以下场景：
 
-- 用户在界面上对数据应用了行筛选，只显示符合条件的数据行
-- 导出 Excel 文件时，希望导出完整的原始数据，而不是筛选后的部分数据
-- 需要保持界面上的筛选状态不变，同时导出未筛选的完整数据
+* 用户在界面上对数据应用了行筛选，只显示符合条件的数据行
+* 导出 Excel 文件时，希望导出完整的原始数据，而不是筛选后的部分数据
+* 需要保持界面上的筛选状态不变，同时导出未筛选的完整数据
 
 该示例提供了一种优雅的解决方案，通过副本机制避免影响当前界面状态，确保导出的文件包含所有原始数据。
 
@@ -60,11 +60,11 @@ tempSpread.export(function (blob) {
 
 ### 3.4 技术栈
 
-- SpreadJS 16.2.0：核心表格组件
-- @grapecity/spread-sheets-io 16.2.0：提供 Excel 导入导出功能
-- @grapecity/spread-sheets-resources-zh 16.2.0：中文资源包
-- FileSaver.js 2.0.0：实现浏览器端文件下载
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 16.2.0：核心表格组件
+* @grapecity/spread-sheets-io 16.2.0：提供 Excel 导入导出功能
+* @grapecity/spread-sheets-resources-zh 16.2.0：中文资源包
+* FileSaver.js 2.0.0：实现浏览器端文件下载
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -89,16 +89,16 @@ npm install
 
 ### 5.1 优点
 
-- 不影响界面状态：通过副本机制，导出操作不会改变用户当前的筛选视图
-- 数据完整性：确保导出的 Excel 文件包含所有原始数据
-- 实现简洁：代码逻辑清晰，易于理解和维护
-- 通用性强：适用于包含多个工作表的复杂工作簿场景
+* 不影响界面状态：通过副本机制，导出操作不会改变用户当前的筛选视图
+* 数据完整性：确保导出的 Excel 文件包含所有原始数据
+* 实现简洁：代码逻辑清晰，易于理解和维护
+* 通用性强：适用于包含多个工作表的复杂工作簿场景
 
 ### 5.2 扩展建议
 
-- 可以添加导出选项，让用户选择导出筛选后的数据还是原始数据
-- 可以在导出前添加确认对话框，提示用户导出的是完整数据
-- 可以扩展为导出其他格式（如 CSV、PDF）的功能
+* 可以添加导出选项，让用户选择导出筛选后的数据还是原始数据
+* 可以在导出前添加确认对话框，提示用户导出的是完整数据
+* 可以扩展为导出其他格式（如 CSV、PDF）的功能
 
 ## 六、关键代码片段
 
@@ -151,14 +151,16 @@ document.getElementById("exportFile").onclick = function(){
 
 开发者可以从中学到：
 
-- 使用 `toJSON()` 和 `fromJSON()` 创建工作簿副本的技巧
-- 如何遍历和操作多个工作表
-- 行筛选器的重置方法 `rowFilter.reset()`
-- SpreadJS 的导出 API 使用方式
-- 副本机制在保持界面状态不变的场景中的应用
+* 使用 `toJSON()` 和 `fromJSON()` 创建工作簿副本的技巧
+* 如何遍历和操作多个工作表
+* 行筛选器的重置方法 `rowFilter.reset()`
+* SpreadJS 的导出 API 使用方式
+* 副本机制在保持界面状态不变的场景中的应用
 
 该方案适用于需要在保持用户界面筛选状态的同时导出完整数据的场景，具有良好的扩展性，可以根据实际需求添加更多导出选项和格式支持。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/SpreadJS%20exports%20files%20before%20filtering.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/1qbxFdYzxkKIa_nD1k8nCw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **自定义操作的可撤销性**：在实际业务中，用户经常需要执行自定义的批量操作，但这些操作如果不能撤销，会给用户带来困扰。本示例展示了如何让自定义操作支持撤销和重做。
-- **命令的统一管理**：通过 CommandManager 注册自定义命令，可以将自定义操作与 SpreadJS 内置命令统一管理，支持快捷键绑定和程序化调用。
-- **单元格保护与操作限制**：示例中展示了如何在保护工作表的情况下，只允许对未锁定的单元格执行操作，确保数据安全。
+* **自定义操作的可撤销性**：在实际业务中，用户经常需要执行自定义的批量操作，但这些操作如果不能撤销，会给用户带来困扰。本示例展示了如何让自定义操作支持撤销和重做。
+* **命令的统一管理**：通过 CommandManager 注册自定义命令，可以将自定义操作与 SpreadJS 内置命令统一管理，支持快捷键绑定和程序化调用。
+* **单元格保护与操作限制**：示例中展示了如何在保护工作表的情况下，只允许对未锁定的单元格执行操作，确保数据安全。
 
 ## 三、实现思路
 
@@ -59,10 +59,11 @@ spread.commandManager().register("fillNow", {
 ```
 
 关键点说明：
-- `canUndo: true`：声明该命令支持撤销
-- `isUndo` 参数：用于区分是正常执行还是撤销操作
-- `startTransaction` 和 `endTransaction`：通过事务机制包裹操作，确保操作可以被正确记录到撤销栈中
-- `undoTransaction`：在撤销时调用，自动恢复到操作前的状态
+
+* `canUndo: true`：声明该命令支持撤销
+* `isUndo` 参数：用于区分是正常执行还是撤销操作
+* `startTransaction` 和 `endTransaction`：通过事务机制包裹操作，确保操作可以被正确记录到撤销栈中
+* `undoTransaction`：在撤销时调用，自动恢复到操作前的状态
 
 ### 3.3 设置快捷键
 
@@ -138,10 +139,10 @@ if (!cell.locked()) {
 
 ### 3.7 技术栈
 
-- SpreadJS 15.0.0：核心表格控件
-- jQuery 3.1.1：用于 DOM 操作和事件绑定
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言（编译为 JavaScript）
+* SpreadJS 15.0.0：核心表格控件
+* jQuery 3.1.1：用于 DOM 操作和事件绑定
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言（编译为 JavaScript）
 
 ## 四、使用说明
 
@@ -168,19 +169,19 @@ npm install
 
 ### 5.1 优点
 
-- **完整的撤销/重做支持**：自定义命令通过事务机制完美集成到 SpreadJS 的撤销栈中，用户体验与内置命令一致
-- **灵活的命令调用方式**：支持快捷键、按钮点击、程序化调用等多种方式触发命令
-- **安全的单元格保护**：在保护工作表的情况下，自定义命令会自动尊重单元格的锁定状态，避免误操作
-- **易于扩展**：开发者可以参考本示例的模式，快速实现其他支持撤销的自定义命令
+* **完整的撤销/重做支持**：自定义命令通过事务机制完美集成到 SpreadJS 的撤销栈中，用户体验与内置命令一致
+* **灵活的命令调用方式**：支持快捷键、按钮点击、程序化调用等多种方式触发命令
+* **安全的单元格保护**：在保护工作表的情况下，自定义命令会自动尊重单元格的锁定状态，避免误操作
+* **易于扩展**：开发者可以参考本示例的模式，快速实现其他支持撤销的自定义命令
 
 ### 5.2 局限性与扩展建议
 
-- **单单元格操作**：当前实现只处理选区中的第一个单元格，可以扩展为批量处理所有选中的单元格
-- **固定的填充内容**：当前只能填充当前日期，可以扩展为支持自定义填充内容或填充规则
-- **扩展建议**：
-  - 支持批量填充多个选中单元格
-  - 添加参数化支持，允许传入自定义的填充值
-  - 实现更复杂的撤销逻辑，例如批量操作的部分撤销
+* **单单元格操作**：当前实现只处理选区中的第一个单元格，可以扩展为批量处理所有选中的单元格
+* **固定的填充内容**：当前只能填充当前日期，可以扩展为支持自定义填充内容或填充规则
+* **扩展建议**：
+    * 支持批量填充多个选中单元格
+    * 添加参数化支持，允许传入自定义的填充值
+    * 实现更复杂的撤销逻辑，例如批量操作的部分撤销
 
 ## 六、关键代码片段
 
@@ -225,12 +226,16 @@ if (isUndo) {
 
 本示例展示了 SpreadJS 自定义命令的完整实现流程，特别是如何通过事务机制实现撤销/重做功能。开发者可以从中学到：
 
-- 如何使用 `commandManager` 注册和管理自定义命令
-- 如何通过 `startTransaction` 和 `endTransaction` 实现可撤销的操作
-- 如何为自定义命令设置快捷键和程序化调用
-- 如何在保护工作表的情况下安全地执行自定义操作
-- 如何使用 `undoManager` 实现撤销和重做功能
+* 如何使用 `commandManager` 注册和管理自定义命令
+* 如何通过 `startTransaction` 和 `endTransaction` 实现可撤销的操作
+* 如何为自定义命令设置快捷键和程序化调用
+* 如何在保护工作表的情况下安全地执行自定义操作
+* 如何使用 `undoManager` 实现撤销和重做功能
 
 该方案适用于需要实现复杂业务逻辑且要求操作可撤销的场景，例如批量数据处理、自定义格式化、数据导入等。通过将业务逻辑封装为自定义命令，可以提升代码的可维护性和用户体验。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/PYkV0YesSkufsYBev3VPwA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

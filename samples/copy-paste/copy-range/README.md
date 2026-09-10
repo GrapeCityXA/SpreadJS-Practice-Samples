@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **区域数据隔离查看**：在大型表格中，用户可能只需要关注某个特定区域的数据，通过拷贝并隐藏其他区域，可以实现聚焦显示
-- **数据结构完整复制**：使用 `toJSON()` 和 `fromJSON()` 方法可以完整复制工作簿的所有数据、样式、公式等信息
-- **视觉优化**：通过隐藏行列、调整缩放比例和偏移量，提供更好的局部数据查看体验
+* **区域数据隔离查看**：在大型表格中，用户可能只需要关注某个特定区域的数据，通过拷贝并隐藏其他区域，可以实现聚焦显示
+* **数据结构完整复制**：使用 `toJSON()` 和 `fromJSON()` 方法可以完整复制工作簿的所有数据、样式、公式等信息
+* **视觉优化**：通过隐藏行列、调整缩放比例和偏移量，提供更好的局部数据查看体验
 
 ## 三、实现思路
 
@@ -82,10 +82,10 @@ sheet.zoom(sheet.zoom() * 1.2);  // 放大显示 120%
 
 ### 3.3 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0（核心表格组件）
-- **jQuery**: 3.6.1（事件处理）
-- **SystemJS**: 0.19.22（模块加载）
-- **TypeScript**: 4.1.2（开发语言支持）
+* **@grapecity/spread-sheets**: 15.0.0（核心表格组件）
+* **jQuery**: 3.6.1（事件处理）
+* **SystemJS**: 0.19.22（模块加载）
+* **TypeScript**: 4.1.2（开发语言支持）
 
 ## 四、使用说明
 
@@ -110,19 +110,19 @@ npm install
 
 ### 5.1 优点
 
-- **完整数据复制**：使用 JSON 序列化方式，确保数据、样式、公式等信息完整复制
-- **聚焦显示**：通过隐藏非选中区域，让用户专注于关注的数据
-- **视图优化**：自动调整缩放比例、隐藏标题栏，提供更好的查看体验
-- **实现简单**：核心代码不到 50 行，易于理解和维护
+* **完整数据复制**：使用 JSON 序列化方式，确保数据、样式、公式等信息完整复制
+* **聚焦显示**：通过隐藏非选中区域，让用户专注于关注的数据
+* **视图优化**：自动调整缩放比例、隐藏标题栏，提供更好的查看体验
+* **实现简单**：核心代码不到 50 行，易于理解和维护
 
 ### 5.2 局限性与扩展建议
 
-- **单向复制**：当前实现只支持从源工作簿复制到详情工作簿，代码中虽然有 `updateData` 按钮的事件处理（第 25-45 行），但 HTML 中未定义该按钮，无法实现反向同步
-- **性能考虑**：对于超大型工作簿，完整的 JSON 序列化可能影响性能，可以考虑只复制选中区域的数据
-- **扩展建议**：
-  - 添加"更新数据"按钮，实现详情工作簿的修改同步回源工作簿
-  - 支持多区域选择和显示
-  - 添加区域边框高亮，更清晰地标识选中区域
+* **单向复制**：当前实现只支持从源工作簿复制到详情工作簿，代码中虽然有 `updateData` 按钮的事件处理（第 25-45 行），但 HTML 中未定义该按钮，无法实现反向同步
+* **性能考虑**：对于超大型工作簿，完整的 JSON 序列化可能影响性能，可以考虑只复制选中区域的数据
+* **扩展建议**：
+    * 添加"更新数据"按钮，实现详情工作簿的修改同步回源工作簿
+    * 支持多区域选择和显示
+    * 添加区域边框高亮，更清晰地标识选中区域
 
 ## 六、关键代码片段
 
@@ -177,5 +177,8 @@ function initDetailSpread(spread, range) {
 
 该方案适用于需要对大型表格进行局部查看、数据对比、区域编辑等场景，具有良好的扩展性，可以根据实际需求添加双向同步、多区域显示等功能。
 
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/WRgQJKyukUW5B4sa5158_A/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

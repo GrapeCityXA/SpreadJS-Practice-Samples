@@ -2,14 +2,14 @@
 
 本示例演示了如何在 SpreadJS 中动态管理表格（Table）的数据源绑定。通过 CellBindingSource 实现数据双向绑定，支持两种核心操作：替换表格的整个数据源和向现有数据源追加新数据。示例中创建了一个带有自动计算公式的表格，用户可以通过按钮交互实时更新表格内容。
 
-该示例适用于需要动态更新表格数据的业务场景，如实时数据监控、数据刷新、增量数据加载等。
+该示例适用于需要动态更新表格数据的业务场景，如实时数据监控、数据刷新、增量数据加载等。 
 
 ## 二、解决的问题
 
-- **动态数据源切换**：在不重新创建表格的情况下，完整替换表格绑定的数据源
-- **增量数据追加**：向已绑定的数据源追加新记录，表格自动扩展行数
-- **数据与 UI 同步**：通过数据绑定机制，确保数据变更后表格自动刷新显示
-- **公式自动计算**：在数据源变化时，表格中的计算列和汇总公式自动重新计算
+* **动态数据源切换**：在不重新创建表格的情况下，完整替换表格绑定的数据源
+* **增量数据追加**：向已绑定的数据源追加新记录，表格自动扩展行数
+* **数据与 UI 同步**：通过数据绑定机制，确保数据变更后表格自动刷新显示
+* **公式自动计算**：在数据源变化时，表格中的计算列和汇总公式自动重新计算
 
 ## 三、实现思路
 
@@ -70,10 +70,11 @@ table2.setColumnFormula(4, "=SUBTOTAL(109,[合计])");
 ```
 
 关键点：
-- `autoGenerateColumns(false)` 禁用自动生成列，改为手动配置
-- `bindingPath` 指定数据源中的属性路径
-- `setColumnDataFormula` 为数据行设置公式
-- `setColumnFormula` 为汇总行（Footer）设置公式
+
+* `autoGenerateColumns(false)` 禁用自动生成列，改为手动配置
+* `bindingPath` 指定数据源中的属性路径
+* `setColumnDataFormula` 为数据行设置公式
+* `setColumnFormula` 为汇总行（Footer）设置公式
 
 ### 3.3 实现数据源替换
 
@@ -114,10 +115,10 @@ $("#add").click(function () {
 
 ### 3.5 技术栈
 
-- **SpreadJS**: 15.0.0（核心表格组件）
-- **jQuery**: 3.6.1（事件处理）
-- **SystemJS**: 0.19.22（模块加载器）
-- **TypeScript**: 4.1.2（开发语言支持）
+* **SpreadJS**: 15.0.0（核心表格组件）
+* **jQuery**: 3.6.1（事件处理）
+* **SystemJS**: 0.19.22（模块加载器）
+* **TypeScript**: 4.1.2（开发语言支持）
 
 ## 四、使用说明
 
@@ -141,16 +142,16 @@ npm install
 
 ### 5.1 优点
 
-- **数据绑定机制**：通过 CellBindingSource 实现数据与 UI 的自动同步，无需手动操作单元格
-- **灵活的数据更新**：支持整体替换和增量追加两种更新模式，适应不同业务场景
-- **公式自动计算**：数据变化时，表格公式自动重新计算，保证数据一致性
-- **代码简洁**：通过绑定路径机制，只需修改数据对象即可更新表格，代码逻辑清晰
+* **数据绑定机制**：通过 CellBindingSource 实现数据与 UI 的自动同步，无需手动操作单元格
+* **灵活的数据更新**：支持整体替换和增量追加两种更新模式，适应不同业务场景
+* **公式自动计算**：数据变化时，表格公式自动重新计算，保证数据一致性
+* **代码简洁**：通过绑定路径机制，只需修改数据对象即可更新表格，代码逻辑清晰
 
 ### 5.2 局限性与扩展建议
 
-- **性能考虑**：大数据量追加时，频繁调用 `bindingPath` 可能影响性能，建议批量追加后统一刷新
-- **数据验证**：当前示例未对追加的数据进行验证，实际应用中应添加数据格式校验
-- **扩展方向**：可以结合后端 API，实现从服务器动态加载数据并更新表格
+* **性能考虑**：大数据量追加时，频繁调用 `bindingPath` 可能影响性能，建议批量追加后统一刷新
+* **数据验证**：当前示例未对追加的数据进行验证，实际应用中应添加数据格式校验
+* **扩展方向**：可以结合后端 API，实现从服务器动态加载数据并更新表格
 
 ## 六、关键代码片段
 
@@ -178,8 +179,8 @@ table2.setColumnDataFormula(4, "=[@列1]+[@列2]+[@列3]+[@列4]");
 table2.setColumnFormula(4, "=SUBTOTAL(109,[合计])");
 ```
 
-- `[@列名]` 语法引用当前行的指定列
-- `SUBTOTAL(109, ...)` 是求和函数，109 表示忽略隐藏行
+* `[@列名]` 语法引用当前行的指定列
+* `SUBTOTAL(109, ...)` 是求和函数，109 表示忽略隐藏行
 
 ## 七、总结
 
@@ -192,6 +193,8 @@ table2.setColumnFormula(4, "=SUBTOTAL(109,[合计])");
 
 该方案适用于需要动态数据管理的场景，如数据监控面板、实时报表、数据录入系统等。通过数据绑定机制，可以大幅简化数据更新逻辑，提高开发效率。在实际应用中，可以结合 RESTful API 或 WebSocket 实现更复杂的数据交互功能。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Table%20changes%20the%20bound%20data%20source%20and%20appends%20data.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/6XtLugksV026SskNETi6cA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

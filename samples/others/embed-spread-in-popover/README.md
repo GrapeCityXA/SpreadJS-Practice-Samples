@@ -6,9 +6,9 @@
 
 在实际业务开发中，经常需要在不离开当前页面的情况下展示表格数据或进行数据编辑。传统的页面跳转方式会打断用户的操作流程，而弹窗方案可以提供更流畅的用户体验。本示例解决了以下问题：
 
-- 如何在动态显示的弹窗容器中正确初始化 SpreadJS 控件
-- 如何实现弹窗的显示、隐藏交互逻辑
-- 如何在有限的弹窗空间内合理布局表格控件
+* 如何在动态显示的弹窗容器中正确初始化 SpreadJS 控件
+* 如何实现弹窗的显示、隐藏交互逻辑
+* 如何在有限的弹窗空间内合理布局表格控件
 
 ## 三、实现思路
 
@@ -101,10 +101,10 @@ window.onclick = function close(e) {
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0：核心表格控件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：支持 TypeScript 开发
-- 原生 JavaScript + CSS：实现弹窗交互和样式
+* SpreadJS 15.0.0：核心表格控件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：支持 TypeScript 开发
+* 原生 JavaScript + CSS：实现弹窗交互和样式
 
 ## 四、使用说明
 
@@ -123,36 +123,40 @@ npm install
 2. 点击页面上的"弹窗"按钮
 3. 弹窗显示，可以看到嵌入的 SpreadJS 表格控件，第一个单元格显示 "Hello World!"
 4. 可以通过以下方式关闭弹窗：
-   - 点击右上角的 "×" 关闭按钮
-   - 点击弹窗外部的遮罩层区域
+    * 点击右上角的 "×" 关闭按钮
+    * 点击弹窗外部的遮罩层区域
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- 实现简单：使用原生 JavaScript 和 CSS 实现，无需额外的 UI 框架
-- 用户体验好：支持多种关闭方式，符合用户操作习惯
-- 布局灵活：弹窗尺寸和表格尺寸可以根据需求调整
-- 性能优化：SpreadJS 控件在页面加载时初始化，弹窗打开时无需等待
+* 实现简单：使用原生 JavaScript 和 CSS 实现，无需额外的 UI 框架
+* 用户体验好：支持多种关闭方式，符合用户操作习惯
+* 布局灵活：弹窗尺寸和表格尺寸可以根据需求调整
+* 性能优化：SpreadJS 控件在页面加载时初始化，弹窗打开时无需等待
 
 ### 5.2 局限性与扩展建议
 
 当前实现是一个基础示例，实际应用中可以考虑以下扩展：
 
-- 动态数据加载：在弹窗打开时从服务器加载数据填充到表格中
-- 数据保存功能：添加保存按钮，将表格数据提交到后端
-- 响应式设计：根据屏幕尺寸动态调整弹窗和表格的尺寸
-- 多实例支持：如果需要多个弹窗，可以封装成可复用的组件
+* 动态数据加载：在弹窗打开时从服务器加载数据填充到表格中
+* 数据保存功能：添加保存按钮，将表格数据提交到后端
+* 响应式设计：根据屏幕尺寸动态调整弹窗和表格的尺寸
+* 多实例支持：如果需要多个弹窗，可以封装成可复用的组件
 
 ## 六、总结
 
 本示例展示了在网页弹窗中嵌入 SpreadJS 表格控件的基本实现方法。开发者可以从中学到：
 
-- SpreadJS 控件的基本初始化方式
-- 弹窗组件的 HTML/CSS 结构设计
-- 原生 JavaScript 事件处理和 DOM 操作
-- 如何在固定尺寸容器中嵌入表格控件
+* SpreadJS 控件的基本初始化方式
+* 弹窗组件的 HTML/CSS 结构设计
+* 原生 JavaScript 事件处理和 DOM 操作
+* 如何在固定尺寸容器中嵌入表格控件
 
 该方案适用于需要在当前页面以浮层形式展示表格的场景，可以作为更复杂表格应用的基础框架进行扩展。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/iuY3kJIgHUWm8I3f8giEMQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

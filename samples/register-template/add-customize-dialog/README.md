@@ -1,3 +1,5 @@
+# add-customize-dialog
+
 ### 问题：如何创建自定义对话框
 
 ***
@@ -106,4 +108,8 @@ config.ribbon[2].buttonGroups.push(ribbonPivotConfig1)
 最终效果：
 ![image](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/image-20260313.74928b.png?width=400)
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/yn-SYHrcVU_PHxlkwePk-Q/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

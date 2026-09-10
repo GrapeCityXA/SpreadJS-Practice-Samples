@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- 防止用户误操作修改受保护的单元格数据
-- 提供清晰的用户反馈，说明单元格为何无法编辑
-- 增强表单保护功能的用户体验，避免用户困惑
+* 防止用户误操作修改受保护的单元格数据
+* 提供清晰的用户反馈，说明单元格为何无法编辑
+* 增强表单保护功能的用户体验，避免用户困惑
 
 ## 三、实现思路
 
@@ -59,9 +59,9 @@ document.onkeydown = function(event) {
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持
+* SpreadJS 15.0.0：核心电子表格组件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持
 
 ## 四、使用说明
 
@@ -85,16 +85,16 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单，代码量少，易于理解和维护
-- 提供双重保护机制（双击和键盘输入），覆盖主要编辑场景
-- 用户体验友好，提示信息清晰明确
-- 兼容性好，使用标准的 DOM 事件和 SpreadJS API
+* 实现简单，代码量少，易于理解和维护
+* 提供双重保护机制（双击和键盘输入），覆盖主要编辑场景
+* 用户体验友好，提示信息清晰明确
+* 兼容性好，使用标准的 DOM 事件和 SpreadJS API
 
 ### 5.2 局限性与扩展建议
 
-- 当前所有单元格默认都是锁定状态，实际应用中可能需要设置部分单元格为可编辑
-- 提示信息使用 `alert` 弹窗，可以考虑使用更美观的自定义提示组件
-- 可以扩展为支持密码保护，只有输入正确密码才能取消保护
+* 当前所有单元格默认都是锁定状态，实际应用中可能需要设置部分单元格为可编辑
+* 提示信息使用 `alert` 弹窗，可以考虑使用更美观的自定义提示组件
+* 可以扩展为支持密码保护，只有输入正确密码才能取消保护
 
 ## 六、关键代码片段
 
@@ -113,11 +113,15 @@ if (sheet.options.isProtected === true && sheet.getCell(row, col).locked() === t
 
 本示例展示了如何在 SpreadJS 中实现表单保护提示功能，通过监听用户的双击和键盘输入事件，在用户尝试编辑受保护单元格时提供及时的反馈。开发者可以从中学到：
 
-- SpreadJS 工作表保护功能的基本使用
-- 单元格锁定状态的判断方法
-- 事件监听机制的应用（CellDoubleClick 事件和键盘事件）
-- 如何结合 DOM 事件和 SpreadJS API 实现业务逻辑
+* SpreadJS 工作表保护功能的基本使用
+* 单元格锁定状态的判断方法
+* 事件监听机制的应用（CellDoubleClick 事件和键盘事件）
+* 如何结合 DOM 事件和 SpreadJS API 实现业务逻辑
 
 该方案适用于需要保护数据完整性的表单应用场景，可以根据实际需求扩展为更复杂的权限控制系统。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/aoXhixZ7Kk28hhbK0l60dQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -1,3 +1,5 @@
+# rewrite-deisgner-command
+
 ### 问题：如何重写设计器上方工具栏的命令？
 
 ***
@@ -28,4 +30,8 @@ designer.setConfig(config)
 重写命令后合并单元格的效果如下图所示：
 ![image](https://gccndocumentsitestorage.blob.core.chinacloudapi.cn/document-site-files/images/b33c4f64-6b99-4132-a675-8dc7b59765f1/image.bc27f3.png?width=400)
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/sVt4teacEEWWl9Vl7l-yUg/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

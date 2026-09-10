@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **模板复用**：避免每次手动创建报表头尾，提高文档生成效率
-- **格式统一**：确保所有报表使用相同的头尾样式和布局
-- **动态列宽适配**：当中间数据区域列数超过模板列数时，自动插入列并保持样式一致性
+* **模板复用**：避免每次手动创建报表头尾，提高文档生成效率
+* **格式统一**：确保所有报表使用相同的头尾样式和布局
+* **动态列宽适配**：当中间数据区域列数超过模板列数时，自动插入列并保持样式一致性
 
 ## 三、实现思路
 
@@ -95,9 +95,9 @@ if (diff > 0) {
 
 ### 3.2 技术栈
 
-- SpreadJS 17.0.8（核心表格控件）
-- SpreadJS Designer 17.0.8（设计器组件）
-- SystemJS 0.19.22（模块加载器）
+* SpreadJS 17.0.8（核心表格控件）
+* SpreadJS Designer 17.0.8（设计器组件）
+* SystemJS 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -120,15 +120,15 @@ npm install
 
 ### 5.1 优点
 
-- **完整性**：不仅复制单元格值，还包括样式、行高、合并单元格等所有格式信息
-- **灵活性**：支持任意位置插入模板，可根据数据区域动态调整
-- **性能优化**：使用 `suspendPaint` 和 `resumePaint` 避免频繁重绘
+* **完整性**：不仅复制单元格值，还包括样式、行高、合并单元格等所有格式信息
+* **灵活性**：支持任意位置插入模板，可根据数据区域动态调整
+* **性能优化**：使用 `suspendPaint` 和 `resumePaint` 避免频繁重绘
 
 ### 5.2 局限性与扩展建议
 
-- **列宽处理**：当前仅处理列数差异，未处理列宽自适应，可扩展为根据数据内容自动调整列宽
-- **模板管理**：模板文件路径硬编码，可改为配置化管理多套模板
-- **错误处理**：缺少对模板文件加载失败的处理，建议添加错误提示
+* **列宽处理**：当前仅处理列数差异，未处理列宽自适应，可扩展为根据数据内容自动调整列宽
+* **模板管理**：模板文件路径硬编码，可改为配置化管理多套模板
+* **错误处理**：缺少对模板文件加载失败的处理，建议添加错误提示
 
 ## 六、关键代码片段
 
@@ -158,12 +158,16 @@ let usedRange = t_sheet.getUsedRange(GC.Spread.Sheets.UsedRangeType.style)
 
 本示例展示了 SpreadJS 中模板复用的实用技巧，开发者可以学到：
 
-- 如何加载和解析外部 .sjs 文件
-- 如何批量复制单元格的值、样式和格式
-- 如何处理合并单元格的复制
-- 如何动态调整工作表结构（插入行列）
-- 如何使用 `moveTo` 方法重新排列单元格区域
+* 如何加载和解析外部 .sjs 文件
+* 如何批量复制单元格的值、样式和格式
+* 如何处理合并单元格的复制
+* 如何动态调整工作表结构（插入行列）
+* 如何使用 `moveTo` 方法重新排列单元格区域
 
 该方案适用于报表生成、文档模板管理等场景，通过预定义模板可显著提高开发效率和文档一致性。对于需要更复杂模板逻辑的场景，可结合数据绑定和公式功能进一步扩展。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/gW6om2aqdkeJ-VBU5EKztA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- 在某些应用场景中，用户可能需要通过自定义按钮而非快捷键来执行复制粘贴操作
-- 为不熟悉快捷键的用户提供更直观的操作方式
-- 在自定义工具栏或特殊 UI 布局中集成复制粘贴功能
+* 在某些应用场景中，用户可能需要通过自定义按钮而非快捷键来执行复制粘贴操作
+* 为不熟悉快捷键的用户提供更直观的操作方式
+* 在自定义工具栏或特殊 UI 布局中集成复制粘贴功能
 
 ## 三、实现思路
 
@@ -25,9 +25,10 @@ spread.commandManager().execute({
 ```
 
 关键参数说明：
-- `cmd`: 指定要执行的命令名称（"copy" 或 "paste"）
-- `sheetName`: 指定操作的工作表名称
-- `ignoreClipboard`: 控制是否忽略系统剪贴板（复制时设为 true，粘贴时设为 false）
+
+* `cmd`: 指定要执行的命令名称（"copy" 或 "paste"）
+* `sheetName`: 指定操作的工作表名称
+* `ignoreClipboard`: 控制是否忽略系统剪贴板（复制时设为 true，粘贴时设为 false）
 
 #### 自定义按钮事件绑定
 
@@ -68,10 +69,10 @@ GC.Spread.Sheets.Commands.copy.execute = function(event, options) {
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心表格组件
-- jQuery 3.6.1：DOM 操作和事件处理
-- SystemJS：模块加载器
-- TypeScript 4.1.2：类型支持
+* SpreadJS 15.0.0：核心表格组件
+* jQuery 3.6.1：DOM 操作和事件处理
+* SystemJS：模块加载器
+* TypeScript 4.1.2：类型支持
 
 ## 四、使用说明
 
@@ -94,16 +95,16 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单，代码量少，易于理解和维护
-- 通过命令管理器调用内置功能，保证了操作的稳定性和一致性
-- 支持命令扩展，可以在复制粘贴前后添加自定义逻辑
-- 适用于需要自定义 UI 的场景
+* 实现简单，代码量少，易于理解和维护
+* 通过命令管理器调用内置功能，保证了操作的稳定性和一致性
+* 支持命令扩展，可以在复制粘贴前后添加自定义逻辑
+* 适用于需要自定义 UI 的场景
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现仅支持基本的复制粘贴，可以扩展支持剪切、特殊粘贴等功能
-- 可以添加按钮状态管理（如选中内容后才启用复制按钮）
-- 可以结合自定义右键菜单或工具栏，提供更完整的编辑功能
+* 当前实现仅支持基本的复制粘贴，可以扩展支持剪切、特殊粘贴等功能
+* 可以添加按钮状态管理（如选中内容后才启用复制按钮）
+* 可以结合自定义右键菜单或工具栏，提供更完整的编辑功能
 
 ## 六、关键代码片段
 
@@ -137,10 +138,14 @@ $("#btnPaste").click(function() {
 
 本示例展示了如何通过 SpreadJS 的命令管理器实现自定义复制粘贴按钮，这是一个简单但实用的功能扩展方案。开发者可以从中学到：
 
-- SpreadJS 命令管理器的基本使用方法
-- 如何将内置命令与自定义 UI 集成
-- 命令扩展机制的应用方式
+* SpreadJS 命令管理器的基本使用方法
+* 如何将内置命令与自定义 UI 集成
+* 命令扩展机制的应用方式
 
 该方案适用于需要自定义工具栏、特殊交互设计或为特定用户群体优化操作体验的场景，具有良好的扩展性和实用价值。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/EDgSIWCd_0y1-sk8jl5eDw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

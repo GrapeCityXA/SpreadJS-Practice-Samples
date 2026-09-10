@@ -1,3 +1,5 @@
+# use-fontawesome
+
 ### 问题：如何在SpreadJS中使用符号字体
 
 ***
@@ -36,4 +38,8 @@ String.fromCharCode(parseInt("f2cd",16));
 未设置字体则显示方框，也可在SpreadJS在线表格编辑器的富文本单元格编辑框中直接粘贴该字符，就可以正常显示了：
 ![image](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/image-20260316.ef8f2d.png?width=400)
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/jvRDGCqgtE_XoIS3FlIb3A/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

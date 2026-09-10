@@ -6,10 +6,10 @@
 
 ## 二、解决的问题
 
-- **简化百分比输入**：用户输入 50 时自动显示为 50%，无需手动输入百分号
-- **自动格式识别**：根据单元格格式自动判断是否需要进行百分比转换
-- **数值存储正确性**：确保显示为 50% 时，实际存储的值为 0.5，符合 Excel 标准
-- **动态格式设置**：当用户输入带百分号的文本时，自动为单元格设置百分比格式
+* **简化百分比输入**：用户输入 50 时自动显示为 50%，无需手动输入百分号
+* **自动格式识别**：根据单元格格式自动判断是否需要进行百分比转换
+* **数值存储正确性**：确保显示为 50% 时，实际存储的值为 0.5，符合 Excel 标准
+* **动态格式设置**：当用户输入带百分号的文本时，自动为单元格设置百分比格式
 
 ## 三、实现思路
 
@@ -80,9 +80,9 @@ sheet.setFormatter(2, 1, "@");   // B3 单元格设置为文本格式
 
 ### 3.2 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
-- **SystemJS**: 0.19.22 - 模块加载器
-- **TypeScript**: 4.1.2 - 类型支持（项目配置支持，但主代码为 JavaScript）
+* **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
+* **SystemJS**: 0.19.22 - 模块加载器
+* **TypeScript**: 4.1.2 - 类型支持（项目配置支持，但主代码为 JavaScript）
 
 ## 四、使用说明
 
@@ -107,16 +107,16 @@ npm install
 
 ### 5.1 优点
 
-- **用户体验友好**：输入数字即可自动转换，无需手动输入百分号
-- **数据存储规范**：遵循 Excel 标准，百分比以小数形式存储（50% 存储为 0.5）
-- **智能格式识别**：自动检测单元格格式和输入内容，灵活处理不同场景
-- **扩展性强**：通过原型链扩展实现，不影响其他单元格类型的正常功能
+* **用户体验友好**：输入数字即可自动转换，无需手动输入百分号
+* **数据存储规范**：遵循 Excel 标准，百分比以小数形式存储（50% 存储为 0.5）
+* **智能格式识别**：自动检测单元格格式和输入内容，灵活处理不同场景
+* **扩展性强**：通过原型链扩展实现，不影响其他单元格类型的正常功能
 
 ### 5.2 局限性与扩展建议
 
-- **当前实现仅针对文本单元格类型**：如果需要支持其他单元格类型，需要扩展对应的 `setEditorValue` 方法
-- **格式判断较为简单**：仅通过字符串末尾是否为 "%" 判断，可以考虑使用更严格的格式解析逻辑
-- **扩展建议**：可以增加对负数百分比、千分位分隔符等复杂格式的支持
+* **当前实现仅针对文本单元格类型**：如果需要支持其他单元格类型，需要扩展对应的 `setEditorValue` 方法
+* **格式判断较为简单**：仅通过字符串末尾是否为 "%" 判断，可以考虑使用更严格的格式解析逻辑
+* **扩展建议**：可以增加对负数百分比、千分位分隔符等复杂格式的支持
 
 ## 六、关键代码片段
 
@@ -160,11 +160,15 @@ spread.bind(GC.Spread.Sheets.Events.EditEnded, function (sender, args) {
 
 本示例展示了如何通过扩展 SpreadJS 的单元格类型和监听编辑事件，实现数字输入自动转换为百分比的功能。开发者可以从中学到：
 
-- 如何扩展 SpreadJS 的单元格类型原型方法
-- 如何使用 EditEnding 和 EditEnded 事件处理编辑流程
-- 如何正确处理百分比的显示值和存储值之间的转换关系
-- 如何根据用户输入动态设置单元格格式
+* 如何扩展 SpreadJS 的单元格类型原型方法
+* 如何使用 EditEnding 和 EditEnded 事件处理编辑流程
+* 如何正确处理百分比的显示值和存储值之间的转换关系
+* 如何根据用户输入动态设置单元格格式
 
 该方案适用于需要频繁输入百分比数据的场景，可以显著提升用户的输入效率。开发者可以在此基础上扩展更多自定义格式的自动转换功能。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/sGaYzJNUbkeqdEd4uO2UNg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

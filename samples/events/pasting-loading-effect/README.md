@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **缺乏操作反馈**：默认的复制粘贴操作没有明显的视觉反馈，用户无法感知操作是否正在进行
-- **自定义粘贴流程**：需要在粘贴前后插入自定义逻辑（如显示加载动画、数据处理、日志记录）
-- **跨平台快捷键适配**：Mac 和 Windows 系统的粘贴快捷键不同（Command+V vs Ctrl+V），需要统一处理
+* **缺乏操作反馈**：默认的复制粘贴操作没有明显的视觉反馈，用户无法感知操作是否正在进行
+* **自定义粘贴流程**：需要在粘贴前后插入自定义逻辑（如显示加载动画、数据处理、日志记录）
+* **跨平台快捷键适配**：Mac 和 Windows 系统的粘贴快捷键不同（Command+V vs Ctrl+V），需要统一处理
 
 ## 三、实现思路
 
@@ -34,9 +34,10 @@ commandManager.register('myPasteCommand', command, GC.Spread.Commands.Key.v, tru
 ```
 
 关键点：
-- `canUndo: true` 使命令支持撤销操作
-- `execute` 方法中先显示加载框，再执行原生粘贴命令
-- 通过 `commandManager.register` 注册命令并绑定快捷键（最后一个参数 `true` 表示 Command 键，`false` 表示 Ctrl 键）
+
+* `canUndo: true` 使命令支持撤销操作
+* `execute` 方法中先显示加载框，再执行原生粘贴命令
+* 通过 `commandManager.register` 注册命令并绑定快捷键（最后一个参数 `true` 表示 Command 键，`false` 表示 Ctrl 键）
 
 ### 3.2 粘贴事件监听
 
@@ -59,6 +60,7 @@ spread.bind(GC.Spread.Sheets.Events.ClipboardPasted, function(e,info){
 ```
 
 事件流程：
+
 1. `ClipboardPasting`：粘贴操作开始前触发
 2. `ClipboardPasted`：粘贴操作完成后触发，此时执行自定义命令并延迟 1 秒隐藏加载框
 
@@ -76,9 +78,9 @@ function isMac(){
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0：核心表格组件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持（项目配置）
+* SpreadJS 15.0.0：核心表格组件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持（项目配置）
 
 ## 四、使用说明
 
@@ -101,20 +103,20 @@ npm install
 
 ### 5.1 优点
 
-- **用户体验增强**：通过视觉反馈让用户明确感知操作状态
-- **灵活扩展**：可在自定义命令中添加任意业务逻辑（数据校验、格式转换、日志记录等）
-- **跨平台兼容**：自动适配 Mac 和 Windows 的快捷键差异
-- **不破坏原生功能**：通过事件监听和命令重写，保留 SpreadJS 的原生粘贴能力
+* **用户体验增强**：通过视觉反馈让用户明确感知操作状态
+* **灵活扩展**：可在自定义命令中添加任意业务逻辑（数据校验、格式转换、日志记录等）
+* **跨平台兼容**：自动适配 Mac 和 Windows 的快捷键差异
+* **不破坏原生功能**：通过事件监听和命令重写，保留 SpreadJS 的原生粘贴能力
 
 ### 5.2 局限性与扩展建议
 
-- **固定延迟时间**：当前使用 1 秒固定延迟，实际应用中可根据数据量动态调整
-- **加载框样式简单**：可替换为更专业的 Loading 组件（如 Spinner、进度条）
-- **扩展方向**：
-  - 根据粘贴数据量动态计算加载时间
-  - 添加粘贴进度显示
-  - 支持粘贴失败时的错误提示
-  - 集成数据验证逻辑（如格式检查、范围限制）
+* **固定延迟时间**：当前使用 1 秒固定延迟，实际应用中可根据数据量动态调整
+* **加载框样式简单**：可替换为更专业的 Loading 组件（如 Spinner、进度条）
+* **扩展方向**：
+    * 根据粘贴数据量动态计算加载时间
+    * 添加粘贴进度显示
+    * 支持粘贴失败时的错误提示
+    * 集成数据验证逻辑（如格式检查、范围限制）
 
 ## 六、关键代码片段
 
@@ -158,10 +160,14 @@ function initSpread(spread) {
 
 本示例展示了 SpreadJS 命令系统的灵活性，通过自定义命令和事件监听机制，开发者可以轻松扩展表格的交互行为。该方案的核心价值在于：
 
-- **学习 SpreadJS 命令管理器的使用方法**：理解如何注册、执行自定义命令
-- **掌握事件驱动的交互设计模式**：通过事件监听实现业务逻辑解耦
-- **了解跨平台快捷键适配技巧**：处理不同操作系统的键盘事件差异
+* **学习 SpreadJS 命令管理器的使用方法**：理解如何注册、执行自定义命令
+* **掌握事件驱动的交互设计模式**：通过事件监听实现业务逻辑解耦
+* **了解跨平台快捷键适配技巧**：处理不同操作系统的键盘事件差异
 
 该方案适用于需要在标准操作（复制、粘贴、删除等）中插入自定义逻辑的场景，如数据审计、权限控制、操作日志记录等。开发者可以基于此思路扩展更多自定义命令，构建符合业务需求的表格交互体验。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/1SeqmMBTL0ue--A-tU09Hg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

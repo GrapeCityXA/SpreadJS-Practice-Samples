@@ -8,9 +8,9 @@
 
 在实际应用中，用户可能需要在编辑单元格时快速插入预定义的内容（如函数、参数、模板文本等）。传统方式需要用户手动输入或复制粘贴，效率较低。本示例解决了以下问题：
 
-- 如何在单元格编辑状态下通过外部按钮插入内容
-- 如何在光标当前位置精确插入文本而不是覆盖整个单元格
-- 如何兼容不同浏览器的文本插入机制（现代浏览器和 IE）
+* 如何在单元格编辑状态下通过外部按钮插入内容
+* 如何在光标当前位置精确插入文本而不是覆盖整个单元格
+* 如何兼容不同浏览器的文本插入机制（现代浏览器和 IE）
 
 ## 三、实现思路
 
@@ -56,11 +56,12 @@ function insertHtmlAtCaret(html) {
 ```
 
 该函数的实现要点：
-- 使用 `getRangeAt(0)` 获取当前光标所在的 Range 对象
-- 通过 `deleteContents()` 删除选中内容（如果有）
-- 使用 `DocumentFragment` 构建要插入的节点，避免多次 DOM 操作
-- 插入后调整光标位置到插入内容之后，保持编辑连续性
-- 兼容 IE8 及以下版本的 `document.selection` API
+
+* 使用 `getRangeAt(0)` 获取当前光标所在的 Range 对象
+* 通过 `deleteContents()` 删除选中内容（如果有）
+* 使用 `DocumentFragment` 构建要插入的节点，避免多次 DOM 操作
+* 插入后调整光标位置到插入内容之后，保持编辑连续性
+* 兼容 IE8 及以下版本的 `document.selection` API
 
 #### 按钮事件绑定与内容插入
 
@@ -82,10 +83,10 @@ HTML 中的按钮定义：
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：电子表格核心库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持（配置环境）
-- 原生 JavaScript Selection API：光标位置控制
+* SpreadJS 15.0.0：电子表格核心库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持（配置环境）
+* 原生 JavaScript Selection API：光标位置控制
 
 ## 四、使用说明
 
@@ -113,22 +114,24 @@ npx http-server -p 8080
 
 ### 5.1 优点
 
-- 精确插入：在光标位置插入内容，不会覆盖已有文本
-- 跨浏览器兼容：支持现代浏览器和 IE8+ 的不同 API
-- 易于扩展：可以轻松添加更多按钮插入不同的函数或参数
-- 用户体验好：保持光标位置在插入内容之后，方便继续编辑
+* 精确插入：在光标位置插入内容，不会覆盖已有文本
+* 跨浏览器兼容：支持现代浏览器和 IE8+ 的不同 API
+* 易于扩展：可以轻松添加更多按钮插入不同的函数或参数
+* 用户体验好：保持光标位置在插入内容之后，方便继续编辑
 
 ### 5.2 局限性与扩展建议
 
 当前实现的局限性：
-- 仅支持纯文本插入，不支持富文本格式
-- 按钮内容是硬编码的，缺乏动态配置能力
+
+* 仅支持纯文本插入，不支持富文本格式
+* 按钮内容是硬编码的，缺乏动态配置能力
 
 扩展建议：
-- 可以构建函数选择器，支持用户选择不同函数和参数
-- 结合 SpreadJS 的公式编辑器 API，实现更智能的公式提示
-- 添加参数占位符，插入后自动选中参数部分方便用户修改
-- 支持插入单元格引用时自动弹出单元格选择器
+
+* 可以构建函数选择器，支持用户选择不同函数和参数
+* 结合 SpreadJS 的公式编辑器 API，实现更智能的公式提示
+* 添加参数占位符，插入后自动选中参数部分方便用户修改
+* 支持插入单元格引用时自动弹出单元格选择器
 
 ## 六、关键代码片段
 
@@ -169,11 +172,15 @@ if (lastNode) {
 
 本示例展示了如何通过浏览器原生 API 实现外部按钮与 SpreadJS 单元格编辑器的交互。开发者可以从中学到：
 
-- 使用 Selection 和 Range API 控制光标位置和文本插入
-- 处理不同浏览器的兼容性问题
-- 构建自定义的编辑辅助工具
-- 理解 DocumentFragment 在 DOM 操作中的性能优势
+* 使用 Selection 和 Range API 控制光标位置和文本插入
+* 处理不同浏览器的兼容性问题
+* 构建自定义的编辑辅助工具
+* 理解 DocumentFragment 在 DOM 操作中的性能优势
 
 该方案适用于需要提供快捷输入工具的场景，如公式助手、模板插入器、参数选择器等。通过扩展按钮数量和插入内容，可以构建功能丰富的编辑工具栏，显著提升用户的输入效率。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/QnMLR195x0uZnUUHztLjxA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **自定义验证错误提示**：SpreadJS 默认的数据验证错误提示可能无法满足特定的 UI 需求，通过监听 `ValidationError` 事件，可以使用自定义的弹窗组件（如 Modal、Dialog）替代默认提示
-- **灵活的错误处理**：在验证失败时，可以根据业务需求选择不同的处理方式，如阻止输入、恢复原值、重新编辑或仅显示警告
-- **增强用户体验**：通过自定义弹窗，可以提供更详细的错误信息、操作指引，提升用户的数据录入体验
+* **自定义验证错误提示**：SpreadJS 默认的数据验证错误提示可能无法满足特定的 UI 需求，通过监听 `ValidationError` 事件，可以使用自定义的弹窗组件（如 Modal、Dialog）替代默认提示
+* **灵活的错误处理**：在验证失败时，可以根据业务需求选择不同的处理方式，如阻止输入、恢复原值、重新编辑或仅显示警告
+* **增强用户体验**：通过自定义弹窗，可以提供更详细的错误信息、操作指引，提升用户的数据录入体验
 
 ## 三、实现思路
 
@@ -75,9 +75,9 @@ sheet.bind(GC.Spread.Sheets.Events.ValidationError, function(e, args) {
 
 ### 3.3 技术栈
 
-- **SpreadJS 15.0.0**：核心表格控件，提供数据验证和事件监听功能
-- **SystemJS 0.19.22**：模块加载器，用于加载 ES6 模块
-- **TypeScript 4.1.2**：支持 TypeScript 开发（本示例使用 JavaScript）
+* **SpreadJS 15.0.0**：核心表格控件，提供数据验证和事件监听功能
+* **SystemJS 0.19.22**：模块加载器，用于加载 ES6 模块
+* **TypeScript 4.1.2**：支持 TypeScript 开发（本示例使用 JavaScript）
 
 ## 四、使用说明
 
@@ -103,18 +103,18 @@ npm install
 
 ### 5.1 优点
 
-- **灵活的错误处理**：通过 `validationResult` 属性，可以控制验证失败后的行为（retry、discard、forceApply），满足不同的业务需求
-- **自定义弹窗支持**：可以使用任意弹窗组件（如 Modal、Dialog、Notification）替代默认的错误提示，提供更好的用户体验
-- **异步弹窗兼容**：示例中提供了异步弹窗的处理方案，可以在弹窗关闭后恢复原值并重新编辑
-- **易于扩展**：可以根据不同的验证类型（stop、warning、information）显示不同样式的弹窗
+* **灵活的错误处理**：通过 `validationResult` 属性，可以控制验证失败后的行为（retry、discard、forceApply），满足不同的业务需求
+* **自定义弹窗支持**：可以使用任意弹窗组件（如 Modal、Dialog、Notification）替代默认的错误提示，提供更好的用户体验
+* **异步弹窗兼容**：示例中提供了异步弹窗的处理方案，可以在弹窗关闭后恢复原值并重新编辑
+* **易于扩展**：可以根据不同的验证类型（stop、warning、information）显示不同样式的弹窗
 
 ### 5.2 局限性与扩展建议
 
-- **同步弹窗限制**：示例中使用的 `alert` 是同步弹窗，会阻塞 JavaScript 执行。在实际项目中，建议使用异步弹窗组件（如 UI 框架提供的 Modal），并参考注释中的异步处理代码
-- **扩展建议**：
-  - 可以根据 `errorStyle` 的不同值（stop、warning、information）显示不同样式的弹窗
-  - 可以在弹窗中提供更多操作选项，如"恢复原值"、"忽略错误"、"查看帮助"等
-  - 可以记录验证错误日志，用于数据质量分析
+* **同步弹窗限制**：示例中使用的 `alert` 是同步弹窗，会阻塞 JavaScript 执行。在实际项目中，建议使用异步弹窗组件（如 UI 框架提供的 Modal），并参考注释中的异步处理代码
+* **扩展建议**：
+    * 可以根据 `errorStyle` 的不同值（stop、warning、information）显示不同样式的弹窗
+    * 可以在弹窗中提供更多操作选项，如"恢复原值"、"忽略错误"、"查看帮助"等
+    * 可以记录验证错误日志，用于数据质量分析
 
 ## 六、关键代码片段
 
@@ -159,4 +159,8 @@ setTimeout(function(){
 
 该方案适用于需要对用户输入进行严格控制的场景，具有良好的扩展性，可以根据实际业务需求定制错误提示和处理逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/dfAqCV5ti02evyRCb5mqvw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

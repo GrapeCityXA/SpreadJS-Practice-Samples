@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **自定义错误提示内容**：默认的保护状态提示信息可能不符合业务需求，需要修改为更友好或更具体的提示文字
-- **品牌化界面**：通过修改弹出框标题，可以将设计器标题改为企业品牌名称或自定义标识
-- **多语言适配**：在已有中文资源包的基础上，进一步定制特定的提示文案
+* **自定义错误提示内容**：默认的保护状态提示信息可能不符合业务需求，需要修改为更友好或更具体的提示文字
+* **品牌化界面**：通过修改弹出框标题，可以将设计器标题改为企业品牌名称或自定义标识
+* **多语言适配**：在已有中文资源包的基础上，进一步定制特定的提示文案
 
 ## 三、实现思路
 
@@ -52,11 +52,11 @@ sheet.options.isProtected = true
 
 ### 3.4 技术栈
 
-- SpreadJS 16.0.1（核心表格组件）
-- SpreadJS Designer 16.0.1（设计器组件）
-- SpreadJS 中文资源包 16.0.1
-- SystemJS（模块加载器）
-- TypeScript 4.1.2
+* SpreadJS 16.0.1（核心表格组件）
+* SpreadJS Designer 16.0.1（设计器组件）
+* SpreadJS 中文资源包 16.0.1
+* SystemJS（模块加载器）
+* TypeScript 4.1.2
 
 ## 四、使用说明
 
@@ -74,21 +74,21 @@ npm install
 2. 页面会显示 SpreadJS 设计器，左上角有一个 5x5 的红色区域
 3. 双击红色区域中的任意单元格
 4. 系统会弹出自定义的错误提示框，显示"不支持对锁定单元格进行修改"
-5. 弹出框标题显示为"**设计器"（已被自定义修改）
+5. 弹出框标题显示为"\*\*设计器"（已被自定义修改）
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- **简单易用**：只需修改资源对象的属性即可实现自定义，无需复杂的 DOM 操作
-- **国际化友好**：基于 SpreadJS 的文化管理机制，可以针对不同语言环境进行定制
-- **样式可扩展**：代码注释中提到可以通过重写 CSS 类进一步定制弹出框样式（如 `.gc-sjs-designer-dialog`、`.dialog-titlebar` 等）
+* **简单易用**：只需修改资源对象的属性即可实现自定义，无需复杂的 DOM 操作
+* **国际化友好**：基于 SpreadJS 的文化管理机制，可以针对不同语言环境进行定制
+* **样式可扩展**：代码注释中提到可以通过重写 CSS 类进一步定制弹出框样式（如 `.gc-sjs-designer-dialog`、`.dialog-titlebar` 等）
 
 ### 5.2 扩展建议
 
-- 可以通过自定义 CSS 进一步修改弹出框的视觉样式（颜色、字体、尺寸等）
-- 可以扩展到修改其他类型的提示信息，如公式错误、数据验证失败等场景
-- 可以结合业务逻辑，根据不同的保护场景显示不同的提示内容
+* 可以通过自定义 CSS 进一步修改弹出框的视觉样式（颜色、字体、尺寸等）
+* 可以扩展到修改其他类型的提示信息，如公式错误、数据验证失败等场景
+* 可以结合业务逻辑，根据不同的保护场景显示不同的提示内容
 
 ## 六、关键代码片段
 
@@ -129,4 +129,8 @@ sheet.options.isProtected = true
 
 该方案适用于需要自定义用户提示信息的所有 SpreadJS 应用场景，具有良好的可维护性和扩展性。
 
-### 在线Demo（[全屏打开](https://jscodemine.grapecity.com/share/Vx7hfzhNwk2Kgv_11xNjHw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

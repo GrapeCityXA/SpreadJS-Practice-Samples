@@ -79,8 +79,8 @@ sheet.setColumnCount(sheet.getColumnCount() + addedColCount);
 
 ### 3.3 技术栈
 
-- @grapecity/spread-sheets: 17.0.8（SpreadJS 核心库）
-- SystemJS: 0.19.22（模块加载器）
+* @grapecity/spread-sheets: 17.0.8（SpreadJS 核心库）
+* SystemJS: 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -114,9 +114,10 @@ npm install
 当前实现假设所有行高和列宽一致（使用第一行/列的尺寸作为标准），如果工作表中存在不同高度的行或不同宽度的列，计算结果可能不够精确。
 
 扩展建议：
-- 可以计算平均行高和列宽，提高计算精度
-- 可以监听窗口大小变化事件，自动触发填充逻辑
-- 可以添加"取消填充"功能，恢复到原始行列数
+
+* 可以计算平均行高和列宽，提高计算精度
+* 可以监听窗口大小变化事件，自动触发填充逻辑
+* 可以添加"取消填充"功能，恢复到原始行列数
 
 ## 六、关键代码片段
 
@@ -161,5 +162,8 @@ document.getElementById("fill").addEventListener("click", function () {
 
 该方案适用于需要保持表格视觉完整性的场景，例如数据看板、报表展示、固定布局的应用等。代码简洁易懂，可以作为学习 SpreadJS 布局控制的入门示例。
 
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/SypM_VR0g0ii6-XV3EyqzA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

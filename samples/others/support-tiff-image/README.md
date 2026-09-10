@@ -6,9 +6,9 @@
 
 在实际业务场景中，用户可能需要在电子表格中插入各种格式的图片，包括医疗影像、扫描文档等常用的 TIFF 格式文件。然而，浏览器原生不支持 TIFF 格式的显示，这给 Web 端的电子表格应用带来了挑战。本示例通过以下方式解决了这个问题：
 
-- 集成第三方 TIFF 解析库，实现 TIFF 格式的解码和转换
-- 统一处理多种图片格式的上传流程
-- 使用 SpreadJS Shapes API 将图片以形状的方式插入到工作表中
+* 集成第三方 TIFF 解析库，实现 TIFF 格式的解码和转换
+* 统一处理多种图片格式的上传流程
+* 使用 SpreadJS Shapes API 将图片以形状的方式插入到工作表中
 
 ## 三、实现思路
 
@@ -56,18 +56,18 @@ SpreadJS 通过 Shapes API 提供了图片插入功能，`addPictureShape()` 方
 sheet.shapes.addPictureShape(name, src, left, top, width, height);
 ```
 
-- `name`: 图片形状的唯一标识
-- `src`: 图片的 DataURL 或 URL
-- `left`, `top`: 图片在工作表中的位置（像素）
-- `width`, `height`: 图片的宽度和高度（像素）
+* `name`: 图片形状的唯一标识
+* `src`: 图片的 DataURL 或 URL
+* `left`, `top`: 图片在工作表中的位置（像素）
+* `width`, `height`: 图片的宽度和高度（像素）
 
 ### 3.2 技术栈
 
-- SpreadJS 16.0.1：核心电子表格组件
-- @grapecity/spread-sheets-shapes 16.0.1：图形和图片支持
-- tiff.min.js：TIFF 格式解析库
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言
+* SpreadJS 16.0.1：核心电子表格组件
+* @grapecity/spread-sheets-shapes 16.0.1：图形和图片支持
+* tiff.min.js：TIFF 格式解析库
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言
 
 ## 四、使用说明
 
@@ -89,16 +89,16 @@ npm install
 
 ### 5.1 优点
 
-- 扩展了 SpreadJS 对图片格式的支持，解决了浏览器不支持 TIFF 格式的问题
-- 代码结构清晰，通过类型判断实现了不同格式的分流处理
-- 使用 FileReader API 实现了纯前端的图片处理，无需服务器端支持
+* 扩展了 SpreadJS 对图片格式的支持，解决了浏览器不支持 TIFF 格式的问题
+* 代码结构清晰，通过类型判断实现了不同格式的分流处理
+* 使用 FileReader API 实现了纯前端的图片处理，无需服务器端支持
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现中图片插入位置和尺寸是固定的，可以扩展为支持用户自定义位置和尺寸
-- 可以添加图片预览功能，让用户在上传前查看图片效果
-- 可以支持批量上传多张图片
-- 可以添加图片格式验证和文件大小限制，提升用户体验和安全性
+* 当前实现中图片插入位置和尺寸是固定的，可以扩展为支持用户自定义位置和尺寸
+* 可以添加图片预览功能，让用户在上传前查看图片效果
+* 可以支持批量上传多张图片
+* 可以添加图片格式验证和文件大小限制，提升用户体验和安全性
 
 ## 六、关键代码片段
 
@@ -135,11 +135,15 @@ document.getElementById('upload').addEventListener('click', function () {
 
 本示例展示了如何通过集成第三方库来扩展 SpreadJS 的功能，使其支持浏览器原生不支持的 TIFF 图片格式。开发者可以从中学到：
 
-- 如何使用 FileReader API 读取本地文件
-- 如何根据文件类型采用不同的处理策略
-- 如何使用第三方库解析特殊格式的图片
-- 如何使用 SpreadJS Shapes API 插入图片到工作表
+* 如何使用 FileReader API 读取本地文件
+* 如何根据文件类型采用不同的处理策略
+* 如何使用第三方库解析特殊格式的图片
+* 如何使用 SpreadJS Shapes API 插入图片到工作表
 
 该方案适用于需要在 Web 端电子表格中处理多种图片格式的场景，特别是医疗、档案管理等需要支持 TIFF 格式的行业应用。通过类似的思路，开发者还可以扩展支持其他特殊格式的文件。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/9i_sFml41k69NRQaURCF8Q/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中实现带有自定义背景色的多选下拉框功能。通过自定义单元格类型（CellType），将选中的多个选项以带有不同背景色的色块形式展示在单元格中，每个选项对应一个预定义的颜色，提供了更加直观和美观的数据展示方式。
+本示例展示了如何在 SpreadJS 中实现带有自定义背景色的多选下拉框功能。通过自定义单元格类型（CellType），将选中的多个选项以带有不同背景色的色块形式展示在单元格中，每个选项对应一个预定义的颜色，提供了更加直观和美观的数据展示方式。 
 
 该示例适用于需要在表格中以可视化方式展示多选标签、分类标记或状态标识的场景，例如任务管理系统中的标签选择、项目分类标记等。
 
 ## 二、解决的问题
 
-- 多选下拉框的选中项默认以纯文本形式展示，缺乏视觉区分度
-- 需要为不同的选项赋予不同的颜色标识，便于快速识别
-- 需要在单元格中以色块形式展示多个选中项，提升用户体验
+* 多选下拉框的选中项默认以纯文本形式展示，缺乏视觉区分度
+* 需要为不同的选项赋予不同的颜色标识，便于快速识别
+* 需要在单元格中以色块形式展示多个选中项，提升用户体验
 
 ## 三、实现思路
 
@@ -146,9 +146,9 @@ customStyle.dropDowns = [
 
 ### 3.5 技术栈
 
-- SpreadJS 17.0.8：核心表格控件
-- SystemJS 0.19.22：模块加载器
-- systemjs-plugin-babel 0.0.25：ES6 语法转译
+* SpreadJS 17.0.8：核心表格控件
+* SystemJS 0.19.22：模块加载器
+* systemjs-plugin-babel 0.0.25：ES6 语法转译
 
 ## 四、使用说明
 
@@ -172,16 +172,16 @@ npm install
 
 ### 5.1 优点
 
-- 视觉效果直观，通过颜色快速区分不同选项
-- 支持多选功能，满足复杂业务场景需求
-- 自定义单元格类型实现灵活，可根据需求调整渲染逻辑
-- 下拉列表与单元格展示保持一致的视觉风格
+* 视觉效果直观，通过颜色快速区分不同选项
+* 支持多选功能，满足复杂业务场景需求
+* 自定义单元格类型实现灵活，可根据需求调整渲染逻辑
+* 下拉列表与单元格展示保持一致的视觉风格
 
 ### 5.2 局限性与扩展建议
 
-- 当前颜色映射是硬编码的，可以改为从配置文件或 API 动态加载
-- 色块宽度根据文本内容自动计算，当单元格宽度不足时会被截断，可以考虑增加换行或滚动功能
-- 可以扩展支持自定义图标、边框样式等更丰富的视觉效果
+* 当前颜色映射是硬编码的，可以改为从配置文件或 API 动态加载
+* 色块宽度根据文本内容自动计算，当单元格宽度不足时会被截断，可以考虑增加换行或滚动功能
+* 可以扩展支持自定义图标、边框样式等更丰富的视觉效果
 
 ## 六、关键代码片段
 
@@ -211,11 +211,15 @@ valueArr.forEach((item, index) => {
 
 本示例展示了如何通过自定义单元格类型实现带有背景色的多选下拉框功能，为 SpreadJS 提供了更加丰富的数据展示方式。开发者可以从中学到：
 
-- 如何继承 `CellTypes.Base` 创建自定义单元格类型
-- 如何重写 `paint` 方法实现自定义渲染逻辑
-- 如何配置多选下拉框并自定义下拉列表的 DOM 结构
-- 如何处理单元格宽度限制和色块溢出问题
+* 如何继承 `CellTypes.Base` 创建自定义单元格类型
+* 如何重写 `paint` 方法实现自定义渲染逻辑
+* 如何配置多选下拉框并自定义下拉列表的 DOM 结构
+* 如何处理单元格宽度限制和色块溢出问题
 
 该方案适用于需要在表格中以可视化方式展示多选标签的场景，具有良好的扩展性，可以根据实际需求调整颜色映射、渲染样式等配置。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/eQihBK_1Vkys_YIALSBDvw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **精细化权限控制**：在表单保护场景下，需要对用户操作权限进行更细粒度的控制，而不是简单的"全部禁用"或"全部启用"
-- **提升用户体验**：允许用户在保护模式下执行部分格式化操作，避免频繁切换保护状态
-- **业务场景适配**：满足特定业务需求，例如允许用户修改单元格样式但不允许修改数据结构
+* **精细化权限控制**：在表单保护场景下，需要对用户操作权限进行更细粒度的控制，而不是简单的"全部禁用"或"全部启用"
+* **提升用户体验**：允许用户在保护模式下执行部分格式化操作，避免频繁切换保护状态
+* **业务场景适配**：满足特定业务需求，例如允许用户修改单元格样式但不允许修改数据结构
 
 ## 三、实现思路
 
@@ -54,4 +54,8 @@ designer.refresh()
 
 ####
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/uxbxdHL7WE27MVjESpGY0Q/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

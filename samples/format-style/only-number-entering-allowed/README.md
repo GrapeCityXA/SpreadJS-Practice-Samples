@@ -6,10 +6,10 @@
 
 在实际业务场景中，经常需要限制某些单元格只能输入特定类型的数据。例如：
 
-- 金额、数量等字段需要严格限制为数字输入
-- 防止用户误输入文本导致数据格式错误
-- 在输入阶段就进行数据校验，提升用户体验
-- 避免后续数据处理时因类型错误导致的异常
+* 金额、数量等字段需要严格限制为数字输入
+* 防止用户误输入文本导致数据格式错误
+* 在输入阶段就进行数据校验，提升用户体验
+* 避免后续数据处理时因类型错误导致的异常
 
 本示例通过自定义单元格类型，在用户输入阶段就实时过滤非法字符，配合数据验证器进行范围校验，实现了双重保障。
 
@@ -65,9 +65,10 @@ NumberCellType.prototype.activateEditor = function (editorContext, cellStyle, ce
 ```
 
 关键点：
-- 调用父类的 `activateEditor` 方法保证基础功能正常
-- 监听 `input` 和 `change` 事件
-- 使用正则表达式 `/[^0-9.]/g` 过滤掉除数字和小数点外的所有字符
+
+* 调用父类的 `activateEditor` 方法保证基础功能正常
+* 监听 `input` 和 `change` 事件
+* 使用正则表达式 `/[^0-9.]/g` 过滤掉除数字和小数点外的所有字符
 
 ### 3.4 数据验证器
 
@@ -96,9 +97,9 @@ sheet.getCell(2, 2).cellType(new NumberCellType());
 
 ### 3.6 技术栈
 
-- SpreadJS 15.0.0：核心表格控件
-- TypeScript 4.1.2：开发语言（编译为 JavaScript）
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 15.0.0：核心表格控件
+* TypeScript 4.1.2：开发语言（编译为 JavaScript）
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -124,22 +125,24 @@ npm install
 
 ### 5.1 优点
 
-- 实时过滤：用户输入时立即过滤非法字符，体验流畅
-- 双重验证：输入过滤 + 数据验证器，确保数据准确性
-- 可扩展性强：可以轻松修改正则表达式来支持其他输入规则
-- 代码简洁：核心逻辑不到 100 行代码
+* 实时过滤：用户输入时立即过滤非法字符，体验流畅
+* 双重验证：输入过滤 + 数据验证器，确保数据准确性
+* 可扩展性强：可以轻松修改正则表达式来支持其他输入规则
+* 代码简洁：核心逻辑不到 100 行代码
 
 ### 5.2 局限性与扩展建议
 
 当前实现的局限性：
-- 正则表达式 `/[^0-9.]/g` 允许多个小数点，可能导致 `1.2.3` 这样的非法数字
-- 没有限制负号输入，如果需要支持负数需要调整正则
+
+* 正则表达式 `/[^0-9.]/g` 允许多个小数点，可能导致 `1.2.3` 这样的非法数字
+* 没有限制负号输入，如果需要支持负数需要调整正则
 
 扩展建议：
-- 改进正则表达式为 `/^-?\d*\.?\d*$/` 以支持标准数字格式
-- 添加千分位分隔符显示功能
-- 支持科学计数法输入
-- 添加输入提示或占位符文本
+
+* 改进正则表达式为 `/^-?\d*\.?\d*$/` 以支持标准数字格式
+* 添加千分位分隔符显示功能
+* 支持科学计数法输入
+* 添加输入提示或占位符文本
 
 ## 六、关键代码片段
 
@@ -178,12 +181,16 @@ NumberCellType.prototype.updateEditor = function (editorContext, cellStyle, cell
 
 本示例展示了 SpreadJS 自定义单元格类型的核心开发流程，开发者可以从中学到：
 
-- 如何继承 `CellTypes.Base` 创建自定义单元格类型
-- 如何重写关键方法（`createEditorElement`、`activateEditor` 等）实现自定义行为
-- 如何使用 DOM 事件监听实现实时输入验证
-- 如何结合数据验证器实现多层次的数据校验
-- 如何使用正则表达式进行输入过滤
+* 如何继承 `CellTypes.Base` 创建自定义单元格类型
+* 如何重写关键方法（`createEditorElement`、`activateEditor` 等）实现自定义行为
+* 如何使用 DOM 事件监听实现实时输入验证
+* 如何结合数据验证器实现多层次的数据校验
+* 如何使用正则表达式进行输入过滤
 
 该方案适用于需要严格控制单元格输入类型的场景，如财务报表、数据录入表单等。通过修改正则表达式和验证规则，可以轻松扩展到其他输入限制场景（如邮箱、电话号码、身份证号等）。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/PYXUmUfKuEOgjnSzZgRPIA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

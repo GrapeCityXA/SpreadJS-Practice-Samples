@@ -8,10 +8,10 @@
 
 在实际应用中，开发者可能需要根据用户角色或业务需求限制 SpreadJS Designer 的某些功能。例如：
 
-- 在只读模式下禁用导入功能，防止用户修改数据源
-- 根据用户权限动态控制菜单项的可用性
-- 简化界面，隐藏或禁用不常用的功能选项
-- 在特定工作流程中限制文件操作，确保数据安全
+* 在只读模式下禁用导入功能，防止用户修改数据源
+* 根据用户权限动态控制菜单项的可用性
+* 简化界面，隐藏或禁用不常用的功能选项
+* 在特定工作流程中限制文件操作，确保数据安全
 
 本示例通过模板定制机制，提供了一种灵活的方式来控制 Designer 界面元素的行为。
 
@@ -38,11 +38,12 @@ fileMenuPanelTemplate.content[0].children[0].children[0].children[0].children[5]
 ```
 
 这行代码通过链式访问模板的层级结构：
-- `content[0]` - 文件菜单的主内容区域
-- `children[0].children[0].children[0].children[0]` - 逐层深入到菜单项容器
-- `children[5]` - 定位到第6个子菜单组（索引从0开始）
-- `items[0]` - 该组中的第一个菜单项（导入按钮）
-- `enabled = false` - 设置为禁用状态
+
+* `content[0]` \- 文件菜单的主内容区域
+* `children[0].children[0].children[0].children[0]` \- 逐层深入到菜单项容器
+* `children[5]` \- 定位到第6个子菜单组（索引从0开始）
+* `items[0]` \- 该组中的第一个菜单项（导入按钮）
+* `enabled = false` \- 设置为禁用状态
 
 ### 3.3 重新注册修改后的模板
 
@@ -71,11 +72,11 @@ sheet.setValue(0, 0, 'grapecity');
 
 ### 3.5 技术栈
 
-- @grapecity/spread-sheets: 16.0.1 - SpreadJS 核心库
-- @grapecity/spread-sheets-designer: 16.0.1 - SpreadJS Designer 设计器组件
-- @grapecity/spread-sheets-designer-resources-cn: 16.0.1 - 中文资源包
-- SystemJS: 0.19.22 - 模块加载器
-- TypeScript: 4.1.2 - 类型支持
+* @grapecity/spread-sheets: 16.0.1 - SpreadJS 核心库
+* @grapecity/spread-sheets-designer: 16.0.1 - SpreadJS Designer 设计器组件
+* @grapecity/spread-sheets-designer-resources-cn: 16.0.1 - 中文资源包
+* SystemJS: 0.19.22 - 模块加载器
+* TypeScript: 4.1.2 - 类型支持
 
 ## 四、使用说明
 
@@ -101,22 +102,23 @@ npm install
 
 ### 5.1 优点
 
-- 灵活的权限控制：可以根据业务需求动态禁用特定功能
-- 非侵入式实现：通过模板机制修改，不影响 Designer 的其他功能
-- 可扩展性强：同样的方法可以应用于其他菜单项或工具栏按钮
-- 用户体验友好：禁用的选项仍然可见但不可操作，用户能清楚了解功能限制
+* 灵活的权限控制：可以根据业务需求动态禁用特定功能
+* 非侵入式实现：通过模板机制修改，不影响 Designer 的其他功能
+* 可扩展性强：同样的方法可以应用于其他菜单项或工具栏按钮
+* 用户体验友好：禁用的选项仍然可见但不可操作，用户能清楚了解功能限制
 
 ### 5.2 局限性与扩展建议
 
 当前实现通过硬编码的索引路径定位菜单项，存在以下局限性：
 
-- 如果 SpreadJS Designer 版本更新导致模板结构变化，索引路径可能失效
-- 需要手动查找目标菜单项的准确路径，调试成本较高
+* 如果 SpreadJS Designer 版本更新导致模板结构变化，索引路径可能失效
+* 需要手动查找目标菜单项的准确路径，调试成本较高
 
 扩展建议：
-- 可以通过遍历模板对象，根据菜单项的 `name` 或 `command` 属性动态查找目标节点
-- 封装一个通用的菜单项查找和修改工具函数，提高代码的可维护性
-- 结合用户权限系统，实现动态的菜单权限控制
+
+* 可以通过遍历模板对象，根据菜单项的 `name` 或 `command` 属性动态查找目标节点
+* 封装一个通用的菜单项查找和修改工具函数，提高代码的可维护性
+* 结合用户权限系统，实现动态的菜单权限控制
 
 ## 六、关键代码片段
 
@@ -145,11 +147,15 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container");
 
 本示例展示了 SpreadJS Designer 模板定制的核心技术，通过获取、修改和重新注册模板，实现了对文件菜单功能的精细化控制。开发者可以从中学到：
 
-- SpreadJS Designer 的模板机制和 API 使用方法
-- 如何通过模板定制实现权限控制
-- 模板对象的层级结构和属性配置方式
-- 模板注册的时机和注意事项
+* SpreadJS Designer 的模板机制和 API 使用方法
+* 如何通过模板定制实现权限控制
+* 模板对象的层级结构和属性配置方式
+* 模板注册的时机和注意事项
 
 该方案适用于需要对 SpreadJS Designer 进行界面定制和功能限制的场景，具有良好的扩展性。通过类似的方法，可以实现更复杂的菜单定制需求，如添加自定义菜单项、修改工具栏布局、动态控制功能可见性等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/YoWItcvTNESFSOEKisNnJA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

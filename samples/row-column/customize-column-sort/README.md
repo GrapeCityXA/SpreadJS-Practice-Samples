@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **复杂表头排序交互**：在多行合并列头的场景下，标准的列头排序功能可能无法满足自定义交互需求，本示例通过自定义 CellType 实现了灵活的排序控制
-- **可视化排序状态**：通过在列头单元格中绘制红色的上下箭头指示器，直观展示当前列的排序状态（升序/降序）
-- **精确的点击区域控制**：通过 `getHitInfo` 方法精确控制排序触发区域，只有点击列头右侧的箭头区域才会触发排序，避免误操作
+* **复杂表头排序交互**：在多行合并列头的场景下，标准的列头排序功能可能无法满足自定义交互需求，本示例通过自定义 CellType 实现了灵活的排序控制
+* **可视化排序状态**：通过在列头单元格中绘制红色的上下箭头指示器，直观展示当前列的排序状态（升序/降序）
+* **精确的点击区域控制**：通过 `getHitInfo` 方法精确控制排序触发区域，只有点击列头右侧的箭头区域才会触发排序，避免误操作
 
 ## 三、实现思路
 
@@ -122,9 +122,9 @@ sheet.setCellType(2, 4, new SortHearderCellType(), spreadNS.SheetArea.colHeader)
 
 ### 3.6 技术栈
 
-- SpreadJS 15.0.0：核心表格控件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格控件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -149,16 +149,16 @@ npm install
 
 ### 5.1 优点
 
-- **灵活的自定义能力**：通过自定义 CellType 实现完全可控的排序交互逻辑
-- **可视化反馈**：通过箭头指示器直观展示排序状态
-- **精确的交互控制**：通过 `getHitInfo` 精确控制点击触发区域，避免误操作
-- **适配复杂表头**：支持多行合并列头场景，可以为任意列头单元格添加排序功能
+* **灵活的自定义能力**：通过自定义 CellType 实现完全可控的排序交互逻辑
+* **可视化反馈**：通过箭头指示器直观展示排序状态
+* **精确的交互控制**：通过 `getHitInfo` 精确控制点击触发区域，避免误操作
+* **适配复杂表头**：支持多行合并列头场景，可以为任意列头单元格添加排序功能
 
 ### 5.2 局限性与扩展建议
 
-- **单列排序**：当前实现仅支持单列排序，如需多列排序需要扩展 `tag` 数据结构和排序逻辑
-- **样式固定**：箭头颜色、大小等样式参数硬编码在代码中，可以改为通过配置参数传入
-- **扩展建议**：可以添加排序动画效果、支持自定义排序规则、添加排序历史记录等功能
+* **单列排序**：当前实现仅支持单列排序，如需多列排序需要扩展 `tag` 数据结构和排序逻辑
+* **样式固定**：箭头颜色、大小等样式参数硬编码在代码中，可以改为通过配置参数传入
+* **扩展建议**：可以添加排序动画效果、支持自定义排序规则、添加排序历史记录等功能
 
 ## 六、关键代码片段
 
@@ -203,4 +203,8 @@ function fillSampleData(sheet, range) {
 
 该方案适用于需要在复杂表头结构中实现自定义排序交互的场景，具有良好的扩展性，可以根据实际需求进一步定制排序逻辑和视觉效果。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/JtquOTzEv06uZZoj5Y7I9w/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

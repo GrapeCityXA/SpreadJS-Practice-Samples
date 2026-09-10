@@ -1,3 +1,5 @@
+# remove-the-space-copied-from-styled-excel
+
 ### 问题：复制Excel带样式的空单元格到SpreadJS中会出现空格
 
 #### 背景：
@@ -9,4 +11,8 @@
 我们可以通过监听浏览器的粘贴事件`paste`和SpreadJS粘贴事件`ClipboardPasted`，并重写粘贴后的行为来实现去除空格的目的。
 具体代码请查看demo。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/HjYb5hofukmaQSHrnFLXxg/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

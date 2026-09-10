@@ -6,10 +6,10 @@
 
 在实际业务中，经常需要在用户操作复选框或单选框时触发特定逻辑，例如：
 
-- 表单数据的实时验证和提交
-- 根据用户选择动态显示或隐藏其他内容
-- 记录用户的操作行为用于审计
-- 实现多个控件之间的联动效果
+* 表单数据的实时验证和提交
+* 根据用户选择动态显示或隐藏其他内容
+* 记录用户的操作行为用于审计
+* 实现多个控件之间的联动效果
 
 本示例提供了一种简洁的方式来区分不同类型的单元格控件，并针对性地处理它们的值变化事件。
 
@@ -54,15 +54,16 @@ spread.fromJSON(cellfile)
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心表格控件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持（配置环境）
+* SpreadJS 15.0.0：核心表格控件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持（配置环境）
 
 ## 四、使用说明
 
 ### 4.1 运行方式
 
 1. 安装依赖：
+
 ```bash
 npm install
 ```
@@ -80,26 +81,30 @@ npm install
 
 ### 5.1 优点
 
-- 统一的事件处理机制，通过一个事件监听器处理所有单元格的值变化
-- 类型识别清晰，可以精确区分不同的单元格控件类型
-- 代码简洁，核心逻辑仅需十几行代码即可实现
-- 易于扩展，可以方便地添加对其他单元格类型的处理
+* 统一的事件处理机制，通过一个事件监听器处理所有单元格的值变化
+* 类型识别清晰，可以精确区分不同的单元格控件类型
+* 代码简洁，核心逻辑仅需十几行代码即可实现
+* 易于扩展，可以方便地添加对其他单元格类型的处理
 
 ### 5.2 扩展建议
 
-- 可以将 alert 替换为更友好的 UI 提示方式
-- 可以在事件处理中添加数据验证逻辑
-- 可以实现多个控件之间的联动效果
-- 可以记录操作日志到后端服务器
+* 可以将 alert 替换为更友好的 UI 提示方式
+* 可以在事件处理中添加数据验证逻辑
+* 可以实现多个控件之间的联动效果
+* 可以记录操作日志到后端服务器
 
 ## 六、总结
 
 本示例展示了 SpreadJS 中监听和处理单元格控件值变化的基本方法。开发者可以从中学到：
 
-- 如何使用 ValueChanged 事件监听单元格值的变化
-- 如何通过 getCellType 和 instanceof 识别不同类型的单元格控件
-- 如何加载和使用预设的工作簿配置数据
+* 如何使用 ValueChanged 事件监听单元格值的变化
+* 如何通过 getCellType 和 instanceof 识别不同类型的单元格控件
+* 如何加载和使用预设的工作簿配置数据
 
 该方案适用于需要对表单控件进行实时监控的场景，代码简洁易懂，具有良好的可扩展性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/Qp64Jb8sOkWiUsLlg_TxSQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -1,6 +1,6 @@
 ## 一、Demo 概述
 
-本示例演示了在 SpreadJS 中进行数据绑定时，如何自动扩展表格区域并保持表格外部单元格的样式一致性。当通过 CellBindingSource 绑定数据到工作表时，表格会根据数据源自动扩展行数，同时将表格外部区域的样式逐行复制，确保整个工作表的视觉效果保持统一。
+本示例演示了在 SpreadJS 中进行数据绑定时，如何自动扩展表格区域并保持表格外部单元格的样式一致性。当通过 CellBindingSource 绑定数据到工作表时，表格会根据数据源自动扩展行数，同时将表格外部区域的样式逐行复制，确保整个工作表的视觉效果保持统一。 
 
 该示例适用于需要动态绑定数据并保持工作表整体样式一致的场景，特别是当表格区域扩展后，需要确保表格外的单元格样式不会出现断层或不一致的情况。
 
@@ -8,9 +8,9 @@
 
 在实际业务中，使用 SpreadJS 进行数据绑定时常常会遇到以下问题：
 
-- 当表格通过数据绑定自动扩展行数时，新增的行可能会破坏原有的工作表样式布局
-- 表格外部区域的单元格样式无法自动跟随表格扩展而复制，导致样式不连续
-- 需要手动维护表格扩展后的样式一致性，增加了开发和维护成本
+* 当表格通过数据绑定自动扩展行数时，新增的行可能会破坏原有的工作表样式布局
+* 表格外部区域的单元格样式无法自动跟随表格扩展而复制，导致样式不连续
+* 需要手动维护表格扩展后的样式一致性，增加了开发和维护成本
 
 本示例通过启用表格的自动扩展功能，并在数据绑定后自动复制表格外部区域的样式，完美解决了这些问题。
 
@@ -72,10 +72,11 @@ function copyTableStyle(sheet, table) {
 ```
 
 该函数的核心逻辑：
-- 获取表格的数据区域范围
-- 使用 `suspendPaint()` 暂停绘制以提高性能
-- 遍历表格扩展的每一行，对于不在表格列范围内的单元格，将上一行的样式复制到当前行
-- 使用 `resumePaint()` 恢复绘制
+
+* 获取表格的数据区域范围
+* 使用 `suspendPaint()` 暂停绘制以提高性能
+* 遍历表格扩展的每一行，对于不在表格列范围内的单元格，将上一行的样式复制到当前行
+* 使用 `resumePaint()` 恢复绘制
 
 #### 表格列范围判断
 
@@ -99,9 +100,9 @@ function isTableArea(range) {
 
 ### 3.3 技术栈
 
-- @grapecity/spread-sheets: 15.0.0（核心表格组件）
-- SystemJS: 0.19.22（模块加载器）
-- TypeScript: 4.1.2（类型支持）
+* @grapecity/spread-sheets: 15.0.0（核心表格组件）
+* SystemJS: 0.19.22（模块加载器）
+* TypeScript: 4.1.2（类型支持）
 
 ## 四、使用说明
 
@@ -125,28 +126,30 @@ npm install
 
 ### 5.1 优点
 
-- 自动化处理：无需手动调整表格大小和样式，数据绑定和样式复制全自动完成
-- 性能优化：使用 `suspendPaint()` 和 `resumePaint()` 减少重绘次数，提高渲染性能
-- 样式一致性：确保表格扩展后整个工作表的视觉效果保持统一
-- 灵活性强：可以轻松适配不同的表格位置和数据源结构
+* 自动化处理：无需手动调整表格大小和样式，数据绑定和样式复制全自动完成
+* 性能优化：使用 `suspendPaint()` 和 `resumePaint()` 减少重绘次数，提高渲染性能
+* 样式一致性：确保表格扩展后整个工作表的视觉效果保持统一
+* 灵活性强：可以轻松适配不同的表格位置和数据源结构
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现假设样式复制是从上一行到下一行的简单复制，如果需要更复杂的样式规则（如隔行变色），需要扩展 `copyTableStyle` 函数
-- 如果工作表中有多个表格，需要为每个表格单独调用样式复制逻辑
-- 可以考虑将样式复制逻辑封装为 SpreadJS 的自定义插件，以便在多个项目中复用
+* 当前实现假设样式复制是从上一行到下一行的简单复制，如果需要更复杂的样式规则（如隔行变色），需要扩展 `copyTableStyle` 函数
+* 如果工作表中有多个表格，需要为每个表格单独调用样式复制逻辑
+* 可以考虑将样式复制逻辑封装为 SpreadJS 的自定义插件，以便在多个项目中复用
 
 ## 六、总结
 
 本示例展示了如何在 SpreadJS 中实现表格数据绑定时的自动扩展和样式保持功能。开发者可以从中学到：
 
-- 如何使用 `expandBoundRows` 方法实现表格的动态扩展
-- 如何使用 `CellBindingSource` 进行数据绑定
-- 如何使用 `copyTo` 方法批量复制单元格样式
-- 如何通过 `suspendPaint` 和 `resumePaint` 优化渲染性能
+* 如何使用 `expandBoundRows` 方法实现表格的动态扩展
+* 如何使用 `CellBindingSource` 进行数据绑定
+* 如何使用 `copyTo` 方法批量复制单元格样式
+* 如何通过 `suspendPaint` 和 `resumePaint` 优化渲染性能
 
 该方案适用于需要动态展示数据并保持工作表整体样式一致的场景，具有良好的可扩展性和实用价值。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Table%20Binding%20Copy%20Unbound%20Region%20Style.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/F3QA6Pb_HEWEq5sndjuSfQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

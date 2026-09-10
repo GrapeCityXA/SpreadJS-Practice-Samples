@@ -6,9 +6,9 @@
 
 在某些业务场景中，开发者需要限制用户对表格的全选操作，例如：
 
-- 防止用户误操作导致大量数据被选中或修改
-- 在权限受限的场景下，禁止用户执行全选相关的批量操作
-- 在特定的工作流程中，需要引导用户进行单元格级别的精确操作
+* 防止用户误操作导致大量数据被选中或修改
+* 在权限受限的场景下，禁止用户执行全选相关的批量操作
+* 在特定的工作流程中，需要引导用户进行单元格级别的精确操作
 
 SpreadJS 默认情况下，点击表角会触发全选操作。本示例通过简单的 DOM 覆盖技术，实现了对表角点击事件的屏蔽。
 
@@ -26,8 +26,9 @@ console.log(corner);
 ```
 
 `getCellRect(row, col, rowViewportIndex, colViewportIndex)` 方法的参数说明：
-- 前两个参数为 `0, 0` 表示起始位置
-- 后两个参数为 `-1, -1` 表示获取表角区域
+
+* 前两个参数为 `0, 0` 表示起始位置
+* 后两个参数为 `-1, -1` 表示获取表角区域
 
 #### 创建覆盖层阻止点击
 
@@ -50,9 +51,9 @@ $("#cornerDiv").height(corner.height).width(corner.width);
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心表格组件
-- jQuery 3.1.1：DOM 操作
-- SystemJS：模块加载器
+* SpreadJS 15.0.0：核心表格组件
+* jQuery 3.1.1：DOM 操作
+* SystemJS：模块加载器
 
 ## 四、使用说明
 
@@ -76,18 +77,18 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单，代码量少，易于理解和维护
-- 无需修改 SpreadJS 的内部配置或事件处理逻辑
-- 通过 CSS 样式可以自定义覆盖层的外观
-- 性能开销极小，不影响表格的其他功能
+* 实现简单，代码量少，易于理解和维护
+* 无需修改 SpreadJS 的内部配置或事件处理逻辑
+* 通过 CSS 样式可以自定义覆盖层的外观
+* 性能开销极小，不影响表格的其他功能
 
 ### 5.2 局限性与扩展建议
 
-- 该方案仅阻止了点击事件，如果需要禁用键盘快捷键（如 Ctrl+A）触发的全选，需要额外监听键盘事件
-- 覆盖层的尺寸是在页面加载时计算的，如果表格尺寸动态变化（如调整行高、列宽），需要重新计算并更新覆盖层尺寸
-- 扩展建议：
-  - 监听 SpreadJS 的 `ColumnWidthChanged` 和 `RowHeightChanged` 事件，动态更新覆盖层尺寸
-  - 结合 `commandManager` 禁用全选相关的命令，实现更彻底的权限控制
+* 该方案仅阻止了点击事件，如果需要禁用键盘快捷键（如 Ctrl+A）触发的全选，需要额外监听键盘事件
+* 覆盖层的尺寸是在页面加载时计算的，如果表格尺寸动态变化（如调整行高、列宽），需要重新计算并更新覆盖层尺寸
+* 扩展建议：
+    * 监听 SpreadJS 的 `ColumnWidthChanged` 和 `RowHeightChanged` 事件，动态更新覆盖层尺寸
+    * 结合 `commandManager` 禁用全选相关的命令，实现更彻底的权限控制
 
 ## 六、关键代码片段
 
@@ -122,13 +123,15 @@ HTML 结构：
 
 开发者可以从中学到：
 
-- 如何使用 `getCellRect()` 方法获取表格特定区域的位置信息
-- 如何通过 DOM 覆盖层实现 UI 交互控制
-- 如何结合 CSS 绝对定位实现精确的元素覆盖
-- 轻量级 UI 控制方案的设计思路
+* 如何使用 `getCellRect()` 方法获取表格特定区域的位置信息
+* 如何通过 DOM 覆盖层实现 UI 交互控制
+* 如何结合 CSS 绝对定位实现精确的元素覆盖
+* 轻量级 UI 控制方案的设计思路
 
 该方案适用于需要限制用户操作权限的场景，并且可以作为更复杂权限控制系统的一部分。开发者可以根据实际需求，扩展该方案以支持动态尺寸调整和更全面的交互控制。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Corner%20Disable%20Clicking%20Event.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/E7Dgg1JeoUS0WRuvokaMAw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

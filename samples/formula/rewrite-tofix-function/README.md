@@ -6,10 +6,10 @@
 
 ## 二、解决的问题
 
-- **浮点数精度溢出**：JavaScript 原生的 `toFixed()` 和 `toPrecision()` 方法在处理高精度浮点数时可能导致精度溢出，影响 SpreadJS 单元格的显示效果
-- **公式计算精度控制**：在复杂的公式计算场景中，需要统一控制数值精度，避免出现过长的小数位数
-- **动态引用需求**：通过 INDIRECT 函数实现单元格的动态引用，提升公式的灵活性
-- **业务逻辑封装**：通过自定义函数将特定业务逻辑（如三角形面积计算）封装为可复用的公式函数
+* **浮点数精度溢出**：JavaScript 原生的 `toFixed()` 和 `toPrecision()` 方法在处理高精度浮点数时可能导致精度溢出，影响 SpreadJS 单元格的显示效果
+* **公式计算精度控制**：在复杂的公式计算场景中，需要统一控制数值精度，避免出现过长的小数位数
+* **动态引用需求**：通过 INDIRECT 函数实现单元格的动态引用，提升公式的灵活性
+* **业务逻辑封装**：通过自定义函数将特定业务逻辑（如三角形面积计算）封装为可复用的公式函数
 
 ## 三、实现思路
 
@@ -126,10 +126,10 @@ asyncSum.prototype.evaluateAsync = function (context) {
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件
-- jQuery 3.6.1：DOM 操作和事件处理
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持
+* SpreadJS 15.0.0：核心电子表格组件
+* jQuery 3.6.1：DOM 操作和事件处理
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持
 
 ## 四、使用说明
 
@@ -154,16 +154,16 @@ npm install
 
 ### 5.1 优点
 
-- **精度控制**：通过重写原生方法，从根源上解决浮点数精度问题，适用于所有 SpreadJS 计算场景
-- **函数扩展性强**：支持自定义同步/异步函数，可以封装复杂业务逻辑
-- **批量计算高效**：数组公式可以一次性对多个单元格应用相同计算逻辑
-- **动态引用灵活**：INDIRECT 函数支持通过字符串拼接和单元格值动态构建引用
+* **精度控制**：通过重写原生方法，从根源上解决浮点数精度问题，适用于所有 SpreadJS 计算场景
+* **函数扩展性强**：支持自定义同步/异步函数，可以封装复杂业务逻辑
+* **批量计算高效**：数组公式可以一次性对多个单元格应用相同计算逻辑
+* **动态引用灵活**：INDIRECT 函数支持通过字符串拼接和单元格值动态构建引用
 
 ### 5.2 局限性与扩展建议
 
-- **全局影响**：重写 Number 原型方法会影响整个应用的数值处理，需要谨慎评估影响范围
-- **异步函数性能**：频繁触发异步函数（如示例中的 setInterval）可能影响性能，建议根据实际需求优化触发频率
-- **扩展建议**：可以考虑将精度限制值（11）配置化，支持不同场景的精度需求
+* **全局影响**：重写 Number 原型方法会影响整个应用的数值处理，需要谨慎评估影响范围
+* **异步函数性能**：频繁触发异步函数（如示例中的 setInterval）可能影响性能，建议根据实际需求优化触发频率
+* **扩展建议**：可以考虑将精度限制值（11）配置化，支持不同场景的精度需求
 
 ## 六、关键代码片段
 
@@ -218,12 +218,16 @@ sheet2.addCustomFunction(area);
 
 本示例展示了 SpreadJS 在处理浮点数精度问题时的解决方案，以及公式系统的多种高级用法。开发者可以从中学到：
 
-- 如何通过重写 JavaScript 原生方法解决浮点数精度问题
-- SpreadJS 内置公式的使用方法（统计函数、条件函数、动态引用函数）
-- 自定义同步/异步函数的实现和注册流程
-- 数组公式的批量计算应用
-- 异步函数在实时数据更新场景中的应用
+* 如何通过重写 JavaScript 原生方法解决浮点数精度问题
+* SpreadJS 内置公式的使用方法（统计函数、条件函数、动态引用函数）
+* 自定义同步/异步函数的实现和注册流程
+* 数组公式的批量计算应用
+* 异步函数在实时数据更新场景中的应用
 
 该方案适用于需要精确控制数值精度的财务、统计类应用，同时为复杂业务逻辑的封装提供了灵活的扩展机制。开发者可以根据实际需求调整精度限制值，或扩展更多自定义函数来满足特定业务场景。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/NzBND-Q4xE2A7H1kc_ZgPg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

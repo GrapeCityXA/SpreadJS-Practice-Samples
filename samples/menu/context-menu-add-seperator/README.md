@@ -4,10 +4,10 @@
 
 ## 二、解决的问题
 
-- 在 SpreadJS Designer 的右键菜单中添加自定义菜单项和子菜单
-- 在子菜单中插入分隔符，实现菜单项的逻辑分组
-- 自定义分隔符的样式，使其符合应用的 UI 设计规范
-- 避免分隔符在鼠标悬停时出现默认的高亮背景效果
+* 在 SpreadJS Designer 的右键菜单中添加自定义菜单项和子菜单
+* 在子菜单中插入分隔符，实现菜单项的逻辑分组
+* 自定义分隔符的样式，使其符合应用的 UI 设计规范
+* 避免分隔符在鼠标悬停时出现默认的高亮背景效果
 
 ## 三、实现思路
 
@@ -91,10 +91,10 @@ spread.contextMenu.menuView = new CustomMenuView();
 
 ### 3.4 技术栈
 
-- SpreadJS 16.0.1（核心表格组件）
-- SpreadJS Designer 16.0.1（设计器组件）
-- SystemJS 0.19.22（模块加载器）
-- TypeScript 4.1.2（开发语言）
+* SpreadJS 16.0.1（核心表格组件）
+* SpreadJS Designer 16.0.1（设计器组件）
+* SystemJS 0.19.22（模块加载器）
+* TypeScript 4.1.2（开发语言）
 
 ## 四、使用说明
 
@@ -119,16 +119,16 @@ npm install
 
 ### 5.1 优点
 
-- 实现了右键菜单的深度定制，支持自定义菜单项和子菜单结构
-- 通过继承 `MenuView` 类，可以灵活控制菜单项的渲染逻辑
-- 分隔符样式完全可控，可以根据应用的 UI 规范进行调整
-- 使用 CSS `:has()` 伪类选择器优雅地禁用了分隔符的交互效果
+* 实现了右键菜单的深度定制，支持自定义菜单项和子菜单结构
+* 通过继承 `MenuView` 类，可以灵活控制菜单项的渲染逻辑
+* 分隔符样式完全可控，可以根据应用的 UI 规范进行调整
+* 使用 CSS `:has()` 伪类选择器优雅地禁用了分隔符的交互效果
 
 ### 5.2 局限性与扩展建议
 
-- `:has()` 伪类选择器在较旧的浏览器中可能不被支持，需要考虑兼容性方案
-- 当前示例中的菜单命令只是简单的 `console.log` 输出，实际应用中需要实现具体的业务逻辑
-- 可以扩展 `CustomMenuView` 类，支持更多类型的自定义菜单项（如图标、复选框等）
+* `:has()` 伪类选择器在较旧的浏览器中可能不被支持，需要考虑兼容性方案
+* 当前示例中的菜单命令只是简单的 `console.log` 输出，实际应用中需要实现具体的业务逻辑
+* 可以扩展 `CustomMenuView` 类，支持更多类型的自定义菜单项（如图标、复选框等）
 
 ## 六、关键代码片段
 
@@ -168,11 +168,15 @@ CustomMenuView.prototype.createMenuItemElement = function (menuItemData) {
 
 本示例展示了 SpreadJS Designer 右键菜单的高级定制能力，开发者可以从中学到：
 
-- 如何通过 `commandMap` 和 `contextMenu` 配置自定义菜单项
-- 如何在子菜单中插入分隔符实现菜单分组
-- 如何通过继承 `MenuView` 类自定义菜单项的渲染逻辑
-- 如何使用 CSS 控制菜单项的样式和交互效果
+* 如何通过 `commandMap` 和 `contextMenu` 配置自定义菜单项
+* 如何在子菜单中插入分隔符实现菜单分组
+* 如何通过继承 `MenuView` 类自定义菜单项的渲染逻辑
+* 如何使用 CSS 控制菜单项的样式和交互效果
 
 该方案适用于需要对 SpreadJS Designer 右键菜单进行深度定制的场景，具有良好的扩展性，可以在此基础上实现更复杂的菜单功能，如动态菜单、条件显示、图标菜单等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/N8RLjJc-cEi855PvRlDyGQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

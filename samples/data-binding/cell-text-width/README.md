@@ -1,6 +1,6 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中搭建基础的电子表格应用环境。虽然示例标题为"获取单元格文本宽度"，但当前代码提供的是一个最小化的 SpreadJS 工作簿初始化框架，包含了基本的 HTML 页面结构、SystemJS 模块加载配置以及 SpreadJS 实例的创建。
+本示例展示了如何在 SpreadJS 中搭建基础的电子表格应用环境。虽然示例标题为"获取单元格文本宽度"，但当前代码提供的是一个最小化的 SpreadJS 工作簿初始化框架，包含了基本的 HTML 页面结构、SystemJS 模块加载配置以及 SpreadJS 实例的创建。 
 
 该示例适用于初学者了解 SpreadJS 的基本项目结构和初始化流程，为后续添加单元格文本宽度测量等高级功能奠定基础。
 
@@ -8,9 +8,9 @@
 
 本示例解决了以下基础问题：
 
-- 如何在 Web 项目中正确引入和初始化 SpreadJS 组件
-- 如何使用 SystemJS 进行模块化开发
-- 如何配置 SpreadJS 的基本运行环境
+* 如何在 Web 项目中正确引入和初始化 SpreadJS 组件
+* 如何使用 SystemJS 进行模块化开发
+* 如何配置 SpreadJS 的基本运行环境
 
 ## 三、实现思路
 
@@ -18,10 +18,10 @@
 
 示例采用标准的前端项目结构，使用 SystemJS 作为模块加载器。主要文件包括：
 
-- `index.html` - 页面入口，引入样式和脚本
-- `src/app.js` - 应用主逻辑
-- `systemjs.config.js` - SystemJS 配置文件
-- `package.json` - 依赖管理
+* `index.html` \- 页面入口，引入样式和脚本
+* `src/app.js` \- 应用主逻辑
+* `systemjs.config.js` \- SystemJS 配置文件
+* `package.json` \- 依赖管理
 
 ### 3.2 SpreadJS 初始化
 
@@ -45,6 +45,7 @@ sheet.setDataSource(getData());
 ```
 
 核心步骤包括：
+
 1. 导入 SpreadJS 核心库
 2. 配置许可证密钥（生产环境必需）
 3. 将工作簿绑定到 DOM 元素
@@ -75,13 +76,13 @@ System.config({
 });
 ```
 
-该配置支持 ES6 语法转译，并自动解析 node_modules 中的依赖包。
+该配置支持 ES6 语法转译，并自动解析 node\_modules 中的依赖包。
 
 ### 3.4 技术栈
 
-- SpreadJS 17.0.8 - 核心电子表格组件
-- SystemJS 0.19.22 - 模块加载器
-- systemjs-plugin-babel 0.0.25 - ES6 转译插件
+* SpreadJS 17.0.8 - 核心电子表格组件
+* SystemJS 0.19.22 - 模块加载器
+* systemjs-plugin-babel 0.0.25 - ES6 转译插件
 
 ## 四、使用说明
 
@@ -107,16 +108,16 @@ npm install
 
 ### 5.1 优点
 
-- 项目结构清晰，易于理解和扩展
-- 使用模块化开发方式，代码组织规范
-- 全屏布局设计，充分利用浏览器空间
+* 项目结构清晰，易于理解和扩展
+* 使用模块化开发方式，代码组织规范
+* 全屏布局设计，充分利用浏览器空间
 
 ### 5.2 局限性与扩展建议
 
 当前示例存在以下局限：
 
-- 缺少 `src/data.js` 文件，导致数据源无法加载
-- 未实现标题所述的"获取单元格文本宽度"功能
+* 缺少 `src/data.js` 文件，导致数据源无法加载
+* 未实现标题所述的"获取单元格文本宽度"功能
 
 扩展建议：
 
@@ -149,10 +150,14 @@ function getCellTextWidth(sheet, row, col) {
 
 开发者可以从中学到：
 
-- SpreadJS 的基本初始化流程
-- SystemJS 模块加载器的配置方法
-- ES6 模块化开发的项目组织方式
+* SpreadJS 的基本初始化流程
+* SystemJS 模块加载器的配置方法
+* ES6 模块化开发的项目组织方式
 
 该框架适合作为 SpreadJS 项目的起点，可在此基础上添加单元格操作、数据处理、样式设置等高级功能。建议补充缺失的数据文件和文本宽度测量逻辑，以实现完整的功能演示。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/cYW0t0wmqE2b0NbvaT7j_g/?defaultOpen=%7B%22OpenedFileName%22%3A%5B%22%2Findex.html%22%2C%22%2Fsrc%2Fapp.js%22%5D%2C%22ActiveFile%22%3A%22%2Fsrc%2Fapp.js%22%7D)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

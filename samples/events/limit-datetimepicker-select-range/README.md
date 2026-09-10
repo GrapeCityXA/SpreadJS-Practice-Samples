@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **时间有效性校验**：防止用户选择过去的时间，确保业务逻辑的合理性
-- **用户体验优化**：通过即时反馈和自动恢复机制，避免无效数据提交
-- **数据完整性保障**：在前端层面拦截不符合规则的时间输入，减少后端校验压力
+* **时间有效性校验**：防止用户选择过去的时间，确保业务逻辑的合理性
+* **用户体验优化**：通过即时反馈和自动恢复机制，避免无效数据提交
+* **数据完整性保障**：在前端层面拦截不符合规则的时间输入，减少后端校验压力
 
 ## 三、实现思路
 
@@ -37,10 +37,11 @@ sheet.setStyle(1, 1, style)
 ```
 
 关键配置说明：
-- `cellButtons`：在单元格右侧添加下拉按钮，触发时间选择器
-- `dropDowns.type`：指定为 `dateTimePicker` 类型
-- `option.showTime`：启用时间选择功能
-- `option.calendarPage`：设置日历显示 3 个月
+
+* `cellButtons`：在单元格右侧添加下拉按钮，触发时间选择器
+* `dropDowns.type`：指定为 `dateTimePicker` 类型
+* `option.showTime`：启用时间选择功能
+* `option.calendarPage`：设置日历显示 3 个月
 
 ### 3.2 监听单元格变化事件
 
@@ -70,20 +71,21 @@ spread.bind(GC.Spread.Sheets.Events.CellChanged, function (e, info) {
 ```
 
 核心逻辑：
+
 1. 检查是否为撤销操作（`!info.isUndo`），避免重复触发
 2. 验证当前单元格是否配置了时间选择器
 3. 比较新值（`newDate`）与当前时间（`Date.now()`）
 4. 如果时间早于当前时间，则：
-   - 暂停事件触发（`suspendEvent`）
-   - 恢复为旧值（`cell.value(info.oldValue)`）
-   - 恢复事件触发（`resumeEvent`）
-   - 弹出警告提示
+    * 暂停事件触发（`suspendEvent`）
+    * 恢复为旧值（`cell.value(info.oldValue)`）
+    * 恢复事件触发（`resumeEvent`）
+    * 弹出警告提示
 
 ### 3.3 技术栈
 
-- **SpreadJS 核心库**：v17.0.8
-- **SpreadJS Designer**：v17.0.8（提供可视化设计器界面）
-- **SystemJS**：v0.19.22（模块加载器）
+* **SpreadJS 核心库**：v17.0.8
+* **SpreadJS Designer**：v17.0.8（提供可视化设计器界面）
+* **SystemJS**：v0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -108,16 +110,16 @@ npm install
 
 ### 5.1 优点
 
-- **实时校验**：在用户操作时立即进行校验，无需等待表单提交
-- **自动恢复**：无效输入会自动恢复为原值，避免数据污染
-- **用户友好**：通过 `suspendEvent` 和 `resumeEvent` 机制避免事件循环触发
-- **灵活扩展**：校验逻辑可轻松修改为其他时间范围限制（如未来 7 天内、工作日等）
+* **实时校验**：在用户操作时立即进行校验，无需等待表单提交
+* **自动恢复**：无效输入会自动恢复为原值，避免数据污染
+* **用户友好**：通过 `suspendEvent` 和 `resumeEvent` 机制避免事件循环触发
+* **灵活扩展**：校验逻辑可轻松修改为其他时间范围限制（如未来 7 天内、工作日等）
 
 ### 5.2 局限性与扩展建议
 
-- **提示方式**：当前使用 `alert` 弹窗，可优化为更友好的 Toast 提示或单元格批注
-- **校验规则**：可扩展为支持自定义时间范围（如最早时间、最晚时间）
-- **多单元格支持**：当前仅针对 B2 单元格，可扩展为批量配置多个单元格
+* **提示方式**：当前使用 `alert` 弹窗，可优化为更友好的 Toast 提示或单元格批注
+* **校验规则**：可扩展为支持自定义时间范围（如最早时间、最晚时间）
+* **多单元格支持**：当前仅针对 B2 单元格，可扩展为批量配置多个单元格
 
 ## 六、关键代码片段
 
@@ -135,11 +137,15 @@ info.sheet.resumeEvent();   // 恢复事件触发
 
 本示例展示了 SpreadJS 中时间选择器的配置方法和事件驱动的数据校验机制。开发者可以从中学到：
 
-- 如何为单元格配置时间选择器（DateTimePicker）
-- 如何使用 `CellChanged` 事件监听用户输入
-- 如何通过 `suspendEvent` 和 `resumeEvent` 避免事件循环
-- 如何实现自定义的数据校验逻辑
+* 如何为单元格配置时间选择器（DateTimePicker）
+* 如何使用 `CellChanged` 事件监听用户输入
+* 如何通过 `suspendEvent` 和 `resumeEvent` 避免事件循环
+* 如何实现自定义的数据校验逻辑
 
 该方案适用于需要对用户输入进行实时校验的场景，通过简单的事件监听和条件判断即可实现复杂的业务规则，具有良好的可扩展性和实用性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/dS3KnlRfFU6e2X8SgC6nXQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -6,10 +6,10 @@
 
 ## 二、解决的问题
 
-- 如何通过代码方式而非 UI 交互实现数据筛选
-- 如何同时对多个列应用不同的筛选条件
-- 如何使用条件对象（Condition）定义精确的筛选规则
-- 如何在筛选后正确刷新表格显示
+* 如何通过代码方式而非 UI 交互实现数据筛选
+* 如何同时对多个列应用不同的筛选条件
+* 如何使用条件对象（Condition）定义精确的筛选规则
+* 如何在筛选后正确刷新表格显示
 
 ## 三、实现思路
 
@@ -65,10 +65,10 @@ sheet.repaint();
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0：核心表格组件
-- jQuery 3.6.1：DOM 操作和事件绑定
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格组件
+* jQuery 3.6.1：DOM 操作和事件绑定
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -90,17 +90,18 @@ npm install
 
 ### 5.1 优点
 
-- 支持通过代码精确控制筛选逻辑，无需用户手动操作筛选下拉框
-- 可以同时对多个列应用不同的筛选条件，实现联合筛选
-- 使用条件对象（Condition）定义筛选规则，支持多种比较类型（等于、包含、大于等）
-- 筛选结果实时生效，自动隐藏不符合条件的行
+* 支持通过代码精确控制筛选逻辑，无需用户手动操作筛选下拉框
+* 可以同时对多个列应用不同的筛选条件，实现联合筛选
+* 使用条件对象（Condition）定义筛选规则，支持多种比较类型（等于、包含、大于等）
+* 筛选结果实时生效，自动隐藏不符合条件的行
 
 ### 5.2 局限性与扩展建议
 
 当前实现的筛选条件是硬编码的，实际应用中可以考虑：
-- 将筛选条件改为动态输入，例如通过下拉框或输入框获取用户选择
-- 添加"清除筛选"按钮，调用 `rowFilter.unfilter()` 恢复所有数据显示
-- 支持更复杂的筛选逻辑，例如使用 `OR` 条件或自定义筛选函数
+
+* 将筛选条件改为动态输入，例如通过下拉框或输入框获取用户选择
+* 添加"清除筛选"按钮，调用 `rowFilter.unfilter()` 恢复所有数据显示
+* 支持更复杂的筛选逻辑，例如使用 `OR` 条件或自定义筛选函数
 
 ## 六、关键代码片段
 
@@ -155,4 +156,8 @@ $("#filter").click(function () {
 
 该方案适用于需要根据业务逻辑动态控制筛选条件的场景，例如报表系统中的多条件查询、数据分析工具中的快速筛选等。通过扩展条件对象的配置，还可以实现更复杂的筛选逻辑，如数值范围筛选、日期筛选等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/xyDUptslGkKb5nNuigvUCw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

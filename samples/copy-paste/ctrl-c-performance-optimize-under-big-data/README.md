@@ -1,3 +1,5 @@
+# ctrl-c-performance-optimize-under-big-data
+
 ### 问题：Ctrl+C复制卡死问题优化
 
 ***
@@ -16,7 +18,7 @@
 `spread.options.copyPasteHeaderOptions = GC.Spread.Sheets.CopyPasteHeaderOptions.noHeaders;`
 3、如果我们的客户希望让最终用户避免性能问题，则有一种变通方法，当最终用户复制过多单元格（例如，10000个）时，可以重写复制命令，并且不执行复制操作，或者提示用户数据量过大复制会耗时较长：
 
-```
+```auto
 let oldExecute = GC.Spread.Sheets.Commands.copy.execute;
 GC.Spread.Sheets.Commands.copy.execute = function (context, options) {
     let sheet = context.getSheetFromName(options.sheetName);
@@ -41,4 +43,8 @@ GC.Spread.Sheets.Commands.copy.execute = function (context, options) {
 };
 ```
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/RcPx_4QKvUmTX00iedNmMw/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

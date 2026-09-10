@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **公式驱动的数据填充**：传统公式只能返回单个值到当前单元格，本示例实现了通过公式触发多单元格数据填充的能力
-- **异步数据处理**：通过 `setTimeout` 模拟异步操作，展示如何在公式计算过程中处理异步数据获取和填充
-- **上下文感知的公式**：利用公式的上下文信息（当前行列位置）动态确定数据填充的目标区域
+* **公式驱动的数据填充**：传统公式只能返回单个值到当前单元格，本示例实现了通过公式触发多单元格数据填充的能力
+* **异步数据处理**：通过 `setTimeout` 模拟异步操作，展示如何在公式计算过程中处理异步数据获取和填充
+* **上下文感知的公式**：利用公式的上下文信息（当前行列位置）动态确定数据填充的目标区域
 
 ## 三、实现思路
 
@@ -26,9 +26,10 @@ FactorialFunction.prototype = new GC.Spread.CalcEngine.Functions.Function();
 ```
 
 关键配置：
-- `name: 'test'`：公式在单元格中的调用名称
-- `maxArgs` 和 `minArgs` 均为 0：该公式不接受任何参数
-- 继承自 `Function` 基类以获得公式引擎的完整功能
+
+* `name: 'test'`：公式在单元格中的调用名称
+* `maxArgs` 和 `minArgs` 均为 0：该公式不接受任何参数
+* 继承自 `Function` 基类以获得公式引擎的完整功能
 
 ### 3.2 上下文感知的公式实现
 
@@ -78,9 +79,10 @@ FactorialFunction.prototype.evaluate = function() {
 ```
 
 关键技术点：
-- `suspendCalcService(true)`：暂停计算服务，防止数据填充触发新的公式计算
-- `setArray()`：批量设置单元格数据，从当前列的下一列（`curCol + 1`）开始填充
-- `resumeCalcService(false)`：恢复计算服务，参数 `false` 表示不立即重新计算
+
+* `suspendCalcService(true)`：暂停计算服务，防止数据填充触发新的公式计算
+* `setArray()`：批量设置单元格数据，从当前列的下一列（`curCol + 1`）开始填充
+* `resumeCalcService(false)`：恢复计算服务，参数 `false` 表示不立即重新计算
 
 ### 3.4 公式注册与触发
 
@@ -101,10 +103,10 @@ $(document).ready(function() {
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0：核心表格控件
-- jQuery 3.6.1：DOM 操作和事件处理
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格控件
+* jQuery 3.6.1：DOM 操作和事件处理
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -126,19 +128,19 @@ npm install
 
 ### 5.1 优点
 
-- **公式与数据填充解耦**：公式返回值与数据填充操作分离，灵活性高
-- **位置自适应**：基于公式所在单元格位置动态计算填充区域，可复用性强
-- **计算服务控制**：通过暂停/恢复计算服务机制，避免循环计算和性能问题
-- **异步操作支持**：使用 `setTimeout` 模拟异步场景，可扩展为真实的异步数据获取
+* **公式与数据填充解耦**：公式返回值与数据填充操作分离，灵活性高
+* **位置自适应**：基于公式所在单元格位置动态计算填充区域，可复用性强
+* **计算服务控制**：通过暂停/恢复计算服务机制，避免循环计算和性能问题
+* **异步操作支持**：使用 `setTimeout` 模拟异步场景，可扩展为真实的异步数据获取
 
 ### 5.2 局限性与扩展建议
 
-- **当前限制**：数据填充的范围和内容是硬编码的，实际应用中可能需要根据参数动态调整
-- **扩展建议**：
-  - 为公式添加参数支持，允许指定填充的数据源或范围
-  - 集成真实的异步数据获取（如 AJAX 请求）
-  - 添加错误处理机制，处理数据填充失败的情况
-  - 考虑添加数据验证，确保填充的数据符合业务规则
+* **当前限制**：数据填充的范围和内容是硬编码的，实际应用中可能需要根据参数动态调整
+* **扩展建议**：
+    * 为公式添加参数支持，允许指定填充的数据源或范围
+    * 集成真实的异步数据获取（如 AJAX 请求）
+    * 添加错误处理机制，处理数据填充失败的情况
+    * 考虑添加数据验证，确保填充的数据符合业务规则
 
 ## 六、关键代码片段
 
@@ -175,4 +177,8 @@ context.source.getSheet().setArray(curRow, curCol + 1, data);
 
 该方案适用于需要通过公式触发批量数据操作的场景，例如数据导入、模板填充、动态报表生成等。通过扩展该示例，可以实现更复杂的数据处理和填充逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/KJHbQL4e4k_rJ26Pf74tiQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

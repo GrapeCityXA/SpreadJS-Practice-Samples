@@ -1,13 +1,13 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中创建自定义单元格类型，实现在单个单元格内渲染多个可交互按钮的功能。通过继承 `CellTypes.Base` 基类并重写关键方法，开发者可以完全自定义单元格的渲染逻辑和交互行为。该示例在一个单元格中绘制了三个橙色按钮，每个按钮显示不同的数值，点击不同按钮会触发不同的响应事件。
+本示例展示了如何在 SpreadJS 中创建自定义单元格类型，实现在单个单元格内渲染多个可交互按钮的功能。通过继承 `CellTypes.Base` 基类并重写关键方法，开发者可以完全自定义单元格的渲染逻辑和交互行为。该示例在一个单元格中绘制了三个橙色按钮，每个按钮显示不同的数值，点击不同按钮会触发不同的响应事件。 
 
 ## 二、解决的问题
 
-- 在表格单元格中实现复杂的自定义 UI 组件，突破标准单元格类型的限制
-- 在单个单元格内集成多个可交互元素，提升空间利用率
-- 实现精确的鼠标点击区域检测，支持单元格内的多区域交互
-- 为业务场景提供灵活的自定义渲染能力，如操作按钮组、状态指示器等
+* 在表格单元格中实现复杂的自定义 UI 组件，突破标准单元格类型的限制
+* 在单个单元格内集成多个可交互元素，提升空间利用率
+* 实现精确的鼠标点击区域检测，支持单元格内的多区域交互
+* 为业务场景提供灵活的自定义渲染能力，如操作按钮组、状态指示器等
 
 ## 三、实现思路
 
@@ -129,9 +129,9 @@ function initSpread(spread) {
 
 ### 3.6 技术栈
 
-- SpreadJS 15.0.0：核心表格控件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格控件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -155,28 +155,32 @@ npm install
 
 ### 5.1 优点
 
-- 完全自定义的渲染能力：通过 Canvas API 可以绘制任意复杂的 UI 元素
-- 精确的交互控制：通过 `getHitInfo` 实现像素级的点击区域检测
-- 高度可扩展：可以轻松修改按钮数量、样式、文本内容和交互逻辑
-- 性能优化：使用 `suspendPaint` 和 `resumePaint` 避免不必要的重绘
+* 完全自定义的渲染能力：通过 Canvas API 可以绘制任意复杂的 UI 元素
+* 精确的交互控制：通过 `getHitInfo` 实现像素级的点击区域检测
+* 高度可扩展：可以轻松修改按钮数量、样式、文本内容和交互逻辑
+* 性能优化：使用 `suspendPaint` 和 `resumePaint` 避免不必要的重绘
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现使用固定的按钮数量和布局，可以改进为通过构造函数参数动态配置
-- 按钮样式较为简单，可以增加悬停效果、按下状态等视觉反馈
-- 可以扩展支持更多鼠标事件（如 `processMouseMove`、`processMouseUp`）实现更丰富的交互
-- 建议将按钮文本和回调函数作为配置项传入，提高组件的通用性
+* 当前实现使用固定的按钮数量和布局，可以改进为通过构造函数参数动态配置
+* 按钮样式较为简单，可以增加悬停效果、按下状态等视觉反馈
+* 可以扩展支持更多鼠标事件（如 `processMouseMove`、`processMouseUp`）实现更丰富的交互
+* 建议将按钮文本和回调函数作为配置项传入，提高组件的通用性
 
 ## 六、总结
 
 本示例展示了 SpreadJS 自定义单元格类型的核心开发模式，开发者可以学到：
 
-- 如何继承 `CellTypes.Base` 创建自定义单元格类型
-- 使用 Canvas API 实现自定义渲染逻辑
-- 通过 `getHitInfo` 实现复杂的点击区域检测
-- 处理自定义单元格的鼠标交互事件
-- 在单元格内实现多个可交互元素的布局和事件分发
+* 如何继承 `CellTypes.Base` 创建自定义单元格类型
+* 使用 Canvas API 实现自定义渲染逻辑
+* 通过 `getHitInfo` 实现复杂的点击区域检测
+* 处理自定义单元格的鼠标交互事件
+* 在单元格内实现多个可交互元素的布局和事件分发
 
 该方案适用于需要在表格单元格中嵌入自定义控件的场景，如操作按钮组、评分组件、状态指示器等，具有很强的扩展性和实用价值。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/YwnP9o0XJ0O6hnIArJ8Oyw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

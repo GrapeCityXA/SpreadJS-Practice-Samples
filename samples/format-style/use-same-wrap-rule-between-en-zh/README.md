@@ -6,9 +6,9 @@
 
 在文本排版中，中文和英文有不同的换行规则。中文排版规则要求某些标点符号（如左括号"（"、左引号"""等）不能出现在行尾，而英文则没有这样的限制。本示例解决了以下问题：
 
-- 在 SpreadJS 单元格中实现符合中文排版规范的自动换行
-- 提供灵活的文化区域切换机制，支持中英文换行规则的动态切换
-- 允许在英文文化区域下选择性地应用中文换行规则
+* 在 SpreadJS 单元格中实现符合中文排版规范的自动换行
+* 提供灵活的文化区域切换机制，支持中英文换行规则的动态切换
+* 允许在英文文化区域下选择性地应用中文换行规则
 
 ## 三、实现思路
 
@@ -80,9 +80,9 @@ function disableBtn() {
 
 ### 3.3 技术栈
 
-- @grapecity/spread-sheets: 17.0.8（核心表格组件）
-- systemjs: ^0.19.22（模块加载器）
-- systemjs-plugin-babel: 0.0.25（ES6 转译支持）
+* @grapecity/spread-sheets: 17.0.8（核心表格组件）
+* systemjs: ^0.19.22（模块加载器）
+* systemjs-plugin-babel: 0.0.25（ES6 转译支持）
 
 ## 四、使用说明
 
@@ -110,17 +110,17 @@ npx http-server
 
 ### 5.1 优点
 
-- 灵活的文化区域切换机制，支持中英文换行规则的独立控制
-- 通过深拷贝 TextFormat 配置，避免污染原始配置
-- 提供可视化的对比效果，便于理解不同换行规则的差异
-- 实现了防抖机制，避免频繁操作导致的异常
+* 灵活的文化区域切换机制，支持中英文换行规则的独立控制
+* 通过深拷贝 TextFormat 配置，避免污染原始配置
+* 提供可视化的对比效果，便于理解不同换行规则的差异
+* 实现了防抖机制，避免频繁操作导致的异常
 
 ### 5.2 局限性与扩展建议
 
-- 当前示例仅展示了单个单元格的换行效果，实际应用中可能需要批量设置
-- 防抖时间固定为 2 秒，可以根据实际性能优化这个时间
-- 可以扩展支持更多文化区域的换行规则（如日文、韩文等）
-- 可以添加更多测试文本，展示不同标点符号的换行规则
+* 当前示例仅展示了单个单元格的换行效果，实际应用中可能需要批量设置
+* 防抖时间固定为 2 秒，可以根据实际性能优化这个时间
+* 可以扩展支持更多文化区域的换行规则（如日文、韩文等）
+* 可以添加更多测试文本，展示不同标点符号的换行规则
 
 ## 六、关键代码片段
 
@@ -160,11 +160,15 @@ document.querySelector("#button2").addEventListener("click", function () {
 
 本示例展示了 SpreadJS 中文化区域管理和文本换行规则控制的核心功能。开发者可以从中学到：
 
-- 如何使用 CultureManager 管理文化区域设置
-- 如何获取和修改 TextFormat 配置
-- 如何实现中英文换行规则的动态切换
-- 如何处理配置对象的深拷贝问题
+* 如何使用 CultureManager 管理文化区域设置
+* 如何获取和修改 TextFormat 配置
+* 如何实现中英文换行规则的动态切换
+* 如何处理配置对象的深拷贝问题
 
 该方案适用于需要支持多语言排版规则的表格应用，特别是在处理中文文档时需要遵循中文排版规范的场景。通过灵活配置 TextFormat，可以满足不同语言和地区的排版需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/N8fyAnSWsEK4h3DqgeYtIg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

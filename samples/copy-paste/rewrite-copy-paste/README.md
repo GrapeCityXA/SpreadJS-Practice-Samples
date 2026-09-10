@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **禁用外部剪贴板交互**：阻止用户通过系统剪贴板将数据复制到外部应用或从外部粘贴数据，确保数据仅在 SpreadJS 内部流转
-- **自定义复制粘贴逻辑**：在复制粘贴操作前后插入自定义业务逻辑，如权限验证、数据过滤、操作日志记录等
-- **安全性控制**：防止敏感数据通过剪贴板泄露到外部系统
+* **禁用外部剪贴板交互**：阻止用户通过系统剪贴板将数据复制到外部应用或从外部粘贴数据，确保数据仅在 SpreadJS 内部流转
+* **自定义复制粘贴逻辑**：在复制粘贴操作前后插入自定义业务逻辑，如权限验证、数据过滤、操作日志记录等
+* **安全性控制**：防止敏感数据通过剪贴板泄露到外部系统
 
 ## 三、实现思路
 
@@ -46,9 +46,10 @@ spread.commandManager().register("myCopy", {
 ```
 
 关键点：
-- `canUndo: true` 表示该命令支持撤销操作
-- 使用 `setTimeout` 延迟 10ms 执行，为 SpreadJS 内部处理留出时间窗口
-- 临时修改 `options.cmd` 为 `"copy"` 来调用原生命令，执行后恢复为 `"myCopy"`
+
+* `canUndo: true` 表示该命令支持撤销操作
+* 使用 `setTimeout` 延迟 10ms 执行，为 SpreadJS 内部处理留出时间窗口
+* 临时修改 `options.cmd` 为 `"copy"` 来调用原生命令，执行后恢复为 `"myCopy"`
 
 #### 重新绑定快捷键
 
@@ -108,9 +109,9 @@ spread.bind(GC.Spread.Sheets.Events.ClipboardPasting, function (sender, args) {
 
 ### 3.2 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
-- **TypeScript**: ^4.1.2 - 类型支持（虽然示例使用 JavaScript）
-- **SystemJS**: ^0.19.22 - 模块加载器
+* **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
+* **TypeScript**: ^4.1.2 - 类型支持（虽然示例使用 JavaScript）
+* **SystemJS**: ^0.19.22 - 模块加载器
 
 ## 四、使用说明
 
@@ -136,21 +137,22 @@ npm install
 
 ### 5.1 优点
 
-- **完全控制复制粘贴流程**：可以在复制粘贴的任意阶段插入自定义逻辑
-- **数据安全性增强**：阻止数据通过系统剪贴板流向外部应用
-- **支持撤销重做**：自定义命令设置了 `canUndo: true`，保持了 SpreadJS 的撤销功能
-- **实现简单**：通过命令注册和快捷键重绑定即可实现，无需修改 SpreadJS 核心代码
+* **完全控制复制粘贴流程**：可以在复制粘贴的任意阶段插入自定义逻辑
+* **数据安全性增强**：阻止数据通过系统剪贴板流向外部应用
+* **支持撤销重做**：自定义命令设置了 `canUndo: true`，保持了 SpreadJS 的撤销功能
+* **实现简单**：通过命令注册和快捷键重绑定即可实现，无需修改 SpreadJS 核心代码
 
 ### 5.2 局限性与扩展建议
 
-- **用户体验影响**：alert 弹窗会打断用户操作流程，生产环境建议替换为静默日志或非阻塞式提示
-- **仅限内部复制**：当前实现完全禁用了外部剪贴板交互，如需支持部分外部粘贴（如纯文本），需要在 `myPaste` 中添加条件判断
-- **浏览器兼容性**：使用了 `window.event`，在某些现代浏览器中建议改为标准的事件参数传递方式
+* **用户体验影响**：alert 弹窗会打断用户操作流程，生产环境建议替换为静默日志或非阻塞式提示
+* **仅限内部复制**：当前实现完全禁用了外部剪贴板交互，如需支持部分外部粘贴（如纯文本），需要在 `myPaste` 中添加条件判断
+* **浏览器兼容性**：使用了 `window.event`，在某些现代浏览器中建议改为标准的事件参数传递方式
 
 扩展建议：
-- 在自定义命令中添加权限验证逻辑
-- 记录复制粘贴操作日志到服务器
-- 根据单元格内容类型实现差异化的复制粘贴策略
+
+* 在自定义命令中添加权限验证逻辑
+* 记录复制粘贴操作日志到服务器
+* 根据单元格内容类型实现差异化的复制粘贴策略
 
 ## 六、关键代码片段
 
@@ -165,6 +167,7 @@ setTimeout(function () {
 ```
 
 这段代码的关键在于 `setTimeout` 的使用。SpreadJS 的命令系统需要一个时间窗口来处理内部状态，直接同步调用可能导致命令执行失败。通过 10ms 的延迟，确保了：
+
 1. 自定义命令的上下文已正确设置
 2. SpreadJS 内部状态已准备就绪
 3. 原生命令可以正常执行
@@ -185,16 +188,21 @@ spread.commandManager().setShortcutKey("myCopy", GC.Spread.Commands.Key.c, true,
 
 本示例展示了 SpreadJS 命令系统的灵活性和可扩展性。通过重写 Copy/Paste 命令，开发者可以实现对数据流转的精细控制，适用于以下场景：
 
-- **企业级应用**：需要对敏感数据的复制粘贴进行审计和限制
-- **协同编辑系统**：需要在复制粘贴时同步操作到其他用户
-- **数据验证场景**：粘贴前需要对数据格式进行校验和转换
+* **企业级应用**：需要对敏感数据的复制粘贴进行审计和限制
+* **协同编辑系统**：需要在复制粘贴时同步操作到其他用户
+* **数据验证场景**：粘贴前需要对数据格式进行校验和转换
 
 开发者可以从中学到：
-- SpreadJS 命令管理器的使用方法
-- 自定义命令的注册和执行机制
-- 快捷键的动态绑定技术
-- 事件监听与命令系统的协同工作方式
+
+* SpreadJS 命令管理器的使用方法
+* 自定义命令的注册和执行机制
+* 快捷键的动态绑定技术
+* 事件监听与命令系统的协同工作方式
 
 该方案具有良好的扩展性，可以在此基础上实现更复杂的业务逻辑，如数据加密、格式转换、权限控制等功能。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/rvsZlHzxcUuCh4niPrGKHA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

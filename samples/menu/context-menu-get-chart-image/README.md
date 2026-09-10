@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **图表快速导出**：用户无需通过复杂的导出流程，即可快速将图表复制为图片
-- **剪贴板集成**：直接将图表截图写入系统剪贴板，支持在 Word、PowerPoint 等应用中直接粘贴
-- **自定义右键菜单**：扩展 SpreadJS Designer 的上下文菜单，提供更符合业务需求的交互方式
+* **图表快速导出**：用户无需通过复杂的导出流程，即可快速将图表复制为图片
+* **剪贴板集成**：直接将图表截图写入系统剪贴板，支持在 Word、PowerPoint 等应用中直接粘贴
+* **自定义右键菜单**：扩展 SpreadJS Designer 的上下文菜单，提供更符合业务需求的交互方式
 
 ## 三、实现思路
 
@@ -32,8 +32,9 @@ designerConfig.contextMenu.unshift("copyAsPicture");  // 将命令添加到右�
 ```
 
 关键点：
-- `visibleContext: "ChartSelected"` 确保该菜单项仅在图表被选中时显示
-- `contextMenu.unshift()` 将自定义命令添加到右键菜单的最前面
+
+* `visibleContext: "ChartSelected"` 确保该菜单项仅在图表被选中时显示
+* `contextMenu.unshift()` 将自定义命令添加到右键菜单的最前面
 
 ### 3.2 获取选中图表的 Canvas 元素
 
@@ -65,9 +66,10 @@ function getScreenshotBlob(spread) {
 ```
 
 实现原理：
-- 通过 `chart.isSelected()` 判断图表是否被选中
-- 使用 `chart.getHost()` 获取图表的 DOM 容器
-- 从容器中提取 Canvas 元素，调用 `toBlob()` 方法将其转换为 Blob 对象
+
+* 通过 `chart.isSelected()` 判断图表是否被选中
+* 使用 `chart.getHost()` 获取图表的 DOM 容器
+* 从容器中提取 Canvas 元素，调用 `toBlob()` 方法将其转换为 Blob 对象
 
 ### 3.3 写入系统剪贴板
 
@@ -93,17 +95,18 @@ let getScreenshot = async function (spread) {
 ```
 
 技术要点：
-- 使用 `navigator.clipboard.write()` API 写入剪贴板
-- 通过 `ClipboardItem` 包装 Blob 数据，指定 MIME 类型为 `image/png`
-- 为了兼容 Safari 浏览器，必须在用户事件回调中直接调用 `clipboard.write()`
+
+* 使用 `navigator.clipboard.write()` API 写入剪贴板
+* 通过 `ClipboardItem` 包装 Blob 数据，指定 MIME 类型为 `image/png`
+* 为了兼容 Safari 浏览器，必须在用户事件回调中直接调用 `clipboard.write()`
 
 ### 3.4 技术栈
 
-- SpreadJS 16.0.1（核心表格组件）
-- SpreadJS Designer 16.0.1（设计器组件）
-- SpreadJS Charts 16.0.1（图表模块）
-- TypeScript 4.1.2（开发语言）
-- SystemJS 0.19.22（模块加载器）
+* SpreadJS 16.0.1（核心表格组件）
+* SpreadJS Designer 16.0.1（设计器组件）
+* SpreadJS Charts 16.0.1（图表模块）
+* TypeScript 4.1.2（开发语言）
+* SystemJS 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -128,19 +131,19 @@ npm install
 
 ### 5.1 优点
 
-- **操作便捷**：右键菜单集成，符合用户操作习惯
-- **无需额外依赖**：直接使用浏览器原生 Clipboard API，无需第三方库
-- **高质量输出**：直接从 Canvas 元素获取图片，保证图表质量
-- **跨应用兼容**：复制到剪贴板后可在任意支持图片粘贴的应用中使用
+* **操作便捷**：右键菜单集成，符合用户操作习惯
+* **无需额外依赖**：直接使用浏览器原生 Clipboard API，无需第三方库
+* **高质量输出**：直接从 Canvas 元素获取图片，保证图表质量
+* **跨应用兼容**：复制到剪贴板后可在任意支持图片粘贴的应用中使用
 
 ### 5.2 局限性与扩展建议
 
-- **浏览器兼容性**：Clipboard API 需要 HTTPS 环境或 localhost，且部分旧版浏览器不支持
-- **仅支持图表**：当前实现仅针对图表，可扩展为支持形状、单元格区域等其他对象
-- **扩展建议**：
-  - 添加图片格式选择（JPEG、WebP 等）
-  - 支持自定义图片分辨率
-  - 添加下载到本地的选项
+* **浏览器兼容性**：Clipboard API 需要 HTTPS 环境或 localhost，且部分旧版浏览器不支持
+* **仅支持图表**：当前实现仅针对图表，可扩展为支持形状、单元格区域等其他对象
+* **扩展建议**：
+    * 添加图片格式选择（JPEG、WebP 等）
+    * 支持自定义图片分辨率
+    * 添加下载到本地的选项
 
 ## 六、关键代码片段
 
@@ -180,12 +183,16 @@ await navigator.clipboard.write(
 
 本示例展示了如何通过扩展 SpreadJS Designer 的上下文菜单，结合浏览器原生 Clipboard API，实现图表的快速截图和复制功能。开发者可以从中学习到：
 
-- SpreadJS Designer 自定义命令的注册方法
-- 图表对象的选择状态判断和 DOM 元素访问
-- Canvas 元素转换为 Blob 的技术
-- 现代浏览器 Clipboard API 的使用方法
-- 异步操作与 Promise 的结合使用
+* SpreadJS Designer 自定义命令的注册方法
+* 图表对象的选择状态判断和 DOM 元素访问
+* Canvas 元素转换为 Blob 的技术
+* 现代浏览器 Clipboard API 的使用方法
+* 异步操作与 Promise 的结合使用
 
 该方案适用于需要快速导出图表图片的场景，具有良好的扩展性，可以根据实际需求进一步定制功能。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/9y_wpY6mxkCaQt49UWXTkg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -1,10 +1,12 @@
+# table-binding-vertical-expand-keep-style
+
 ### 需求：SpreadJS 表格绑定引发的纵向扩展能否按照保持样式进行
 
 ***
 
 #### 背景：
 
-用户在使用 SpreadJS 设计模板时，其中模板中间区域可能会存在一个表格数据绑定，如下所示：
+用户在使用 SpreadJS 设计模板时，其中模板中间区域可能会存在一个表格数据绑定，如下所示： 
 ![image](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/image-20260305.58514d.png?width=400)
 当绑定好数据源之后，有可能数据源的记录数远远多于现在展示的表的行数，可能会出现如下展示效果：
 ![image](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/image-20260305.bd7701.png?width=400)
@@ -74,4 +76,8 @@ function copyFormula() {
 }
 ```
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/FwmDmRO1qUe5HnYzW6zZmQ/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

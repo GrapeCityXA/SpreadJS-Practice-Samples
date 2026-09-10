@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中为文本类数字字符串（如 "123"）添加可视化角标提示，并提供交互式菜单将其转换为真正的数字类型。当单元格中的值是纯数字字符串时，会在单元格左上角显示绿色三角形角标，点击后弹出操作菜单，用户可以选择将其转换为数字类型。
+本示例展示了如何在 SpreadJS 中为文本类数字字符串（如 "123"）添加可视化角标提示，并提供交互式菜单将其转换为真正的数字类型。当单元格中的值是纯数字字符串时，会在单元格左上角显示绿色三角形角标，点击后弹出操作菜单，用户可以选择将其转换为数字类型。 
 
 该功能模拟了 Excel 中对文本格式数字的警告提示机制，帮助用户识别和处理数据类型不一致的问题。
 
 ## 二、解决的问题
 
-- **数据类型识别**：在数据导入或手动输入时，数字可能被误存储为文本类型，导致计算错误或排序异常
-- **可视化提示**：通过角标标记让用户快速识别哪些单元格存在数据类型问题
-- **快速修正**：提供便捷的交互式菜单，一键将文本类数字转换为真正的数字类型
+* **数据类型识别**：在数据导入或手动输入时，数字可能被误存储为文本类型，导致计算错误或排序异常
+* **可视化提示**：通过角标标记让用户快速识别哪些单元格存在数据类型问题
+* **快速修正**：提供便捷的交互式菜单，一键将文本类数字转换为真正的数字类型
 
 ## 三、实现思路
 
@@ -41,8 +41,9 @@ TipCellType.prototype.paint = function (ctx, value, x, y, w, h, style, context) 
 ```
 
 关键点：
-- 使用正则表达式 `/^[0-9]+\.?[0-9]*$/` 匹配纯数字字符串（支持小数）
-- 通过 `style.decoration.cornerFold` 配置角标样式（大小、位置、颜色）
+
+* 使用正则表达式 `/^[0-9]+\.?[0-9]*$/` 匹配纯数字字符串（支持小数）
+* 通过 `style.decoration.cornerFold` 配置角标样式（大小、位置、颜色）
 
 ### 3.3 交互式菜单实现
 
@@ -103,9 +104,9 @@ TipCellType.prototype.getHitInfo = function (x, y, cellStyle, cellRect, context)
 
 ### 3.5 技术栈
 
-- SpreadJS 16.0.1：核心表格控件
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言（编译为 JavaScript）
+* SpreadJS 16.0.1：核心表格控件
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言（编译为 JavaScript）
 
 ## 四、使用说明
 
@@ -128,17 +129,17 @@ npm install
 
 ### 5.1 优点
 
-- **类 Excel 体验**：模拟 Excel 的数据类型警告机制，降低用户学习成本
-- **可扩展性强**：自定义单元格类型可以轻松添加更多数据验证和转换功能
-- **视觉反馈清晰**：绿色角标和 SVG 图标提供直观的视觉提示
+* **类 Excel 体验**：模拟 Excel 的数据类型警告机制，降低用户学习成本
+* **可扩展性强**：自定义单元格类型可以轻松添加更多数据验证和转换功能
+* **视觉反馈清晰**：绿色角标和 SVG 图标提供直观的视觉提示
 
 ### 5.2 局限性与扩展建议
 
-- **元素复用机制**：当前实现中，图标和菜单元素在首次创建后会被复用，但事件监听器可能重复绑定（代码中使用 `AbortController` 尝试解决，但实现不完整）
-- **建议改进**：
-  - 使用事件委托或在复用时先移除旧监听器
-  - 考虑将浮动元素封装为独立组件
-  - 支持批量转换多个单元格
+* **元素复用机制**：当前实现中，图标和菜单元素在首次创建后会被复用，但事件监听器可能重复绑定（代码中使用 `AbortController` 尝试解决，但实现不完整）
+* **建议改进**：
+    * 使用事件委托或在复用时先移除旧监听器
+    * 考虑将浮动元素封装为独立组件
+    * 支持批量转换多个单元格
 
 ## 六、关键代码片段
 
@@ -162,11 +163,15 @@ sheet.setValue(row, col, parseInt(hitinfo.value))
 
 本示例展示了 SpreadJS 自定义单元格类型的强大能力，通过重写 `paint` 和 `processMouseDown` 方法实现了复杂的视觉提示和交互逻辑。开发者可以从中学到：
 
-- 如何继承和扩展 SpreadJS 内置单元格类型
-- 使用 `style.decoration.cornerFold` 添加单元格角标
-- 结合 DOM 操作实现自定义交互界面
-- 动态计算单元格绝对坐标进行元素定位
+* 如何继承和扩展 SpreadJS 内置单元格类型
+* 使用 `style.decoration.cornerFold` 添加单元格角标
+* 结合 DOM 操作实现自定义交互界面
+* 动态计算单元格绝对坐标进行元素定位
 
 该方案适用于需要对特定数据格式进行可视化标记和快速修正的场景，如数据导入验证、数据清洗工具等。通过扩展菜单选项，还可以支持更多数据转换功能（如日期格式化、货币转换等）。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/wdo12xAkb0WubZ_v_PvFHw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -1,12 +1,12 @@
 ## 一、Demo 概述
 
-本示例展示了如何通过自定义单元格类型（Custom Cell Type）实现鼠标悬浮时动态改变单元格显示文字的功能。当鼠标移入单元格时，单元格会显示存储在 Tag 中的备用文本，并改变文字颜色为红色；鼠标移出后恢复原始显示。这种交互方式适用于需要在不改变单元格实际值的情况下，临时展示额外信息的场景，例如显示提示信息、备注内容或翻译文本等。
+本示例展示了如何通过自定义单元格类型（Custom Cell Type）实现鼠标悬浮时动态改变单元格显示文字的功能。当鼠标移入单元格时，单元格会显示存储在 Tag 中的备用文本，并改变文字颜色为红色；鼠标移出后恢复原始显示。这种交互方式适用于需要在不改变单元格实际值的情况下，临时展示额外信息的场景，例如显示提示信息、备注内容或翻译文本等。 
 
 ## 二、解决的问题
 
-- **临时信息展示**：在不修改单元格实际数据的前提下，通过鼠标悬浮展示额外信息
-- **交互式数据查看**：提供更友好的用户交互体验，避免单元格内容过于拥挤
-- **视觉反馈增强**：通过颜色变化和文本切换，让用户清晰感知到交互状态
+* **临时信息展示**：在不修改单元格实际数据的前提下，通过鼠标悬浮展示额外信息
+* **交互式数据查看**：提供更友好的用户交互体验，避免单元格内容过于拥挤
+* **视觉反馈增强**：通过颜色变化和文本切换，让用户清晰感知到交互状态
 
 ## 三、实现思路
 
@@ -91,9 +91,9 @@ sheet.setTag(0, 0, "123")  // 设置 Tag 作为悬浮时的显示内容
 
 ### 3.5 技术栈
 
-- SpreadJS 16.0.1
-- SystemJS 0.19.22
-- TypeScript 4.1.2
+* SpreadJS 16.0.1
+* SystemJS 0.19.22
+* TypeScript 4.1.2
 
 ## 四、使用说明
 
@@ -117,16 +117,16 @@ npm install
 
 ### 5.1 优点
 
-- **非侵入式**：不修改单元格实际数据，通过 Tag 存储额外信息
-- **高度可定制**：可以自由控制悬浮时的显示内容、样式和交互逻辑
-- **性能优化**：仅重绘当前单元格区域，避免全表刷新
-- **易于扩展**：可以在此基础上添加更多交互效果，如工具提示、动画等
+* **非侵入式**：不修改单元格实际数据，通过 Tag 存储额外信息
+* **高度可定制**：可以自由控制悬浮时的显示内容、样式和交互逻辑
+* **性能优化**：仅重绘当前单元格区域，避免全表刷新
+* **易于扩展**：可以在此基础上添加更多交互效果，如工具提示、动画等
 
 ### 5.2 局限性与扩展建议
 
-- **当前实现仅支持文本替换**：可以扩展为支持图标、图片或富文本显示
-- **样式固定为红色**：可以将样式配置化，支持通过参数自定义颜色、字体等
-- **建议扩展**：可以结合 Tooltip 功能，在悬浮时显示更丰富的信息面板
+* **当前实现仅支持文本替换**：可以扩展为支持图标、图片或富文本显示
+* **样式固定为红色**：可以将样式配置化，支持通过参数自定义颜色、字体等
+* **建议扩展**：可以结合 Tooltip 功能，在悬浮时显示更丰富的信息面板
 
 ## 六、关键代码片段
 
@@ -154,4 +154,8 @@ customCellType.prototype.processMouseEnter = function (hitInfo) {
 
 该方案适用于需要在表格中提供临时信息展示、交互式数据查看等场景，具有良好的扩展性和实用价值。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/2NNw379hbUCtwenAW1cZ9A/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

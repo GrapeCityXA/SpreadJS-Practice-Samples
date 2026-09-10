@@ -6,10 +6,10 @@
 
 在实际业务场景中，经常需要对用户输入进行长度限制，例如：
 
-- 身份证号、手机号等固定长度字段的输入控制
-- 表单字段的字符数限制，防止数据库字段溢出
-- 代码、编号等有格式要求的数据输入规范
-- 提升用户体验，在输入阶段就进行数据验证，而非提交后再报错
+* 身份证号、手机号等固定长度字段的输入控制
+* 表单字段的字符数限制，防止数据库字段溢出
+* 代码、编号等有格式要求的数据输入规范
+* 提升用户体验，在输入阶段就进行数据验证，而非提交后再报错
 
 ## 三、实现思路
 
@@ -58,9 +58,9 @@ sheet.setCellType(1, 1, new NumberCellType(5));
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0：核心表格控件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格控件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -84,17 +84,17 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单，通过继承和重写方法即可完成功能
-- 利用浏览器原生的 maxLength 属性，性能优秀
-- 可复用性强，通过参数控制不同的长度限制
-- 用户体验好，在输入阶段就进行限制，而非事后验证
+* 实现简单，通过继承和重写方法即可完成功能
+* 利用浏览器原生的 maxLength 属性，性能优秀
+* 可复用性强，通过参数控制不同的长度限制
+* 用户体验好，在输入阶段就进行限制，而非事后验证
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现仅限制字符数量，不支持字节长度限制（中英文混合场景）
-- 可以扩展为支持正则表达式验证，实现更复杂的输入规则
-- 可以添加输入提示信息，告知用户当前输入长度和剩余可输入字符数
-- 可以结合数据验证功能，在粘贴或程序设置值时也进行长度检查
+* 当前实现仅限制字符数量，不支持字节长度限制（中英文混合场景）
+* 可以扩展为支持正则表达式验证，实现更复杂的输入规则
+* 可以添加输入提示信息，告知用户当前输入长度和剩余可输入字符数
+* 可以结合数据验证功能，在粘贴或程序设置值时也进行长度检查
 
 ## 六、关键代码片段
 
@@ -126,11 +126,15 @@ sheet.setCellType(1, 1, new NumberCellType(5));
 
 本示例展示了 SpreadJS 自定义单元格类型的基本用法，通过继承内置单元格类型并重写关键方法，可以实现各种自定义的输入控制逻辑。开发者可以从中学到：
 
-- 如何创建自定义单元格类型
-- 如何通过原型继承扩展 SpreadJS 内置功能
-- 如何重写 createEditorElement 方法自定义编辑器行为
-- 如何将自定义类型应用到指定单元格
+* 如何创建自定义单元格类型
+* 如何通过原型继承扩展 SpreadJS 内置功能
+* 如何重写 createEditorElement 方法自定义编辑器行为
+* 如何将自定义类型应用到指定单元格
 
 该方案适用于需要对用户输入进行前端验证和限制的场景，具有良好的扩展性，可以根据实际需求添加更多的验证规则和交互逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/SYS-NTKLmU2cIH77B5VmXA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

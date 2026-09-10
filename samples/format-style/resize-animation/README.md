@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **动画过程中的显示问题**：当 Designer 容器宽度通过 CSS transition 动画变化时，内容可能无法正确重绘，导致显示残缺或错位
-- **实时响应容器变化**：Designer 需要在容器尺寸变化过程中保持正确的显示状态
-- **优雅的动画体验**：在保证功能正确的前提下，实现流畅的缩放动画效果
+* **动画过程中的显示问题**：当 Designer 容器宽度通过 CSS transition 动画变化时，内容可能无法正确重绘，导致显示残缺或错位
+* **实时响应容器变化**：Designer 需要在容器尺寸变化过程中保持正确的显示状态
+* **优雅的动画体验**：在保证功能正确的前提下，实现流畅的缩放动画效果
 
 ## 三、实现思路
 
@@ -71,15 +71,16 @@ function resizeSmooth(host, timing){
 
 ### 3.3 技术栈
 
-- SpreadJS Designer 15.0.0
-- SystemJS 模块加载器
-- 原生 JavaScript（定时器、事件监听）
+* SpreadJS Designer 15.0.0
+* SystemJS 模块加载器
+* 原生 JavaScript（定时器、事件监听）
 
 ## 四、使用说明
 
 ### 4.1 运行方式
 
 1. 安装依赖：
+
 ```bash
 npm install
 ```
@@ -98,16 +99,16 @@ npm install
 
 ### 5.1 优点
 
-- **流畅的视觉体验**：CSS transition 提供了平滑的宽度变化动画
-- **避免显示异常**：持续的刷新确保 Designer 内容在变化过程中正确显示
-- **两种刷新方案可选**：可根据实际需求选择无限刷新或定时刷新
-- **实现简单**：仅需少量代码即可实现动画刷新效果
+* **流畅的视觉体验**：CSS transition 提供了平滑的宽度变化动画
+* **避免显示异常**：持续的刷新确保 Designer 内容在变化过程中正确显示
+* **两种刷新方案可选**：可根据实际需求选择无限刷新或定时刷新
+* **实现简单**：仅需少量代码即可实现动画刷新效果
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现仅针对宽度变化，如需支持高度变化，可类似地添加相应逻辑
-- 刷新频率固定为 100 毫秒，可根据实际效果调整刷新间隔
-- 可考虑使用 `ResizeObserver` API 替代按钮触发，以响应任意尺寸变化
+* 当前实现仅针对宽度变化，如需支持高度变化，可类似地添加相应逻辑
+* 刷新频率固定为 100 毫秒，可根据实际效果调整刷新间隔
+* 可考虑使用 `ResizeObserver` API 替代按钮触发，以响应任意尺寸变化
 
 ## 六、关键代码片段
 
@@ -136,12 +137,15 @@ function resizeSmooth(host, timing){
 
 本示例展示了 SpreadJS Designer 在容器尺寸动画变化时的刷新处理方案。通过 `designer.refresh()` 方法配合 CSS transition 和定时器，实现了流畅的缩放动画效果。开发者可以从本示例中学到：
 
-- 如何使用 `designer.refresh()` 手动刷新 Designer
-- 如何使用 `GC.Spread.Sheets.Designer.findControl()` 通过 DOM 元素获取 Designer 实例
-- 如何结合 CSS transition 和 JavaScript 定时器实现平滑的 UI 动画
-- 如何使用 `transitionend` 事件监听 CSS 动画完成
+* 如何使用 `designer.refresh()` 手动刷新 Designer
+* 如何使用 `GC.Spread.Sheets.Designer.findControl()` 通过 DOM 元素获取 Designer 实例
+* 如何结合 CSS transition 和 JavaScript 定时器实现平滑的 UI 动画
+* 如何使用 `transitionend` 事件监听 CSS 动画完成
 
 该方案适用于需要动态调整 Designer 尺寸的应用场景，如响应式布局、侧边栏展开收起等交互效果。
 
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/YKxll0Hj_ke7HdcAZAWDAQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

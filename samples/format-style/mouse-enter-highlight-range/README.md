@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **视觉反馈增强**：通过鼠标悬停高亮，为用户提供即时的视觉反馈，明确当前操作区域
-- **数据区域识别**：在复杂的表格中，帮助用户快速定位和识别特定的数据区域
-- **交互体验优化**：提供类似 Web 应用中常见的 hover 效果，使表格操作更加直观友好
+* **视觉反馈增强**：通过鼠标悬停高亮，为用户提供即时的视觉反馈，明确当前操作区域
+* **数据区域识别**：在复杂的表格中，帮助用户快速定位和识别特定的数据区域
+* **交互体验优化**：提供类似 Web 应用中常见的 hover 效果，使表格操作更加直观友好
 
 ## 三、实现思路
 
@@ -43,9 +43,10 @@ customCellType.prototype.processMouseEnter = function (hitinfo) {
 ```
 
 核心逻辑：
-- 使用 `specialRange.intersect()` 判断鼠标是否进入目标区域
-- 通过 `hasEnter` 标志位避免重复设置样式
-- 根据进入/离开状态切换样式
+
+* 使用 `specialRange.intersect()` 判断鼠标是否进入目标区域
+* 通过 `hasEnter` 标志位避免重复设置样式
+* 根据进入/离开状态切换样式
 
 ### 3.3 命中测试信息获取
 
@@ -91,8 +92,8 @@ specialStyle.borderLeft = border
 
 ### 3.5 技术栈
 
-- SpreadJS 17.0.8：核心表格组件
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 17.0.8：核心表格组件
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -116,31 +117,36 @@ npm install
 
 ### 5.1 优点
 
-- **性能优化**：通过 `hasEnter` 标志位避免重复渲染，减少不必要的样式更新
-- **扩展性强**：基于自定义单元格类型实现，可以轻松扩展到其他交互效果
-- **用户体验好**：提供即时的视觉反馈，增强表格的交互性
+* **性能优化**：通过 `hasEnter` 标志位避免重复渲染，减少不必要的样式更新
+* **扩展性强**：基于自定义单元格类型实现，可以轻松扩展到其他交互效果
+* **用户体验好**：提供即时的视觉反馈，增强表格的交互性
 
 ### 5.2 局限性与扩展建议
 
-- **固定区域**：当前实现中高亮区域是硬编码的 A1:J10，可以扩展为动态配置
-- **单一区域**：只支持一个高亮区域，可以扩展为支持多个区域
-- **样式单一**：高亮样式固定，可以扩展为支持自定义样式配置
+* **固定区域**：当前实现中高亮区域是硬编码的 A1:J10，可以扩展为动态配置
+* **单一区域**：只支持一个高亮区域，可以扩展为支持多个区域
+* **样式单一**：高亮样式固定，可以扩展为支持自定义样式配置
 
 扩展建议：
-- 支持通过参数配置高亮区域范围
-- 支持多个区域的独立高亮效果
-- 添加高亮动画效果，使过渡更加平滑
-- 支持自定义高亮样式（颜色、边框等）
+
+* 支持通过参数配置高亮区域范围
+* 支持多个区域的独立高亮效果
+* 添加高亮动画效果，使过渡更加平滑
+* 支持自定义高亮样式（颜色、边框等）
 
 ## 六、总结
 
 本示例展示了如何通过自定义单元格类型实现鼠标悬停高亮效果。开发者可以从中学到：
 
-- 如何继承和扩展 SpreadJS 的内置单元格类型
-- 如何处理单元格的鼠标事件（`processMouseEnter`）
-- 如何使用 Range 对象进行区域判断和样式设置
-- 如何通过标志位优化性能，避免重复渲染
+* 如何继承和扩展 SpreadJS 的内置单元格类型
+* 如何处理单元格的鼠标事件（`processMouseEnter`）
+* 如何使用 Range 对象进行区域判断和样式设置
+* 如何通过标志位优化性能，避免重复渲染
 
 该方案适用于需要增强表格交互体验的场景，特别是在数据密集型应用中，可以帮助用户更好地聚焦当前操作区域。通过简单的扩展，可以实现更复杂的交互效果，如行列高亮、多区域联动等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/luQnmSy5-0Oeq0cgsPgPVA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

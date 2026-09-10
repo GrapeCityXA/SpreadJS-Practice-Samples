@@ -11,20 +11,14 @@ The goal is to make practical SpreadJS examples easy to find, run, study, and re
 ## What Is Here
 
 - `samples/` organizes examples by category and demo slug.
-- `samples/shared/` contains shared runtime configuration used by runnable demos.
-- `docs/demo-catalog.md` lists the available examples and links to their online counterparts.
-- `samples/_template/` shows the recommended shape for a runnable local demo.
+- `samples/README.md` lists the available examples and links to their online counterparts.
 
 ## Quick Start
 
-1. Find a demo in `docs/demo-catalog.md`.
+1. Find a demo in `samples/README.md`.
 2. Open the matching folder under `samples/<category>/<demo-slug>/`.
 3. Read that demo's `README.md`.
 4. Run the demo according to its local instructions.
-
-When using a local development server, serve the repository root or the `samples/` directory so the shared runtime config under `samples/shared/` is reachable.
-
-Some folders may initially contain only an online demo link while the local code is being organized.
 
 ## Demo Rules
 
@@ -35,10 +29,6 @@ Each completed demo should include:
 - `src/app.js` or equivalent source files.
 - `src/styles.css` when the demo needs custom styling.
 - `assets/` for local data, images, workbooks, fonts, or other required files.
-
-Keep folder names aligned with the source URL slug. If a source slug has a typo, keep it for traceability and mention the corrected wording in the demo README.
-
-Use the shared SystemJS config at `samples/shared/systemjs.config.js` for static demos unless a demo has a genuinely unique loader requirement.
 
 ## Dependency Rules
 

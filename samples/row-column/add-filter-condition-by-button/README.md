@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- 提供用户友好的筛选控制方式，通过按钮快速添加或移除筛选条件
-- 解决在筛选区域插入行时筛选范围不自动更新的问题
-- 演示如何扩展 SpreadJS 的右键菜单功能，实现自定义业务逻辑
+* 提供用户友好的筛选控制方式，通过按钮快速添加或移除筛选条件
+* 解决在筛选区域插入行时筛选范围不自动更新的问题
+* 演示如何扩展 SpreadJS 的右键菜单功能，实现自定义业务逻辑
 
 ## 三、实现思路
 
@@ -125,10 +125,10 @@ $("#removeFilter").click(function () {
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0
-- jQuery 3.6.1
-- SystemJS 0.19.22
-- TypeScript 4.1.2
+* SpreadJS 15.0.0
+* jQuery 3.6.1
+* SystemJS 0.19.22
+* TypeScript 4.1.2
 
 ## 四、使用说明
 
@@ -151,16 +151,16 @@ npm install
 
 ### 5.1 优点
 
-- 提供直观的按钮操作方式，降低用户使用门槛
-- 自动处理筛选范围扩展，避免手动调整的繁琐
-- 支持撤销/重做功能，保证操作的可逆性
-- 通过自定义命令和右键菜单扩展，展示了 SpreadJS 的高度可定制性
+* 提供直观的按钮操作方式，降低用户使用门槛
+* 自动处理筛选范围扩展，避免手动调整的繁琐
+* 支持撤销/重做功能，保证操作的可逆性
+* 通过自定义命令和右键菜单扩展，展示了 SpreadJS 的高度可定制性
 
 ### 5.2 局限性与扩展建议
 
-- 当前仅处理插入行场景，可扩展支持删除行、插入列等操作
-- 可以添加更多的筛选条件设置选项，如按值筛选、按颜色筛选等
-- 可以考虑添加筛选状态的持久化存储功能
+* 当前仅处理插入行场景，可扩展支持删除行、插入列等操作
+* 可以添加更多的筛选条件设置选项，如按值筛选、按颜色筛选等
+* 可以考虑添加筛选状态的持久化存储功能
 
 ## 六、关键代码片段
 
@@ -187,11 +187,15 @@ spread.contextMenu = contextMenu;
 
 本示例展示了 SpreadJS 在筛选功能方面的灵活性和可扩展性。开发者可以学到：
 
-- 如何使用 `HideRowFilter` 实现行筛选功能
-- 如何注册和实现自定义命令，扩展 SpreadJS 的内置功能
-- 如何通过继承 `ContextMenu` 类自定义右键菜单行为
-- 如何使用事务管理确保操作的原子性和可撤销性
+* 如何使用 `HideRowFilter` 实现行筛选功能
+* 如何注册和实现自定义命令，扩展 SpreadJS 的内置功能
+* 如何通过继承 `ContextMenu` 类自定义右键菜单行为
+* 如何使用事务管理确保操作的原子性和可撤销性
 
 该方案适用于需要动态控制筛选功能、自定义用户交互流程的业务场景，具有良好的扩展性，可以根据实际需求进一步定制筛选逻辑和 UI 交互。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/OkEwbo6peUW_lXzLbcXeyA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

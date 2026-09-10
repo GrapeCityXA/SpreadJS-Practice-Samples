@@ -2,13 +2,13 @@
 
 本示例演示了如何在 SpreadJS 中动态修改表格的数据绑定字段和数据源。通过两个交互按钮，用户可以实时改变表格列的绑定字段名称，并更新绑定的数据内容，展示了 SpreadJS 表格数据绑定的灵活性和动态性。
 
-该示例适用于需要根据业务逻辑动态调整表格结构和数据展示的场景，例如多语言切换、字段映射变更、数据源切换等。
+该示例适用于需要根据业务逻辑动态调整表格结构和数据展示的场景，例如多语言切换、字段映射变更、数据源切换等。 
 
 ## 二、解决的问题
 
-- **动态字段映射**：在运行时修改表格列与数据源字段的映射关系，无需重新创建整个表格
-- **数据源切换**：支持在不同数据结构之间灵活切换，适应业务数据变化
-- **列定义更新**：演示如何正确更新表格列的绑定配置（需要重新创建 TableColumn 对象）
+* **动态字段映射**：在运行时修改表格列与数据源字段的映射关系，无需重新创建整个表格
+* **数据源切换**：支持在不同数据结构之间灵活切换，适应业务数据变化
+* **列定义更新**：演示如何正确更新表格列的绑定配置（需要重新创建 TableColumn 对象）
 
 ## 三、实现思路
 
@@ -37,9 +37,10 @@ table.bindingPath("records");
 ```
 
 关键点：
-- `autoGenerateColumns(false)` 禁用自动生成列，使用手动配置
-- `dataField()` 指定列绑定的数据字段名
-- `bindingPath("records")` 指定数据源中的数组路径
+
+* `autoGenerateColumns(false)` 禁用自动生成列，使用手动配置
+* `dataField()` 指定列绑定的数据字段名
+* `bindingPath("records")` 指定数据源中的数组路径
 
 ### 3.2 动态修改绑定字段
 
@@ -82,9 +83,9 @@ document.getElementById('bindData').onclick = function(){
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0
-- SystemJS 0.19.22（模块加载）
-- TypeScript 4.1.2
+* SpreadJS 15.0.0
+* SystemJS 0.19.22（模块加载）
+* TypeScript 4.1.2
 
 ## 四、使用说明
 
@@ -105,15 +106,15 @@ npm install
 
 ### 5.1 优点
 
-- **灵活的字段映射**：支持运行时动态调整列与数据字段的对应关系
-- **简洁的 API**：通过 `bindColumns()` 和 `setDataSource()` 即可完成绑定更新
-- **数据驱动**：使用 CellBindingSource 实现数据与视图的自动同步
+* **灵活的字段映射**：支持运行时动态调整列与数据字段的对应关系
+* **简洁的 API**：通过 `bindColumns()` 和 `setDataSource()` 即可完成绑定更新
+* **数据驱动**：使用 CellBindingSource 实现数据与视图的自动同步
 
 ### 5.2 局限性与扩展建议
 
-- 当前示例仅演示单行数据，实际应用中可扩展为多行数据绑定
-- 可以结合表单验证、数据校验等功能增强实用性
-- 建议添加错误处理机制，处理数据字段不匹配的情况
+* 当前示例仅演示单行数据，实际应用中可扩展为多行数据绑定
+* 可以结合表单验证、数据校验等功能增强实用性
+* 建议添加错误处理机制，处理数据字段不匹配的情况
 
 ## 六、关键代码片段
 
@@ -149,4 +150,8 @@ sheet.setDataSource(source)
 
 该方案适用于需要动态调整表格结构的业务场景，例如报表系统、数据管理平台等。通过理解列绑定和数据源绑定的分离设计，开发者可以灵活实现复杂的数据展示需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/DqE-0t-zB0WLKoG47CHazQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

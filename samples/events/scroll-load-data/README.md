@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **大数据量展示性能优化**：避免一次性加载大量数据导致的页面卡顿，采用按需加载的方式提升初始加载速度
-- **用户体验优化**：通过滚动触发数据加载，提供流畅的浏览体验，用户无需手动翻页
-- **数据绑定动态更新**：演示如何在表格绑定场景下动态追加数据并自动刷新视图
+* **大数据量展示性能优化**：避免一次性加载大量数据导致的页面卡顿，采用按需加载的方式提升初始加载速度
+* **用户体验优化**：通过滚动触发数据加载，提供流畅的浏览体验，用户无需手动翻页
+* **数据绑定动态更新**：演示如何在表格绑定场景下动态追加数据并自动刷新视图
 
 ## 三、实现思路
 
@@ -19,8 +19,8 @@ spread.options.scrollbarMaxAlign = true;
 spread.options.scrollbarShowMax = true;
 ```
 
-- `scrollbarMaxAlign`：设置为 true 时，滚动条的最大值与实际行数对齐
-- `scrollbarShowMax`：设置为 true 时，滚动条显示实际的最大行数
+* `scrollbarMaxAlign`：设置为 true 时，滚动条的最大值与实际行数对齐
+* `scrollbarShowMax`：设置为 true 时，滚动条显示实际的最大行数
 
 这两个配置确保滚动条能够准确反映当前数据的行数，便于判断是否滚动到底部。
 
@@ -58,8 +58,9 @@ sheet.setDataSource(dataSource);
 ```
 
 关键点：
-- `expandBoundRows(true)`：允许表格根据绑定数据自动扩展行数
-- `bindingPath`：指定表格绑定到数据源的哪个字段（这里是 `bindPath_table` 数组）
+
+* `expandBoundRows(true)`：允许表格根据绑定数据自动扩展行数
+* `bindingPath`：指定表格绑定到数据源的哪个字段（这里是 `bindPath_table` 数组）
 
 ### 3.3 监听滚动事件实现动态加载
 
@@ -95,16 +96,17 @@ sheet.bind(GC.Spread.Sheets.Events.TopRowChanged, function (sender, args) {
 ```
 
 实现要点：
-- `getViewportBottomRow(1)`：获取当前视口中可见的最后一行索引
-- 通过比较 `bottomRow` 和 `rowCount - 1` 判断是否滚动到底部
-- 使用 `setTimeout` 延迟 50ms 执行，避免频繁触发
-- 直接修改原始数据源数组，然后重新调用 `bindingPath` 触发表格更新
+
+* `getViewportBottomRow(1)`：获取当前视口中可见的最后一行索引
+* 通过比较 `bottomRow` 和 `rowCount - 1` 判断是否滚动到底部
+* 使用 `setTimeout` 延迟 50ms 执行，避免频繁触发
+* 直接修改原始数据源数组，然后重新调用 `bindingPath` 触发表格更新
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心电子表格组件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -128,18 +130,19 @@ npm install
 
 ### 5.1 优点
 
-- **性能优化**：按需加载数据，避免一次性渲染大量行导致的性能问题
-- **用户体验流畅**：无需手动翻页，滚动即可自动加载，符合现代 Web 应用的交互习惯
-- **实现简单**：利用 SpreadJS 的数据绑定机制，只需监听滚动事件并修改数据源即可
-- **可控性强**：可以灵活设置加载触发条件、每次加载的数据量和最大行数限制
+* **性能优化**：按需加载数据，避免一次性渲染大量行导致的性能问题
+* **用户体验流畅**：无需手动翻页，滚动即可自动加载，符合现代 Web 应用的交互习惯
+* **实现简单**：利用 SpreadJS 的数据绑定机制，只需监听滚动事件并修改数据源即可
+* **可控性强**：可以灵活设置加载触发条件、每次加载的数据量和最大行数限制
 
 ### 5.2 局限性与扩展建议
 
-- **当前实现为同步追加数据**：实际应用中通常需要从后端 API 异步获取数据，可以在 `setTimeout` 中改为 `fetch` 或 `axios` 请求
-- **缺少加载状态提示**：建议添加 loading 指示器，告知用户数据正在加载
-- **可以优化触发逻辑**：当前是滚动到最后一行才触发，可以改为提前触发（如滚动到倒数第 5 行时），提升体验
+* **当前实现为同步追加数据**：实际应用中通常需要从后端 API 异步获取数据，可以在 `setTimeout` 中改为 `fetch` 或 `axios` 请求
+* **缺少加载状态提示**：建议添加 loading 指示器，告知用户数据正在加载
+* **可以优化触发逻辑**：当前是滚动到最后一行才触发，可以改为提前触发（如滚动到倒数第 5 行时），提升体验
 
 扩展建议：
+
 ```javascript
 // 提前触发加载
 if (bottomRow >= rowCount - 5) {
@@ -170,6 +173,8 @@ if (bottomRow === rowCount - 1 && !isLoading) {
 
 该方案适用于需要展示大量数据的报表、数据分析工具等场景，通过按需加载的方式有效提升应用性能。开发者可以在此基础上扩展为异步数据加载、虚拟滚动等更复杂的功能。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Table%20Binding%20Rolling%20Load%20Data.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/H-LCL_JDhEisD0Skkq50cA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **像素画绘制**：利用电子表格单元格作为像素点，实现图像绘制功能
-- **动画效果实现**：通过定时器控制单元格渲染顺序，创造动态绘制效果
-- **创意应用场景**：展示 SpreadJS 在艺术创作和可视化领域的应用潜力
+* **像素画绘制**：利用电子表格单元格作为像素点，实现图像绘制功能
+* **动画效果实现**：通过定时器控制单元格渲染顺序，创造动态绘制效果
+* **创意应用场景**：展示 SpreadJS 在艺术创作和可视化领域的应用潜力
 
 ## 三、实现思路
 
@@ -47,9 +47,10 @@ for (let i = 16; i < 22; i++) {
 ```
 
 每个命令对象包含三个属性：
-- `row`：单元格行号
-- `col`：单元格列号
-- `backColor`：背景颜色（支持颜色名称、RGB 值、主题色）
+
+* `row`：单元格行号
+* `col`：单元格列号
+* `backColor`：背景颜色（支持颜色名称、RGB 值、主题色）
 
 ### 3.3 马里奥图像数据定义
 
@@ -71,9 +72,10 @@ for (let i = 15; i < 23; i++) {
 ```
 
 整个马里奥图像由 16 行像素数据组成，使用三种主要颜色：
-- `red`：帽子和衣服
-- `Accent 2 -50`：棕色（头发、鞋子）
-- `rgb(251,162,80)`：肤色
+
+* `red`：帽子和衣服
+* `Accent 2 -50`：棕色（头发、鞋子）
+* `rgb(251,162,80)`：肤色
 
 ### 3.4 动画渲染实现
 
@@ -101,9 +103,9 @@ function executeCmd(cmdArr) {
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0：核心电子表格引擎
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心电子表格引擎
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -126,17 +128,17 @@ npm install
 
 ### 5.1 优点
 
-- **创意应用**：展示了电子表格在艺术创作领域的创新用法
-- **动画效果**：通过定时器实现流畅的绘制动画，增强视觉体验
-- **代码简洁**：使用循环和条件判断高效定义复杂图像数据
-- **易于扩展**：可以轻松修改颜色和坐标数据来绘制其他像素画
+* **创意应用**：展示了电子表格在艺术创作领域的创新用法
+* **动画效果**：通过定时器实现流畅的绘制动画，增强视觉体验
+* **代码简洁**：使用循环和条件判断高效定义复杂图像数据
+* **易于扩展**：可以轻松修改颜色和坐标数据来绘制其他像素画
 
 ### 5.2 局限性与扩展建议
 
-- **手动编码**：当前需要手动编写每行的像素数据，可以考虑开发图像转换工具，自动将图片转换为像素数据
-- **性能优化**：对于大型像素画，可以使用 `suspendPaint()` 包裹绘制过程，或调整定时器间隔
-- **交互增强**：可以添加清除、暂停、加速等控制功能
-- **图像库**：可以扩展为像素画库，支持多个图像的切换和展示
+* **手动编码**：当前需要手动编写每行的像素数据，可以考虑开发图像转换工具，自动将图片转换为像素数据
+* **性能优化**：对于大型像素画，可以使用 `suspendPaint()` 包裹绘制过程，或调整定时器间隔
+* **交互增强**：可以添加清除、暂停、加速等控制功能
+* **图像库**：可以扩展为像素画库，支持多个图像的切换和展示
 
 ## 六、关键代码片段
 
@@ -147,9 +149,10 @@ sheet.getCell(row, col).backColor(color);
 ```
 
 这是 SpreadJS 设置单元格背景色的核心 API，支持多种颜色格式：
-- 颜色名称：`"red"`, `"blue"`
-- RGB 值：`"rgb(251,162,80)"`
-- 主题色：`"Accent 2 -50"`
+
+* 颜色名称：`"red"`, `"blue"`
+* RGB 值：`"rgb(251,162,80)"`
+* 主题色：`"Accent 2 -50"`
 
 ### 递归定时器模式
 
@@ -171,11 +174,15 @@ function executeCmd(cmdArr) {
 
 本示例展示了 SpreadJS 在创意应用方面的潜力，通过简单的单元格背景色设置实现了像素画绘制功能。开发者可以从中学到：
 
-- SpreadJS 单元格样式 API 的使用方法
-- 使用递归定时器实现动画效果的技巧
-- 数据结构设计：将图像数据抽象为命令数组
-- 批量操作性能优化：使用 `suspendPaint()` 和 `resumePaint()`
+* SpreadJS 单元格样式 API 的使用方法
+* 使用递归定时器实现动画效果的技巧
+* 数据结构设计：将图像数据抽象为命令数组
+* 批量操作性能优化：使用 `suspendPaint()` 和 `resumePaint()`
 
 该方案适用于数据可视化、教育演示、游戏开发等场景，具有良好的扩展性。通过修改像素数据和颜色配置，可以轻松绘制各种像素风格的图像。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/QLCf-6z-2kiVGImBqUkXKQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

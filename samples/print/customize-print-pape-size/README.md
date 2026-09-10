@@ -1,10 +1,12 @@
+# customize-print-pape-size
+
 ### 问题：如何自定义纸张尺寸的对话框
 
 ***
 
 #### 背景：
 
-当前组件版编辑器支持用户选择纸张类型，但是如果要自定义纸张的宽高，目前没有提供对应的UI界面。页面设置对话框中也无法设置。
+当前组件版编辑器支持用户选择纸张类型，但是如果要自定义纸张的宽高，目前没有提供对应的UI界面。页面设置对话框中也无法设置。 
 
 #### 实现方法：
 
@@ -18,4 +20,8 @@
 4\. 处理页面设置对话框重置纸张宽高的问题
 由于编辑器本身不支持自定义纸张尺寸，所以页面设置对话框在关闭时会把sheet的自定义纸张宽高重置为0，需要监听这个操作来避免此问题。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/V82jhwOYrUeO2-wILusIbQ/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

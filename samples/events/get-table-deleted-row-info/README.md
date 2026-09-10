@@ -1,3 +1,5 @@
+# get-table-deleted-row-info
+
 ### 需求：如何通过重写命令获取表格删除行的信息
 
 #### 背景：
@@ -38,4 +40,8 @@ GC.Spread.Sheets.Commands.tableDeleteRowsForContextMenu.execute = function (
 };
 ```
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/Bqtcy-eoXk6MRh3qdR15_A/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

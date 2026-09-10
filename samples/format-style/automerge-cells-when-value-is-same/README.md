@@ -6,9 +6,9 @@
 
 在实际业务中，表格数据经常需要按照某些字段进行分组展示。例如巡视报告中，多个检查项可能属于同一个大类（如"路径"、"杆塔拉线"），如果每行都重复显示分类名称，会显得冗余且不够直观。自动合并同值单元格可以：
 
-- 减少视觉冗余，让表格更简洁易读
-- 清晰展示数据的层级和分组关系
-- 提升用户体验，快速识别数据归属
+* 减少视觉冗余，让表格更简洁易读
+* 清晰展示数据的层级和分组关系
+* 提升用户体验，快速识别数据归属
 
 ## 三、实现思路
 
@@ -51,9 +51,9 @@ sheet.autoMerge(range, GC.Spread.Sheets.AutoMerge.AutoMergeDirection.rowColumn)
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0 — 核心表格组件
-- SystemJS 0.19.22 — 模块加载器
-- TypeScript 4.1.2 — 类型支持
+* SpreadJS 15.0.0 — 核心表格组件
+* SystemJS 0.19.22 — 模块加载器
+* TypeScript 4.1.2 — 类型支持
 
 ## 四、使用说明
 
@@ -76,27 +76,31 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单，只需一行 `autoMerge()` 调用即可完成
-- 支持灵活的范围控制，可指定需要合并的列
-- 自动检测相同值，无需手动判断和处理
-- 支持数据变化后的动态更新
+* 实现简单，只需一行 `autoMerge()` 调用即可完成
+* 支持灵活的范围控制，可指定需要合并的列
+* 自动检测相同值，无需手动判断和处理
+* 支持数据变化后的动态更新
 
 ### 5.2 局限性与扩展建议
 
 当前实现仅对前两列进行合并。如果需要对更多列或不连续的列进行合并，可以：
 
-- 调整 `Range` 参数中的列数和起始列
-- 多次调用 `autoMerge()` 方法处理不同的列范围
-- 根据业务需求选择合并方向（仅行方向或仅列方向）
+* 调整 `Range` 参数中的列数和起始列
+* 多次调用 `autoMerge()` 方法处理不同的列范围
+* 根据业务需求选择合并方向（仅行方向或仅列方向）
 
 ## 六、总结
 
 本示例展示了 SpreadJS 中自动合并同值单元格的实现方法，适用于需要分组展示数据的报表场景。开发者可以学到：
 
-- 如何使用 `CellBindingSource` 进行数据绑定
-- 如何通过 `autoMerge()` 方法实现单元格自动合并
-- 如何控制合并范围和方向
+* 如何使用 `CellBindingSource` 进行数据绑定
+* 如何通过 `autoMerge()` 方法实现单元格自动合并
+* 如何控制合并范围和方向
 
 该方案特别适合巡视表、检查表、分类统计表等需要清晰展示数据层级关系的应用场景，可以显著提升表格的可读性和专业性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/6w0z0W6txUaLvKbaDRihgQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

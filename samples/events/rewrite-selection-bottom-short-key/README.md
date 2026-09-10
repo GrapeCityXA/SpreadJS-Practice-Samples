@@ -6,9 +6,9 @@
 
 在默认情况下，SpreadJS 的某些快捷键行为可能与 Excel 存在差异。本示例解决了以下问题：
 
-- 实现与 Excel 一致的 `Ctrl+Shift+↓` 快捷键行为
-- 支持多选区同时向下扩展
-- 智能识别数据边界，自动停止在下一个有数据的单元格
+* 实现与 Excel 一致的 `Ctrl+Shift+↓` 快捷键行为
+* 支持多选区同时向下扩展
+* 智能识别数据边界，自动停止在下一个有数据的单元格
 
 ## 三、实现思路
 
@@ -69,9 +69,9 @@ newselection.forEach((selection) => {
 
 ### 3.4 技术栈
 
-- SpreadJS 16.0.1
-- SystemJS 0.19.22（模块加载器）
-- TypeScript 4.1.2
+* SpreadJS 16.0.1
+* SystemJS 0.19.22（模块加载器）
+* TypeScript 4.1.2
 
 ## 四、使用说明
 
@@ -95,18 +95,18 @@ npm install
 
 ### 5.1 优点
 
-- 与 Excel 行为完全一致，降低用户学习成本
-- 支持多选区同时操作
-- 支持撤销/重做功能（`canUndo: true`）
-- 使用搜索 API 实现，性能高效
+* 与 Excel 行为完全一致，降低用户学习成本
+* 支持多选区同时操作
+* 支持撤销/重做功能（`canUndo: true`）
+* 使用搜索 API 实现，性能高效
 
 ### 5.2 局限性与扩展建议
 
 当前实现仅针对向下扩展选区，如需完整的 Excel 快捷键体验，可以扩展实现：
 
-- `Ctrl+Shift+↑`（向上扩展）
-- `Ctrl+Shift+←`（向左扩展）
-- `Ctrl+Shift+→`（向右扩展）
+* `Ctrl+Shift+↑`（向上扩展）
+* `Ctrl+Shift+←`（向左扩展）
+* `Ctrl+Shift+→`（向右扩展）
 
 实现方式类似，只需调整 `searchCondition` 的搜索范围参数即可。
 
@@ -140,11 +140,15 @@ execute: function (spread, options, isUndo) {
 
 本示例展示了 SpreadJS 命令系统的强大扩展能力，开发者可以学到：
 
-- 如何使用 `commandManager.register()` 注册自定义命令
-- 如何使用 `SearchCondition` 进行单元格内容搜索
-- 如何处理多选区场景
-- 如何使用事务机制（`startTransaction`/`endTransaction`）保证操作的原子性和可撤销性
+* 如何使用 `commandManager.register()` 注册自定义命令
+* 如何使用 `SearchCondition` 进行单元格内容搜索
+* 如何处理多选区场景
+* 如何使用事务机制（`startTransaction`/`endTransaction`）保证操作的原子性和可撤销性
 
 该方案适用于需要自定义快捷键行为的场景，特别是从 Excel 迁移到 SpreadJS 的项目，可以通过类似方式实现完全一致的用户体验。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/QeyJlQ9FAUaHSzH_aBql5g/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

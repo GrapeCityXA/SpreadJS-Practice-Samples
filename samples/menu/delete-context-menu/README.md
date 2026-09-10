@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **权限控制需求**：在某些业务场景下，需要限制用户动态添加工作表的能力，防止数据结构被随意修改
-- **界面简化**：移除不常用或不需要的菜单项，减少用户操作的复杂度，提升用户体验
-- **定制化需求**：根据不同的用户角色或业务场景，提供差异化的菜单功能
+* **权限控制需求**：在某些业务场景下，需要限制用户动态添加工作表的能力，防止数据结构被随意修改
+* **界面简化**：移除不常用或不需要的菜单项，减少用户操作的复杂度，提升用户体验
+* **定制化需求**：根据不同的用户角色或业务场景，提供差异化的菜单功能
 
 ## 三、实现思路
 
@@ -30,16 +30,17 @@ spread.contextMenu.menuData = menuData
 ```
 
 核心逻辑：
+
 1. 获取当前的菜单数据数组
 2. 使用 `filter` 方法过滤掉 `command` 为 `gc.spread.contextMenu.insertSheet` 的菜单项
 3. 将过滤后的数组重新赋值给 `contextMenu.menuData`
 
 ### 3.2 技术栈
 
-- **SpreadJS**: 16.0.1（核心表格组件）
-- **SpreadJS Designer**: 16.0.1（设计器组件，提供完整的 Excel 编辑界面）
-- **SystemJS**: 0.19.22（模块加载器）
-- **TypeScript**: 4.1.2（开发语言）
+* **SpreadJS**: 16.0.1（核心表格组件）
+* **SpreadJS Designer**: 16.0.1（设计器组件，提供完整的 Excel 编辑界面）
+* **SystemJS**: 0.19.22（模块加载器）
+* **TypeScript**: 4.1.2（开发语言）
 
 ## 四、使用说明
 
@@ -63,16 +64,16 @@ npm install
 
 ### 5.1 优点
 
-- **实现简单**：只需几行代码即可完成菜单项的删除
-- **灵活性高**：可以根据 `command` 属性精确定位并删除任意菜单项
-- **无侵入性**：不影响其他菜单功能和 SpreadJS 的正常运行
-- **易于扩展**：可以通过类似方式添加、修改或重新排序菜单项
+* **实现简单**：只需几行代码即可完成菜单项的删除
+* **灵活性高**：可以根据 `command` 属性精确定位并删除任意菜单项
+* **无侵入性**：不影响其他菜单功能和 SpreadJS 的正常运行
+* **易于扩展**：可以通过类似方式添加、修改或重新排序菜单项
 
 ### 5.2 扩展建议
 
-- **批量删除**：可以扩展为删除多个菜单项，只需在 `filter` 条件中添加更多判断
-- **动态控制**：结合用户权限系统，根据不同角色动态显示或隐藏菜单项
-- **自定义菜单**：除了删除，还可以通过 `push` 方法向 `menuData` 添加自定义菜单项
+* **批量删除**：可以扩展为删除多个菜单项，只需在 `filter` 条件中添加更多判断
+* **动态控制**：结合用户权限系统，根据不同角色动态显示或隐藏菜单项
+* **自定义菜单**：除了删除，还可以通过 `push` 方法向 `menuData` 添加自定义菜单项
 
 ## 六、关键代码片段
 
@@ -106,4 +107,8 @@ spread.contextMenu.menuData = menuData
 
 该方案适用于需要对用户操作进行限制或简化界面的场景，具有良好的扩展性，可以根据实际需求进行更复杂的菜单定制。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/UhDhXV2JJUyc_3jvszQJjA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

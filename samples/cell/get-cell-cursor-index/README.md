@@ -1,6 +1,6 @@
 ## 一、Demo 概述
 
-本示例演示了如何在 SpreadJS 中获取单元格编辑状态下的光标位置索引。当用户在单元格中输入或编辑内容时，系统能够实时捕获光标在文本中的位置，这对于实现自定义的输入辅助功能、公式编辑器或智能提示功能非常有用。
+本示例演示了如何在 SpreadJS 中获取单元格编辑状态下的光标位置索引。当用户在单元格中输入或编辑内容时，系统能够实时捕获光标在文本中的位置，这对于实现自定义的输入辅助功能、公式编辑器或智能提示功能非常有用。 
 
 该示例通过监听 SpreadJS 的 `EditEnding` 事件，在用户退出编辑状态前获取光标在编辑器中的精确位置，并通过弹窗显示光标索引值。
 
@@ -8,10 +8,10 @@
 
 在电子表格应用中，获取光标位置是实现高级编辑功能的基础需求：
 
-- 实现智能公式提示：根据光标位置判断用户正在输入的函数或参数
-- 自定义输入辅助：在特定位置插入预定义的文本或符号
-- 编辑历史追踪：记录用户的编辑行为和光标移动轨迹
-- 跨浏览器兼容：处理不同浏览器（Chrome、Firefox、IE）在光标位置获取上的差异
+* 实现智能公式提示：根据光标位置判断用户正在输入的函数或参数
+* 自定义输入辅助：在特定位置插入预定义的文本或符号
+* 编辑历史追踪：记录用户的编辑行为和光标移动轨迹
+* 跨浏览器兼容：处理不同浏览器（Chrome、Firefox、IE）在光标位置获取上的差异
 
 ## 三、实现思路
 
@@ -64,9 +64,9 @@ else if ((sel = doc.selection) && sel.type != "Control") {
 
 ### 3.3 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持（配置环境）
+* SpreadJS 15.0.0：核心电子表格组件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持（配置环境）
 
 ## 四、使用说明
 
@@ -92,16 +92,16 @@ npm install
 
 ### 5.1 优点
 
-- 跨浏览器兼容：同时支持现代浏览器和 IE 浏览器的光标位置获取
-- 实时准确：能够精确获取光标在文本中的字符索引位置
-- 非侵入式：通过事件监听实现，不影响 SpreadJS 的正常编辑功能
+* 跨浏览器兼容：同时支持现代浏览器和 IE 浏览器的光标位置获取
+* 实时准确：能够精确获取光标在文本中的字符索引位置
+* 非侵入式：通过事件监听实现，不影响 SpreadJS 的正常编辑功能
 
 ### 5.2 扩展建议
 
-- 可以将光标位置信息用于实现自动补全功能
-- 结合公式解析器实现智能函数提示
-- 记录光标移动轨迹用于用户行为分析
-- 实现基于光标位置的上下文菜单
+* 可以将光标位置信息用于实现自动补全功能
+* 结合公式解析器实现智能函数提示
+* 记录光标移动轨迹用于用户行为分析
+* 实现基于光标位置的上下文菜单
 
 ## 六、关键代码片段
 
@@ -129,11 +129,15 @@ caretOffset = preCaretRange.toString().length;
 
 本示例展示了在 SpreadJS 中获取单元格编辑光标位置的完整实现方案，核心价值在于：
 
-- 掌握 SpreadJS 编辑事件的监听机制
-- 理解浏览器 Selection API 和 Range API 的使用方法
-- 学习跨浏览器兼容性处理技巧
-- 为实现高级编辑功能（如智能提示、自动补全）打下基础
+* 掌握 SpreadJS 编辑事件的监听机制
+* 理解浏览器 Selection API 和 Range API 的使用方法
+* 学习跨浏览器兼容性处理技巧
+* 为实现高级编辑功能（如智能提示、自动补全）打下基础
 
 该方案适用于需要精确控制编辑行为的场景，可以作为构建自定义公式编辑器、智能输入助手等高级功能的技术基础。开发者可以在此基础上扩展更多交互功能，提升用户的编辑体验。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/OkpYOgg5fEObGFZ1nBfTRQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

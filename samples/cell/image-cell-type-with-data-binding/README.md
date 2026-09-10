@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中实现图片单元格的数据绑定功能。通过自定义单元格类型（CellType），将图片以 Base64 格式存储在数据源中，并在单元格中以图片形式渲染显示。用户可以点击指定单元格上传图片，图片数据会自动绑定到数据源，实现了图片数据的双向绑定。
+本示例展示了如何在 SpreadJS 中实现图片单元格的数据绑定功能。通过自定义单元格类型（CellType），将图片以 Base64 格式存储在数据源中，并在单元格中以图片形式渲染显示。用户可以点击指定单元格上传图片，图片数据会自动绑定到数据源，实现了图片数据的双向绑定。 
 
 该示例适用于需要在表格中展示用户头像、商品图片等场景，通过数据绑定机制简化了图片数据的管理和更新。
 
 ## 二、解决的问题
 
-- **图片数据存储**：将图片以 Base64 格式存储在数据源中，便于数据的序列化和传输
-- **自定义单元格渲染**：通过自定义 CellType 实现图片在单元格中的渲染显示
-- **数据绑定集成**：将图片数据与 SpreadJS 的数据绑定机制无缝集成，实现数据的自动同步
+* **图片数据存储**：将图片以 Base64 格式存储在数据源中，便于数据的序列化和传输
+* **自定义单元格渲染**：通过自定义 CellType 实现图片在单元格中的渲染显示
+* **数据绑定集成**：将图片数据与 SpreadJS 的数据绑定机制无缝集成，实现数据的自动同步
 
 ## 三、实现思路
 
@@ -85,9 +85,9 @@ document.getElementById("save").addEventListener("click", function () {
 
 ### 3.4 技术栈
 
-- SpreadJS 16.0.1：核心表格组件
-- TypeScript 4.1.2：开发语言
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 16.0.1：核心表格组件
+* TypeScript 4.1.2：开发语言
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -110,15 +110,15 @@ npm install
 
 ### 5.1 优点
 
-- **数据绑定集成**：图片数据与普通数据字段一样参与数据绑定，便于统一管理
-- **自定义渲染灵活**：通过自定义 CellType 可以实现各种复杂的单元格渲染需求
-- **数据可序列化**：Base64 格式的图片数据可以直接序列化为 JSON，便于数据的保存和传输
+* **数据绑定集成**：图片数据与普通数据字段一样参与数据绑定，便于统一管理
+* **自定义渲染灵活**：通过自定义 CellType 可以实现各种复杂的单元格渲染需求
+* **数据可序列化**：Base64 格式的图片数据可以直接序列化为 JSON，便于数据的保存和传输
 
 ### 5.2 局限性与扩展建议
 
-- **性能考虑**：Base64 格式会增加约 33% 的数据体积，大量图片可能影响性能，建议对大图片进行压缩或使用图片 URL 方式
-- **图片加载优化**：当前实现中每次 `paint` 都会创建新的 `img` 元素，可以考虑缓存已加载的图片对象以提升性能
-- **扩展方向**：可以添加图片预览、裁剪、压缩等功能，或支持从 URL 加载图片
+* **性能考虑**：Base64 格式会增加约 33% 的数据体积，大量图片可能影响性能，建议对大图片进行压缩或使用图片 URL 方式
+* **图片加载优化**：当前实现中每次 `paint` 都会创建新的 `img` 元素，可以考虑缓存已加载的图片对象以提升性能
+* **扩展方向**：可以添加图片预览、裁剪、压缩等功能，或支持从 URL 加载图片
 
 ## 六、关键代码片段
 
@@ -162,4 +162,8 @@ fileReader.readAsDataURL(file)  // 读取文件为 Data URL（Base64）
 
 该方案适用于需要在表格中展示图片数据的场景，通过数据绑定机制可以方便地实现图片数据的增删改查操作。在实际应用中，可以根据需求扩展为支持多图片上传、图片编辑等更复杂的功能。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/YDwDZSUy-kydEXzqL1--gw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

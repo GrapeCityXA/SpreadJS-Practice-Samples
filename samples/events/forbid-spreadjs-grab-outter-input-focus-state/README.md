@@ -6,9 +6,9 @@
 
 在 SpreadJS 与外部 UI 组件（如模态弹窗、表单输入框）交互时，常见的焦点冲突问题包括：
 
-- **焦点抢夺**：点击单元格后打开弹窗，输入框无法自动获取焦点，用户需要手动点击才能输入
-- **编辑器干扰**：SpreadJS 的单元格编辑器保持激活状态，导致键盘事件被表格拦截而非传递给弹窗
-- **用户体验下降**：需要额外的点击操作才能开始输入，交互流程不够流畅
+* **焦点抢夺**：点击单元格后打开弹窗，输入框无法自动获取焦点，用户需要手动点击才能输入
+* **编辑器干扰**：SpreadJS 的单元格编辑器保持激活状态，导致键盘事件被表格拦截而非传递给弹窗
+* **用户体验下降**：需要额外的点击操作才能开始输入，交互流程不够流畅
 
 该示例通过主动释放 SpreadJS 的焦点控制权，解决了这些问题，使得外部表单能够正常接管用户输入。
 
@@ -64,9 +64,9 @@ document.getElementById('infoForm').addEventListener('submit', (e) => {
 
 ### 3.3 技术栈
 
-- **@grapecity/spread-sheets**: 17.0.8（核心表格组件）
-- **SystemJS**: 0.19.22（模块加载器）
-- **原生 JavaScript**：DOM 操作和事件处理
+* **@grapecity/spread-sheets**: 17.0.8（核心表格组件）
+* **SystemJS**: 0.19.22（模块加载器）
+* **原生 JavaScript**：DOM 操作和事件处理
 
 ## 四、使用说明
 
@@ -92,15 +92,15 @@ npm install
 
 ### 5.1 优点
 
-- **焦点管理精准**：通过 `spread.focus(false)` 主动释放焦点，避免与外部组件冲突
-- **用户体验流畅**：弹窗打开后输入框自动聚焦，无需额外点击操作
-- **代码简洁**：核心逻辑仅需一行 `spread.focus(false)` 即可解决焦点问题
-- **通用性强**：该方案适用于所有需要在 SpreadJS 中集成外部表单或输入组件的场景
+* **焦点管理精准**：通过 `spread.focus(false)` 主动释放焦点，避免与外部组件冲突
+* **用户体验流畅**：弹窗打开后输入框自动聚焦，无需额外点击操作
+* **代码简洁**：核心逻辑仅需一行 `spread.focus(false)` 即可解决焦点问题
+* **通用性强**：该方案适用于所有需要在 SpreadJS 中集成外部表单或输入组件的场景
 
 ### 5.2 局限性与扩展建议
 
-- **延迟时间固定**：当前使用 500ms 延迟，在低性能设备上可能需要调整
-- **扩展建议**：可以根据实际需求动态调整延迟时间，或使用 `requestAnimationFrame` 优化时序控制
+* **延迟时间固定**：当前使用 500ms 延迟，在低性能设备上可能需要调整
+* **扩展建议**：可以根据实际需求动态调整延迟时间，或使用 `requestAnimationFrame` 优化时序控制
 
 ## 六、关键代码片段
 
@@ -129,10 +129,14 @@ function openModal() {
 
 本示例展示了如何在 SpreadJS 应用中正确处理焦点管理问题，核心价值在于：
 
-- 掌握 `spread.focus(false)` 方法的使用场景和时机
-- 理解 SpreadJS 与外部 DOM 元素的焦点交互机制
-- 学习如何通过延迟执行优化焦点切换的时序控制
+* 掌握 `spread.focus(false)` 方法的使用场景和时机
+* 理解 SpreadJS 与外部 DOM 元素的焦点交互机制
+* 学习如何通过延迟执行优化焦点切换的时序控制
 
 该方案适用于所有需要在 SpreadJS 中集成自定义表单、对话框或输入组件的场景，是构建复杂表格应用时必须掌握的技术要点。开发者可以在此基础上扩展更多交互功能，如多步骤表单、动态验证等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/q6V-VD7Yp0SsNh7V9ZRSDw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

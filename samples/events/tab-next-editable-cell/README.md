@@ -6,9 +6,9 @@
 
 在实际业务场景中，经常需要创建带有固定格式的表单或模板，其中只有特定单元格允许用户编辑。例如：
 
-- 数据录入表单：只允许用户填写特定的输入字段，其他说明文字和标题不可修改
-- 财务报表模板：只开放数据输入单元格，公式和格式单元格需要保护
-- 问卷调查表：只允许填写答案区域，问题描述区域锁定
+* 数据录入表单：只允许用户填写特定的输入字段，其他说明文字和标题不可修改
+* 财务报表模板：只开放数据输入单元格，公式和格式单元格需要保护
+* 问卷调查表：只允许填写答案区域，问题描述区域锁定
 
 在这些场景下，用户希望按 Tab 键时能够智能跳过锁定的单元格，直接跳转到下一个可编辑单元格，而不是按照默认的顺序逐个遍历所有单元格。
 
@@ -96,6 +96,7 @@ spread.commandManager().register('mytab', function(spread) {
 ```
 
 搜索逻辑分为两个阶段：
+
 1. 从当前单元格的下一个位置开始向后搜索，直到工作表末尾
 2. 如果没有找到，则从工作表开头搜索到当前位置（循环跳转）
 
@@ -113,9 +114,9 @@ spread.commandManager().setShortcutKey('mytab', GC.Spread.Commands.Key.tab, fals
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0：核心表格控件
-- TypeScript 4.1.2：开发语言
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 15.0.0：核心表格控件
+* TypeScript 4.1.2：开发语言
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -140,22 +141,24 @@ npm install
 
 ### 5.1 优点
 
-- 提升用户体验：用户无需手动点击或使用方向键寻找可编辑单元格
-- 循环跳转：到达最后一个可编辑单元格后会自动回到第一个，适合连续录入场景
-- 视觉提示：使用颜色标识可编辑区域，用户一目了然
-- 灵活扩展：可以根据业务需求调整搜索逻辑和跳转规则
+* 提升用户体验：用户无需手动点击或使用方向键寻找可编辑单元格
+* 循环跳转：到达最后一个可编辑单元格后会自动回到第一个，适合连续录入场景
+* 视觉提示：使用颜色标识可编辑区域，用户一目了然
+* 灵活扩展：可以根据业务需求调整搜索逻辑和跳转规则
 
 ### 5.2 局限性与扩展建议
 
 当前实现的局限性：
-- 只支持 Tab 键向前跳转，不支持 Shift+Tab 反向跳转
-- 搜索算法是线性遍历，在大型工作表中可能存在性能问题
+
+* 只支持 Tab 键向前跳转，不支持 Shift+Tab 反向跳转
+* 搜索算法是线性遍历，在大型工作表中可能存在性能问题
 
 扩展建议：
-- 添加 Shift+Tab 反向跳转功能
-- 对可编辑单元格位置进行预缓存，避免每次按键都遍历整个工作表
-- 支持跨工作表跳转
-- 支持按区域分组跳转（例如只在当前表单区域内跳转）
+
+* 添加 Shift+Tab 反向跳转功能
+* 对可编辑单元格位置进行预缓存，避免每次按键都遍历整个工作表
+* 支持跨工作表跳转
+* 支持按区域分组跳转（例如只在当前表单区域内跳转）
 
 ## 六、关键代码片段
 
@@ -188,11 +191,15 @@ spread.resumeEvent();
 
 本示例展示了 SpreadJS 命令系统的强大扩展能力，通过自定义命令和快捷键绑定，可以轻松实现符合业务需求的交互行为。开发者可以从中学到：
 
-- 如何使用 `commandManager` 注册自定义命令
-- 如何重新绑定快捷键
-- 如何实现单元格锁定状态的检查和跳转逻辑
-- 如何在保护模式下创建可编辑的表单区域
+* 如何使用 `commandManager` 注册自定义命令
+* 如何重新绑定快捷键
+* 如何实现单元格锁定状态的检查和跳转逻辑
+* 如何在保护模式下创建可编辑的表单区域
 
 该方案适用于各种需要表单保护和定制化导航的场景，具有良好的扩展性，可以根据实际需求调整搜索策略和跳转规则。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/onPgb9rq-EqlXoCyXbZHcg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

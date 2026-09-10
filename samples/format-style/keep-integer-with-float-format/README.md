@@ -14,8 +14,8 @@
 
 本示例的核心是使用条件格式（Conditional Formatting）配合 MOD 函数来判断单元格值是否为整数。通过公式 `=IF(MOD(A1,1),,A1)` 来检测：
 
-- `MOD(A1,1)` 计算单元格值除以 1 的余数，如果是整数则余数为 0
-- `IF(MOD(A1,1),,A1)` 当余数为 0（即整数）时返回单元格值，否则返回空
+* `MOD(A1,1)` 计算单元格值除以 1 的余数，如果是整数则余数为 0
+* `IF(MOD(A1,1),,A1)` 当余数为 0（即整数）时返回单元格值，否则返回空
 
 ```javascript
 var style = new GC.Spread.Sheets.Style();
@@ -46,9 +46,9 @@ sheet.setValue(1, 0, 7.00);   // 整数，显示为 "7"
 
 ### 3.2 技术栈
 
-- SpreadJS v17.0.8：核心表格控件
-- SystemJS v0.19.22：模块加载器
-- systemjs-plugin-babel v0.0.25：ES6 转译支持
+* SpreadJS v17.0.8：核心表格控件
+* SystemJS v0.19.22：模块加载器
+* systemjs-plugin-babel v0.0.25：ES6 转译支持
 
 ## 四、使用说明
 
@@ -72,9 +72,9 @@ npm install
 
 ### 5.1 优点
 
-- 智能格式化：自动识别整数和小数，应用不同的显示格式
-- 代码简洁：仅需几行代码即可实现复杂的格式化逻辑
-- 灵活扩展：可以轻松调整应用范围、小数位数和样式
+* 智能格式化：自动识别整数和小数，应用不同的显示格式
+* 代码简洁：仅需几行代码即可实现复杂的格式化逻辑
+* 灵活扩展：可以轻松调整应用范围、小数位数和样式
 
 ### 5.2 局限性与扩展建议
 
@@ -125,11 +125,15 @@ sheet.setValue(1, 0, 7.00);
 
 本示例展示了 SpreadJS 条件格式的强大功能，通过公式规则实现了智能的数字格式化。开发者可以从中学到：
 
-- 条件格式的公式规则用法
-- MOD 函数在格式化中的应用
-- 如何组合默认格式和条件格式实现复杂需求
-- Style 对象的 formatter 属性使用方法
+* 条件格式的公式规则用法
+* MOD 函数在格式化中的应用
+* 如何组合默认格式和条件格式实现复杂需求
+* Style 对象的 formatter 属性使用方法
 
 这种方案特别适合需要在同一区域内混合显示整数和小数的场景，如财务报表、统计表格等，既保证了数据的准确性，又提升了视觉呈现的专业性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/ivYVhGP1FEmxJGviij27Jg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

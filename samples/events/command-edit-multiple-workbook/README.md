@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **多工作簿联动编辑**：在多个工作簿实例之间实现操作同步，一个工作簿的修改能够自动反映到其他工作簿
-- **自定义命令扩展**：通过 SpreadJS 的命令管理器机制，实现自定义的可撤销/重做操作
-- **事件驱动的同步机制**：利用事件监听器实现松耦合的工作簿间通信
+* **多工作簿联动编辑**：在多个工作簿实例之间实现操作同步，一个工作簿的修改能够自动反映到其他工作簿
+* **自定义命令扩展**：通过 SpreadJS 的命令管理器机制，实现自定义的可撤销/重做操作
+* **事件驱动的同步机制**：利用事件监听器实现松耦合的工作簿间通信
 
 ## 三、实现思路
 
@@ -85,9 +85,9 @@ document.getElementById("backcolor").onclick = function () {
 
 ### 3.2 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
-- **systemjs**: ^0.19.22 - 模块加载器
-- **typescript**: ^4.1.2 - TypeScript 支持
+* **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
+* **systemjs**: ^0.19.22 - 模块加载器
+* **typescript**: ^4.1.2 - TypeScript 支持
 
 ## 四、使用说明
 
@@ -112,20 +112,20 @@ npm install
 
 ### 5.1 优点
 
-- **命令模式设计**：使用命令管理器实现操作的封装，支持撤销/重做功能
-- **松耦合架构**：通过事件监听机制实现工作簿间的通信，各工作簿保持独立性
-- **可扩展性强**：可以轻松注册更多自定义命令，实现更复杂的同步逻辑
-- **事务管理**：通过 `startTransaction` 和 `endTransaction` 确保操作的原子性
+* **命令模式设计**：使用命令管理器实现操作的封装，支持撤销/重做功能
+* **松耦合架构**：通过事件监听机制实现工作簿间的通信，各工作簿保持独立性
+* **可扩展性强**：可以轻松注册更多自定义命令，实现更复杂的同步逻辑
+* **事务管理**：通过 `startTransaction` 和 `endTransaction` 确保操作的原子性
 
 ### 5.2 局限性与扩展建议
 
-- **单向同步**：当前实现只支持从第一个工作簿同步到第二个工作簿，如需双向同步需要添加反向监听器
-- **功能单一**：示例仅演示了背景色修改，实际应用中可以扩展到更多操作类型（如数据编辑、格式设置等）
-- **扩展建议**：
-  - 实现双向同步机制
-  - 添加更多自定义命令（如字体、边框、数据验证等）
-  - 支持多个工作簿（3个以上）的同步
-  - 添加同步开关，允许用户控制是否启用同步
+* **单向同步**：当前实现只支持从第一个工作簿同步到第二个工作簿，如需双向同步需要添加反向监听器
+* **功能单一**：示例仅演示了背景色修改，实际应用中可以扩展到更多操作类型（如数据编辑、格式设置等）
+* **扩展建议**：
+    * 实现双向同步机制
+    * 添加更多自定义命令（如字体、边框、数据验证等）
+    * 支持多个工作簿（3个以上）的同步
+    * 添加同步开关，允许用户控制是否启用同步
 
 ## 六、关键代码片段
 
@@ -153,11 +153,15 @@ if (cmd.clipboardText) {
 
 本示例展示了 SpreadJS 命令管理器的强大功能，通过自定义命令和事件监听机制实现了多工作簿的同步编辑。开发者可以从中学到：
 
-- SpreadJS 命令管理器的使用方法
-- 自定义可撤销命令的实现方式
-- 事件驱动的工作簿间通信机制
-- 事务管理在操作中的应用
+* SpreadJS 命令管理器的使用方法
+* 自定义可撤销命令的实现方式
+* 事件驱动的工作簿间通信机制
+* 事务管理在操作中的应用
 
 该方案适用于需要多视图同步、协同编辑预览、数据对比等场景，具有良好的扩展性，可以根据实际需求添加更多自定义命令和同步逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/s1YhkRDsh0O9oGIPJNHvHg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

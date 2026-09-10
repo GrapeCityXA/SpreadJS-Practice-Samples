@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **数学规范展示**：传统的科学计数法使用 "e" 表示指数（如 1.23e+4），不符合数学书写习惯。该示例将其转换为标准的数学表示法（1.23×10⁴），使用上标字符显示指数。
-- **灵活的精度控制**：允许用户自定义科学计数法的小数位数（1-16 位），满足不同精度需求。
-- **Designer 集成**：将自定义格式化功能无缝集成到 SpreadJS Designer 工具栏中，提供友好的用户交互界面。
+* **数学规范展示**：传统的科学计数法使用 "e" 表示指数（如 1.23e+4），不符合数学书写习惯。该示例将其转换为标准的数学表示法（1.23×10⁴），使用上标字符显示指数。
+* **灵活的精度控制**：允许用户自定义科学计数法的小数位数（1-16 位），满足不同精度需求。
+* **Designer 集成**：将自定义格式化功能无缝集成到 SpreadJS Designer 工具栏中，提供友好的用户交互界面。
 
 ## 三、实现思路
 
@@ -135,10 +135,10 @@ GC.Spread.Sheets.getTypeFromString = function (typeString) {
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0（核心表格组件）
-- SpreadJS Designer 15.0.0（设计器组件）
-- SystemJS 0.19.22（模块加载器）
-- TypeScript 4.1.2（开发语言）
+* SpreadJS 15.0.0（核心表格组件）
+* SpreadJS Designer 15.0.0（设计器组件）
+* SystemJS 0.19.22（模块加载器）
+* TypeScript 4.1.2（开发语言）
 
 ## 四、使用说明
 
@@ -162,15 +162,15 @@ npm install
 
 ### 5.1 优点
 
-- **符合数学规范**：使用 Unicode 上标字符，展示效果更专业
-- **精度可控**：支持 1-16 位小数精度配置
-- **无缝集成**：自定义格式化器可与 Designer 的其他功能协同工作
-- **可序列化**：通过重写 `getTypeFromString`，自定义格式可以保存和加载
+* **符合数学规范**：使用 Unicode 上标字符，展示效果更专业
+* **精度可控**：支持 1-16 位小数精度配置
+* **无缝集成**：自定义格式化器可与 Designer 的其他功能协同工作
+* **可序列化**：通过重写 `getTypeFromString`，自定义格式可以保存和加载
 
 ### 5.2 局限性与扩展建议
 
-- **字体依赖**：上标字符的显示效果依赖于字体支持，部分字体可能显示不佳
-- **扩展方向**：可以添加更多数学符号支持（如分数、根号等），构建完整的数学公式格式化系统
+* **字体依赖**：上标字符的显示效果依赖于字体支持，部分字体可能显示不佳
+* **扩展方向**：可以添加更多数学符号支持（如分数、根号等），构建完整的数学公式格式化系统
 
 ## 六、关键代码片段
 
@@ -219,11 +219,15 @@ GC.Spread.Sheets.Designer.registerTemplate('setText', setTextTemplate);
 
 本示例展示了 SpreadJS 强大的扩展能力，通过自定义格式化器实现了符合数学规范的科学计数法显示。开发者可以从中学习到：
 
-- 如何继承 `FormatterBase` 创建自定义单元格格式化器
-- 如何使用 Unicode 字符实现特殊排版效果
-- 如何扩展 SpreadJS Designer 的工具栏和对话框
-- 如何注册自定义类型以支持序列化
+* 如何继承 `FormatterBase` 创建自定义单元格格式化器
+* 如何使用 Unicode 字符实现特殊排版效果
+* 如何扩展 SpreadJS Designer 的工具栏和对话框
+* 如何注册自定义类型以支持序列化
 
 该方案适用于需要专业数学或科学数据展示的场景，如科研报告、教育软件、工程计算等领域。通过类似的技术，还可以扩展实现更多自定义格式化需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/kGETRVKU0kWul5m6984EQQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

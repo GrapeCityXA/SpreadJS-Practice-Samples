@@ -21,8 +21,9 @@ sheet.bind(GC.Spread.Sheets.Events.EditEnded, function (sender, args) {
 ```
 
 事件回调函数接收两个参数：
-- `sender`：触发事件的工作表对象
-- `args`：事件参数对象，包含 `col` 属性表示被编辑的列索引
+
+* `sender`：触发事件的工作表对象
+* `args`：事件参数对象，包含 `col` 属性表示被编辑的列索引
 
 #### 自动调整列宽
 
@@ -34,9 +35,9 @@ sheet.autoFitColumn(args.col);
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心电子表格组件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -61,19 +62,19 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单：仅需 3 行核心代码即可实现功能
-- 用户体验好：无需手动调整列宽，提高工作效率
-- 实时响应：每次编辑后立即调整，即时反馈
-- 通用性强：适用于所有列和所有类型的内容
+* 实现简单：仅需 3 行核心代码即可实现功能
+* 用户体验好：无需手动调整列宽，提高工作效率
+* 实时响应：每次编辑后立即调整，即时反馈
+* 通用性强：适用于所有列和所有类型的内容
 
 ### 5.2 局限性与扩展建议
 
 当前实现在每次编辑后都会调整列宽，如果用户希望保持固定列宽，可能需要额外的控制机制。可以考虑以下扩展方向：
 
-- 添加开关按钮控制是否启用自动调整功能
-- 设置列宽的最大值和最小值限制
-- 支持批量调整多列宽度
-- 添加撤销功能以恢复之前的列宽设置
+* 添加开关按钮控制是否启用自动调整功能
+* 设置列宽的最大值和最小值限制
+* 支持批量调整多列宽度
+* 添加撤销功能以恢复之前的列宽设置
 
 ## 六、关键代码片段
 
@@ -112,4 +113,8 @@ sheet.bind(GC.Spread.Sheets.Events.EditEnded, function (sender, args) {
 
 该方案适用于需要频繁输入不同长度内容的表格应用，如数据录入系统、报表填写工具等。开发者可以在此基础上添加更多控制逻辑，如条件判断、列宽限制等，以满足更复杂的业务需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/ejoAaOgffEmTdVQp4PJvlQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

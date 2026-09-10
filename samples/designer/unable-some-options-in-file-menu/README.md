@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **权限控制需求**：在多用户协作场景中，需要根据用户角色限制对文件操作功能的访问权限
-- **功能定制化**：不同的应用场景可能需要隐藏或禁用某些不必要的文件菜单功能，简化用户界面
-- **动态功能切换**：需要在运行时根据业务逻辑动态启用或禁用特定功能，而不是完全移除这些功能
+* **权限控制需求**：在多用户协作场景中，需要根据用户角色限制对文件操作功能的访问权限
+* **功能定制化**：不同的应用场景可能需要隐藏或禁用某些不必要的文件菜单功能，简化用户界面
+* **动态功能切换**：需要在运行时根据业务逻辑动态启用或禁用特定功能，而不是完全移除这些功能
 
 ## 三、实现思路
 
@@ -37,10 +37,10 @@ template.content[0].children[0].children[1].children[2].children[1].children[1].
 })
 ```
 
-- `type: "CheckBox"`：定义控件类型为复选框
-- `bindingPath: "WhatEverName"`：绑定的数据路径，用于存储复选框状态
-- `text: "WhatEverText"`：复选框显示的文本标签
-- `visibleWhen: "WhatEverName===1"`：可见性条件，当绑定值为 1 时显示
+* `type: "CheckBox"`：定义控件类型为复选框
+* `bindingPath: "WhatEverName"`：绑定的数据路径，用于存储复选框状态
+* `text: "WhatEverText"`：复选框显示的文本标签
+* `visibleWhen: "WhatEverName===1"`：可见性条件，当绑定值为 1 时显示
 
 ### 3.3 批量设置功能项的启用条件
 
@@ -54,9 +54,9 @@ template.content[0].children[0].children[1].children[2].children[1].children[1].
 })
 ```
 
-- 通过 `forEach` 遍历所有子控件
-- 排除 `button_export_excel`（导出 Excel 按钮）和 `TextBlock`（文本标签）
-- 为其他控件添加 `enableWhen` 条件，只有当 `WhatEverName===1` 时才启用
+* 通过 `forEach` 遍历所有子控件
+* 排除 `button_export_excel`（导出 Excel 按钮）和 `TextBlock`（文本标签）
+* 为其他控件添加 `enableWhen` 条件，只有当 `WhatEverName===1` 时才启用
 
 ### 3.4 注册修改后的模板
 
@@ -71,13 +71,13 @@ GC.Spread.Sheets.Designer.registerTemplate(
 
 ### 3.5 技术栈
 
-- **SpreadJS Designer** (v17.0.8)：提供完整的电子表格设计器功能
-- **SpreadJS 核心库及扩展**：
-  - `@grapecity/spread-sheets`：核心电子表格引擎
-  - `@grapecity/spread-sheets-designer`：设计器组件
-  - `@grapecity/spread-sheets-designer-resources-cn`：中文资源包
-  - 其他扩展模块（ExcelIO、Charts、Print、PDF、Barcode、Shapes、Pivot 等）
-- **SystemJS**：模块加载器，用于动态加载依赖
+* **SpreadJS Designer** (v17.0.8)：提供完整的电子表格设计器功能
+* **SpreadJS 核心库及扩展**：
+    * `@grapecity/spread-sheets`：核心电子表格引擎
+    * `@grapecity/spread-sheets-designer`：设计器组件
+    * `@grapecity/spread-sheets-designer-resources-cn`：中文资源包
+    * 其他扩展模块（ExcelIO、Charts、Print、PDF、Barcode、Shapes、Pivot 等）
+* **SystemJS**：模块加载器，用于动态加载依赖
 
 ## 四、使用说明
 
@@ -97,31 +97,33 @@ npx http-server -p 8080
 1. 在浏览器中打开示例页面，SpreadJS Designer 将自动加载
 2. 点击左上角的"文件"菜单，打开文件菜单面板
 3. 观察文件菜单中的功能项状态：
-   - 默认情况下，除"导出 Excel"外的其他功能项可能处于禁用状态
-   - 勾选自定义添加的复选框（"WhatEverText"），其他功能项将被启用
-   - 取消勾选复选框，功能项将再次被禁用
+    * 默认情况下，除"导出 Excel"外的其他功能项可能处于禁用状态
+    * 勾选自定义添加的复选框（"WhatEverText"），其他功能项将被启用
+    * 取消勾选复选框，功能项将再次被禁用
 4. "导出 Excel"按钮始终保持可用状态，不受复选框控制
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- **灵活的权限控制**：通过简单的条件表达式即可实现复杂的功能启用/禁用逻辑
-- **非侵入式定制**：基于模板系统进行修改，不需要修改 Designer 源码
-- **细粒度控制**：可以精确控制到每个具体的功能按钮或控件
-- **动态切换能力**：支持运行时根据业务逻辑动态改变功能可用性
+* **灵活的权限控制**：通过简单的条件表达式即可实现复杂的功能启用/禁用逻辑
+* **非侵入式定制**：基于模板系统进行修改，不需要修改 Designer 源码
+* **细粒度控制**：可以精确控制到每个具体的功能按钮或控件
+* **动态切换能力**：支持运行时根据业务逻辑动态改变功能可用性
 
 ### 5.2 局限性与扩展建议
 
 **局限性**：
-- 模板路径（`content[0].children[0].children[1]...`）依赖于 Designer 的内部结构，版本升级可能导致路径失效
-- 示例中使用的 `WhatEverName` 绑定路径需要与实际的数据模型对应，否则条件判断可能不生效
+
+* 模板路径（`content[0].children[0].children[1]...`）依赖于 Designer 的内部结构，版本升级可能导致路径失效
+* 示例中使用的 `WhatEverName` 绑定路径需要与实际的数据模型对应，否则条件判断可能不生效
 
 **扩展建议**：
-- 可以将复选框替换为更复杂的权限验证逻辑，例如从后端 API 获取用户权限
-- 可以为不同的功能组设置不同的启用条件，实现更细致的权限分级
-- 建议封装模板修改逻辑为独立函数，便于维护和版本兼容性处理
-- 可以结合 Designer 的事件系统，在特定操作时动态修改 `bindingPath` 的值
+
+* 可以将复选框替换为更复杂的权限验证逻辑，例如从后端 API 获取用户权限
+* 可以为不同的功能组设置不同的启用条件，实现更细致的权限分级
+* 建议封装模板修改逻辑为独立函数，便于维护和版本兼容性处理
+* 可以结合 Designer 的事件系统，在特定操作时动态修改 `bindingPath` 的值
 
 ## 六、关键代码片段
 
@@ -161,11 +163,15 @@ GC.Spread.Sheets.Designer.registerTemplate(
 
 本示例展示了 SpreadJS Designer 模板系统的强大定制能力，通过修改内置模板实现了对文件菜单功能的精细化控制。开发者可以从中学到：
 
-- 如何获取和修改 Designer 的内置 UI 模板
-- 如何使用 `bindingPath` 和条件表达式（`enableWhen`、`visibleWhen`）实现动态控制
-- 如何通过遍历模板结构批量修改控件属性
-- 如何注册自定义模板使修改生效
+* 如何获取和修改 Designer 的内置 UI 模板
+* 如何使用 `bindingPath` 和条件表达式（`enableWhen`、`visibleWhen`）实现动态控制
+* 如何通过遍历模板结构批量修改控件属性
+* 如何注册自定义模板使修改生效
 
 该方案适用于需要根据业务规则动态控制 Designer 功能可用性的场景，具有良好的扩展性。在实际应用中，建议结合权限管理系统和数据绑定机制，实现更加健壮和灵活的功能控制方案。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/n0Ruf23VPkeEZ_oiDBDx2A/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

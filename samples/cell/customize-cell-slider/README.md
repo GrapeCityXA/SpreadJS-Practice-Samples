@@ -1,12 +1,12 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中实现自定义的数字滑动条筛选功能。通过重写默认的筛选对话框，使用 HTML5 的 range 输入控件（滑动条）替代传统的筛选界面，用户可以通过拖动滑块来动态筛选数值范围内的数据。该方案提供了更直观、更友好的数据筛选交互体验，特别适合需要对数值列进行范围筛选的场景。
+本示例展示了如何在 SpreadJS 中实现自定义的数字滑动条筛选功能。通过重写默认的筛选对话框，使用 HTML5 的 range 输入控件（滑动条）替代传统的筛选界面，用户可以通过拖动滑块来动态筛选数值范围内的数据。该方案提供了更直观、更友好的数据筛选交互体验，特别适合需要对数值列进行范围筛选的场景。 
 
 ## 二、解决的问题
 
-- 传统的筛选对话框操作步骤较多，用户需要手动输入数值或勾选多个选项，交互效率较低
-- 对于数值型数据的范围筛选，缺少直观的可视化操作方式
-- 需要提供一种更符合现代 UI 交互习惯的筛选方式，提升用户体验
+* 传统的筛选对话框操作步骤较多，用户需要手动输入数值或勾选多个选项，交互效率较低
+* 对于数值型数据的范围筛选，缺少直观的可视化操作方式
+* 需要提供一种更符合现代 UI 交互习惯的筛选方式，提升用户体验
 
 ## 三、实现思路
 
@@ -38,10 +38,11 @@ function customFilterDialog(sheet, filterHitInfo) {
 ```
 
 该类包含以下核心方法：
-- `init()`: 初始化滑动条 UI 元素
-- `open()`: 显示滑动条并绑定事件
-- `close()`: 关闭对话框并保存状态
-- `doFilter()`: 执行筛选逻辑
+
+* `init()`: 初始化滑动条 UI 元素
+* `open()`: 显示滑动条并绑定事件
+* `close()`: 关闭对话框并保存状态
+* `doFilter()`: 执行筛选逻辑
 
 #### 动态创建滑动条 UI
 
@@ -113,10 +114,10 @@ customFilterDialog.prototype.close = function () {
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心表格控件
-- jQuery 3.6.1：DOM 操作和事件处理
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格控件
+* jQuery 3.6.1：DOM 操作和事件处理
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -142,17 +143,17 @@ npm install
 
 ### 5.1 优点
 
-- 交互直观：使用滑动条替代传统输入框，操作更符合现代 UI 习惯
-- 实时反馈：拖动滑块时立即显示筛选结果，无需点击确认按钮
-- 状态保持：关闭后再次打开时保留上次的滑块位置
-- 扩展性强：可以轻松修改滑块范围、步长等参数以适应不同场景
+* 交互直观：使用滑动条替代传统输入框，操作更符合现代 UI 习惯
+* 实时反馈：拖动滑块时立即显示筛选结果，无需点击确认按钮
+* 状态保持：关闭后再次打开时保留上次的滑块位置
+* 扩展性强：可以轻松修改滑块范围、步长等参数以适应不同场景
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现仅支持单列筛选，可扩展为多列联动筛选
-- 滑块范围固定为 0-100，可改进为根据列数据的实际最大最小值动态设置
-- 可以添加数值显示标签，让用户清楚看到当前筛选的数值
-- 可以支持双向滑块（range slider），实现更灵活的区间筛选
+* 当前实现仅支持单列筛选，可扩展为多列联动筛选
+* 滑块范围固定为 0-100，可改进为根据列数据的实际最大最小值动态设置
+* 可以添加数值显示标签，让用户清楚看到当前筛选的数值
+* 可以支持双向滑块（range slider），实现更灵活的区间筛选
 
 ## 六、关键代码片段
 
@@ -189,11 +190,15 @@ this._sheet.resumePaint(false);   // 恢复绘制
 
 本示例展示了如何通过重写 SpreadJS 的内置方法来实现自定义筛选交互。开发者可以从中学到：
 
-- 如何重写 SpreadJS 的原型方法以扩展功能
-- 如何使用条件格式化 API 构建复杂的筛选条件
-- 如何结合 jQuery 创建自定义 UI 组件并与 SpreadJS 集成
-- 如何使用 `suspendPaint` 优化批量操作的性能
+* 如何重写 SpreadJS 的原型方法以扩展功能
+* 如何使用条件格式化 API 构建复杂的筛选条件
+* 如何结合 jQuery 创建自定义 UI 组件并与 SpreadJS 集成
+* 如何使用 `suspendPaint` 优化批量操作的性能
 
 该方案适用于需要对数值型数据进行范围筛选的场景，特别是在数据分析、报表展示等领域。通过类似的思路，开发者可以扩展实现日期选择器筛选、颜色选择器筛选等更多自定义筛选方式。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/TxUFtEPil0yCj__AlqfQCA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -8,9 +8,9 @@
 
 在实际业务中，常见的需求是：开启工作表保护后，大部分单元格允许用户编辑，仅少数关键区域（如公式、标题行）需要锁定。SpreadJS 默认情况下所有单元格的 `locked` 属性为 `true`，开启保护后全部不可编辑。本示例通过修改默认样式解决以下问题：
 
-- 避免逐个单元格设置 `locked = false` 的繁琐操作
-- 实现"默认可编辑，特定区域锁定"的反向保护逻辑
-- 确保新建工作表和动态添加的单元格自动继承未锁定状态
+* 避免逐个单元格设置 `locked = false` 的繁琐操作
+* 实现"默认可编辑，特定区域锁定"的反向保护逻辑
+* 确保新建工作表和动态添加的单元格自动继承未锁定状态
 
 ## 三、实现思路
 
@@ -31,9 +31,10 @@ for (let i = 0; i < spread.getSheetCount(); i++) {
 ```
 
 关键点：
-- `setDefaultStyle()` 影响工作表中所有未显式设置样式的单元格
-- 必须在开启 `isProtected = true` 之前设置默认样式
-- 遍历所有工作表确保全局生效
+
+* `setDefaultStyle()` 影响工作表中所有未显式设置样式的单元格
+* 必须在开启 `isProtected = true` 之前设置默认样式
+* 遍历所有工作表确保全局生效
 
 ### 3.2 监听工作表切换事件
 
@@ -62,9 +63,9 @@ spread.getActiveSheet().getRange(3,3,5,5).setStyle(style)
 
 ### 3.4 技术栈
 
-- SpreadJS 核心库：v16.0.5
-- SpreadJS Designer：v16.0.5（提供可视化设计器界面）
-- 中文资源包：`spread-sheets-resources-zh`、`spread-sheets-designer-resources-cn`
+* SpreadJS 核心库：v16.0.5
+* SpreadJS Designer：v16.0.5（提供可视化设计器界面）
+* 中文资源包：`spread-sheets-resources-zh`、`spread-sheets-designer-resources-cn`
 
 ## 四、使用说明
 
@@ -87,16 +88,16 @@ npm install
 
 ### 5.1 优点
 
-- 简化配置：通过修改默认样式一次性解决所有单元格的锁定状态，无需逐个设置
-- 灵活控制：可以精确控制哪些区域锁定，哪些区域可编辑
-- 视觉提示：通过背景色区分锁定区域和可编辑区域，提升用户体验
-- 动态适配：监听事件确保新建工作表自动继承配置
+* 简化配置：通过修改默认样式一次性解决所有单元格的锁定状态，无需逐个设置
+* 灵活控制：可以精确控制哪些区域锁定，哪些区域可编辑
+* 视觉提示：通过背景色区分锁定区域和可编辑区域，提升用户体验
+* 动态适配：监听事件确保新建工作表自动继承配置
 
 ### 5.2 扩展建议
 
-- 可以结合条件格式或数据验证，对可编辑区域进行输入限制
-- 可以通过 UI 控件（如按钮）动态切换保护状态，实现"编辑模式"和"查看模式"切换
-- 对于复杂场景，可以使用 `protectionOptions` 精细控制允许的操作（如允许排序、筛选等）
+* 可以结合条件格式或数据验证，对可编辑区域进行输入限制
+* 可以通过 UI 控件（如按钮）动态切换保护状态，实现"编辑模式"和"查看模式"切换
+* 对于复杂场景，可以使用 `protectionOptions` 精细控制允许的操作（如允许排序、筛选等）
 
 ## 六、关键代码片段
 
@@ -126,11 +127,15 @@ spread.getActiveSheet().getRange(3,3,5,5).setStyle(style)  // 应用到 D4:H8 �
 
 本示例展示了 SpreadJS 中修改默认样式和工作表保护的实用技巧，开发者可以从中学到：
 
-- 如何使用 `setDefaultStyle()` 批量修改单元格样式
-- 工作表保护机制的原理（`isProtected` + `locked` 属性）
-- 如何通过事件监听实现动态配置
-- 样式对象的创建和应用方法
+* 如何使用 `setDefaultStyle()` 批量修改单元格样式
+* 工作表保护机制的原理（`isProtected` + `locked` 属性）
+* 如何通过事件监听实现动态配置
+* 样式对象的创建和应用方法
 
 该方案适用于需要灵活控制单元格编辑权限的场景，特别是在表单设计、数据录入模板等应用中具有较高的实用价值。通过合理设置默认样式和局部样式，可以在保护数据安全的同时，保持良好的用户交互体验。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/2tpats1gQ0WNtkmxcOylgQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

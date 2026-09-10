@@ -8,10 +8,10 @@
 
 SpreadJS 原生支持富文本单元格，但默认的单元格编辑模式无法直观地编辑富文本格式。本示例通过自定义编辑器解决了以下问题：
 
-- 提供可视化的富文本编辑界面，用户可以直接看到格式效果
-- 支持通过右键菜单快速进入富文本编辑模式
-- 支持双击富文本单元格直接编辑，提升用户体验
-- 实现富文本格式与 SpreadJS 内部数据结构的双向转换
+* 提供可视化的富文本编辑界面，用户可以直接看到格式效果
+* 支持通过右键菜单快速进入富文本编辑模式
+* 支持双击富文本单元格直接编辑，提升用户体验
+* 实现富文本格式与 SpreadJS 内部数据结构的双向转换
 
 ## 三、实现思路
 
@@ -177,11 +177,11 @@ function _getRichText() {
 
 ### 3.3 技术栈
 
-- SpreadJS 15.0.0：电子表格核心库
-- Bootstrap 4.6.1：模态对话框和样式
-- jQuery 3.1.1：DOM 操作和事件处理
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持
+* SpreadJS 15.0.0：电子表格核心库
+* Bootstrap 4.6.1：模态对话框和样式
+* jQuery 3.1.1：DOM 操作和事件处理
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持
 
 ## 四、使用说明
 
@@ -199,28 +199,28 @@ npm install
 2. 双击任意富文本单元格，弹出富文本编辑器
 3. 或右键点击单元格，选择"编辑富文本"菜单项
 4. 在编辑器中选中文本，使用工具栏按钮设置格式：
-   - 字体选择（下拉菜单）
-   - 字号选择（10/13/16/18/24/32/48）
-   - 粗体、斜体、下划线、删除线
-   - 文字颜色（12 种预设颜色）
-   - 上标、下标
+    * 字体选择（下拉菜单）
+    * 字号选择（10/13/16/18/24/32/48）
+    * 粗体、斜体、下划线、删除线
+    * 文字颜色（12 种预设颜色）
+    * 上标、下标
 5. 点击"确定"按钮保存修改，点击"取消"放弃修改
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- 提供直观的所见即所得编辑体验，用户无需了解富文本数据结构
-- 支持多种触发方式（双击、右键菜单），操作灵活
-- 完整实现富文本格式与 HTML 的双向转换，保证数据一致性
-- 使用标准的 `document.execCommand` API，兼容性好
+* 提供直观的所见即所得编辑体验，用户无需了解富文本数据结构
+* 支持多种触发方式（双击、右键菜单），操作灵活
+* 完整实现富文本格式与 HTML 的双向转换，保证数据一致性
+* 使用标准的 `document.execCommand` API，兼容性好
 
 ### 5.2 局限性与扩展建议
 
-- 字号选择受限于 HTML `<font>` 标签的 `size` 属性（1-7），映射到固定的像素值
-- 颜色选择器仅提供 12 种预设颜色，可扩展为完整的颜色拾取器
-- 编辑器功能相对基础，可考虑集成成熟的富文本编辑器库（如 Quill、TinyMCE）
-- 当前实现依赖 jQuery 和 Bootstrap，可考虑使用现代框架（React、Vue）重构
+* 字号选择受限于 HTML `<font>` 标签的 `size` 属性（1-7），映射到固定的像素值
+* 颜色选择器仅提供 12 种预设颜色，可扩展为完整的颜色拾取器
+* 编辑器功能相对基础，可考虑集成成熟的富文本编辑器库（如 Quill、TinyMCE）
+* 当前实现依赖 jQuery 和 Bootstrap，可考虑使用现代框架（React、Vue）重构
 
 ## 六、关键代码片段
 
@@ -261,12 +261,15 @@ function _handleSuperAndSubScript(root, node, style) {
 
 本示例展示了如何在 SpreadJS 中实现自定义富文本编辑功能，核心价值在于：
 
-- 掌握 SpreadJS 富文本数据结构的定义和使用
-- 学习如何扩展右键菜单和注册自定义命令
-- 理解富文本格式与 HTML DOM 之间的转换逻辑
-- 掌握 `document.execCommand` API 的使用方法
+* 掌握 SpreadJS 富文本数据结构的定义和使用
+* 学习如何扩展右键菜单和注册自定义命令
+* 理解富文本格式与 HTML DOM 之间的转换逻辑
+* 掌握 `document.execCommand` API 的使用方法
 
 该方案适用于需要在电子表格中展示和编辑复杂格式文本的场景，如科学计算、教育培训、文档编辑等领域。开发者可以在此基础上扩展更多格式化功能，或集成第三方富文本编辑器以提升用户体验。
 
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/hSDVzOibG0Srxl-kmUvxUQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

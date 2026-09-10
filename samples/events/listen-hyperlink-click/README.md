@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **自定义超链接行为**：默认情况下，SpreadJS 的超链接点击行为是固定的，通过自定义 `command` 可以实现个性化的跳转逻辑
-- **事件拦截与扩展**：在超链接跳转前执行额外的业务逻辑，如记录用户行为、数据校验、权限检查等
-- **调试与监控**：在开发阶段可以通过控制台输出超链接的上下文信息，便于调试和问题排查
+* **自定义超链接行为**：默认情况下，SpreadJS 的超链接点击行为是固定的，通过自定义 `command` 可以实现个性化的跳转逻辑
+* **事件拦截与扩展**：在超链接跳转前执行额外的业务逻辑，如记录用户行为、数据校验、权限检查等
+* **调试与监控**：在开发阶段可以通过控制台输出超链接的上下文信息，便于调试和问题排查
 
 ## 三、实现思路
 
@@ -63,9 +63,9 @@ fetch("./template.sjs").then(res => {
 
 ### 3.2 技术栈
 
-- **SpreadJS 17.0.8**：核心电子表格组件库
-- **SpreadJS IO 17.0.8**：用于导入导出 Excel 文件和 SpreadJS 模板文件
-- **SystemJS 0.19.22**：模块加载器，用于动态加载 ES6 模块
+* **SpreadJS 17.0.8**：核心电子表格组件库
+* **SpreadJS IO 17.0.8**：用于导入导出 Excel 文件和 SpreadJS 模板文件
+* **SystemJS 0.19.22**：模块加载器，用于动态加载 ES6 模块
 
 ## 四、使用说明
 
@@ -92,15 +92,15 @@ npm install
 
 ### 5.1 优点
 
-- **灵活的事件扩展**：可以在超链接点击时执行任意自定义逻辑，不受默认行为限制
-- **批量处理**：通过遍历所有单元格，可以一次性为多个超链接添加监听器
-- **上下文信息获取**：`command` 回调函数提供了完整的上下文信息（工作表对象、单元格坐标），便于实现复杂的业务逻辑
+* **灵活的事件扩展**：可以在超链接点击时执行任意自定义逻辑，不受默认行为限制
+* **批量处理**：通过遍历所有单元格，可以一次性为多个超链接添加监听器
+* **上下文信息获取**：`command` 回调函数提供了完整的上下文信息（工作表对象、单元格坐标），便于实现复杂的业务逻辑
 
 ### 5.2 局限性与扩展建议
 
-- **性能考虑**：当工作表包含大量单元格时，遍历所有单元格可能会影响性能。建议仅在必要时调用 `handleHyperLink()` 函数，或者只遍历特定区域
-- **动态添加的超链接**：如果在运行时动态添加了新的超链接，需要重新调用 `handleHyperLink()` 函数才能为其添加监听器
-- **扩展建议**：可以结合 SpreadJS 的事件系统（如 `CellClick` 事件），实现更高效的超链接监听机制
+* **性能考虑**：当工作表包含大量单元格时，遍历所有单元格可能会影响性能。建议仅在必要时调用 `handleHyperLink()` 函数，或者只遍历特定区域
+* **动态添加的超链接**：如果在运行时动态添加了新的超链接，需要重新调用 `handleHyperLink()` 函数才能为其添加监听器
+* **扩展建议**：可以结合 SpreadJS 的事件系统（如 `CellClick` 事件），实现更高效的超链接监听机制
 
 ## 六、关键代码片段
 
@@ -148,4 +148,8 @@ function handleHyperLink() {
 
 该方案适用于需要对超链接行为进行扩展控制的场景，如添加访问日志、权限验证、数据校验等。通过结合 SpreadJS 的其他 API，可以实现更复杂的业务逻辑和交互体验。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/ZJ2svr-P5EGcX3aVXYChvQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

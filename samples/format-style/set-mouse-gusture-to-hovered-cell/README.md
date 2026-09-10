@@ -4,8 +4,8 @@
 
 ## 二、解决的问题
 
-- **自定义鼠标交互反馈**：默认情况下，单元格的鼠标样式可能无法满足特定的交互需求，通过自定义可以提供更直观的视觉反馈
-- **增强单元格类型的交互性**：为自定义单元格类型（如 RadioButtonList）添加鼠标悬停效果，让用户明确知道该区域可交互
+* **自定义鼠标交互反馈**：默认情况下，单元格的鼠标样式可能无法满足特定的交互需求，通过自定义可以提供更直观的视觉反馈
+* **增强单元格类型的交互性**：为自定义单元格类型（如 RadioButtonList）添加鼠标悬停效果，让用户明确知道该区域可交互
 
 ## 三、实现思路
 
@@ -42,9 +42,10 @@ RaidoButtonCellType.prototype.processMouseMove = function (hitInfo) {
 ```
 
 **关键技术点**：
-- `hitInfo.isReservedLocation`：判断鼠标是否在单元格的保留区域（即单元格内容区域）
-- 通过 DOM 操作直接修改 canvas 元素的 `cursor` 样式
-- 返回 `true` 表示事件已处理，阻止默认行为
+
+* `hitInfo.isReservedLocation`：判断鼠标是否在单元格的保留区域（即单元格内容区域）
+* 通过 DOM 操作直接修改 canvas 元素的 `cursor` 样式
+* 返回 `true` 表示事件已处理，阻止默认行为
 
 ### 3.3 应用自定义单元格类型
 
@@ -64,9 +65,9 @@ sheet.setCellType(0, 1, radio);  // 应用到第 0 行第 1 列
 
 ### 3.4 技术栈
 
-- SpreadJS 15.2.0
-- SystemJS 0.19.22（模块加载器）
-- TypeScript 4.1.2（支持 TypeScript 开发）
+* SpreadJS 15.2.0
+* SystemJS 0.19.22（模块加载器）
+* TypeScript 4.1.2（支持 TypeScript 开发）
 
 ## 四、使用说明
 
@@ -89,15 +90,15 @@ npm install
 
 ### 5.1 优点
 
-- **简单高效**：通过继承和重写单一方法即可实现自定义鼠标行为
-- **用户体验提升**：直观的鼠标反馈让用户明确知道哪些区域可交互
-- **可扩展性强**：该方法可应用于任何自定义单元格类型，不局限于 RadioButtonList
+* **简单高效**：通过继承和重写单一方法即可实现自定义鼠标行为
+* **用户体验提升**：直观的鼠标反馈让用户明确知道哪些区域可交互
+* **可扩展性强**：该方法可应用于任何自定义单元格类型，不局限于 RadioButtonList
 
 ### 5.2 扩展建议
 
-- 可以根据不同的 `hitInfo` 属性（如 `hitInfo.cellRect`）实现更精细的区域判断
-- 可以扩展为支持不同的鼠标样式（如 `grab`、`move` 等）
-- 可以结合其他鼠标事件（如 `processMouseDown`、`processMouseUp`）实现更复杂的交互
+* 可以根据不同的 `hitInfo` 属性（如 `hitInfo.cellRect`）实现更精细的区域判断
+* 可以扩展为支持不同的鼠标样式（如 `grab`、`move` 等）
+* 可以结合其他鼠标事件（如 `processMouseDown`、`processMouseUp`）实现更复杂的交互
 
 ## 六、关键代码片段
 
@@ -130,13 +131,15 @@ RaidoButtonCellType.prototype.processMouseMove = function (hitInfo) {
 
 本示例展示了 SpreadJS 单元格类型扩展的灵活性，通过简单的继承和方法重写即可实现自定义的鼠标交互行为。开发者可以从中学到：
 
-- 如何继承 SpreadJS 内置单元格类型
-- 如何重写 `processMouseMove` 方法自定义鼠标行为
-- 如何通过 DOM 操作控制 canvas 元素的样式
-- 如何利用 `hitInfo` 对象判断鼠标位置
+* 如何继承 SpreadJS 内置单元格类型
+* 如何重写 `processMouseMove` 方法自定义鼠标行为
+* 如何通过 DOM 操作控制 canvas 元素的样式
+* 如何利用 `hitInfo` 对象判断鼠标位置
 
 该方案适用于需要为自定义单元格类型添加特殊鼠标交互效果的场景，具有良好的可扩展性和实用性。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Customize%20cell%20mouse%20over%20gestures.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/qFPnLHqOekSycWf0iGNdUg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

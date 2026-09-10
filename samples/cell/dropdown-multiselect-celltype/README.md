@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中实现自定义的下拉多选单元格类型。通过继承 `GC.Spread.Sheets.CellTypes.Text` 并集成第三方多选组件 xm-select，实现了在单元格中进行多项选择的功能。用户双击单元格后，会弹出一个美观的多选下拉框，可以同时选择多个选项，选中的结果以逗号分隔的形式显示在单元格中。
+本示例展示了如何在 SpreadJS 中实现自定义的下拉多选单元格类型。通过继承 `GC.Spread.Sheets.CellTypes.Text` 并集成第三方多选组件 xm-select，实现了在单元格中进行多项选择的功能。用户双击单元格后，会弹出一个美观的多选下拉框，可以同时选择多个选项，选中的结果以逗号分隔的形式显示在单元格中。 
 
 该示例适用于需要在表格中进行多项数据选择的场景，如标签选择、分类筛选、权限配置等业务需求。
 
 ## 二、解决的问题
 
-- **多选需求**：SpreadJS 原生的下拉列表只支持单选，无法满足需要同时选择多个选项的业务场景
-- **用户体验**：通过集成专业的多选组件（xm-select），提供了更友好的交互界面和视觉反馈
-- **数据存储**：通过 `setTag` 方法存储选中项的索引值，通过 `setValue` 存储显示文本，实现了数据与显示的分离
+* **多选需求**：SpreadJS 原生的下拉列表只支持单选，无法满足需要同时选择多个选项的业务场景
+* **用户体验**：通过集成专业的多选组件（xm-select），提供了更友好的交互界面和视觉反馈
+* **数据存储**：通过 `setTag` 方法存储选中项的索引值，通过 `setValue` 存储显示文本，实现了数据与显示的分离
 
 ## 三、实现思路
 
@@ -100,18 +100,18 @@ DropdownMultiSelect.prototype.activateEditor = function (editorContext, cellStyl
 
 示例采用了双重存储策略：
 
-- **显示层**：通过 `setValue` 将选中项的名称以逗号分隔的形式存储在单元格中（如 "MUL1,MUL2"）
-- **数据层**：通过 `setTag` 将选中项的索引值数组存储在单元格的 tag 属性中（如 [0, 1]）
+* **显示层**：通过 `setValue` 将选中项的名称以逗号分隔的形式存储在单元格中（如 "MUL1,MUL2"）
+* **数据层**：通过 `setTag` 将选中项的索引值数组存储在单元格的 tag 属性中（如 [0, 1]）
 
 这种设计使得数据的读取和处理更加灵活，既能直观显示，又能方便地进行数据操作。
 
 ### 3.5 技术栈
 
-- **SpreadJS 17.0.8**：核心表格控件
-- **xm-select 0.0.3**：第三方多选下拉组件
-- **jQuery 3.7.1**：DOM 操作和事件处理
-- **layui 2.6.2**：UI 样式库
-- **SystemJS 0.19.22**：模块加载器
+* **SpreadJS 17.0.8**：核心表格控件
+* **xm-select 0.0.3**：第三方多选下拉组件
+* **jQuery 3.7.1**：DOM 操作和事件处理
+* **layui 2.6.2**：UI 样式库
+* **SystemJS 0.19.22**：模块加载器
 
 ## 四、使用说明
 
@@ -137,19 +137,19 @@ npm install
 
 ### 5.1 优点
 
-- **灵活的多选功能**：支持同时选择多个选项，满足复杂的业务需求
-- **良好的用户体验**：集成专业的 xm-select 组件，提供美观的 UI 和流畅的交互
-- **数据与显示分离**：通过 tag 存储原始数据，通过 value 存储显示文本，便于后续数据处理
-- **可扩展性强**：可以轻松修改 selectList 数据源，适配不同的业务场景
+* **灵活的多选功能**：支持同时选择多个选项，满足复杂的业务需求
+* **良好的用户体验**：集成专业的 xm-select 组件，提供美观的 UI 和流畅的交互
+* **数据与显示分离**：通过 tag 存储原始数据，通过 value 存储显示文本，便于后续数据处理
+* **可扩展性强**：可以轻松修改 selectList 数据源，适配不同的业务场景
 
 ### 5.2 局限性与扩展建议
 
-- **依赖外部库**：依赖 jQuery、layui 和 xm-select 等第三方库，增加了项目体积
-- **性能考虑**：如果表格中有大量多选单元格，频繁渲染可能影响性能，建议按需加载
-- **扩展建议**：
-  - 可以将 selectList 改为动态加载，支持从服务器获取选项数据
-  - 可以添加搜索功能，方便在大量选项中快速定位
-  - 可以支持分组显示，提升选项的组织性
+* **依赖外部库**：依赖 jQuery、layui 和 xm-select 等第三方库，增加了项目体积
+* **性能考虑**：如果表格中有大量多选单元格，频繁渲染可能影响性能，建议按需加载
+* **扩展建议**：
+    * 可以将 selectList 改为动态加载，支持从服务器获取选项数据
+    * 可以添加搜索功能，方便在大量选项中快速定位
+    * 可以支持分组显示，提升选项的组织性
 
 ## 六、关键代码片段
 
@@ -194,4 +194,8 @@ DropdownMultiSelect.prototype.updateEditor = function (editorContext, cellStyle,
 
 该方案适用于需要在表格中实现复杂交互控件的场景，具有良好的可扩展性。开发者可以参考这个思路，集成其他类型的自定义编辑器，如日期选择器、颜色选择器、富文本编辑器等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/_qGq9uDIuE_7Gl-lyFjUhA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

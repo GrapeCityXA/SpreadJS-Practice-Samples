@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **提升数据可读性**：在包含多列数据的表格中，整行高亮能够帮助用户快速定位和查看同一记录的所有字段
-- **改善用户体验**：模拟类似 Excel 或数据库管理工具中的行选择行为，符合用户的操作习惯
-- **简化数据操作**：为后续的行级操作（如删除、编辑、导出）提供直观的视觉反馈
+* **提升数据可读性**：在包含多列数据的表格中，整行高亮能够帮助用户快速定位和查看同一记录的所有字段
+* **改善用户体验**：模拟类似 Excel 或数据库管理工具中的行选择行为，符合用户的操作习惯
+* **简化数据操作**：为后续的行级操作（如删除、编辑、导出）提供直观的视觉反馈
 
 ## 三、实现思路
 
@@ -39,16 +39,17 @@ sheet.addSelection(row, -1, 1, -1); // 选中整行
 ```
 
 `addSelection(row, col, rowCount, colCount)` 方法的关键参数：
-- `row`：起始行索引
-- `-1`：列索引为 -1 表示从第一列开始
-- `1`：选择 1 行
-- `-1`：列数为 -1 表示选择到最后一列
+
+* `row`：起始行索引
+* `-1`：列索引为 -1 表示从第一列开始
+* `1`：选择 1 行
+* `-1`：列数为 -1 表示选择到最后一列
 
 ### 3.2 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
-- **TypeScript**: ^4.1.2 - 类型支持
-- **SystemJS**: ^0.19.22 - 模块加载器
+* **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
+* **TypeScript**: ^4.1.2 - 类型支持
+* **SystemJS**: ^0.19.22 - 模块加载器
 
 ## 四、使用说明
 
@@ -72,15 +73,15 @@ npm install
 
 ### 5.1 优点
 
-- **实现简洁**：仅需 10 行左右的核心代码即可实现功能
-- **性能优秀**：事件驱动机制，响应迅速，无性能损耗
-- **用户友好**：符合常见表格软件的交互习惯，无学习成本
+* **实现简洁**：仅需 10 行左右的核心代码即可实现功能
+* **性能优秀**：事件驱动机制，响应迅速，无性能损耗
+* **用户友好**：符合常见表格软件的交互习惯，无学习成本
 
 ### 5.2 扩展建议
 
-- 可以添加 Ctrl/Shift 键支持，实现多行选择
-- 可以结合右键菜单，提供行级操作选项（复制行、删除行等）
-- 可以添加配置开关，允许用户在"选中单元格"和"选中整行"两种模式间切换
+* 可以添加 Ctrl/Shift 键支持，实现多行选择
+* 可以结合右键菜单，提供行级操作选项（复制行、删除行等）
+* 可以添加配置开关，允许用户在"选中单元格"和"选中整行"两种模式间切换
 
 ## 六、关键代码片段
 
@@ -102,12 +103,14 @@ spread.bind(GC.Spread.Sheets.Events.CellClick,
 
 本示例展示了 SpreadJS 事件系统和选区 API 的基础用法，通过简单的代码实现了实用的整行选择功能。开发者可以从中学到：
 
-- SpreadJS 事件绑定机制的使用方法
-- 选区操作 API（`clearSelection`、`setActiveCell`、`addSelection`）的应用
-- 如何通过参数 `-1` 实现整行或整列的选择
+* SpreadJS 事件绑定机制的使用方法
+* 选区操作 API（`clearSelection`、`setActiveCell`、`addSelection`）的应用
+* 如何通过参数 `-1` 实现整行或整列的选择
 
 该方案适用于需要行级操作的数据管理场景，代码简洁易维护，可作为更复杂交互功能的基础进行扩展。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/The%20whole%20row%20is%20selected%20when%20a%20cell%20or%20range%20is%20selected.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/jU3ek5-60kOegZdInXFgWw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

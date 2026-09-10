@@ -1,15 +1,15 @@
 ## 一、Demo 概述
 
-本示例展示了如何将 SpreadJS 工作簿导出为图片格式（JPEG）。通过拦截打印事件，将打印预览中生成的图片元素转换为 Canvas，最终保存为本地图片文件。该方案巧妙地利用了 SpreadJS 的打印功能来实现工作表的图片导出。
+本示例展示了如何将 SpreadJS 工作簿导出为图片格式（JPEG）。通过拦截打印事件，将打印预览中生成的图片元素转换为 Canvas，最终保存为本地图片文件。该方案巧妙地利用了 SpreadJS 的打印功能来实现工作表的图片导出。 
 
 ## 二、解决的问题
 
 在实际业务场景中，用户经常需要将电子表格内容导出为图片格式，用于报告、分享或存档。该示例解决了以下问题：
 
-- 将 SpreadJS 工作表内容转换为图片格式
-- 控制导出图片的质量和尺寸
-- 隐藏打印时的行列头，使导出的图片更简洁
-- 过滤异常比例的图片元素，避免导出无效内容
+* 将 SpreadJS 工作表内容转换为图片格式
+* 控制导出图片的质量和尺寸
+* 隐藏打印时的行列头，使导出的图片更简洁
+* 过滤异常比例的图片元素，避免导出无效内容
 
 ## 三、实现思路
 
@@ -91,11 +91,11 @@ document.getElementById("save").addEventListener("click", function () {
 
 ### 3.2 技术栈
 
-- SpreadJS 16.0.1：核心电子表格组件
-- @grapecity/spread-sheets-print 16.0.1：打印功能扩展
-- @grapecity/spread-sheets-pdf 16.0.1：PDF 导出支持
-- FileSaver.js 2.0.5：文件保存库
-- SystemJS：模块加载器
+* SpreadJS 16.0.1：核心电子表格组件
+* @grapecity/spread-sheets-print 16.0.1：打印功能扩展
+* @grapecity/spread-sheets-pdf 16.0.1：PDF 导出支持
+* FileSaver.js 2.0.5：文件保存库
+* SystemJS：模块加载器
 
 ## 四、使用说明
 
@@ -119,27 +119,31 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单，利用现有的打印功能，无需额外的图片渲染逻辑
-- 支持自定义图片质量和纸张大小
-- 可以灵活控制导出内容（如隐藏行列头）
-- 使用 Canvas 技术，兼容性好
+* 实现简单，利用现有的打印功能，无需额外的图片渲染逻辑
+* 支持自定义图片质量和纸张大小
+* 可以灵活控制导出内容（如隐藏行列头）
+* 使用 Canvas 技术，兼容性好
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现只导出活动工作表，如需导出多个工作表，需要遍历所有 sheet
-- 文件名固定为 `print.jpeg`，可以扩展为支持自定义文件名
-- 如果工作表内容较多，可能需要调整纸张大小或分页导出
-- 可以扩展支持 PNG 格式，通过修改 `toBlob` 的 MIME 类型参数实现
+* 当前实现只导出活动工作表，如需导出多个工作表，需要遍历所有 sheet
+* 文件名固定为 `print.jpeg`，可以扩展为支持自定义文件名
+* 如果工作表内容较多，可能需要调整纸张大小或分页导出
+* 可以扩展支持 PNG 格式，通过修改 `toBlob` 的 MIME 类型参数实现
 
 ## 六、总结
 
 本示例展示了一种巧妙的工作表导出方案，通过拦截打印事件来实现图片导出功能。开发者可以从中学到：
 
-- SpreadJS 打印事件的使用方式
-- Canvas API 的图片处理技巧
-- 如何配置打印参数以优化导出效果
-- 事件监听器的绑定与解绑管理
+* SpreadJS 打印事件的使用方式
+* Canvas API 的图片处理技巧
+* 如何配置打印参数以优化导出效果
+* 事件监听器的绑定与解绑管理
 
 该方案适用于需要将电子表格内容快速导出为图片的场景，特别是在不需要复杂格式转换的情况下，是一种高效实用的解决方案。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/xrbYXTsPZE201nna2LlzUA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

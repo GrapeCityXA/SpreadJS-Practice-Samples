@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **简化数据绑定配置**：通过预设字段列表，用户无需手动定义数据结构，可以直接拖拽字段到单元格进行绑定
-- **标准化数据模板**：为不同业务场景提供统一的数据绑定模板，确保数据结构的一致性
-- **提升用户体验**：自动打开设计模式和字段列表侧边栏，减少用户的操作步骤
+* **简化数据绑定配置**：通过预设字段列表，用户无需手动定义数据结构，可以直接拖拽字段到单元格进行绑定
+* **标准化数据模板**：为不同业务场景提供统一的数据绑定模板，确保数据结构的一致性
+* **提升用户体验**：自动打开设计模式和字段列表侧边栏，减少用户的操作步骤
 
 ## 三、实现思路
 
@@ -41,8 +41,9 @@ var bindingSchema = {
 ```
 
 该 Schema 定义了两个字段：
-- `姓名`：文本类型字段
-- `履历`：表格类型字段，包含嵌套的 `时间` 和 `公司` 子字段
+
+* `姓名`：文本类型字段
+* `履历`：表格类型字段，包含嵌套的 `时间` 和 `公司` 子字段
 
 ### 3.2 设置字段列表到 Designer
 
@@ -83,16 +84,17 @@ console.log(
 ```
 
 支持三种数据键：
-- `treeNodeFromJson`：初始设置的字段列表
-- `oldTreeNodeFromJson`：旧版本的字段列表
-- `updatedTreeNode`：用户修改后的字段列表
+
+* `treeNodeFromJson`：初始设置的字段列表
+* `oldTreeNodeFromJson`：旧版本的字段列表
+* `updatedTreeNode`：用户修改后的字段列表
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0：核心表格组件
-- SpreadJS Designer 15.0.0：设计器组件
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格组件
+* SpreadJS Designer 15.0.0：设计器组件
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -116,15 +118,15 @@ npm install
 
 ### 5.1 优点
 
-- **开箱即用**：页面加载后自动配置好字段列表和设计模式，无需手动操作
-- **灵活的数据结构**：支持 JSON Schema 标准，可以定义复杂的嵌套数据结构
-- **可扩展性强**：可以通过修改 `bindingSchema.js` 文件轻松调整字段配置
+* **开箱即用**：页面加载后自动配置好字段列表和设计模式，无需手动操作
+* **灵活的数据结构**：支持 JSON Schema 标准，可以定义复杂的嵌套数据结构
+* **可扩展性强**：可以通过修改 `bindingSchema.js` 文件轻松调整字段配置
 
 ### 5.2 扩展建议
 
-- 可以从后端 API 动态加载字段列表，而不是硬编码在 JS 文件中
-- 可以添加字段验证规则（如必填、格式校验等）
-- 可以支持多套字段模板，让用户根据场景选择
+* 可以从后端 API 动态加载字段列表，而不是硬编码在 JS 文件中
+* 可以添加字段验证规则（如必填、格式校验等）
+* 可以支持多套字段模板，让用户根据场景选择
 
 ## 六、总结
 
@@ -137,4 +139,8 @@ npm install
 
 该方案适用于需要为用户提供标准化数据绑定模板的场景，可以显著提升用户体验和开发效率。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/3cJi1n8JYEyA9_P3k3_EyQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

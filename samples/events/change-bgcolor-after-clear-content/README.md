@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- 需要在用户执行特定操作（清除单元格）时触发自定义逻辑
-- 希望将自定义操作集成到 SpreadJS 的撤销/重做系统中
-- 需要监听和响应单元格内容变化事件
+* 需要在用户执行特定操作（清除单元格）时触发自定义逻辑
+* 希望将自定义操作集成到 SpreadJS 的撤销/重做系统中
+* 需要监听和响应单元格内容变化事件
 
 ## 三、实现思路
 
@@ -76,9 +76,9 @@ undoManager.undo = function () {
 
 ### 3.4 技术栈
 
-- @grapecity/spread-sheets: 15.0.0（核心表格组件）
-- SystemJS: 0.19.22（模块加载器）
-- TypeScript: 4.1.2（开发语言支持）
+* @grapecity/spread-sheets: 15.0.0（核心表格组件）
+* SystemJS: 0.19.22（模块加载器）
+* TypeScript: 4.1.2（开发语言支持）
 
 ## 四、使用说明
 
@@ -100,15 +100,15 @@ npm install
 
 ### 5.1 优点
 
-- 完整集成撤销/重做机制，用户体验良好
-- 事件监听精准，只响应清除操作
-- 代码结构清晰，易于扩展为其他自定义逻辑
+* 完整集成撤销/重做机制，用户体验良好
+* 事件监听精准，只响应清除操作
+* 代码结构清晰，易于扩展为其他自定义逻辑
 
 ### 5.2 局限性与扩展建议
 
-- 当前仅修改 A1 单元格背景，可扩展为根据清除位置动态修改
-- 可以添加更多操作类型的监听（如插入、删除行列）
-- 建议将背景颜色和目标单元格配置化，提高灵活性
+* 当前仅修改 A1 单元格背景，可扩展为根据清除位置动态修改
+* 可以添加更多操作类型的监听（如插入、删除行列）
+* 建议将背景颜色和目标单元格配置化，提高灵活性
 
 ## 六、关键代码片段
 
@@ -142,11 +142,15 @@ execute: function (context, options, isUndo) {
 
 本示例展示了 SpreadJS 事件驱动编程和命令系统的核心用法，开发者可以学到：
 
-- 如何注册和执行自定义命令
-- 如何监听 `RangeChanged` 事件并识别操作类型
-- 如何将自定义逻辑集成到撤销/重做系统
-- 如何优化事件处理避免循环触发
+* 如何注册和执行自定义命令
+* 如何监听 `RangeChanged` 事件并识别操作类型
+* 如何将自定义逻辑集成到撤销/重做系统
+* 如何优化事件处理避免循环触发
 
 该方案适用于需要在用户操作时触发自定义业务逻辑的场景，具有良好的扩展性，可以轻松修改为监听其他事件类型或执行更复杂的操作。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/eG0AZr7rNEC48U6GVOwtnA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

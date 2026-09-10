@@ -6,9 +6,9 @@
 
 在使用 SpreadJS 处理合并单元格时，开发者经常遇到以下问题：
 
-- 合并单元格区域中，只有左上角单元格存储值，直接使用 `getValue()` 访问其他位置会返回 null
-- 在不确定单元格是否为合并区域的情况下，需要额外的逻辑判断才能正确获取值
-- 在数据处理或导出场景中，需要统一的方法来获取任意单元格的实际显示值
+* 合并单元格区域中，只有左上角单元格存储值，直接使用 `getValue()` 访问其他位置会返回 null
+* 在不确定单元格是否为合并区域的情况下，需要额外的逻辑判断才能正确获取值
+* 在数据处理或导出场景中，需要统一的方法来获取任意单元格的实际显示值
 
 该示例提供了一个封装方法，自动检测目标单元格是否在合并区域内，并返回正确的值。
 
@@ -33,10 +33,11 @@ sheet.getCell(7, 7).backColor('#cccc66');
 ```
 
 `addSpan(row, col, rowCount, colCount)` 参数说明：
-- `row`: 起始行索引
-- `col`: 起始列索引
-- `rowCount`: 合并的行数
-- `colCount`: 合并的列数
+
+* `row`: 起始行索引
+* `col`: 起始列索引
+* `rowCount`: 合并的行数
+* `colCount`: 合并的列数
 
 #### 获取合并单元格信息
 
@@ -56,8 +57,9 @@ function myGetValue(sheet, row, col) {
 ```
 
 `getSpan()` 方法返回值：
-- 如果单元格在合并区域内，返回包含 `row`、`col`、`rowCount`、`colCount` 的对象
-- 如果单元格不在合并区域内，返回 `null`
+
+* 如果单元格在合并区域内，返回包含 `row`、`col`、`rowCount`、`colCount` 的对象
+* 如果单元格不在合并区域内，返回 `null`
 
 #### UI 交互实现
 
@@ -77,9 +79,9 @@ document.getElementById('get_value').onclick = () => {
 
 ### 3.2 技术栈
 
-- SpreadJS v15.0.0：核心表格控件
-- SystemJS v0.19.22：模块加载器
-- TypeScript v4.1.2：类型支持
+* SpreadJS v15.0.0：核心表格控件
+* SystemJS v0.19.22：模块加载器
+* TypeScript v4.1.2：类型支持
 
 ## 四、使用说明
 
@@ -95,34 +97,30 @@ npm install
 ### 4.2 操作步骤
 
 1. 打开页面后，可以看到两个合并单元格区域：
-   - 区域 1：(0,0) 到 (4,4)，显示 "grapecity"，浅蓝色背景
-   - 区域 2：(7,7) 到 (8,8)，显示 "spreadjs"，黄色背景
-
+    * 区域 1：(0,0) 到 (4,4)，显示 "grapecity"，浅蓝色背景
+    * 区域 2：(7,7) 到 (8,8)，显示 "spreadjs"，黄色背景
 2. 在"目标行索引"输入框中输入行号（例如：2）
-
 3. 在"目标列索引"输入框中输入列号（例如：3）
-
 4. 点击"获取值"按钮，弹窗显示该位置的实际值
-
 5. 测试建议：
-   - 输入合并区域内的任意坐标（如 2,3），应返回 "grapecity"
-   - 输入合并区域外的坐标（如 10,10），应返回该单元格的实际值或 undefined
-   - 输入第二个合并区域的坐标（如 7,8），应返回 "spreadjs"
+    * 输入合并区域内的任意坐标（如 2,3），应返回 "grapecity"
+    * 输入合并区域外的坐标（如 10,10），应返回该单元格的实际值或 undefined
+    * 输入第二个合并区域的坐标（如 7,8），应返回 "spreadjs"
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- 封装简洁：`myGetValue()` 方法仅 7 行代码，易于理解和维护
-- 通用性强：适用于任意单元格，自动处理合并和非合并情况
-- 零侵入性：不修改 SpreadJS 原生 API，可直接集成到现有项目
-- 性能高效：使用原生 `getSpan()` 方法，无额外遍历开销
+* 封装简洁：`myGetValue()` 方法仅 7 行代码，易于理解和维护
+* 通用性强：适用于任意单元格，自动处理合并和非合并情况
+* 零侵入性：不修改 SpreadJS 原生 API，可直接集成到现有项目
+* 性能高效：使用原生 `getSpan()` 方法，无额外遍历开销
 
 ### 5.2 扩展建议
 
-- 可以扩展为批量获取多个单元格值的方法
-- 可以添加对公式单元格的处理（使用 `getFormula()` 和 `getValue()` 结合）
-- 可以封装为 SpreadJS 的自定义工具类，提供更多合并单元格相关的辅助方法
+* 可以扩展为批量获取多个单元格值的方法
+* 可以添加对公式单元格的处理（使用 `getFormula()` 和 `getValue()` 结合）
+* 可以封装为 SpreadJS 的自定义工具类，提供更多合并单元格相关的辅助方法
 
 ## 六、关键代码片段
 
@@ -156,11 +154,15 @@ function myGetValue(sheet, row, col) {
 
 开发者可以从中学到：
 
-- SpreadJS 合并单元格的数据存储机制（只有左上角存储值）
-- `addSpan()` 和 `getSpan()` API 的使用方法
-- 如何封装通用的单元格值获取方法
-- 合并单元格的样式设置和 UI 交互实现
+* SpreadJS 合并单元格的数据存储机制（只有左上角存储值）
+* `addSpan()` 和 `getSpan()` API 的使用方法
+* 如何封装通用的单元格值获取方法
+* 合并单元格的样式设置和 UI 交互实现
 
 该方案适用于所有需要处理合并单元格的场景，如数据导出、单元格编辑、数据验证等，具有很强的实用性和可扩展性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/yaqT05sXQEqig-NOGl1wmA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

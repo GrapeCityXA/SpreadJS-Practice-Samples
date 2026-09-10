@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **动态下拉选项**：根据上级选择自动更新下级可选项，避免用户选择不匹配的数据组合
-- **数据关联管理**：通过自定义名称统一管理省市区三级数据的映射关系
-- **用户体验优化**：当上级选项变更时，自动清空下级已选数据，防止数据不一致
+* **动态下拉选项**：根据上级选择自动更新下级可选项，避免用户选择不匹配的数据组合
+* **数据关联管理**：通过自定义名称统一管理省市区三级数据的映射关系
+* **用户体验优化**：当上级选项变更时，自动清空下级已选数据，防止数据不一致
 
 ## 三、实现思路
 
@@ -94,9 +94,9 @@ sheet.bind(GC.Spread.Sheets.Events.ValueChanged, function (e, info) {
 
 ### 3.5 技术栈
 
-- @grapecity/spread-sheets: 15.0.0
-- SystemJS: 0.19.22（模块加载器）
-- TypeScript: 4.1.2
+* @grapecity/spread-sheets: 15.0.0
+* SystemJS: 0.19.22（模块加载器）
+* TypeScript: 4.1.2
 
 ## 四、使用说明
 
@@ -118,23 +118,27 @@ npm install
 
 ### 5.1 优点
 
-- **数据一致性保障**：通过自动清空机制防止出现"广东省-西安市"这类不匹配的数据组合
-- **维护性强**：数据源集中在"码表"工作表，修改数据时无需调整代码逻辑
-- **扩展性好**：可轻松扩展到四级、五级级联，只需添加更多自定义名称和数据验证器
+* **数据一致性保障**：通过自动清空机制防止出现"广东省-西安市"这类不匹配的数据组合
+* **维护性强**：数据源集中在"码表"工作表，修改数据时无需调整代码逻辑
+* **扩展性好**：可轻松扩展到四级、五级级联，只需添加更多自定义名称和数据验证器
 
 ### 5.2 局限性与扩展建议
 
-- **数据量限制**：当前方案需要为每个选项创建自定义名称，数据量大时会导致名称管理复杂
-- **扩展建议**：对于大规模数据，可考虑使用动态数据源（如 JSON 数据 + 自定义单元格类型）或服务端接口实时查询
+* **数据量限制**：当前方案需要为每个选项创建自定义名称，数据量大时会导致名称管理复杂
+* **扩展建议**：对于大规模数据，可考虑使用动态数据源（如 JSON 数据 + 自定义单元格类型）或服务端接口实时查询
 
 ## 六、总结
 
 本示例展示了 SpreadJS 中实现级联下拉列表的经典方案，核心价值在于：
 
-- 掌握 `addCustomName` 和 `INDIRECT` 函数的组合使用
-- 理解公式数据验证器的动态引用机制
-- 学习通过事件监听实现数据联动清空
+* 掌握 `addCustomName` 和 `INDIRECT` 函数的组合使用
+* 理解公式数据验证器的动态引用机制
+* 学习通过事件监听实现数据联动清空
 
 该方案适用于层级关系明确、数据量适中的业务场景，如地址选择、商品分类、组织架构等。对于需要处理海量数据或复杂查询逻辑的场景，建议结合服务端接口或自定义单元格类型实现更灵活的解决方案。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/pm1kJrTImUW-P37aornc4g/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

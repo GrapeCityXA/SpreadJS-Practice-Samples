@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例展示了如何将 SpreadJS 中的 CheckBox 单元格类型导出为 Excel 文件时保持为真正的复选框控件，而不是默认的布尔值（TRUE/FALSE）。通过将 CheckBox 单元格类型转换为 FormControl 形状对象，实现了在导出的 Excel 文件中保留复选框的交互功能和显示样式。
+本示例展示了如何将 SpreadJS 中的 CheckBox 单元格类型导出为 Excel 文件时保持为真正的复选框控件，而不是默认的布尔值（TRUE/FALSE）。通过将 CheckBox 单元格类型转换为 FormControl 形状对象，实现了在导出的 Excel 文件中保留复选框的交互功能和显示样式。 
 
 该方案适用于需要在 Excel 中保持表单控件交互性的场景，例如问卷调查表、任务清单、审批表单等。
 
 ## 二、解决的问题
 
-- **默认导出行为的局限**：SpreadJS 的 CheckBox 单元格类型在导出 Excel 时会被转换为布尔值（TRUE/FALSE），失去了复选框的交互功能
-- **保持用户体验一致性**：确保用户在 Excel 中打开文件后，仍然可以通过点击复选框进行交互，而不是看到静态的文本值
-- **支持三态复选框**：处理包含"是/否/不确定"三种状态的复选框，并正确映射其文本显示
+* **默认导出行为的局限**：SpreadJS 的 CheckBox 单元格类型在导出 Excel 时会被转换为布尔值（TRUE/FALSE），失去了复选框的交互功能
+* **保持用户体验一致性**：确保用户在 Excel 中打开文件后，仍然可以通过点击复选框进行交互，而不是看到静态的文本值
+* **支持三态复选框**：处理包含"是/否/不确定"三种状态的复选框，并正确映射其文本显示
 
 ## 三、实现思路
 
@@ -84,16 +84,17 @@ function cellTypeToShape(sheet, x, y, width, height, row, col) {
 ```
 
 该函数完成三个关键操作：
+
 1. 根据单元格位置和尺寸创建 FormControl 复选框
 2. 提取原 CheckBox 的文本标签和选中状态
 3. 清除原单元格内容，避免导出时出现重复数据
 
 ### 3.4 技术栈
 
-- @grapecity/spread-sheets: 16.2.0（核心表格组件）
-- @grapecity/spread-sheets-shapes: 16.2.0（形状和表单控件支持）
-- @grapecity/spread-sheets-io: 16.2.0（Excel 导入导出功能）
-- file-saver: ^2.0.5（文件下载工具）
+* @grapecity/spread-sheets: 16.2.0（核心表格组件）
+* @grapecity/spread-sheets-shapes: 16.2.0（形状和表单控件支持）
+* @grapecity/spread-sheets-io: 16.2.0（Excel 导入导出功能）
+* file-saver: ^2.0.5（文件下载工具）
 
 ## 四、使用说明
 
@@ -115,16 +116,16 @@ npm install
 
 ### 5.1 优点
 
-- **保持交互性**：导出的 Excel 文件中复选框仍然可以点击切换状态
-- **无损转换**：准确保留复选框的文本标签和选中状态
-- **支持三态复选框**：正确处理"是/否/不确定"三种状态的映射
-- **非侵入式**：使用影子工作簿技术，不影响原始数据
+* **保持交互性**：导出的 Excel 文件中复选框仍然可以点击切换状态
+* **无损转换**：准确保留复选框的文本标签和选中状态
+* **支持三态复选框**：正确处理"是/否/不确定"三种状态的映射
+* **非侵入式**：使用影子工作簿技术，不影响原始数据
 
 ### 5.2 局限性与扩展建议
 
-- **性能考虑**：大量 CheckBox 的转换可能影响导出速度，可考虑仅转换可视区域或按需转换
-- **样式定制**：当前代码中注释了样式设置部分（第 85-92 行），可根据需求启用以自定义复选框外观
-- **批量操作**：可扩展为支持批量导出多个工作表的场景
+* **性能考虑**：大量 CheckBox 的转换可能影响导出速度，可考虑仅转换可视区域或按需转换
+* **样式定制**：当前代码中注释了样式设置部分（第 85-92 行），可根据需求启用以自定义复选框外观
+* **批量操作**：可扩展为支持批量导出多个工作表的场景
 
 ## 六、关键代码片段
 
@@ -157,13 +158,15 @@ if (sheet.getCellType(row, col).isThreeState()) {
 
 本示例提供了一种实用的解决方案，解决了 SpreadJS CheckBox 导出 Excel 时丢失交互性的问题。开发者可以从中学到：
 
-- 如何使用影子工作簿进行差异化导出
-- CheckBox 单元格类型与 FormControl 形状的转换技巧
-- 单元格坐标的精确计算方法
-- 三态复选框的状态处理逻辑
+* 如何使用影子工作簿进行差异化导出
+* CheckBox 单元格类型与 FormControl 形状的转换技巧
+* 单元格坐标的精确计算方法
+* 三态复选框的状态处理逻辑
 
 该方案适用于需要在 Excel 中保持表单控件功能的各类业务场景，具有良好的扩展性和实用价值。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/SpreadJS%20checkbox%20export%20to%20Excel.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/gHwyHyiTN0GpKMs_b37qkA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

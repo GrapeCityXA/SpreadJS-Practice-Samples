@@ -32,9 +32,10 @@ GC.Spread.Sheets.CellTypes.Text.prototype.setEditorValue = function (editorConte
 ```
 
 这段代码的核心逻辑：
-- 检查单元格是否已设置百分数格式（格式字符串以 `%` 结尾）
-- 如果输入值是数值（如 0.5），则转换为百分数形式（50%）
-- 调用原始方法完成编辑器赋值
+
+* 检查单元格是否已设置百分数格式（格式字符串以 `%` 结尾）
+* 如果输入值是数值（如 0.5），则转换为百分数形式（50%）
+* 调用原始方法完成编辑器赋值
 
 ### 3.2 编辑结束时的数值转换
 
@@ -78,14 +79,15 @@ spread.bind(GC.Spread.Sheets.Events.EditEnded, function (sender, args) {
 ```
 
 根据输入内容是否包含小数点，智能选择格式：
-- 整数（如 "50%"）→ 使用 `0%` 格式
-- 小数（如 "50.5%"）→ 使用 `0.00%` 格式
+
+* 整数（如 "50%"）→ 使用 `0%` 格式
+* 小数（如 "50.5%"）→ 使用 `0.00%` 格式
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0：核心电子表格引擎
-- TypeScript 4.1.2：类型安全的开发语言
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 15.0.0：核心电子表格引擎
+* TypeScript 4.1.2：类型安全的开发语言
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -115,9 +117,9 @@ npm install
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现仅处理简单的百分数格式（`0%` 和 `0.00%`），对于更复杂的格式（如 `0.00%↑`）可能需要额外处理
-- 可以扩展支持其他自定义格式的智能输入（如货币、日期等）
-- 建议在生产环境中添加更完善的输入验证和错误处理
+* 当前实现仅处理简单的百分数格式（`0%` 和 `0.00%`），对于更复杂的格式（如 `0.00%↑`）可能需要额外处理
+* 可以扩展支持其他自定义格式的智能输入（如货币、日期等）
+* 建议在生产环境中添加更完善的输入验证和错误处理
 
 ## 六、关键代码片段
 
@@ -165,4 +167,8 @@ spread.bind(GC.Spread.Sheets.Events.EditEnding, function (sender, args) {
 
 该方案适用于需要优化百分数、货币等特殊格式输入体验的电子表格应用，具有良好的扩展性和可维护性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/ThEQsPj4gkOfXZs7AWKs-Q/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

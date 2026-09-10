@@ -8,9 +8,9 @@
 
 在 SpreadJS 的默认行为中，复制粘贴操作会将源单元格的所有属性（包括值、样式、Tag 等）复制到目标单元格。这在某些业务场景下会带来问题：
 
-- 目标单元格可能已经设置了特定的 Tag 用于标识数据来源或业务逻辑
-- 粘贴操作会意外覆盖这些 Tag，导致元数据丢失
-- 需要手动恢复 Tag 会增加开发和维护成本
+* 目标单元格可能已经设置了特定的 Tag 用于标识数据来源或业务逻辑
+* 粘贴操作会意外覆盖这些 Tag，导致元数据丢失
+* 需要手动恢复 Tag 会增加开发和维护成本
 
 该示例通过事件监听机制，在粘贴前后自动保存和恢复 Tag，解决了这一问题。
 
@@ -75,10 +75,10 @@ A1 单元格的值和 Tag 都设置为 'grapecity'，F1 单元格的值和 Tag �
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心表格组件
-- SpreadJS Designer 15.0.0：设计器组件
-- TypeScript 4.1.2：开发语言
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 15.0.0：核心表格组件
+* SpreadJS Designer 15.0.0：设计器组件
+* TypeScript 4.1.2：开发语言
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -102,29 +102,34 @@ npm install
 
 ### 5.1 优点
 
-- 自动化处理：无需手动干预，通过事件监听自动保存和恢复 Tag
-- 性能优化：使用 `suspendPaint()` 和 `resumePaint()` 减少界面刷新次数
-- 适用范围广：支持单个单元格和多单元格区域的粘贴操作
-- 代码简洁：核心逻辑不到 30 行代码，易于理解和维护
+* 自动化处理：无需手动干预，通过事件监听自动保存和恢复 Tag
+* 性能优化：使用 `suspendPaint()` 和 `resumePaint()` 减少界面刷新次数
+* 适用范围广：支持单个单元格和多单元格区域的粘贴操作
+* 代码简洁：核心逻辑不到 30 行代码，易于理解和维护
 
 ### 5.2 局限性与扩展建议
 
 当前实现仅保护 Tag 属性不被覆盖，如果需要保护其他属性（如样式、公式等），可以参考相同的思路，在 `ClipboardPasting` 事件中保存相应属性，在 `ClipboardPasted` 事件中恢复。
 
 对于更复杂的场景，可以考虑：
-- 添加配置选项，允许用户选择哪些属性需要保护
-- 支持条件判断，只在特定情况下保护 Tag
-- 结合自定义粘贴选项，提供更灵活的粘贴行为
+
+* 添加配置选项，允许用户选择哪些属性需要保护
+* 支持条件判断，只在特定情况下保护 Tag
+* 结合自定义粘贴选项，提供更灵活的粘贴行为
 
 ## 六、总结
 
 本示例展示了如何通过 SpreadJS 的剪贴板事件机制实现粘贴操作时保留目标单元格的 Tag 属性。开发者可以从中学到：
 
-- SpreadJS 剪贴板事件的使用方法（ClipboardPasting 和 ClipboardPasted）
-- 如何在事件处理中获取和设置单元格 Tag
-- 使用 suspendPaint/resumePaint 优化批量操作性能
-- 通过事件监听实现自定义粘贴行为的通用模式
+* SpreadJS 剪贴板事件的使用方法（ClipboardPasting 和 ClipboardPasted）
+* 如何在事件处理中获取和设置单元格 Tag
+* 使用 suspendPaint/resumePaint 优化批量操作性能
+* 通过事件监听实现自定义粘贴行为的通用模式
 
 该方案适用于需要为单元格附加元数据并确保这些元数据不被用户操作意外修改的场景，具有良好的扩展性，可以根据实际需求调整保护的属性类型和保护条件。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/9rsYvQSmHE6Zo4iXGjcACw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

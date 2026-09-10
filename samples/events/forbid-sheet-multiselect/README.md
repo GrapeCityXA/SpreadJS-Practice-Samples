@@ -108,4 +108,8 @@ spread.bind(GC.Spread.Sheets.Events.SheetChanging, function(s, e){
 
 该方案适用于需要严格控制用户操作范围的场景，如数据录入系统、报表审批流程等。通过简单的事件拦截，即可有效防止用户误操作，提升系统的安全性和可控性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/yq4S_MpEbEqgOojKj---8A/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

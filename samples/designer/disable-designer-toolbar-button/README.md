@@ -6,9 +6,9 @@
 
 在某些业务场景中，需要限制用户创建图表时的数据源范围，避免因数据列过多导致图表过于复杂或不符合业务规范。本示例通过命令重写机制，实现了以下功能：
 
-- 在用户尝试插入图表前，自动检测选择区域的列数
-- 当列数超过限制时，阻止图表插入操作并给出明确提示
-- 保持 Designer 其他功能的正常使用
+* 在用户尝试插入图表前，自动检测选择区域的列数
+* 当列数超过限制时，阻止图表插入操作并给出明确提示
+* 保持 Designer 其他功能的正常使用
 
 ## 三、实现思路
 
@@ -37,10 +37,11 @@ if (newInsertChartCommand) {
 ```
 
 这段代码的核心思路是：
-- 保留原始命令的引用（`oldExecute`）
-- 在新的 `execute` 方法中先进行列数检查
-- 如果符合条件（列数 ≤ 2），调用原始方法完成图表插入
-- 如果不符合条件，弹出警告并阻止操作
+
+* 保留原始命令的引用（`oldExecute`）
+* 在新的 `execute` 方法中先进行列数检查
+* 如果符合条件（列数 ≤ 2），调用原始方法完成图表插入
+* 如果不符合条件，弹出警告并阻止操作
 
 ### 3.2 配置 Designer 使用自定义命令
 
@@ -71,15 +72,16 @@ sheet.setArray(0, 0, [
 ```
 
 用户可以选择不同的列范围进行测试：
-- 选择 2 列或更少（如"产品"和"月份"）：允许插入图表
-- 选择 3 列或更多（如"产品"、"月份"、"价格"）：禁止插入图表
+
+* 选择 2 列或更少（如"产品"和"月份"）：允许插入图表
+* 选择 3 列或更多（如"产品"、"月份"、"价格"）：禁止插入图表
 
 ### 3.4 技术栈
 
-- SpreadJS 16.0.1（核心表格引擎）
-- SpreadJS Designer 16.0.1（设计器组件）
-- SpreadJS Charts 16.0.1（图表功能）
-- SystemJS（模块加载器）
+* SpreadJS 16.0.1（核心表格引擎）
+* SpreadJS Designer 16.0.1（设计器组件）
+* SpreadJS Charts 16.0.1（图表功能）
+* SystemJS（模块加载器）
 
 ## 四、使用说明
 
@@ -104,17 +106,17 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单，通过命令重写机制无需修改 Designer 源码
-- 逻辑清晰，在命令执行前进行拦截判断
-- 扩展性强，可以根据业务需求调整列数限制或添加其他校验规则
-- 不影响 Designer 的其他功能
+* 实现简单，通过命令重写机制无需修改 Designer 源码
+* 逻辑清晰，在命令执行前进行拦截判断
+* 扩展性强，可以根据业务需求调整列数限制或添加其他校验规则
+* 不影响 Designer 的其他功能
 
 ### 5.2 扩展建议
 
-- 可以将列数限制改为可配置参数，支持动态调整
-- 可以扩展为更复杂的校验规则，例如限制行数、检查数据类型等
-- 可以将警告提示改为更友好的 UI 组件（如自定义对话框）
-- 可以记录用户的操作日志，用于审计和分析
+* 可以将列数限制改为可配置参数，支持动态调整
+* 可以扩展为更复杂的校验规则，例如限制行数、检查数据类型等
+* 可以将警告提示改为更友好的 UI 组件（如自定义对话框）
+* 可以记录用户的操作日志，用于审计和分析
 
 ## 六、关键代码片段
 
@@ -162,11 +164,15 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container", desi
 
 本示例展示了 SpreadJS Designer 命令重写机制的实际应用，通过简单的代码实现了对图表插入功能的自定义控制。开发者可以从中学到：
 
-- 如何获取和重写 Designer 内置命令
-- 如何在命令执行前添加自定义校验逻辑
-- 如何配置 Designer 使用自定义命令
-- 如何通过选择区域对象获取列数等信息
+* 如何获取和重写 Designer 内置命令
+* 如何在命令执行前添加自定义校验逻辑
+* 如何配置 Designer 使用自定义命令
+* 如何通过选择区域对象获取列数等信息
 
 该方案适用于需要对 Designer 功能进行精细化控制的场景，具有良好的扩展性和可维护性。开发者可以参考此思路，实现更多自定义的业务规则和交互逻辑。
 
-### 在线Demo（[全屏打开](https://jscodemine.grapecity.com/share/DJS1xZyqzUW-_MfNCHRx5w/?IsEmbed=false&Theme=Light&PreviewDirection=0&IsEditorShow=true&IsExplorerShow=true&IsPreviewShow=true&IsConsoleShow=true&IsRunBTNShow=false&IsResetBTNShow=false&IsOpenInCodemineBTNShow=false&PanelWidth=20&PanelWidth=50&PanelWidth=30&defaultOpen=%257B%2522OpenedFileName%2522%253A%255B%2522%252Fsrc%252Fapp.js%2522%255D%252C%2522ActiveFile%2522%253A%2522%252Fsrc%252Fapp.js%2522%257D)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

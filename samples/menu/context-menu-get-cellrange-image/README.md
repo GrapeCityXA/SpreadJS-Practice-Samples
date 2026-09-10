@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **快速导出单元格内容为图片**：用户可以将表格中的特定区域快速转换为图片格式，方便在文档、演示文稿或其他应用中使用
-- **自定义右键菜单扩展**：演示如何在 SpreadJS Designer 中添加自定义命令到右键菜单，增强用户交互体验
-- **跨应用数据共享**：通过剪贴板 API 实现与其他应用程序的无缝数据交换
+* **快速导出单元格内容为图片**：用户可以将表格中的特定区域快速转换为图片格式，方便在文档、演示文稿或其他应用中使用
+* **自定义右键菜单扩展**：演示如何在 SpreadJS Designer 中添加自定义命令到右键菜单，增强用户交互体验
+* **跨应用数据共享**：通过剪贴板 API 实现与其他应用程序的无缝数据交换
 
 ## 三、实现思路
 
@@ -105,11 +105,11 @@ let getScreenshot = async function (spread) {
 
 ### 3.4 技术栈
 
-- SpreadJS 16.0.1（核心表格组件）
-- SpreadJS Designer 16.0.1（设计器组件）
-- SpreadJS Print 16.0.1（打印功能模块）
-- SystemJS 0.19.22（模块加载器）
-- TypeScript 4.1.2（开发语言）
+* SpreadJS 16.0.1（核心表格组件）
+* SpreadJS Designer 16.0.1（设计器组件）
+* SpreadJS Print 16.0.1（打印功能模块）
+* SystemJS 0.19.22（模块加载器）
+* TypeScript 4.1.2（开发语言）
 
 ## 四、使用说明
 
@@ -134,19 +134,19 @@ npm install
 
 ### 5.1 优点
 
-- **高质量截图**：通过 `qualityFactor(5)` 设置确保生成高清晰度的图片
-- **精确区域控制**：支持任意单元格区域的截图，自动适配选中范围
-- **无边框干净输出**：隐藏行列标题和边框，输出纯净的单元格内容
-- **浏览器兼容性**：使用 Promise 包装确保在 Safari 等浏览器中正常工作
+* **高质量截图**：通过 `qualityFactor(5)` 设置确保生成高清晰度的图片
+* **精确区域控制**：支持任意单元格区域的截图，自动适配选中范围
+* **无边框干净输出**：隐藏行列标题和边框，输出纯净的单元格内容
+* **浏览器兼容性**：使用 Promise 包装确保在 Safari 等浏览器中正常工作
 
 ### 5.2 局限性与扩展建议
 
-- **浏览器限制**：Clipboard API 需要 HTTPS 环境或 localhost，且部分旧版浏览器不支持
-- **扩展方向**：
-  - 可以添加图片格式选择（PNG、JPEG）
-  - 支持自定义图片质量参数
-  - 添加下载到本地文件的选项
-  - 支持批量截图功能
+* **浏览器限制**：Clipboard API 需要 HTTPS 环境或 localhost，且部分旧版浏览器不支持
+* **扩展方向**：
+    * 可以添加图片格式选择（PNG、JPEG）
+    * 支持自定义图片质量参数
+    * 添加下载到本地文件的选项
+    * 支持批量截图功能
 
 ## 六、关键代码片段
 
@@ -185,12 +185,16 @@ spread.bind(GC.Spread.Sheets.Events.BeforePrint + ".screenshot", (s, e) => {
 
 本示例展示了 SpreadJS 的高级扩展能力，通过巧妙利用打印 API 和事件机制实现了单元格截图功能。开发者可以从中学到：
 
-- SpreadJS Designer 自定义命令和右键菜单的扩展方法
-- 打印 API 的非常规应用场景（生成图片而非打印）
-- 现代浏览器 Clipboard API 的使用技巧
-- Promise 和 async/await 在异步操作中的实践
-- Canvas API 进行图片处理的基本方法
+* SpreadJS Designer 自定义命令和右键菜单的扩展方法
+* 打印 API 的非常规应用场景（生成图片而非打印）
+* 现代浏览器 Clipboard API 的使用技巧
+* Promise 和 async/await 在异步操作中的实践
+* Canvas API 进行图片处理的基本方法
 
 该方案适用于需要将表格数据快速转换为图片的场景，如报表导出、数据分享、文档编辑等，具有良好的扩展性和实用价值。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/iLdw9RtuGkymlrrJdrqGFw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

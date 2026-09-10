@@ -1,6 +1,6 @@
 ## 一、Demo 概述
 
-本示例演示了如何在 SpreadJS 中实现表格数据绑定时保持合并单元格的格式。当使用 `CellBindingSource` 绑定数据源到表格后，示例通过自定义逻辑将表格首行的合并单元格格式复制到所有数据行，并监听表格行变化事件，确保新插入的行也能自动应用合并单元格格式。
+本示例演示了如何在 SpreadJS 中实现表格数据绑定时保持合并单元格的格式。当使用 `CellBindingSource` 绑定数据源到表格后，示例通过自定义逻辑将表格首行的合并单元格格式复制到所有数据行，并监听表格行变化事件，确保新插入的行也能自动应用合并单元格格式。 
 
 该示例适用于需要在数据绑定场景下保持复杂单元格格式（特别是合并单元格）的业务需求，例如报表系统、数据展示表格等。
 
@@ -8,9 +8,9 @@
 
 在 SpreadJS 的数据绑定场景中，直接使用 `setDataSource` 绑定数据源后，表格的合并单元格格式通常不会自动应用到数据行。本示例解决了以下问题：
 
-- 数据绑定后如何保持表格模板中的合并单元格格式
-- 动态插入新行时如何自动应用合并单元格
-- 如何在表格数据变化时同步样式和合并单元格状态
+* 数据绑定后如何保持表格模板中的合并单元格格式
+* 动态插入新行时如何自动应用合并单元格
+* 如何在表格数据变化时同步样式和合并单元格状态
 
 ## 三、实现思路
 
@@ -93,9 +93,10 @@ function bindData() {
 ```
 
 关键逻辑：
-- 使用 `copyTo` 方法复制首行样式到所有数据行
-- 使用 `getSpan` 检测首行的合并单元格
-- 使用 `addSpan` 为每一行添加相同的合并单元格格式
+
+* 使用 `copyTo` 方法复制首行样式到所有数据行
+* 使用 `getSpan` 检测首行的合并单元格
+* 使用 `addSpan` 为每一行添加相同的合并单元格格式
 
 #### 3.1.3 监听表格行变化事件
 
@@ -130,10 +131,10 @@ function bindEvent() {
 
 ### 3.2 技术栈
 
-- SpreadJS 16.0.1：核心表格控件
-- SpreadJS IO 16.0.1：用于导入 `.ssjson` 文件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 16.0.1：核心表格控件
+* SpreadJS IO 16.0.1：用于导入 `.ssjson` 文件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -156,28 +157,32 @@ npm install
 
 ### 5.1 优点
 
-- 自动化格式同步：无需手动为每一行设置合并单元格，减少重复操作
-- 动态响应：支持运行时插入新行并自动应用格式
-- 灵活性：可以处理任意数量和位置的合并单元格
-- 数据绑定兼容：与 SpreadJS 的数据绑定机制无缝集成
+* 自动化格式同步：无需手动为每一行设置合并单元格，减少重复操作
+* 动态响应：支持运行时插入新行并自动应用格式
+* 灵活性：可以处理任意数量和位置的合并单元格
+* 数据绑定兼容：与 SpreadJS 的数据绑定机制无缝集成
 
 ### 5.2 局限性与扩展建议
 
 当前实现假设所有数据行使用相同的合并单元格格式。如果需要支持不同行使用不同的合并格式，可以考虑：
 
-- 在数据源中添加格式元数据字段
-- 根据数据内容动态决定合并单元格的范围
-- 支持条件格式化的合并单元格逻辑
+* 在数据源中添加格式元数据字段
+* 根据数据内容动态决定合并单元格的范围
+* 支持条件格式化的合并单元格逻辑
 
 ## 六、总结
 
 本示例展示了如何在 SpreadJS 数据绑定场景下保持合并单元格格式的完整解决方案。开发者可以从中学到：
 
-- SpreadJS 表格数据绑定的基本用法
-- 使用 `copyTo` 和 `addSpan` API 实现样式和格式复制
-- 通过 `TableRowsChanged` 事件监听表格结构变化
-- 如何处理复杂的单元格格式同步问题
+* SpreadJS 表格数据绑定的基本用法
+* 使用 `copyTo` 和 `addSpan` API 实现样式和格式复制
+* 通过 `TableRowsChanged` 事件监听表格结构变化
+* 如何处理复杂的单元格格式同步问题
 
 该方案适用于需要在数据驱动的表格中保持复杂格式的场景，具有良好的可扩展性和实用性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/oLJPc-KKik2gP3alrC9_9w/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

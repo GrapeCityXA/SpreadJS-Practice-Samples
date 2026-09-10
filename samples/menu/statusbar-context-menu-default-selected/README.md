@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **默认状态栏选项不全**：SpreadJS 状态栏默认情况下部分选项处于隐藏状态，用户需要手动右键勾选才能显示
-- **提升用户体验**：通过代码预先配置，让用户在首次使用时就能看到所有可用的状态栏功能
-- **简化初始化配置**：为开发者提供一种快速启用所有状态栏选项的方法
+* **默认状态栏选项不全**：SpreadJS 状态栏默认情况下部分选项处于隐藏状态，用户需要手动右键勾选才能显示
+* **提升用户体验**：通过代码预先配置，让用户在首次使用时就能看到所有可用的状态栏功能
+* **简化初始化配置**：为开发者提供一种快速启用所有状态栏选项的方法
 
 ## 三、实现思路
 
@@ -45,9 +45,9 @@ for (let i = 0; i < items.length; i++) {
 
 ### 3.3 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持（配置环境）
+* SpreadJS 15.0.0：核心电子表格组件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持（配置环境）
 
 ## 四、使用说明
 
@@ -73,9 +73,9 @@ npm install
 
 ### 5.1 优点
 
-- **代码简洁**：仅需几行代码即可实现全部状态栏选项的显示
-- **用户友好**：用户无需手动配置即可使用完整的状态栏功能
-- **易于维护**：通过 `statusBar.all()` 动态获取所有选项，即使 SpreadJS 版本更新增加新选项也能自动适配
+* **代码简洁**：仅需几行代码即可实现全部状态栏选项的显示
+* **用户友好**：用户无需手动配置即可使用完整的状态栏功能
+* **易于维护**：通过 `statusBar.all()` 动态获取所有选项，即使 SpreadJS 版本更新增加新选项也能自动适配
 
 ## 六、关键代码片段
 
@@ -109,10 +109,14 @@ for (let i = 0; i < items.length; i++) {
 
 本示例展示了 SpreadJS 状态栏的基础配置方法，开发者可以学到：
 
-- 如何创建和绑定独立的状态栏组件
-- 如何通过 `statusBar.all()` 获取所有状态栏子项
-- 如何批量设置状态栏选项的可见性
+* 如何创建和绑定独立的状态栏组件
+* 如何通过 `statusBar.all()` 获取所有状态栏子项
+* 如何批量设置状态栏选项的可见性
 
 该方案适用于需要为用户提供完整功能访问权限的应用场景，特别是企业内部系统或专业数据处理工具。如果需要更精细的控制，可以根据具体的状态栏项名称进行选择性显示或隐藏。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/-1KIIq2OlE_tkL94Y2Z0TA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

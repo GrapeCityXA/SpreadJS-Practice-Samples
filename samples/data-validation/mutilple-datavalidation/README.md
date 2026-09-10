@@ -6,9 +6,9 @@
 
 在实际业务场景中，经常需要对用户输入的数据进行复杂的验证，例如：
 
-- 限制日期必须在特定的时间范围内（如项目周期、活动有效期等）
-- 需要同时满足多个条件的组合验证（如既要大于某个值，又要小于另一个值）
-- 实时高亮显示不符合规则的数据，提升用户体验
+* 限制日期必须在特定的时间范围内（如项目周期、活动有效期等）
+* 需要同时满足多个条件的组合验证（如既要大于某个值，又要小于另一个值）
+* 实时高亮显示不符合规则的数据，提升用户体验
 
 传统的单一条件验证无法满足这类需求，本示例展示了如何通过逻辑运算符（AND）组合多个验证规则，实现更灵活的数据校验。
 
@@ -69,13 +69,13 @@ sheet.getRange(-1, 0, -1, 1, GC.Spread.Sheets.SheetArea.viewport).validator(vali
 spread.options.highlightInvalidData = true;
 ```
 
-- `getRange(-1, 0, -1, 1)` 表示选择第一列（索引 0）的所有行
-- `highlightInvalidData` 选项启用后，不符合验证规则的数据会自动高亮显示
+* `getRange(-1, 0, -1, 1)` 表示选择第一列（索引 0）的所有行
+* `highlightInvalidData` 选项启用后，不符合验证规则的数据会自动高亮显示
 
 ### 3.4 技术栈
 
-- SpreadJS v17.0.8：核心表格控件库
-- SystemJS v0.19.22：模块加载器
+* SpreadJS v17.0.8：核心表格控件库
+* SystemJS v0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -94,24 +94,24 @@ npm install
 2. 第一行的日期（2025/10/31）符合验证规则，显示正常
 3. 第三行的日期（2026/1/31）超出范围，会被高亮显示为无效数据
 4. 尝试在第一列的其他单元格中输入日期：
-   - 输入 2025 年内的日期，数据正常显示
-   - 输入 2024 年 12 月 31 日之前或 2025 年 12 月 31 日之后的日期，会被高亮标记
+    * 输入 2025 年内的日期，数据正常显示
+    * 输入 2024 年 12 月 31 日之前或 2025 年 12 月 31 日之后的日期，会被高亮标记
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- **灵活的规则组合**：支持通过逻辑运算符（AND/OR）组合多个验证条件，满足复杂业务需求
-- **实时视觉反馈**：通过 `highlightInvalidData` 选项，用户可以立即看到哪些数据不符合规则
-- **可扩展性强**：可以轻松扩展为更多条件的组合，或应用到不同的数据类型（数字、文本等）
+* **灵活的规则组合**：支持通过逻辑运算符（AND/OR）组合多个验证条件，满足复杂业务需求
+* **实时视觉反馈**：通过 `highlightInvalidData` 选项，用户可以立即看到哪些数据不符合规则
+* **可扩展性强**：可以轻松扩展为更多条件的组合，或应用到不同的数据类型（数字、文本等）
 
 ### 5.2 局限性与扩展建议
 
-- **当前实现仅针对日期类型**：如需验证其他数据类型，需要使用相应的条件类型（如 `numberCondition`、`textCondition`）
-- **扩展建议**：
-  - 可以添加自定义错误提示信息，通过 `validator.errorMessage()` 方法告知用户具体的验证规则
-  - 可以结合 `inputMessage()` 方法，在用户选中单元格时显示输入提示
-  - 支持 OR 逻辑运算符，实现"满足条件 1 或条件 2"的验证场景
+* **当前实现仅针对日期类型**：如需验证其他数据类型，需要使用相应的条件类型（如 `numberCondition`、`textCondition`）
+* **扩展建议**：
+    * 可以添加自定义错误提示信息，通过 `validator.errorMessage()` 方法告知用户具体的验证规则
+    * 可以结合 `inputMessage()` 方法，在用户选中单元格时显示输入提示
+    * 支持 OR 逻辑运算符，实现"满足条件 1 或条件 2"的验证场景
 
 ## 六、关键代码片段
 
@@ -158,11 +158,15 @@ spread.options.highlightInvalidData = true;
 
 本示例展示了 SpreadJS 中多规则组合数据验证的实现方法，通过条件格式化 API 和逻辑运算符，可以灵活构建复杂的验证逻辑。开发者可以从中学到：
 
-- 如何使用 `ConditionalFormatting.Condition` 创建各种类型的验证条件
-- 如何通过 `relationCondition` 和逻辑运算符组合多个条件
-- 如何将验证器应用到指定的单元格区域
-- 如何启用无效数据的视觉高亮功能
+* 如何使用 `ConditionalFormatting.Condition` 创建各种类型的验证条件
+* 如何通过 `relationCondition` 和逻辑运算符组合多个条件
+* 如何将验证器应用到指定的单元格区域
+* 如何启用无效数据的视觉高亮功能
 
 该方案适用于需要对用户输入进行严格校验的场景，如表单填写、数据导入、报表编辑等，具有良好的扩展性和实用性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/e1LV5pC0NUitUFSwMWu2Dg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

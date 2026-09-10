@@ -8,10 +8,10 @@
 
 在某些业务场景中，开发者需要限制用户对工作表的操作权限，避免用户通过右键菜单对工作表进行不必要的修改。该示例解决了以下问题：
 
-- 防止用户随意插入、删除或移动工作表，保持工作簿结构稳定
-- 避免用户修改工作表保护状态或隐藏/显示工作表
-- 在特定业务流程中锁定工作表页签的操作权限
-- 提供更简洁的用户界面，移除不需要的右键菜单选项
+* 防止用户随意插入、删除或移动工作表，保持工作簿结构稳定
+* 避免用户修改工作表保护状态或隐藏/显示工作表
+* 在特定业务流程中锁定工作表页签的操作权限
+* 提供更简洁的用户界面，移除不需要的右键菜单选项
 
 ## 三、实现思路
 
@@ -75,16 +75,17 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container", conf
 
 ### 3.2 技术栈
 
-- SpreadJS 16.0.1：核心电子表格组件
-- SpreadJS Designer 16.0.1：提供完整的设计器界面和配置能力
-- SystemJS：模块加载器
-- TypeScript 4.1.2：类型支持
+* SpreadJS 16.0.1：核心电子表格组件
+* SpreadJS Designer 16.0.1：提供完整的设计器界面和配置能力
+* SystemJS：模块加载器
+* TypeScript 4.1.2：类型支持
 
 ## 四、使用说明
 
 ### 4.1 运行方式
 
 1. 安装依赖：
+
 ```bash
 npm install
 ```
@@ -102,26 +103,30 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单，只需修改配置对象即可完成功能定制
-- 不影响 Designer 的其他功能，仅针对工作表页签右键菜单进行限制
-- 配置灵活，可根据业务需求选择性移除特定菜单项
-- 通过深拷贝配置对象，不会影响其他 Designer 实例
+* 实现简单，只需修改配置对象即可完成功能定制
+* 不影响 Designer 的其他功能，仅针对工作表页签右键菜单进行限制
+* 配置灵活，可根据业务需求选择性移除特定菜单项
+* 通过深拷贝配置对象，不会影响其他 Designer 实例
 
 ### 5.2 扩展建议
 
-- 可以根据用户角色动态配置可用的菜单项，实现权限分级管理
-- 可以结合工作表保护功能，进一步限制用户的操作权限
-- 可以自定义右键菜单，添加业务特定的操作选项
+* 可以根据用户角色动态配置可用的菜单项，实现权限分级管理
+* 可以结合工作表保护功能，进一步限制用户的操作权限
+* 可以自定义右键菜单，添加业务特定的操作选项
 
 ## 六、总结
 
 本示例展示了如何通过自定义 SpreadJS Designer 配置来禁用工作表页签的右键菜单功能。开发者可以从中学到：
 
-- 如何获取和修改 SpreadJS Designer 的默认配置
-- 如何使用 `CommandNames` 枚举定位特定的菜单命令
-- 如何通过配置对象控制 Designer 的 UI 行为
-- 如何实现对用户操作权限的精细化控制
+* 如何获取和修改 SpreadJS Designer 的默认配置
+* 如何使用 `CommandNames` 枚举定位特定的菜单命令
+* 如何通过配置对象控制 Designer 的 UI 行为
+* 如何实现对用户操作权限的精细化控制
 
 该方案适用于需要限制用户对工作表结构进行修改的场景，具有良好的扩展性，可以根据实际业务需求灵活调整禁用的菜单项。
 
-### 在线Demo（[全屏打开](https://jscodemine.grapecity.com/share/q4V0jLrNCEmRfrfaI26dEg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

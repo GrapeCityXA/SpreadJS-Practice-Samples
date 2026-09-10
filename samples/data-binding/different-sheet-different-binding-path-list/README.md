@@ -2,15 +2,15 @@
 
 本示例展示了如何在 SpreadJS Designer 中为不同的 Sheet 页设置独立的数据绑定配置。通过监听工作表切换事件，实现了在切换 Sheet 时自动保存和恢复各自的数据绑定设置，使每个 Sheet 页可以拥有独立的数据绑定列表，互不干扰。
 
-该功能适用于需要在同一工作簿中管理多个不同数据源或数据结构的场景，例如多业务模块报表、多维度数据分析等。
+该功能适用于需要在同一工作簿中管理多个不同数据源或数据结构的场景，例如多业务模块报表、多维度数据分析等。 
 
 ## 二、解决的问题
 
 在使用 SpreadJS Designer 的数据绑定功能时，默认情况下所有 Sheet 页共享同一个数据绑定配置。这会导致以下问题：
 
-- 当在 Sheet1 设置数据绑定后，切换到 Sheet2 时，Designer 的数据绑定面板仍显示 Sheet1 的配置
-- 无法为不同的 Sheet 页设置不同的数据源结构
-- 多个 Sheet 页的数据绑定配置会相互覆盖
+* 当在 Sheet1 设置数据绑定后，切换到 Sheet2 时，Designer 的数据绑定面板仍显示 Sheet1 的配置
+* 无法为不同的 Sheet 页设置不同的数据源结构
+* 多个 Sheet 页的数据绑定配置会相互覆盖
 
 本示例通过监听 Sheet 切换事件，将每个 Sheet 的数据绑定配置存储在 Sheet 的 tag 属性中，实现了不同 Sheet 页独立管理数据绑定列表的功能。
 
@@ -63,16 +63,17 @@ if (newSheet) {
 
 ### 3.2 技术栈
 
-- SpreadJS v16.0.1：核心表格组件
-- SpreadJS Designer v16.0.1：设计器组件
-- SystemJS：模块加载器
-- TypeScript v4.1.2：开发语言支持
+* SpreadJS v16.0.1：核心表格组件
+* SpreadJS Designer v16.0.1：设计器组件
+* SystemJS：模块加载器
+* TypeScript v4.1.2：开发语言支持
 
 ## 四、使用说明
 
 ### 4.1 运行方式
 
 1. 安装依赖：
+
 ```bash
 npm install
 ```
@@ -92,23 +93,23 @@ npm install
 
 ### 5.1 优点
 
-- 实现了不同 Sheet 页的数据绑定配置隔离，互不干扰
-- 利用 Sheet 的 tag 属性存储配置，无需额外的数据结构
-- 代码简洁，通过事件监听机制自动处理保存和恢复逻辑
-- 支持多个 Sheet 页同时管理不同的数据源结构
+* 实现了不同 Sheet 页的数据绑定配置隔离，互不干扰
+* 利用 Sheet 的 tag 属性存储配置，无需额外的数据结构
+* 代码简洁，通过事件监听机制自动处理保存和恢复逻辑
+* 支持多个 Sheet 页同时管理不同的数据源结构
 
 ### 5.2 局限性与扩展建议
 
 当前实现的局限性：
 
-- 数据绑定配置仅保存在内存中（Sheet tag），刷新页面后会丢失
-- 没有对数据绑定配置进行持久化存储
+* 数据绑定配置仅保存在内存中（Sheet tag），刷新页面后会丢失
+* 没有对数据绑定配置进行持久化存储
 
 扩展建议：
 
-- 可以结合 SpreadJS 的序列化功能，将整个工作簿（包括 Sheet tag）保存为 JSON 或 Excel 文件
-- 可以添加自动保存功能，定期将配置保存到后端服务器
-- 可以添加配置导入导出功能，方便在不同工作簿之间复用数据绑定配置
+* 可以结合 SpreadJS 的序列化功能，将整个工作簿（包括 Sheet tag）保存为 JSON 或 Excel 文件
+* 可以添加自动保存功能，定期将配置保存到后端服务器
+* 可以添加配置导入导出功能，方便在不同工作簿之间复用数据绑定配置
 
 ## 六、关键代码片段
 
@@ -145,11 +146,15 @@ spread.bind(GC.Spread.Sheets.Events.ActiveSheetChanged, function (sender, args) 
 
 本示例展示了如何通过监听 Sheet 切换事件和利用 Sheet 的 tag 属性，实现多个 Sheet 页独立管理数据绑定配置的功能。开发者可以从中学到：
 
-- SpreadJS 事件监听机制的使用方法
-- Sheet tag 属性的存储和读取技巧
-- SpreadJS Designer 内部数据的访问和设置方式
-- 如何解决多 Sheet 页配置隔离的问题
+* SpreadJS 事件监听机制的使用方法
+* Sheet tag 属性的存储和读取技巧
+* SpreadJS Designer 内部数据的访问和设置方式
+* 如何解决多 Sheet 页配置隔离的问题
 
 该方案适用于需要在同一工作簿中管理多个不同数据源的场景，具有良好的扩展性。开发者可以在此基础上添加持久化存储、配置导入导出等功能，进一步增强实用性。
 
-### 在线Demo（[全屏打开](https://jscodemine.grapecity.com/share/MEe4fV0kRUqUYUpeH6F5yg/?)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

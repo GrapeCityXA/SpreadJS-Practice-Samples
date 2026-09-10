@@ -4,9 +4,8 @@
 
 ## 二、解决的问题
 
-- **动态公式计算**：在某些业务场景中，公式内容需要根据用户输入或其他条件动态生成，而不是预先写死在单元格中。EVALUATE 函数允许将字符串形式的公式转换为实际的计算结果。
-
-- **Excel 兼容性**：Excel 中的 EVALUATE 函数（宏功能）在 SpreadJS 中默认不支持，通过自定义函数可以实现相同的功能，提高与 Excel 的兼容性。
+* **动态公式计算**：在某些业务场景中，公式内容需要根据用户输入或其他条件动态生成，而不是预先写死在单元格中。EVALUATE 函数允许将字符串形式的公式转换为实际的计算结果。
+* **Excel 兼容性**：Excel 中的 EVALUATE 函数（宏功能）在 SpreadJS 中默认不支持，通过自定义函数可以实现相同的功能，提高与 Excel 的兼容性。
 
 ## 三、实现思路
 
@@ -75,9 +74,9 @@ sheet.setFormula(3, 0, '=EVALUATE("SUM(A1:A2)")');
 
 ### 3.3 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0（SpreadJS 核心库）
-- **TypeScript**: ^4.1.2（类型支持）
-- **SystemJS**: ^0.19.22（模块加载器）
+* **@grapecity/spread-sheets**: 15.0.0（SpreadJS 核心库）
+* **TypeScript**: ^4.1.2（类型支持）
+* **SystemJS**: ^0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -101,15 +100,15 @@ npm install
 
 ### 5.1 优点
 
-- **灵活性高**：可以动态构建和执行任意合法的 SpreadJS 公式
-- **Excel 兼容**：实现了 Excel 宏中的 EVALUATE 功能，便于 Excel 文件迁移
-- **易于扩展**：基于 SpreadJS 的自定义函数框架，可以方便地添加更多类似功能
+* **灵活性高**：可以动态构建和执行任意合法的 SpreadJS 公式
+* **Excel 兼容**：实现了 Excel 宏中的 EVALUATE 功能，便于 Excel 文件迁移
+* **易于扩展**：基于 SpreadJS 的自定义函数框架，可以方便地添加更多类似功能
 
 ### 5.2 局限性与扩展建议
 
-- **错误处理**：当前实现未对非法公式字符串进行错误处理，建议添加 try-catch 包裹 `evaluateFormula` 调用
-- **参数扩展**：可以扩展为支持多个参数，实现更复杂的动态计算场景
-- **性能优化**：对于频繁调用的场景，可以考虑添加公式缓存机制
+* **错误处理**：当前实现未对非法公式字符串进行错误处理，建议添加 try-catch 包裹 `evaluateFormula` 调用
+* **参数扩展**：可以扩展为支持多个参数，实现更复杂的动态计算场景
+* **性能优化**：对于频繁调用的场景，可以考虑添加公式缓存机制
 
 ## 六、关键代码片段
 
@@ -161,4 +160,8 @@ FactorialFunction.prototype.evaluate = function (arg) {
 
 该方案适用于需要动态构建公式、实现 Excel 宏功能迁移、或构建公式生成器等场景。通过类似的方式，开发者可以扩展实现更多自定义函数，满足特定业务需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/IHK_OTZWsU2o7M-4vD2yAg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

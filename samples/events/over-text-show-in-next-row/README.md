@@ -4,8 +4,8 @@
 
 ## 二、解决的问题
 
-- **固定列宽约束**:在某些业务场景中,列宽需要保持固定,但文本内容长度不可控,本示例提供了一种通过垂直扩展来显示完整内容的方案
-- **文本溢出处理**:避免了传统的文本截断或溢出隐藏的问题,确保所有文本内容都能被完整展示
+* **固定列宽约束**:在某些业务场景中,列宽需要保持固定,但文本内容长度不可控,本示例提供了一种通过垂直扩展来显示完整内容的方案
+* **文本溢出处理**:避免了传统的文本截断或溢出隐藏的问题,确保所有文本内容都能被完整展示
 
 ## 三、实现思路
 
@@ -76,7 +76,7 @@ function processCell(row, col) {
 
 ### 3.2 技术栈
 
-- `@grapecity/spread-sheets`: 17.0.8 - SpreadJS 核心库
+* `@grapecity/spread-sheets`: 17.0.8 - SpreadJS 核心库
 
 ## 四、使用说明
 
@@ -98,18 +98,18 @@ npm install
 
 ### 5.1 优点
 
-- **精准宽度计算**:基于实际渲染宽度而非字符数量,能够正确处理中英文混排和不同字体大小的场景
-- **保留完整内容**:通过垂直扩展确保所有文本都能完整显示,不会发生截断或丢失
-- **性能优化**:使用暂停绘制机制减少不必要的重绘操作
+* **精准宽度计算**:基于实际渲染宽度而非字符数量,能够正确处理中英文混排和不同字体大小的场景
+* **保留完整内容**:通过垂直扩展确保所有文本都能完整显示,不会发生截断或丢失
+* **性能优化**:使用暂停绘制机制减少不必要的重绘操作
 
 ### 5.2 局限性与扩展建议
 
-- **覆盖现有数据**:当前实现会直接覆盖下方单元格的内容,实际应用中需要检查目标行是否为空
-- **单列处理**:仅处理固定列,可扩展为支持指定列范围的批量处理
-- **扩展建议**:
-  - 添加空行检查逻辑,避免覆盖已有数据
-  - 支持自定义换行策略（如按单词边界换行）
-  - 提供撤销功能
+* **覆盖现有数据**:当前实现会直接覆盖下方单元格的内容,实际应用中需要检查目标行是否为空
+* **单列处理**:仅处理固定列,可扩展为支持指定列范围的批量处理
+* **扩展建议**:
+    * 添加空行检查逻辑,避免覆盖已有数据
+    * 支持自定义换行策略（如按单词边界换行）
+    * 提供撤销功能
 
 ## 六、关键代码片段
 
@@ -142,11 +142,12 @@ let characters = originalStr.split("");  // 拆分为字符数组
 
 本示例提供了一种实用的长文本处理方案,特别适合以下场景:
 
-- **固定格式报表**:列宽需要符合打印规范,但内容长度不可控
-- **数据展示**:需要在有限空间内完整展示描述性文本
-- **表单设计**:多行文本输入在单元格中的格式化显示
+* **固定格式报表**:列宽需要符合打印规范,但内容长度不可控
+* **数据展示**:需要在有限空间内完整展示描述性文本
+* **表单设计**:多行文本输入在单元格中的格式化显示
 
 开发者可以从中学习到:
+
 1. `CellTypes.Text().getAutoFitWidth()` API 的实际应用
 2. 逐字符处理文本的循环控制技巧
 3. `suspendPaint/resumePaint` 的性能优化方法
@@ -154,4 +155,8 @@ let characters = originalStr.split("");  // 拆分为字符数组
 
 该方案具有良好的扩展性,可根据具体业务需求添加边界检查、样式保持、用户交互等功能。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/IUV7kfqR_0eW9EthYXbOOA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -1,12 +1,12 @@
 ## 一、Demo 概述
 
-本示例展示了如何通过继承 SpreadJS 内置的 FileUpload 单元格类型，自定义文件上传单元格的视觉样式。通过重写 `paint` 方法，实现了带圆角、虚线边框、粉色背景和居中文本的自定义上传区域，提升了用户界面的美观性和品牌一致性。
+本示例展示了如何通过继承 SpreadJS 内置的 FileUpload 单元格类型，自定义文件上传单元格的视觉样式。通过重写 `paint` 方法，实现了带圆角、虚线边框、粉色背景和居中文本的自定义上传区域，提升了用户界面的美观性和品牌一致性。 
 
 ## 二、解决的问题
 
-- 默认的文件上传单元格样式无法满足特定的 UI 设计需求
-- 需要在保留文件上传功能的同时，自定义单元格的外观表现
-- 实现更符合业务场景的视觉风格，如特定的颜色、边框和文本提示
+* 默认的文件上传单元格样式无法满足特定的 UI 设计需求
+* 需要在保留文件上传功能的同时，自定义单元格的外观表现
+* 实现更符合业务场景的视觉风格，如特定的颜色、边框和文本提示
 
 ## 三、实现思路
 
@@ -87,9 +87,9 @@ sheet.setRowHeight(1, 200);
 
 ### 3.4 技术栈
 
-- SpreadJS 17.1.10（核心表格组件）
-- SpreadJS Designer 17.1.10（设计器组件）
-- SystemJS 0.19.22（模块加载器）
+* SpreadJS 17.1.10（核心表格组件）
+* SpreadJS Designer 17.1.10（设计器组件）
+* SystemJS 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -113,16 +113,16 @@ npm install
 
 ### 5.1 优点
 
-- 完全保留了 FileUpload 单元格的原有功能
-- 通过 Canvas API 实现了高度自定义的视觉效果
-- 代码结构清晰，易于扩展和修改样式参数
-- 支持空值和有值两种状态的不同展示方式
+* 完全保留了 FileUpload 单元格的原有功能
+* 通过 Canvas API 实现了高度自定义的视觉效果
+* 代码结构清晰，易于扩展和修改样式参数
+* 支持空值和有值两种状态的不同展示方式
 
 ### 5.2 局限性与扩展建议
 
-- 当前样式参数（颜色、圆角、虚线样式等）硬编码在代码中，可以考虑通过构造函数参数或配置对象传入
-- 可以添加更多交互状态的样式，如 hover、focus 等
-- 文本内容可以支持国际化配置
+* 当前样式参数（颜色、圆角、虚线样式等）硬编码在代码中，可以考虑通过构造函数参数或配置对象传入
+* 可以添加更多交互状态的样式，如 hover、focus 等
+* 文本内容可以支持国际化配置
 
 ## 六、关键代码片段
 
@@ -152,11 +152,15 @@ ctx.stroke();
 
 本示例展示了 SpreadJS 单元格类型的扩展能力，开发者可以学到：
 
-- 如何通过原型链继承内置单元格类型
-- 如何重写 `paint` 方法实现自定义渲染
-- Canvas API 的基础绘图技巧（圆角矩形、虚线、文本居中）
-- 如何在保留原有功能的基础上增强视觉效果
+* 如何通过原型链继承内置单元格类型
+* 如何重写 `paint` 方法实现自定义渲染
+* Canvas API 的基础绘图技巧（圆角矩形、虚线、文本居中）
+* 如何在保留原有功能的基础上增强视觉效果
 
 该方案适用于需要自定义单元格外观但保留内置功能的场景，具有良好的可扩展性，可以应用到其他单元格类型的样式定制中。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/-zMVvEuEnkShvxmcUP8Hvw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

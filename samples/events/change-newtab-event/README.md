@@ -6,10 +6,10 @@
 
 在实际业务场景中，可能需要对新增工作表的操作进行权限控制、数据验证或其他业务逻辑处理。例如：
 
-- 限制用户创建工作表的数量或权限
-- 在创建新工作表前弹出自定义配置对话框
-- 根据业务规则决定是否允许创建新工作表
-- 在创建工作表时自动应用特定的模板或初始化数据
+* 限制用户创建工作表的数量或权限
+* 在创建新工作表前弹出自定义配置对话框
+* 根据业务规则决定是否允许创建新工作表
+* 在创建工作表时自动应用特定的模板或初始化数据
 
 默认的新增 Sheet 行为无法满足这些需求，因此需要拦截并自定义该操作。
 
@@ -54,16 +54,17 @@ spread.bind(GC.Spread.Sheets.Events.ActiveSheetChanging, function (sender, args)
 ```
 
 关键操作包括：
-- `args.cancel = true`：取消默认的工作表切换行为
-- `spread.removeSheet(spread.getSheetCount() - 1)`：删除刚刚自动创建的工作表
-- `spread.setActiveSheet(args.oldSheet)`：恢复到原来的活动工作表
-- 执行自定义逻辑（示例中使用 `alert` 提示）
+
+* `args.cancel = true`：取消默认的工作表切换行为
+* `spread.removeSheet(spread.getSheetCount() - 1)`：删除刚刚自动创建的工作表
+* `spread.setActiveSheet(args.oldSheet)`：恢复到原来的活动工作表
+* 执行自定义逻辑（示例中使用 `alert` 提示）
 
 ### 3.2 技术栈
 
-- SpreadJS 17.0.8：核心电子表格组件
-- SpreadJS Designer 17.0.8：设计器组件，提供完整的表格编辑界面
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 17.0.8：核心电子表格组件
+* SpreadJS Designer 17.0.8：设计器组件，提供完整的表格编辑界面
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -86,29 +87,33 @@ npm install
 
 ### 5.1 优点
 
-- 实现了对默认新增 Sheet 行为的完全控制
-- 代码简洁，逻辑清晰，易于理解和维护
-- 可以在拦截点插入任意自定义业务逻辑
-- 不影响其他 Sheet 操作（如切换、删除等）
+* 实现了对默认新增 Sheet 行为的完全控制
+* 代码简洁，逻辑清晰，易于理解和维护
+* 可以在拦截点插入任意自定义业务逻辑
+* 不影响其他 Sheet 操作（如切换、删除等）
 
 ### 5.2 局限性与扩展建议
 
 当前实现使用了标志位和异步操作的组合方式，虽然有效但略显复杂。在实际应用中，可以考虑以下扩展：
 
-- 将 `alert` 替换为自定义对话框，提供更友好的用户交互
-- 添加权限验证逻辑，根据用户角色决定是否允许创建工作表
-- 实现自定义的工作表创建流程，例如弹出配置面板让用户输入工作表名称和初始设置
-- 记录操作日志，追踪用户的工作表管理行为
+* 将 `alert` 替换为自定义对话框，提供更友好的用户交互
+* 添加权限验证逻辑，根据用户角色决定是否允许创建工作表
+* 实现自定义的工作表创建流程，例如弹出配置面板让用户输入工作表名称和初始设置
+* 记录操作日志，追踪用户的工作表管理行为
 
 ## 六、总结
 
 本示例展示了如何通过事件监听机制拦截和自定义 SpreadJS 的默认新增 Sheet 行为。开发者可以从中学到：
 
-- `SheetTabClick` 事件的使用方法和 `sheetTabIndex` 的含义
-- `ActiveSheetChanging` 事件的拦截机制（`args.cancel`）
-- 如何通过标志位协调多个事件处理器
-- 工作表的动态添加和删除操作
+* `SheetTabClick` 事件的使用方法和 `sheetTabIndex` 的含义
+* `ActiveSheetChanging` 事件的拦截机制（`args.cancel`）
+* 如何通过标志位协调多个事件处理器
+* 工作表的动态添加和删除操作
 
 该方案适用于需要对工作表创建进行权限控制或业务逻辑验证的场景，具有良好的扩展性，可以根据实际需求进行定制化开发。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/oWuqEsPiXUWhUeGAzCDCdg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -6,9 +6,9 @@
 
 在实际的表格编辑场景中，用户经常需要批量插入多行数据。默认的右键菜单只能一次插入一行，当需要插入大量行时操作效率低下。本示例通过自定义右键菜单，允许用户：
 
-- 在行头右键菜单中直接输入要插入的行数
-- 一次性插入指定数量的行，提高操作效率
-- 通过输入框交互，提供更灵活的用户体验
+* 在行头右键菜单中直接输入要插入的行数
+* 一次性插入指定数量的行，提高操作效率
+* 通过输入框交互，提供更灵活的用户体验
 
 ## 三、实现思路
 
@@ -28,10 +28,10 @@ let insertRows = {
 spread.contextMenu.menuData.push(insertRows);
 ```
 
-- `text`: 菜单项显示文本
-- `name`: 菜单项唯一标识符
-- `command`: 关联的命令名称
-- `workArea`: 指定菜单显示区域为行头（rowHeader）
+* `text`: 菜单项显示文本
+* `name`: 菜单项唯一标识符
+* `command`: 关联的命令名称
+* `workArea`: 指定菜单显示区域为行头（rowHeader）
 
 #### 3.1.2 注册自定义命令
 
@@ -52,9 +52,9 @@ let insertRowsByCounts = {
 commandManager.register("rowsCount", insertRowsByCounts, null, false, false, false, false);
 ```
 
-- `suspendPaint()` 和 `resumePaint()` 用于暂停和恢复绘制，提高性能
-- `addRows()` 方法在指定位置插入指定数量的行
-- `commandOptions` 参数传递用户输入的行数
+* `suspendPaint()` 和 `resumePaint()` 用于暂停和恢复绘制，提高性能
+* `addRows()` 方法在指定位置插入指定数量的行
+* `commandOptions` 参数传递用户输入的行数
 
 #### 3.1.3 自定义菜单视图
 
@@ -117,14 +117,14 @@ function createInput() {
 }
 ```
 
-- 使用 `stopPropagation()` 阻止事件冒泡，避免点击输入框时触发菜单项
-- 监听 Enter 键，按下后自动触发父节点的点击事件执行命令
+* 使用 `stopPropagation()` 阻止事件冒泡，避免点击输入框时触发菜单项
+* 监听 Enter 键，按下后自动触发父节点的点击事件执行命令
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心表格组件库
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格组件库
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -148,16 +148,16 @@ npm install
 
 ### 5.1 优点
 
-- 提高批量插入行的操作效率，避免重复点击
-- 提供直观的输入框交互，用户体验友好
-- 通过 `suspendPaint()` 和 `resumePaint()` 优化性能，避免频繁重绘
-- 代码结构清晰，易于扩展和维护
+* 提高批量插入行的操作效率，避免重复点击
+* 提供直观的输入框交互，用户体验友好
+* 通过 `suspendPaint()` 和 `resumePaint()` 优化性能，避免频繁重绘
+* 代码结构清晰，易于扩展和维护
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现不支持撤销操作（`canUndo: false`），可以通过实现 `undo` 方法支持撤销
-- 可以扩展为支持插入列的功能，复用相同的实现思路
-- 可以添加输入验证，限制插入行数的最大值，避免性能问题
+* 当前实现不支持撤销操作（`canUndo: false`），可以通过实现 `undo` 方法支持撤销
+* 可以扩展为支持插入列的功能，复用相同的实现思路
+* 可以添加输入验证，限制插入行数的最大值，避免性能问题
 
 ## 六、关键代码片段
 
@@ -201,4 +201,8 @@ inputBlock.onkeydown = function (ev) {
 
 该方案适用于需要自定义表格操作菜单的场景，具有良好的扩展性，可以根据实际需求添加更多自定义菜单项和交互逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/2PoQ7mQpXkq3zOT1amarCg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

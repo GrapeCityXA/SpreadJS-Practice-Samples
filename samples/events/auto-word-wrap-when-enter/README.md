@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **内容显示不全**：当单元格内容过长时，默认情况下会被截断或溢出到相邻单元格，影响数据的可读性
-- **手动调整繁琐**：用户需要手动设置换行和调整行高，操作效率低下
-- **用户体验优化**：通过自动化处理，提升用户在编辑长文本时的体验
+* **内容显示不全**：当单元格内容过长时，默认情况下会被截断或溢出到相邻单元格，影响数据的可读性
+* **手动调整繁琐**：用户需要手动设置换行和调整行高，操作效率低下
+* **用户体验优化**：通过自动化处理，提升用户在编辑长文本时的体验
 
 ## 三、实现思路
 
@@ -44,9 +44,9 @@ sheet.autoFitRow(info.row);
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心电子表格组件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -71,16 +71,16 @@ npm install
 
 ### 5.1 优点
 
-- **自动化处理**：无需手动设置，输入内容后自动启用换行和调整行高
-- **实时响应**：通过事件监听机制，在值变化时立即生效
-- **代码简洁**：核心实现仅需几行代码，易于理解和维护
-- **用户友好**：提升了长文本输入的用户体验
+* **自动化处理**：无需手动设置，输入内容后自动启用换行和调整行高
+* **实时响应**：通过事件监听机制，在值变化时立即生效
+* **代码简洁**：核心实现仅需几行代码，易于理解和维护
+* **用户友好**：提升了长文本输入的用户体验
 
 ### 5.2 局限性与扩展建议
 
-- **全局应用**：当前实现会对所有单元格生效，如果只需要对特定区域启用，可以在事件处理函数中添加行列范围判断
-- **性能优化**：对于大量数据输入场景，可以考虑批量处理或延迟执行，避免频繁触发行高调整
-- **扩展方向**：可以结合单元格样式设置，如文本对齐方式、字体大小等，提供更丰富的文本显示效果
+* **全局应用**：当前实现会对所有单元格生效，如果只需要对特定区域启用，可以在事件处理函数中添加行列范围判断
+* **性能优化**：对于大量数据输入场景，可以考虑批量处理或延迟执行，避免频繁触发行高调整
+* **扩展方向**：可以结合单元格样式设置，如文本对齐方式、字体大小等，提供更丰富的文本显示效果
 
 ## 六、关键代码片段
 
@@ -111,4 +111,8 @@ sheet.bind(GC.Spread.Sheets.Events.ValueChanged, function(e, info) {
 
 该方案适用于需要处理长文本输入的各类电子表格应用，通过简单的事件驱动机制实现了良好的用户体验。开发者可以在此基础上扩展更多功能，如条件判断、批量处理、样式定制等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/FjUFObfk10iK7cdpri6DSw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

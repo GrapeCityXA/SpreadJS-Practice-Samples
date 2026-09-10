@@ -1,6 +1,6 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中实现多维度表头功能，通过自定义单元格类型（CellType）将单个单元格划分为多个区域，每个区域显示不同的文本内容。该功能通过从单元格左上角向右下方绘制多条分割线，将单元格按面积均分，形成扇形分布的多维度表头效果。
+本示例展示了如何在 SpreadJS 中实现多维度表头功能，通过自定义单元格类型（CellType）将单个单元格划分为多个区域，每个区域显示不同的文本内容。该功能通过从单元格左上角向右下方绘制多条分割线，将单元格按面积均分，形成扇形分布的多维度表头效果。 
 
 该示例集成了 SpreadJS Designer 设计器，在功能区添加了自定义的"表头分区"按钮，用户可以通过可视化界面设置分区数量和内容，实现灵活的表头布局。
 
@@ -8,10 +8,10 @@
 
 在实际业务场景中，表格表头经常需要展示多个维度的信息。传统的合并单元格方式只能实现矩形区域的合并，无法在单个单元格内展示多个维度的信息。本示例解决了以下问题：
 
-- 在单个单元格内展示多个维度的标题信息，节省表格空间
-- 通过扇形分割的方式，使表头更加紧凑和美观
-- 提供可视化的配置界面，方便用户动态设置分区内容
-- 支持在普通工作表（Worksheet）和报表（ReportSheet）中使用
+* 在单个单元格内展示多个维度的标题信息，节省表格空间
+* 通过扇形分割的方式，使表头更加紧凑和美观
+* 提供可视化的配置界面，方便用户动态设置分区内容
+* 支持在普通工作表（Worksheet）和报表（ReportSheet）中使用
 
 ## 三、实现思路
 
@@ -154,10 +154,10 @@ document.getElementById("confirm").onclick = () => {
 
 ### 3.6 技术栈
 
-- SpreadJS 17.0.8 — 核心表格组件
-- SpreadJS Designer 17.0.8 — 可视化设计器
-- TypeScript 4.8+ — 类型安全的开发语言
-- SystemJS — 模块加载器
+* SpreadJS 17.0.8 — 核心表格组件
+* SpreadJS Designer 17.0.8 — 可视化设计器
+* TypeScript 4.8+ — 类型安全的开发语言
+* SystemJS — 模块加载器
 
 ## 四、使用说明
 
@@ -184,29 +184,33 @@ npm install
 
 ### 5.1 优点
 
-- 空间利用率高，在单个单元格内展示多个维度信息
-- 面积均分算法确保各区域视觉平衡
-- 集成 Designer 设计器，提供可视化配置界面
-- 支持普通工作表和报表两种场景
-- 代码结构清晰，易于扩展和维护
+* 空间利用率高，在单个单元格内展示多个维度信息
+* 面积均分算法确保各区域视觉平衡
+* 集成 Designer 设计器，提供可视化配置界面
+* 支持普通工作表和报表两种场景
+* 代码结构清晰，易于扩展和维护
 
 ### 5.2 局限性与扩展建议
 
-- 当前仅支持从左上角向右下方的扇形分割，可扩展支持其他分割方向
-- 文本样式固定，可增加字体、颜色、大小等自定义配置
-- 分区数量较多时文本可能重叠，可增加自动字号调整功能
-- 可增加分割线样式配置（虚线、颜色、粗细等）
+* 当前仅支持从左上角向右下方的扇形分割，可扩展支持其他分割方向
+* 文本样式固定，可增加字体、颜色、大小等自定义配置
+* 分区数量较多时文本可能重叠，可增加自动字号调整功能
+* 可增加分割线样式配置（虚线、颜色、粗细等）
 
 ## 六、总结
 
 本示例展示了 SpreadJS 自定义单元格类型的强大能力，通过重写 `paint` 方法实现了复杂的单元格内容绘制。开发者可以从中学到：
 
-- 如何创建和使用自定义 CellType
-- Canvas 绘图 API 的实际应用
-- 面积均分的数学算法实现
-- SpreadJS Designer 功能区的扩展方法
-- 如何处理普通工作表和报表的差异
+* 如何创建和使用自定义 CellType
+* Canvas 绘图 API 的实际应用
+* 面积均分的数学算法实现
+* SpreadJS Designer 功能区的扩展方法
+* 如何处理普通工作表和报表的差异
 
 该方案适用于需要紧凑表头布局的场景，如复杂报表、数据分析表格等，具有良好的扩展性和实用价值。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/1Pza7hsPtkyVYhcD6ybVnA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **扩展内置函数功能**：在不改变现有公式语法的前提下，为内置函数添加额外的业务逻辑或数据处理
-- **统一函数行为**：在特定业务场景下，需要对某些内置函数的行为进行统一的定制化处理
-- **调试和追踪**：通过覆盖内置函数，可以在函数执行时添加日志输出或数据追踪功能
+* **扩展内置函数功能**：在不改变现有公式语法的前提下，为内置函数添加额外的业务逻辑或数据处理
+* **统一函数行为**：在特定业务场景下，需要对某些内置函数的行为进行统一的定制化处理
+* **调试和追踪**：通过覆盖内置函数，可以在函数执行时添加日志输出或数据追踪功能
 
 ## 三、实现思路
 
@@ -48,10 +48,11 @@ MyIf.prototype = new GC.Spread.CalcEngine.Functions.Function("if",3,3,{
 ```
 
 构造函数的参数说明：
-- 第一个参数：函数名称（"if"）
-- 第二个参数：最小参数个数（3）
-- 第三个参数：最大参数个数（3）
-- 第四个参数：函数描述和参数定义
+
+* 第一个参数：函数名称（"if"）
+* 第二个参数：最小参数个数（3）
+* 第三个参数：最大参数个数（3）
+* 第四个参数：函数描述和参数定义
 
 ### 3.3 实现函数计算逻辑
 
@@ -94,8 +95,8 @@ MyIf.prototype.isContextSensitive = function(){
 }
 ```
 
-- `acceptsReference`：允许函数参数接收单元格引用
-- `isContextSensitive`：允许函数获取当前单元格的上下文信息
+* `acceptsReference`：允许函数参数接收单元格引用
+* `isContextSensitive`：允许函数获取当前单元格的上下文信息
 
 ### 3.5 注册自定义函数
 
@@ -110,9 +111,9 @@ GC.Spread.CalcEngine.Functions.defineGlobalCustomFunction("if",new MyIf())
 
 ### 3.6 技术栈
 
-- @grapecity/spread-sheets: 16.0.1
-- TypeScript: ^4.1.2
-- SystemJS: ^0.19.22
+* @grapecity/spread-sheets: 16.0.1
+* TypeScript: ^4.1.2
+* SystemJS: ^0.19.22
 
 ## 四、使用说明
 
@@ -136,18 +137,18 @@ npm install
 
 ### 5.1 优点
 
-- **无缝替换**：覆盖后的函数与原函数使用方式完全一致，无需修改现有公式
-- **灵活扩展**：可以在原有逻辑基础上添加自定义的业务处理
-- **全局生效**：一次定义，所有使用该函数的地方都会应用新的逻辑
+* **无缝替换**：覆盖后的函数与原函数使用方式完全一致，无需修改现有公式
+* **灵活扩展**：可以在原有逻辑基础上添加自定义的业务处理
+* **全局生效**：一次定义，所有使用该函数的地方都会应用新的逻辑
 
 ### 5.2 局限性与扩展建议
 
-- **兼容性风险**：覆盖内置函数可能影响依赖原有函数行为的其他功能
-- **维护成本**：需要确保自定义函数的行为与内置函数保持一致，避免出现意外的计算错误
-- **扩展建议**：
-  - 建议仅在必要时覆盖内置函数，优先考虑使用不同名称的自定义函数
-  - 在覆盖前做好充分的测试，确保新函数能够处理所有边界情况
-  - 可以考虑添加开关机制，允许在自定义逻辑和原生逻辑之间切换
+* **兼容性风险**：覆盖内置函数可能影响依赖原有函数行为的其他功能
+* **维护成本**：需要确保自定义函数的行为与内置函数保持一致，避免出现意外的计算错误
+* **扩展建议**：
+    * 建议仅在必要时覆盖内置函数，优先考虑使用不同名称的自定义函数
+    * 在覆盖前做好充分的测试，确保新函数能够处理所有边界情况
+    * 可以考虑添加开关机制，允许在自定义逻辑和原生逻辑之间切换
 
 ## 六、关键代码片段
 
@@ -200,12 +201,16 @@ GC.Spread.CalcEngine.Functions.defineGlobalCustomFunction("if",new MyIf())
 
 本示例展示了 SpreadJS 中覆盖内置公式的完整流程，开发者可以从中学到：
 
-- 如何使用 `removeGlobalFunction` 移除内置函数
-- 如何继承 `GC.Spread.CalcEngine.Functions.Function` 创建自定义函数
-- 如何实现 `evaluate` 方法处理函数参数和返回值
-- 如何配置 `acceptsReference` 和 `isContextSensitive` 支持引用和上下文
-- 如何使用 `defineGlobalCustomFunction` 注册全局自定义函数
+* 如何使用 `removeGlobalFunction` 移除内置函数
+* 如何继承 `GC.Spread.CalcEngine.Functions.Function` 创建自定义函数
+* 如何实现 `evaluate` 方法处理函数参数和返回值
+* 如何配置 `acceptsReference` 和 `isContextSensitive` 支持引用和上下文
+* 如何使用 `defineGlobalCustomFunction` 注册全局自定义函数
 
 该方案适用于需要对内置函数进行统一定制化处理的场景，但需要谨慎使用，确保不会影响其他依赖原有函数行为的功能。在实际开发中，建议优先考虑使用不同名称的自定义函数，仅在确有必要时才覆盖内置函数。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/SiILjfyAT02R-S2IAaobBw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

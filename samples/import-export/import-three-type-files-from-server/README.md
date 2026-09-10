@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例演示了如何在 SpreadJS 中从服务端导入三种不同格式的文件：SJS（SpreadJS 原生格式）、Excel（.xlsx）和 SSJSON（SpreadJS JSON 格式）。通过 XMLHttpRequest 异步获取服务端文件，并使用 SpreadJS 提供的 `open()` 和 `import()` API 将文件内容加载到工作簿中。
+本示例演示了如何在 SpreadJS 中从服务端导入三种不同格式的文件：SJS（SpreadJS 原生格式）、Excel（.xlsx）和 SSJSON（SpreadJS JSON 格式）。通过 XMLHttpRequest 异步获取服务端文件，并使用 SpreadJS 提供的 `open()` 和 `import()` API 将文件内容加载到工作簿中。 
 
 该示例适用于需要从服务器动态加载表格数据的场景，例如报表系统、数据分析平台等，用户可以通过点击按钮选择不同格式的文件进行导入。
 
 ## 二、解决的问题
 
-- **多格式文件支持**：业务系统中可能存储了不同格式的表格文件，需要统一的导入方案
-- **异步加载**：从服务端获取文件需要异步处理，避免阻塞页面渲染
-- **跨浏览器兼容**：不同浏览器对 Blob 和 File 对象的处理存在差异，需要统一的处理方式
+* **多格式文件支持**：业务系统中可能存储了不同格式的表格文件，需要统一的导入方案
+* **异步加载**：从服务端获取文件需要异步处理，避免阻塞页面渲染
+* **跨浏览器兼容**：不同浏览器对 Blob 和 File 对象的处理存在差异，需要统一的处理方式
 
 ## 三、实现思路
 
@@ -102,10 +102,10 @@ document.getElementById("ssjson").addEventListener("click", function () {
 
 ### 3.3 技术栈
 
-- **@grapecity/spread-sheets**: 16.0.1（SpreadJS 核心库）
-- **@grapecity/spread-sheets-io**: 16.0.1（文件导入导出模块）
-- **SystemJS**: 0.19.22（模块加载器）
-- **TypeScript**: 4.1.2（类型支持）
+* **@grapecity/spread-sheets**: 16.0.1（SpreadJS 核心库）
+* **@grapecity/spread-sheets-io**: 16.0.1（文件导入导出模块）
+* **SystemJS**: 0.19.22（模块加载器）
+* **TypeScript**: 4.1.2（类型支持）
 
 ## 四、使用说明
 
@@ -132,19 +132,19 @@ npx http-server -p 8080
 
 ### 5.1 优点
 
-- **多格式支持**：统一处理 SJS、Excel、SSJSON 三种常见格式
-- **异步加载**：使用 XMLHttpRequest 异步获取文件，不阻塞页面
-- **跨浏览器兼容**：通过 File 对象封装，解决了 Safari 等浏览器的兼容性问题
-- **代码简洁**：每种格式的导入逻辑清晰，易于维护和扩展
+* **多格式支持**：统一处理 SJS、Excel、SSJSON 三种常见格式
+* **异步加载**：使用 XMLHttpRequest 异步获取文件，不阻塞页面
+* **跨浏览器兼容**：通过 File 对象封装，解决了 Safari 等浏览器的兼容性问题
+* **代码简洁**：每种格式的导入逻辑清晰，易于维护和扩展
 
 ### 5.2 局限性与扩展建议
 
-- **错误处理**：当前代码缺少对网络请求失败、文件格式错误的处理，建议添加错误回调
-- **加载提示**：文件较大时缺少加载进度提示，可以添加 loading 状态
-- **扩展建议**：
-  - 可以使用 Fetch API 替代 XMLHttpRequest，代码更简洁
-  - 添加文件上传功能，支持用户选择本地文件导入
-  - 支持更多格式（如 CSV）的导入
+* **错误处理**：当前代码缺少对网络请求失败、文件格式错误的处理，建议添加错误回调
+* **加载提示**：文件较大时缺少加载进度提示，可以添加 loading 状态
+* **扩展建议**：
+    * 可以使用 Fetch API 替代 XMLHttpRequest，代码更简洁
+    * 添加文件上传功能，支持用户选择本地文件导入
+    * 支持更多格式（如 CSV）的导入
 
 ## 六、关键代码片段
 
@@ -183,4 +183,8 @@ spread.import(file, successCallback, errorCallback, {
 
 该方案适用于需要从服务端动态加载表格数据的场景，代码结构清晰，易于扩展。开发者可以在此基础上添加错误处理、进度提示等功能，或集成到实际的业务系统中。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/Ks3akIoTa0eBV8frDYkWLQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

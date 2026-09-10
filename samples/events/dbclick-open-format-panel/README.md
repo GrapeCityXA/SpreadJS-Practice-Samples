@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **简化图片编辑流程**：传统方式需要先选中图片，再通过菜单或右键打开格式面板，操作步骤较多。双击直接打开格式面板，减少了操作步骤。
-- **提升交互体验**：双击是用户熟悉的交互方式，符合常见办公软件的操作习惯，降低学习成本。
-- **精准定位图片对象**：通过坐标命中测试准确判断用户点击的是否为图片区域，避免误触发。
+* **简化图片编辑流程**：传统方式需要先选中图片，再通过菜单或右键打开格式面板，操作步骤较多。双击直接打开格式面板，减少了操作步骤。
+* **提升交互体验**：双击是用户熟悉的交互方式，符合常见办公软件的操作习惯，降低学习成本。
+* **精准定位图片对象**：通过坐标命中测试准确判断用户点击的是否为图片区域，避免误触发。
 
 ## 三、实现思路
 
@@ -30,9 +30,10 @@ document.getElementById('designer-container').addEventListener('dblclick', funct
 ```
 
 关键点：
-- 通过 `e.pageX` 和 `e.pageY` 获取鼠标点击的页面坐标
-- 减去容器偏移量和 canvas 顶部位置，转换为相对于工作表的坐标
-- 使用 `spread.hitTest()` 方法获取命中测试结果
+
+* 通过 `e.pageX` 和 `e.pageY` 获取鼠标点击的页面坐标
+* 减去容器偏移量和 canvas 顶部位置，转换为相对于工作表的坐标
+* 使用 `spread.hitTest()` 方法获取命中测试结果
 
 #### 3.1.2 命中测试与单元格定位
 
@@ -82,10 +83,11 @@ for (let i = 0; i < shapes.length; i++) {
 ```
 
 关键逻辑：
-- 使用 `shapes.all()` 获取所有形状对象
-- 通过 `instanceof` 判断是否为 `PictureShape` 类型
-- 比较点击的行列号是否在图片的起始和结束行列范围内
-- 使用 `getCommand()` 获取格式面板命令并执行
+
+* 使用 `shapes.all()` 获取所有形状对象
+* 通过 `instanceof` 判断是否为 `PictureShape` 类型
+* 比较点击的行列号是否在图片的起始和结束行列范围内
+* 使用 `getCommand()` 获取格式面板命令并执行
 
 #### 3.1.4 加载预设文件
 
@@ -101,10 +103,10 @@ fetch("src/shape.sjs").then(res => {
 
 ### 3.2 技术栈
 
-- **SpreadJS**: 17.0.8（核心表格组件）
-- **SpreadJS Designer**: 17.0.8（设计器组件）
-- **SpreadJS Shapes**: 17.0.8（形状和图片支持）
-- **SystemJS**: 0.19.22（模块加载器）
+* **SpreadJS**: 17.0.8（核心表格组件）
+* **SpreadJS Designer**: 17.0.8（设计器组件）
+* **SpreadJS Shapes**: 17.0.8（形状和图片支持）
+* **SystemJS**: 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -131,16 +133,16 @@ npx http-server -p 8080
 
 ### 5.1 优点
 
-- **操作便捷**：双击即可打开格式面板，符合用户直觉
-- **精准识别**：通过坐标范围判断，准确识别图片对象
-- **无侵入性**：基于事件监听实现，不影响 Designer 的其他功能
-- **扩展性强**：可以轻松扩展到其他形状类型（如图表、文本框等）
+* **操作便捷**：双击即可打开格式面板，符合用户直觉
+* **精准识别**：通过坐标范围判断，准确识别图片对象
+* **无侵入性**：基于事件监听实现，不影响 Designer 的其他功能
+* **扩展性强**：可以轻松扩展到其他形状类型（如图表、文本框等）
 
 ### 5.2 局限性与扩展建议
 
-- **性能优化**：当工作表中图片数量较多时，遍历所有图片可能影响性能。建议使用空间索引或缓存机制优化。
-- **多图层叠**：当多个图片重叠时，当前实现会打开第一个匹配的图片格式面板。可以考虑增加 z-index 判断，优先处理顶层图片。
-- **扩展到其他形状**：可以将 `PictureShape` 的判断扩展为所有 `Shape` 类型，实现双击任意形状打开格式面板。
+* **性能优化**：当工作表中图片数量较多时，遍历所有图片可能影响性能。建议使用空间索引或缓存机制优化。
+* **多图层叠**：当多个图片重叠时，当前实现会打开第一个匹配的图片格式面板。可以考虑增加 z-index 判断，优先处理顶层图片。
+* **扩展到其他形状**：可以将 `PictureShape` 的判断扩展为所有 `Shape` 类型，实现双击任意形状打开格式面板。
 
 ## 六、关键代码片段
 
@@ -179,11 +181,15 @@ if (row >= startRow && row <= endRow && col >= startColumn && col <= endColumn) 
 
 本示例展示了如何通过事件监听、坐标转换和命中测试实现双击图片打开格式面板的功能。开发者可以从中学到：
 
-- SpreadJS 的坐标系统和命中测试机制
-- 如何获取和判断图片对象的位置范围
-- Designer 命令系统的使用方法
-- 事件监听与 SpreadJS API 的结合应用
+* SpreadJS 的坐标系统和命中测试机制
+* 如何获取和判断图片对象的位置范围
+* Designer 命令系统的使用方法
+* 事件监听与 SpreadJS API 的结合应用
 
 该方案适用于需要增强图片编辑交互体验的场景，代码简洁易懂，可以作为自定义交互功能的参考模板。通过类似的思路，还可以实现双击图表、形状等其他对象的快捷操作。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/7lXpdDK3Ekm3GS6jMx5Jrw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

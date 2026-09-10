@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **品牌一致性**：默认的 SpreadJS 样式可能与产品的设计语言不符，通过 CSS 覆盖可以快速实现品牌色和交互风格的统一
-- **用户体验优化**：自定义悬停、选中等交互状态的视觉反馈，提升用户操作的直观性
-- **快速主题切换**：通过修改 CSS 变量或类名，可以实现多主题支持（如浅色/深色模式）
+* **品牌一致性**：默认的 SpreadJS 样式可能与产品的设计语言不符，通过 CSS 覆盖可以快速实现品牌色和交互风格的统一
+* **用户体验优化**：自定义悬停、选中等交互状态的视觉反馈，提升用户操作的直观性
+* **快速主题切换**：通过修改 CSS 变量或类名，可以实现多主题支持（如浅色/深色模式）
 
 ## 三、实现思路
 
@@ -74,10 +74,10 @@ new GC.Spread.Sheets.Workbook(document.getElementById("ss"));
 
 ### 3.2 技术栈
 
-- **SpreadJS**: 15.0.0（核心表格控件）
-- **SystemJS**: 0.19.22（模块加载器）
-- **TypeScript**: 4.1.2（类型支持）
-- **plugin-typescript**: 8.0.0（SystemJS 的 TypeScript 插件）
+* **SpreadJS**: 15.0.0（核心表格控件）
+* **SystemJS**: 0.19.22（模块加载器）
+* **TypeScript**: 4.1.2（类型支持）
+* **plugin-typescript**: 8.0.0（SystemJS 的 TypeScript 插件）
 
 ## 四、使用说明
 
@@ -103,16 +103,16 @@ npm install
 
 ### 5.1 优点
 
-- **零代码侵入**：无需修改 SpreadJS 的 API 调用，仅通过 CSS 即可完成样式定制
-- **易于维护**：样式集中在 `<style>` 标签中，修改和调试非常方便
-- **性能友好**：CSS 样式覆盖不会影响 SpreadJS 的渲染性能
-- **扩展性强**：可以轻松扩展到行头、滚动条、编辑器等其他组件的样式定制
+* **零代码侵入**：无需修改 SpreadJS 的 API 调用，仅通过 CSS 即可完成样式定制
+* **易于维护**：样式集中在 `<style>` 标签中，修改和调试非常方便
+* **性能友好**：CSS 样式覆盖不会影响 SpreadJS 的渲染性能
+* **扩展性强**：可以轻松扩展到行头、滚动条、编辑器等其他组件的样式定制
 
 ### 5.2 局限性与扩展建议
 
-- **样式优先级**：如果 SpreadJS 的内联样式或 `!important` 规则优先级更高，可能需要使用 `!important` 强制覆盖
-- **主题切换**：当前示例为静态样式，如需支持动态主题切换，建议使用 CSS 变量（`--custom-color`）或动态加载不同的样式表
-- **深度定制**：对于更复杂的样式需求（如自定义单元格编辑器、下拉框样式），可能需要结合 SpreadJS 的 `CellType` 和自定义渲染器
+* **样式优先级**：如果 SpreadJS 的内联样式或 `!important` 规则优先级更高，可能需要使用 `!important` 强制覆盖
+* **主题切换**：当前示例为静态样式，如需支持动态主题切换，建议使用 CSS 变量（`--custom-color`）或动态加载不同的样式表
+* **深度定制**：对于更复杂的样式需求（如自定义单元格编辑器、下拉框样式），可能需要结合 SpreadJS 的 `CellType` 和自定义渲染器
 
 ## 六、关键代码片段
 
@@ -155,10 +155,14 @@ new GC.Spread.Sheets.Workbook(document.getElementById("ss"));
 
 本示例展示了 SpreadJS 样式定制的最佳实践：通过 CSS 类名覆盖实现视觉定制，无需修改业务逻辑代码。开发者可以从中学到：
 
-- SpreadJS 的 CSS 类名命名规范（`gc-columnHeader-*`、`gc-selection` 等）
-- 如何通过 CSS 覆盖实现表格组件的样式定制
-- 前端开发中"关注点分离"的设计思想（样式与逻辑分离）
+* SpreadJS 的 CSS 类名命名规范（`gc-columnHeader-*`、`gc-selection` 等）
+* 如何通过 CSS 覆盖实现表格组件的样式定制
+* 前端开发中"关注点分离"的设计思想（样式与逻辑分离）
 
 该方案适用于需要快速实现品牌化表格界面的场景，特别是在已有设计规范的企业级应用中。对于更复杂的定制需求，可以在此基础上结合 SpreadJS 的主题 API 和自定义渲染器进一步扩展。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/2FX_pFkzZ0CnalUs_7GaGQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

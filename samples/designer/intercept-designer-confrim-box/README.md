@@ -10,9 +10,9 @@
 
 本示例解决了以下问题：
 
-- 如何拦截设计器内置命令的执行流程
-- 如何在命令执行完成后插入自定义逻辑
-- 如何批量修改生成的工作表名称
+* 如何拦截设计器内置命令的执行流程
+* 如何在命令执行完成后插入自定义逻辑
+* 如何批量修改生成的工作表名称
 
 ## 三、实现思路
 
@@ -42,9 +42,10 @@ GeneratePages.execute = function () {
 ```
 
 关键点：
-- 保存原始的 `execute` 方法引用（`oldF`）
-- 使用 `apply` 调用原方法并传递所有参数
-- 原方法返回 Promise，使用 `.then()` 在执行完成后处理
+
+* 保存原始的 `execute` 方法引用（`oldF`）
+* 使用 `apply` 调用原方法并传递所有参数
+* 原方法返回 Promise，使用 `.then()` 在执行完成后处理
 
 ### 3.2 自定义命令配置注入
 
@@ -77,10 +78,10 @@ spread.sheets.forEach(s => {
 
 ### 3.4 技术栈
 
-- SpreadJS v17.0.8（核心表格控件）
-- SpreadJS Designer v17.0.8（设计器组件）
-- SpreadJS ReportSheet Addon v17.0.8（报表功能扩展）
-- SystemJS 0.19.22（模块加载器）
+* SpreadJS v17.0.8（核心表格控件）
+* SpreadJS Designer v17.0.8（设计器组件）
+* SpreadJS ReportSheet Addon v17.0.8（报表功能扩展）
+* SystemJS 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -105,9 +106,9 @@ npm install
 
 ### 5.1 优点
 
-- 无侵入式扩展：不修改 SpreadJS 源码，通过配置注入实现功能扩展
-- 灵活性高：可以在命令执行前后插入任意自定义逻辑
-- 可复用性强：该模式可应用于任何设计器内置命令的拦截
+* 无侵入式扩展：不修改 SpreadJS 源码，通过配置注入实现功能扩展
+* 灵活性高：可以在命令执行前后插入任意自定义逻辑
+* 可复用性强：该模式可应用于任何设计器内置命令的拦截
 
 ### 5.2 局限性与扩展建议
 
@@ -117,11 +118,15 @@ npm install
 
 本示例展示了 SpreadJS Designer 命令拦截机制的核心用法，开发者可以从中学到：
 
-- 如何获取和重写设计器内置命令
-- 如何通过 `commandMap` 注入自定义命令配置
-- 如何在异步命令执行完成后处理业务逻辑
-- 如何批量操作工作表对象
+* 如何获取和重写设计器内置命令
+* 如何通过 `commandMap` 注入自定义命令配置
+* 如何在异步命令执行完成后处理业务逻辑
+* 如何批量操作工作表对象
 
 该方案适用于需要在设计器标准操作流程中插入自定义业务逻辑的场景，具有良好的扩展性和可维护性。通过这种模式，开发者可以在不修改 SpreadJS 源码的前提下，灵活地定制设计器行为，满足特定的业务需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/9e58Aeb1WUicR2VKnP45Uw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

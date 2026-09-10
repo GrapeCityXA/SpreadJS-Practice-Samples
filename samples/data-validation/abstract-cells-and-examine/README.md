@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **数据筛选与提取**：从包含大量数据的表格中快速提取指定行，避免手动复制粘贴的繁琐操作
-- **数据审查与汇总**：将提取的数据在独立工作表中展示，并自动计算汇总信息（如总价）
-- **多选操作支持**：支持 Ctrl 键多选，允许用户灵活选择不连续的多行数据
+* **数据筛选与提取**：从包含大量数据的表格中快速提取指定行，避免手动复制粘贴的繁琐操作
+* **数据审查与汇总**：将提取的数据在独立工作表中展示，并自动计算汇总信息（如总价）
+* **多选操作支持**：支持 Ctrl 键多选，允许用户灵活选择不连续的多行数据
 
 ## 三、实现思路
 
@@ -97,9 +97,9 @@ spread.setActiveSheet("Sheet2");
 
 ### 3.2 技术栈
 
-- **SpreadJS**: 15.0.0
-- **SystemJS**: 0.19.22（模块加载器）
-- **TypeScript**: 4.1.2
+* **SpreadJS**: 15.0.0
+* **SystemJS**: 0.19.22（模块加载器）
+* **TypeScript**: 4.1.2
 
 ## 四、使用说明
 
@@ -122,27 +122,31 @@ npm install
 
 ### 5.1 优点
 
-- **操作简便**：通过 Ctrl + 点击的方式快速选择多行，符合用户习惯
-- **数据隔离**：提取的数据在独立工作表中展示，不影响原始数据
-- **自动汇总**：使用 SUBTOTAL 函数自动计算选中数据的汇总值
-- **灵活配置**：可以自定义提取后展示的列，满足不同审查需求
+* **操作简便**：通过 Ctrl + 点击的方式快速选择多行，符合用户习惯
+* **数据隔离**：提取的数据在独立工作表中展示，不影响原始数据
+* **自动汇总**：使用 SUBTOTAL 函数自动计算选中数据的汇总值
+* **灵活配置**：可以自定义提取后展示的列，满足不同审查需求
 
 ### 5.2 局限性与扩展建议
 
-- **当前实现仅支持整行选择**，如果需要支持单元格级别的选择，需要调整选择判断逻辑
-- **提取后的数据不会实时同步原始数据的变化**，如需同步可以考虑使用公式引用或监听数据变化事件
-- **可以扩展为支持多次提取**，将每次提取的结果追加到审查表中，而不是覆盖
+* **当前实现仅支持整行选择**，如果需要支持单元格级别的选择，需要调整选择判断逻辑
+* **提取后的数据不会实时同步原始数据的变化**，如需同步可以考虑使用公式引用或监听数据变化事件
+* **可以扩展为支持多次提取**，将每次提取的结果追加到审查表中，而不是覆盖
 
 ## 六、总结
 
 本示例展示了 SpreadJS 中数据绑定、Table 配置、行标记和多选操作的综合应用。开发者可以学习到：
 
-- 如何使用 `CellBindingSource` 实现数据绑定
-- 如何配置 Table 的列和绑定路径
-- 如何使用 `setTag` 和 `getTag` 标记和读取行信息
-- 如何处理多选区域并提取对应数据
-- 如何使用 `SUBTOTAL` 函数实现表格汇总
+* 如何使用 `CellBindingSource` 实现数据绑定
+* 如何配置 Table 的列和绑定路径
+* 如何使用 `setTag` 和 `getTag` 标记和读取行信息
+* 如何处理多选区域并提取对应数据
+* 如何使用 `SUBTOTAL` 函数实现表格汇总
 
 该方案适用于需要从大数据集中提取部分数据进行二次分析的场景，具有良好的扩展性，可以根据实际需求调整提取逻辑和展示字段。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/n_EDUgNOgEmZD7O-LO6cNw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

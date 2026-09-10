@@ -6,8 +6,8 @@
 
 在 SpreadJS 的默认行为中，当满足以下条件时，用户无法通过 Tab 键在表格末尾自动新增行：
 
-- 表格内部存在合并单元格
-- 表格下方存在横跨表格列范围的合并单元格
+* 表格内部存在合并单元格
+* 表格下方存在横跨表格列范围的合并单元格
 
 这种情况在实际业务中较为常见，例如在表格下方添加说明文字或汇总信息时。本示例通过自定义事件监听机制，实现了在这种特殊场景下的 Tab 键新增行功能，提升了用户体验。
 
@@ -60,9 +60,10 @@ spread.bind(GC.Spread.Sheets.Events.SelectionChanged, function (e, info) {
 ```
 
 `SelectionChanged` 事件负责捕获选区变化，并进行严格的条件验证：
-- 只处理单个单元格的选择（不支持多选或区域选择）
-- 新选区必须在旧选区的下一行（确保是向下移动）
-- 使用 `setTimeout` 将标志位重置，确保只在 Tab 键触发的选区变化时生效
+
+* 只处理单个单元格的选择（不支持多选或区域选择）
+* 新选区必须在旧选区的下一行（确保是向下移动）
+* 使用 `setTimeout` 将标志位重置，确保只在 Tab 键触发的选区变化时生效
 
 #### 3.1.3 Tab 键触发的表格扩展逻辑
 
@@ -84,6 +85,7 @@ window.addEventListener('keydown', function (e) {
 ```
 
 `keydown` 事件监听器执行以下逻辑：
+
 1. 验证是否为 Tab 键触发且选区已改变
 2. 检查旧选区是否在表格内（`tables.find` 方法）
 3. 检查新选区是否已离开表格
@@ -95,8 +97,8 @@ window.addEventListener('keydown', function (e) {
 
 ### 3.3 技术栈
 
-- @grapecity/spread-sheets: 17.0.8（核心表格组件）
-- SystemJS: 0.19.22（模块加载器）
+* @grapecity/spread-sheets: 17.0.8（核心表格组件）
+* SystemJS: 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -119,17 +121,17 @@ npm install
 
 ### 5.1 优点
 
-- 解决了特定场景下的 Tab 键新增行限制，提升用户体验
-- 使用事件组合机制，避免了对 SpreadJS 核心代码的侵入性修改
-- 严格的条件验证确保功能只在预期场景下触发，不影响其他操作
-- 代码简洁，易于理解和维护
+* 解决了特定场景下的 Tab 键新增行限制，提升用户体验
+* 使用事件组合机制，避免了对 SpreadJS 核心代码的侵入性修改
+* 严格的条件验证确保功能只在预期场景下触发，不影响其他操作
+* 代码简洁，易于理解和维护
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现仅支持向下扩展一行，不支持批量扩展
-- 仅处理单个单元格选择的情况，多选或区域选择时不生效
-- 可以考虑扩展为支持 Shift+Tab 反向删除行的功能
-- 可以添加配置项，允许用户自定义触发条件和扩展行数
+* 当前实现仅支持向下扩展一行，不支持批量扩展
+* 仅处理单个单元格选择的情况，多选或区域选择时不生效
+* 可以考虑扩展为支持 Shift+Tab 反向删除行的功能
+* 可以添加配置项，允许用户自定义触发条件和扩展行数
 
 ## 六、关键代码片段
 
@@ -166,11 +168,15 @@ curSheet.tables.resize(table, new GC.Spread.Sheets.Range(
 
 本示例展示了如何通过事件监听和条件判断，解决 SpreadJS 在特定场景下的交互限制。开发者可以从中学到：
 
-- 如何组合使用 `SelectionChanged` 和 `keydown` 事件实现复杂交互
-- 如何使用 `tables.find` 方法检测单元格是否属于表格
-- 如何使用 `tables.resize` 方法动态调整表格大小
-- 如何通过标志位和 `setTimeout` 实现事件的精确控制
+* 如何组合使用 `SelectionChanged` 和 `keydown` 事件实现复杂交互
+* 如何使用 `tables.find` 方法检测单元格是否属于表格
+* 如何使用 `tables.resize` 方法动态调整表格大小
+* 如何通过标志位和 `setTimeout` 实现事件的精确控制
 
 该方案适用于需要在包含复杂合并单元格布局的表格中实现自定义 Tab 键行为的场景，具有良好的扩展性和可维护性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/Ihcq2sMtFUagb1MTpn1N_g/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

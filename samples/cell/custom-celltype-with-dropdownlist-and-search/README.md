@@ -1,13 +1,13 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中实现一个带搜索功能的自定义下拉多选单元格类型。用户可以通过双击单元格打开自定义编辑器，在编辑器中输入关键字进行模糊搜索，并支持按住 Ctrl 键进行多项选择。该功能适用于需要从大量选项中快速筛选并选择多个值的场景，如标签选择、分类筛选等。
+本示例展示了如何在 SpreadJS 中实现一个带搜索功能的自定义下拉多选单元格类型。用户可以通过双击单元格打开自定义编辑器，在编辑器中输入关键字进行模糊搜索，并支持按住 Ctrl 键进行多项选择。该功能适用于需要从大量选项中快速筛选并选择多个值的场景，如标签选择、分类筛选等。 
 
 ## 二、解决的问题
 
-- 在表格单元格中实现多选功能，允许用户一次性选择多个选项
-- 提供搜索过滤能力，帮助用户从大量选项中快速定位目标项
-- 自定义单元格编辑器的外观和交互行为，满足特定业务需求
-- 实现选中值的可视化展示和数据持久化
+* 在表格单元格中实现多选功能，允许用户一次性选择多个选项
+* 提供搜索过滤能力，帮助用户从大量选项中快速定位目标项
+* 自定义单元格编辑器的外观和交互行为，满足特定业务需求
+* 实现选中值的可视化展示和数据持久化
 
 ## 三、实现思路
 
@@ -121,9 +121,9 @@ MySelector.prototype.setEditorValue = function (editorContext, value) {
 
 ### 3.6 技术栈
 
-- SpreadJS 17.0.8：核心表格控件
-- SpreadJS Designer 17.0.8：设计器组件
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 17.0.8：核心表格控件
+* SpreadJS Designer 17.0.8：设计器组件
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -146,17 +146,17 @@ npm install
 
 ### 5.1 优点
 
-- 支持实时搜索过滤，提升大数据量场景下的选择效率
-- 支持多选操作，满足复杂业务需求
-- 自定义编辑器高度和样式，提供良好的用户体验
-- 数据持久化机制完善，支持编辑状态的恢复
+* 支持实时搜索过滤，提升大数据量场景下的选择效率
+* 支持多选操作，满足复杂业务需求
+* 自定义编辑器高度和样式，提供良好的用户体验
+* 数据持久化机制完善，支持编辑状态的恢复
 
 ### 5.2 局限性与扩展建议
 
-- 当前选项列表是硬编码的，可扩展为支持动态数据源（如从 API 获取）
-- 搜索功能仅支持简单的文本包含匹配，可增强为支持拼音搜索、正则匹配等
-- 可添加"全选"、"清空"等快捷操作按钮
-- 可优化大数据量场景下的渲染性能（如虚拟滚动）
+* 当前选项列表是硬编码的，可扩展为支持动态数据源（如从 API 获取）
+* 搜索功能仅支持简单的文本包含匹配，可增强为支持拼音搜索、正则匹配等
+* 可添加"全选"、"清空"等快捷操作按钮
+* 可优化大数据量场景下的渲染性能（如虚拟滚动）
 
 ## 六、关键代码片段
 
@@ -194,10 +194,14 @@ sheet.setCellType(1, 1, new MySelector());
 
 开发者可以从中学到：
 
-- 自定义单元格类型的完整实现流程
-- 编辑器生命周期方法的使用（createEditorElement、updateEditor、getEditorValue、setEditorValue）
-- DOM 事件监听与数据双向绑定
-- 单元格渲染与编辑状态的分离处理
-- 键盘事件的拦截与处理机制
+* 自定义单元格类型的完整实现流程
+* 编辑器生命周期方法的使用（createEditorElement、updateEditor、getEditorValue、setEditorValue）
+* DOM 事件监听与数据双向绑定
+* 单元格渲染与编辑状态的分离处理
+* 键盘事件的拦截与处理机制
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/F04XKL5URkadHAUCUlswRg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

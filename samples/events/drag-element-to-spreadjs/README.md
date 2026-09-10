@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **跨组件数据传递**：实现外部 UI 组件与 SpreadJS 表格之间的交互，用户可以通过拖拽操作快速将数据填充到表格中
-- **可视化反馈**：在拖拽过程中实时高亮显示目标单元格，提供清晰的视觉引导
-- **灵活的数据录入方式**：为用户提供除键盘输入外的另一种直观的数据录入方式，适用于从工具栏、侧边栏等外部区域快速填充数据的场景
+* **跨组件数据传递**：实现外部 UI 组件与 SpreadJS 表格之间的交互，用户可以通过拖拽操作快速将数据填充到表格中
+* **可视化反馈**：在拖拽过程中实时高亮显示目标单元格，提供清晰的视觉引导
+* **灵活的数据录入方式**：为用户提供除键盘输入外的另一种直观的数据录入方式，适用于从工具栏、侧边栏等外部区域快速填充数据的场景
 
 ## 三、实现思路
 
@@ -94,10 +94,10 @@ host.addEventListener("drop", function (event) {
 
 ### 3.3 技术栈
 
-- SpreadJS 15.0.0：核心表格组件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
-- HTML5 Drag and Drop API：原生拖拽功能
+* SpreadJS 15.0.0：核心表格组件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
+* HTML5 Drag and Drop API：原生拖拽功能
 
 ## 四、使用说明
 
@@ -120,17 +120,17 @@ npm install
 
 ### 5.1 优点
 
-- **原生 API 实现**：基于 HTML5 标准拖拽 API，无需额外依赖库，兼容性好
-- **实时视觉反馈**：拖拽过程中动态高亮目标单元格，用户体验友好
-- **精准定位**：利用 SpreadJS 的 `hitTest` 和 `getCellRect` API 实现像素级精准定位
-- **代码简洁**：核心逻辑清晰，易于扩展和维护
+* **原生 API 实现**：基于 HTML5 标准拖拽 API，无需额外依赖库，兼容性好
+* **实时视觉反馈**：拖拽过程中动态高亮目标单元格，用户体验友好
+* **精准定位**：利用 SpreadJS 的 `hitTest` 和 `getCellRect` API 实现像素级精准定位
+* **代码简洁**：核心逻辑清晰，易于扩展和维护
 
 ### 5.2 局限性与扩展建议
 
-- **当前实现仅支持文本传递**，可扩展为支持拖拽图片、文件等多种数据类型（通过 `dataTransfer` API）
-- **可以增加拖拽数据的格式化处理**，例如根据单元格类型自动转换数据格式
-- **建议添加拖拽取消机制**，例如按 ESC 键取消拖拽操作
-- **可以扩展为支持多单元格拖拽填充**，实现批量数据录入
+* **当前实现仅支持文本传递**，可扩展为支持拖拽图片、文件等多种数据类型（通过 `dataTransfer` API）
+* **可以增加拖拽数据的格式化处理**，例如根据单元格类型自动转换数据格式
+* **建议添加拖拽取消机制**，例如按 ESC 键取消拖拽操作
+* **可以扩展为支持多单元格拖拽填充**，实现批量数据录入
 
 ## 六、关键代码片段
 
@@ -169,11 +169,15 @@ decoration.style.top = cellRect.y + "px";
 
 本示例展示了如何将 HTML5 原生拖拽功能与 SpreadJS 表格组件深度集成，实现了从外部元素到表格单元格的数据传递。开发者可以从中学到：
 
-- HTML5 Drag and Drop API 的完整使用流程（dragstart、dragover、drop 等事件）
-- SpreadJS 的 `hitTest` 和 `getCellRect` API 在坐标定位中的应用
-- 如何通过动态创建 DOM 元素实现自定义视觉反馈
-- 浏览器坐标系与 SpreadJS 内部坐标系的转换方法
+* HTML5 Drag and Drop API 的完整使用流程（dragstart、dragover、drop 等事件）
+* SpreadJS 的 `hitTest` 和 `getCellRect` API 在坐标定位中的应用
+* 如何通过动态创建 DOM 元素实现自定义视觉反馈
+* 浏览器坐标系与 SpreadJS 内部坐标系的转换方法
 
 该方案适用于需要从外部工具栏、侧边栏或其他 UI 组件快速向表格填充数据的场景，具有良好的扩展性，可以根据实际需求扩展为支持更复杂的数据类型和交互方式。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/JFw4JjFOgUes9_JmQWFIyw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

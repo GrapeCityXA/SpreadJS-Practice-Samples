@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中创建自定义单元格类型，实现在单元格内渲染 HTML 内容的功能。通过继承 `GC.Spread.Sheets.CellTypes.Text` 并重写 `paint` 方法，利用 SVG 的 `foreignObject` 元素将 HTML 内容转换为图像，最终在 Canvas 上绘制，从而实现在表格单元格中显示富文本格式（如标题、上标、删除线、颜色等 HTML 样式）。
+本示例展示了如何在 SpreadJS 中创建自定义单元格类型，实现在单元格内渲染 HTML 内容的功能。通过继承 `GC.Spread.Sheets.CellTypes.Text` 并重写 `paint` 方法，利用 SVG 的 `foreignObject` 元素将 HTML 内容转换为图像，最终在 Canvas 上绘制，从而实现在表格单元格中显示富文本格式（如标题、上标、删除线、颜色等 HTML 样式）。 
 
 该示例适用于需要在电子表格中展示复杂格式文本的场景，例如显示带有特殊样式的公式、多层级标题或富文本内容。
 
 ## 二、解决的问题
 
-- **富文本渲染需求**：标准单元格类型无法直接支持 HTML 标签和样式，该方案通过自定义单元格类型实现了 HTML 内容的渲染
-- **样式多样性**：支持 HTML 的各种样式属性（颜色、字体、删除线、上标等），满足复杂格式展示需求
-- **Canvas 绘制限制**：Canvas API 不直接支持 HTML 渲染，通过 SVG + foreignObject 的技术方案巧妙解决了这一限制
+* **富文本渲染需求**：标准单元格类型无法直接支持 HTML 标签和样式，该方案通过自定义单元格类型实现了 HTML 内容的渲染
+* **样式多样性**：支持 HTML 的各种样式属性（颜色、字体、删除线、上标等），满足复杂格式展示需求
+* **Canvas 绘制限制**：Canvas API 不直接支持 HTML 渲染，通过 SVG + foreignObject 的技术方案巧妙解决了这一限制
 
 ## 三、实现思路
 
@@ -76,9 +76,9 @@ img.onload = function () {
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0：电子表格核心库
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言（编译为 JavaScript）
+* SpreadJS 15.0.0：电子表格核心库
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言（编译为 JavaScript）
 
 ## 四、使用说明
 
@@ -100,18 +100,18 @@ npm install
 
 ### 5.1 优点
 
-- **灵活性高**：支持任意 HTML 标签和 CSS 样式，可实现复杂的富文本效果
-- **性能优化**：通过缓存机制避免重复转换，提升渲染性能
-- **兼容性好**：基于标准的 SVG 和 Canvas API，浏览器兼容性良好
+* **灵活性高**：支持任意 HTML 标签和 CSS 样式，可实现复杂的富文本效果
+* **性能优化**：通过缓存机制避免重复转换，提升渲染性能
+* **兼容性好**：基于标准的 SVG 和 Canvas API，浏览器兼容性良好
 
 ### 5.2 局限性与扩展建议
 
-- **图像加载延迟**：首次渲染时需要等待图像加载完成，可能出现短暂的空白或闪烁
-- **交互限制**：渲染后的内容是静态图像，无法响应鼠标事件或进行文本选择
-- **扩展建议**：
-  - 可以添加加载状态提示，改善用户体验
-  - 对于需要交互的场景，可以考虑使用 DOM 覆盖层方案
-  - 可以实现更完善的错误处理机制，例如显示降级的纯文本内容
+* **图像加载延迟**：首次渲染时需要等待图像加载完成，可能出现短暂的空白或闪烁
+* **交互限制**：渲染后的内容是静态图像，无法响应鼠标事件或进行文本选择
+* **扩展建议**：
+    * 可以添加加载状态提示，改善用户体验
+    * 对于需要交互的场景，可以考虑使用 DOM 覆盖层方案
+    * 可以实现更完善的错误处理机制，例如显示降级的纯文本内容
 
 ## 六、关键代码片段
 
@@ -135,13 +135,15 @@ sheet.getCell(1, 1).cellType(new HTMLCellType()).value('<h1 style="text-decorati
 
 本示例展示了 SpreadJS 自定义单元格类型的强大扩展能力，通过 SVG + foreignObject 的技术方案实现了在 Canvas 中渲染 HTML 内容的功能。开发者可以从中学到：
 
-- 如何继承和扩展 SpreadJS 的内置单元格类型
-- SVG foreignObject 在跨技术栈渲染中的应用
-- Canvas 绘图中的缓存优化策略
-- 异步渲染与重绘机制的实现
+* 如何继承和扩展 SpreadJS 的内置单元格类型
+* SVG foreignObject 在跨技术栈渲染中的应用
+* Canvas 绘图中的缓存优化策略
+* 异步渲染与重绘机制的实现
 
 该方案适用于需要在电子表格中展示富文本内容的场景，具有良好的扩展性，可以根据实际需求进一步优化和定制。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/HTML%20Element%20Cells.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/li4xXK7fREutSGOnu9Sy4Q/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

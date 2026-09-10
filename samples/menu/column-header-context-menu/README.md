@@ -6,9 +6,9 @@
 
 在实际的表格应用中，开发者可能需要在用户右键点击列头时执行自定义操作，例如显示列的详细信息、执行特定的列操作等。SpreadJS 默认的右键菜单无法直接获取列头单元格的值，本示例通过自定义右键菜单解决了以下问题：
 
-- 如何捕获列头区域的右键点击事件
-- 如何准确获取被点击的列头单元格的值
-- 如何处理合并列头单元格的情况
+* 如何捕获列头区域的右键点击事件
+* 如何准确获取被点击的列头单元格的值
+* 如何处理合并列头单元格的情况
 
 ## 三、实现思路
 
@@ -57,9 +57,9 @@ if (spanArr.length > 0) {
 
 ### 3.4 技术栈
 
-- @grapecity/spread-sheets: 15.0.0
-- TypeScript: ^4.1.2
-- SystemJS: ^0.19.22（模块加载器）
+* @grapecity/spread-sheets: 15.0.0
+* TypeScript: ^4.1.2
+* SystemJS: ^0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -82,16 +82,16 @@ npm install
 
 ### 5.1 优点
 
-- 准确识别列头区域的右键点击事件
-- 完善处理合并单元格场景，避免获取错误的单元格值
-- 代码结构清晰，易于扩展为更复杂的自定义菜单功能
-- 通过继承原生菜单类，保持了 SpreadJS 的原有功能
+* 准确识别列头区域的右键点击事件
+* 完善处理合并单元格场景，避免获取错误的单元格值
+* 代码结构清晰，易于扩展为更复杂的自定义菜单功能
+* 通过继承原生菜单类，保持了 SpreadJS 的原有功能
 
 ### 5.2 扩展建议
 
-- 可以在 `onOpenMenu` 方法中添加自定义菜单项，而不仅仅是弹出提示框
-- 可以根据列头的值或位置动态显示不同的菜单选项
-- 可以结合其他事件（如双击、悬停）实现更丰富的交互效果
+* 可以在 `onOpenMenu` 方法中添加自定义菜单项，而不仅仅是弹出提示框
+* 可以根据列头的值或位置动态显示不同的菜单选项
+* 可以结合其他事件（如双击、悬停）实现更丰富的交互效果
 
 ## 六、关键代码片段
 
@@ -118,11 +118,15 @@ spread.contextMenu = contextMenu;
 
 本示例展示了 SpreadJS 自定义右键菜单的基本用法，特别是如何在列头区域实现自定义交互。开发者可以从中学到：
 
-- 如何继承和扩展 SpreadJS 的内置菜单类
-- 如何通过 `hitInfo` 对象判断用户点击的区域和位置
-- 如何处理合并单元格的特殊情况
-- 如何使用 `SheetArea.colHeader` 操作列头区域
+* 如何继承和扩展 SpreadJS 的内置菜单类
+* 如何通过 `hitInfo` 对象判断用户点击的区域和位置
+* 如何处理合并单元格的特殊情况
+* 如何使用 `SheetArea.colHeader` 操作列头区域
 
 该方案适用于需要在列头实现自定义交互的场景，例如列筛选、列排序、列属性设置等功能。通过扩展 `onOpenMenu` 方法，可以轻松实现更复杂的业务逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/-pGNffOoLEasOFVad4qFGw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

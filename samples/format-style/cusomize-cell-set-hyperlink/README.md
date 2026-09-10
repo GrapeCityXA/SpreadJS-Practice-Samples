@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **多元素混合显示**：在单元格中同时展示数值、文本标记、超链接和上下标，满足复杂的数据展示需求
-- **可交互超链接**：实现单元格内部分区域可点击跳转到指定单元格或自定义名称位置
-- **自定义布局控制**：精确控制各元素的位置、样式和对齐方式，实现专业的视觉效果
+* **多元素混合显示**：在单元格中同时展示数值、文本标记、超链接和上下标，满足复杂的数据展示需求
+* **可交互超链接**：实现单元格内部分区域可点击跳转到指定单元格或自定义名称位置
+* **自定义布局控制**：精确控制各元素的位置、样式和对齐方式，实现专业的视觉效果
 
 ## 三、实现思路
 
@@ -162,9 +162,9 @@ ShowTagCellType.prototype.getAutoFitHeight = function (value, text, cellStyle, z
 
 ### 3.6 技术栈
 
-- SpreadJS 15.2.0 — 核心表格控件
-- TypeScript 4.1.2 — 类型支持
-- SystemJS 0.19.22 — 模块加载器
+* SpreadJS 15.2.0 — 核心表格控件
+* TypeScript 4.1.2 — 类型支持
+* SystemJS 0.19.22 — 模块加载器
 
 ## 四、使用说明
 
@@ -189,29 +189,31 @@ npm install
 
 ### 5.1 优点
 
-- **高度灵活**：通过 tag 配置可以自由组合文本、超链接和上下标元素
-- **交互友好**：超链接支持悬停提示和点击跳转，用户体验良好
-- **自动布局**：支持自动计算宽高，适应不同内容长度
-- **样式可控**：可以独立设置各元素的颜色、字体和对齐方式
+* **高度灵活**：通过 tag 配置可以自由组合文本、超链接和上下标元素
+* **交互友好**：超链接支持悬停提示和点击跳转，用户体验良好
+* **自动布局**：支持自动计算宽高，适应不同内容长度
+* **样式可控**：可以独立设置各元素的颜色、字体和对齐方式
 
 ### 5.2 局限性与扩展建议
 
-- **垂直对齐固定**：当前实现强制单元格垂直居中，如需支持其他对齐方式需要修改绘制逻辑
-- **性能考虑**：大量使用自定义单元格类型时，建议缓存计算结果以提升性能
-- **扩展方向**：可以增加更多元素类型（如图标、徽章），或支持多行布局
+* **垂直对齐固定**：当前实现强制单元格垂直居中，如需支持其他对齐方式需要修改绘制逻辑
+* **性能考虑**：大量使用自定义单元格类型时，建议缓存计算结果以提升性能
+* **扩展方向**：可以增加更多元素类型（如图标、徽章），或支持多行布局
 
 ## 六、总结
 
 本示例展示了 SpreadJS 自定义单元格类型的强大能力，通过继承基础单元格类型并重写关键方法，可以实现复杂的单元格内容布局和交互效果。开发者可以从中学到：
 
-- 如何创建自定义单元格类型并重写绘制方法
-- 如何在单元格中实现多元素混合布局
-- 如何处理单元格内部的鼠标交互事件
-- 如何使用 SpreadJS 的公式引擎 API 处理单元格引用
-- 如何实现自动适应宽高的自定义单元格
+* 如何创建自定义单元格类型并重写绘制方法
+* 如何在单元格中实现多元素混合布局
+* 如何处理单元格内部的鼠标交互事件
+* 如何使用 SpreadJS 的公式引擎 API 处理单元格引用
+* 如何实现自动适应宽高的自定义单元格
 
 该方案适用于需要在单元格中展示复杂信息结构的场景，具有良好的扩展性和可维护性。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Custom%20Cells%20-%20Subscripts%20and%20Hyperlinks.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/MUfumghDMkWB1yRKP5wr9Q/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

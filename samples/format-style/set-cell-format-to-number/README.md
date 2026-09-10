@@ -6,9 +6,9 @@
 
 在实际开发中，开发者经常会遇到以下问题：
 
-- 用户可能会对字符串类型的单元格设置数字格式，导致格式无法生效
-- 缺乏对单元格类型和格式设置的实时校验机制
-- 需要引导用户正确使用 SpreadJS 的格式化功能
+* 用户可能会对字符串类型的单元格设置数字格式，导致格式无法生效
+* 缺乏对单元格类型和格式设置的实时校验机制
+* 需要引导用户正确使用 SpreadJS 的格式化功能
 
 本示例通过事件监听和类型检测，帮助开发者构建更加健壮的数据输入验证机制。
 
@@ -76,9 +76,9 @@ document.getElementById('setFormatter').addEventListener('click',function() {
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持（配置环境）
+* SpreadJS 15.0.0：核心电子表格组件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持（配置环境）
 
 ## 四、使用说明
 
@@ -102,23 +102,23 @@ npm install
 
 ### 5.1 优点
 
-- 实时监听单元格变化，提供即时反馈
-- 智能识别数据类型，防止格式设置错误
-- 代码简洁，易于理解和扩展
-- 提供了清晰的用户提示信息
+* 实时监听单元格变化，提供即时反馈
+* 智能识别数据类型，防止格式设置错误
+* 代码简洁，易于理解和扩展
+* 提供了清晰的用户提示信息
 
 ### 5.2 局限性与扩展建议
 
 当前实现的局限性：
 
-- 仅检测字符串类型，未覆盖其他特殊类型（如日期、布尔值）
-- 警告方式使用 `alert`，用户体验不够友好
+* 仅检测字符串类型，未覆盖其他特殊类型（如日期、布尔值）
+* 警告方式使用 `alert`，用户体验不够友好
 
 扩展建议：
 
-- 可以使用自定义对话框或 Toast 提示替代 `alert`
-- 可以扩展检测逻辑，支持更多数据类型的格式校验
-- 可以添加自动修正功能，当检测到错误时自动转换数据类型
+* 可以使用自定义对话框或 Toast 提示替代 `alert`
+* 可以扩展检测逻辑，支持更多数据类型的格式校验
+* 可以添加自动修正功能，当检测到错误时自动转换数据类型
 
 ## 六、关键代码片段
 
@@ -154,11 +154,15 @@ function checkCellFormat(sheet, row, col){
 
 本示例展示了 SpreadJS 中单元格格式设置的基本用法，以及如何通过事件监听机制实现数据类型校验。开发者可以从中学到：
 
-- SpreadJS 的 `CellChanged` 事件监听机制
-- 单元格格式化器（formatter）的使用方法
-- 如何获取和检测单元格的值类型
-- 延迟执行在事件处理中的应用场景
+* SpreadJS 的 `CellChanged` 事件监听机制
+* 单元格格式化器（formatter）的使用方法
+* 如何获取和检测单元格的值类型
+* 延迟执行在事件处理中的应用场景
 
 该方案适用于需要对用户输入进行实时校验的场景，特别是在构建数据录入系统时，可以有效防止用户操作错误，提升数据质量。通过扩展检测逻辑和优化提示方式，可以构建更加完善的数据验证系统。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/pAryBXsVfEKUridIscCP3Q/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

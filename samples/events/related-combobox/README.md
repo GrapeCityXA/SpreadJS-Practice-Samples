@@ -5,10 +5,11 @@
 ## 二、解决的问题
 
 在实际业务场景中，经常需要实现级联选择功能，例如：
-- 省市区三级联动选择
-- 类别-子类别的关联选择
-- 教师-课程的对应关系
-- 品牌-型号的关联筛选
+
+* 省市区三级联动选择
+* 类别-子类别的关联选择
+* 教师-课程的对应关系
+* 品牌-型号的关联筛选
 
 本示例通过监听单元格值变化事件，动态更新关联下拉框的选项列表，实现了简单高效的联动效果。
 
@@ -35,8 +36,9 @@ sheet.setCellType(3, 2, combo1, GC.Spread.Sheets.SheetArea.viewport);
 ```
 
 关键点：
-- `editorValueType()` 设置为 `value` 模式，确保单元格存储的是 value 值而非 text
-- `setCellType()` 将下拉框应用到指定单元格（第4行第3列，索引为 3, 2）
+
+* `editorValueType()` 设置为 `value` 模式，确保单元格存储的是 value 值而非 text
+* `setCellType()` 将下拉框应用到指定单元格（第4行第3列，索引为 3, 2）
 
 ### 3.2 监听值变化事件实现联动
 
@@ -67,6 +69,7 @@ sheet.bind(GC.Spread.Sheets.Events.ValueChanged, function(e, info) {
 ```
 
 实现逻辑：
+
 1. 判断变化的单元格是否为目标单元格（C4）
 2. 获取新选择的值（`info.newValue`）
 3. 根据不同的值更新 combo2 的选项列表
@@ -74,9 +77,9 @@ sheet.bind(GC.Spread.Sheets.Events.ValueChanged, function(e, info) {
 
 ### 3.3 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心电子表格组件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -93,27 +96,28 @@ npm install
 
 1. 打开页面后，可以看到 C4 和 D4 单元格已设置为下拉框
 2. 点击 C4 单元格的下拉箭头，选择不同的教师：
-   - 选择"张老师"：D4 显示英语/语文/数学
-   - 选择"王老师"：D4 显示历史/地理/政治
-   - 选择"李老师"：D4 显示体育/音乐/美术
+    * 选择"张老师"：D4 显示英语/语文/数学
+    * 选择"王老师"：D4 显示历史/地理/政治
+    * 选择"李老师"：D4 显示体育/音乐/美术
 3. 观察 D4 下拉框的选项如何根据 C4 的选择动态变化
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- 实现简单：仅需监听一个事件即可完成联动逻辑
-- 响应迅速：值变化时立即更新关联下拉框
-- 易于扩展：可以轻松添加更多级联层级或更复杂的联动规则
-- 用户体验好：自动设置默认值，避免出现无效选项
+* 实现简单：仅需监听一个事件即可完成联动逻辑
+* 响应迅速：值变化时立即更新关联下拉框
+* 易于扩展：可以轻松添加更多级联层级或更复杂的联动规则
+* 用户体验好：自动设置默认值，避免出现无效选项
 
 ### 5.2 局限性与扩展建议
 
 当前实现使用硬编码的方式配置联动关系，对于大量数据或复杂的联动规则，建议：
-- 使用数据驱动的方式，将联动关系存储在配置对象或数据库中
-- 支持多级联动（三级及以上）
-- 添加数据验证，防止选择无效组合
-- 考虑异步加载选项数据，适应远程数据源场景
+
+* 使用数据驱动的方式，将联动关系存储在配置对象或数据库中
+* 支持多级联动（三级及以上）
+* 添加数据验证，防止选择无效组合
+* 考虑异步加载选项数据，适应远程数据源场景
 
 ## 六、关键代码片段
 
@@ -180,6 +184,8 @@ sheet.bind(GC.Spread.Sheets.Events.ValueChanged, function(e, info) {
 
 该方案适用于需要实现简单级联选择的场景，对于更复杂的业务需求，可以在此基础上扩展为数据驱动的联动机制，提升代码的可维护性和扩展性。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/SpreadJS%20realizes%20linkage%20of%20drop-down%20box.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/0dS55WPk30C5uyPd9IID_w/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

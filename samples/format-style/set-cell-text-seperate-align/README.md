@@ -6,9 +6,9 @@
 
 在实际业务中，常常需要让文本在单元格内均匀分布，而不是简单的左对齐、居中或右对齐。例如：
 
-- 表格标题需要字符间距均匀分布，提升视觉美观度
-- 证书、合同等正式文档中的文本排版要求
-- 特定格式的报表需要文本分散填充整个单元格宽度
+* 表格标题需要字符间距均匀分布，提升视觉美观度
+* 证书、合同等正式文档中的文本排版要求
+* 特定格式的报表需要文本分散填充整个单元格宽度
 
 SpreadJS 默认的文本对齐方式无法实现这种效果，因此需要通过自定义单元格类型来实现文本的分散对齐。
 
@@ -64,6 +64,7 @@ CustomCellType.prototype.paint = function(ctx, value, x, y, w, h, style, options
 ```
 
 算法关键点：
+
 1. 计算文本总宽度 `valueWidth` 和字符数量 `charLength`
 2. 计算平均字符宽度 `charWidth = valueWidth / charLength`
 3. 计算字符间需要填充的空白宽度 `spaceWidth = (w - valueWidth) / (charLength - 1)`
@@ -82,9 +83,9 @@ sheet.getCell(1, 1).cellType(cellType).value("举杯邀明月")
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0：核心表格控件
-- TypeScript 4.1.2：开发语言
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 15.0.0：核心表格控件
+* TypeScript 4.1.2：开发语言
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -108,17 +109,17 @@ npm install
 
 ### 5.1 优点
 
-- 实现了类似 Word 分散对齐的效果，提升文档排版质量
-- 通过自定义单元格类型，代码结构清晰，易于复用
-- 自动处理文本溢出情况，当文本宽度超过单元格时回退到默认显示方式
-- 支持自定义字体、颜色等样式属性
+* 实现了类似 Word 分散对齐的效果，提升文档排版质量
+* 通过自定义单元格类型，代码结构清晰，易于复用
+* 自动处理文本溢出情况，当文本宽度超过单元格时回退到默认显示方式
+* 支持自定义字体、颜色等样式属性
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现仅支持单行文本，不支持换行文本的分散对齐
-- 未考虑文本方向（从右到左）的情况
-- 可以扩展支持垂直方向的分散对齐
-- 可以添加配置参数，允许用户自定义字符间距的计算方式
+* 当前实现仅支持单行文本，不支持换行文本的分散对齐
+* 未考虑文本方向（从右到左）的情况
+* 可以扩展支持垂直方向的分散对齐
+* 可以添加配置参数，允许用户自定义字符间距的计算方式
 
 ## 六、关键代码片段
 
@@ -132,10 +133,11 @@ var spaceWidth = (w - valueWidth) / (charLength - 1);
 ```
 
 这段代码是分散对齐的核心：
-- `charLength`：字符总数
-- `valueWidth`：文本在当前字体下的实际宽度
-- `charWidth`：平均每个字符的宽度
-- `spaceWidth`：字符之间需要填充的空白宽度，通过 `(单元格宽度 - 文本宽度) / (字符数 - 1)` 计算得出
+
+* `charLength`：字符总数
+* `valueWidth`：文本在当前字体下的实际宽度
+* `charWidth`：平均每个字符的宽度
+* `spaceWidth`：字符之间需要填充的空白宽度，通过 `(单元格宽度 - 文本宽度) / (字符数 - 1)` 计算得出
 
 ### 逐字符绘制
 
@@ -151,11 +153,15 @@ for (var i = 0; i < charLength; i++) {
 
 本示例展示了 SpreadJS 自定义单元格类型的强大能力，通过重写 `paint` 方法实现了文本分散对齐的特殊排版效果。开发者可以从中学到：
 
-- 如何创建和使用自定义单元格类型
-- Canvas 2D 绘图 API 的使用方法
-- 文本测量和布局计算技巧
-- 如何处理边界情况（文本溢出）
+* 如何创建和使用自定义单元格类型
+* Canvas 2D 绘图 API 的使用方法
+* 文本测量和布局计算技巧
+* 如何处理边界情况（文本溢出）
 
 该方案适用于需要精确控制文本排版的场景，具有良好的扩展性，可以根据实际需求进一步定制字符间距计算逻辑或支持更复杂的排版需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/okBbOvm9EUWiy4J6v1yD0Q/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

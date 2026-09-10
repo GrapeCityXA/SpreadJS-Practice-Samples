@@ -8,9 +8,9 @@
 
 在实际业务中，用户经常需要了解数据表中有多少单元格满足特定的条件格式规则。例如：
 
-- 统计销售数据中有多少单元格的值大于目标值（显示为绿色）
-- 检查财务报表中有多少异常数据（通过条件格式标记）
-- 验证数据录入的准确性，统计符合验证规则的单元格数量
+* 统计销售数据中有多少单元格的值大于目标值（显示为绿色）
+* 检查财务报表中有多少异常数据（通过条件格式标记）
+* 验证数据录入的准确性，统计符合验证规则的单元格数量
 
 手动检查大量数据既耗时又容易出错，本示例提供了一种编程方式来自动化这一过程。
 
@@ -43,9 +43,10 @@ if (rule.evaluate(sheet, 0, 0, sheet.getValue(i, j))) {
 ```
 
 `evaluate()` 方法的参数说明：
-- 第一个参数：工作表对象
-- 第二、三个参数：基准行列索引（通常为 0, 0）
-- 第四个参数：要验证的单元格值
+
+* 第一个参数：工作表对象
+* 第二、三个参数：基准行列索引（通常为 0, 0）
+* 第四个参数：要验证的单元格值
 
 如果单元格值满足规则条件，方法返回 `true`，否则返回 `false`。
 
@@ -81,6 +82,7 @@ function getPassConditionCount(sheet, row, col, rowCount, colCount) {
 ### 3.2 UI 交互流程
 
 用户操作流程：
+
 1. 在工作表中选择一个或多个单元格区域
 2. 点击"获取选中区域通过条件格式验证数量"按钮
 3. 系统自动统计选中区域内满足条件格式规则的单元格数量
@@ -88,9 +90,9 @@ function getPassConditionCount(sheet, row, col, rowCount, colCount) {
 
 ### 3.3 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言（编译为 JavaScript）
+* SpreadJS 15.0.0：核心电子表格组件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言（编译为 JavaScript）
 
 ## 四、使用说明
 
@@ -111,30 +113,33 @@ npm install
 4. 查看弹窗显示的统计结果
 
 测试建议：
-- 尝试选择不同的区域，观察统计结果的变化
-- 修改单元格的值，验证统计功能的准确性
-- 在 `template.js` 中添加更多条件格式规则进行测试
+
+* 尝试选择不同的区域，观察统计结果的变化
+* 修改单元格的值，验证统计功能的准确性
+* 在 `template.js` 中添加更多条件格式规则进行测试
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- 自动化统计：无需手动检查，快速获取统计结果
-- 支持多规则：可以处理单元格应用多个条件格式规则的情况
-- 灵活选择：支持任意区域的选择和统计
-- 准确可靠：使用 SpreadJS 官方 API，确保验证逻辑的准确性
+* 自动化统计：无需手动检查，快速获取统计结果
+* 支持多规则：可以处理单元格应用多个条件格式规则的情况
+* 灵活选择：支持任意区域的选择和统计
+* 准确可靠：使用 SpreadJS 官方 API，确保验证逻辑的准确性
 
 ### 5.2 局限性与扩展建议
 
 当前实现的局限性：
-- 只统计通过验证的单元格数量，不区分具体是哪个规则
-- 使用 alert 弹窗显示结果，用户体验有待提升
+
+* 只统计通过验证的单元格数量，不区分具体是哪个规则
+* 使用 alert 弹窗显示结果，用户体验有待提升
 
 扩展建议：
-- 返回详细的统计信息，包括每个规则的匹配数量
-- 将结果显示在页面的专用区域，而不是使用 alert
-- 支持导出统计报告
-- 添加高亮显示功能，标记出通过验证的单元格
+
+* 返回详细的统计信息，包括每个规则的匹配数量
+* 将结果显示在页面的专用区域，而不是使用 alert
+* 支持导出统计报告
+* 添加高亮显示功能，标记出通过验证的单元格
 
 ## 六、关键代码片段
 
@@ -180,13 +185,15 @@ document.getElementById("checkCount").onclick = checkCount;
 
 本示例展示了如何利用 SpreadJS 的条件格式 API 实现单元格验证统计功能。开发者可以从中学到：
 
-- 如何获取和遍历单元格的条件格式规则
-- 如何使用 `evaluate()` 方法验证单元格值是否满足规则条件
-- 如何处理选中区域并进行批量数据处理
-- 条件格式规则的数据结构和配置方式
+* 如何获取和遍历单元格的条件格式规则
+* 如何使用 `evaluate()` 方法验证单元格值是否满足规则条件
+* 如何处理选中区域并进行批量数据处理
+* 条件格式规则的数据结构和配置方式
 
 该方案适用于需要对大量数据进行条件验证和统计的场景，具有良好的扩展性。开发者可以在此基础上添加更复杂的统计逻辑、可视化展示或数据导出功能，以满足更多业务需求。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Code%20judgment%20passes%20conditional%20format%20rules.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/bCFx3-tiEkWmomYcXstmfQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

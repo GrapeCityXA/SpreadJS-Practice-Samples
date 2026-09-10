@@ -6,9 +6,9 @@
 
 在实际应用中，开发者可能需要根据业务需求对 SpreadJS Designer 的内置功能进行定制化调整，例如：
 
-- 简化对话框界面，隐藏不常用的功能选项
-- 修改对话框标题以符合企业品牌或业务术语
-- 限制用户可访问的功能范围，避免误操作
+* 简化对话框界面，隐藏不常用的功能选项
+* 修改对话框标题以符合企业品牌或业务术语
+* 限制用户可访问的功能范围，避免误操作
 
 本示例通过模板注册机制实现了对内置对话框的灵活定制，无需修改源码即可实现界面调整。
 
@@ -54,10 +54,10 @@ GC.Spread.Sheets.Designer.registerTemplate(
 
 ### 3.4 技术栈
 
-- SpreadJS v15.0.0：核心表格组件
-- SpreadJS Designer v15.0.0：设计器组件
-- SystemJS：模块加载器
-- TypeScript v4.1.2：开发语言
+* SpreadJS v15.0.0：核心表格组件
+* SpreadJS Designer v15.0.0：设计器组件
+* SystemJS：模块加载器
+* TypeScript v4.1.2：开发语言
 
 ## 四、使用说明
 
@@ -75,28 +75,30 @@ npm install
 
 1. 在浏览器中打开 index.html
 2. 按下 `Ctrl+F` 快捷键打开查找对话框
-3. 观察对话框标题已变更为"查找_自定义菜单名称"
+3. 观察对话框标题已变更为"查找\_自定义菜单名称"
 4. 对话框中原有的"替换"功能选项已被隐藏
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- 无需修改源码即可定制内置对话框
-- 通过模板机制实现灵活的界面调整
-- 可以根据业务需求隐藏或修改任意对话框元素
-- 代码简洁，易于维护和扩展
+* 无需修改源码即可定制内置对话框
+* 通过模板机制实现灵活的界面调整
+* 可以根据业务需求隐藏或修改任意对话框元素
+* 代码简洁，易于维护和扩展
 
 ### 5.2 局限性与扩展建议
 
 **局限性**：
-- 需要了解模板对象的内部结构才能准确定位要修改的元素
-- 模板注册必须在 Designer 实例化之前完成
+
+* 需要了解模板对象的内部结构才能准确定位要修改的元素
+* 模板注册必须在 Designer 实例化之前完成
 
 **扩展建议**：
-- 可以应用相同的方法定制其他内置对话框（如格式化对话框、插入对话框等）
-- 可以通过修改 `content` 数组添加自定义的 UI 元素
-- 结合事件监听机制实现更复杂的交互逻辑
+
+* 可以应用相同的方法定制其他内置对话框（如格式化对话框、插入对话框等）
+* 可以通过修改 `content` 数组添加自定义的 UI 元素
+* 结合事件监听机制实现更复杂的交互逻辑
 
 ## 六、关键代码片段
 
@@ -126,10 +128,14 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container");
 
 本示例展示了 SpreadJS Designer 的模板定制能力，开发者可以学到：
 
-- 如何获取和修改内置对话框模板
-- 模板注册机制的使用方法和时机
-- 通过数组操作隐藏或调整 UI 元素的技巧
+* 如何获取和修改内置对话框模板
+* 模板注册机制的使用方法和时机
+* 通过数组操作隐藏或调整 UI 元素的技巧
 
 该方案适用于需要定制设计器界面的场景，具有良好的扩展性。通过类似的方法，可以对 Designer 的其他内置对话框进行定制化改造，满足不同的业务需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/p5xFDhxu0EGj_V4PtFP_CQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

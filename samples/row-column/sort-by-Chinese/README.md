@@ -58,10 +58,10 @@ sheet.rowFilter(filter);
 
 ### 3.2 技术栈
 
-- @grapecity/spread-sheets: 15.0.0（核心表格组件）
-- @grapecity/spread-sheets-resources-zh: 15.0.0（中文资源包）
-- TypeScript: ^4.1.2（开发语言）
-- SystemJS: ^0.19.22（模块加载器）
+* @grapecity/spread-sheets: 15.0.0（核心表格组件）
+* @grapecity/spread-sheets-resources-zh: 15.0.0（中文资源包）
+* TypeScript: ^4.1.2（开发语言）
+* SystemJS: ^0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -85,10 +85,10 @@ npm install
 
 ### 5.1 优点
 
-- 符合中文使用习惯：排序结果按照拼音顺序排列，符合中文用户的阅读习惯
-- 实现简单：利用 JavaScript 原生 API，无需引入额外的排序库
-- 兼容性好：`localeCompare` 方法在现代浏览器中广泛支持
-- 处理完善：正确处理空值和边界情况，保证排序稳定性
+* 符合中文使用习惯：排序结果按照拼音顺序排列，符合中文用户的阅读习惯
+* 实现简单：利用 JavaScript 原生 API，无需引入额外的排序库
+* 兼容性好：`localeCompare` 方法在现代浏览器中广泛支持
+* 处理完善：正确处理空值和边界情况，保证排序稳定性
 
 ## 六、关键代码片段
 
@@ -131,4 +131,8 @@ function sortDomain(value1, value2) {
 
 该方案适用于所有需要处理中文数据排序的场景，也可以扩展到其他语言环境（如日文、韩文等），只需修改 `localeCompare` 的语言参数即可。对于更复杂的排序需求（如多列排序、自定义排序规则），可以在比较函数中添加更多的逻辑判断。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/bDClfnkp20yZhtKNGTxwcw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

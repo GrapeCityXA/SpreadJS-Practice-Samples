@@ -8,9 +8,9 @@
 
 在实际的电子表格应用中，用户经常需要在一个工作表中引用另一个工作表的数据。传统方式需要用户手动输入完整的跨表引用公式（如 `=sum(Sheet1!A1:A4)`），这种方式存在以下问题：
 
-- 用户需要记住目标工作表的名称和单元格地址，容易出错
-- 对于复杂的区域引用，手动输入效率低下
-- 缺乏可视化的选择体验，不够直观
+* 用户需要记住目标工作表的名称和单元格地址，容易出错
+* 对于复杂的区域引用，手动输入效率低下
+* 缺乏可视化的选择体验，不够直观
 
 本示例通过实现一个辅助选择功能，允许用户在输入公式时通过按钮切换到目标工作表，可视化地选择需要引用的单元格区域，系统自动生成正确的跨表引用公式。
 
@@ -96,9 +96,9 @@ sheet1.bind(GC.Spread.Sheets.Events.SelectionChanged, function (sender, args) {
 
 ### 3.3 技术栈
 
-- @grapecity/spread-sheets: 15.2.4（核心电子表格引擎）
-- SystemJS: 0.19.22（模块加载器）
-- TypeScript: 4.1.2（类型支持）
+* @grapecity/spread-sheets: 15.2.4（核心电子表格引擎）
+* SystemJS: 0.19.22（模块加载器）
+* TypeScript: 4.1.2（类型支持）
 
 ## 四、使用说明
 
@@ -125,10 +125,10 @@ npm install
 
 ### 5.1 优点
 
-- 提供可视化的跨表引用选择体验，降低用户操作难度
-- 自动生成绝对引用格式（`$A$1`），避免公式复制时的引用错误
-- 支持区域选择，可以一次性引用多个单元格
-- 代码结构清晰，易于扩展和定制
+* 提供可视化的跨表引用选择体验，降低用户操作难度
+* 自动生成绝对引用格式（`$A$1`），避免公式复制时的引用错误
+* 支持区域选择，可以一次性引用多个单元格
+* 代码结构清晰，易于扩展和定制
 
 ### 5.2 局限性与扩展建议
 
@@ -161,12 +161,16 @@ prevSheet.setFormula(prevCellRange.row, prevCellRange.col, formula + sheet1Name 
 
 本示例展示了如何在 SpreadJS 中实现跨工作表的单元格引用辅助功能，通过事件监听和状态管理，实现了可视化的区域选择体验。开发者可以从中学到以下知识点：
 
-- 如何使用 `allowInvalidFormula` 选项允许不完整公式的输入
-- 如何监听 `SelectionChanged` 事件捕获用户的选区变化
-- 如何使用 `rangeToFormula` API 将选区对象转换为公式引用字符串
-- 如何在多工作表之间切换并保持状态一致性
-- 如何动态拼接和设置单元格公式
+* 如何使用 `allowInvalidFormula` 选项允许不完整公式的输入
+* 如何监听 `SelectionChanged` 事件捕获用户的选区变化
+* 如何使用 `rangeToFormula` API 将选区对象转换为公式引用字符串
+* 如何在多工作表之间切换并保持状态一致性
+* 如何动态拼接和设置单元格公式
 
 该方案适用于需要频繁进行跨表引用的场景，可以显著提升用户的操作效率。开发者可以在此基础上扩展更多功能，如支持多区域选择、自定义引用类型、支持跨工作簿引用等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/OQAFO0dDPkeiGLVE59cfSA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

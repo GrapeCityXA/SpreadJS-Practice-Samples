@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **自定义输入校验**：除了 SpreadJS 内置的数据验证功能外，提供了一种更灵活的方式来实现自定义业务规则校验
-- **即时反馈**：在用户输入不合法内容时立即清空，避免错误数据进入单元格
-- **增强用户体验**：通过编程方式控制输入行为，可以配合提示信息实现更友好的交互
+* **自定义输入校验**：除了 SpreadJS 内置的数据验证功能外，提供了一种更灵活的方式来实现自定义业务规则校验
+* **即时反馈**：在用户输入不合法内容时立即清空，避免错误数据进入单元格
+* **增强用户体验**：通过编程方式控制输入行为，可以配合提示信息实现更友好的交互
 
 ## 三、实现思路
 
@@ -39,15 +39,15 @@ setTimeout(() => {
 })
 ```
 
-- `suspendEvent()`：暂停事件触发，避免 `endEdit` 再次触发 `EditEnding` 事件导致死循环
-- `endEdit(true)`：参数 `true` 表示取消编辑，不将编辑内容应用到单元格
-- `resumeEvent()`：恢复事件触发
+* `suspendEvent()`：暂停事件触发，避免 `endEdit` 再次触发 `EditEnding` 事件导致死循环
+* `endEdit(true)`：参数 `true` 表示取消编辑，不将编辑内容应用到单元格
+* `resumeEvent()`：恢复事件触发
 
 ### 3.2 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
-- **SystemJS**: 0.19.22 - 模块加载器
-- **TypeScript**: 4.1.2 - 类型支持
+* **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
+* **SystemJS**: 0.19.22 - 模块加载器
+* **TypeScript**: 4.1.2 - 类型支持
 
 ## 四、使用说明
 
@@ -72,18 +72,18 @@ npm install
 
 ### 5.1 优点
 
-- **灵活的校验逻辑**：可以实现任意复杂的自定义校验规则，不受内置数据验证功能的限制
-- **即时清空**：不合法的输入会被立即清空，避免用户看到错误提示后还需要手动删除
-- **事件驱动**：基于事件机制实现，代码结构清晰，易于维护和扩展
+* **灵活的校验逻辑**：可以实现任意复杂的自定义校验规则，不受内置数据验证功能的限制
+* **即时清空**：不合法的输入会被立即清空，避免用户看到错误提示后还需要手动删除
+* **事件驱动**：基于事件机制实现，代码结构清晰，易于维护和扩展
 
 ### 5.2 局限性与扩展建议
 
-- **用户提示不足**：当前实现只是简单清空输入，建议配合 `alert` 或自定义提示组件告知用户输入不合法的原因
-- **校验规则硬编码**：示例中直接判断是否等于"哈哈哈"，实际应用中可以改为正则表达式或调用校验函数，支持更复杂的规则
-- **扩展方向**：
-  - 结合正则表达式实现格式校验（如邮箱、手机号）
-  - 调用后端 API 进行异步校验（如检查用户名是否重复）
-  - 配合 `EditStarting` 事件实现输入过程中的实时校验
+* **用户提示不足**：当前实现只是简单清空输入，建议配合 `alert` 或自定义提示组件告知用户输入不合法的原因
+* **校验规则硬编码**：示例中直接判断是否等于"哈哈哈"，实际应用中可以改为正则表达式或调用校验函数，支持更复杂的规则
+* **扩展方向**：
+    * 结合正则表达式实现格式校验（如邮箱、手机号）
+    * 调用后端 API 进行异步校验（如检查用户名是否重复）
+    * 配合 `EditStarting` 事件实现输入过程中的实时校验
 
 ## 六、关键代码片段
 
@@ -120,4 +120,8 @@ sheet.bind(GC.Spread.Sheets.Events.EditEnding, (sender, args) => {
 
 该方案适用于需要实现复杂业务规则校验的场景，特别是当 SpreadJS 内置的数据验证功能无法满足需求时。通过扩展该方案，可以实现更丰富的输入控制功能，如实时格式校验、异步数据校验等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/jueHyAgmh0eO9-2pD_3nrA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

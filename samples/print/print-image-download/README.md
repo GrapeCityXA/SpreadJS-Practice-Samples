@@ -1,12 +1,12 @@
 ## 一、Demo 概述
 
-本示例展示了如何使用 SpreadJS 将工作表内容导出为图片格式（PNG）。通过拦截打印事件，将打印预览中生成的图片提取出来，并使用 Canvas API 转换为可下载的图片文件。该方案适用于需要将表格数据以图片形式保存或分享的场景。
+本示例展示了如何使用 SpreadJS 将工作表内容导出为图片格式（PNG）。通过拦截打印事件，将打印预览中生成的图片提取出来，并使用 Canvas API 转换为可下载的图片文件。该方案适用于需要将表格数据以图片形式保存或分享的场景。 
 
 ## 二、解决的问题
 
-- **图片导出需求**：在某些业务场景中，用户需要将表格内容导出为图片格式，而不是 Excel 或 PDF 文件
-- **打印预览复用**：利用 SpreadJS 的打印功能生成高质量的表格图片，无需额外的渲染逻辑
-- **批量导出**：支持将工作簿中的多个工作表分别导出为独立的图片文件
+* **图片导出需求**：在某些业务场景中，用户需要将表格内容导出为图片格式，而不是 Excel 或 PDF 文件
+* **打印预览复用**：利用 SpreadJS 的打印功能生成高质量的表格图片，无需额外的渲染逻辑
+* **批量导出**：支持将工作簿中的多个工作表分别导出为独立的图片文件
 
 ## 三、实现思路
 
@@ -72,10 +72,10 @@ document.getElementById('exportImgs').onclick = () => {
 
 ### 3.4 技术栈
 
-- SpreadJS 15.0.0（核心表格组件）
-- @grapecity/spread-sheets-print 15.0.0（打印功能）
-- @grapecity/spread-sheets-pdf 15.0.0（PDF 支持）
-- Canvas API（图片转换）
+* SpreadJS 15.0.0（核心表格组件）
+* @grapecity/spread-sheets-print 15.0.0（打印功能）
+* @grapecity/spread-sheets-pdf 15.0.0（PDF 支持）
+* Canvas API（图片转换）
 
 ## 四、使用说明
 
@@ -97,15 +97,15 @@ npm install
 
 ### 5.1 优点
 
-- **高质量输出**：通过 `qualityFactor` 参数控制图片质量，确保导出的图片清晰度
-- **实现简单**：复用打印功能，无需额外的渲染逻辑
-- **灵活配置**：可以自定义纸张大小、边距、是否显示行列标题等打印参数
+* **高质量输出**：通过 `qualityFactor` 参数控制图片质量，确保导出的图片清晰度
+* **实现简单**：复用打印功能，无需额外的渲染逻辑
+* **灵活配置**：可以自定义纸张大小、边距、是否显示行列标题等打印参数
 
 ### 5.2 局限性与扩展建议
 
-- **同步下载限制**：当前实现会同时触发多个下载，浏览器可能会拦截。建议改为异步队列下载或打包为 ZIP
-- **文件命名**：当前使用固定的 "test" + 索引命名，建议根据工作表名称或用户输入自定义文件名
-- **格式扩展**：可以通过修改 `canvas.toBlob()` 的参数支持 JPEG 等其他图片格式
+* **同步下载限制**：当前实现会同时触发多个下载，浏览器可能会拦截。建议改为异步队列下载或打包为 ZIP
+* **文件命名**：当前使用固定的 "test" + 索引命名，建议根据工作表名称或用户输入自定义文件名
+* **格式扩展**：可以通过修改 `canvas.toBlob()` 的参数支持 JPEG 等其他图片格式
 
 ## 六、关键代码片段
 
@@ -129,19 +129,24 @@ canvas.toBlob((blob) => {
 ```
 
 该代码段的关键点：
-- 使用 `naturalHeight` 和 `naturalWidth` 获取图片原始尺寸
-- 先填充白色背景，避免透明区域显示为黑色
-- 使用 `toBlob()` 异步生成 Blob 对象，避免阻塞主线程
+
+* 使用 `naturalHeight` 和 `naturalWidth` 获取图片原始尺寸
+* 先填充白色背景，避免透明区域显示为黑色
+* 使用 `toBlob()` 异步生成 Blob 对象，避免阻塞主线程
 
 ## 七、总结
 
 本示例展示了一种巧妙的图片导出方案，通过拦截打印事件复用 SpreadJS 的渲染能力。开发者可以从中学到：
 
-- SpreadJS 打印功能的配置方法
-- `BeforePrint` 事件的使用技巧
-- Canvas API 进行图片格式转换的实现
-- 浏览器端文件下载的触发方式
+* SpreadJS 打印功能的配置方法
+* `BeforePrint` 事件的使用技巧
+* Canvas API 进行图片格式转换的实现
+* 浏览器端文件下载的触发方式
 
 该方案适用于需要将表格内容快速导出为图片的场景，特别是在不需要复杂排版的情况下。如需更精细的控制，可以考虑结合 PDF 导出功能或使用服务端渲染方案。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/eEZvLQ7AX0iDPOwSDk6Myg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

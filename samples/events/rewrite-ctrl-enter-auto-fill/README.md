@@ -6,9 +6,9 @@
 
 在 SpreadJS 中，Ctrl+Enter 默认行为可能不符合某些业务场景的需求。本示例解决了以下问题：
 
-- 提供类似 Excel 的批量填充体验，提高数据录入效率
-- 允许用户快速将单个值复制到多个单元格，无需手动拖拽或复制粘贴
-- 支持撤销/重做操作，确保用户可以安全地进行批量填充操作
+* 提供类似 Excel 的批量填充体验，提高数据录入效率
+* 允许用户快速将单个值复制到多个单元格，无需手动拖拽或复制粘贴
+* 支持撤销/重做操作，确保用户可以安全地进行批量填充操作
 
 ## 三、实现思路
 
@@ -80,9 +80,9 @@ spread.commandManager().register('extendValueCmd', {
 
 ### 3.3 技术栈
 
-- SpreadJS 15.0.0：核心表格控件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格控件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -108,16 +108,16 @@ npm install
 
 ### 5.1 优点
 
-- 提高数据录入效率，一键完成批量填充
-- 支持撤销/重做，操作安全可靠
-- 通过事务机制确保操作的原子性
-- 暂停绘制和计算服务，提升大范围填充的性能
+* 提高数据录入效率，一键完成批量填充
+* 支持撤销/重做，操作安全可靠
+* 通过事务机制确保操作的原子性
+* 暂停绘制和计算服务，提升大范围填充的性能
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现仅支持单个活动单元格的值填充，不支持多单元格模式的智能填充
-- 可以扩展为支持序列填充（如 1, 2, 3...）或公式填充
-- 可以添加对不同数据类型的特殊处理逻辑
+* 当前实现仅支持单个活动单元格的值填充，不支持多单元格模式的智能填充
+* 可以扩展为支持序列填充（如 1, 2, 3...）或公式填充
+* 可以添加对不同数据类型的特殊处理逻辑
 
 ## 六、关键代码片段
 
@@ -151,11 +151,15 @@ spread.resumePaint();         // 恢复绘制并一次性刷新
 
 本示例展示了 SpreadJS 中自定义快捷键和命令的核心技术，开发者可以从中学到：
 
-- 如何重写 CellTypes 的键盘事件处理方法
-- 如何使用 commandManager 注册自定义命令并绑定快捷键
-- 如何使用事务机制实现可撤销的批量操作
-- 如何通过暂停绘制和计算服务优化批量操作性能
+* 如何重写 CellTypes 的键盘事件处理方法
+* 如何使用 commandManager 注册自定义命令并绑定快捷键
+* 如何使用事务机制实现可撤销的批量操作
+* 如何通过暂停绘制和计算服务优化批量操作性能
 
 该方案适用于需要自定义快捷键行为的场景，具有良好的扩展性，可以根据业务需求实现更复杂的自动填充逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/cXG9RaMuakyLozzLfGUa_A/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

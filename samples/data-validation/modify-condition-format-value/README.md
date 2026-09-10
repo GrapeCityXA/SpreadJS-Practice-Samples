@@ -6,9 +6,9 @@
 
 在实际业务场景中，条件格式的判断标准可能需要根据业务规则动态调整。例如：
 
-- 数据分析场景中，需要根据不同的阈值标准高亮显示数据
-- 报表系统中，用户可能需要自定义预警值
-- 动态调整数据可视化的显示规则
+* 数据分析场景中，需要根据不同的阈值标准高亮显示数据
+* 报表系统中，用户可能需要自定义预警值
+* 动态调整数据可视化的显示规则
 
 本示例展示了如何在不重新创建条件格式的情况下，直接修改现有规则的判断基准值。
 
@@ -49,18 +49,19 @@ $("#btn").click(function () {
 ```
 
 关键步骤说明：
-1. `getRules()[0]` - 获取工作表中的第一个条件格式规则对象
-2. `value1(8)` - 将比较基准值从 5 修改为 8
-3. `condition(null)` - 重置条件状态，确保规则正确更新
-4. `clearRule()` - 清除现有的所有条件格式规则
-5. `addRule(rule)` - 将修改后的规则重新添加到工作表
+
+1. `getRules()[0]` \- 获取工作表中的第一个条件格式规则对象
+2. `value1(8)` \- 将比较基准值从 5 修改为 8
+3. `condition(null)` \- 重置条件状态，确保规则正确更新
+4. `clearRule()` \- 清除现有的所有条件格式规则
+5. `addRule(rule)` \- 将修改后的规则重新添加到工作表
 
 ### 3.3 技术栈
 
-- SpreadJS 15.0.0 - 核心表格组件
-- jQuery 3.6.1 - 用于事件绑定
-- TypeScript 4.1.2 - 开发语言
-- SystemJS - 模块加载器
+* SpreadJS 15.0.0 - 核心表格组件
+* jQuery 3.6.1 - 用于事件绑定
+* TypeScript 4.1.2 - 开发语言
+* SystemJS - 模块加载器
 
 ## 四、使用说明
 
@@ -83,17 +84,17 @@ npm install
 
 ### 5.1 优点
 
-- 无需重新创建条件格式，直接修改现有规则，性能更优
-- 代码简洁，通过 API 直接操作规则对象
-- 支持运行时动态调整，适合交互式应用场景
+* 无需重新创建条件格式，直接修改现有规则，性能更优
+* 代码简洁，通过 API 直接操作规则对象
+* 支持运行时动态调整，适合交互式应用场景
 
 ### 5.2 局限性与扩展建议
 
 当前实现通过 `clearRule()` 和 `addRule()` 的方式更新规则，如果工作表中有多个条件格式规则，需要注意：
 
-- `clearRule()` 会清除所有规则，如果只想修改特定规则，需要先保存其他规则
-- 可以扩展为支持修改多个规则的场景
-- 可以添加输入框让用户自定义基准值，而不是硬编码为 8
+* `clearRule()` 会清除所有规则，如果只想修改特定规则，需要先保存其他规则
+* 可以扩展为支持修改多个规则的场景
+* 可以添加输入框让用户自定义基准值，而不是硬编码为 8
 
 扩展建议：
 
@@ -148,11 +149,15 @@ function initSpread(spread) {
 
 本示例展示了 SpreadJS 条件格式的动态修改能力，开发者可以学到：
 
-- 如何使用 `addCellValueRule` 创建基于单元格值的条件格式
-- 如何通过 `getRules()` 获取现有的条件格式规则对象
-- 如何使用 `value1()` 方法修改规则的比较基准值
-- 条件格式规则的更新流程：获取规则 → 修改属性 → 清除旧规则 → 添加新规则
+* 如何使用 `addCellValueRule` 创建基于单元格值的条件格式
+* 如何通过 `getRules()` 获取现有的条件格式规则对象
+* 如何使用 `value1()` 方法修改规则的比较基准值
+* 条件格式规则的更新流程：获取规则 → 修改属性 → 清除旧规则 → 添加新规则
 
 该方案适用于需要根据用户交互或业务逻辑动态调整数据高亮规则的场景，具有良好的扩展性，可以进一步封装为通用的条件格式管理工具。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/dalfaclBxU64SV97yFK0Tw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

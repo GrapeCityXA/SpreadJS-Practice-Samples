@@ -4,10 +4,10 @@
 
 ## 二、解决的问题
 
-- **流程图自动布局**：通过算法自动计算多层级、多分支流程图的节点位置，避免手动调整坐标的繁琐工作
-- **流程状态可视化**：通过颜色区分流程节点的执行状态（灰色未开始、黄色进行中、蓝色已完成），直观展示业务进度
-- **数据与视图分离**：使用 JSON 数据模型描述流程结构，通过代码自动渲染为可视化图形，便于维护和扩展
-- **流程图导出**：支持将流程图导出为高质量图片，方便分享和存档
+* **流程图自动布局**：通过算法自动计算多层级、多分支流程图的节点位置，避免手动调整坐标的繁琐工作
+* **流程状态可视化**：通过颜色区分流程节点的执行状态（灰色未开始、黄色进行中、蓝色已完成），直观展示业务进度
+* **数据与视图分离**：使用 JSON 数据模型描述流程结构，通过代码自动渲染为可视化图形，便于维护和扩展
+* **流程图导出**：支持将流程图导出为高质量图片，方便分享和存档
 
 ## 三、实现思路
 
@@ -94,6 +94,7 @@ function calcPosition(info) {
 ```
 
 算法核心思路：
+
 1. 从起始节点递归计算最大层级深度
 2. 水平方向按层级依次排列，间距固定
 3. 垂直方向根据兄弟节点数量和父节点位置动态分布
@@ -212,12 +213,12 @@ spread.print();
 
 ### 3.3 技术栈
 
-- SpreadJS 16.0.1（核心表格引擎）
-- @grapecity/spread-sheets-shapes（形状绘制）
-- @grapecity/spread-sheets-designer（设计器组件）
-- @grapecity/spread-sheets-print（打印功能）
-- SystemJS（模块加载）
-- TypeScript 4.1.2（类型支持）
+* SpreadJS 16.0.1（核心表格引擎）
+* @grapecity/spread-sheets-shapes（形状绘制）
+* @grapecity/spread-sheets-designer（设计器组件）
+* @grapecity/spread-sheets-print（打印功能）
+* SystemJS（模块加载）
+* TypeScript 4.1.2（类型支持）
 
 ## 四、使用说明
 
@@ -240,19 +241,19 @@ npm install
 
 ### 5.1 优点
 
-- **智能布局**：自动计算多层级、多分支流程图的节点位置，支持复杂业务流程
-- **数据驱动**：通过修改 JSON 数据即可快速调整流程结构，无需手动绘制
-- **状态可视化**：三种颜色直观展示流程进度，支持撤销/重做操作
-- **高质量导出**：通过 qualityFactor 参数控制导出图片质量，适合文档归档
+* **智能布局**：自动计算多层级、多分支流程图的节点位置，支持复杂业务流程
+* **数据驱动**：通过修改 JSON 数据即可快速调整流程结构，无需手动绘制
+* **状态可视化**：三种颜色直观展示流程进度，支持撤销/重做操作
+* **高质量导出**：通过 qualityFactor 参数控制导出图片质量，适合文档归档
 
 ### 5.2 局限性与扩展建议
 
-- **布局算法限制**：当前算法适用于树状结构流程图，对于包含循环或交叉连接的复杂图结构需要优化
-- **扩展建议**：
-  - 支持更多形状类型（圆形、六边形等）
-  - 添加流程节点的右键菜单功能
-  - 实现流程图的 JSON 导入/导出功能
-  - 支持流程节点的条件样式配置
+* **布局算法限制**：当前算法适用于树状结构流程图，对于包含循环或交叉连接的复杂图结构需要优化
+* **扩展建议**：
+    * 支持更多形状类型（圆形、六边形等）
+    * 添加流程节点的右键菜单功能
+    * 实现流程图的 JSON 导入/导出功能
+    * 支持流程节点的条件样式配置
 
 ## 六、关键代码片段
 
@@ -331,4 +332,8 @@ function addDecisionText() {
 
 该方案适用于需要在电子表格中嵌入流程图、组织架构图、思维导图等可视化图形的场景，通过修改数据模型即可快速适配不同业务需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/A0C4tHagwECH8hw67YZvHw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

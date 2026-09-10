@@ -8,9 +8,9 @@
 
 在实际业务场景中，开发者经常需要在 SpreadJS 的标准数据结构之外存储额外的业务信息，例如：
 
-- 为特定单元格或样式添加业务标识（如审批状态、数据来源标记）
-- 在导出/导入工作簿时保留自定义元数据
-- 实现跨系统的数据交换时携带扩展字段
+* 为特定单元格或样式添加业务标识（如审批状态、数据来源标记）
+* 在导出/导入工作簿时保留自定义元数据
+* 实现跨系统的数据交换时携带扩展字段
 
 SpreadJS 默认的 `toJSON` 方法只会序列化标准属性，自定义属性会被忽略。本示例通过重写原型方法解决了这一限制，使得自定义数据能够完整地参与序列化和反序列化流程。
 
@@ -58,9 +58,10 @@ GC.Spread.Sheets.Style.prototype.toJSON = function() {
 ```
 
 关键点：
-- 使用 `apply` 方法确保 `this` 上下文正确传递
-- 在原始 JSON 对象基础上添加自定义属性
-- 返回扩展后的 JSON 对象
+
+* 使用 `apply` 方法确保 `this` 上下文正确传递
+* 在原始 JSON 对象基础上添加自定义属性
+* 返回扩展后的 JSON 对象
 
 #### 触发序列化并验证结果
 
@@ -75,9 +76,9 @@ sheet.setValue(3, 3, fullJson);
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0 - 核心表格控件
-- SystemJS 0.19.22 - 模块加载器
-- TypeScript 4.1.2 - 类型支持（可选）
+* SpreadJS 15.0.0 - 核心表格控件
+* SystemJS 0.19.22 - 模块加载器
+* TypeScript 4.1.2 - 类型支持（可选）
 
 ## 四、使用说明
 
@@ -103,21 +104,23 @@ npx http-server -p 8080
 
 ### 5.1 优点
 
-- 无侵入性扩展：通过原型链重写实现，不修改 SpreadJS 源码
-- 向后兼容：保留原有 `toJSON` 方法的所有功能
-- 灵活性高：可以为任意 SpreadJS 对象添加自定义序列化逻辑
-- 易于维护：代码结构清晰，扩展点明确
+* 无侵入性扩展：通过原型链重写实现，不修改 SpreadJS 源码
+* 向后兼容：保留原有 `toJSON` 方法的所有功能
+* 灵活性高：可以为任意 SpreadJS 对象添加自定义序列化逻辑
+* 易于维护：代码结构清晰，扩展点明确
 
 ### 5.2 局限性与扩展建议
 
 当前实现的局限性：
-- 只重写了 `Style` 对象的 `toJSON` 方法，如需为其他对象（如 `Cell`、`Sheet`）添加自定义属性，需要分别重写
-- 没有实现对应的 `fromJSON` 方法，导入 JSON 时自定义属性不会自动恢复到对象上
+
+* 只重写了 `Style` 对象的 `toJSON` 方法，如需为其他对象（如 `Cell`、`Sheet`）添加自定义属性，需要分别重写
+* 没有实现对应的 `fromJSON` 方法，导入 JSON 时自定义属性不会自动恢复到对象上
 
 扩展建议：
-- 配套实现 `fromJSON` 方法，确保序列化和反序列化的完整性
-- 建立统一的自定义属性命名规范（如使用 `custom_` 前缀），避免与未来 SpreadJS 版本的新增属性冲突
-- 考虑使用 TypeScript 接口扩展来获得类型提示支持
+
+* 配套实现 `fromJSON` 方法，确保序列化和反序列化的完整性
+* 建立统一的自定义属性命名规范（如使用 `custom_` 前缀），避免与未来 SpreadJS 版本的新增属性冲突
+* 考虑使用 TypeScript 接口扩展来获得类型提示支持
 
 ## 六、关键代码片段
 
@@ -146,16 +149,21 @@ GC.Spread.Sheets.Style.prototype.toJSON = function() {
 
 本示例展示了 SpreadJS 高度可扩展的架构设计，通过原型链方法重写，开发者可以在不修改源码的前提下实现深度定制。这种技术在以下场景中特别有价值：
 
-- 需要在标准数据结构中嵌入业务元数据
-- 实现自定义的数据持久化方案
-- 与后端系统进行复杂数据交换时携带额外信息
+* 需要在标准数据结构中嵌入业务元数据
+* 实现自定义的数据持久化方案
+* 与后端系统进行复杂数据交换时携带额外信息
 
 开发者可以从中学到：
-- JavaScript 原型链的实际应用
-- 装饰器模式在方法扩展中的使用
-- SpreadJS 序列化机制的工作原理
-- 如何在不破坏原有功能的前提下扩展第三方库
+
+* JavaScript 原型链的实际应用
+* 装饰器模式在方法扩展中的使用
+* SpreadJS 序列化机制的工作原理
+* 如何在不破坏原有功能的前提下扩展第三方库
 
 该方案适用于需要在 SpreadJS 标准数据模型之外存储额外信息的所有场景，具有良好的扩展性和可维护性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/4G2u_JKd9kuHZ4ItDs4tag/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

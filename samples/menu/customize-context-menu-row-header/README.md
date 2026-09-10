@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **条件化菜单显示**：在不同的行位置右键点击时，显示不同的菜单选项，避免用户在不允许的区域执行操作
-- **业务规则约束**：通过代码逻辑控制特定行的操作权限，例如只允许在第 3 行插入新行
-- **用户体验优化**：通过隐藏不可用的菜单项，减少用户误操作，提供更清晰的交互提示
+* **条件化菜单显示**：在不同的行位置右键点击时，显示不同的菜单选项，避免用户在不允许的区域执行操作
+* **业务规则约束**：通过代码逻辑控制特定行的操作权限，例如只允许在第 3 行插入新行
+* **用户体验优化**：通过隐藏不可用的菜单项，减少用户误操作，提供更清晰的交互提示
 
 ## 三、实现思路
 
@@ -52,9 +52,10 @@ designer.setConfig(config)
 通过 `visibleContext` 属性设置菜单项的显示条件。该属性支持表达式字符串，可以组合内置条件（如 `ClickRowHeader`）和自定义变量（如 `insertRowActive`）。
 
 关键技术点：
-- 使用 `designer.setData(key, value)` 设置自定义条件变量
-- 在 `SelectionChanged` 事件中根据当前选中行动态更新变量值
-- 调用 `designer.refresh()` 刷新菜单状态
+
+* 使用 `designer.setData(key, value)` 设置自定义条件变量
+* 在 `SelectionChanged` 事件中根据当前选中行动态更新变量值
+* 调用 `designer.refresh()` 刷新菜单状态
 
 ```javascript
 let insertRowActive = "insertRowActive"
@@ -71,10 +72,10 @@ spread.bind(GC.Spread.Sheets.Events.SelectionChanged,function(e,info){
 
 ### 3.3 技术栈
 
-- **SpreadJS 核心库**：v16.0.1（`@grapecity/spread-sheets`）
-- **SpreadJS Designer**：v16.0.1（`@grapecity/spread-sheets-designer`）
-- **模块加载器**：SystemJS v0.19.22
-- **开发语言**：JavaScript（ES6 模块语法）
+* **SpreadJS 核心库**：v16.0.1（`@grapecity/spread-sheets`）
+* **SpreadJS Designer**：v16.0.1（`@grapecity/spread-sheets-designer`）
+* **模块加载器**：SystemJS v0.19.22
+* **开发语言**：JavaScript（ES6 模块语法）
 
 ## 四、使用说明
 
@@ -100,15 +101,15 @@ npm install
 
 ### 5.1 优点
 
-- **灵活的条件控制**：通过表达式字符串组合多个条件，支持复杂的业务逻辑判断
-- **实时响应**：利用 `SelectionChanged` 事件实时更新菜单状态，用户体验流畅
-- **代码简洁**：通过 Designer 的配置机制，无需手动管理菜单 DOM 结构
-- **易于扩展**：可以添加更多自定义条件变量，实现更复杂的权限控制逻辑
+* **灵活的条件控制**：通过表达式字符串组合多个条件，支持复杂的业务逻辑判断
+* **实时响应**：利用 `SelectionChanged` 事件实时更新菜单状态，用户体验流畅
+* **代码简洁**：通过 Designer 的配置机制，无需手动管理菜单 DOM 结构
+* **易于扩展**：可以添加更多自定义条件变量，实现更复杂的权限控制逻辑
 
 ### 5.2 局限性与扩展建议
 
-- **当前实现仅针对单行判断**：如果需要支持多行区域的复杂规则（如连续多行、不连续行），需要扩展条件判断逻辑
-- **扩展建议**：可以将行索引判断逻辑抽象为配置对象，支持通过配置文件定义允许操作的行范围，提高代码的可维护性
+* **当前实现仅针对单行判断**：如果需要支持多行区域的复杂规则（如连续多行、不连续行），需要扩展条件判断逻辑
+* **扩展建议**：可以将行索引判断逻辑抽象为配置对象，支持通过配置文件定义允许操作的行范围，提高代码的可维护性
 
 ## 六、关键代码片段
 
@@ -131,11 +132,15 @@ execute:(context) => {
 
 本示例展示了 SpreadJS Designer 中自定义右键菜单的高级用法，核心价值在于：
 
-- 掌握 `visibleContext` 表达式的使用方法，实现菜单项的条件显示
-- 学习如何通过 `designer.setData()` 和 `designer.refresh()` 动态控制菜单状态
-- 理解 `SelectionChanged` 事件与菜单系统的联动机制
-- 掌握自定义命令的定义和注册流程
+* 掌握 `visibleContext` 表达式的使用方法，实现菜单项的条件显示
+* 学习如何通过 `designer.setData()` 和 `designer.refresh()` 动态控制菜单状态
+* 理解 `SelectionChanged` 事件与菜单系统的联动机制
+* 掌握自定义命令的定义和注册流程
 
 该方案适用于需要根据单元格位置、数据状态或用户权限动态调整菜单选项的场景，具有良好的扩展性。开发者可以在此基础上扩展更多自定义条件变量，实现更复杂的业务规则控制。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/_zhKUsYJ_E2OY7kCegDr8w/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

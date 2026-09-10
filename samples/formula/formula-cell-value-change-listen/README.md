@@ -1,3 +1,5 @@
+# formula-cell-value-change-listen
+
 ### 问题：SpreadJS如何监听公式单元格值的变化
 
 ***
@@ -42,4 +44,8 @@ spread.bind(GC.Spread.Sheets.Events.ValueChanged, function (e, info) {
 最终效果如下：
 ![](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/GIF%202026-3-26%2011-19-23-20260326.503a4f.gif?width=400)
 
-### 在线Demo（[全屏打开](https://jscodemine.grapecity.com/share/e5HaL2JcVk__PNazwu_zbg/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

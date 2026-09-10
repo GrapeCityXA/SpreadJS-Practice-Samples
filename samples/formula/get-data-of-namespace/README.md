@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **区域引用简化**：通过命名空间可以用有意义的名称代替复杂的单元格引用（如 `$C$6:$E$12`），使代码更易理解
-- **数据区域管理**：为特定数据区域定义名称后，可以方便地获取该区域的位置、大小和内容信息
-- **动态数据提取**：通过命名空间对象可以动态计算区域范围，实现灵活的数据读取操作
+* **区域引用简化**：通过命名空间可以用有意义的名称代替复杂的单元格引用（如 `$C$6:$E$12`），使代码更易理解
+* **数据区域管理**：为特定数据区域定义名称后，可以方便地获取该区域的位置、大小和内容信息
+* **动态数据提取**：通过命名空间对象可以动态计算区域范围，实现灵活的数据读取操作
 
 ## 三、实现思路
 
@@ -58,10 +58,11 @@ sheet.addCustomName("name1", "$C$6:$E$12", sheet.getActiveRowIndex(), sheet.getA
 ```
 
 参数说明：
-- 第一个参数：命名空间的名称（`name1`）
-- 第二个参数：引用的单元格区域（`$C$6:$E$12`）
-- 第三、四个参数：基准行列索引
-- 第五个参数：命名空间的注释描述（`test1`）
+
+* 第一个参数：命名空间的名称（`name1`）
+* 第二个参数：引用的单元格区域（`$C$6:$E$12`）
+* 第三、四个参数：基准行列索引
+* 第五个参数：命名空间的注释描述（`test1`）
 
 ### 3.4 获取命名空间信息并解析区域范围
 
@@ -100,9 +101,9 @@ sheet.getCell(14, 2).wordWrap(true);
 
 ### 3.6 技术栈
 
-- SpreadJS v15.2.5：核心电子表格组件库
-- SystemJS v0.19.22：模块加载器
-- TypeScript v4.1.2：开发语言支持
+* SpreadJS v15.2.5：核心电子表格组件库
+* SystemJS v0.19.22：模块加载器
+* TypeScript v4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -120,25 +121,25 @@ npm install
 1. 打开示例页面后，工作表会自动加载并显示初始数据
 2. 观察 C6:E12 区域的蓝色虚线边框，这是被命名为 `name1` 的区域
 3. 在 E 列可以看到命名空间的详细信息：
-   - 起始行号（row）
-   - 起始列号（col）
-   - 行数（rowCount）
-   - 列数（colCount）
+    * 起始行号（row）
+    * 起始列号（col）
+    * 行数（rowCount）
+    * 列数（colCount）
 4. 在第 15 行可以看到命名区域内的完整数据内容（JSON 格式）
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- **代码可读性强**：使用有意义的名称代替单元格引用，代码更易理解和维护
-- **灵活的数据访问**：通过命名空间对象可以动态获取区域的位置和大小信息
-- **便于数据管理**：为重要数据区域命名后，可以在公式、验证规则等场景中直接引用
+* **代码可读性强**：使用有意义的名称代替单元格引用，代码更易理解和维护
+* **灵活的数据访问**：通过命名空间对象可以动态获取区域的位置和大小信息
+* **便于数据管理**：为重要数据区域命名后，可以在公式、验证规则等场景中直接引用
 
 ### 5.2 扩展建议
 
-- 可以扩展为工作簿级别的命名空间（使用 `spread.addCustomName`），实现跨工作表引用
-- 可以结合公式功能，在公式中直接使用命名空间名称进行计算
-- 可以实现命名空间的动态更新，当数据区域变化时自动调整命名范围
+* 可以扩展为工作簿级别的命名空间（使用 `spread.addCustomName`），实现跨工作表引用
+* 可以结合公式功能，在公式中直接使用命名空间名称进行计算
+* 可以实现命名空间的动态更新，当数据区域变化时自动调整命名范围
 
 ## 六、关键代码片段
 
@@ -172,6 +173,8 @@ let nameData = sheet.getArray(row, col, rowCount, colCount);
 
 该方案适用于需要频繁引用固定数据区域的场景，特别是在构建复杂公式、数据验证规则或动态报表时，可以显著提高代码的可维护性和可读性。命名空间功能也为后续的数据管理和自动化操作提供了良好的扩展基础。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Get%20namespace%20content.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/VdcTCzhz0UqsgXBmlBZSEQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

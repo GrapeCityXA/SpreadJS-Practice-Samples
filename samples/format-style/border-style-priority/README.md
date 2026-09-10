@@ -1,3 +1,5 @@
+# border-style-priority
+
 ### 问题：为什么我用代码设置某个单元格边框样式后，会有部分样式不生效？
 
 ***
@@ -25,4 +27,8 @@
 以上结论在SpreadJS中和Excel是一样的。
 用类似的方法，我们再来判断边框关于位置的优先级，会发现Excel和SpreadJS略有不同，请读者自行尝试。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/CJzxCf3eIEeFs-0q1LOQFw/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

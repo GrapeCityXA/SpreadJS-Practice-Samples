@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **默认拖拽行为的局限性**：SpreadJS 默认的拖拽行为在移动列时会覆盖目标位置的数据，这在某些场景下不符合用户预期
-- **插入式移动需求**：用户希望拖拽列时能够像插入操作一样，将目标位置及后续的列向右推移，而不是直接替换
-- **提升用户体验**：通过自定义拖拽逻辑，使列的移动操作更加灵活和安全
+* **默认拖拽行为的局限性**：SpreadJS 默认的拖拽行为在移动列时会覆盖目标位置的数据，这在某些场景下不符合用户预期
+* **插入式移动需求**：用户希望拖拽列时能够像插入操作一样，将目标位置及后续的列向右推移，而不是直接替换
+* **提升用户体验**：通过自定义拖拽逻辑，使列的移动操作更加灵活和安全
 
 ## 三、实现思路
 
@@ -27,10 +27,11 @@ GC.Spread.Sheets.Commands.dragDrop.execute = function (context, option, isUndo) 
 ```
 
 **实现原理**：
-- `option.fromRow === -1` 表示拖拽的是整列（行索引为 -1）
-- `option.fromColumn === -1` 表示拖拽的是整行（列索引为 -1）
-- 设置 `option.insert = true` 后，拖拽操作会以插入模式执行，而不是覆盖模式
-- 使用 `call(this, ...)` 确保原始方法在正确的上下文中执行
+
+* `option.fromRow === -1` 表示拖拽的是整列（行索引为 -1）
+* `option.fromColumn === -1` 表示拖拽的是整行（列索引为 -1）
+* 设置 `option.insert = true` 后，拖拽操作会以插入模式执行，而不是覆盖模式
+* 使用 `call(this, ...)` 确保原始方法在正确的上下文中执行
 
 #### 初始化工作簿和数据
 
@@ -48,9 +49,9 @@ sheet.setValue(0, 3, 3);
 
 ### 3.2 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
-- **SystemJS**: 0.19.22 - 模块加载器
-- **TypeScript**: 4.1.2 - 类型支持（虽然源码使用 JavaScript）
+* **@grapecity/spread-sheets**: 15.0.0 - SpreadJS 核心库
+* **SystemJS**: 0.19.22 - 模块加载器
+* **TypeScript**: 4.1.2 - 类型支持（虽然源码使用 JavaScript）
 
 ## 四、使用说明
 
@@ -75,15 +76,15 @@ npm install
 
 ### 5.1 优点
 
-- **非破坏性操作**：拖拽移动列时不会覆盖目标位置的数据，保证数据安全
-- **实现简洁**：仅需重写一个命令方法，代码量少，易于维护
-- **兼容性好**：基于 SpreadJS 内置命令扩展，不影响其他功能
-- **用户体验优化**：符合用户对"移动"操作的直觉理解
+* **非破坏性操作**：拖拽移动列时不会覆盖目标位置的数据，保证数据安全
+* **实现简洁**：仅需重写一个命令方法，代码量少，易于维护
+* **兼容性好**：基于 SpreadJS 内置命令扩展，不影响其他功能
+* **用户体验优化**：符合用户对"移动"操作的直觉理解
 
 ### 5.2 局限性与扩展建议
 
-- **全局影响**：当前实现会影响所有工作簿实例的拖拽行为，如果需要针对特定工作簿或工作表定制，需要在命令执行时增加条件判断
-- **扩展方向**：可以添加配置选项，允许用户在运行时切换插入模式和覆盖模式
+* **全局影响**：当前实现会影响所有工作簿实例的拖拽行为，如果需要针对特定工作簿或工作表定制，需要在命令执行时增加条件判断
+* **扩展方向**：可以添加配置选项，允许用户在运行时切换插入模式和覆盖模式
 
 ## 六、关键代码片段
 
@@ -118,4 +119,8 @@ GC.Spread.Sheets.Commands.dragDrop.execute = function (context, option, isUndo) 
 
 该方案适用于需要定制拖拽行为的场景，特别是在数据编辑类应用中，可以有效防止用户误操作导致的数据覆盖问题。开发者可以基于此思路扩展更多自定义命令逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/-y0Bh7YlkUePIjc14YSejw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

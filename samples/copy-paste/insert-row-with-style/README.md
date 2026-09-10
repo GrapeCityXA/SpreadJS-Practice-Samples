@@ -8,9 +8,9 @@
 
 在实际的电子表格应用中，用户经常需要在已有数据中插入新行。默认情况下，新插入的行是空白的，没有任何样式，这会破坏原有表格的视觉连续性。本示例解决了以下问题：
 
-- **样式断层问题**：插入新行后，原有的背景色、边框等样式会出现断层
-- **手动调整成本**：用户需要手动为新行设置样式，增加操作步骤
-- **格式一致性**：在具有复杂样式（如交替行颜色、单元格按钮）的表格中，保持格式统一
+* **样式断层问题**：插入新行后，原有的背景色、边框等样式会出现断层
+* **手动调整成本**：用户需要手动为新行设置样式，增加操作步骤
+* **格式一致性**：在具有复杂样式（如交替行颜色、单元格按钮）的表格中，保持格式统一
 
 ## 三、实现思路
 
@@ -52,23 +52,24 @@ sheet.bind(GC.Spread.Sheets.Events.RowChanged, function (sender, info) {
 ```
 
 **实现原理**：
-- 监听 `RowChanged` 事件，该事件在行发生变化时触发
-- 通过 `info.propertyName == "addRows"` 判断是否为插入行操作
-- 使用 `copyTo` 方法将插入位置下方行的样式复制到新插入的行
-- `copyTo` 参数说明：
-  - `info.row + info.count`：源行位置（插入位置的下一行）
-  - `0`：源列起始位置
-  - `info.row`：目标行位置（新插入的行）
-  - `0`：目标列起始位置
-  - `info.count`：复制的行数
-  - `sheet.getColumnCount()`：复制的列数
-  - `GC.Spread.Sheets.CopyToOptions.style`：仅复制样式，不复制数据
+
+* 监听 `RowChanged` 事件，该事件在行发生变化时触发
+* 通过 `info.propertyName == "addRows"` 判断是否为插入行操作
+* 使用 `copyTo` 方法将插入位置下方行的样式复制到新插入的行
+* `copyTo` 参数说明：
+    * `info.row + info.count`：源行位置（插入位置的下一行）
+    * `0`：源列起始位置
+    * `info.row`：目标行位置（新插入的行）
+    * `0`：目标列起始位置
+    * `info.count`：复制的行数
+    * `sheet.getColumnCount()`：复制的列数
+    * `GC.Spread.Sheets.CopyToOptions.style`：仅复制样式，不复制数据
 
 ### 3.3 技术栈
 
-- **SpreadJS**: 15.0.0 - 核心电子表格组件
-- **SystemJS**: 0.19.22 - 模块加载器
-- **TypeScript**: 4.1.2 - 开发语言支持
+* **SpreadJS**: 15.0.0 - 核心电子表格组件
+* **SystemJS**: 0.19.22 - 模块加载器
+* **TypeScript**: 4.1.2 - 开发语言支持
 
 ## 四、使用说明
 
@@ -92,20 +93,22 @@ npm install
 
 ### 5.1 优点
 
-- **自动化样式维护**：无需手动设置新行样式，提升用户体验
-- **样式完整性**：不仅复制背景色，还包括单元格按钮、边框等所有样式属性
-- **实时响应**：通过事件监听机制，插入行时立即触发样式复制
-- **灵活可控**：仅复制样式不复制数据，保持数据独立性
+* **自动化样式维护**：无需手动设置新行样式，提升用户体验
+* **样式完整性**：不仅复制背景色，还包括单元格按钮、边框等所有样式属性
+* **实时响应**：通过事件监听机制，插入行时立即触发样式复制
+* **灵活可控**：仅复制样式不复制数据，保持数据独立性
 
 ### 5.2 局限性与扩展建议
 
 **局限性**：
-- 当前实现总是复制插入位置下方行的样式，如果需要更复杂的样式继承逻辑（如根据上下文智能选择样式源），需要额外的判断逻辑
+
+* 当前实现总是复制插入位置下方行的样式，如果需要更复杂的样式继承逻辑（如根据上下文智能选择样式源），需要额外的判断逻辑
 
 **扩展建议**：
-- 可以根据插入位置的上下文（如是否在表头、数据区、汇总区）选择不同的样式复制策略
-- 可以添加配置选项，让用户选择是否启用自动样式复制功能
-- 可以扩展为复制公式、数据验证等其他单元格属性
+
+* 可以根据插入位置的上下文（如是否在表头、数据区、汇总区）选择不同的样式复制策略
+* 可以添加配置选项，让用户选择是否启用自动样式复制功能
+* 可以扩展为复制公式、数据验证等其他单元格属性
 
 ## 六、关键代码片段
 
@@ -135,16 +138,22 @@ sheet.bind(GC.Spread.Sheets.Events.RowChanged, function (sender, info) {
 本示例展示了如何利用 SpreadJS 的事件机制和样式复制 API 实现插入行时自动复制样式的功能。通过监听 `RowChanged` 事件并结合 `copyTo` 方法，开发者可以轻松实现样式的自动继承，提升用户在编辑表格时的体验。
 
 **学习要点**：
-- SpreadJS 的 `RowChanged` 事件监听机制
-- `copyTo` 方法的参数配置和使用场景
-- `CopyToOptions.style` 选项实现仅复制样式的功能
-- 如何通过事件信息（`info.row`、`info.count`）定位操作位置
+
+* SpreadJS 的 `RowChanged` 事件监听机制
+* `copyTo` 方法的参数配置和使用场景
+* `CopyToOptions.style` 选项实现仅复制样式的功能
+* 如何通过事件信息（`info.row`、`info.count`）定位操作位置
 
 **适用场景**：
-- 需要维护表格格式一致性的数据录入场景
-- 具有复杂样式设置的报表编辑器
-- 需要自动化样式管理的在线表格应用
+
+* 需要维护表格格式一致性的数据录入场景
+* 具有复杂样式设置的报表编辑器
+* 需要自动化样式管理的在线表格应用
 
 该方案具有良好的扩展性，开发者可以根据实际需求调整样式复制的逻辑和范围，实现更加智能的样式管理功能。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/srxkmHJycEKrworCG1N4VQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

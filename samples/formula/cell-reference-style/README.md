@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **公式依赖关系可视化**：在包含复杂公式的工作表中，用户往往难以快速识别某个计算结果依赖哪些单元格的数据，本示例通过颜色边框标注解决了这一痛点
-- **数据审计与追踪**：在财务报表、数据分析等场景中，需要追溯计算结果的数据来源，该功能提供了直观的可视化追踪方式
-- **提升用户体验**：通过简单的单击操作即可查看公式引用关系，无需手动查找或记忆公式内容
+* **公式依赖关系可视化**：在包含复杂公式的工作表中，用户往往难以快速识别某个计算结果依赖哪些单元格的数据，本示例通过颜色边框标注解决了这一痛点
+* **数据审计与追踪**：在财务报表、数据分析等场景中，需要追溯计算结果的数据来源，该功能提供了直观的可视化追踪方式
+* **提升用户体验**：通过简单的单击操作即可查看公式引用关系，无需手动查找或记忆公式内容
 
 ## 三、实现思路
 
@@ -23,10 +23,11 @@ var childNodes = sheet.getPrecedents(args.row, args.col);
 ```
 
 返回的 `childNodes` 数组中每个元素包含：
-- `row`：引用单元格的行索引
-- `col`：引用单元格的列索引
-- `rowCount`：引用区域的行数
-- `colCount`：引用区域的列数
+
+* `row`：引用单元格的行索引
+* `col`：引用单元格的列索引
+* `rowCount`：引用区域的行数
+* `colCount`：引用区域的列数
 
 #### 监听单元格点击事件
 
@@ -87,9 +88,9 @@ if (childNodes.length > 0) {
 
 ### 3.2 技术栈
 
-- **@grapecity/spread-sheets**: 17.0.8 - SpreadJS 核心库，提供电子表格功能和公式追踪 API
-- **SystemJS**: 0.19.22 - 模块加载器，用于动态加载 ES6 模块
-- **systemjs-plugin-babel**: 0.0.25 - Babel 插件，支持 ES6 语法转译
+* **@grapecity/spread-sheets**: 17.0.8 - SpreadJS 核心库，提供电子表格功能和公式追踪 API
+* **SystemJS**: 0.19.22 - 模块加载器，用于动态加载 ES6 模块
+* **systemjs-plugin-babel**: 0.0.25 - Babel 插件，支持 ES6 语法转译
 
 ## 四、使用说明
 
@@ -114,16 +115,16 @@ npm install
 
 ### 5.1 优点
 
-- **直观可视化**：通过颜色边框直观展示公式引用关系，无需查看公式内容即可理解数据依赖
-- **交互简单**：仅需单击操作即可触发追踪，学习成本低
-- **性能优化**：使用 suspendPaint/resumePaint 机制，即使在大量单元格标注时也能保持流畅
-- **多色区分**：支持最多 5 种颜色标注不同的引用单元格，便于区分多个数据源
+* **直观可视化**：通过颜色边框直观展示公式引用关系，无需查看公式内容即可理解数据依赖
+* **交互简单**：仅需单击操作即可触发追踪，学习成本低
+* **性能优化**：使用 suspendPaint/resumePaint 机制，即使在大量单元格标注时也能保持流畅
+* **多色区分**：支持最多 5 种颜色标注不同的引用单元格，便于区分多个数据源
 
 ### 5.2 局限性与扩展建议
 
-- **颜色数量限制**：当前仅支持 5 种颜色，如果公式引用超过 5 个单元格或区域，颜色会循环使用，可能导致混淆。建议扩展颜色数组或使用其他视觉标识（如数字标签）
-- **仅支持前导追踪**：当前仅实现了 `getPrecedents()` 方法追踪公式引用的单元格，未实现反向追踪（即查看哪些单元格引用了当前单元格）。可通过 `getDependents()` 方法实现双向追踪
-- **边框样式单一**：所有边框使用相同的 medium 线型，可考虑根据引用层级或类型使用不同线型（虚线、点线等）增强表现力
+* **颜色数量限制**：当前仅支持 5 种颜色，如果公式引用超过 5 个单元格或区域，颜色会循环使用，可能导致混淆。建议扩展颜色数组或使用其他视觉标识（如数字标签）
+* **仅支持前导追踪**：当前仅实现了 `getPrecedents()` 方法追踪公式引用的单元格，未实现反向追踪（即查看哪些单元格引用了当前单元格）。可通过 `getDependents()` 方法实现双向追踪
+* **边框样式单一**：所有边框使用相同的 medium 线型，可考虑根据引用层级或类型使用不同线型（虚线、点线等）增强表现力
 
 ## 六、关键代码片段
 
@@ -176,11 +177,15 @@ sheet.clearSelection();
 
 本示例展示了 SpreadJS 公式追踪功能的实际应用，通过简洁的代码实现了公式引用关系的可视化标注。开发者可以从中学到：
 
-- SpreadJS 公式追踪 API（`getPrecedents`）的使用方法
-- 单元格事件监听与处理机制
-- 动态修改单元格样式（边框）的技巧
-- 性能优化技术（suspendPaint/resumePaint）
+* SpreadJS 公式追踪 API（`getPrecedents`）的使用方法
+* 单元格事件监听与处理机制
+* 动态修改单元格样式（边框）的技巧
+* 性能优化技术（suspendPaint/resumePaint）
 
 该方案适用于需要数据审计、公式调试、用户培训等场景，可进一步扩展为支持多层级追踪、反向依赖查询、导出追踪报告等高级功能。通过结合 SpreadJS 的其他 API（如 `getDependents`、条件格式、自定义函数等），可以构建更强大的公式分析工具。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/LJER60VnyUem4XZ7S_vDmA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -1,3 +1,5 @@
+# forbid-drag-cell
+
 ### 问题：如何禁止单元格移动/拖动
 
 #### 背景：
@@ -29,4 +31,8 @@ sheet.bind(GC.Spread.Sheets.Events.DragDropBlock, function (e, args) {
 * [allowUserDragDrop](https://demo.grapecity.com.cn/spreadjs/help/api/interfaces/GC.Spread.Sheets.IWorkBookDefaultOptions#allowuserdragdrop){:target="_blank"}
 * [DragDropBlock](https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Events#dragdropblock){:target="_blank"}
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/TTmosJOu00ynh9m1kzkQNQ/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **筛选范围不符合预期**：SpreadJS 默认筛选仅作用于选中区域，而用户期望筛选整列数据
-- **与 WPS/Excel 行为不一致**：在 WPS 或 Excel 中，筛选会自动扩展到数据区域的末尾，本示例实现了这一行为
-- **提升用户体验**：避免用户手动选择大范围区域才能进行筛选，简化操作流程
+* **筛选范围不符合预期**：SpreadJS 默认筛选仅作用于选中区域，而用户期望筛选整列数据
+* **与 WPS/Excel 行为不一致**：在 WPS 或 Excel 中，筛选会自动扩展到数据区域的末尾，本示例实现了这一行为
+* **提升用户体验**：避免用户手动选择大范围区域才能进行筛选，简化操作流程
 
 ## 三、实现思路
 
@@ -46,6 +46,7 @@ if (newFilterDataCommand) {
 ```
 
 关键逻辑：
+
 1. 保存原始选区信息
 2. 临时扩展选区至工作表末尾（`getRowCount() - selection.row`）
 3. 执行原始筛选命令
@@ -99,9 +100,9 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container", desi
 
 ### 3.2 技术栈
 
-- SpreadJS v17.0.8（核心表格引擎）
-- SpreadJS Designer v17.0.8（设计器组件）
-- SystemJS 0.19.22（模块加载器）
+* SpreadJS v17.0.8（核心表格引擎）
+* SpreadJS Designer v17.0.8（设计器组件）
+* SystemJS 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -123,23 +124,24 @@ npm install
 5. 观察筛选列表中显示的数据项
 
 **对比测试**：
-- 在未修改的 SpreadJS 中，筛选列表只会显示 B2:B3 的值（1 和 2）
-- 在本示例中，筛选列表会显示 B 列所有数据（1, 2, 3, 4, 5, 6）
+
+* 在未修改的 SpreadJS 中，筛选列表只会显示 B2:B3 的值（1 和 2）
+* 在本示例中，筛选列表会显示 B 列所有数据（1, 2, 3, 4, 5, 6）
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- **行为一致性**：与 WPS 和 Excel 的筛选逻辑保持一致，降低用户学习成本
-- **操作便捷**：无需手动选择大范围区域，点击任意单元格即可筛选整列
-- **支持撤销**：自定义命令实现了完整的撤销/重做机制
-- **无侵入性**：通过命令重写实现，不影响 SpreadJS 的其他功能
+* **行为一致性**：与 WPS 和 Excel 的筛选逻辑保持一致，降低用户学习成本
+* **操作便捷**：无需手动选择大范围区域，点击任意单元格即可筛选整列
+* **支持撤销**：自定义命令实现了完整的撤销/重做机制
+* **无侵入性**：通过命令重写实现，不影响 SpreadJS 的其他功能
 
 ### 5.2 局限性与扩展建议
 
-- **固定列宽**：当前实现固定筛选宽度为 1 列，如需支持多列筛选，需调整 `Range` 的 `colCount` 参数
-- **性能考虑**：对于超大数据集（数万行），扩展到工作表末尾可能影响性能，建议根据实际数据范围动态计算筛选区域
-- **扩展方向**：可以结合 `getUsedRange()` 方法获取实际数据范围，避免筛选空白行
+* **固定列宽**：当前实现固定筛选宽度为 1 列，如需支持多列筛选，需调整 `Range` 的 `colCount` 参数
+* **性能考虑**：对于超大数据集（数万行），扩展到工作表末尾可能影响性能，建议根据实际数据范围动态计算筛选区域
+* **扩展方向**：可以结合 `getUsedRange()` 方法获取实际数据范围，避免筛选空白行
 
 ## 六、关键代码片段
 
@@ -181,11 +183,15 @@ let range = new GC.Spread.Sheets.Range(
 
 本示例展示了如何通过命令重写机制自定义 SpreadJS Designer 的筛选行为，使其与 WPS 表格保持一致。开发者可以从中学到：
 
-- SpreadJS Designer 命令系统的扩展方法
-- 如何重写内置命令并保持原有功能
-- 自定义命令的注册与撤销机制实现
-- 筛选范围的动态计算技巧
+* SpreadJS Designer 命令系统的扩展方法
+* 如何重写内置命令并保持原有功能
+* 自定义命令的注册与撤销机制实现
+* 筛选范围的动态计算技巧
 
 该方案适用于需要定制 SpreadJS 行为以匹配特定产品需求的场景，具有良好的可扩展性和维护性。通过类似的命令重写模式，开发者可以定制更多 Designer 功能，满足不同业务场景的需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/dF-U6fIlQEOc4u5Wkr38kw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

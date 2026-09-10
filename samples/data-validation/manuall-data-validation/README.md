@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **数据质量控制**：在用户完成数据输入后，统一验证所有单元格数据是否符合预设规则，避免无效数据进入系统
-- **用户体验优化**：通过输入提示和高亮显示无效数据，帮助用户快速定位和修正错误
-- **业务规则约束**：支持多种验证类型（数字范围、列表选择等），满足不同业务场景的数据约束需求
+* **数据质量控制**：在用户完成数据输入后，统一验证所有单元格数据是否符合预设规则，避免无效数据进入系统
+* **用户体验优化**：通过输入提示和高亮显示无效数据，帮助用户快速定位和修正错误
+* **业务规则约束**：支持多种验证类型（数字范围、列表选择等），满足不同业务场景的数据约束需求
 
 ## 三、实现思路
 
@@ -108,10 +108,10 @@ $("#get").click(function() {
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0：核心表格组件
-- jQuery 3.6.1：DOM 操作和事件处理
-- TypeScript 4.1.2：类型安全支持
-- SystemJS：模块加载器
+* SpreadJS 15.0.0：核心表格组件
+* jQuery 3.6.1：DOM 操作和事件处理
+* TypeScript 4.1.2：类型安全支持
+* SystemJS：模块加载器
 
 ## 四、使用说明
 
@@ -136,18 +136,18 @@ npm install
 
 ### 5.1 优点
 
-- **实时提示**：输入时显示提示信息，引导用户正确输入
-- **视觉反馈**：通过 `highlightInvalidData` 选项，无效数据会被高亮显示
-- **灵活验证**：支持多种验证器类型（数字、列表、日期等）
-- **性能优化**：提供脏数据检查方式，避免大数据量时的性能问题
+* **实时提示**：输入时显示提示信息，引导用户正确输入
+* **视觉反馈**：通过 `highlightInvalidData` 选项，无效数据会被高亮显示
+* **灵活验证**：支持多种验证器类型（数字、列表、日期等）
+* **性能优化**：提供脏数据检查方式，避免大数据量时的性能问题
 
 ### 5.2 局限性与扩展建议
 
-- **当前实现**：示例中使用了遍历所有单元格的方式，在大数据量场景下可能存在性能问题
-- **扩展建议**：
-  - 优先使用 `isSheetValidNew` 方法（脏数据检查），仅验证用户修改过的单元格
-  - 可以扩展为异步验证，支持服务端数据校验
-  - 可以添加更详细的错误提示，指出具体哪些单元格验证失败
+* **当前实现**：示例中使用了遍历所有单元格的方式，在大数据量场景下可能存在性能问题
+* **扩展建议**：
+    * 优先使用 `isSheetValidNew` 方法（脏数据检查），仅验证用户修改过的单元格
+    * 可以扩展为异步验证，支持服务端数据校验
+    * 可以添加更详细的错误提示，指出具体哪些单元格验证失败
 
 ## 六、关键代码片段
 
@@ -188,4 +188,8 @@ sheet.setDataValidator(row, col, validator)
 
 该方案适用于需要严格数据质量控制的场景，如财务报表、数据采集表单、配置管理等。通过合理选择验证方式（全量 vs 脏数据），可以在保证数据准确性的同时兼顾性能表现。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/Yut28xd9z0SFqe_RN99eAA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

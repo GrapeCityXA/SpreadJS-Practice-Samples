@@ -1,6 +1,6 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 的表格数据绑定场景中，处理包含公式的列。当表格通过 `setDataSource` 绑定数据源后，某些列（如汇总列）需要根据其他列的数据进行计算，这些公式列不属于数据源的一部分，需要在数据动态增加时自动扩展公式。该示例通过监听表格行变化事件，实现了公式列的自动复制和扩展。
+本示例展示了如何在 SpreadJS 的表格数据绑定场景中，处理包含公式的列。当表格通过 `setDataSource` 绑定数据源后，某些列（如汇总列）需要根据其他列的数据进行计算，这些公式列不属于数据源的一部分，需要在数据动态增加时自动扩展公式。该示例通过监听表格行变化事件，实现了公式列的自动复制和扩展。 
 
 ## 二、解决的问题
 
@@ -35,10 +35,11 @@ function copyTableFormula(sheet, table) {
 ```
 
 `copyTo` 方法的参数说明：
-- 前两个参数：源单元格的行列索引
-- 第三、四个参数：目标单元格的行列索引
-- 第五、六个参数：复制的行数和列数
-- 最后一个参数：复制选项（仅复制公式）
+
+* 前两个参数：源单元格的行列索引
+* 第三、四个参数：目标单元格的行列索引
+* 第五、六个参数：复制的行数和列数
+* 最后一个参数：复制选项（仅复制公式）
 
 #### 监听表格行变化事件
 
@@ -52,9 +53,9 @@ sheet.bind(GC.Spread.Sheets.Events.TableRowsChanged, function(e, data){
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0 — 核心电子表格组件
-- SystemJS 0.19.22 — 模块加载器
-- TypeScript 4.1.2 — 类型支持（项目配置支持，但实际代码使用 JavaScript）
+* SpreadJS 15.0.0 — 核心电子表格组件
+* SystemJS 0.19.22 — 模块加载器
+* TypeScript 4.1.2 — 类型支持（项目配置支持，但实际代码使用 JavaScript）
 
 ## 四、使用说明
 
@@ -78,9 +79,9 @@ npm install
 
 ### 5.1 优点
 
-- 自动化公式扩展：无需手动为每行设置公式，减少重复操作
-- 数据源与计算列分离：保持数据源纯净，计算逻辑由表格层处理
-- 事件驱动机制：通过监听表格变化实现响应式更新
+* 自动化公式扩展：无需手动为每行设置公式，减少重复操作
+* 数据源与计算列分离：保持数据源纯净，计算逻辑由表格层处理
+* 事件驱动机制：通过监听表格变化实现响应式更新
 
 ### 5.2 局限性与扩展建议
 
@@ -90,11 +91,15 @@ npm install
 
 本示例展示了 SpreadJS 表格绑定中处理公式列的标准方案，适用于需要在数据绑定场景中动态计算汇总值的业务需求。开发者可以学习到：
 
-- `CellBindingSource` 的数据绑定机制
-- `copyTo` 方法的公式复制技巧
-- `TableRowsChanged` 事件的监听和处理
-- 数据源与计算列的分离设计模式
+* `CellBindingSource` 的数据绑定机制
+* `copyTo` 方法的公式复制技巧
+* `TableRowsChanged` 事件的监听和处理
+* 数据源与计算列的分离设计模式
 
 该方案可扩展至更复杂的场景，如多公式列处理、条件公式、跨表引用等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/6MW2G8oCCku1o6Pznxb-kg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

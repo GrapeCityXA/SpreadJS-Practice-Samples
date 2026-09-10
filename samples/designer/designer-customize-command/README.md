@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **扩展设计器功能**：SpreadJS Designer 提供了丰富的内置功能，但在实际业务中往往需要添加自定义的快捷操作，本示例展示了如何通过配置 Ribbon 菜单来实现功能扩展
-- **自定义命令注册**：演示了如何注册自定义命令并集成到设计器的命令管理系统中，使其能够被 Ribbon 按钮调用
-- **撤销/重做支持**：展示了如何让自定义命令支持撤销和重做操作，保证用户体验的一致性
+* **扩展设计器功能**：SpreadJS Designer 提供了丰富的内置功能，但在实际业务中往往需要添加自定义的快捷操作，本示例展示了如何通过配置 Ribbon 菜单来实现功能扩展
+* **自定义命令注册**：演示了如何注册自定义命令并集成到设计器的命令管理系统中，使其能够被 Ribbon 按钮调用
+* **撤销/重做支持**：展示了如何让自定义命令支持撤销和重做操作，保证用户体验的一致性
 
 ## 三、实现思路
 
@@ -73,9 +73,10 @@ commandManager.register('changeBackColor', command);
 ```
 
 关键点：
-- `canUndo: true` 表示该命令支持撤销
-- 使用 `startTransaction` 和 `endTransaction` 包裹操作，确保操作可以被记录到历史栈中
-- `suspendPaint()` 和 `resumePaint()` 用于优化性能，避免多次重绘
+
+* `canUndo: true` 表示该命令支持撤销
+* 使用 `startTransaction` 和 `endTransaction` 包裹操作，确保操作可以被记录到历史栈中
+* `suspendPaint()` 和 `resumePaint()` 用于优化性能，避免多次重绘
 
 ### 3.3 配置撤销/重做列表显示
 
@@ -115,10 +116,10 @@ config.ribbon[0].buttonGroups.unshift({
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0：核心表格控件
-- SpreadJS Designer 15.0.0：设计器组件
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格控件
+* SpreadJS Designer 15.0.0：设计器组件
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -145,16 +146,16 @@ npm install
 
 ### 5.1 优点
 
-- **易于扩展**：通过配置对象即可添加自定义命令，无需修改设计器源码
-- **完整的命令系统集成**：自定义命令与内置命令享有相同的生命周期管理，支持撤销/重做
-- **灵活的 UI 配置**：可以自定义按钮的位置、图标、文本等外观属性
-- **中文本地化支持**：撤销/重做列表可以显示中文描述，提升用户体验
+* **易于扩展**：通过配置对象即可添加自定义命令，无需修改设计器源码
+* **完整的命令系统集成**：自定义命令与内置命令享有相同的生命周期管理，支持撤销/重做
+* **灵活的 UI 配置**：可以自定义按钮的位置、图标、文本等外观属性
+* **中文本地化支持**：撤销/重做列表可以显示中文描述，提升用户体验
 
 ### 5.2 局限性与扩展建议
 
-- **图标样式**：示例中的图标样式较为简单（纯蓝色背景），实际应用中建议使用 SVG 图标或图标字体
-- **命令参数化**：当前示例中背景色是硬编码的，可以扩展为支持用户选择颜色的对话框
-- **按钮组位置**：使用 `unshift()` 会将按钮组插入到最前面，如果需要插入到特定位置，可以使用 `splice()` 方法
+* **图标样式**：示例中的图标样式较为简单（纯蓝色背景），实际应用中建议使用 SVG 图标或图标字体
+* **命令参数化**：当前示例中背景色是硬编码的，可以扩展为支持用户选择颜色的对话框
+* **按钮组位置**：使用 `unshift()` 会将按钮组插入到最前面，如果需要插入到特定位置，可以使用 `splice()` 方法
 
 ## 六、关键代码片段
 
@@ -191,4 +192,8 @@ let spread = designer.getWorkbook()
 
 该方案适用于需要在设计器中集成企业特定业务逻辑的场景，例如快速套用模板、批量数据处理、自定义格式化等功能。通过这种方式，可以在不修改设计器源码的前提下，灵活地扩展设计器的能力，满足各种定制化需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/llK6TBEz90S4uiN-YbuqDg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

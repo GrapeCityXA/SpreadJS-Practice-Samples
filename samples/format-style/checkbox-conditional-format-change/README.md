@@ -6,10 +6,10 @@
 
 在实际业务场景中，用户经常需要在不同的数据展示格式之间切换，例如：
 
-- 财务报表中需要在小数和百分比之间切换显示
-- 数据分析时需要根据不同视角切换数据格式
-- 避免手动选择大量单元格并逐个修改格式的繁琐操作
-- 实现一键批量格式切换，提升用户体验
+* 财务报表中需要在小数和百分比之间切换显示
+* 数据分析时需要根据不同视角切换数据格式
+* 避免手动选择大量单元格并逐个修改格式的繁琐操作
+* 实现一键批量格式切换，提升用户体验
 
 ## 三、实现思路
 
@@ -57,9 +57,9 @@ document.getElementById('percentageBtn').addEventListener('click', function() {
 
 ### 3.3 技术栈
 
-- SpreadJS v17.0.8：核心电子表格组件
-- SystemJS v0.19.22：模块加载器
-- systemjs-plugin-babel v0.0.25：ES6 语法转译支持
+* SpreadJS v17.0.8：核心电子表格组件
+* SystemJS v0.19.22：模块加载器
+* systemjs-plugin-babel v0.0.25：ES6 语法转译支持
 
 ## 四、使用说明
 
@@ -83,16 +83,16 @@ npm install
 
 ### 5.1 优点
 
-- 实现简洁：仅需一个控制单元格和一条条件格式规则即可实现批量格式切换
-- 性能优异：利用条件格式机制，无需遍历修改每个单元格的样式
-- 易于扩展：可以轻松添加更多格式选项（如货币、日期等）或扩大应用范围
-- 用户友好：一键切换，操作直观
+* 实现简洁：仅需一个控制单元格和一条条件格式规则即可实现批量格式切换
+* 性能优异：利用条件格式机制，无需遍历修改每个单元格的样式
+* 易于扩展：可以轻松添加更多格式选项（如货币、日期等）或扩大应用范围
+* 用户友好：一键切换，操作直观
 
 ### 5.2 局限性与扩展建议
 
-- 控制单元格（A1）在实际应用中可能需要隐藏或保护，避免用户误操作
-- 可以扩展为支持多种格式切换（如小数、百分比、货币、科学计数法等）
-- 可以结合自定义工具栏或右键菜单，提供更丰富的交互方式
+* 控制单元格（A1）在实际应用中可能需要隐藏或保护，避免用户误操作
+* 可以扩展为支持多种格式切换（如小数、百分比、货币、科学计数法等）
+* 可以结合自定义工具栏或右键菜单，提供更丰富的交互方式
 
 ## 六、关键代码片段
 
@@ -132,11 +132,15 @@ sheet.setArray(1, 0, [
 
 本示例展示了 SpreadJS 条件格式功能的实用价值，开发者可以从中学到：
 
-- 条件格式公式规则的使用方法（`addFormulaRule` API）
-- 如何通过控制单元格实现批量样式切换
-- 数字格式化器（formatter）的配置方式
-- 事件驱动的交互设计模式
+* 条件格式公式规则的使用方法（`addFormulaRule` API）
+* 如何通过控制单元格实现批量样式切换
+* 数字格式化器（formatter）的配置方式
+* 事件驱动的交互设计模式
 
 该方案适用于需要动态切换数据展示格式的场景，如财务报表、数据分析工具、可视化仪表板等。通过扩展条件格式规则，可以实现更复杂的格式切换逻辑，如根据数据值范围自动应用不同格式、多条件组合判断等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/r2mU0rhwGU6ur8KY2QeFKQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

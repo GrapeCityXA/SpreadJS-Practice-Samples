@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **空间利用优化**：传统设计器工具栏始终占据顶部空间，本示例通过隐藏机制释放更多可视区域
-- **按需显示**：工具栏仅在鼠标悬停时显示，避免干扰用户查看数据
-- **保持功能完整性**：隐藏状态不影响设计器的所有功能，用户可随时唤起工具栏进行操作
+* **空间利用优化**：传统设计器工具栏始终占据顶部空间，本示例通过隐藏机制释放更多可视区域
+* **按需显示**：工具栏仅在鼠标悬停时显示，避免干扰用户查看数据
+* **保持功能完整性**：隐藏状态不影响设计器的所有功能，用户可随时唤起工具栏进行操作
 
 ## 三、实现思路
 
@@ -27,9 +27,9 @@
 }
 ```
 
-- `position: fixed`：使工具栏固定在视口顶部，不随页面滚动
-- `z-index: 10`：确保工具栏在其他元素之上
-- `visibility: hidden`：初始状态隐藏，但保留布局空间
+* `position: fixed`：使工具栏固定在视口顶部，不随页面滚动
+* `z-index: 10`：确保工具栏在其他元素之上
+* `visibility: hidden`：初始状态隐藏，但保留布局空间
 
 ### 3.2 鼠标事件监听
 
@@ -45,16 +45,16 @@ document.getElementsByClassName('gc-ribbon-bar')[0].onmouseout = function(){
 }
 ```
 
-- 当鼠标移入 `top-panels` 区域时，显示工具栏
-- 当鼠标移出 `gc-ribbon-bar` 时，隐藏工具栏
-- 使用 `visibility` 而非 `display` 可避免布局重排
+* 当鼠标移入 `top-panels` 区域时，显示工具栏
+* 当鼠标移出 `gc-ribbon-bar` 时，隐藏工具栏
+* 使用 `visibility` 而非 `display` 可避免布局重排
 
 ### 3.3 技术栈
 
-- **SpreadJS Designer 15.0.0**：提供完整的电子表格设计器功能
-- **SystemJS**：模块加载器，支持动态导入
-- **TypeScript 4.1.2**：类型安全的 JavaScript 超集
-- **SpreadJS 扩展包**：包括图表、打印、PDF、条形码、形状、数据透视表等功能模块
+* **SpreadJS Designer 15.0.0**：提供完整的电子表格设计器功能
+* **SystemJS**：模块加载器，支持动态导入
+* **TypeScript 4.1.2**：类型安全的 JavaScript 超集
+* **SpreadJS 扩展包**：包括图表、打印、PDF、条形码、形状、数据透视表等功能模块
 
 ## 四、使用说明
 
@@ -77,18 +77,18 @@ npm install
 
 ### 5.1 优点
 
-- **实现简单**：仅需少量 CSS 和 JavaScript 代码即可实现
-- **用户体验友好**：按需显示工具栏，不干扰数据查看
-- **性能优化**：使用 `visibility` 属性避免频繁的 DOM 重排
-- **兼容性好**：基于标准 DOM API，无需额外依赖
+* **实现简单**：仅需少量 CSS 和 JavaScript 代码即可实现
+* **用户体验友好**：按需显示工具栏，不干扰数据查看
+* **性能优化**：使用 `visibility` 属性避免频繁的 DOM 重排
+* **兼容性好**：基于标准 DOM API，无需额外依赖
 
 ### 5.2 局限性与扩展建议
 
-- **触发区域固定**：当前依赖 `top-panels` 类名，如果设计器结构变化可能失效
-- **扩展建议**：
-  - 可添加延迟隐藏机制，避免鼠标快速移出时工具栏闪烁
-  - 可增加快捷键（如 F11）切换工具栏显示状态
-  - 可将显示状态保存到 localStorage，记住用户偏好
+* **触发区域固定**：当前依赖 `top-panels` 类名，如果设计器结构变化可能失效
+* **扩展建议**：
+    * 可添加延迟隐藏机制，避免鼠标快速移出时工具栏闪烁
+    * 可增加快捷键（如 F11）切换工具栏显示状态
+    * 可将显示状态保存到 localStorage，记住用户偏好
 
 ## 六、关键代码片段
 
@@ -108,11 +108,15 @@ let spread = designer.getWorkbook();
 
 本示例展示了一种轻量级的 UI 优化方案，通过简单的 CSS 和事件监听实现浮动工具栏效果。开发者可以从中学到：
 
-- 如何使用 CSS 固定定位实现浮动 UI 组件
-- 如何通过 DOM 事件监听实现交互式显示/隐藏
-- SpreadJS Designer 的基本初始化和集成方式
-- `visibility` 与 `display` 属性在性能优化中的差异
+* 如何使用 CSS 固定定位实现浮动 UI 组件
+* 如何通过 DOM 事件监听实现交互式显示/隐藏
+* SpreadJS Designer 的基本初始化和集成方式
+* `visibility` 与 `display` 属性在性能优化中的差异
 
 该方案适用于需要最大化内容显示区域的场景，如数据分析看板、报表查看器等，同时保留完整的编辑功能。开发者可根据实际需求调整触发逻辑和动画效果。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/2TA3K6NKCUu2_buGw3qGdA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

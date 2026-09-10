@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **多行文本显示问题**：当单元格内容包含换行符或超长文本时，默认行高可能无法完整显示内容
-- **编辑体验优化**：在编辑过程中动态获取编辑框高度，实时调整单元格行高，避免内容被遮挡
-- **合并单元格适配**：针对合并单元格场景，能够正确计算并调整行高，确保内容完整显示
+* **多行文本显示问题**：当单元格内容包含换行符或超长文本时，默认行高可能无法完整显示内容
+* **编辑体验优化**：在编辑过程中动态获取编辑框高度，实时调整单元格行高，避免内容被遮挡
+* **合并单元格适配**：针对合并单元格场景，能够正确计算并调整行高，确保内容完整显示
 
 ## 三、实现思路
 
@@ -103,10 +103,10 @@ spread.bind(GC.Spread.Sheets.Events.ValueChanged, function (s, e) {
 
 ### 3.6 技术栈
 
-- SpreadJS 15.0.0：核心表格控件
-- jQuery 3.6.1：用于获取编辑框高度
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格控件
+* jQuery 3.6.1：用于获取编辑框高度
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -130,27 +130,31 @@ npm install
 
 ### 5.1 优点
 
-- **智能行高调整**：根据实际内容高度动态调整，避免内容被截断或浪费空间
-- **编辑体验优化**：支持在单元格内使用 Enter 键换行，符合用户习惯
-- **合并单元格支持**：正确处理合并单元格场景，确保行高计算准确
-- **可复用性强**：通过自定义单元格类型实现，可以应用到任意列或单元格
+* **智能行高调整**：根据实际内容高度动态调整，避免内容被截断或浪费空间
+* **编辑体验优化**：支持在单元格内使用 Enter 键换行，符合用户习惯
+* **合并单元格支持**：正确处理合并单元格场景，确保行高计算准确
+* **可复用性强**：通过自定义单元格类型实现，可以应用到任意列或单元格
 
 ### 5.2 局限性与扩展建议
 
-- **依赖 jQuery**：当前实现依赖 jQuery 获取编辑框高度，可以考虑使用原生 DOM API 替代以减少依赖
-- **性能优化**：对于大量单元格场景，可以考虑添加防抖机制，避免频繁触发行高调整
-- **扩展方向**：可以增加最大行高限制，防止单个单元格占用过多空间；可以添加配置项，允许用户自定义换行键（如 Shift+Enter）
+* **依赖 jQuery**：当前实现依赖 jQuery 获取编辑框高度，可以考虑使用原生 DOM API 替代以减少依赖
+* **性能优化**：对于大量单元格场景，可以考虑添加防抖机制，避免频繁触发行高调整
+* **扩展方向**：可以增加最大行高限制，防止单个单元格占用过多空间；可以添加配置项，允许用户自定义换行键（如 Shift+Enter）
 
 ## 六、总结
 
 本示例展示了 SpreadJS 自定义单元格类型的强大扩展能力。通过重写 `paint`、`getEditorValue` 和 `isReservedKey` 方法，实现了单元格内容的自适应行高功能。开发者可以从中学到：
 
-- 如何创建和使用自定义单元格类型
-- 如何重写单元格类型的关键方法以实现特定功能
-- 如何使用 `setTag` 和 `getTag` 方法存储和获取单元格元数据
-- 如何监听 `ValueChanged` 事件并动态调整单元格样式
-- 如何处理合并单元格场景下的行高计算
+* 如何创建和使用自定义单元格类型
+* 如何重写单元格类型的关键方法以实现特定功能
+* 如何使用 `setTag` 和 `getTag` 方法存储和获取单元格元数据
+* 如何监听 `ValueChanged` 事件并动态调整单元格样式
+* 如何处理合并单元格场景下的行高计算
 
 该方案适用于需要在表格中输入和展示大段文本的场景，如备注信息、详细描述、多行地址等，具有良好的扩展性和实用价值。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/_SwJ946qdUS_TypVh9uqew/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

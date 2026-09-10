@@ -37,9 +37,10 @@ spread.bind(GC.Spread.Sheets.Events.ClipboardChanged, function (sender, args) {
 ```
 
 关键点：
-- 使用相对坐标（`r - selectedRange.row`）存储 Tag，确保粘贴到不同位置时能正确映射
-- 将 Tag 数据序列化为 JSON 并嵌入自定义 `<tagcontent>` 标签
-- 使用 `navigator.clipboard.write()` 覆盖系统剪贴板
+
+* 使用相对坐标（`r - selectedRange.row`）存储 Tag，确保粘贴到不同位置时能正确映射
+* 将 Tag 数据序列化为 JSON 并嵌入自定义 `<tagcontent>` 标签
+* 使用 `navigator.clipboard.write()` 覆盖系统剪贴板
 
 #### 3.1.2 监听粘贴事件并恢复 Tag 信息
 
@@ -72,16 +73,17 @@ spread.bind(GC.Spread.Sheets.Events.ClipboardPasting, function (sender, args) {
 ```
 
 关键点：
-- 检查 HTML 中是否包含 `<tagcontent>` 标签，避免处理普通粘贴
-- 使用 DOM 解析提取 Tag 数据
-- 使用 `setTimeout` 确保在 SpreadJS 完成默认粘贴后再设置 Tag
+
+* 检查 HTML 中是否包含 `<tagcontent>` 标签，避免处理普通粘贴
+* 使用 DOM 解析提取 Tag 数据
+* 使用 `setTimeout` 确保在 SpreadJS 完成默认粘贴后再设置 Tag
 
 ### 3.2 技术栈
 
-- SpreadJS 16.0.1（核心表格组件）
-- SpreadJS Designer 16.0.1（设计器组件）
-- Clipboard API（浏览器剪贴板接口）
-- SystemJS（模块加载器）
+* SpreadJS 16.0.1（核心表格组件）
+* SpreadJS Designer 16.0.1（设计器组件）
+* Clipboard API（浏览器剪贴板接口）
+* SystemJS（模块加载器）
 
 ## 四、使用说明
 
@@ -106,15 +108,15 @@ npm install
 
 ### 5.1 优点
 
-- 无需服务器支持，纯前端实现跨页面数据传递
-- 兼容 SpreadJS 原生复制粘贴功能，不影响正常使用
-- Tag 数据结构灵活，支持任意 JSON 可序列化对象
+* 无需服务器支持，纯前端实现跨页面数据传递
+* 兼容 SpreadJS 原生复制粘贴功能，不影响正常使用
+* Tag 数据结构灵活，支持任意 JSON 可序列化对象
 
 ### 5.2 局限性与扩展建议
 
-- **HTTPS 限制**：`navigator.clipboard.write()` 在非 HTTPS 环境下会被浏览器安全策略阻止，部署时需配置 SSL 证书
-- **浏览器兼容性**：Clipboard API 在旧版浏览器中可能不支持，建议添加降级方案
-- **扩展建议**：可以将该方案扩展到其他自定义数据（如公式元数据、验证规则等）
+* **HTTPS 限制**：`navigator.clipboard.write()` 在非 HTTPS 环境下会被浏览器安全策略阻止，部署时需配置 SSL 证书
+* **浏览器兼容性**：Clipboard API 在旧版浏览器中可能不支持，建议添加降级方案
+* **扩展建议**：可以将该方案扩展到其他自定义数据（如公式元数据、验证规则等）
 
 ## 六、关键代码片段
 
@@ -149,4 +151,8 @@ sheet.setTag(2, 2, "tag4")
 
 该方案适用于需要在多窗口或多标签页间保持数据完整性的场景，如协同编辑、数据审核、跨系统数据迁移等。通过类似的思路，还可以扩展到其他自定义元数据的传递需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/IetTRhF4T0e025uYECQCew/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

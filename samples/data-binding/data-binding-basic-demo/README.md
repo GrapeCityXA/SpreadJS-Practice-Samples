@@ -1,7 +1,9 @@
+# data-binding-basic-demo
+
 ### 问题：把 JSON 格式的表单字段内容，全部保存到数据库表
 
 对于用户的需求，如果是整个表单，通过 `JSON.stringify(spreead.toJSON())` 可以获取到一个 JSON 的实例，然后发送这个 JSON 到服务端处理，具体保存数据库还是直接保存文件都是可以实现的，从V16开始，还支持sjs格式文件的导入导出。
-加载的时候也是直接从数据库或者文件中读取 JSON 返回客户端。
+加载的时候也是直接从数据库或者文件中读取 JSON 返回客户端。 
 通过 `spread.fromJSON(JSON.parse(jsonString))` 即可加载。
 
 #### 详细的Demo具体步骤：
@@ -34,4 +36,8 @@ sheet.setDataSource(dataSource);
 进入页面可以看到数据已显示在模板中，修改数据，点击获取数据源，可以看到控制台已打印出更新后的数据，可以已完成填报的数据存储至数据库中。
 ![image](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/image-20260309.b4c5d7.png?width=400)
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/F25p8nM_VUiDIQJr7XNg-A/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **按需加载数据**：避免初始化时加载大量行数据，减少内存占用和渲染时间
-- **优化用户体验**：用户滚动到底部时自动扩展表格，无需手动添加行
-- **性能控制**：通过设置最大行数限制（10000 行），防止无限扩展导致的性能问题
+* **按需加载数据**：避免初始化时加载大量行数据，减少内存占用和渲染时间
+* **优化用户体验**：用户滚动到底部时自动扩展表格，无需手动添加行
+* **性能控制**：通过设置最大行数限制（10000 行），防止无限扩展导致的性能问题
 
 ## 三、实现思路
 
@@ -21,8 +21,8 @@ spread.options.scrollbarMaxAlign = true;
 spread.options.scrollbarShowMax = true;
 ```
 
-- `scrollbarMaxAlign`：滚动条最大值与实际行数对齐
-- `scrollbarShowMax`：显示滚动条的最大范围
+* `scrollbarMaxAlign`：滚动条最大值与实际行数对齐
+* `scrollbarShowMax`：显示滚动条的最大范围
 
 #### TopRowChanged 事件监听
 
@@ -44,6 +44,7 @@ sheet1.bind(GC.Spread.Sheets.Events.TopRowChanged, function(sender, args) {
 ```
 
 **实现逻辑**：
+
 1. 获取当前表格总行数 `rowCount`
 2. 获取视口底部可见的最后一行索引 `bottomRow`
 3. 判断是否滚动到最后一行（`bottomRow == rowCount - 1`）
@@ -61,9 +62,9 @@ sheet1.getRange(rowCount, 1, 1, 1).backColor('red')  // 标记新增行
 
 ### 3.2 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0（核心表格组件）
-- **SystemJS**: 0.19.22（模块加载器）
-- **TypeScript**: 4.1.2（开发语言支持）
+* **@grapecity/spread-sheets**: 15.0.0（核心表格组件）
+* **SystemJS**: 0.19.22（模块加载器）
+* **TypeScript**: 4.1.2（开发语言支持）
 
 ## 四、使用说明
 
@@ -89,22 +90,24 @@ npm install
 
 ### 5.1 优点
 
-- **性能优化**：按需加载行数据，避免初始化时的性能开销
-- **用户体验流畅**：自动扩展表格，无需手动操作
-- **可控性强**：通过最大行数限制防止内存溢出
-- **实现简单**：核心代码不到 20 行，易于理解和维护
+* **性能优化**：按需加载行数据，避免初始化时的性能开销
+* **用户体验流畅**：自动扩展表格，无需手动操作
+* **可控性强**：通过最大行数限制防止内存溢出
+* **实现简单**：核心代码不到 20 行，易于理解和维护
 
 ### 5.2 局限性与扩展建议
 
 **局限性**：
-- 固定每次增加 10 行，无法根据实际需求动态调整
-- 红色标记逻辑较为简单，仅用于演示
+
+* 固定每次增加 10 行，无法根据实际需求动态调整
+* 红色标记逻辑较为简单，仅用于演示
 
 **扩展建议**：
-- 可以根据数据源动态加载实际数据，而不是空行
-- 增加加载指示器，提示用户正在加载新数据
-- 支持配置每次增加的行数和最大行数限制
-- 结合后端 API 实现真正的分页加载
+
+* 可以根据数据源动态加载实际数据，而不是空行
+* 增加加载指示器，提示用户正在加载新数据
+* 支持配置每次增加的行数和最大行数限制
+* 结合后端 API 实现真正的分页加载
 
 ## 六、关键代码片段
 
@@ -155,6 +158,8 @@ sheet1.bind(GC.Spread.Sheets.Events.TopRowChanged, function(sender, args) {
 
 该方案适用于需要展示大量数据但又希望优化初始加载性能的场景，可以结合实际业务需求进行扩展，例如集成后端分页 API、添加数据缓存机制等。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Scroll%20Form%20Add%20Row.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/fr1Ie27SKE2BNJENgQN07A/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

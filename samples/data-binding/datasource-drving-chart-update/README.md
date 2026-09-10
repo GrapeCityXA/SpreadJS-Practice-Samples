@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例展示了如何通过 SpreadJS 的表格数据绑定功能实现图表的动态更新。核心思路是将图表引用整个表格（gcTable0），当表格绑定的数据源发生变化时，图表会自动同步更新，无需手动刷新图表配置。
+本示例展示了如何通过 SpreadJS 的表格数据绑定功能实现图表的动态更新。核心思路是将图表引用整个表格（gcTable0），当表格绑定的数据源发生变化时，图表会自动同步更新，无需手动刷新图表配置。 
 
 该示例适用于需要根据动态数据源实时更新图表展示的场景，例如数据监控面板、实时报表系统等。
 
 ## 二、解决的问题
 
-- **图表数据自动同步**：当数据源变化时，图表能够自动更新，避免手动重新配置图表数据范围
-- **动态数据行数处理**：支持数据行数不固定的场景，表格和图表能够自动适应数据量的变化
-- **简化开发流程**：通过表格绑定机制，开发者只需更新数据源，无需关心图表的更新逻辑
+* **图表数据自动同步**：当数据源变化时，图表能够自动更新，避免手动重新配置图表数据范围
+* **动态数据行数处理**：支持数据行数不固定的场景，表格和图表能够自动适应数据量的变化
+* **简化开发流程**：通过表格绑定机制，开发者只需更新数据源，无需关心图表的更新逻辑
 
 ## 三、实现思路
 
@@ -97,10 +97,10 @@ document.getElementById("changeData").onclick = function(){
 
 ### 3.3 技术栈
 
-- SpreadJS 17.0.8（核心表格引擎）
-- @grapecity/spread-sheets-charts 17.0.8（图表功能）
-- @grapecity/spread-sheets-designer 17.0.8（设计器组件）
-- SystemJS 0.19.22（模块加载器）
+* SpreadJS 17.0.8（核心表格引擎）
+* @grapecity/spread-sheets-charts 17.0.8（图表功能）
+* @grapecity/spread-sheets-designer 17.0.8（设计器组件）
+* SystemJS 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -122,16 +122,16 @@ npm install
 
 ### 5.1 优点
 
-- **自动化程度高**：数据变化时图表自动更新，无需手动干预
-- **灵活性强**：支持动态行数变化，适应不同数据量场景
-- **代码简洁**：通过数据绑定机制，核心逻辑只需几行代码
-- **可维护性好**：数据、表格、图表三者解耦，修改数据源不影响图表配置
+* **自动化程度高**：数据变化时图表自动更新，无需手动干预
+* **灵活性强**：支持动态行数变化，适应不同数据量场景
+* **代码简洁**：通过数据绑定机制，核心逻辑只需几行代码
+* **可维护性好**：数据、表格、图表三者解耦，修改数据源不影响图表配置
 
 ### 5.2 局限性与扩展建议
 
-- **当前实现仅支持单表格绑定**：如需多表格场景，需要为每个表格单独配置数据源
-- **图表类型固定**：示例使用折线图，如需切换图表类型，需要修改 bindFile.js 中的图表配置
-- **扩展建议**：可以结合后端 API，实现从服务器动态获取数据并更新图表
+* **当前实现仅支持单表格绑定**：如需多表格场景，需要为每个表格单独配置数据源
+* **图表类型固定**：示例使用折线图，如需切换图表类型，需要修改 bindFile.js 中的图表配置
+* **扩展建议**：可以结合后端 API，实现从服务器动态获取数据并更新图表
 
 ## 六、关键代码片段
 
@@ -159,11 +159,15 @@ sheet.setDataSource(source)
 
 本示例展示了 SpreadJS 表格数据绑定与图表联动的强大功能，开发者可以学到以下知识点：
 
-- SpreadJS 表格数据绑定的配置方法
-- `CellBindingSource` 的使用方式
-- 表格自动扩展行数的实现（`expandBoundRows`）
-- 图表引用表格范围实现自动更新的技巧
+* SpreadJS 表格数据绑定的配置方法
+* `CellBindingSource` 的使用方式
+* 表格自动扩展行数的实现（`expandBoundRows`）
+* 图表引用表格范围实现自动更新的技巧
 
 该方案特别适合需要频繁更新数据并实时展示图表的应用场景，如数据监控、实时报表、动态仪表盘等。通过表格绑定机制，可以大幅简化开发工作量，提高代码的可维护性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/JOmHXXCEmUa_F8WWkcLfAg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

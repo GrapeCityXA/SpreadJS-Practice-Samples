@@ -4,10 +4,10 @@
 
 ## 二、解决的问题
 
-- **自动分组汇总**：根据一列或多列的值变化自动识别分组边界，无需手动插入小计行
-- **动态计算**：使用 SUBTOTAL 函数实现小计，当原始数据变化时汇总值自动更新
-- **可视化分组**：通过行分组大纲功能，用户可以折叠或展开各个分组，便于查看不同层级的数据
-- **单元格合并**：对相同分组的单元格进行合并，使表格结构更清晰
+* **自动分组汇总**：根据一列或多列的值变化自动识别分组边界，无需手动插入小计行
+* **动态计算**：使用 SUBTOTAL 函数实现小计，当原始数据变化时汇总值自动更新
+* **可视化分组**：通过行分组大纲功能，用户可以折叠或展开各个分组，便于查看不同层级的数据
+* **单元格合并**：对相同分组的单元格进行合并，使表格结构更清晰
 
 ## 三、实现思路
 
@@ -89,9 +89,9 @@ rangeSelector.workbook(spread);
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心电子表格引擎
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持（虽然代码使用 JavaScript 编写）
+* SpreadJS 15.0.0：核心电子表格引擎
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持（虽然代码使用 JavaScript 编写）
 
 ## 四、使用说明
 
@@ -116,19 +116,19 @@ npm install
 
 ### 5.1 优点
 
-- **自动化程度高**：无需手动插入小计行和设置公式，代码自动识别分组边界
-- **支持多级分组**：通过从右向左遍历，可以处理多层级的分组结构
-- **动态计算**：使用 SUBTOTAL 函数确保数据变化时汇总值自动更新
-- **用户体验友好**：行分组大纲功能让用户可以灵活控制数据的显示层级
+* **自动化程度高**：无需手动插入小计行和设置公式，代码自动识别分组边界
+* **支持多级分组**：通过从右向左遍历，可以处理多层级的分组结构
+* **动态计算**：使用 SUBTOTAL 函数确保数据变化时汇总值自动更新
+* **用户体验友好**：行分组大纲功能让用户可以灵活控制数据的显示层级
 
 ### 5.2 局限性与扩展建议
 
-- **数据顺序依赖**：当前实现假设数据已按分组列排序，如果数据无序需要先排序
-- **固定列索引**：分组列和汇总列的索引是硬编码的，可以改为参数化配置
-- **扩展建议**：
-  - 支持自定义汇总函数（如平均值、最大值、最小值）
-  - 添加总计行（Grand Total）汇总所有分组
-  - 支持动态数据源，当数据变化时自动重新分组
+* **数据顺序依赖**：当前实现假设数据已按分组列排序，如果数据无序需要先排序
+* **固定列索引**：分组列和汇总列的索引是硬编码的，可以改为参数化配置
+* **扩展建议**：
+    * 支持自定义汇总函数（如平均值、最大值、最小值）
+    * 添加总计行（Grand Total）汇总所有分组
+    * 支持动态数据源，当数据变化时自动重新分组
 
 ## 六、关键代码片段
 
@@ -172,12 +172,16 @@ for (var col = 1; col >= 0; col--) {
 
 本示例展示了 SpreadJS 在数据分组和汇总方面的强大能力，开发者可以学到以下知识点：
 
-- 使用 `addRows()` 动态插入行
-- 使用 `addSpan()` 合并单元格
-- 使用 `setFormula()` 设置公式，特别是 SUBTOTAL 函数的应用
-- 使用 `rowOutlines.group()` 创建行分组大纲
-- 使用 `copyTo()` 复制单元格内容
+* 使用 `addRows()` 动态插入行
+* 使用 `addSpan()` 合并单元格
+* 使用 `setFormula()` 设置公式，特别是 SUBTOTAL 函数的应用
+* 使用 `rowOutlines.group()` 创建行分组大纲
+* 使用 `copyTo()` 复制单元格内容
 
 该方案适用于需要按类别或层级汇总数据的报表场景，如销售统计、财务报表、库存管理等。通过参数化改造，可以扩展为通用的分组汇总组件，支持更复杂的业务需求。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/-Xux58GX2EWr74ntGoCxiA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

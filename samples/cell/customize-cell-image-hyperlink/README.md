@@ -1,6 +1,6 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中创建一个自定义单元格类型，实现在单个单元格内同时显示多个图片和超链接的功能。每个图片旁边都配有对应的超链接文本，点击链接可以在新窗口中打开对应的 URL。
+本示例展示了如何在 SpreadJS 中创建一个自定义单元格类型，实现在单个单元格内同时显示多个图片和超链接的功能。每个图片旁边都配有对应的超链接文本，点击链接可以在新窗口中打开对应的 URL。 
 
 该示例通过继承 `GC.Spread.Sheets.CellTypes.Base` 基类，实现了一个名为 `MutipHyperLinkPictureCellType` 的自定义单元格类型，能够在单元格中垂直排列多组"图片+超链接"的组合，并支持鼠标悬停和点击交互。
 
@@ -8,9 +8,9 @@
 
 在实际业务场景中，经常需要在表格单元格中展示多个相关资源的链接和预览图，例如：
 
-- 产品目录中展示多个产品图片及其详情页链接
-- 文档管理系统中显示附件缩略图和下载链接
-- 数据报表中展示多个相关网站的 Logo 和访问入口
+* 产品目录中展示多个产品图片及其详情页链接
+* 文档管理系统中显示附件缩略图和下载链接
+* 数据报表中展示多个相关网站的 Logo 和访问入口
 
 标准的 SpreadJS 单元格类型无法同时支持图片显示和超链接功能，本示例通过自定义单元格类型解决了这一需求。
 
@@ -160,9 +160,9 @@ MutipHyperLinkPictureCellType.prototype.getAutoFitWidth = function () {
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心电子表格组件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心电子表格组件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -194,18 +194,18 @@ cell.value("https://www.baidu.com/img/bd_logo1.png?where=super;https://www.googl
 
 ### 5.1 优点
 
-- 在单个单元格中同时展示多个图片和超链接，节省空间
-- 支持鼠标悬停和点击交互，用户体验良好
-- 自动计算单元格尺寸，适应不同内容长度
-- 支持缩放（zoom）功能，在不同缩放级别下正常显示
+* 在单个单元格中同时展示多个图片和超链接，节省空间
+* 支持鼠标悬停和点击交互，用户体验良好
+* 自动计算单元格尺寸，适应不同内容长度
+* 支持缩放（zoom）功能，在不同缩放级别下正常显示
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现仅支持垂直布局，可以扩展支持水平布局（通过 `isHorizontal` 参数）
-- 图片尺寸固定为 100x100，可以改进为支持自定义尺寸
-- 超链接样式固定为蓝色下划线，可以扩展为支持自定义样式
-- 建议添加图片加载失败时的占位符显示
-- 可以添加图片点击事件，实现图片预览功能
+* 当前实现仅支持垂直布局，可以扩展支持水平布局（通过 `isHorizontal` 参数）
+* 图片尺寸固定为 100x100，可以改进为支持自定义尺寸
+* 超链接样式固定为蓝色下划线，可以扩展为支持自定义样式
+* 建议添加图片加载失败时的占位符显示
+* 可以添加图片点击事件，实现图片预览功能
 
 ## 六、关键代码片段
 
@@ -240,13 +240,15 @@ initSpread(spread);
 
 本示例展示了 SpreadJS 自定义单元格类型的强大扩展能力，通过继承基类并重写关键方法，实现了图片和超链接的组合显示功能。开发者可以从中学到：
 
-- 如何创建自定义单元格类型并继承基类
-- 如何使用 Canvas API 实现自定义渲染逻辑
-- 如何处理鼠标交互事件（悬停、点击）
-- 如何实现单元格尺寸的自动适应
+* 如何创建自定义单元格类型并继承基类
+* 如何使用 Canvas API 实现自定义渲染逻辑
+* 如何处理鼠标交互事件（悬停、点击）
+* 如何实现单元格尺寸的自动适应
 
 该方案适用于需要在表格中展示多媒体内容和交互链接的场景，具有良好的扩展性，可以根据实际需求进行定制和优化。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Custom%20Cells%20-%20Pictures%20and%20Hyperlinks.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/X9TkrOuqREeAHxJDb9a5zA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

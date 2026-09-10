@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **扩展公式库**：SpreadJS 内置函数无法满足特定业务需求时，需要添加自定义计算逻辑
-- **UI 集成**：自定义函数需要像内置函数一样出现在工具栏和插入函数对话框中，方便用户使用
-- **函数描述**：为自定义函数提供中文描述和参数说明，提升用户体验
+* **扩展公式库**：SpreadJS 内置函数无法满足特定业务需求时，需要添加自定义计算逻辑
+* **UI 集成**：自定义函数需要像内置函数一样出现在工具栏和插入函数对话框中，方便用户使用
+* **函数描述**：为自定义函数提供中文描述和参数说明，提升用户体验
 
 ## 三、实现思路
 
@@ -48,10 +48,11 @@ FactorialFunction.prototype.evaluate = function (arg) {
 ```
 
 关键点：
-- `name` 属性定义函数名称
-- `maxArgs` 和 `minArgs` 限制参数数量
-- `description` 方法返回函数的中文描述和参数信息
-- `evaluate` 方法实现具体的计算逻辑，参数错误时返回 `#VALUE!` 错误
+
+* `name` 属性定义函数名称
+* `maxArgs` 和 `minArgs` 限制参数数量
+* `description` 方法返回函数的中文描述和参数信息
+* `evaluate` 方法实现具体的计算逻辑，参数错误时返回 `#VALUE!` 错误
 
 ### 3.2 注册全局自定义函数
 
@@ -100,10 +101,10 @@ designer = new GC.Spread.Sheets.Designer.Designer("designer-container", designer
 
 ### 3.5 技术栈
 
-- SpreadJS 16.0.1（核心表格引擎）
-- SpreadJS Designer 16.0.1（设计器组件）
-- TypeScript 4.1.2（开发语言）
-- SystemJS 0.19.22（模块加载器）
+* SpreadJS 16.0.1（核心表格引擎）
+* SpreadJS Designer 16.0.1（设计器组件）
+* TypeScript 4.1.2（开发语言）
+* SystemJS 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -125,15 +126,15 @@ npm install
 
 ### 5.1 优点
 
-- **完整的 UI 集成**：自定义函数与内置函数体验一致，用户无需记忆函数名
-- **灵活的分类管理**：可以将函数添加到任意内置分类中
-- **中文化支持**：支持为函数提供中文描述和参数说明
-- **可扩展性强**：可以轻松添加多个自定义函数
+* **完整的 UI 集成**：自定义函数与内置函数体验一致，用户无需记忆函数名
+* **灵活的分类管理**：可以将函数添加到任意内置分类中
+* **中文化支持**：支持为函数提供中文描述和参数说明
+* **可扩展性强**：可以轻松添加多个自定义函数
 
 ### 5.2 局限性与扩展建议
 
-- **模板修改复杂**：需要通过 `bindingPath` 定位模板节点，调试成本较高
-- **扩展建议**：可以创建独立的自定义函数分类，避免与内置分类混合；可以为复杂函数添加参数验证和错误提示
+* **模板修改复杂**：需要通过 `bindingPath` 定位模板节点，调试成本较高
+* **扩展建议**：可以创建独立的自定义函数分类，避免与内置分类混合；可以为复杂函数添加参数验证和错误提示
 
 ## 六、关键代码片段
 
@@ -152,11 +153,15 @@ spread.addCustomFunction(factorial)
 
 本示例展示了 SpreadJS 自定义函数的完整开发流程，开发者可以学到：
 
-- 如何定义符合 SpreadJS 规范的自定义函数类
-- 如何修改 Designer 模板和配置实现 UI 集成
-- 如何为自定义函数提供中文化描述
-- 如何将函数注册到全局和工作簿实例
+* 如何定义符合 SpreadJS 规范的自定义函数类
+* 如何修改 Designer 模板和配置实现 UI 集成
+* 如何为自定义函数提供中文化描述
+* 如何将函数注册到全局和工作簿实例
 
 该方案适用于需要扩展 SpreadJS 计算能力的场景，通过简单的配置即可让自定义函数像内置函数一样易用。开发者可以基于此模式添加更多业务相关的计算函数，构建企业级的表格应用。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/3bXs9kQookON9FapryUl5g/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

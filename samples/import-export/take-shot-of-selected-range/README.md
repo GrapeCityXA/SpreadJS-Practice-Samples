@@ -1,13 +1,13 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中实现选择区域的截图功能，并将截图自动复制到系统剪切板。用户可以在表格中选择任意区域，点击按钮后即可获取该区域的高质量截图，支持 Chrome 和 Safari 浏览器的剪切板 API。该功能适用于需要快速导出表格局部数据为图片的场景，如报表分享、数据展示等。
+本示例展示了如何在 SpreadJS 中实现选择区域的截图功能，并将截图自动复制到系统剪切板。用户可以在表格中选择任意区域，点击按钮后即可获取该区域的高质量截图，支持 Chrome 和 Safari 浏览器的剪切板 API。该功能适用于需要快速导出表格局部数据为图片的场景，如报表分享、数据展示等。 
 
 ## 二、解决的问题
 
-- 快速导出表格选中区域为图片，无需手动截屏或使用第三方工具
-- 自动将截图放入系统剪切板，方便用户直接粘贴到其他应用程序
-- 生成高质量的表格截图，保留单元格格式和样式
-- 支持现代浏览器的异步剪切板 API，提升用户体验
+* 快速导出表格选中区域为图片，无需手动截屏或使用第三方工具
+* 自动将截图放入系统剪切板，方便用户直接粘贴到其他应用程序
+* 生成高质量的表格截图，保留单元格格式和样式
+* 支持现代浏览器的异步剪切板 API，提升用户体验
 
 ## 三、实现思路
 
@@ -35,9 +35,10 @@ printInfo.showBorder(false)
 ```
 
 关键参数说明：
-- `qualityFactor(5)`：设置打印质量为 5，确保生成图片而非 PDF
-- `margin` 设置为 0：去除所有边距，确保截图紧凑
-- 隐藏行列标题和边框：生成纯净的表格内容
+
+* `qualityFactor(5)`：设置打印质量为 5，确保生成图片而非 PDF
+* `margin` 设置为 0：去除所有边距，确保截图紧凑
+* 隐藏行列标题和边框：生成纯净的表格内容
 
 #### 动态设置打印区域为选中区域
 
@@ -84,6 +85,7 @@ spread.print(spread.getActiveSheetIndex());
 ```
 
 关键步骤：
+
 1. 从打印 iframe 中获取生成的 img 元素
 2. 创建 Canvas 并绘制白色背景（避免透明背景）
 3. 将图片绘制到 Canvas 上
@@ -112,11 +114,11 @@ Safari 要求 `clipboard.write()` 必须在用户事件处理函数中同步调�
 
 ### 3.3 技术栈
 
-- SpreadJS 15.2.0：核心表格组件
-- SpreadJS Designer 15.2.0：设计器组件
-- SpreadJS Print 15.2.0：打印功能模块
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言
+* SpreadJS 15.2.0：核心表格组件
+* SpreadJS Designer 15.2.0：设计器组件
+* SpreadJS Print 15.2.0：打印功能模块
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言
 
 ## 四、使用说明
 
@@ -138,19 +140,19 @@ npm install
 
 ### 5.1 优点
 
-- 无需第三方截图工具，纯前端实现
-- 自动复制到剪切板，操作便捷
-- 支持任意区域选择，灵活性高
-- 生成高质量图片（qualityFactor 为 5）
+* 无需第三方截图工具，纯前端实现
+* 自动复制到剪切板，操作便捷
+* 支持任意区域选择，灵活性高
+* 生成高质量图片（qualityFactor 为 5）
 
 ### 5.2 局限性与扩展建议
 
-- 仅支持 Chrome 和 Safari 浏览器（依赖 Clipboard API）
-- 不支持跨工作表的多选区域截图
-- 扩展建议：
-  - 添加下载功能，支持不兼容剪切板 API 的浏览器
-  - 支持自定义图片格式（JPEG、WebP）
-  - 添加图片质量和尺寸的配置选项
+* 仅支持 Chrome 和 Safari 浏览器（依赖 Clipboard API）
+* 不支持跨工作表的多选区域截图
+* 扩展建议：
+    * 添加下载功能，支持不兼容剪切板 API 的浏览器
+    * 支持自定义图片格式（JPEG、WebP）
+    * 添加图片质量和尺寸的配置选项
 
 ## 六、关键代码片段
 
@@ -180,11 +182,15 @@ setTimeout(async function(){
 
 本示例展示了如何利用 SpreadJS 的打印功能实现表格区域截图，并结合现代浏览器的剪切板 API 提供流畅的用户体验。开发者可以从中学到：
 
-- SpreadJS Print API 的高级用法（打印配置、事件拦截）
-- Canvas 图片处理技术（绘制背景、转换 Blob）
-- 异步剪切板 API 的正确使用方式（兼容 Safari）
-- 用户交互优化技巧（按钮状态管理、错误处理）
+* SpreadJS Print API 的高级用法（打印配置、事件拦截）
+* Canvas 图片处理技术（绘制背景、转换 Blob）
+* 异步剪切板 API 的正确使用方式（兼容 Safari）
+* 用户交互优化技巧（按钮状态管理、错误处理）
 
 该方案适用于需要快速导出表格局部数据为图片的场景，代码简洁且易于扩展，可根据实际需求添加下载、格式选择等功能。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/Y_fEXgrlYEuO4dNXKBiY-w/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

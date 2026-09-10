@@ -6,9 +6,9 @@
 
 在数据处理场景中，经常遇到以下问题：
 
-- 数据源中的数字以字符串格式存储，直接排序会导致结果不符合预期（如 "10" 排在 "2" 之前）
-- 需要对特定列应用自定义排序逻辑，而其他列保持默认排序行为
-- 需要在用户点击列头排序时自动应用自定义排序规则
+* 数据源中的数字以字符串格式存储，直接排序会导致结果不符合预期（如 "10" 排在 "2" 之前）
+* 需要对特定列应用自定义排序逻辑，而其他列保持默认排序行为
+* 需要在用户点击列头排序时自动应用自定义排序规则
 
 本示例提供了两种解决方案：通过重写命令执行函数或监听排序事件来实现自定义排序逻辑。
 
@@ -52,9 +52,10 @@ GC.Spread.Sheets.Commands.sortFilter.execute = function () {
 ```
 
 关键点说明：
-- `strNumberSort` 函数利用 JavaScript 的隐式类型转换，将字符串转为数字后进行比较
-- `sortRange` 方法的 `compareFunction` 参数接受自定义比较函数
-- 保留原始命令引用 `oldFilter`，确保其他列的排序功能正常工作
+
+* `strNumberSort` 函数利用 JavaScript 的隐式类型转换，将字符串转为数字后进行比较
+* `sortRange` 方法的 `compareFunction` 参数接受自定义比较函数
+* 保留原始命令引用 `oldFilter`，确保其他列的排序功能正常工作
 
 ### 3.3 事件监听方式（备选方案）
 
@@ -74,9 +75,9 @@ sheet.bind(GC.Spread.Sheets.Events.RangeSorting, function (info, data) {
 
 ### 3.4 技术栈
 
-- SpreadJS 17.0.8：核心表格控件库
-- SystemJS 0.19.22：模块加载器
-- systemjs-plugin-babel 0.0.25：ES6 语法转译支持
+* SpreadJS 17.0.8：核心表格控件库
+* SystemJS 0.19.22：模块加载器
+* systemjs-plugin-babel 0.0.25：ES6 语法转译支持
 
 ## 四、使用说明
 
@@ -100,16 +101,16 @@ npm install
 
 ### 5.1 优点
 
-- 精准控制：可针对特定列应用自定义排序逻辑，不影响其他列的默认行为
-- 灵活扩展：提供了两种实现方式（命令重写和事件监听），可根据场景选择
-- 性能优化：利用 JavaScript 原生类型转换，无需额外的字符串解析开销
-- 用户友好：保持了 SpreadJS 原生的排序交互体验，用户无需学习新的操作方式
+* 精准控制：可针对特定列应用自定义排序逻辑，不影响其他列的默认行为
+* 灵活扩展：提供了两种实现方式（命令重写和事件监听），可根据场景选择
+* 性能优化：利用 JavaScript 原生类型转换，无需额外的字符串解析开销
+* 用户友好：保持了 SpreadJS 原生的排序交互体验，用户无需学习新的操作方式
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现硬编码了列索引（第 0 列），实际应用中可改为配置化方式，支持多列自定义排序
-- 对于包含非数字字符的字符串（如 "123abc"），`obj1 - obj2` 会返回 `NaN`，建议添加数据验证逻辑
-- 可扩展为支持更复杂的排序规则，如自然排序（"file1.txt" < "file2.txt" < "file10.txt"）
+* 当前实现硬编码了列索引（第 0 列），实际应用中可改为配置化方式，支持多列自定义排序
+* 对于包含非数字字符的字符串（如 "123abc"），`obj1 - obj2` 会返回 `NaN`，建议添加数据验证逻辑
+* 可扩展为支持更复杂的排序规则，如自然排序（"file1.txt" < "file2.txt" < "file10.txt"）
 
 ## 六、关键代码片段
 
@@ -133,9 +134,10 @@ sheet.sortRange(0, 0, 6, 2, true, [
 ```
 
 说明：
-- `sortRange` 的第三个参数为排序配置数组，支持多列排序
-- `compareFunction` 返回负数表示 obj1 < obj2，返回正数表示 obj1 > obj2，返回 0 表示相等
-- `groupSort` 参数控制分组排序行为，`ignoreHidden` 参数决定是否忽略隐藏行
+
+* `sortRange` 的第三个参数为排序配置数组，支持多列排序
+* `compareFunction` 返回负数表示 obj1 < obj2，返回正数表示 obj1 > obj2，返回 0 表示相等
+* `groupSort` 参数控制分组排序行为，`ignoreHidden` 参数决定是否忽略隐藏行
 
 ## 七、总结
 
@@ -148,5 +150,8 @@ sheet.sortRange(0, 0, 6, 2, true, [
 
 该方案适用于需要对特定数据类型进行特殊排序处理的场景，如版本号排序、文件名自然排序、混合类型数据排序等。通过修改比较函数的实现，可以轻松扩展到更复杂的排序需求。
 
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/PL5VBjpQR0CnW1elvkGWyA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

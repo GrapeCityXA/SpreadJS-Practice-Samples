@@ -1,3 +1,5 @@
+# customize-statusbar-icon
+
 ### 需求：如何自定义状态栏图标
 
 ***
@@ -55,7 +57,11 @@ statusBar.add(new Popup('Popup', { menuContent: 'popup item', tipText: 'popup' }
 最终效果如下：
 ![image](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/image-20260313.2ecf48.png?width=400)
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/oWp9B5hfOEayi-FjKI3Gug/){:target="_blank"}）
-
 
 [开](https://jscodemine.grapecity.com/share/oWp9B5hfOEayi-FjKI3Gug){:target="_blank"}）
+
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

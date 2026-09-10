@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- 数据变更追踪：在协作编辑或数据审核场景中，需要记录每个单元格的修改历史，包括修改时间、修改人和修改值
-- 历史数据可视化：用户需要直观地查看某个单元格的所有历史版本，而不是通过外部日志系统
-- 数据回滚能力：当发现数据错误时，用户可以快速回滚到任意历史版本，而不需要手动重新输入
+* 数据变更追踪：在协作编辑或数据审核场景中，需要记录每个单元格的修改历史，包括修改时间、修改人和修改值
+* 历史数据可视化：用户需要直观地查看某个单元格的所有历史版本，而不是通过外部日志系统
+* 数据回滚能力：当发现数据错误时，用户可以快速回滚到任意历史版本，而不需要手动重新输入
 
 ## 三、实现思路
 
@@ -181,11 +181,11 @@ window.rollback = function(button) {
 
 ### 3.3 技术栈
 
-- SpreadJS 15.0.0：核心表格控件
-- jQuery 3.6.1：DOM 操作和事件处理
-- Bootstrap 3.3.7：弹窗样式
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持
+* SpreadJS 15.0.0：核心表格控件
+* jQuery 3.6.1：DOM 操作和事件处理
+* Bootstrap 3.3.7：弹窗样式
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持
 
 ## 四、使用说明
 
@@ -211,29 +211,32 @@ npm install
 
 ### 5.1 优点
 
-- 非侵入式设计：历史记录存储在单元格 tag 中，不影响单元格的实际值和公式
-- 可视化交互：通过自定义单元格类型和弹窗，提供直观的历史记录查看界面
-- 灵活的回滚机制：支持回滚到任意历史版本，回滚后会自动截断后续历史记录
-- 自动状态管理：当历史记录只有一条时，自动移除自定义单元格类型，恢复为普通文本单元格
+* 非侵入式设计：历史记录存储在单元格 tag 中，不影响单元格的实际值和公式
+* 可视化交互：通过自定义单元格类型和弹窗，提供直观的历史记录查看界面
+* 灵活的回滚机制：支持回滚到任意历史版本，回滚后会自动截断后续历史记录
+* 自动状态管理：当历史记录只有一条时，自动移除自定义单元格类型，恢复为普通文本单元格
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现仅支持通过输入修改内容的场景，不考虑拖拽、粘贴等操作。如需支持，可以监听 `ClipboardPasted`、`DragFillBlock` 等事件
-- 历史记录存储在客户端内存中，刷新页面后会丢失。建议将历史记录持久化到服务器或 LocalStorage
-- 时间戳显示为毫秒数，建议添加日期格式化函数，提升用户体验
-- 修改人信息当前为硬编码的 "testUser"，实际应用中应从用户登录信息中获取
+* 当前实现仅支持通过输入修改内容的场景，不考虑拖拽、粘贴等操作。如需支持，可以监听 `ClipboardPasted`、`DragFillBlock` 等事件
+* 历史记录存储在客户端内存中，刷新页面后会丢失。建议将历史记录持久化到服务器或 LocalStorage
+* 时间戳显示为毫秒数，建议添加日期格式化函数，提升用户体验
+* 修改人信息当前为硬编码的 "testUser"，实际应用中应从用户登录信息中获取
 
 ## 六、总结
 
 本示例展示了如何利用 SpreadJS 的单元格 tag、自定义单元格类型和事件机制，实现一个完整的历史数据追踪和回滚系统。开发者可以从中学到以下知识点：
 
-- 使用单元格 tag 存储自定义元数据
-- 通过继承 `CellTypes.Text` 创建自定义单元格类型
-- 重写 `paint`、`getHitInfo`、`processMouseEnter` 方法实现自定义渲染和交互
-- 监听 `EditEnded` 事件捕获单元格编辑操作
-- 动态切换单元格类型以适应不同状态
+* 使用单元格 tag 存储自定义元数据
+* 通过继承 `CellTypes.Text` 创建自定义单元格类型
+* 重写 `paint`、`getHitInfo`、`processMouseEnter` 方法实现自定义渲染和交互
+* 监听 `EditEnded` 事件捕获单元格编辑操作
+* 动态切换单元格类型以适应不同状态
 
 该方案适用于需要数据审计、版本控制或协作编辑的场景，具有良好的扩展性。开发者可以根据实际需求，扩展支持更多编辑操作类型、添加历史记录持久化、优化弹窗样式等。
 
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/8b7sZlyv90aF84VDrxngzA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

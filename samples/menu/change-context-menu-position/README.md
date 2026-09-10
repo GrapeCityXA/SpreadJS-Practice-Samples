@@ -29,8 +29,8 @@ let ptotectSheetComd = GC.Spread.Sheets.Designer.getCommand(GC.Spread.Sheets.Des
 ptotectSheetComd.visibleContext = "ClickViewport && !IsProtected"
 ```
 
-- 原始的 `visibleContext` 为 `TabStripSelected && !IsProtected`（在工作表标签选中且未保护时显示）
-- 修改后的 `visibleContext` 为 `ClickViewport && !IsProtected`（在视图区域点击且未保护时显示）
+* 原始的 `visibleContext` 为 `TabStripSelected && !IsProtected`（在工作表标签选中且未保护时显示）
+* 修改后的 `visibleContext` 为 `ClickViewport && !IsProtected`（在视图区域点击且未保护时显示）
 
 #### 应用自定义配置
 
@@ -46,9 +46,9 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container", conf
 
 ### 3.2 技术栈
 
-- SpreadJS v16.0.1：核心电子表格组件
-- SpreadJS Designer v16.0.1：设计器组件，提供完整的表格编辑界面
-- SystemJS：模块加载器，用于动态加载 ES6 模块
+* SpreadJS v16.0.1：核心电子表格组件
+* SpreadJS Designer v16.0.1：设计器组件，提供完整的表格编辑界面
+* SystemJS：模块加载器，用于动态加载 ES6 模块
 
 ## 四、使用说明
 
@@ -71,9 +71,9 @@ npm install
 
 ### 5.1 优点
 
-- 灵活的菜单定制：可以根据业务需求自由调整菜单项的显示位置
-- 非侵入式修改：通过配置对象修改，不影响 SpreadJS 的核心功能
-- 易于扩展：同样的方法可以应用于其他命令的 `visibleContext` 修改
+* 灵活的菜单定制：可以根据业务需求自由调整菜单项的显示位置
+* 非侵入式修改：通过配置对象修改，不影响 SpreadJS 的核心功能
+* 易于扩展：同样的方法可以应用于其他命令的 `visibleContext` 修改
 
 ### 5.2 局限性与扩展建议
 
@@ -106,10 +106,14 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container", conf
 
 本示例展示了如何通过修改 SpreadJS Designer 命令的 `visibleContext` 属性来调整右键菜单的显示位置。开发者可以从中学到：
 
-- 如何获取和修改 SpreadJS Designer 的默认配置
-- `visibleContext` 属性的作用和使用方法
-- 如何通过 `commandMap` 应用自定义命令配置
+* 如何获取和修改 SpreadJS Designer 的默认配置
+* `visibleContext` 属性的作用和使用方法
+* 如何通过 `commandMap` 应用自定义命令配置
 
 该方案适用于需要自定义 Designer 界面布局的场景，具有良好的扩展性，可以根据实际需求调整任意命令的显示规则。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/vbxtbKm5mUKtd-cFnNPb-w/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

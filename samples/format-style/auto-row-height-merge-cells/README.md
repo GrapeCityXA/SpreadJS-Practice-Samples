@@ -8,9 +8,9 @@
 
 在 SpreadJS 中使用合并单元格时，开发者经常遇到以下问题：
 
-- **原生自适应失效**：SpreadJS 的 `autoFitRow()` 方法无法正确计算合并单元格的高度，因为合并单元格跨越多行，标准的行高计算逻辑不适用
-- **文本显示不全**：当合并单元格中输入较长文本并启用自动换行时，如果行高不足，文本会被截断或无法完整显示
-- **手动调整繁琐**：用户需要手动拖动行高来适应内容，影响使用体验和工作效率
+* **原生自适应失效**：SpreadJS 的 `autoFitRow()` 方法无法正确计算合并单元格的高度，因为合并单元格跨越多行，标准的行高计算逻辑不适用
+* **文本显示不全**：当合并单元格中输入较长文本并启用自动换行时，如果行高不足，文本会被截断或无法完整显示
+* **手动调整繁琐**：用户需要手动拖动行高来适应内容，影响使用体验和工作效率
 
 ## 三、实现思路
 
@@ -84,9 +84,9 @@ sheet.bind(GC.Spread.Sheets.Events.ValueChanged, function () {
 
 ### 3.4 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0（核心表格组件）
-- **SystemJS**: 0.19.22（模块加载器）
-- **TypeScript**: 4.1.2（开发语言支持）
+* **@grapecity/spread-sheets**: 15.0.0（核心表格组件）
+* **SystemJS**: 0.19.22（模块加载器）
+* **TypeScript**: 4.1.2（开发语言支持）
 
 ## 四、使用说明
 
@@ -113,23 +113,25 @@ npx http-server -p 8080
 
 ### 5.1 优点
 
-- **自动化处理**：无需手动调整行高，内容变化时自动适配
-- **精确计算**：通过临时工作表模拟，确保高度计算准确
-- **性能优化**：使用 `suspendPaint()` 避免多次重绘，提升响应速度
-- **通用性强**：适用于任意大小的合并单元格区域
+* **自动化处理**：无需手动调整行高，内容变化时自动适配
+* **精确计算**：通过临时工作表模拟，确保高度计算准确
+* **性能优化**：使用 `suspendPaint()` 避免多次重绘，提升响应速度
+* **通用性强**：适用于任意大小的合并单元格区域
 
 ### 5.2 局限性与扩展建议
 
 **当前局限性**：
-- 仅处理固定位置的合并单元格（B3:D5），未实现通用化
-- 仅监听 `ValueChanged` 事件，不支持列宽变化时的自动调整
-- 临时工作表的创建和销毁会产生一定的性能开销
+
+* 仅处理固定位置的合并单元格（B3:D5），未实现通用化
+* 仅监听 `ValueChanged` 事件，不支持列宽变化时的自动调整
+* 临时工作表的创建和销毁会产生一定的性能开销
 
 **扩展建议**：
-- 封装为通用函数，支持任意合并单元格的自适应
-- 监听 `ColumnWidthChanged` 事件，实现列宽变化时的自动调整
-- 使用缓存机制，避免频繁创建临时工作表
-- 支持批量处理多个合并单元格
+
+* 封装为通用函数，支持任意合并单元格的自适应
+* 监听 `ColumnWidthChanged` 事件，实现列宽变化时的自动调整
+* 使用缓存机制，避免频繁创建临时工作表
+* 支持批量处理多个合并单元格
 
 ## 六、关键代码片段
 
@@ -194,18 +196,22 @@ sheet.bind(GC.Spread.Sheets.Events.ValueChanged, function () {
 
 **学习价值**：
 
-- 掌握 SpreadJS 合并单元格的创建和操作方法
-- 理解如何通过临时工作表进行复杂计算
-- 学习事件监听机制在表格应用中的实践
-- 了解性能优化技巧（`suspendPaint`/`resumePaint`）
-- 掌握行高和列宽的动态计算方法
+* 掌握 SpreadJS 合并单元格的创建和操作方法
+* 理解如何通过临时工作表进行复杂计算
+* 学习事件监听机制在表格应用中的实践
+* 了解性能优化技巧（`suspendPaint`/`resumePaint`）
+* 掌握行高和列宽的动态计算方法
 
 **适用场景**：
 
-- 需要动态调整合并单元格高度的报表系统
-- 用户可编辑的表格应用，要求内容自适应显示
-- 复杂表格布局中的自动排版需求
+* 需要动态调整合并单元格高度的报表系统
+* 用户可编辑的表格应用，要求内容自适应显示
+* 复杂表格布局中的自动排版需求
 
 该方案可作为基础框架，根据实际业务需求进行扩展和优化，例如支持多个合并单元格的批量处理、响应列宽变化等场景。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/f-nJ3D18W0iz1_xRyKqlPg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

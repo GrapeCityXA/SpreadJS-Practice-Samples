@@ -8,9 +8,9 @@
 
 在实际业务场景中，用户经常需要将 SpreadJS 中的图表分享到其他应用程序中。传统的截图方式操作繁琐且可能损失图片质量。本示例解决了以下问题：
 
-- 提供便捷的图表导出方式，用户可以像操作原生 Excel 一样复制图表
-- 支持跨应用程序粘贴，无需额外的导出和导入步骤
-- 保持图表的清晰度，通过程序化方式生成高质量的 PNG 图片
+* 提供便捷的图表导出方式，用户可以像操作原生 Excel 一样复制图表
+* 支持跨应用程序粘贴，无需额外的导出和导入步骤
+* 保持图表的清晰度，通过程序化方式生成高质量的 PNG 图片
 
 ## 三、实现思路
 
@@ -49,6 +49,7 @@ function writeChart2Clipboard(chart) {
 ```
 
 实现步骤：
+
 1. 检查图表是否被选中
 2. 调用 `chart.toImageSrc()` 方法获取图表的 Base64 图片数据 URL
 3. 使用 `fetch` 将 Data URL 转换为 Blob 对象
@@ -57,10 +58,10 @@ function writeChart2Clipboard(chart) {
 
 ### 3.3 技术栈
 
-- SpreadJS 17.1.5：核心表格控件
-- SpreadJS Charts 17.1.5：图表功能模块
-- SpreadJS Designer 17.1.5：设计器组件
-- Clipboard API：浏览器原生剪贴板接口
+* SpreadJS 17.1.5：核心表格控件
+* SpreadJS Charts 17.1.5：图表功能模块
+* SpreadJS Designer 17.1.5：设计器组件
+* Clipboard API：浏览器原生剪贴板接口
 
 ## 四、使用说明
 
@@ -84,15 +85,15 @@ npm install
 
 ### 5.1 优点
 
-- 操作简便：用户使用标准的复制粘贴快捷键即可完成操作
-- 跨应用兼容：支持粘贴到任何接受图片输入的应用程序
-- 图片质量高：通过程序化方式生成图片，保证清晰度
+* 操作简便：用户使用标准的复制粘贴快捷键即可完成操作
+* 跨应用兼容：支持粘贴到任何接受图片输入的应用程序
+* 图片质量高：通过程序化方式生成图片，保证清晰度
 
 ### 5.2 局限性与扩展建议
 
-- 浏览器兼容性：Clipboard API 需要 HTTPS 环境或 localhost，且部分旧版浏览器不支持
-- 图片格式固定：当前仅支持 PNG 格式，可扩展支持 JPEG、SVG 等格式
-- 扩展建议：可以添加图片分辨率配置选项，允许用户自定义导出图片的尺寸和质量
+* 浏览器兼容性：Clipboard API 需要 HTTPS 环境或 localhost，且部分旧版浏览器不支持
+* 图片格式固定：当前仅支持 PNG 格式，可扩展支持 JPEG、SVG 等格式
+* 扩展建议：可以添加图片分辨率配置选项，允许用户自定义导出图片的尺寸和质量
 
 ## 六、关键代码片段
 
@@ -114,11 +115,15 @@ spread.fromJSON(JSON.parse(getData()))
 
 本示例展示了如何利用 SpreadJS 的图表 API 和浏览器的 Clipboard API 实现图表的跨应用复制功能。开发者可以从中学到：
 
-- SpreadJS 剪贴板事件的监听和处理
-- 图表对象的类型判断和状态检查
-- 图表转换为图片的方法（`toImageSrc()`）
-- 浏览器 Clipboard API 的使用方式
+* SpreadJS 剪贴板事件的监听和处理
+* 图表对象的类型判断和状态检查
+* 图表转换为图片的方法（`toImageSrc()`）
+* 浏览器 Clipboard API 的使用方式
 
 该方案适用于需要将 SpreadJS 图表分享到其他应用程序的场景，具有良好的用户体验和扩展性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/7jHuB0oFcEK6LxcHRutTDQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

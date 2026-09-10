@@ -6,10 +6,10 @@
 
 ## 二、解决的问题
 
-- **跨工作簿数据引用**：支持在一个工作簿中引用另一个工作簿的单元格数据，实现多文件数据联动
-- **外部引用管理**：提供可视化界面查看和管理所有外部工作簿引用关系
-- **动态数据更新**：允许用户上传新的数据源文件（.xlsx 或 .ssjson 格式），实时更新引用的外部数据
-- **公式自动生成**：通过选择外部工作簿的单元格区域，自动生成跨工作簿引用公式
+* **跨工作簿数据引用**：支持在一个工作簿中引用另一个工作簿的单元格数据，实现多文件数据联动
+* **外部引用管理**：提供可视化界面查看和管理所有外部工作簿引用关系
+* **动态数据更新**：允许用户上传新的数据源文件（.xlsx 或 .ssjson 格式），实时更新引用的外部数据
+* **公式自动生成**：通过选择外部工作簿的单元格区域，自动生成跨工作簿引用公式
 
 ## 三、实现思路
 
@@ -134,10 +134,10 @@ function readJSONFromFile(input, callback) {
 
 ### 3.3 技术栈
 
-- SpreadJS 16.2.1：核心表格组件
-- SpreadJS IO 16.2.1：文件导入导出功能
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言
+* SpreadJS 16.2.1：核心表格组件
+* SpreadJS IO 16.2.1：文件导入导出功能
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言
 
 ## 四、使用说明
 
@@ -164,16 +164,16 @@ npm install
 
 ### 5.1 优点
 
-- **完整的外部引用支持**：完全兼容 Excel 的跨工作簿引用语法，可以无缝导入和处理包含外部引用的 Excel 文件
-- **可视化管理**：提供直观的界面查看和管理所有外部引用关系，避免手动编写复杂的引用公式
-- **灵活的数据更新**：支持动态更新外部数据源，无需重新创建公式，适合数据频繁变化的场景
-- **多格式支持**：同时支持 Excel 原生格式（.xlsx）和 SpreadJS 专有格式（.ssjson），提供更多选择
+* **完整的外部引用支持**：完全兼容 Excel 的跨工作簿引用语法，可以无缝导入和处理包含外部引用的 Excel 文件
+* **可视化管理**：提供直观的界面查看和管理所有外部引用关系，避免手动编写复杂的引用公式
+* **灵活的数据更新**：支持动态更新外部数据源，无需重新创建公式，适合数据频繁变化的场景
+* **多格式支持**：同时支持 Excel 原生格式（.xlsx）和 SpreadJS 专有格式（.ssjson），提供更多选择
 
 ### 5.2 局限性与扩展建议
 
-- **本地文件依赖**：当前实现依赖用户手动上传外部数据源文件，可以扩展为支持从服务器自动加载外部工作簿
-- **引用路径管理**：文件路径信息需要手动维护，可以考虑实现自动路径解析和更新机制
-- **性能优化**：对于大量外部引用的场景，可以考虑实现延迟加载和缓存机制
+* **本地文件依赖**：当前实现依赖用户手动上传外部数据源文件，可以扩展为支持从服务器自动加载外部工作簿
+* **引用路径管理**：文件路径信息需要手动维护，可以考虑实现自动路径解析和更新机制
+* **性能优化**：对于大量外部引用的场景，可以考虑实现延迟加载和缓存机制
 
 ## 六、总结
 
@@ -187,4 +187,8 @@ npm install
 
 该方案适用于需要在多个工作簿之间建立数据关联的场景，具有良好的扩展性，可以根据实际需求进一步优化和定制。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/XrTT3dcC3U6Ec5y0zHPwkQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

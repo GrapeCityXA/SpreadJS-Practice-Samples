@@ -4,10 +4,10 @@
 
 ## 二、解决的问题
 
-- **版权保护需求**：在导出或打印的表格中添加版权标识，防止未经授权的使用
-- **保密标记**：为敏感文档添加"机密"、"内部使用"等水印提示
-- **用户身份追溯**：在表格中显示操作者姓名，便于文档溯源和责任追踪
-- **自定义样式水印**：支持旋转角度、字体大小、颜色等样式定制，满足不同场景需求
+* **版权保护需求**：在导出或打印的表格中添加版权标识，防止未经授权的使用
+* **保密标记**：为敏感文档添加"机密"、"内部使用"等水印提示
+* **用户身份追溯**：在表格中显示操作者姓名，便于文档溯源和责任追踪
+* **自定义样式水印**：支持旋转角度、字体大小、颜色等样式定制，满足不同场景需求
 
 ## 三、实现思路
 
@@ -68,17 +68,18 @@ setTimeout(() => {
 ```
 
 关键点说明：
-- `backgroundImageLayout` 设置为 `none` 避免默认的拉伸或居中布局
-- 通过 `setTimeout` 延迟执行，确保 SpreadJS 渲染完成后再修改 DOM
-- 直接操作 SpreadJS 内部视口元素 `ssvp_vp` 的 CSS 属性实现平铺
+
+* `backgroundImageLayout` 设置为 `none` 避免默认的拉伸或居中布局
+* 通过 `setTimeout` 延迟执行，确保 SpreadJS 渲染完成后再修改 DOM
+* 直接操作 SpreadJS 内部视口元素 `ssvp_vp` 的 CSS 属性实现平铺
 
 ### 3.4 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0（核心表格组件）
-- **@grapecity/spread-sheets-print**: 15.0.0（打印功能支持）
-- **html2canvas**: 1.4.1（HTML 转 Canvas 库）
-- **SystemJS**: 0.19.22（模块加载器）
-- **TypeScript**: 4.1.2（开发语言）
+* **@grapecity/spread-sheets**: 15.0.0（核心表格组件）
+* **@grapecity/spread-sheets-print**: 15.0.0（打印功能支持）
+* **html2canvas**: 1.4.1（HTML 转 Canvas 库）
+* **SystemJS**: 0.19.22（模块加载器）
+* **TypeScript**: 4.1.2（开发语言）
 
 ## 四、使用说明
 
@@ -105,22 +106,24 @@ npx http-server -p 8080
 
 ### 5.1 优点
 
-- **灵活的样式定制**：通过 HTML/CSS 可以轻松实现复杂的水印样式（渐变、阴影、多行文字等）
-- **无需额外图片资源**：动态生成水印图片，不依赖外部图片文件
-- **与表格内容分离**：水印作为背景层，不影响表格数据的编辑和操作
-- **打印支持**：配合 spread-sheets-print 插件，水印可以在打印时保留
+* **灵活的样式定制**：通过 HTML/CSS 可以轻松实现复杂的水印样式（渐变、阴影、多行文字等）
+* **无需额外图片资源**：动态生成水印图片，不依赖外部图片文件
+* **与表格内容分离**：水印作为背景层，不影响表格数据的编辑和操作
+* **打印支持**：配合 spread-sheets-print 插件，水印可以在打印时保留
 
 ### 5.2 局限性与扩展建议
 
 **局限性**：
-- 直接操作 SpreadJS 内部 DOM 元素（`ssvp_vp`）可能在版本升级时失效
-- 水印是静态的，无法根据用户操作动态更新（如需要显示当前时间）
+
+* 直接操作 SpreadJS 内部 DOM 元素（`ssvp_vp`）可能在版本升级时失效
+* 水印是静态的，无法根据用户操作动态更新（如需要显示当前时间）
 
 **扩展建议**：
-- 封装为独立的水印工具类，支持动态更新水印内容
-- 使用 SpreadJS 的自定义绘制 API（如 `CustomFloatingObject`）替代 DOM 操作，提高稳定性
-- 添加水印透明度配置，平衡可见性和内容可读性
-- 支持多水印模式（如四角水印 + 中心水印）
+
+* 封装为独立的水印工具类，支持动态更新水印内容
+* 使用 SpreadJS 的自定义绘制 API（如 `CustomFloatingObject`）替代 DOM 操作，提高稳定性
+* 添加水印透明度配置，平衡可见性和内容可读性
+* 支持多水印模式（如四角水印 + 中心水印）
 
 ## 六、关键代码片段
 
@@ -159,4 +162,8 @@ html2canvas(document.getElementById("capture")).then(function (canvas) {
 
 该方案适用于需要快速实现水印功能的场景，特别是当水印样式需要频繁调整时，通过修改 HTML/CSS 即可实现，无需重新生成图片资源。对于生产环境，建议进一步封装并考虑使用 SpreadJS 官方 API 替代 DOM 操作以提高稳定性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/gKJB1TxAM06_MabPC23Ipg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -1,3 +1,5 @@
+# dropbox-support-scrollbar
+
 ### 背景：下拉列表如何增加滚动条
 
 ***
@@ -21,4 +23,8 @@
 实现效果如图：
 ![image](https://gccndocumentsitestorage.blob.core.chinacloudapi.cn/document-site-files/images/b33c4f64-6b99-4132-a675-8dc7b59765f1/image.fc53ce.png?width=400)
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/kbDZT1mmX0aig2ypNWpD1A/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -4,12 +4,12 @@
 
 ## 二、解决的问题
 
-在实际业务开发中，经常会遇到需要定时从后端获取最新数据并更新到表格中的场景。本示例解决了以下问题：
+在实际业务开发中，经常会遇到需要定时从后端获取最新数据并更新到表格中的场景。本示例解决了以下问题： 
 
-- 如何在不重新加载整个表格的情况下，仅更新特定列的数据
-- 如何通过数据绑定机制快速初始化表格结构和数据
-- 如何模拟前后端数据交互，实现局部数据刷新
-- 如何提升用户体验，避免全表刷新带来的闪烁和性能问题
+* 如何在不重新加载整个表格的情况下，仅更新特定列的数据
+* 如何通过数据绑定机制快速初始化表格结构和数据
+* 如何模拟前后端数据交互，实现局部数据刷新
+* 如何提升用户体验，避免全表刷新带来的闪烁和性能问题
 
 ## 三、实现思路
 
@@ -59,9 +59,9 @@ setInterval(function(){
 
 ### 3.3 技术栈
 
-- @grapecity/spread-sheets: 15.0.0（核心表格组件）
-- SystemJS: 0.19.22（模块加载器）
-- TypeScript: 4.1.2（开发语言支持）
+* @grapecity/spread-sheets: 15.0.0（核心表格组件）
+* SystemJS: 0.19.22（模块加载器）
+* TypeScript: 4.1.2（开发语言支持）
 
 ## 四、使用说明
 
@@ -84,19 +84,19 @@ npm install
 
 ### 5.1 优点
 
-- 性能优化：仅更新指定列，避免全表重绘，提升渲染性能
-- 用户体验好：局部刷新不会造成页面闪烁，操作流畅
-- 代码简洁：使用 `setArray()` 方法实现批量更新，代码量少
-- 易于扩展：可以轻松扩展到多列更新或更复杂的数据刷新场景
+* 性能优化：仅更新指定列，避免全表重绘，提升渲染性能
+* 用户体验好：局部刷新不会造成页面闪烁，操作流畅
+* 代码简洁：使用 `setArray()` 方法实现批量更新，代码量少
+* 易于扩展：可以轻松扩展到多列更新或更复杂的数据刷新场景
 
 ### 5.2 局限性与扩展建议
 
 当前实现使用随机数模拟数据更新，实际项目中需要替换为真实的 API 请求。建议扩展方向：
 
-- 集成 fetch 或 axios 进行真实的后端数据请求
-- 添加错误处理机制，处理网络请求失败的情况
-- 支持动态配置更新频率和更新列
-- 添加数据变化的视觉提示（如高亮显示变化的单元格）
+* 集成 fetch 或 axios 进行真实的后端数据请求
+* 添加错误处理机制，处理网络请求失败的情况
+* 支持动态配置更新频率和更新列
+* 添加数据变化的视觉提示（如高亮显示变化的单元格）
 
 ## 六、关键代码片段
 
@@ -132,11 +132,15 @@ sheet.setArray(0, 3, getRandom())
 
 本示例展示了 SpreadJS 中实现局部列数据动态更新的核心技术。开发者可以从中学到：
 
-- 使用数据绑定机制快速构建表格结构
-- 通过 `setArray()` 方法实现精确的区域数据更新
-- 定时器与表格操作的结合使用
-- 模拟前后端数据交互的实现思路
+* 使用数据绑定机制快速构建表格结构
+* 通过 `setArray()` 方法实现精确的区域数据更新
+* 定时器与表格操作的结合使用
+* 模拟前后端数据交互的实现思路
 
 该方案适用于需要实时数据更新的业务场景，如监控面板、数据看板、实时报表等。通过局部更新而非全表刷新的方式，既保证了数据的实时性，又优化了性能和用户体验。开发者可以在此基础上扩展更复杂的数据刷新逻辑，如多列更新、条件更新、增量更新等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/t7HwFCipG0CvA68EKFsC3Q/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -172,4 +172,8 @@ spread.commandManager().register("insertRowsCopyStyle", insertRowsCopyStyle);
 
 该方案适用于需要自定义表格操作行为的场景，具有良好的扩展性。开发者可以基于此思路实现更多自定义命令，如插入列复制样式、删除行前确认、批量格式化等功能，从而打造更符合业务需求的表格应用。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/Ay2_rU26Uk_t09d6t0UbRg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

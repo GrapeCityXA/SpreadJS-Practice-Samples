@@ -6,10 +6,10 @@
 
 在实际的电子表格应用中，用户经常需要将行数据转换为列数据（或反之）。虽然 SpreadJS 提供了基础的复制粘贴功能，但默认不支持转置粘贴。本示例解决了以下问题：
 
-- 提供直观的右键菜单操作，无需手动调整数据布局
-- 自动处理行列转换逻辑，避免手动重新排列数据的繁琐操作
-- 支持撤销/重做功能，确保操作可逆
-- 根据剪贴板状态智能启用/禁用菜单项，提升用户体验
+* 提供直观的右键菜单操作，无需手动调整数据布局
+* 自动处理行列转换逻辑，避免手动重新排列数据的繁琐操作
+* 支持撤销/重做功能，确保操作可逆
+* 根据剪贴板状态智能启用/禁用菜单项，提升用户体验
 
 ## 三、实现思路
 
@@ -110,9 +110,10 @@ commandManager.register("transposePasteCommand", transposePasteCommand, null, fa
 ```
 
 关键点：
-- 使用 `startTransaction` 和 `endTransaction` 包裹操作，支持撤销/重做
-- 通过 `suspendPaint` 和 `suspendCalcService` 暂停渲染和计算，提升性能
-- 转置逻辑：`sheet.setValue(row + j, col + i, ...)` 将源位置 `(i, j)` 的数据写入目标位置 `(j, i)`
+
+* 使用 `startTransaction` 和 `endTransaction` 包裹操作，支持撤销/重做
+* 通过 `suspendPaint` 和 `suspendCalcService` 暂停渲染和计算，提升性能
+* 转置逻辑：`sheet.setValue(row + j, col + i, ...)` 将源位置 `(i, j)` 的数据写入目标位置 `(j, i)`
 
 ### 3.4 集成撤销/重做系统
 
@@ -129,10 +130,10 @@ designerConfig.commandMap[GC.Spread.Sheets.Designer.CommandNames.RedoList] = red
 
 ### 3.5 技术栈
 
-- SpreadJS 16.0.1（核心表格引擎）
-- SpreadJS Designer 16.0.1（设计器组件）
-- TypeScript 4.1.2（开发语言）
-- SystemJS（模块加载器）
+* SpreadJS 16.0.1（核心表格引擎）
+* SpreadJS Designer 16.0.1（设计器组件）
+* TypeScript 4.1.2（开发语言）
+* SystemJS（模块加载器）
 
 ## 四、使用说明
 
@@ -155,22 +156,24 @@ npm install
 
 ### 5.1 优点
 
-- 无缝集成到 Designer 右键菜单，操作直观
-- 支持完整的撤销/重做机制，操作安全可逆
-- 根据剪贴板状态动态控制菜单项可用性，避免无效操作
-- 使用事务机制和渲染优化，确保性能
+* 无缝集成到 Designer 右键菜单，操作直观
+* 支持完整的撤销/重做机制，操作安全可逆
+* 根据剪贴板状态动态控制菜单项可用性，避免无效操作
+* 使用事务机制和渲染优化，确保性能
 
 ### 5.2 局限性与扩展建议
 
 当前实现的局限性：
-- 仅处理单个复制区域（`copiedRanges[0]`），不支持多选区域转置
-- 未检查目标区域是否有足够空间容纳转置后的数据
-- 未处理单元格样式、公式等属性的转置
+
+* 仅处理单个复制区域（`copiedRanges[0]`），不支持多选区域转置
+* 未检查目标区域是否有足够空间容纳转置后的数据
+* 未处理单元格样式、公式等属性的转置
 
 扩展建议：
-- 在 `checkCanTransposePaste` 中添加目标区域大小检查
-- 扩展转置逻辑，支持样式、公式、合并单元格等属性的转置
-- 添加对受保护单元格的检查，避免覆盖受保护区域
+
+* 在 `checkCanTransposePaste` 中添加目标区域大小检查
+* 扩展转置逻辑，支持样式、公式、合并单元格等属性的转置
+* 添加对受保护单元格的检查，避免覆盖受保护区域
 
 ## 六、关键代码片段
 
@@ -211,11 +214,15 @@ function updateClipboardState(designer, clipboardHelper){
 
 本示例展示了如何通过 SpreadJS Designer 的扩展机制实现自定义的粘贴转置功能。开发者可以从中学到：
 
-- 如何扩展 Designer 的右键菜单和命令系统
-- 如何监听剪贴板事件并根据状态动态控制 UI
-- 如何实现支持撤销/重做的自定义命令
-- 如何使用事务机制和渲染优化提升性能
+* 如何扩展 Designer 的右键菜单和命令系统
+* 如何监听剪贴板事件并根据状态动态控制 UI
+* 如何实现支持撤销/重做的自定义命令
+* 如何使用事务机制和渲染优化提升性能
 
 该方案适用于需要在 SpreadJS 中添加自定义数据操作功能的场景，具有良好的扩展性。开发者可以参考此模式实现更多自定义的粘贴选项（如粘贴值、粘贴格式等）。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/o_h-bQfiaUeKuFQVzhsfXQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

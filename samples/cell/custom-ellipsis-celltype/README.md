@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中实现自定义的省略符提示框功能。当单元格内容因宽度限制而显示省略号时，鼠标悬停在单元格上会显示一个自定义的提示框，展示完整的单元格内容。该功能通过继承 SpreadJS 的 Text 单元格类型并重写其绘制和鼠标事件处理方法来实现。
+本示例展示了如何在 SpreadJS 中实现自定义的省略符提示框功能。当单元格内容因宽度限制而显示省略号时，鼠标悬停在单元格上会显示一个自定义的提示框，展示完整的单元格内容。该功能通过继承 SpreadJS 的 Text 单元格类型并重写其绘制和鼠标事件处理方法来实现。 
 
 ## 二、解决的问题
 
 在实际应用中，单元格内容经常会因为列宽限制而无法完整显示，系统默认会显示省略号。虽然 SpreadJS 提供了内置的 tooltip 功能，但在某些场景下，开发者可能需要：
 
-- 自定义提示框的样式和位置
-- 控制提示框的显示时机和条件
-- 实现更灵活的交互效果
+* 自定义提示框的样式和位置
+* 控制提示框的显示时机和条件
+* 实现更灵活的交互效果
 
 本示例通过自定义单元格类型，实现了完全可控的省略符提示框功能。
 
@@ -100,9 +100,9 @@ CustomEllipsisCellType.prototype.processMouseLeave = function (hitInfo) {
 
 ### 3.5 技术栈
 
-- SpreadJS 17.0.8：核心表格组件
-- SystemJS 0.19.22：模块加载器
-- systemjs-plugin-babel 0.0.25：ES6 转译支持
+* SpreadJS 17.0.8：核心表格组件
+* SystemJS 0.19.22：模块加载器
+* systemjs-plugin-babel 0.0.25：ES6 转译支持
 
 ## 四、使用说明
 
@@ -126,24 +126,24 @@ npm install
 
 ### 5.1 优点
 
-- 完全自定义的提示框样式，可以根据需求调整外观
-- 智能判断是否需要显示提示框，避免不必要的显示
-- 提示框位置可控，可以根据单元格位置动态调整
-- 实现简洁，易于扩展和维护
+* 完全自定义的提示框样式，可以根据需求调整外观
+* 智能判断是否需要显示提示框，避免不必要的显示
+* 提示框位置可控，可以根据单元格位置动态调整
+* 实现简洁，易于扩展和维护
 
 ### 5.2 局限性与扩展建议
 
 当前实现存在以下局限性：
 
-- 提示框位置固定在单元格右侧，可能在边界位置显示不全
-- 提示框样式硬编码在代码中，不够灵活
+* 提示框位置固定在单元格右侧，可能在边界位置显示不全
+* 提示框样式硬编码在代码中，不够灵活
 
 扩展建议：
 
-- 添加边界检测，当提示框超出视口时自动调整位置
-- 将提示框样式配置化，支持通过参数自定义
-- 支持多行文本的格式化显示
-- 添加动画效果，提升用户体验
+* 添加边界检测，当提示框超出视口时自动调整位置
+* 将提示框样式配置化，支持通过参数自定义
+* 支持多行文本的格式化显示
+* 添加动画效果，提升用户体验
 
 ## 六、关键代码片段
 
@@ -188,12 +188,16 @@ CustomEllipsisCellType.prototype.getHitInfo = function (x, y, style, cellRect, c
 
 本示例展示了如何通过继承 SpreadJS 的内置单元格类型来实现自定义的交互功能。开发者可以从中学到：
 
-- 自定义单元格类型的创建方法
-- 重写单元格绘制和事件处理方法
-- 使用 `getAutoFitWidth` 方法计算内容宽度
-- 动态创建和管理 DOM 元素
-- 单元格样式和属性的设置方法
+* 自定义单元格类型的创建方法
+* 重写单元格绘制和事件处理方法
+* 使用 `getAutoFitWidth` 方法计算内容宽度
+* 动态创建和管理 DOM 元素
+* 单元格样式和属性的设置方法
 
 该方案适用于需要自定义单元格交互行为的场景，具有良好的扩展性。通过类似的方法，开发者可以实现更多自定义的单元格功能，如自定义编辑器、自定义渲染效果等。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/zSvU1PjW60qutYvIc02BJg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

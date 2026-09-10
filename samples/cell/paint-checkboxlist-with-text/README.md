@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中自定义 CheckBoxList 单元格类型的渲染行为。当工作表处于保护状态时，CheckBoxList 会自动切换为 Text 单元格类型进行渲染，将选中的选项以文本形式显示，从而实现只读展示效果。这种方式既保持了数据的可读性，又避免了在保护模式下用户误操作修改数据。
+本示例展示了如何在 SpreadJS 中自定义 CheckBoxList 单元格类型的渲染行为。当工作表处于保护状态时，CheckBoxList 会自动切换为 Text 单元格类型进行渲染，将选中的选项以文本形式显示，从而实现只读展示效果。这种方式既保持了数据的可读性，又避免了在保护模式下用户误操作修改数据。 
 
 ## 二、解决的问题
 
 在实际业务场景中，当工作表被保护后，CheckBoxList 单元格仍然可能显示为可交互的复选框列表，这会给用户造成困扰。本示例通过重写 CheckBoxList 的渲染方法，解决了以下问题：
 
-- 工作表保护状态下，CheckBoxList 应以只读文本形式展示已选中的选项
-- 需要将选中的值（value）转换为对应的显示文本（text）
-- 保持非保护状态下 CheckBoxList 的正常交互功能
+* 工作表保护状态下，CheckBoxList 应以只读文本形式展示已选中的选项
+* 需要将选中的值（value）转换为对应的显示文本（text）
+* 保持非保护状态下 CheckBoxList 的正常交互功能
 
 ## 三、实现思路
 
@@ -68,9 +68,9 @@ GC.Spread.Sheets.CellTypes.CheckBoxList.prototype.paintValue = function (ctx, va
 
 ### 3.3 技术栈
 
-- SpreadJS 17.0.8：核心电子表格引擎
-- SpreadJS Designer 17.0.8：提供设计器界面
-- SystemJS：模块加载器
+* SpreadJS 17.0.8：核心电子表格引擎
+* SpreadJS Designer 17.0.8：提供设计器界面
+* SystemJS：模块加载器
 
 ## 四、使用说明
 
@@ -94,10 +94,10 @@ npm install
 
 ### 5.1 优点
 
-- 自动适配保护状态：无需手动切换单元格类型，根据工作表保护状态自动调整渲染方式
-- 数据映射准确：正确将 value 值转换为对应的 text 显示文本
-- 非侵入式实现：通过原型链重写实现，不影响其他单元格类型的功能
-- 用户体验友好：保护状态下以文本形式展示，避免用户误以为可以操作
+* 自动适配保护状态：无需手动切换单元格类型，根据工作表保护状态自动调整渲染方式
+* 数据映射准确：正确将 value 值转换为对应的 text 显示文本
+* 非侵入式实现：通过原型链重写实现，不影响其他单元格类型的功能
+* 用户体验友好：保护状态下以文本形式展示，避免用户误以为可以操作
 
 ## 六、关键代码片段
 
@@ -125,11 +125,15 @@ GC.Spread.Sheets.CellTypes.Text.prototype.paintValue.apply(this, [ctx, str, x, y
 
 本示例展示了 SpreadJS 单元格类型自定义渲染的高级用法，开发者可以从中学到：
 
-- 如何重写单元格类型的 `paintValue` 方法实现自定义渲染
-- 如何根据工作表状态（保护/非保护）动态切换渲染逻辑
-- 如何在不同单元格类型之间复用渲染方法
-- 如何处理 CheckBoxList 的数据结构（value 数组与 text 的映射关系）
+* 如何重写单元格类型的 `paintValue` 方法实现自定义渲染
+* 如何根据工作表状态（保护/非保护）动态切换渲染逻辑
+* 如何在不同单元格类型之间复用渲染方法
+* 如何处理 CheckBoxList 的数据结构（value 数组与 text 的映射关系）
 
 该方案适用于需要在保护模式下以只读文本形式展示复杂单元格类型的场景，具有良好的扩展性，可以应用于其他需要条件渲染的单元格类型。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/WjM__MeM7EmQiFly_nY90w/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

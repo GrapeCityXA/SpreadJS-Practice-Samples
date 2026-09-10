@@ -1,12 +1,12 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中实现自定义单元格类型，以支持实时搜索高亮功能。当用户在搜索框中输入关键词时，表格中所有匹配的文本会自动以红色高亮显示，提供类似浏览器页面搜索（Ctrl+F）的用户体验。该功能通过继承 SpreadJS 的 Text 单元格类型并重写其渲染方法实现，适用于需要快速定位数据的场景。
+本示例展示了如何在 SpreadJS 中实现自定义单元格类型，以支持实时搜索高亮功能。当用户在搜索框中输入关键词时，表格中所有匹配的文本会自动以红色高亮显示，提供类似浏览器页面搜索（Ctrl+F）的用户体验。该功能通过继承 SpreadJS 的 Text 单元格类型并重写其渲染方法实现，适用于需要快速定位数据的场景。 
 
 ## 二、解决的问题
 
-- **快速数据定位**：在大量数据中快速找到包含特定关键词的单元格，无需逐行查看
-- **视觉反馈增强**：通过高亮显示匹配内容，让用户直观地看到搜索结果的位置和数量
-- **实时搜索体验**：支持输入即搜索，无需点击按钮，提升交互流畅度
+* **快速数据定位**：在大量数据中快速找到包含特定关键词的单元格，无需逐行查看
+* **视觉反馈增强**：通过高亮显示匹配内容，让用户直观地看到搜索结果的位置和数量
+* **实时搜索体验**：支持输入即搜索，无需点击按钮，提升交互流畅度
 
 ## 三、实现思路
 
@@ -122,9 +122,9 @@ document.getElementById("searchTxt").onkeyup = (function () {
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0：核心表格组件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格组件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -147,16 +147,16 @@ npm install
 
 ### 5.1 优点
 
-- **实时响应**：输入即搜索，无需额外操作
-- **多列支持**：可同时在多个列中高亮显示匹配内容
-- **大小写不敏感**：搜索时自动忽略大小写差异
-- **多次匹配**：同一单元格内的多个匹配项都会被高亮
+* **实时响应**：输入即搜索，无需额外操作
+* **多列支持**：可同时在多个列中高亮显示匹配内容
+* **大小写不敏感**：搜索时自动忽略大小写差异
+* **多次匹配**：同一单元格内的多个匹配项都会被高亮
 
 ### 5.2 局限性与扩展建议
 
-- **性能考虑**：当数据量极大时，每次输入都触发全表重绘可能影响性能，建议添加防抖（debounce）优化
-- **高亮样式固定**：当前高亮颜色硬编码为红色，可扩展为支持自定义高亮样式（背景色、字体粗细等）
-- **正则表达式支持**：可扩展为支持正则表达式搜索，提供更强大的匹配能力
+* **性能考虑**：当数据量极大时，每次输入都触发全表重绘可能影响性能，建议添加防抖（debounce）优化
+* **高亮样式固定**：当前高亮颜色硬编码为红色，可扩展为支持自定义高亮样式（背景色、字体粗细等）
+* **正则表达式支持**：可扩展为支持正则表达式搜索，提供更强大的匹配能力
 
 ## 六、关键代码片段
 
@@ -209,6 +209,8 @@ document.getElementById("searchTxt").onkeyup = (function () {
 
 该方案适用于需要快速数据检索的业务场景，如 CRM 系统、数据分析工具等。通过添加防抖优化和样式配置，可进一步提升用户体验和扩展性。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Customize%20Cell%20Brightness%20Search.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/ZVJ1ylVqWU_C8RyOIvEPmQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

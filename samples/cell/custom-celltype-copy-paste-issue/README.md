@@ -1,10 +1,12 @@
+# custom-celltype-copy-paste-issue
+
 ### 背景
 
 ***
 
 在使用SpreadJS的自定义单元格功能时，会发现复制自定义单元格的时候有时会失败，具体可以分为以下两种场景。
 
-### 场景1：直接复制自定义单元格，在其他地方粘贴无效
+### 场景1：直接复制自定义单元格，在其他地方粘贴无效 
 
 ![image](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/image-20260316.273f79.png?width=400)
 这是因为我们的单元格没有定义typeName，或者定义了，但是SpreadJS没有找到。
@@ -72,4 +74,8 @@ FullNameCellType.prototype.isReservedKey = function (e) {
 
 这样就不会出现上述问题了。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/3_W7IEV5MEmfZZn1Qb0jbw/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

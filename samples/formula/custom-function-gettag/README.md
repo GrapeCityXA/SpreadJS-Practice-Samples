@@ -8,10 +8,10 @@
 
 在实际业务场景中，开发者经常需要在单元格中存储额外的元数据（如 ID、状态码、关联信息等），这些数据不适合直接显示在单元格中。SpreadJS 的 tag 属性提供了这种能力，但默认情况下无法在公式中直接访问 tag 值。本示例解决了以下问题：
 
-- 如何在公式中读取单元格的 tag 属性
-- 如何将 tag 值与其他计算逻辑结合（如数值运算）
-- 如何处理单元格区域的 tag 获取
-- 如何创建支持引用类型参数的自定义函数
+* 如何在公式中读取单元格的 tag 属性
+* 如何将 tag 值与其他计算逻辑结合（如数值运算）
+* 如何处理单元格区域的 tag 获取
+* 如何创建支持引用类型参数的自定义函数
 
 ## 三、实现思路
 
@@ -54,8 +54,8 @@ FactorialFunction.prototype.isContextSensitive = function () {
 }
 ```
 
-- `acceptsReference()` 返回 `true` 表示函数可以接收单元格引用作为参数（如 `A1` 或 `A2:A4`）
-- `isContextSensitive()` 返回 `true` 表示函数需要访问工作表上下文来获取单元格信息
+* `acceptsReference()` 返回 `true` 表示函数可以接收单元格引用作为参数（如 `A1` 或 `A2:A4`）
+* `isContextSensitive()` 返回 `true` 表示函数需要访问工作表上下文来获取单元格信息
 
 ### 3.3 实现函数计算逻辑
 
@@ -102,10 +102,10 @@ sheet.setFormula(2, 5, '=GETTAG(A2:A4)');     // 获取区域 tag
 
 ### 3.5 技术栈
 
-- SpreadJS 16.0.1（核心表格组件）
-- SpreadJS Designer 16.0.1（设计器组件）
-- TypeScript 4.1.2（开发语言）
-- SystemJS 0.19.22（模块加载器）
+* SpreadJS 16.0.1（核心表格组件）
+* SpreadJS Designer 16.0.1（设计器组件）
+* TypeScript 4.1.2（开发语言）
+* SystemJS 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -130,25 +130,25 @@ npm install
 
 ### 5.1 优点
 
-- 提供了在公式中访问 tag 属性的能力，打通了元数据与计算逻辑的桥梁
-- 支持单个单元格和区域引用两种模式
-- 函数返回值可以参与数值运算（如示例中的 `+100`）
-- 提供了完整的智能提示信息，提升用户体验
-- 代码结构清晰，易于扩展为其他自定义函数
+* 提供了在公式中访问 tag 属性的能力，打通了元数据与计算逻辑的桥梁
+* 支持单个单元格和区域引用两种模式
+* 函数返回值可以参与数值运算（如示例中的 `+100`）
+* 提供了完整的智能提示信息，提升用户体验
+* 代码结构清晰，易于扩展为其他自定义函数
 
 ### 5.2 局限性与扩展建议
 
 当前实现存在以下限制：
 
-- 函数内部直接引用了全局 `sheet` 变量，不支持跨工作表获取 tag
-- 对于区域引用，只返回整个区域的 tag，不支持返回区域内每个单元格的 tag 数组
-- 错误处理较为简单，可以增加更详细的错误提示
+* 函数内部直接引用了全局 `sheet` 变量，不支持跨工作表获取 tag
+* 对于区域引用，只返回整个区域的 tag，不支持返回区域内每个单元格的 tag 数组
+* 错误处理较为简单，可以增加更详细的错误提示
 
 扩展建议：
 
-- 支持第二个参数指定工作表名称，实现跨表 tag 获取
-- 增加数组公式支持，返回区域内所有单元格的 tag 值
-- 添加更多参数选项，如指定 tag 不存在时的默认返回值
+* 支持第二个参数指定工作表名称，实现跨表 tag 获取
+* 增加数组公式支持，返回区域内所有单元格的 tag 值
+* 添加更多参数选项，如指定 tag 不存在时的默认返回值
 
 ## 六、关键代码片段
 
@@ -178,13 +178,16 @@ range.setStyle(rangeStyle);  // 设置区域样式
 
 本示例展示了 SpreadJS 自定义函数开发的核心技术，开发者可以从中学到：
 
-- 如何继承 `GC.Spread.CalcEngine.Functions.Function` 创建自定义函数
-- 如何配置函数的参数定义和智能提示信息
-- 如何实现支持引用类型参数的函数（通过 `acceptsReference` 和 `isContextSensitive`）
-- 如何在函数中访问工作表上下文并读取单元格属性
-- 如何将自定义函数注册到工作表并在公式中使用
+* 如何继承 `GC.Spread.CalcEngine.Functions.Function` 创建自定义函数
+* 如何配置函数的参数定义和智能提示信息
+* 如何实现支持引用类型参数的函数（通过 `acceptsReference` 和 `isContextSensitive`）
+* 如何在函数中访问工作表上下文并读取单元格属性
+* 如何将自定义函数注册到工作表并在公式中使用
 
 该方案适用于需要在公式中访问单元格元数据的场景，如数据关联、状态判断、条件计算等。通过类似的方式，开发者可以扩展实现更多自定义函数，如获取单元格样式、批注、数据验证规则等属性，极大地增强 SpreadJS 的公式计算能力。
 
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/GgDDZe4UGkCwAFoprO-fZg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

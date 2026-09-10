@@ -1,12 +1,12 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中创建自定义单元格类型，实现一个连续方框填写的输入控件。该控件将单元格值拆分为 4 个独立的小方框，每个方框显示一个字符，适用于身份证号、验证码、序列号等需要逐字符输入的场景。
+本示例展示了如何在 SpreadJS 中创建自定义单元格类型，实现一个连续方框填写的输入控件。该控件将单元格值拆分为 4 个独立的小方框，每个方框显示一个字符，适用于身份证号、验证码、序列号等需要逐字符输入的场景。 
 
 ## 二、解决的问题
 
-- 提供类似表单中常见的验证码输入框体验，将长字符串拆分为多个独立方框
-- 增强数据输入的可视化效果，便于用户逐字符核对
-- 适用于固定长度字符串的输入场景，如验证码、PIN 码等
+* 提供类似表单中常见的验证码输入框体验，将长字符串拆分为多个独立方框
+* 增强数据输入的可视化效果，便于用户逐字符核对
+* 适用于固定长度字符串的输入场景，如验证码、PIN 码等
 
 ## 三、实现思路
 
@@ -76,6 +76,7 @@ ContinuousBoxCellType.prototype.paint = function (ctx, value, x, y, w, h, style,
 自定义编辑器包含三个关键方法：
 
 **创建编辑器元素**：
+
 ```javascript
 ContinuousBoxCellType.prototype.createEditorElement = function () {
     var div = document.createElement("div");
@@ -89,6 +90,7 @@ ContinuousBoxCellType.prototype.createEditorElement = function () {
 ```
 
 **获取编辑器值**：
+
 ```javascript
 ContinuousBoxCellType.prototype.getEditorValue = function (editorContext) {
     var value = "";
@@ -100,6 +102,7 @@ ContinuousBoxCellType.prototype.getEditorValue = function (editorContext) {
 ```
 
 **设置编辑器值**：
+
 ```javascript
 ContinuousBoxCellType.prototype.setEditorValue = function (editorContext, value) {
     for (var i = 0; i < 4; i++) {
@@ -130,9 +133,9 @@ sheet.bindColumns(columnInfo);
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0 - 核心表格控件
-- TypeScript 4.1.2 - 开发语言支持
-- SystemJS 0.19.22 - 模块加载器
+* SpreadJS 15.0.0 - 核心表格控件
+* TypeScript 4.1.2 - 开发语言支持
+* SystemJS 0.19.22 - 模块加载器
 
 ## 四、使用说明
 
@@ -154,17 +157,17 @@ npm install
 
 ### 5.1 优点
 
-- 视觉效果清晰，适合固定长度字符串输入
-- 通过 SVG 渲染保证跨浏览器兼容性
-- 使用 `cell.tag()` 缓存图像，提升渲染性能
-- 编辑器与显示状态分离，交互体验流畅
+* 视觉效果清晰，适合固定长度字符串输入
+* 通过 SVG 渲染保证跨浏览器兼容性
+* 使用 `cell.tag()` 缓存图像，提升渲染性能
+* 编辑器与显示状态分离，交互体验流畅
 
 ### 5.2 局限性与扩展建议
 
-- 当前固定为 4 个方框，可扩展为可配置数量
-- 未实现方框间自动跳转（输入一个字符后自动聚焦下一个框）
-- 可增加输入验证（如限制数字、字母等）
-- 建议添加键盘导航支持（左右箭头切换方框）
+* 当前固定为 4 个方框，可扩展为可配置数量
+* 未实现方框间自动跳转（输入一个字符后自动聚焦下一个框）
+* 可增加输入验证（如限制数字、字母等）
+* 建议添加键盘导航支持（左右箭头切换方框）
 
 ## 六、关键代码片段
 
@@ -196,13 +199,15 @@ ContinuousBoxCellType.prototype.updateEditor = function (editorContext, cellStyl
 
 本示例展示了 SpreadJS 自定义单元格类型的完整实现流程，开发者可以学到：
 
-- 继承 `CellTypes.Base` 创建自定义单元格类型
-- 使用 SVG + foreignObject 实现复杂 HTML 渲染
-- 实现自定义编辑器的创建、取值、赋值逻辑
-- 通过 `cell.tag()` 优化渲染性能
+* 继承 `CellTypes.Base` 创建自定义单元格类型
+* 使用 SVG + foreignObject 实现复杂 HTML 渲染
+* 实现自定义编辑器的创建、取值、赋值逻辑
+* 通过 `cell.tag()` 优化渲染性能
 
 该方案适用于需要特殊输入格式的业务场景，可根据实际需求调整方框数量、样式和验证规则，具有较强的扩展性。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Custom%20Cells%20-%20Box%20Input%20Specified%20Number%20of%20Data.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/ZSDrg2e1t0KC8XbRiWcbZQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

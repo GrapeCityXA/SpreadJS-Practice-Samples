@@ -1,3 +1,5 @@
+# reuse-custom-table-style
+
 ### 需求：SpreadJS之自定义table样式复用
 
 ***
@@ -48,7 +50,7 @@ let tableStyleJson = JSON.parse(JSON.stringify(table1.style().toJSON()));
 
 在新的table中应用该style：
 
-```
+```auto
 let table2 = sheet.tables.findByName('Table2');
 let tableStyle2 = new GC.Spread.Sheets.Tables.TableTheme();
 tableStyle2.fromJSON(tableStyleJson);
@@ -58,4 +60,8 @@ table2.style(tableStyle2)
 效果如下图：
 ![](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/GIF%202026-3-17%2011-19-18-20260317.755573.gif?width=400)
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/t2G1ENxfnEC5Z4c9yfB_oA/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

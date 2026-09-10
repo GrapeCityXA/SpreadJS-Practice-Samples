@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例演示了在 SpreadJS 中如何在同一行创建多个 Table 并实现数据绑定。当工作表中存在多个 Table 且位于同一行时，直接绑定数据会导致 Table 区域重叠或数据显示异常。该示例通过在绑定数据前动态调整 Table 的行数范围，解决了多个 Table 同时绑定数据时的布局冲突问题。
+本示例演示了在 SpreadJS 中如何在同一行创建多个 Table 并实现数据绑定。当工作表中存在多个 Table 且位于同一行时，直接绑定数据会导致 Table 区域重叠或数据显示异常。该示例通过在绑定数据前动态调整 Table 的行数范围，解决了多个 Table 同时绑定数据时的布局冲突问题。 
 
 ## 二、解决的问题
 
 在 SpreadJS 中使用 Table 数据绑定功能时，如果同一行存在多个 Table，会遇到以下问题：
 
-- Table 绑定数据时会通过 insert rows 方式动态插入行，导致相邻 Table 的区域发生冲突
-- 多个 Table 绑定不同长度的数据源时，无法自动调整各自的行数范围
-- 直接绑定会导致 Table 区域重叠，数据显示错乱
+* Table 绑定数据时会通过 insert rows 方式动态插入行，导致相邻 Table 的区域发生冲突
+* 多个 Table 绑定不同长度的数据源时，无法自动调整各自的行数范围
+* 直接绑定会导致 Table 区域重叠，数据显示错乱
 
 该示例提供了一种通过预先调整 Table 区域大小的方式，确保多个 Table 可以正确绑定各自的数据源。
 
@@ -107,10 +107,10 @@ sheet.getCell(5, 1).hAlign(GC.Spread.Sheets.HorizontalAlign.center).value("table
 
 ### 3.5 技术栈
 
-- @grapecity/spread-sheets: 15.0.0
-- jQuery: 3.6.1
-- SystemJS: 0.19.22
-- TypeScript: 4.1.2
+* @grapecity/spread-sheets: 15.0.0
+* jQuery: 3.6.1
+* SystemJS: 0.19.22
+* TypeScript: 4.1.2
 
 ## 四、使用说明
 
@@ -132,18 +132,18 @@ npm install
 
 ### 5.1 优点
 
-- 解决了同一行多个 Table 数据绑定时的区域冲突问题
-- 支持动态数据源长度，自动调整 Table 行数
-- 使用 CellBindingSource 支持嵌套路径的数据绑定
-- 可自定义表头样式，隐藏默认表头
+* 解决了同一行多个 Table 数据绑定时的区域冲突问题
+* 支持动态数据源长度，自动调整 Table 行数
+* 使用 CellBindingSource 支持嵌套路径的数据绑定
+* 可自定义表头样式，隐藏默认表头
 
 ### 5.2 局限性与扩展建议
 
 当前实现需要手动触发绑定操作，如果需要自动绑定，可以考虑：
 
-- 在数据源加载完成后自动计算 Table 区域并绑定
-- 监听数据源变化事件，动态调整 Table 区域
-- 封装成通用方法，支持任意数量的 Table 同时绑定
+* 在数据源加载完成后自动计算 Table 区域并绑定
+* 监听数据源变化事件，动态调整 Table 区域
+* 封装成通用方法，支持任意数量的 Table 同时绑定
 
 ## 六、关键代码片段
 
@@ -171,12 +171,16 @@ table.bindingPath("bindPath_table1");
 
 本示例展示了在 SpreadJS 中处理同一行多个 Table 数据绑定的实用技巧。开发者可以从中学到：
 
-- Table 数据绑定的基本流程和 API 使用
-- CellBindingSource 的嵌套路径绑定机制
-- 使用 `tables.resize()` 方法动态调整 Table 区域
-- 解决多个 Table 布局冲突的核心思路：先调整区域，再绑定数据
-- 自定义 Table 表头的实现方式
+* Table 数据绑定的基本流程和 API 使用
+* CellBindingSource 的嵌套路径绑定机制
+* 使用 `tables.resize()` 方法动态调整 Table 区域
+* 解决多个 Table 布局冲突的核心思路：先调整区域，再绑定数据
+* 自定义 Table 表头的实现方式
 
 该方案适用于需要在同一行展示多个独立数据集的场景，如对比报表、多维度数据展示等。通过预先计算并调整 Table 区域，可以确保数据绑定的稳定性和布局的正确性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/5XuQYJYnOUqmnNl2B43hCg/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

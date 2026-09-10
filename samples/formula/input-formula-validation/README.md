@@ -1,3 +1,5 @@
+# input-formula-validation
+
 ### 需求：如何实现对用户输入的公式进行校验
 
 ***
@@ -53,4 +55,8 @@ spread.bind(GC.Spread.Sheets.Events.EditEnding, function (e, info) {
 });
 ```
 
-### 在线Demo（[全屏打开](https://jscodemine.grapecity.com/share/mfM2H2L96EeqcjMtBTinxQ/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

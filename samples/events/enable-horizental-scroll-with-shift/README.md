@@ -8,9 +8,9 @@
 
 在实际的电子表格应用中，用户经常需要处理列数较多的数据表格。传统的横向滚动方式（拖动滚动条或使用方向键）操作效率较低，用户体验不佳。该示例解决了以下问题：
 
-- 提供更符合用户习惯的横向滚动方式（按住 Shift + 鼠标滚轮）
-- 提升处理宽表格数据时的操作效率
-- 实现与 Excel 等主流电子表格软件一致的交互体验
+* 提供更符合用户习惯的横向滚动方式（按住 Shift + 鼠标滚轮）
+* 提升处理宽表格数据时的操作效率
+* 实现与 Excel 等主流电子表格软件一致的交互体验
 
 ## 三、实现思路
 
@@ -37,24 +37,24 @@ document.getElementById("vp_vp").addEventListener("wheel", function (arg) {
 
 通过事件对象的 `shiftKey` 属性判断用户是否按住了 Shift 键，从而决定滚动方向：
 
-- 当 `arg.shiftKey` 为 `true` 时，执行横向滚动
-- 当 `arg.shiftKey` 为 `false` 时，执行纵向滚动
+* 当 `arg.shiftKey` 为 `true` 时，执行横向滚动
+* 当 `arg.shiftKey` 为 `false` 时，执行纵向滚动
 
 #### 调用 scroll 方法实现滚动
 
 使用 SpreadJS 的 `sheet.scroll(x, y)` 方法控制表格滚动：
 
-- `sheet.scroll(0, scrollValue)`：横向滚动，第一个参数为 0 表示纵向不滚动
-- `sheet.scroll(scrollValue, 0)`：纵向滚动，第二个参数为 0 表示横向不滚动
+* `sheet.scroll(0, scrollValue)`：横向滚动，第一个参数为 0 表示纵向不滚动
+* `sheet.scroll(scrollValue, 0)`：纵向滚动，第二个参数为 0 表示横向不滚动
 
 滚动值通过 `-arg.wheelDelta` 计算，负号用于确保滚动方向与鼠标滚轮方向一致。纵向滚动时除以 3 是为了调整滚动速度，使其更加平滑。
 
 ### 3.2 技术栈
 
-- SpreadJS 16.0.1：核心电子表格组件
-- SpreadJS Designer 16.0.1：设计器组件
-- SystemJS：模块加载器
-- TypeScript 4.1.2：开发语言
+* SpreadJS 16.0.1：核心电子表格组件
+* SpreadJS Designer 16.0.1：设计器组件
+* SystemJS：模块加载器
+* TypeScript 4.1.2：开发语言
 
 ## 四、使用说明
 
@@ -79,16 +79,16 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单，代码量少，仅需 10 行左右的核心代码
-- 交互体验与 Excel 等主流电子表格软件保持一致
-- 提升了处理宽表格时的操作效率
-- 兼容 SpreadJS Designer 环境
+* 实现简单，代码量少，仅需 10 行左右的核心代码
+* 交互体验与 Excel 等主流电子表格软件保持一致
+* 提升了处理宽表格时的操作效率
+* 兼容 SpreadJS Designer 环境
 
 ### 5.2 局限性与扩展建议
 
-- 该实现依赖于固定的 DOM 元素 ID（`vp_vp`），如果 SpreadJS 内部结构发生变化，可能需要调整代码
-- 滚动速度通过固定系数（除以 3）调整，可以考虑增加配置项让用户自定义滚动速度
-- 从 SpreadJS V18 版本开始，该功能已内置，建议升级到新版本以获得更好的兼容性和性能
+* 该实现依赖于固定的 DOM 元素 ID（`vp_vp`），如果 SpreadJS 内部结构发生变化，可能需要调整代码
+* 滚动速度通过固定系数（除以 3）调整，可以考虑增加配置项让用户自定义滚动速度
+* 从 SpreadJS V18 版本开始，该功能已内置，建议升级到新版本以获得更好的兼容性和性能
 
 ## 六、关键代码片段
 
@@ -132,11 +132,15 @@ sheet.setColumnCount(200)
 
 开发者可以从本示例中学到：
 
-- 如何监听 SpreadJS 视口的鼠标事件
-- 如何使用 `sheet.scroll()` 方法控制表格滚动
-- 如何通过事件对象的 `shiftKey` 属性判断键盘状态
-- 如何调整滚动速度以优化用户体验
+* 如何监听 SpreadJS 视口的鼠标事件
+* 如何使用 `sheet.scroll()` 方法控制表格滚动
+* 如何通过事件对象的 `shiftKey` 属性判断键盘状态
+* 如何调整滚动速度以优化用户体验
 
 该方案适用于需要增强横向滚动体验的电子表格应用场景。对于使用 SpreadJS V18 及以上版本的项目，建议直接使用内置的横向滚动功能，无需额外实现。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/hy0y8-6sbECbufw6rlc8BA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **中文字体缺失**：SpreadJS Designer 默认字体列表以英文字体为主，中文用户需要快速访问常用中文字体
-- **多入口一致性**：设计器中有多个字体选择入口（工具栏、右键菜单、格式对话框、富文本编辑器），需要在所有位置统一添加自定义字体
-- **字体顺序优化**：将常用字体置于列表顶部，提升用户体验
+* **中文字体缺失**：SpreadJS Designer 默认字体列表以英文字体为主，中文用户需要快速访问常用中文字体
+* **多入口一致性**：设计器中有多个字体选择入口（工具栏、右键菜单、格式对话框、富文本编辑器），需要在所有位置统一添加自定义字体
+* **字体顺序优化**：将常用字体置于列表顶部，提升用户体验
 
 ## 三、实现思路
 
@@ -90,10 +90,10 @@ GC.Spread.Sheets.Designer.setResources(resource);
 
 ### 3.2 技术栈
 
-- SpreadJS v17.1.10：核心电子表格引擎
-- SpreadJS Designer v17.1.10：可视化设计器组件
-- SystemJS：模块加载器
-- TypeScript 4.1.2：类型支持（配置环境）
+* SpreadJS v17.1.10：核心电子表格引擎
+* SpreadJS Designer v17.1.10：可视化设计器组件
+* SystemJS：模块加载器
+* TypeScript 4.1.2：类型支持（配置环境）
 
 ## 四、使用说明
 
@@ -110,18 +110,18 @@ npm install
 
 1. 在浏览器中打开 `index.html`
 2. 在设计器界面中验证自定义字体：
-   - **工具栏**：点击"开始"选项卡中的字体下拉框，查看列表顶部是否显示"微软雅黑"、"黑体"、"新宋体"
-   - **单元格格式**：右键单击单元格 → 选择"单元格格式" → 切换到"字体"选项卡，查看字体列表
-   - **富文本编辑器**：右键单击单元格 → 选择"编辑富文本"，在富文本编辑器的字体下拉框中查看
-   - **图表格式**：选中图表 → 右键"设置格式" → "文本"选项，查看字体列表
+    * **工具栏**：点击"开始"选项卡中的字体下拉框，查看列表顶部是否显示"微软雅黑"、"黑体"、"新宋体"
+    * **单元格格式**：右键单击单元格 → 选择"单元格格式" → 切换到"字体"选项卡，查看字体列表
+    * **富文本编辑器**：右键单击单元格 → 选择"编辑富文本"，在富文本编辑器的字体下拉框中查看
+    * **图表格式**：选中图表 → 右键"设置格式" → "文本"选项，查看字体列表
 
 ## 五、功能特点
 
 ### 5.1 优点
 
-- **全面覆盖**：在设计器的所有字体选择入口统一添加自定义字体，确保用户体验一致
-- **灵活扩展**：可以轻松添加更多自定义字体，只需按照相同模式修改配置
-- **优先显示**：自定义字体置于列表顶部，减少用户查找时间
+* **全面覆盖**：在设计器的所有字体选择入口统一添加自定义字体，确保用户体验一致
+* **灵活扩展**：可以轻松添加更多自定义字体，只需按照相同模式修改配置
+* **优先显示**：自定义字体置于列表顶部，减少用户查找时间
 
 ### 5.2 版本优化建议
 
@@ -149,11 +149,15 @@ GC.Spread.Sheets.Designer.setResources(res);
 
 本示例展示了如何在 SpreadJS Designer 中全面自定义字体列表，涵盖工具栏、格式对话框和富文本编辑器三个核心入口。开发者可以学到：
 
-- 如何修改设计器命令配置（`commandMap`）
-- 如何操作设计器模板（`Template`）的深层嵌套结构
-- 如何管理设计器资源（`Resources`）中的字体定义
-- 不同 SpreadJS 版本的 API 差异和最佳实践
+* 如何修改设计器命令配置（`commandMap`）
+* 如何操作设计器模板（`Template`）的深层嵌套结构
+* 如何管理设计器资源（`Resources`）中的字体定义
+* 不同 SpreadJS 版本的 API 差异和最佳实践
 
 该方案适用于需要定制化字体列表的企业应用，特别是中文环境下的电子表格系统，可以根据实际需求扩展更多字体或调整字体顺序。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/g0nrcpMwcUmhi7Jq4PJqMw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- 默认状态栏功能有限，无法满足特定业务场景下的自定义信息展示需求
-- 需要在表格底部实时显示用户输入或计算的数据
-- 需要扩展状态栏功能，添加自定义的交互元素和显示逻辑
+* 默认状态栏功能有限，无法满足特定业务场景下的自定义信息展示需求
+* 需要在表格底部实时显示用户输入或计算的数据
+* 需要扩展状态栏功能，添加自定义的交互元素和显示逻辑
 
 ## 三、实现思路
 
@@ -102,19 +102,19 @@ npm install
 
 ### 5.1 优点
 
-- 灵活的扩展机制：通过原型继承可以轻松创建自定义状态栏组件
-- 简单的 API 设计：只需重写 `onCreateItemView` 方法即可自定义视图
-- 与工作簿无缝集成：状态栏自动绑定到工作簿实例，无需额外配置
-- 支持多个自定义组件：可以同时添加多个不同的自定义状态栏项
+* 灵活的扩展机制：通过原型继承可以轻松创建自定义状态栏组件
+* 简单的 API 设计：只需重写 `onCreateItemView` 方法即可自定义视图
+* 与工作簿无缝集成：状态栏自动绑定到工作簿实例，无需额外配置
+* 支持多个自定义组件：可以同时添加多个不同的自定义状态栏项
 
 ### 5.2 局限性与扩展建议
 
 当前实现仅展示了基本的文本显示功能，可以进一步扩展：
 
-- 添加更复杂的 UI 元素（如进度条、图标、下拉菜单等）
-- 监听工作簿事件（如单元格选择、数据变化），自动更新状态栏内容
-- 实现状态栏项的点击交互，触发特定操作
-- 添加样式定制，使状态栏组件与应用主题保持一致
+* 添加更复杂的 UI 元素（如进度条、图标、下拉菜单等）
+* 监听工作簿事件（如单元格选择、数据变化），自动更新状态栏内容
+* 实现状态栏项的点击交互，触发特定操作
+* 添加样式定制，使状态栏组件与应用主题保持一致
 
 ## 六、总结
 
@@ -122,9 +122,13 @@ npm install
 
 通过学习本示例，开发者可以掌握：
 
-- SpreadJS 状态栏的基本使用方法
-- JavaScript 原型继承的实际应用
-- 自定义 UI 组件的创建和集成
-- DOM 操作与事件处理的结合使用
+* SpreadJS 状态栏的基本使用方法
+* JavaScript 原型继承的实际应用
+* 自定义 UI 组件的创建和集成
+* DOM 操作与事件处理的结合使用
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/eXYmQKptt06BS14kGgexog/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

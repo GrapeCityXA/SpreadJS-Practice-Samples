@@ -1,3 +1,5 @@
+# hidden-fields-remain-consist-after-copy
+
 ### 需求：希望在数据绑定后，实现隐藏字段随非隐藏字段所在行进行联动
 
 ***
@@ -5,7 +7,7 @@
 #### 背景：
 
 在SpreadJS中，对于实际的数据绑定场景，常常遇到这样的需求：举例来说，数据源里有10个字段，但只需要绑定其中的8个字段，另2个字段隐藏。
-以表单绑定为例，默认情况下，我们可以用sheet.bindColumns配置绑定列设置，只绑定指定的部分列。
+以表单绑定为例，默认情况下，我们可以用sheet.bindColumns配置绑定列设置，只绑定指定的部分列。 
 但是，尝试后大家会发现，隐藏字段的数据，不会随显示数据的排序、粘贴等操作而联动。
 当我们隐藏了比如id之类的标记字段，再执行排序、粘贴等操作后，就会导致数据结构混乱的结果。
 
@@ -108,4 +110,8 @@ sheet.bind(GC.Spread.Sheets.Events.ClipboardPasted, (e, args) => {
 });
 ```
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/latQfiWLNESsIPf61rD95w/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

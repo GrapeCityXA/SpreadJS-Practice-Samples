@@ -1,3 +1,5 @@
+# remove-some-template-page
+
 ### 问题：如何删除Template的部分功能
 
 ***
@@ -28,4 +30,8 @@ GC.Spread.Sheets.Designer.registerTemplate(GC.Spread.Sheets.Designer.TemplateNam
 设置完成之后，显示如下：
 ![image](/DOCUMENT_SITE_LINK_PREFIX_HERE/document-site-files/images/6dac7158-28fc-4aba-b07b-33f4b5b16b1b/image-20260324.f35c51.png?width=400)
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/Z7rHpZ7YDEaF5bBCLnLCWQ/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

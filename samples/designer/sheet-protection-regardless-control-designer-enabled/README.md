@@ -6,9 +6,9 @@
 
 在实际应用中，工作表保护是常见的数据安全需求，但默认情况下，当工作表被保护时，设计器工具栏的大部分编辑功能会自动禁用。本示例解决了以下问题：
 
-- 在工作表保护状态下，需要选择性地开放某些编辑功能（如字体设置）
-- 需要动态切换工具栏按钮的可用性，而不是静态配置
-- 需要批量控制某个 Ribbon 分组下的所有命令权限
+* 在工作表保护状态下，需要选择性地开放某些编辑功能（如字体设置）
+* 需要动态切换工具栏按钮的可用性，而不是静态配置
+* 需要批量控制某个 Ribbon 分组下的所有命令权限
 
 ## 三、实现思路
 
@@ -82,9 +82,9 @@ designer.setConfig(config)
 
 ### 3.3 技术栈
 
-- @grapecity/spread-sheets: 17.0.8（核心表格引擎）
-- @grapecity/spread-sheets-designer: 17.0.8（设计器组件）
-- SystemJS: 0.19.22（模块加载器）
+* @grapecity/spread-sheets: 17.0.8（核心表格引擎）
+* @grapecity/spread-sheets-designer: 17.0.8（设计器组件）
+* SystemJS: 0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -108,17 +108,17 @@ npm install
 
 ### 5.1 优点
 
-- 实现了工作表保护与工具栏权限的解耦，提供更灵活的权限控制方案
-- 通过递归遍历自动处理整个 Ribbon 分组，无需手动枚举命令名称
-- 动态切换机制便于根据业务逻辑实时调整权限
+* 实现了工作表保护与工具栏权限的解耦，提供更灵活的权限控制方案
+* 通过递归遍历自动处理整个 Ribbon 分组，无需手动枚举命令名称
+* 动态切换机制便于根据业务逻辑实时调整权限
 
 ### 5.2 局限性与扩展建议
 
 当前实现通过硬编码索引 `config.ribbon[0].buttonGroups[2]` 定位字体分组，这种方式在 Ribbon 结构变化时可能失效。建议改进方案：
 
-- 通过命令名称或分组 ID 进行查找，提高代码健壮性
-- 将权限配置抽象为配置文件，支持批量管理多个分组的权限
-- 结合用户角色系统，实现基于角色的动态权限控制
+* 通过命令名称或分组 ID 进行查找，提高代码健壮性
+* 将权限配置抽象为配置文件，支持批量管理多个分组的权限
+* 结合用户角色系统，实现基于角色的动态权限控制
 
 ## 六、关键代码片段
 
@@ -144,11 +144,15 @@ sheet.options.isProtected = true
 
 本示例展示了 SpreadJS Designer 高级权限控制的实现方法，开发者可以从中学到：
 
-- SpreadJS Designer 的 Ribbon 配置结构和遍历方法
-- 命令对象的 `enableContext` 属性用法
-- 如何通过 `setConfig()` 动态更新设计器配置
-- 工作表保护与工具栏权限的独立控制机制
+* SpreadJS Designer 的 Ribbon 配置结构和遍历方法
+* 命令对象的 `enableContext` 属性用法
+* 如何通过 `setConfig()` 动态更新设计器配置
+* 工作表保护与工具栏权限的独立控制机制
 
 该方案适用于需要精细化权限管理的企业级应用场景，例如：允许普通用户在保护模式下修改单元格格式但不能修改公式，或根据用户角色动态调整可用功能。通过扩展本示例的思路，可以实现更复杂的权限控制逻辑。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/f7wdTOTI80SEysnEwsMCvw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

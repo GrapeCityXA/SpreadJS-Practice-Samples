@@ -6,11 +6,9 @@
 
 ## 二、解决的问题
 
-- **避免保护冲突**：在工作表保护状态下，用户粘贴数据到锁定单元格时会触发错误提示，影响用户体验。本示例通过智能识别单元格锁定状态，自动跳过被保护区域，实现无感知粘贴。
-
-- **灵活的区域保护**：允许开发者设置特定行、列或单元格为可编辑状态（未锁定），其他区域保持保护，满足复杂的权限控制需求。
-
-- **数据完整性保护**：确保被保护单元格的数据不会因粘贴操作而被意外覆盖，同时保持未锁定区域的正常编辑功能。
+* **避免保护冲突**：在工作表保护状态下，用户粘贴数据到锁定单元格时会触发错误提示，影响用户体验。本示例通过智能识别单元格锁定状态，自动跳过被保护区域，实现无感知粘贴。
+* **灵活的区域保护**：允许开发者设置特定行、列或单元格为可编辑状态（未锁定），其他区域保持保护，满足复杂的权限控制需求。
+* **数据完整性保护**：确保被保护单元格的数据不会因粘贴操作而被意外覆盖，同时保持未锁定区域的正常编辑功能。
 
 ## 三、实现思路
 
@@ -103,9 +101,9 @@ sheet.bind(GC.Spread.Sheets.Events.ClipboardPasted, function (sender, args) {
 
 ### 3.5 技术栈
 
-- SpreadJS 15.0.0：核心表格控件
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：开发语言支持
+* SpreadJS 15.0.0：核心表格控件
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：开发语言支持
 
 ## 四、使用说明
 
@@ -129,15 +127,15 @@ npm install
 
 ### 5.1 优点
 
-- **用户体验友好**：避免粘贴时频繁弹出保护警告，实现无感知的智能粘贴
-- **灵活的权限控制**：支持行级、列级和单元格级的锁定配置，满足复杂业务需求
-- **数据安全性高**：确保被保护单元格的数据不会被意外覆盖，同时保持未锁定区域的正常编辑功能
+* **用户体验友好**：避免粘贴时频繁弹出保护警告，实现无感知的智能粘贴
+* **灵活的权限控制**：支持行级、列级和单元格级的锁定配置，满足复杂业务需求
+* **数据安全性高**：确保被保护单元格的数据不会被意外覆盖，同时保持未锁定区域的正常编辑功能
 
 ### 5.2 局限性与扩展建议
 
-- **Designer 环境限制**：如 HTML 注释所述，在 SpreadJS Designer 中使用此代码时，粘贴至锁定区域不会触发保护弹窗，表现为未粘贴数据，这是因为 Designer 的事件处理机制与普通应用环境存在差异
-- **性能优化空间**：对于大范围粘贴操作，可以考虑使用批量操作 API（如 `setArray`）替代逐个单元格设置，以提升性能
-- **扩展建议**：可以添加粘贴前的数据验证逻辑，或者根据单元格类型（数字、日期等）进行格式转换
+* **Designer 环境限制**：如 HTML 注释所述，在 SpreadJS Designer 中使用此代码时，粘贴至锁定区域不会触发保护弹窗，表现为未粘贴数据，这是因为 Designer 的事件处理机制与普通应用环境存在差异
+* **性能优化空间**：对于大范围粘贴操作，可以考虑使用批量操作 API（如 `setArray`）替代逐个单元格设置，以提升性能
+* **扩展建议**：可以添加粘贴前的数据验证逻辑，或者根据单元格类型（数字、日期等）进行格式转换
 
 ## 六、关键代码片段
 
@@ -187,4 +185,8 @@ sheet.bind(GC.Spread.Sheets.Events.ClipboardPasted, function (sender, args) {
 
 该方案适用于需要部分区域可编辑、部分区域受保护的场景，如数据录入模板、财务报表、考勤表等。通过合理配置锁定区域和监听粘贴事件，可以在保证数据安全的同时提升用户体验。开发者可以根据实际需求扩展此方案，例如添加数据验证、格式转换或权限检查等功能。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/scFKIbbckUqLU0Dn1Vh44A/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

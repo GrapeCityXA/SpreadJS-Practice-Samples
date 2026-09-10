@@ -4,10 +4,10 @@
 
 ## 二、解决的问题
 
-- **HTML 富文本数据导入**：将数据库或其他系统中存储的 HTML 格式富文本直接导入到 SpreadJS 单元格中
-- **样式保留**：在转换过程中保留原 HTML 的字体、颜色、粗体、斜体、下划线、删除线等样式
-- **特殊格式支持**：正确处理上标（sup）、下标（sub）、换行（br）等特殊 HTML 标签
-- **段落识别**：自动识别段落标签（p）并在段落结尾添加换行符
+* **HTML 富文本数据导入**：将数据库或其他系统中存储的 HTML 格式富文本直接导入到 SpreadJS 单元格中
+* **样式保留**：在转换过程中保留原 HTML 的字体、颜色、粗体、斜体、下划线、删除线等样式
+* **特殊格式支持**：正确处理上标（sup）、下标（sub）、换行（br）等特殊 HTML 标签
+* **段落识别**：自动识别段落标签（p）并在段落结尾添加换行符
 
 ## 三、实现思路
 
@@ -45,9 +45,10 @@ function getRichStyle(style, isUnderlineNode, isLineThroughNode) {
 ```
 
 样式对象包含：
-- `font`：组合字体属性（粗体、斜体、字号、字体族）
-- `foreColor`：文字颜色
-- `textDecoration`：文本装饰（下划线使用位标志 1，删除线使用位标志 2）
+
+* `font`：组合字体属性（粗体、斜体、字号、字体族）
+* `foreColor`：文字颜色
+* `textDecoration`：文本装饰（下划线使用位标志 1，删除线使用位标志 2）
 
 ### 3.3 上下标处理
 
@@ -71,8 +72,8 @@ function handleSuperAndSubScript(root, node, style) {
 
 ### 3.4 段落和换行处理
 
-- 检测 `<p>` 标签，在段落最后一个文本节点后添加 `\r\n`
-- 检测 `<br>` 标签，直接插入 `\n` 换行符
+* 检测 `<p>` 标签，在段落最后一个文本节点后添加 `\r\n`
+* 检测 `<br>` 标签，直接插入 `\n` 换行符
 
 ```javascript
 if (pNode && _getLastTextNode(pNode) === node && _getLastTextNode(root) !== node) {
@@ -93,9 +94,9 @@ sheet.setValue(2, 2, {
 
 ### 3.6 技术栈
 
-- SpreadJS 15.0.0：电子表格核心库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持
+* SpreadJS 15.0.0：电子表格核心库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持
 
 ## 四、使用说明
 
@@ -117,19 +118,19 @@ npm install
 
 ### 5.1 优点
 
-- **完整的样式支持**：支持字体、颜色、粗体、斜体、下划线、删除线、上下标等常见富文本格式
-- **原生 API 实现**：使用浏览器原生 NodeIterator API，性能高效且兼容性好
-- **自动换行处理**：智能识别段落和换行标签，保持文本结构
-- **可扩展性强**：代码结构清晰，易于扩展支持更多 HTML 标签和样式
+* **完整的样式支持**：支持字体、颜色、粗体、斜体、下划线、删除线、上下标等常见富文本格式
+* **原生 API 实现**：使用浏览器原生 NodeIterator API，性能高效且兼容性好
+* **自动换行处理**：智能识别段落和换行标签，保持文本结构
+* **可扩展性强**：代码结构清晰，易于扩展支持更多 HTML 标签和样式
 
 ### 5.2 局限性与扩展建议
 
-- **样式覆盖范围**：当前仅支持基础文本样式，不支持背景色、边框等复杂样式
-- **嵌套标签处理**：对于复杂嵌套的 HTML 结构，可能需要增强样式合并逻辑
-- **扩展建议**：
-  - 支持更多 HTML 标签（如 `<strong>`、`<em>`、`<span>` 等）
-  - 添加样式缓存机制，优化大量文本的解析性能
-  - 支持图片、链接等非文本元素的转换
+* **样式覆盖范围**：当前仅支持基础文本样式，不支持背景色、边框等复杂样式
+* **嵌套标签处理**：对于复杂嵌套的 HTML 结构，可能需要增强样式合并逻辑
+* **扩展建议**：
+    * 支持更多 HTML 标签（如 `<strong>`、`<em>`、`<span>` 等）
+    * 添加样式缓存机制，优化大量文本的解析性能
+    * 支持图片、链接等非文本元素的转换
 
 ## 六、关键代码片段
 
@@ -184,12 +185,16 @@ while (node !== null) {
 
 本示例提供了一个完整的 HTML 富文本到 SpreadJS 富文本对象的转换方案，适用于需要从外部系统导入富文本数据的场景。开发者可以从中学到：
 
-- NodeIterator API 的使用方法和遍历策略
-- getComputedStyle 获取实际渲染样式的技巧
-- SpreadJS 富文本对象的数据结构和样式配置
-- DOM 树遍历中的状态管理和节点关系判断
-- 文本装饰属性的位标志（bitwise）操作
+* NodeIterator API 的使用方法和遍历策略
+* getComputedStyle 获取实际渲染样式的技巧
+* SpreadJS 富文本对象的数据结构和样式配置
+* DOM 树遍历中的状态管理和节点关系判断
+* 文本装饰属性的位标志（bitwise）操作
 
 该方案具有良好的扩展性，可以根据实际业务需求增加对更多 HTML 标签和样式的支持，是实现富文本数据互通的实用参考。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/7mRPr_wNlUyj7sIQBksOuA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

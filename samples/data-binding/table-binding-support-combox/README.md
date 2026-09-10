@@ -1,8 +1,10 @@
+# table-binding-support-combox
+
 ### 需求：SpreadJS如何给表格某一列设置ComboBox
 
 #### 背景：
 
-用户有这样一个需求：创建一个表格，给表格某一列设置组合框ComboBox。
+用户有这样一个需求：创建一个表格，给表格某一列设置组合框ComboBox。 
 
 #### 实现方式：
 
@@ -119,4 +121,8 @@ table.bind([tableColumn1, tableColumn2, tableColumn3], "person", dataSource);
 不过这种方式下表格字段只能通过代码绑定，所以当字段过多时没有模板设计来的方便。
 大家可以根据需要自行选择。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/hnkO-lp7j0uSlYxCIoMxPA){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

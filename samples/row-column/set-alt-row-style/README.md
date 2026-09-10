@@ -1,3 +1,5 @@
+# set-alt-row-style
+
 ### 问题1：如何用条件规则实现交替行样式效果
 
 ***
@@ -71,4 +73,8 @@ sheet.bind(GC.Spread.Sheets.Events.RangeFiltered, function (e, info) {
 
 值得注意的是，交替行样式实质上是直接设置的单元格背景色，因此如果是载入了带单元格样式的workbook，再设置上述代码，会覆盖原有的单元格背景色。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/j9fzC1n4SkK0Hq9UeZBUfA/){:target="_blank"}）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

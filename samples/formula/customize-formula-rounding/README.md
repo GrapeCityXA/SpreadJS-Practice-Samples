@@ -132,10 +132,10 @@ npm install
 
 ### 5.1 优点
 
-- 符合国家标准的科学修约方法，减少累积误差
-- 函数接口简洁，使用方式与内置函数一致
-- 支持正负数处理和边界情况处理
-- 可在任意单元格公式中重复使用
+* 符合国家标准的科学修约方法，减少累积误差
+* 函数接口简洁，使用方式与内置函数一致
+* 支持正负数处理和边界情况处理
+* 可在任意单元格公式中重复使用
 
 ### 5.2 局限性与扩展建议
 
@@ -167,4 +167,8 @@ if (s_1.endsWith("5")) {
 
 该方案适用于需要在 SpreadJS 中实现特定业务规则的场景，通过自定义函数可以将复杂的计算逻辑封装为可重用的公式，提高开发效率和代码可维护性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/EFeonOJ6NE67nyLQpoirDw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

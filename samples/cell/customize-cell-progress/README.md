@@ -1,14 +1,14 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中通过自定义单元格类型实现进度条效果。通过继承 `Text` 单元格类型并重写 `paint` 方法，实现了根据数值大小自动渲染不同颜色的进度条，直观地展示数据的完成度或状态。
+本示例展示了如何在 SpreadJS 中通过自定义单元格类型实现进度条效果。通过继承 `Text` 单元格类型并重写 `paint` 方法，实现了根据数值大小自动渲染不同颜色的进度条，直观地展示数据的完成度或状态。 
 
 该示例适用于需要在表格中可视化展示进度、完成率、风险等级等场景，通过颜色和长度的组合，让数据更加直观易读。
 
 ## 二、解决的问题
 
-- **数据可视化需求**：将枯燥的数字转换为直观的进度条，提升数据的可读性
-- **状态分级展示**：通过不同颜色（绿、黄、红）表示不同的状态等级，快速识别风险或完成度
-- **自定义渲染逻辑**：满足特定业务场景下对单元格展示效果的个性化需求
+* **数据可视化需求**：将枯燥的数字转换为直观的进度条，提升数据的可读性
+* **状态分级展示**：通过不同颜色（绿、黄、红）表示不同的状态等级，快速识别风险或完成度
+* **自定义渲染逻辑**：满足特定业务场景下对单元格展示效果的个性化需求
 
 ## 三、实现思路
 
@@ -53,10 +53,11 @@ DataBar.prototype.paint = function (ctx, value, x, y, w, h, style, options) {
 ```
 
 **实现要点**：
-- 保存原始 `paint` 方法的引用，用于处理非数值情况
-- 使用 Canvas 2D 上下文（`ctx`）进行绘制
-- 进度条宽度按 `value/100*w` 计算，实现百分比效果
-- 颜色分级：0-60（绿色）、60-85（黄色）、85-100（红色）
+
+* 保存原始 `paint` 方法的引用，用于处理非数值情况
+* 使用 Canvas 2D 上下文（`ctx`）进行绘制
+* 进度条宽度按 `value/100*w` 计算，实现百分比效果
+* 颜色分级：0-60（绿色）、60-85（黄色）、85-100（红色）
 
 ### 3.3 应用自定义单元格类型
 
@@ -75,9 +76,9 @@ sheet.setValue(1, 0, 40);
 
 ### 3.4 技术栈
 
-- **@grapecity/spread-sheets**: 15.0.0（核心表格组件）
-- **TypeScript**: ^4.1.2（类型支持）
-- **SystemJS**: ^0.19.22（模块加载器）
+* **@grapecity/spread-sheets**: 15.0.0（核心表格组件）
+* **TypeScript**: ^4.1.2（类型支持）
+* **SystemJS**: ^0.19.22（模块加载器）
 
 ## 四、使用说明
 
@@ -101,19 +102,19 @@ npm install
 
 ### 5.1 优点
 
-- **实现简单**：通过继承和重写 `paint` 方法，代码量少且易于理解
-- **视觉直观**：进度条和颜色分级让数据一目了然
-- **灵活可扩展**：可以轻松调整颜色阈值、进度条样式等
-- **性能良好**：基于 Canvas 绘制，渲染效率高
+* **实现简单**：通过继承和重写 `paint` 方法，代码量少且易于理解
+* **视觉直观**：进度条和颜色分级让数据一目了然
+* **灵活可扩展**：可以轻松调整颜色阈值、进度条样式等
+* **性能良好**：基于 Canvas 绘制，渲染效率高
 
 ### 5.2 局限性与扩展建议
 
-- **当前限制**：仅支持 0-100 的数值范围，超出范围会显示为普通文本
-- **扩展建议**：
-  - 可以添加进度条上的文字显示（如百分比数字）
-  - 支持自定义颜色阈值和颜色方案
-  - 增加渐变色或图案填充效果
-  - 支持负数或其他数值范围
+* **当前限制**：仅支持 0-100 的数值范围，超出范围会显示为普通文本
+* **扩展建议**：
+    * 可以添加进度条上的文字显示（如百分比数字）
+    * 支持自定义颜色阈值和颜色方案
+    * 增加渐变色或图案填充效果
+    * 支持负数或其他数值范围
 
 ## 六、关键代码片段
 
@@ -140,21 +141,24 @@ ctx.fillRect(x, y, value/100*w, h);
 ```
 
 `fillRect` 的参数说明：
-- `x, y`：单元格的起始坐标
-- `value/100*w`：进度条宽度，按百分比计算
-- `h`：单元格高度
+
+* `x, y`：单元格的起始坐标
+* `value/100*w`：进度条宽度，按百分比计算
+* `h`：单元格高度
 
 ## 七、总结
 
 本示例展示了 SpreadJS 自定义单元格类型的强大能力，通过简单的代码即可实现专业的数据可视化效果。开发者可以从中学到：
 
-- 如何继承和扩展 SpreadJS 的内置单元格类型
-- 使用 Canvas API 进行自定义渲染
-- 实现条件格式化的可视化展示
-- 处理不同数据类型的兼容性
+* 如何继承和扩展 SpreadJS 的内置单元格类型
+* 使用 Canvas API 进行自定义渲染
+* 实现条件格式化的可视化展示
+* 处理不同数据类型的兼容性
 
 该方案适用于项目管理、数据分析、风险评估等多种场景，具有良好的扩展性和实用价值。
 
-[操作视频](DOCUMENT_SITE_VIDEO_BUTTON_PREFIX:https://videos.grapecity.com.cn/SpreadJS/CodeLibrary/Custom%20Cell%20-%20Progress%20Bar.mp4)
-
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/PmnOzoxQhkuwJPyQEFfS8g/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

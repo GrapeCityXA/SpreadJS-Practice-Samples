@@ -1,15 +1,15 @@
 ## 一、Demo 概述
 
-本示例展示了如何将 SpreadJS 中的多种下拉框类型（ComboBox 单元格类型和 CellButton + DropDown 样式）转换为 Excel 兼容的数据验证列表。由于 Excel 不支持 SpreadJS 特有的下拉框实现方式，在导出 Excel 文件前需要将这些下拉框转换为标准的 List Validator，确保导出后的文件在 Excel 中能够正常显示和使用下拉列表功能。
+本示例展示了如何将 SpreadJS 中的多种下拉框类型（ComboBox 单元格类型和 CellButton + DropDown 样式）转换为 Excel 兼容的数据验证列表。由于 Excel 不支持 SpreadJS 特有的下拉框实现方式，在导出 Excel 文件前需要将这些下拉框转换为标准的 List Validator，确保导出后的文件在 Excel 中能够正常显示和使用下拉列表功能。 
 
 该示例适用于需要将包含复杂下拉框的 SpreadJS 工作簿导出为 Excel 文件的场景，特别是在企业级应用中需要保证数据验证功能在不同平台间的兼容性。
 
 ## 二、解决的问题
 
-- SpreadJS 的 ComboBox 单元格类型在导出到 Excel 后无法正常显示为下拉列表
-- 通过 CellButton 和 DropDown 样式实现的下拉框在 Excel 中不被识别
-- 需要在导出前将这些 SpreadJS 特有的下拉框实现转换为 Excel 标准的数据验证列表
-- 支持嵌套分组的下拉框数据结构转换为扁平化的验证列表
+* SpreadJS 的 ComboBox 单元格类型在导出到 Excel 后无法正常显示为下拉列表
+* 通过 CellButton 和 DropDown 样式实现的下拉框在 Excel 中不被识别
+* 需要在导出前将这些 SpreadJS 特有的下拉框实现转换为 Excel 标准的数据验证列表
+* 支持嵌套分组的下拉框数据结构转换为扁平化的验证列表
 
 ## 三、实现思路
 
@@ -140,10 +140,10 @@ document.getElementById("btn").addEventListener("click", function () {
 
 ### 3.5 技术栈
 
-- SpreadJS 17.0.8（核心表格引擎）
-- SpreadJS Designer（可视化设计器）
-- SpreadJS ExcelIO（Excel 导入导出）
-- FileSaver.js 2.0.5（文件下载）
+* SpreadJS 17.0.8（核心表格引擎）
+* SpreadJS Designer（可视化设计器）
+* SpreadJS ExcelIO（Excel 导入导出）
+* FileSaver.js 2.0.5（文件下载）
 
 ## 四、使用说明
 
@@ -166,17 +166,17 @@ npm install
 
 ### 5.1 优点
 
-- 支持多种下拉框类型的自动识别和转换
-- 使用工作簿副本进行转换，不影响原始数据
-- 支持嵌套分组数据的扁平化处理
-- 转换后的文件在 Excel 中完全兼容
+* 支持多种下拉框类型的自动识别和转换
+* 使用工作簿副本进行转换，不影响原始数据
+* 支持嵌套分组数据的扁平化处理
+* 转换后的文件在 Excel 中完全兼容
 
 ### 5.2 局限性与扩展建议
 
-- 当前实现提取的是 `text` 字段，可根据业务需求修改为提取 `value` 字段
-- 对于复杂的分组结构，扁平化后会丢失层级关系
-- 可以扩展支持其他类型的单元格类型转换
-- 建议在转换前进行数据备份或提示用户
+* 当前实现提取的是 `text` 字段，可根据业务需求修改为提取 `value` 字段
+* 对于复杂的分组结构，扁平化后会丢失层级关系
+* 可以扩展支持其他类型的单元格类型转换
+* 建议在转换前进行数据备份或提示用户
 
 ## 六、关键代码片段
 
@@ -213,11 +213,15 @@ if (style.cellButtons && style.cellButtons[0].command == "openList") {
 
 本示例提供了一个实用的解决方案，用于将 SpreadJS 特有的下拉框实现转换为 Excel 标准的数据验证列表。开发者可以从中学到：
 
-- 如何识别和处理不同类型的 SpreadJS 下拉框
-- 使用 DataValidation API 创建 Excel 兼容的列表验证器
-- 递归处理嵌套数据结构的技巧
-- 在导出前对工作簿进行预处理的最佳实践
+* 如何识别和处理不同类型的 SpreadJS 下拉框
+* 使用 DataValidation API 创建 Excel 兼容的列表验证器
+* 递归处理嵌套数据结构的技巧
+* 在导出前对工作簿进行预处理的最佳实践
 
 该方案适用于需要在 SpreadJS 和 Excel 之间进行数据交换的场景，确保下拉列表功能在不同平台间的一致性和兼容性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/VY934-yYLUyjmAyaNpDKaA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

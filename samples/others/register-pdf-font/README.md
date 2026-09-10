@@ -4,9 +4,9 @@
 
 ## 二、解决的问题
 
-- **PDF 导出中文乱码**：默认情况下，SpreadJS 导出 PDF 时无法正确渲染中文字符，会出现乱码或空白。通过注册中文字体文件到 PDF 字体管理器，确保中文在 PDF 中正常显示。
-- **自定义字体支持**：除了解决乱码问题，还支持在 Designer 工具栏中添加自定义字体选项，使用户可以在编辑时直接选择已注册的中文字体。
-- **字体备用机制**：提供 fallback 字体机制，当某个字体未注册时，自动使用备用字体进行渲染，避免导出失败。
+* **PDF 导出中文乱码**：默认情况下，SpreadJS 导出 PDF 时无法正确渲染中文字符，会出现乱码或空白。通过注册中文字体文件到 PDF 字体管理器，确保中文在 PDF 中正常显示。
+* **自定义字体支持**：除了解决乱码问题，还支持在 Designer 工具栏中添加自定义字体选项，使用户可以在编辑时直接选择已注册的中文字体。
+* **字体备用机制**：提供 fallback 字体机制，当某个字体未注册时，自动使用备用字体进行渲染，避免导出失败。
 
 ## 三、实现思路
 
@@ -92,16 +92,16 @@ npm install
 
 ### 5.1 优点
 
-- **解决中文乱码问题**：彻底解决 SpreadJS 导出 PDF 时中文显示异常的问题
-- **支持字体样式**：同时支持常规和粗体样式，保证文本格式的完整性
-- **无缝集成 Designer**：字体注册后，用户可在 Designer 界面中直接选择和使用
-- **容错机制完善**：通过 `fallbackFont` 提供兜底方案，避免因字体缺失导致导出失败
+* **解决中文乱码问题**：彻底解决 SpreadJS 导出 PDF 时中文显示异常的问题
+* **支持字体样式**：同时支持常规和粗体样式，保证文本格式的完整性
+* **无缝集成 Designer**：字体注册后，用户可在 Designer 界面中直接选择和使用
+* **容错机制完善**：通过 `fallbackFont` 提供兜底方案，避免因字体缺失导致导出失败
 
 ### 5.2 局限性与扩展建议
 
-- **字体文件体积**：TTF 字体文件通常较大（如宋体约 10MB+），会增加页面加载时间。建议对字体文件进行压缩或使用 WOFF2 格式，并配置 CDN 加速。
-- **字体数量限制**：示例中仅注册了宋体，如需支持更多中文字体（如黑体、楷体等），需要额外加载并注册相应字体文件。
-- **异步加载处理**：当前实现在页面加载时立即注册字体，但未等待注册完成。建议在用户执行导出操作前，确保字体已完全加载完成（可通过 Promise 机制或状态标志控制）。
+* **字体文件体积**：TTF 字体文件通常较大（如宋体约 10MB+），会增加页面加载时间。建议对字体文件进行压缩或使用 WOFF2 格式，并配置 CDN 加速。
+* **字体数量限制**：示例中仅注册了宋体，如需支持更多中文字体（如黑体、楷体等），需要额外加载并注册相应字体文件。
+* **异步加载处理**：当前实现在页面加载时立即注册字体，但未等待注册完成。建议在用户执行导出操作前，确保字体已完全加载完成（可通过 Promise 机制或状态标志控制）。
 
 ## 六、关键代码片段
 
@@ -147,4 +147,8 @@ registerServerFont()
 
 该方案适用于所有需要在 Web 端导出 PDF 且包含非西文字符的场景，通过简单的配置即可确保导出文档的字体正确渲染。在实际应用中，建议根据业务需求优化字体加载策略（如按需加载、懒加载等），以平衡功能完整性和页面性能。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/HI4cOpFAEEGPewCiEMvVaA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

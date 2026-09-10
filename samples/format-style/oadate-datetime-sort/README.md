@@ -6,9 +6,9 @@
 
 ## 二、解决的问题
 
-- **多种日期格式兼容**：后端数据可能包含 OADate 格式或 Unix 时间戳，需要在前端统一展示为可读的日期格式
-- **日期数据排序**：转换后的日期需要支持正确的排序和筛选功能
-- **数据绑定与格式化**：在 SpreadJS 的数据绑定过程中自动完成日期转换，无需手动处理每条数据
+* **多种日期格式兼容**：后端数据可能包含 OADate 格式或 Unix 时间戳，需要在前端统一展示为可读的日期格式
+* **日期数据排序**：转换后的日期需要支持正确的排序和筛选功能
+* **数据绑定与格式化**：在 SpreadJS 的数据绑定过程中自动完成日期转换，无需手动处理每条数据
 
 ## 三、实现思路
 
@@ -55,6 +55,7 @@ sheet.bindColumns(colInfo);
 ```
 
 `value` 函数在数据绑定时被调用两次：
+
 1. 第一次（只有 `row` 参数）：将 OADate 字符串转换为时间戳并存储到 `row.birthday`
 2. 第二次（有 `row` 和 `value` 参数）：返回 Date 对象供 SpreadJS 渲染
 
@@ -85,9 +86,9 @@ sheet.options.protectionOptions = {
 
 ### 3.4 技术栈
 
-- @grapecity/spread-sheets: 15.0.0（核心表格组件）
-- SystemJS: 0.19.22（模块加载器）
-- TypeScript: 4.1.2（开发语言支持）
+* @grapecity/spread-sheets: 15.0.0（核心表格组件）
+* SystemJS: 0.19.22（模块加载器）
+* TypeScript: 4.1.2（开发语言支持）
 
 ## 四、使用说明
 
@@ -109,10 +110,10 @@ npm install
 
 ### 5.1 优点
 
-- **格式兼容性强**：同时支持 OADate 和 Unix 时间戳两种格式
-- **自动转换**：通过数据绑定机制自动完成转换，无需手动遍历数据
-- **排序准确**：转换后的日期数据支持正确的时间顺序排序
-- **代码复用性高**：`fromOADate` 函数可独立提取用于其他项目
+* **格式兼容性强**：同时支持 OADate 和 Unix 时间戳两种格式
+* **自动转换**：通过数据绑定机制自动完成转换，无需手动遍历数据
+* **排序准确**：转换后的日期数据支持正确的时间顺序排序
+* **代码复用性高**：`fromOADate` 函数可独立提取用于其他项目
 
 ## 六、关键代码片段
 
@@ -153,4 +154,8 @@ function resetDefaultStyle(sheet) {
 
 该方案适用于需要处理多种日期格式的数据展示场景，通过自定义转换函数可以轻松扩展支持其他特殊格式。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/hwBB6L_6aU6VtrdKicQbXw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

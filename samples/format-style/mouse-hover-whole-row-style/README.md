@@ -6,9 +6,9 @@
 
 在处理包含大量行列的电子表格时，用户常常难以快速定位当前单元格所在的行列位置，尤其是在没有网格线或数据密集的情况下。本示例通过实现鼠标悬浮高亮功能，解决了以下问题：
 
-- 提升数据定位效率：用户可以快速识别当前关注的行列
-- 改善视觉体验：通过视觉反馈减少用户在大型表格中的视觉疲劳
-- 增强数据关联性：帮助用户理解同一行或同一列中的数据关系
+* 提升数据定位效率：用户可以快速识别当前关注的行列
+* 改善视觉体验：通过视觉反馈减少用户在大型表格中的视觉疲劳
+* 增强数据关联性：帮助用户理解同一行或同一列中的数据关系
 
 ## 三、实现思路
 
@@ -56,9 +56,9 @@ style.backColor = "rgba(200,100,100,0.1)"
 
 ### 3.2 技术栈
 
-- SpreadJS 15.0.0：核心表格控件库
-- SystemJS 0.19.22：模块加载器
-- TypeScript 4.1.2：类型支持
+* SpreadJS 15.0.0：核心表格控件库
+* SystemJS 0.19.22：模块加载器
+* TypeScript 4.1.2：类型支持
 
 ## 四、使用说明
 
@@ -81,16 +81,16 @@ npm install
 
 ### 5.1 优点
 
-- 实现简单：仅需几行代码即可实现行列高亮效果
-- 性能优异：基于 SpreadJS 内置的条件格式机制，无需手动监听鼠标事件
-- 视觉友好：使用半透明背景色，不影响原有数据的显示
-- 可定制性强：可以轻松修改高亮颜色、透明度和应用范围
+* 实现简单：仅需几行代码即可实现行列高亮效果
+* 性能优异：基于 SpreadJS 内置的条件格式机制，无需手动监听鼠标事件
+* 视觉友好：使用半透明背景色，不影响原有数据的显示
+* 可定制性强：可以轻松修改高亮颜色、透明度和应用范围
 
 ### 5.2 局限性与扩展建议
 
-- 当前高亮范围固定为 200 行 × 20 列，如果表格数据超出此范围，需要调整 `Range` 参数
-- 可以扩展为支持多种高亮模式（仅行、仅列、行列交叉）
-- 可以添加配置选项，允许用户动态切换高亮颜色和透明度
+* 当前高亮范围固定为 200 行 × 20 列，如果表格数据超出此范围，需要调整 `Range` 参数
+* 可以扩展为支持多种高亮模式（仅行、仅列、行列交叉）
+* 可以添加配置选项，允许用户动态切换高亮颜色和透明度
 
 ## 六、关键代码片段
 
@@ -123,10 +123,14 @@ initHoverStateSheet(spread)
 
 本示例展示了如何利用 SpreadJS 的条件格式和行列状态规则实现鼠标悬浮高亮功能。开发者可以从中学到：
 
-- 如何使用 `addRowStateRule` 和 `addColumnStateRule` 实现状态驱动的样式
-- 如何通过 `suspendPaint` 和 `resumePaint` 优化批量操作性能
-- 如何使用半透明颜色创建友好的视觉反馈效果
+* 如何使用 `addRowStateRule` 和 `addColumnStateRule` 实现状态驱动的样式
+* 如何通过 `suspendPaint` 和 `resumePaint` 优化批量操作性能
+* 如何使用半透明颜色创建友好的视觉反馈效果
 
 该方案适用于需要增强数据可读性的表格应用场景，特别是在数据密集型的报表和数据分析工具中。通过简单的配置即可显著提升用户体验，具有很高的实用价值和扩展性。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/qPxtvgOM10iTxVqvyOuAaw/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

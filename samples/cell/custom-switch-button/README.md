@@ -1,12 +1,12 @@
 ## 一、Demo 概述
 
-本示例展示了如何在 SpreadJS 中创建自定义单元格类型，实现类似移动端常见的 Switch 开关效果。通过继承 CheckBox 单元格类型并重写其 paint 方法,将传统的复选框替换为更美观的图形化开关按钮。该示例适用于需要在表格中实现更友好的布尔值交互界面的场景。
+本示例展示了如何在 SpreadJS 中创建自定义单元格类型，实现类似移动端常见的 Switch 开关效果。通过继承 CheckBox 单元格类型并重写其 paint 方法,将传统的复选框替换为更美观的图形化开关按钮。该示例适用于需要在表格中实现更友好的布尔值交互界面的场景。 
 
 ## 二、解决的问题
 
-- 提供比默认 CheckBox 更美观的开关交互界面
-- 实现自定义单元格类型的绘制逻辑
-- 展示如何使用 Canvas API 在单元格中渲染图片
+* 提供比默认 CheckBox 更美观的开关交互界面
+* 实现自定义单元格类型的绘制逻辑
+* 展示如何使用 Canvas API 在单元格中渲染图片
 
 ## 三、实现思路
 
@@ -68,10 +68,11 @@ SwitchCellType.prototype.paint = function (ctx, value, x, y, w, h, style, contex
 ```
 
 **实现要点:**
-- 使用 `cell.tag()` 临时存储图片对象,避免重复创建
-- 通过 Canvas 的 `translate` 和 `scale` 方法调整图片位置和大小
-- 图片加载完成后调用 `repaint` 触发重绘
-- 使用 Base64 编码的图片数据,无需外部资源
+
+* 使用 `cell.tag()` 临时存储图片对象,避免重复创建
+* 通过 Canvas 的 `translate` 和 `scale` 方法调整图片位置和大小
+* 图片加载完成后调用 `repaint` 触发重绘
+* 使用 Base64 编码的图片数据,无需外部资源
 
 ### 3.3 应用自定义单元格类型
 
@@ -87,9 +88,9 @@ sheet.setRowHeight(0, 40)
 
 ### 3.4 技术栈
 
-- SpreadJS 16.0.1 - 核心表格组件
-- SystemJS 0.19.22 - 模块加载器
-- TypeScript 4.1.2 - 开发语言支持
+* SpreadJS 16.0.1 - 核心表格组件
+* SystemJS 0.19.22 - 模块加载器
+* TypeScript 4.1.2 - 开发语言支持
 
 ## 四、使用说明
 
@@ -112,16 +113,16 @@ npm install
 
 ### 5.1 优点
 
-- 视觉效果更现代化,符合移动端交互习惯
-- 继承 CheckBox 功能,保留原有的数据绑定和事件机制
-- 使用 Base64 图片,无需额外的资源文件管理
-- 实现简洁,易于理解和扩展
+* 视觉效果更现代化,符合移动端交互习惯
+* 继承 CheckBox 功能,保留原有的数据绑定和事件机制
+* 使用 Base64 图片,无需额外的资源文件管理
+* 实现简洁,易于理解和扩展
 
 ### 5.2 局限性与扩展建议
 
-- 当前使用固定的 Base64 图片,文件体积较大,可考虑使用外部图片资源或 SVG
-- 开关样式固定,可扩展为支持自定义颜色和尺寸的参数化实现
-- 可以添加过渡动画效果,提升交互体验
+* 当前使用固定的 Base64 图片,文件体积较大,可考虑使用外部图片资源或 SVG
+* 开关样式固定,可扩展为支持自定义颜色和尺寸的参数化实现
+* 可以添加过渡动画效果,提升交互体验
 
 ## 六、关键代码片段
 
@@ -143,11 +144,15 @@ ctx.restore();
 
 本示例展示了 SpreadJS 自定义单元格类型的核心开发流程,开发者可以从中学到:
 
-- 如何继承内置单元格类型并扩展功能
-- Canvas API 在单元格绘制中的应用技巧
-- 使用 tag 属性缓存对象以优化性能
-- 图片异步加载与重绘机制的配合
+* 如何继承内置单元格类型并扩展功能
+* Canvas API 在单元格绘制中的应用技巧
+* 使用 tag 属性缓存对象以优化性能
+* 图片异步加载与重绘机制的配合
 
 该方案适用于需要在表格中实现自定义视觉效果的场景,具有良好的扩展性。开发者可以基于此思路实现更多样式的自定义单元格,如评分星级、进度条、标签等组件。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/aSqGegSoc0ilZuvnjNwyJQ/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

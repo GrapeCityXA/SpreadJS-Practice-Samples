@@ -6,9 +6,9 @@
 
 在实际业务场景中，表格的列头标题往往较长（如"客户联系方式"、"订单创建时间"等），而单元格内容可能较短（如"张三"、"2024-01-01"）。如果直接使用 SpreadJS 的 `autoFitColumn` 方法，列宽会根据当前内容自动调整，可能导致以下问题：
 
-- 当用户编辑单元格并输入较短内容时，列宽会自动缩小，导致列头文字被截断
-- 列宽频繁变化影响用户体验
-- 无法保证列头始终完整显示
+* 当用户编辑单元格并输入较短内容时，列宽会自动缩小，导致列头文字被截断
+* 列宽频繁变化影响用户体验
+* 无法保证列头始终完整显示
 
 本示例通过记录列头初始宽度并在单元格编辑后进行宽度比较，确保列宽始终不小于列头所需宽度，同时能够自动扩展以适应更长的单元格内容。
 
@@ -76,6 +76,7 @@ function autoFitContent(col) {
 ```
 
 该函数的工作流程：
+
 1. 记录当前列宽
 2. 执行自动调整（`autoFitColumn`）
 3. 比较调整后的宽度与列头初始宽度
@@ -84,9 +85,9 @@ function autoFitContent(col) {
 
 ### 3.2 技术栈
 
-- SpreadJS 15.2.2：核心表格组件
-- TypeScript 4.1.2：类型支持
-- SystemJS 0.19.22：模块加载器
+* SpreadJS 15.2.2：核心表格组件
+* TypeScript 4.1.2：类型支持
+* SystemJS 0.19.22：模块加载器
 
 ## 四、使用说明
 
@@ -111,17 +112,17 @@ npm install
 
 ### 5.1 优点
 
-- 保证列头始终完整显示，避免文字被截断
-- 自动适应单元格内容变化，无需手动调整列宽
-- 用户体验友好，列宽变化符合直觉（只扩展不缩小到列头宽度以下）
-- 实现简单，性能开销小（仅在编辑时触发）
+* 保证列头始终完整显示，避免文字被截断
+* 自动适应单元格内容变化，无需手动调整列宽
+* 用户体验友好，列宽变化符合直觉（只扩展不缩小到列头宽度以下）
+* 实现简单，性能开销小（仅在编辑时触发）
 
 ### 5.2 扩展建议
 
-- 可以扩展为支持行高的自适应（使用 `autoFitRow` 和类似的逻辑）
-- 可以添加最大宽度限制，避免单元格内容过长导致列宽过大
-- 可以支持批量编辑场景，在批量操作完成后统一调整列宽
-- 可以将 `widthInfo` 持久化，在数据重新加载后恢复列宽设置
+* 可以扩展为支持行高的自适应（使用 `autoFitRow` 和类似的逻辑）
+* 可以添加最大宽度限制，避免单元格内容过长导致列宽过大
+* 可以支持批量编辑场景，在批量操作完成后统一调整列宽
+* 可以将 `widthInfo` 持久化，在数据重新加载后恢复列宽设置
 
 ## 六、关键代码片段
 
@@ -159,12 +160,16 @@ function initHeader() {
 
 本示例展示了一个实用的列宽自适应方案，适用于列头标题较长的业务场景。开发者可以从中学到：
 
-- SpreadJS 的 `autoFitType` 配置选项及其作用
-- 如何使用 `EditEnded` 事件监听单元格编辑
-- 如何通过 `getColumnWidth` 和 `setColumnWidth` 精确控制列宽
-- 如何结合 `getUsedRange` 批量处理多列
-- 如何通过记录初始状态实现智能的宽度调整逻辑
+* SpreadJS 的 `autoFitType` 配置选项及其作用
+* 如何使用 `EditEnded` 事件监听单元格编辑
+* 如何通过 `getColumnWidth` 和 `setColumnWidth` 精确控制列宽
+* 如何结合 `getUsedRange` 批量处理多列
+* 如何通过记录初始状态实现智能的宽度调整逻辑
 
 该方案的核心思想是"只扩展不缩小"，确保列宽始终满足列头和单元格内容的最大需求，可以直接应用于实际项目中，也可以根据具体需求进行扩展和优化。
 
-### 在线 Demo （[全屏打开](https://jscodemine.grapecity.com/share/A7zXKRtwaUeZFrKnK40DDA/)）
+For more information about SpreadJS, please visit:
+SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples
