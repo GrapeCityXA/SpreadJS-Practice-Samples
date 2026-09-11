@@ -124,7 +124,11 @@ CustomBase.prototype.paint = function (context, value, x1, y1, a1, b1, style, ct
 该方案适用于需要在单元格中添加视觉标记的场景，如数据状态标识、优先级标记等。通过简单的配置即可实现专业的视觉效果，显著提升开发效率。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

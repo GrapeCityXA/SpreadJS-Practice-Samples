@@ -166,7 +166,11 @@ langSelect.addEventListener('change', function() {
 该方案可以作为任何需要多语言支持的 SpreadJS 应用的基础模块，开发者可以在此基础上扩展更多语言选项或集成到更复杂的国际化框架中。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

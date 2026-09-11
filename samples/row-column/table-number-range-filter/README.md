@@ -157,7 +157,11 @@ sheet.setColumnWidth(2, 400)
 该方案适用于所有需要数字区间筛选的业务场景。开发者可以基于此示例扩展出更丰富的筛选功能，例如支持日期区间、文本模糊匹配、多条件组合等。通过合理组合 SpreadJS 提供的条件类型和逻辑运算符，可以实现几乎任意复杂度的数据筛选需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

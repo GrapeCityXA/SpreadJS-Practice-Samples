@@ -159,7 +159,11 @@ ContextMenu.prototype.onOpenMenu = function (menuData, itemsDataForShown, hitInf
 该方案适用于需要在不同权限状态下提供差异化操作的业务场景,如多用户协作编辑、数据审核流程等。通过扩展 `onOpenMenu` 方法中的判断逻辑,可以实现更复杂的菜单控制策略,如基于用户角色、单元格位置、数据状态等条件的动态菜单配置。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

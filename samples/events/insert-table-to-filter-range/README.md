@@ -274,7 +274,11 @@ export function patchInsertTableCommand() {
 该方案适合需要深度定制设计器行为的场景，示例中“命令补丁 + DOM 观察”的模式具有良好的可复用性，可举一反三地应用到其他默认受限命令的扩展上。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

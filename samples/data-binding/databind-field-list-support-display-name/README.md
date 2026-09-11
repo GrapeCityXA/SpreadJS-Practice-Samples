@@ -351,7 +351,11 @@ function highlihgtCell(x, y) {
 该方案适用于需要对数据绑定进行精细控制的企业应用，特别是在多语言环境或数据源字段名称不友好的场景下。通过扩展数据持久化和字段验证功能，可以进一步提升系统的健壮性和可维护性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

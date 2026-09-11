@@ -118,7 +118,11 @@ npm install
 该方案适用于需要自定义打印预览界面的场景，特别是在企业级应用中需要提供统一的打印体验时。通过事件机制和 API 配置的结合，可以实现高度灵活的打印功能定制。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

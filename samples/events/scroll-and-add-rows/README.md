@@ -159,7 +159,11 @@ sheet1.bind(GC.Spread.Sheets.Events.TopRowChanged, function(sender, args) {
 该方案适用于需要展示大量数据但又希望优化初始加载性能的场景，可以结合实际业务需求进行扩展，例如集成后端分页 API、添加数据缓存机制等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

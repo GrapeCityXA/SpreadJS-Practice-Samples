@@ -151,7 +151,11 @@ sheet.sortRange(0, 0, 6, 2, true, [
 该方案适用于需要对特定数据类型进行特殊排序处理的场景，如版本号排序、文件名自然排序、混合类型数据排序等。通过修改比较函数的实现，可以轻松扩展到更复杂的排序需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

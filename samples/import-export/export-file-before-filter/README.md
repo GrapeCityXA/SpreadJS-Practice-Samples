@@ -160,7 +160,11 @@ document.getElementById("exportFile").onclick = function(){
 该方案适用于需要在保持用户界面筛选状态的同时导出完整数据的场景，具有良好的扩展性，可以根据实际需求添加更多导出选项和格式支持。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

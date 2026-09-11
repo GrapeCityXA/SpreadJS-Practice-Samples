@@ -165,7 +165,11 @@ sheet.clear(
 该方案适用于需要多角色协作的表格应用，如预算管理系统、审批流程表单等场景。开发者可以在此基础上扩展更复杂的权限模型，例如结合后端 API 实现动态权限加载、支持行列级别的权限控制等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

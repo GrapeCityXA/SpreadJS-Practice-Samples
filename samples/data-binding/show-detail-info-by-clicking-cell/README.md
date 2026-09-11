@@ -217,7 +217,11 @@ sheet3.bindColumns(colInfos);
 该方案适用于需要分层展示数据的报表系统、数据分析平台等场景，通过合理的数据结构设计和事件处理，可以扩展为更复杂的多级钻取系统。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

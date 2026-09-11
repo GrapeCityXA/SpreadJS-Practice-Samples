@@ -204,7 +204,11 @@ function fillSampleData(sheet, range) {
 该方案适用于需要在复杂表头结构中实现自定义排序交互的场景，具有良好的扩展性，可以根据实际需求进一步定制排序逻辑和视觉效果。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

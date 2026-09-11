@@ -324,7 +324,11 @@ python -m http.server 8080
 该模式适用于任何「需要用户输入结构化参数、再对表格数据做批量计算」的场景，例如成本优化、排产排班、投资组合配置等；只需替换 `excelSolver` 中的模型构建逻辑与目标算法库，UI 与扩展骨架都可以原样复用。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

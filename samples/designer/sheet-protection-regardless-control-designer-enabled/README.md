@@ -152,7 +152,11 @@ sheet.options.isProtected = true
 该方案适用于需要精细化权限管理的企业级应用场景，例如：允许普通用户在保护模式下修改单元格格式但不能修改公式，或根据用户角色动态调整可用功能。通过扩展本示例的思路，可以实现更复杂的权限控制逻辑。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

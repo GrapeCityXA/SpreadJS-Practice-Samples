@@ -140,7 +140,11 @@ sheet.setArray(1, 0, [
 该方案适用于需要动态切换数据展示格式的场景，如财务报表、数据分析工具、可视化仪表板等。通过扩展条件格式规则，可以实现更复杂的格式切换逻辑，如根据数据值范围自动应用不同格式、多条件组合判断等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

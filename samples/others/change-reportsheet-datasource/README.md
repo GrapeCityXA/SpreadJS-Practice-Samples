@@ -247,7 +247,11 @@ reportColumns.forEach((column, i) => {
 该方案适用于报表列结构相对稳定、数据来源可能变化的场景，例如多租户报表、按周期切换数据快照、在线数据与本地导入数据对比等。若报表结构本身也需要动态变化，可在切换数据源后追加对模板单元格的重新配置，整体流程与本文一致。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -137,7 +137,11 @@ caretOffset = preCaretRange.toString().length;
 该方案适用于需要精确控制编辑行为的场景，可以作为构建自定义公式编辑器、智能输入助手等高级功能的技术基础。开发者可以在此基础上扩展更多交互功能，提升用户的编辑体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

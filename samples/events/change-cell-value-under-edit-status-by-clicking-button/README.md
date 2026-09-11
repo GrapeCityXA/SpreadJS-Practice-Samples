@@ -180,7 +180,11 @@ if (lastNode) {
 该方案适用于需要提供快捷输入工具的场景，如公式助手、模板插入器、参数选择器等。通过扩展按钮数量和插入内容，可以构建功能丰富的编辑工具栏，显著提升用户的输入效率。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

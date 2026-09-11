@@ -189,7 +189,11 @@ sheet.setDataValidator(row, col, validator)
 该方案适用于需要严格数据质量控制的场景，如财务报表、数据采集表单、配置管理等。通过合理选择验证方式（全量 vs 脏数据），可以在保证数据准确性的同时兼顾性能表现。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

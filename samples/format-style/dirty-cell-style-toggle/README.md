@@ -161,7 +161,11 @@ document.querySelector("#button2").addEventListener("click", function () {
 该方案适用于需要追踪数据变更的场景，可以扩展为更复杂的数据审核、版本对比等功能。通过结合事件监听和条件判断，可以实现更精细化的脏数据管理机制。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -182,7 +182,11 @@ function executeCmd(cmdArr) {
 该方案适用于数据可视化、教育演示、游戏开发等场景，具有良好的扩展性。通过修改像素数据和颜色配置，可以轻松绘制各种像素风格的图像。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

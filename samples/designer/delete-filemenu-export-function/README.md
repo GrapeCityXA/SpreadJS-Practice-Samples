@@ -129,7 +129,11 @@ console.log(fileMenuPanelTemplate); // 打印模板结构以确定层级
 该方案适用于需要对 Designer 界面进行深度定制的场景，特别是在企业级应用中需要根据权限控制功能可见性的情况。通过模板系统，可以实现几乎任意程度的界面定制，而无需修改 SpreadJS 的源代码。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

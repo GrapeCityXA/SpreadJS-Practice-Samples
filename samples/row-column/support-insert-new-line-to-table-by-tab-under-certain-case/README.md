@@ -176,7 +176,11 @@ curSheet.tables.resize(table, new GC.Spread.Sheets.Range(
 该方案适用于需要在包含复杂合并单元格布局的表格中实现自定义 Tab 键行为的场景，具有良好的扩展性和可维护性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

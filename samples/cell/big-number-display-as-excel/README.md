@@ -143,7 +143,11 @@ let sheet = spread.getActiveSheet();
 该方案适用于需要处理超长数字的各类业务场景，特别是金融、电商、政务等对数据准确性要求较高的领域。开发者可以根据实际需求调整精度规则，或扩展到其他单元格类型。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

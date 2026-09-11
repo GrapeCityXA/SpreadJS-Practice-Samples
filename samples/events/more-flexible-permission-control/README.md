@@ -32,7 +32,11 @@ authContoller.register(spread, sheet, function (row, col, type) {
 以上代码的意思是：第一列禁止直接编辑，第二列禁止粘贴，其他单元格可以随意编辑。因为register方法的第三个参数是一个回调函数，我们可以得知用户正在操作的单元格行列信息以及操作的方式，所以可以很方便地控制用户的行为，只需要返回一个布尔值即可。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

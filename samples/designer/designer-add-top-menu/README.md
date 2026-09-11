@@ -226,7 +226,11 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container", desi
 该方案适用于需要在设计器中集成业务特定功能的场景，如自定义的文件管理、数据导入导出、模板管理等。通过合理的配置和命令设计，可以构建出功能丰富且易于维护的表格应用。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

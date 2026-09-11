@@ -165,7 +165,11 @@ sheet.isValid(i, 0, sheet.getValue(i, 0))
 该方案适用于需要在提交前批量验证数据、生成数据质量报告、或实现自定义校验逻辑的场景，具有良好的扩展性和实用性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

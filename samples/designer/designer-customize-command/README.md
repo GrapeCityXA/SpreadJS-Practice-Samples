@@ -193,7 +193,11 @@ let spread = designer.getWorkbook()
 该方案适用于需要在设计器中集成企业特定业务逻辑的场景，例如快速套用模板、批量数据处理、自定义格式化等功能。通过这种方式，可以在不修改设计器源码的前提下，灵活地扩展设计器的能力，满足各种定制化需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

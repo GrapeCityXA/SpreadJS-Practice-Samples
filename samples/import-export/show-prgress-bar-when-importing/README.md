@@ -182,7 +182,11 @@ function showProgress(arg, progressElement, modalElement) {
 该方案适用于任何需要导入大型 Excel 文件的场景，特别是在数据量较大、导入耗时较长的情况下，能够显著改善用户体验。开发者可以根据实际需求，扩展为支持文件选择、错误处理、取消操作等更完善的功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -163,7 +163,11 @@ GC.Spread.Sheets.Style.prototype.toJSON = function() {
 该方案适用于需要在 SpreadJS 标准数据模型之外存储额外信息的所有场景，具有良好的扩展性和可维护性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -180,7 +180,11 @@ setTimeout(() => {
 该方案适用于需要实时数据更新的业务场景，具有良好的性能和扩展性，可以直接应用于生产环境中的股票行情、物联网数据监控、实时报表等场景。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

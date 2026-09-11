@@ -214,7 +214,11 @@ MyCheckBoxCellType.prototype.getHitInfo = function (x, y, cellStyle, cellRect, c
 该方案适用于需要批量选择功能的表格场景，代码结构清晰，易于理解和扩展。开发者可以基于此实现更复杂的自定义单元格类型，如带搜索的下拉框、自定义日期选择器等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

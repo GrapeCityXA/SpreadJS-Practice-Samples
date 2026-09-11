@@ -178,7 +178,11 @@ context.source.getSheet().setArray(curRow, curCol + 1, data);
 该方案适用于需要通过公式触发批量数据操作的场景，例如数据导入、模板填充、动态报表生成等。通过扩展该示例，可以实现更复杂的数据处理和填充逻辑。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

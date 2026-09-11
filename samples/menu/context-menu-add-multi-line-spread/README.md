@@ -222,7 +222,11 @@ spread.commandManager().execute({
 该方案适用于需要自定义表格操作菜单的场景，可以根据业务需求灵活扩展，实现更复杂的交互功能。通过类似的方式，开发者可以添加更多自定义菜单项，如批量删除、批量格式化等功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

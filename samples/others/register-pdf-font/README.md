@@ -148,7 +148,11 @@ registerServerFont()
 该方案适用于所有需要在 Web 端导出 PDF 且包含非西文字符的场景，通过简单的配置即可确保导出文档的字体正确渲染。在实际应用中，建议根据业务需求优化字体加载策略（如按需加载、懒加载等），以平衡功能完整性和页面性能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

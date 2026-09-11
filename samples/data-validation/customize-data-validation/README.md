@@ -153,7 +153,11 @@ function initSpread(spread, data) {
 该方案适用于需要对用户输入进行严格控制的场景，通过自定义校验逻辑，可以满足各种复杂的业务需求。开发者可以在此基础上扩展更多校验规则，如日期范围校验、字符串长度限制、正则表达式匹配等，构建更加健壮的数据录入系统。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -171,7 +171,11 @@ sheet.setValue(row, col, parseInt(hitinfo.value))
 该方案适用于需要对特定数据格式进行可视化标记和快速修正的场景，如数据导入验证、数据清洗工具等。通过扩展菜单选项，还可以支持更多数据转换功能（如日期格式化、货币转换等）。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

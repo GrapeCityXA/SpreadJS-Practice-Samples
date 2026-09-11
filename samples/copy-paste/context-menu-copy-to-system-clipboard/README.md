@@ -124,7 +124,11 @@ spread.bind(GC.Spread.Sheets.Events.ClipboardChanging, function (e, info) {
 该方案适用于需要在 SpreadJS 与其他办公软件之间频繁交换数据的场景，具有良好的扩展性，可以根据实际需求添加更多数据格式或自定义处理逻辑。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

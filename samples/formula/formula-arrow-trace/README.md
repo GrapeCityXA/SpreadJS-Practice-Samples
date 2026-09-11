@@ -262,7 +262,11 @@ spread.bind(Events.ActiveSheetChanged, function () {
 该方案适用于财务对账、预算模型、复杂报表等需要公式审计与依赖梳理的场景，其"引擎 + 渲染 + 命令 + 导出管线"的分层结构也易于扩展（如增加错误值追踪、引用定位弹窗、跨表关系总览图等能力）。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

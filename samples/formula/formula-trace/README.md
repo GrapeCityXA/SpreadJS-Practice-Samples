@@ -255,7 +255,11 @@ function paintDataTreeFromRoot(sheetForShow, rootNode, childLength, fatherShape,
 该方案适用于需要分析和展示电子表格公式依赖关系的场景，如财务审计工具、数据血缘分析、公式调试器等。通过扩展该示例，可以构建更强大的公式分析和可视化工具。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -162,7 +162,11 @@ sheet3.setValue(4, 0, 5);
 该方案适用于需要灵活控制打印内容的场景，如报表系统、数据分析工具等。开发者可以在此基础上扩展更多功能，如打印预览、打印设置、批量打印等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -152,7 +152,11 @@ sheet.setTag(2, 2, "tag4")
 该方案适用于需要在多窗口或多标签页间保持数据完整性的场景，如协同编辑、数据审核、跨系统数据迁移等。通过类似的思路，还可以扩展到其他自定义元数据的传递需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

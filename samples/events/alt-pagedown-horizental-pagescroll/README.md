@@ -142,7 +142,11 @@ context.getActiveSheet().scroll(
 该方案适用于需要处理宽表格的业务场景，可以显著提升用户的操作效率。开发者可以基于此方案进一步扩展，实现更多自定义的键盘操作功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

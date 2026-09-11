@@ -194,7 +194,11 @@ sheet.setDataSource(new GC.Spread.Sheets.Bindings.CellBindingSource(data));
 该方案适用于需要灵活列配置的报表系统、数据分析工具、权限相关的数据展示等场景，具有良好的扩展性和实用价值。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

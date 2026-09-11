@@ -187,7 +187,11 @@ range.setStyle(rangeStyle);  // 设置区域样式
 该方案适用于需要在公式中访问单元格元数据的场景，如数据关联、状态判断、条件计算等。通过类似的方式，开发者可以扩展实现更多自定义函数，如获取单元格样式、批注、数据验证规则等属性，极大地增强 SpreadJS 的公式计算能力。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -185,7 +185,11 @@ sheet.clearSelection();
 该方案适用于需要数据审计、公式调试、用户培训等场景，可进一步扩展为支持多层级追踪、反向依赖查询、导出追踪报告等高级功能。通过结合 SpreadJS 的其他 API（如 `getDependents`、条件格式、自定义函数等），可以构建更强大的公式分析工具。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

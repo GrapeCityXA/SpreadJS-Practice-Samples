@@ -155,7 +155,11 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container");
 该方案适用于需要对 SpreadJS Designer 进行界面定制和功能限制的场景，具有良好的扩展性。通过类似的方法，可以实现更复杂的菜单定制需求，如添加自定义菜单项、修改工具栏布局、动态控制功能可见性等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

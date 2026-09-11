@@ -219,7 +219,11 @@ ImageCellType.prototype.processMouseUp = function (hitInfo) {
 该方案适用于需要动态控制单元格编辑权限的业务场景，可以根据实际需求扩展为更复杂的权限管理系统，例如结合用户角色、审批流程等实现更精细的权限控制。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

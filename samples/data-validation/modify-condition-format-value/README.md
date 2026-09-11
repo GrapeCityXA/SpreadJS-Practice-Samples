@@ -157,7 +157,11 @@ function initSpread(spread) {
 该方案适用于需要根据用户交互或业务逻辑动态调整数据高亮规则的场景，具有良好的扩展性，可以进一步封装为通用的条件格式管理工具。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

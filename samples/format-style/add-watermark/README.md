@@ -163,7 +163,11 @@ html2canvas(document.getElementById("capture")).then(function (canvas) {
 该方案适用于需要快速实现水印功能的场景，特别是当水印样式需要频繁调整时，通过修改 HTML/CSS 即可实现，无需重新生成图片资源。对于生产环境，建议进一步封装并考虑使用 SpreadJS 官方 API 替代 DOM 操作以提高稳定性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

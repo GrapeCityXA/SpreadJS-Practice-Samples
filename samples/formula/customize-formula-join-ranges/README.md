@@ -157,7 +157,11 @@ sheet.setFormula(4, 2, '=test("cube(\\'参数\\')||entity{19594}->period{\\'anyS
 该方案适用于需要将表格数据与外部系统集成的场景，如构建数据库查询语句、生成 API 请求 URL、构造复杂的业务表达式等，具有很强的实用性和扩展性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

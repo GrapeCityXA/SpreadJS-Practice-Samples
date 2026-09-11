@@ -161,7 +161,11 @@ FactorialFunction.prototype.evaluate = function (arg) {
 该方案适用于需要动态构建公式、实现 Excel 宏功能迁移、或构建公式生成器等场景。通过类似的方式，开发者可以扩展实现更多自定义函数，满足特定业务需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

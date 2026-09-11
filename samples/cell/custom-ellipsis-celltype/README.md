@@ -197,7 +197,11 @@ CustomEllipsisCellType.prototype.getHitInfo = function (x, y, style, cellRect, c
 该方案适用于需要自定义单元格交互行为的场景，具有良好的扩展性。通过类似的方法，开发者可以实现更多自定义的单元格功能，如自定义编辑器、自定义渲染效果等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

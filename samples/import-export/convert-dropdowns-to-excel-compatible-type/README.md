@@ -221,7 +221,11 @@ if (style.cellButtons && style.cellButtons[0].command == "openList") {
 该方案适用于需要在 SpreadJS 和 Excel 之间进行数据交换的场景，确保下拉列表功能在不同平台间的一致性和兼容性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -133,7 +133,11 @@ sheet.setValue(1, 0, 7.00);
 这种方案特别适合需要在同一区域内混合显示整数和小数的场景，如财务报表、统计表格等，既保证了数据的准确性，又提升了视觉呈现的专业性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

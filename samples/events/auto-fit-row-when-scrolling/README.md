@@ -131,7 +131,11 @@ function betterFitRows() {
 该方案适用于需要自动调整行高的大数据表格场景，特别是数据量在数千行以上且用户不会一次性查看所有数据的情况。通过按需计算的策略，在保证功能完整性的同时显著提升了应用的响应速度和用户体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

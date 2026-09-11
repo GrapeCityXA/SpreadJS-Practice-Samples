@@ -157,7 +157,11 @@ GC.Spread.Sheets.Designer.setResources(res);
 该方案适用于需要定制化字体列表的企业应用，特别是中文环境下的电子表格系统，可以根据实际需求扩展更多字体或调整字体顺序。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -169,7 +169,11 @@ table.setColumnFormula(3, "=SUBTOTAL(109,[TOTAL])");
 该方案适用于需要展示复杂业务对象的报表场景,特别是发票、订单等包含多层级数据结构的应用。通过自定义 CellType 和 TableColumn 配置,可以灵活扩展数据展示和转换逻辑。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

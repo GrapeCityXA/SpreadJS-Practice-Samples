@@ -126,7 +126,11 @@ npm install
 该方案适用于需要在设计器标准操作流程中插入自定义业务逻辑的场景，具有良好的扩展性和可维护性。通过这种模式，开发者可以在不修改 SpreadJS 源码的前提下，灵活地定制设计器行为，满足特定的业务需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

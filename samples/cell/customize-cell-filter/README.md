@@ -179,7 +179,11 @@ command: (sheet, row, col, option) => {
 该方案适用于需要自定义 UI 风格的企业应用、数据分析工具或需要在特定位置提供筛选功能的场景。通过扩展 `command` 回调函数，还可以实现更复杂的业务逻辑和交互体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

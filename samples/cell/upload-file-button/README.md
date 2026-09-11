@@ -134,7 +134,11 @@ npm install
 该方案适用于需要在表格应用中集成文件上传功能的场景，如批量导入数据、附件管理等。通过扩展上传逻辑和文件信息展示，可以构建完整的文件管理系统。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

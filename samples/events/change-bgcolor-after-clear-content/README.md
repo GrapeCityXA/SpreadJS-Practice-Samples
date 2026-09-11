@@ -150,7 +150,11 @@ execute: function (context, options, isUndo) {
 该方案适用于需要在用户操作时触发自定义业务逻辑的场景，具有良好的扩展性，可以轻松修改为监听其他事件类型或执行更复杂的操作。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

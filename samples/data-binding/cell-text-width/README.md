@@ -157,7 +157,11 @@ function getCellTextWidth(sheet, row, col) {
 该框架适合作为 SpreadJS 项目的起点，可在此基础上添加单元格操作、数据处理、样式设置等高级功能。建议补充缺失的数据文件和文本宽度测量逻辑，以实现完整的功能演示。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

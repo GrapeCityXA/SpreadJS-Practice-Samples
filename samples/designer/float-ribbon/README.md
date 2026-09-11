@@ -116,7 +116,11 @@ let spread = designer.getWorkbook();
 该方案适用于需要最大化内容显示区域的场景，如数据分析看板、报表查看器等，同时保留完整的编辑功能。开发者可根据实际需求调整触发逻辑和动画效果。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

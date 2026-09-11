@@ -168,7 +168,11 @@ document.querySelector("#button2").addEventListener("click", function () {
 该方案适用于需要支持多语言排版规则的表格应用，特别是在处理中文文档时需要遵循中文排版规范的场景。通过灵活配置 TextFormat，可以满足不同语言和地区的排版需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

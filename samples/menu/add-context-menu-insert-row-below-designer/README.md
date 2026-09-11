@@ -214,7 +214,11 @@ sheet.setValue(2, 0, "⬅️请在行头右键点击，查看新增的菜单")
 该方案适用于已集成 SpreadJS Designer、需要按业务习惯微调交互的在线表格产品；扩展时只需沿用同一套模式追加 `commandMap` 条目与对应的命令注册即可，无需改动设计器本身的代码。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

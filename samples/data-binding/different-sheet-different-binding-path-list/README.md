@@ -154,7 +154,11 @@ spread.bind(GC.Spread.Sheets.Events.ActiveSheetChanged, function (sender, args) 
 该方案适用于需要在同一工作簿中管理多个不同数据源的场景，具有良好的扩展性。开发者可以在此基础上添加持久化存储、配置导入导出等功能，进一步增强实用性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

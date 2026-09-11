@@ -139,7 +139,11 @@ picture.isSelected(boolean)
 该方案适用于需要在电子表格中进行图片管理的场景，如商品目录编辑、图片库管理、报表图片更新等。通过扩展该示例，可以实现更复杂的图片管理功能，如批量替换、图片裁剪、滤镜效果等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

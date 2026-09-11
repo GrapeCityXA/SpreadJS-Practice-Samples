@@ -167,7 +167,11 @@ sheet.setDataSource(source)
 该方案特别适合需要频繁更新数据并实时展示图表的应用场景，如数据监控、实时报表、动态仪表盘等。通过表格绑定机制，可以大幅简化开发工作量，提高代码的可维护性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -112,7 +112,11 @@ sheet.bind(GC.Spread.Sheets.Events.ValueChanged, function(e, info) {
 该方案适用于需要处理长文本输入的各类电子表格应用，通过简单的事件驱动机制实现了良好的用户体验。开发者可以在此基础上扩展更多功能，如条件判断、批量处理、样式定制等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -163,7 +163,11 @@ document.getElementById("fill").addEventListener("click", function () {
 该方案适用于需要保持表格视觉完整性的场景，例如数据看板、报表展示、固定布局的应用等。代码简洁易懂，可以作为学习 SpreadJS 布局控制的入门示例。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

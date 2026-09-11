@@ -149,7 +149,11 @@ function handleHyperLink() {
 该方案适用于需要对超链接行为进行扩展控制的场景，如添加访问日志、权限验证、数据校验等。通过结合 SpreadJS 的其他 API，可以实现更复杂的业务逻辑和交互体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

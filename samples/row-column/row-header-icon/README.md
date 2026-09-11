@@ -173,7 +173,11 @@ sheet.bind(GC.Spread.Sheets.Events.RowChanged, function (e, info) {
 该方案适用于需要追踪数据变更的各类应用场景，如数据录入系统、审核工具、协同编辑平台等。通过简单的扩展，还可以实现更复杂的状态管理功能，如多状态标识、状态持久化等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

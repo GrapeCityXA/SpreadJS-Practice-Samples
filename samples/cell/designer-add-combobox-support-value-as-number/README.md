@@ -153,7 +153,11 @@ spread.bind(GC.Spread.Sheets.Events.CellChanged, function (e, info) {
 该方案适用于需要在设计器中配置组合框，并且对数据类型有严格要求的场景。对于 V18 及以后版本的用户，建议直接使用原生支持的功能。对于 V18 之前版本的用户，本示例提供了一个简洁有效的解决方案。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

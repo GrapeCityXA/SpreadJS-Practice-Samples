@@ -159,7 +159,11 @@ spread.resumePaint();         // 恢复绘制并一次性刷新
 该方案适用于需要自定义快捷键行为的场景，具有良好的扩展性，可以根据业务需求实现更复杂的自动填充逻辑。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -134,7 +134,11 @@ npm install
 该方案适用于需要频繁刷新数据但希望保持用户操作状态的场景，如实时数据监控、定时数据更新等应用。通过简单的状态备份和恢复机制，可以显著提升用户体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

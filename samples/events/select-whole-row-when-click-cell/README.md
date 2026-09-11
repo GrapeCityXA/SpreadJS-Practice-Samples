@@ -110,7 +110,11 @@ spread.bind(GC.Spread.Sheets.Events.CellClick,
 该方案适用于需要行级操作的数据管理场景，代码简洁易维护，可作为更复杂交互功能的基础进行扩展。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

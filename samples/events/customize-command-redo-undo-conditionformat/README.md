@@ -195,7 +195,11 @@ sheet.setDefaultStyle(ds);
 该方案适用于需要对复杂业务操作提供撤销重做支持的场景，如批量数据处理、格式化操作、自定义函数执行等。通过命令模式的应用，可以构建更加健壮和用户友好的电子表格应用。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -247,7 +247,11 @@ function refreshCharts(id, data) {
 该方案适用于需要在电子表格中展示复杂数据可视化的场景，特别是需要导出为 PDF 进行报告分享的业务需求。通过深拷贝工作簿并替换图表为图片的方式，既保证了原始数据不受影响，又实现了完整的导出功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

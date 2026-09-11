@@ -120,7 +120,11 @@ GC.Spread.Sheets.Commands.dragDrop.execute = function (context, option, isUndo) 
 该方案适用于需要定制拖拽行为的场景，特别是在数据编辑类应用中，可以有效防止用户误操作导致的数据覆盖问题。开发者可以基于此思路扩展更多自定义命令逻辑。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

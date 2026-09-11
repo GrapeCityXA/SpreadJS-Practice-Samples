@@ -127,7 +127,11 @@ document.getElementById('end').onclick = function () {
 该方案适用于需要用户手动指定数据范围的各类场景，如自定义公式编辑器、数据源配置界面、动态报表参数设置等。通过简单的 API 调用即可实现专业的区域选择交互体验，具有良好的扩展性和实用价值。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -140,7 +140,11 @@ sheet.setArray(0, 3, getRandom())
 该方案适用于需要实时数据更新的业务场景，如监控面板、数据看板、实时报表等。通过局部更新而非全表刷新的方式，既保证了数据的实时性，又优化了性能和用户体验。开发者可以在此基础上扩展更复杂的数据刷新逻辑，如多列更新、条件更新、增量更新等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

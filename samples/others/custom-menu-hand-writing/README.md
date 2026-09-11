@@ -132,7 +132,11 @@ document.getElementById("clear").onclick = function(){
 该方案适用于需要在电子表格中集成手写签名功能的场景，如在线审批系统、电子合同平台等。通过扩展，还可以实现更复杂的绘图功能，如图表标注、自由绘制等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

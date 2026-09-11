@@ -128,7 +128,11 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container", conf
 该方案简单高效，适合在项目初始化阶段进行配置，后续的导出和打印操作将自动应用这些默认设置，显著提升开发效率。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

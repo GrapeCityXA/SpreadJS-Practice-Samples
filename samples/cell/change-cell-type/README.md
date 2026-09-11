@@ -160,7 +160,11 @@ CustomBase.prototype.paint = function (context, value, x1, y1, a1, b1, style, ct
 该方案适用于需要为单元格添加视觉标识或实现复杂交互逻辑的业务场景，具有良好的扩展性和可维护性。通过类似的方式，开发者可以创建更多自定义单元格类型来满足特定业务需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

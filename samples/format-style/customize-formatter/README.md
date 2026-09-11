@@ -147,7 +147,11 @@ sheet.getRange(0, 0, 3, 5).backColor('#456782').formatter(customFormatterTest)
 该方案具有良好的扩展性，开发者可以根据实际需求定制更复杂的格式化逻辑，为用户提供更加灵活和友好的数据交互体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

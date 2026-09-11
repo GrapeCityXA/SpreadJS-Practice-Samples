@@ -135,7 +135,11 @@ spread.getActiveSheet().getRange(3,3,5,5).setStyle(style)  // 应用到 D4:H8 �
 该方案适用于需要灵活控制单元格编辑权限的场景，特别是在表单设计、数据录入模板等应用中具有较高的实用价值。通过合理设置默认样式和局部样式，可以在保护数据安全的同时，保持良好的用户交互体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

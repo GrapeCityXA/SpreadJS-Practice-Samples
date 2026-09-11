@@ -249,7 +249,11 @@ export function installBindingPreserve(spread) {
 该方案在数据绑定类表格应用中具有较强的通用性，凡涉及用户自由编辑且需保持数据源同步的场景均可直接复用或按需扩展，是理解 SpreadJS 数据绑定与事件机制的优质入门示例。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

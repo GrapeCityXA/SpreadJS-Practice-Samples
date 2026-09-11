@@ -267,7 +267,11 @@ function initDesigner() {
 该方案适用于需要从层级数据源快速构建表格的场景，例如数据建模工具、报表设计器、数据映射配置界面等。通过扩展树节点的属性和拖拽逻辑，可以实现更复杂的业务需求，如支持多表关联、字段类型配置、数据验证规则设置等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

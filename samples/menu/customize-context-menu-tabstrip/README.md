@@ -163,7 +163,11 @@ spread.contextMenu = contextMenu;
 该方案适用于需要对 SpreadJS 内置操作进行监听、验证或增强的场景，具有良好的扩展性，可以应用于其他右键菜单项或工具栏命令的自定义。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

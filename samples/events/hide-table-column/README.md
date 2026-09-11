@@ -179,7 +179,11 @@ function findColIndex(deleteCol){
 该方案适用于需要动态调整表格显示内容的场景，特别是在数据分析、报表展示等领域具有实用价值。如果需要保留表格数据或实现更复杂的列管理功能，建议结合数据持久化和状态管理机制进行扩展。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

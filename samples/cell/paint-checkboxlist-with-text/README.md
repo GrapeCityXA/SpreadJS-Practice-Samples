@@ -133,7 +133,11 @@ GC.Spread.Sheets.CellTypes.Text.prototype.paintValue.apply(this, [ctx, str, x, y
 该方案适用于需要在保护模式下以只读文本形式展示复杂单元格类型的场景，具有良好的扩展性，可以应用于其他需要条件渲染的单元格类型。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

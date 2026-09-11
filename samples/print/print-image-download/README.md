@@ -146,7 +146,11 @@ canvas.toBlob((blob) => {
 该方案适用于需要将表格内容快速导出为图片的场景，特别是在不需要复杂排版的情况下。如需更精细的控制，可以考虑结合 PDF 导出功能或使用服务端渲染方案。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

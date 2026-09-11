@@ -132,7 +132,11 @@ sheet1.rowFilter().filter(0);
 该方案适用于需要多视图联动的数据分析场景，可以根据实际需求扩展为更复杂的同步机制，例如支持多列筛选、自动同步、双向同步等功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

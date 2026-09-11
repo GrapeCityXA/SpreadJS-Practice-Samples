@@ -218,7 +218,11 @@ for (let i = range.col, j = 0; i < range.col + range.colCount; i++) {
 该方案适用于需要根据业务数据动态调整表格结构的场景，如多维度评价表、动态报表、可配置的数据展示等。通过合理的扩展，可以支持更复杂的动态列生成需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

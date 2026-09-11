@@ -155,7 +155,11 @@ spread.bind(GC.Spread.Sheets.Events.ValueChanged, function (sender, args) {
 该方案适用于需要优化多行文本输入体验的场景，代码简洁高效，易于集成到现有项目中。开发者可以在此基础上扩展更多自动化格式处理功能，如自动调整列宽、自动设置文本对齐方式等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

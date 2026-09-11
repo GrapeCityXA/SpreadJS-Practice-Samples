@@ -77,7 +77,11 @@ npm install
 该方案适用于需要最大化表格显示区域的应用场景，特别是在嵌入式应用、小屏幕设备或数据密集型界面中。通过简单的配置即可实现工具栏的默认折叠，提升用户体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -191,7 +191,11 @@ let range = new GC.Spread.Sheets.Range(
 该方案适用于需要定制 SpreadJS 行为以匹配特定产品需求的场景，具有良好的可扩展性和维护性。通过类似的命令重写模式，开发者可以定制更多 Designer 功能，满足不同业务场景的需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

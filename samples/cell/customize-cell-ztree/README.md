@@ -236,7 +236,11 @@ sheet.setCellType(0, 2, cellType);  // 应用到 C1 单元格
 该方案适用于需要在表格中选择层级数据的场景，具有良好的用户体验和扩展性。开发者可以参考此示例，集成其他第三方组件（如日期选择器、颜色选择器等），进一步丰富 SpreadJS 的功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

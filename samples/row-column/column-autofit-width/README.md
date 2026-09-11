@@ -114,7 +114,11 @@ sheet.bind(GC.Spread.Sheets.Events.EditEnded, function (sender, args) {
 该方案适用于需要频繁输入不同长度内容的表格应用，如数据录入系统、报表填写工具等。开发者可以在此基础上添加更多控制逻辑，如条件判断、列宽限制等，以满足更复杂的业务需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

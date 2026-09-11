@@ -190,7 +190,11 @@ NumberCellType.prototype.updateEditor = function (editorContext, cellStyle, cell
 该方案适用于需要严格控制单元格输入类型的场景，如财务报表、数据录入表单等。通过修改正则表达式和验证规则，可以轻松扩展到其他输入限制场景（如邮箱、电话号码、身份证号等）。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

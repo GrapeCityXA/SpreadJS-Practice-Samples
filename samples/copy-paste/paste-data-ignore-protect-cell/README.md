@@ -186,7 +186,11 @@ sheet.bind(GC.Spread.Sheets.Events.ClipboardPasted, function (sender, args) {
 该方案适用于需要部分区域可编辑、部分区域受保护的场景，如数据录入模板、财务报表、考勤表等。通过合理配置锁定区域和监听粘贴事件，可以在保证数据安全的同时提升用户体验。开发者可以根据实际需求扩展此方案，例如添加数据验证、格式转换或权限检查等功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

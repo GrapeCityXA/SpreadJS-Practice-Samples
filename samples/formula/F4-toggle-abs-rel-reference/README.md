@@ -119,7 +119,11 @@ spread.commandManager().setShortcutKey(
 该方案适用于需要提供类 Excel 编辑体验的 Web 应用，特别是涉及大量公式编辑的财务、数据分析等场景。通过类似方式，开发者还可以绑定其他自定义命令到快捷键，实现更丰富的键盘操作支持。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

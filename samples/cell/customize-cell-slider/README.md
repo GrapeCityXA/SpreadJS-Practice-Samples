@@ -198,7 +198,11 @@ this._sheet.resumePaint(false);   // 恢复绘制
 该方案适用于需要对数值型数据进行范围筛选的场景，特别是在数据分析、报表展示等领域。通过类似的思路，开发者可以扩展实现日期选择器筛选、颜色选择器筛选等更多自定义筛选方式。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

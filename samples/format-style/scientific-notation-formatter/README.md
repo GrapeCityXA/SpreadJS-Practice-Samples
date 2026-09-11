@@ -227,7 +227,11 @@ GC.Spread.Sheets.Designer.registerTemplate('setText', setTextTemplate);
 该方案适用于需要专业数学或科学数据展示的场景，如科研报告、教育软件、工程计算等领域。通过类似的技术，还可以扩展实现更多自定义格式化需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

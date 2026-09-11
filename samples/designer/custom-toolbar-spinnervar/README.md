@@ -166,7 +166,11 @@ sheet.setStyle(0, 0, style)
 该方案适用于需要在 SpreadJS Designer 中添加自定义交互控件的场景，具有良好的可扩展性，可以作为开发其他自定义功能的参考模板。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

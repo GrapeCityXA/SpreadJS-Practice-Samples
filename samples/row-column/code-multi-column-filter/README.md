@@ -157,7 +157,11 @@ $("#filter").click(function () {
 该方案适用于需要根据业务逻辑动态控制筛选条件的场景，例如报表系统中的多条件查询、数据分析工具中的快速筛选等。通过扩展条件对象的配置，还可以实现更复杂的筛选逻辑，如数值范围筛选、日期筛选等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

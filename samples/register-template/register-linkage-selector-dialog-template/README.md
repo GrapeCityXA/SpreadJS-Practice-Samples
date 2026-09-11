@@ -223,7 +223,11 @@ GC.Spread.Sheets.Designer.showDialog("newTab", dialogOptiosn, (result) => {
 该方案适用于需要在 SpreadJS Designer 中集成自定义业务逻辑的场景，特别是需要用户输入结构化数据的情况。通过模板注册机制，可以快速构建各种复杂的表单交互，而无需深入了解底层 DOM 操作。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

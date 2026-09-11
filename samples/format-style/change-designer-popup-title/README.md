@@ -135,7 +135,11 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container")
 该方案适用于所有需要对 SpreadJS 设计器进行界面文本定制的场景，具有良好的扩展性。开发者可以在此基础上，进一步定制菜单、工具栏、对话框等更多界面元素的文本内容。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

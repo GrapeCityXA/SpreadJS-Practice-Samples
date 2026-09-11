@@ -133,7 +133,11 @@ function getValue(row,col){
 该方案适用于所有需要获取单元格显示内容的场景，如数据导出、内容复制、报表生成等。代码可直接复用到实际项目中，并根据需要扩展为批量处理或支持更多格式化类型。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

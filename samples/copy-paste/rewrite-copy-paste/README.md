@@ -202,7 +202,11 @@ spread.commandManager().setShortcutKey("myCopy", GC.Spread.Commands.Key.c, true,
 该方案具有良好的扩展性，可以在此基础上实现更复杂的业务逻辑，如数据加密、格式转换、权限控制等功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

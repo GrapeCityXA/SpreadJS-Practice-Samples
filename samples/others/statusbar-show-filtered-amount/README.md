@@ -156,7 +156,11 @@ let statusBar = GC.Spread.Sheets.StatusBar.findControl(
 该方案适用于需要向用户实时反馈数据操作结果的场景，例如数据分析工具、报表系统等。通过类似的扩展思路，还可以实现其他自定义状态栏功能，如选区统计、公式计算结果显示等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

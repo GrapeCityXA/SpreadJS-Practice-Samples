@@ -170,7 +170,11 @@ prevSheet.setFormula(prevCellRange.row, prevCellRange.col, formula + sheet1Name 
 该方案适用于需要频繁进行跨表引用的场景，可以显著提升用户的操作效率。开发者可以在此基础上扩展更多功能，如支持多区域选择、自定义引用类型、支持跨工作簿引用等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

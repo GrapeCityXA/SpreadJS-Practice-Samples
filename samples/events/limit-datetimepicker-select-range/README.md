@@ -145,7 +145,11 @@ info.sheet.resumeEvent();   // 恢复事件触发
 该方案适用于需要对用户输入进行实时校验的场景，通过简单的事件监听和条件判断即可实现复杂的业务规则，具有良好的可扩展性和实用性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

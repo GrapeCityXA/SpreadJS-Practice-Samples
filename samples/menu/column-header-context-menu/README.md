@@ -126,7 +126,11 @@ spread.contextMenu = contextMenu;
 该方案适用于需要在列头实现自定义交互的场景，例如列筛选、列排序、列属性设置等功能。通过扩展 `onOpenMenu` 方法，可以轻松实现更复杂的业务逻辑。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

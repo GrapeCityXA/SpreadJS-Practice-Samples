@@ -162,7 +162,11 @@ function checkCellFormat(sheet, row, col){
 该方案适用于需要对用户输入进行实时校验的场景，特别是在构建数据录入系统时，可以有效防止用户操作错误，提升数据质量。通过扩展检测逻辑和优化提示方式，可以构建更加完善的数据验证系统。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

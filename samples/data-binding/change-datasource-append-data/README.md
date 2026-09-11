@@ -194,7 +194,11 @@ table2.setColumnFormula(4, "=SUBTOTAL(109,[合计])");
 该方案适用于需要动态数据管理的场景，如数据监控面板、实时报表、数据录入系统等。通过数据绑定机制，可以大幅简化数据更新逻辑，提高开发效率。在实际应用中，可以结合 RESTful API 或 WebSocket 实现更复杂的数据交互功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

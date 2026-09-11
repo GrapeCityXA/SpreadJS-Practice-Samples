@@ -320,7 +320,11 @@ pt.add(
 该方案适用于任何需要覆盖默认排序语义的场景（如按部门优先级、按自定义编码排序），只需替换 `HZPinyin` 中的比较逻辑即可复用全部三处注入代码。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

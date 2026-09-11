@@ -194,7 +194,11 @@ spread.bind(GC.Spread.Sheets.Events.BeforePrint + ".screenshot", (s, e) => {
 该方案适用于需要将表格数据快速转换为图片的场景，如报表导出、数据分享、文档编辑等，具有良好的扩展性和实用价值。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

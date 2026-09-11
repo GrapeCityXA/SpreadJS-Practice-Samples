@@ -180,7 +180,11 @@ table.bindingPath("bindPath_table1");
 该方案适用于需要在同一行展示多个独立数据集的场景，如对比报表、多维度数据展示等。通过预先计算并调整 Table 区域，可以确保数据绑定的稳定性和布局的正确性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

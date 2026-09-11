@@ -136,7 +136,11 @@ function openModal() {
 该方案适用于所有需要在 SpreadJS 中集成自定义表单、对话框或输入组件的场景，是构建复杂表格应用时必须掌握的技术要点。开发者可以在此基础上扩展更多交互功能，如多步骤表单、动态验证等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

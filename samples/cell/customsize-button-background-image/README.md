@@ -153,7 +153,11 @@ sheet.options.isProtected = true;
 该方案适用于需要在表格中嵌入品牌 Logo、状态图标或装饰性图片的场景，通过简单的配置即可实现丰富的视觉效果。如需扩展为可交互的图片按钮，只需启用按钮并添加事件监听即可。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -150,7 +150,11 @@ sheet.bind(GC.Spread.Sheets.Events.CellDoubleClick, function(sender, args) {
 该方案适用于需要区分富文本和普通文本的各类场景，可以作为数据校验、格式转换、内容编辑等功能的基础实现。开发者可以在此基础上扩展更多交互方式和功能细节。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

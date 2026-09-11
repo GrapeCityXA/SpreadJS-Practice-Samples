@@ -207,7 +207,11 @@ let arr = tempSheet.getArray(ur.row, ur.col, ur.rowCount, ur.colCount)
 该方案特别适合需要结合 Excel 强大的编辑能力和 Web 应用数据处理能力的场景，可以作为企业级数据采集系统的技术参考。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

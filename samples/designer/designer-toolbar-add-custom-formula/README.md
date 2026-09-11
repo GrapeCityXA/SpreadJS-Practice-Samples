@@ -161,7 +161,11 @@ spread.addCustomFunction(factorial)
 该方案适用于需要扩展 SpreadJS 计算能力的场景，通过简单的配置即可让自定义函数像内置函数一样易用。开发者可以基于此模式添加更多业务相关的计算函数，构建企业级的表格应用。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

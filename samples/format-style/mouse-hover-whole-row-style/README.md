@@ -130,7 +130,11 @@ initHoverStateSheet(spread)
 该方案适用于需要增强数据可读性的表格应用场景，特别是在数据密集型的报表和数据分析工具中。通过简单的配置即可显著提升用户体验，具有很高的实用价值和扩展性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

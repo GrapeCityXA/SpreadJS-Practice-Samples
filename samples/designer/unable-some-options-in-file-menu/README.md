@@ -171,7 +171,11 @@ GC.Spread.Sheets.Designer.registerTemplate(
 该方案适用于需要根据业务规则动态控制 Designer 功能可用性的场景，具有良好的扩展性。在实际应用中，建议结合权限管理系统和数据绑定机制，实现更加健壮和灵活的功能控制方案。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

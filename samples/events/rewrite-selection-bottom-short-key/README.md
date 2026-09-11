@@ -148,7 +148,11 @@ execute: function (spread, options, isUndo) {
 该方案适用于需要自定义快捷键行为的场景，特别是从 Excel 迁移到 SpreadJS 的项目，可以通过类似方式实现完全一致的用户体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

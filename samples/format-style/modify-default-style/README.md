@@ -162,7 +162,11 @@ new GC.Spread.Sheets.Workbook(document.getElementById("ss"));
 该方案适用于需要快速实现品牌化表格界面的场景，特别是在已有设计规范的企业级应用中。对于更复杂的定制需求，可以在此基础上结合 SpreadJS 的主题 API 和自定义渲染器进一步扩展。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

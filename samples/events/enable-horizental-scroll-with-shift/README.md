@@ -140,7 +140,11 @@ sheet.setColumnCount(200)
 该方案适用于需要增强横向滚动体验的电子表格应用场景。对于使用 SpreadJS V18 及以上版本的项目，建议直接使用内置的横向滚动功能，无需额外实现。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

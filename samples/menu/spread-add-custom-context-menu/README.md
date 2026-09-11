@@ -124,7 +124,11 @@ npm install
 该方案适用于需要在表格应用中提供个性化操作入口的场景，具有良好的扩展性和可维护性。开发者可以在此基础上根据实际业务需求，添加更多复杂的菜单项和命令逻辑。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -243,7 +243,11 @@ spread.resumePaint();
 该方案适用于需要在表格上叠加"版面参考线"的场景，例如打印排版预览、报表分页校验、按页数据切分核对。其结构简单、无外部依赖，将绘制函数稍作配置化改造并接入事件驱动的重绘机制后，即可作为生产环境中的分页预览增强模块使用。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

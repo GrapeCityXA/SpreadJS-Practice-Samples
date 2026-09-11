@@ -163,7 +163,11 @@ spread.resumePaint();   // 操作完成后恢复绘制
 该方案适用于需要在浏览器中展示和操作大量表格数据的场景，如 BI 报表、数据导入预览、在线数据分析工具等。通过合理使用 SpreadJS 的性能优化 API，可以在前端实现接近桌面应用的大数据处理能力。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

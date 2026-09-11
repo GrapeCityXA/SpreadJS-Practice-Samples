@@ -135,7 +135,11 @@ let designer = new GC.Spread.Sheets.Designer.Designer("designer-container");
 该方案适用于需要定制设计器界面的场景，具有良好的扩展性。通过类似的方法，可以对 Designer 的其他内置对话框进行定制化改造，满足不同的业务需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

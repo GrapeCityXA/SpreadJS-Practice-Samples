@@ -155,7 +155,11 @@ document.getElementById('fileDemo').addEventListener('change',addPic)
 该方案适用于需要在电子表格中插入本地图片的场景，代码简洁易懂，可以作为更复杂图片处理功能的基础。开发者可以在此基础上扩展图片缩放、裁剪、批量上传等高级功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -269,7 +269,11 @@ function _handleSuperAndSubScript(root, node, style) {
 该方案适用于需要在电子表格中展示和编辑复杂格式文本的场景，如科学计算、教育培训、文档编辑等领域。开发者可以在此基础上扩展更多格式化功能，或集成第三方富文本编辑器以提升用户体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

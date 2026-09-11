@@ -133,7 +133,11 @@ sheet.bind(GC.Spread.Sheets.Events.ValueChanged, (e, info) => {
 该方案适用于需要层级关联选择的数据录入场景，如地区选择、分类筛选、产品规格选择等。通过扩展事件监听逻辑和数据源配置，可以轻松实现多级联动和更复杂的业务需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -270,7 +270,11 @@ document.getElementById("popup-items").addEventListener("click", function (event
 该方案适用于科学计算、化学/数学录入、带格式的业务标签选择等需要"预设富文本内容快速录入"的场景；由于配置与交互逻辑与特定 UI 解耦，也可以很方便地移植到仅使用 SpreadJS 表格（不加载 Designer）的应用中。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

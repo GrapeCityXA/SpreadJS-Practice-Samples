@@ -160,7 +160,11 @@ idFuzzySelect("tabStrip").addEventListener("mouseup", function (arg) {
 该方案适用于需要在 Sheet 标签页上实现自定义右键菜单或其他右键交互功能的场景，具有良好的扩展性。开发者可以在此基础上添加更多的自定义逻辑，例如显示上下文菜单、执行工作表操作等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

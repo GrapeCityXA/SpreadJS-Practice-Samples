@@ -198,7 +198,11 @@ spread.resumePaint()    // 一次性重绘
 该方案适用于需要展示层级结构数据且数据量较大的场景，通过局部更新策略将性能开销控制在可接受范围内。在实际项目中，可以根据业务需求扩展为支持任意层级折叠、状态持久化等功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

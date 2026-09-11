@@ -166,7 +166,11 @@ function loadSheetData() {
 该方案可以直接应用于财务报表、数据分析等需要处理大型 Excel 文件的业务场景，通过简单的改造即可对接实际的后端数据接口。对于使用 SpreadJS 16+ 版本的项目，建议参考官方懒加载 API 文档以获得更完善的功能支持。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -146,7 +146,11 @@ rowFilter.filter(0)
 该方案适用于需要默认展示特定时间段数据的报表系统、数据监控面板等场景，通过减少用户操作提升了应用的易用性和效率。开发者可以根据实际需求扩展为更复杂的日期范围筛选或多条件组合筛选。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

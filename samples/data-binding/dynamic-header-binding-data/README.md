@@ -184,7 +184,11 @@ names.forEach(function (data, index) {
 该方案适用于需要根据用户权限、业务规则动态调整表格列的场景，如报表系统、数据导入工具等。通过合理封装，可以扩展为支持配置化的动态表格生成器。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -246,7 +246,11 @@ const ploy = {
 该方案具有良好的扩展性,可在此基础上添加更多转换模式(如金额模式、罗马数字等),也可以封装为独立的 SpreadJS 插件供多个项目复用。对于需要在电子表格中进行数字格式化展示的场景,这是一个实用且高效的解决方案。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -185,7 +185,11 @@ sheet.setRowHeight(blankRowIndex, newBlankHeight);
 该方案特别适用于需要规范化打印输出的业务场景，如报表系统、检验报告、财务单据等，通过简单的代码调整即可应用到实际项目中。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

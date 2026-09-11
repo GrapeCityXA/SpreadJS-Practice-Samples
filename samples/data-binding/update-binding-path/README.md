@@ -151,7 +151,11 @@ sheet.setDataSource(source)
 该方案适用于需要动态调整表格结构的业务场景，例如报表系统、数据管理平台等。通过理解列绑定和数据源绑定的分离设计，开发者可以灵活实现复杂的数据展示需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

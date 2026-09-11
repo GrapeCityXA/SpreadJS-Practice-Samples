@@ -167,7 +167,11 @@ let usedRange = t_sheet.getUsedRange(GC.Spread.Sheets.UsedRangeType.style)
 该方案适用于报表生成、文档模板管理等场景，通过预定义模板可显著提高开发效率和文档一致性。对于需要更复杂模板逻辑的场景，可结合数据绑定和公式功能进一步扩展。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

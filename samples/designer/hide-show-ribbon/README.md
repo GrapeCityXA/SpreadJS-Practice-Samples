@@ -135,7 +135,11 @@ document.getElementById('changeDisplay').onclick = function(){
 该方案适用于需要动态调整界面布局的各类应用场景，具有良好的可扩展性和实用价值。开发者可以在此基础上扩展更多的界面控制功能，打造更加灵活和用户友好的应用体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

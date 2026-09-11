@@ -131,7 +131,11 @@ document.getElementById('changeDisplay').onclick = function(){
 该方案适用于需要动态调整界面布局的应用场景，可以作为实现自定义工具栏控制、全屏模式或响应式布局的基础。开发者可以在此基础上扩展更多的界面控制功能，如侧边栏切换、状态栏显示隐藏等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

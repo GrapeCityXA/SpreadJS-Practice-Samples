@@ -90,7 +90,11 @@ npm install
 该方案适用于需要对表格数据进行可视化验证的场景，如财务报表异常值标记、数据质量检查、业务规则验证等。通过扩展条件判断逻辑，可以实现更复杂的数据验证和可视化需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

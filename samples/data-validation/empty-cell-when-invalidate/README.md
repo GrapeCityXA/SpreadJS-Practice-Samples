@@ -121,7 +121,11 @@ sheet.bind(GC.Spread.Sheets.Events.EditEnding, (sender, args) => {
 该方案适用于需要实现复杂业务规则校验的场景，特别是当 SpreadJS 内置的数据验证功能无法满足需求时。通过扩展该方案，可以实现更丰富的输入控制功能，如实时格式校验、异步数据校验等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -200,7 +200,11 @@ tableColumn1.dataField("detail");
 该方案特别适用于需要在表格中展示卡片式信息、产品目录、用户档案等场景，能够显著提升数据展示的灵活性和用户体验。通过合理的模板设计和数据绑定配置，可以快速构建出专业的数据展示界面。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

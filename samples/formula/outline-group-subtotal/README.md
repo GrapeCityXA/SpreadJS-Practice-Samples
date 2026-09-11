@@ -181,7 +181,11 @@ for (var col = 1; col >= 0; col--) {
 该方案适用于需要按类别或层级汇总数据的报表场景，如销售统计、财务报表、库存管理等。通过参数化改造，可以扩展为通用的分组汇总组件，支持更复杂的业务需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

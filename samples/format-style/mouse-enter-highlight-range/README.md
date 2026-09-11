@@ -146,7 +146,11 @@ npm install
 该方案适用于需要增强表格交互体验的场景，特别是在数据密集型应用中，可以帮助用户更好地聚焦当前操作区域。通过简单的扩展，可以实现更复杂的交互效果，如行列高亮、多区域联动等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

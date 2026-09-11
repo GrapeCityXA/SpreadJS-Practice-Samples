@@ -132,7 +132,11 @@ function sortDomain(value1, value2) {
 该方案适用于所有需要处理中文数据排序的场景，也可以扩展到其他语言环境（如日文、韩文等），只需修改 `localeCompare` 的语言参数即可。对于更复杂的排序需求（如多列排序、自定义排序规则），可以在比较函数中添加更多的逻辑判断。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

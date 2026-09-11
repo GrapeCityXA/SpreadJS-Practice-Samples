@@ -213,7 +213,11 @@ npm install
 该方案适用于需要公式审计、调试、教学或可视化的场景，可以作为 SpreadJS 应用的辅助工具或独立功能模块。通过扩展，还可以实现更多高级功能，如公式优化建议、性能分析、依赖关系图等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

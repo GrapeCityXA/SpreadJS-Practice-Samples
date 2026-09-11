@@ -168,7 +168,11 @@ spread.bind(GC.Spread.Sheets.Events.EditEnding, function (sender, args) {
 该方案适用于需要优化百分数、货币等特殊格式输入体验的电子表格应用，具有良好的扩展性和可维护性。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

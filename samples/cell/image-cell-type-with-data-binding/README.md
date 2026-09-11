@@ -163,7 +163,11 @@ fileReader.readAsDataURL(file)  // 读取文件为 Data URL（Base64）
 该方案适用于需要在表格中展示图片数据的场景，通过数据绑定机制可以方便地实现图片数据的增删改查操作。在实际应用中，可以根据需求扩展为支持多图片上传、图片编辑等更复杂的功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

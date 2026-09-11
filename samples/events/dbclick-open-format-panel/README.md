@@ -189,7 +189,11 @@ if (row >= startRow && row <= endRow && col >= startColumn && col <= endColumn) 
 该方案适用于需要增强图片编辑交互体验的场景，代码简洁易懂，可以作为自定义交互功能的参考模板。通过类似的思路，还可以实现双击图表、形状等其他对象的快捷操作。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

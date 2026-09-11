@@ -210,7 +210,11 @@ GC.Spread.CalcEngine.Functions.defineGlobalCustomFunction("if",new MyIf())
 该方案适用于需要对内置函数进行统一定制化处理的场景，但需要谨慎使用，确保不会影响其他依赖原有函数行为的功能。在实际开发中，建议优先考虑使用不同名称的自定义函数，仅在确有必要时才覆盖内置函数。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -178,7 +178,11 @@ function initDetailSpread(spread, range) {
 该方案适用于需要对大型表格进行局部查看、数据对比、区域编辑等场景，具有良好的扩展性，可以根据实际需求添加双向同步、多区域显示等功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

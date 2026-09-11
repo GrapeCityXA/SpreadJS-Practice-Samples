@@ -172,7 +172,11 @@ toNonExponential(num) {
 该方案适用于金融、科学计算、数据分析等需要精确展示数值的场景，具有良好的可扩展性和实用价值。开发者可以根据实际需求调整最小小数位数、添加最大位数限制或自定义分隔符样式，打造符合业务需求的数值格式化方案。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

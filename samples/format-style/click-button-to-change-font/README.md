@@ -169,7 +169,11 @@ sheet.setStyle(2, 2, cssStyle);
 该方案适用于需要动态调整单元格外观的各类应用场景，代码简洁且易于扩展，可以作为实现字体选择器、样式工具栏等功能的基础。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

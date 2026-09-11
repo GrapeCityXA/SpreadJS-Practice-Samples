@@ -168,7 +168,11 @@ spread.bind(GC.Spread.Sheets.Events.EditEnded, function (sender, args) {
 该方案适用于需要频繁输入百分比数据的场景，可以显著提升用户的输入效率。开发者可以在此基础上扩展更多自定义格式的自动转换功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -167,7 +167,11 @@ function initSpread(spread) {
 该方案适用于需要在标准操作（复制、粘贴、删除等）中插入自定义逻辑的场景，如数据审计、权限控制、操作日志记录等。开发者可以基于此思路扩展更多自定义命令，构建符合业务需求的表格交互体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

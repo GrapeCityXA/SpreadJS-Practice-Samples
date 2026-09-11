@@ -119,7 +119,11 @@ sheet.setColumnWidth(3, 100);
 该方案特别适合需要为用户提供预设公式选项的业务场景,如财务报表模板、数据分析工具等。通过扩展 items 列表和结合其他 SpreadJS 功能,可以构建更加智能和用户友好的表格应用。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

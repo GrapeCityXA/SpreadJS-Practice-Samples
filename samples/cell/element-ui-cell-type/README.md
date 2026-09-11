@@ -216,7 +216,11 @@ if (sheet && hitInfo.isReservedLocation) {
 该方案适用于需要在表格中嵌入操作按钮、实现富交互体验的场景，具有良好的扩展性和实用价值。通过修改事件处理逻辑，可以轻松适配各种业务需求，如数据编辑、删除确认、权限控制等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

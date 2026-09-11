@@ -242,7 +242,11 @@ function rangesIntersect(a, b) {
 该方案适合任何需要在 SpreadJS 中提供"类 Excel"快捷操作的产品，将自定义命令、快捷键与命令栈三者打通后，即可低成本扩展出更多编辑快捷方式。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

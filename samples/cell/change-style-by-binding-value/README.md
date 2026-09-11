@@ -165,7 +165,11 @@ GC.Spread.Sheets.CellTypes.Text.prototype.paint.apply(this, arguments)
 该方案适用于需要根据业务数据动态调整单元格样式的场景，具有良好的可扩展性，可以根据实际需求扩展为更复杂的条件判断和样式设置逻辑。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

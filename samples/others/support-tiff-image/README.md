@@ -143,7 +143,11 @@ document.getElementById('upload').addEventListener('click', function () {
 该方案适用于需要在 Web 端电子表格中处理多种图片格式的场景，特别是医疗、档案管理等需要支持 TIFF 格式的行业应用。通过类似的思路，开发者还可以扩展支持其他特殊格式的文件。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

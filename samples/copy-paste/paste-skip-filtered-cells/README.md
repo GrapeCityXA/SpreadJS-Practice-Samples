@@ -197,7 +197,11 @@ setTimeout(() => {
 该方案适用于需要精细控制粘贴行为的场景，特别是在数据分析、报表编辑等需要同时使用筛选和隐藏功能的应用中。代码结构清晰，易于根据实际需求进行扩展和定制。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

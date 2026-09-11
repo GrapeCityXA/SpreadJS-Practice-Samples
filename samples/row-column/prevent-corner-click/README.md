@@ -131,7 +131,11 @@ HTML 结构：
 该方案适用于需要限制用户操作权限的场景，并且可以作为更复杂权限控制系统的一部分。开发者可以根据实际需求，扩展该方案以支持动态尺寸调整和更全面的交互控制。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

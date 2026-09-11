@@ -235,7 +235,11 @@ if (isUndo) {
 该方案适用于需要实现复杂业务逻辑且要求操作可撤销的场景，例如批量数据处理、自定义格式化、数据导入等。通过将业务逻辑封装为自定义命令，可以提升代码的可维护性和用户体验。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

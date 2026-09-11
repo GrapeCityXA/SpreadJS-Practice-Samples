@@ -179,7 +179,11 @@ sheet.getRange(-1, -1, -1, -1).formatter(new CustomNumberFormat("#,##0.00万"));
 该方案适用于需要自定义数值显示格式的场景，特别是财务报表、数据分析等领域。通过扩展该方案，可以实现更复杂的格式化需求，如多级单位转换、条件格式化等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -196,7 +196,11 @@ spread.bind(GC.Spread.Sheets.Events.ClipboardPasting, (sender, args) => {
 该方案适用于需要精确控制数据粘贴行为的场景，如财务报表系统、数据分析平台等。通过扩展该逻辑，可以实现更复杂的选择性粘贴功能，满足不同的业务需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

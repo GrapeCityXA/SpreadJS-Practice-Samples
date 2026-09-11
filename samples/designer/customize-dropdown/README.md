@@ -204,7 +204,11 @@ sheet.setValue(0,0,'grapecity')
 该方案适用于需要在设计器中集成自定义业务功能的场景，通过配置化的方式实现了良好的扩展性。开发者可以基于此示例，结合实际业务需求，添加更多自定义命令和交互逻辑，打造符合特定业务场景的电子表格应用。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

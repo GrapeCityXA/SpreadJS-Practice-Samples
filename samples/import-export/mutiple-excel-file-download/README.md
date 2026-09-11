@@ -204,7 +204,11 @@ $("#saveExcel").click(function () {
 该方案适用于需要批量导出多个独立报表、数据分析结果或其他 Excel 文件的场景，通过纯前端实现降低了系统复杂度，提升了用户体验。在实际应用中，建议根据业务需求优化异步控制流程和错误处理机制，以提供更稳定可靠的批量导出功能。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

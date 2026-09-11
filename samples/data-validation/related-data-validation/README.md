@@ -138,7 +138,11 @@ npm install
 该方案适用于层级关系明确、数据量适中的业务场景，如地址选择、商品分类、组织架构等。对于需要处理海量数据或复杂查询逻辑的场景，建议结合服务端接口或自定义单元格类型实现更灵活的解决方案。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

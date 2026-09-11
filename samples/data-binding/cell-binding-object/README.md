@@ -209,7 +209,11 @@ sheet.setValue(4, 0, "年龄")
 该方案适用于需要在表格中管理结构化数据的场景，特别是当数据具有固定的结构且需要提供友好的编辑界面时。通过适当的扩展，可以应用到更复杂的业务场景中，例如表单设计器、数据录入系统等。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples

@@ -155,7 +155,11 @@ sheet.bind(GC.Spread.Sheets.Events.FloatingObjectSelectionChanged, function(e, i
 该方案适用于需要在同一工作表中展示多个图表且存在位置重叠的场景，通过简单的事件处理即可显著提升用户体验。代码结构清晰，易于扩展到其他类型的浮动对象管理需求。
 
 For more information about SpreadJS, please visit:
+
 SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
+
 SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
+
 SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
+
 SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples
