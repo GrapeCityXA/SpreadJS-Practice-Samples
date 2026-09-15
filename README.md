@@ -1,6 +1,27 @@
-# Index
+# SpreadJS 实战代码库
 
-## 导入导出 (import-export)
+SpreadJS 实战示例集合，按场景分类，每个示例是一个可独立运行的小工程。下面是完整索引。
+
+## 相关仓库
+
+| 仓库 | 内容 |
+| --- | --- |
+| [spreadjs-docs](https://github.com/GrapeCityXA/spreadjs-docs) | 产品文档：使用指南、功能说明、公式函数参考，按版本分目录 |
+| [spreadjs-api-reference](https://github.com/GrapeCityXA/spreadjs-api-reference) | API 参考：TypeDoc 生成的完整符号文档，按版本分目录 |
+| [spreadjs-practice-samples](https://github.com/GrapeCityXA/spreadjs-practice-samples) | 实战示例：按场景分类的可运行示例工程（本仓库） |
+
+## 官方资源
+
+| 资源 | 地址 |
+| --- | --- |
+| 官网 | https://www.grapecity.com.cn/developer/spreadjs |
+| 在线文档 | https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide |
+| API 参考（在线） | https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet |
+| 在线示例 | https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples |
+
+## 索引 (Index)
+
+### 导入导出 (import-export)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -26,7 +47,7 @@
 | import-wps-support-incell-image | 导入时支持WPS的单元格内图片 | [./samples/import-export/import-wps-support-incell-image/](./samples/import-export/import-wps-support-incell-image/) |
 | image-lost-after-pdf-exported | 导出PDF后图片丢失问题 | [./samples/import-export/image-lost-after-pdf-exported/](./samples/import-export/image-lost-after-pdf-exported/) |
 
-## 数据绑定 (data-binding)
+### 数据绑定 (data-binding)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -62,7 +83,7 @@
 | hidden-fields-remain-consist-after-copy | 隐藏字段在复制时保持一致 | [./samples/data-binding/hidden-fields-remain-consist-after-copy/](./samples/data-binding/hidden-fields-remain-consist-after-copy/) |
 | copy-cut-does-not-effect-data-binding | 复制粘贴剪切不影响数据绑定 | [./samples/data-binding/copy-cut-does-not-effect-data-binding/](./samples/data-binding/copy-cut-does-not-effect-data-binding/) |
 
-## 打印相关 (print)
+### 打印相关 (print)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -76,7 +97,7 @@
 | print-dynamic-adjust-rowheight-add-border | 打印时动态调整行高、添加边框 | [./samples/print/print-dynamic-adjust-rowheight-add-border/](./samples/print/print-dynamic-adjust-rowheight-add-border/) |
 | customize-print-pape-size | 自定义打印纸张尺寸 | [./samples/print/customize-print-pape-size/](./samples/print/customize-print-pape-size/) |
 
-## 单元格相关 (cell)
+### 单元格相关 (cell)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -137,7 +158,7 @@
 | cellbuttons-command-register | 单元格按钮（CellButtons）命令注册 | [./samples/cell/cellbuttons-command-register/](./samples/cell/cellbuttons-command-register/) |
 | richtext-dropdown-list | 富文本下拉框 | [./samples/cell/richtext-dropdown-list/](./samples/cell/richtext-dropdown-list/) |
 
-## 行列设置 (row-column)
+### 行列设置 (row-column)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -169,7 +190,7 @@
 | update-pivottable-when-insert-column-to-datasource | 表格绑定插入列时更新数据透视表 | [./samples/row-column/update-pivottable-when-insert-column-to-datasource/](./samples/row-column/update-pivottable-when-insert-column-to-datasource/) |
 | pagination-preview-enhancement | 分页预览线样式增强 | [./samples/row-column/pagination-preview-enhancement/](./samples/row-column/pagination-preview-enhancement/) |
 
-## 事件行为 (events)
+### 事件行为 (events)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -226,7 +247,7 @@
 | merge-cells-shortcut | 快捷键实现单元格合并 | [./samples/events/merge-cells-shortcut/](./samples/events/merge-cells-shortcut/) |
 | insert-table-to-filter-range | 筛选区域可添加table | [./samples/events/insert-table-to-filter-range/](./samples/events/insert-table-to-filter-range/) |
 
-## 格式样式 (format-style)
+### 格式样式 (format-style)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -276,7 +297,7 @@
 | reuse-custom-table-style | 自定义table样式复用 | [./samples/format-style/reuse-custom-table-style/](./samples/format-style/reuse-custom-table-style/) |
 | pivottable-formula-conditional-formattin | 透视表的公式条件格式 | [./samples/format-style/pivottable-formula-conditional-formattin/](./samples/format-style/pivottable-formula-conditional-formattin/) |
 
-## 公式函数 (formula)
+### 公式函数 (formula)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -303,7 +324,7 @@
 | formula-cell-value-change-listen | 监听公式单元格值变化 | [./samples/formula/formula-cell-value-change-listen/](./samples/formula/formula-cell-value-change-listen/) |
 | formula-arrow-trace | 公式依赖箭头绘制 | [./samples/formula/formula-arrow-trace/](./samples/formula/formula-arrow-trace/) |
 
-## 设计器相关 (designer)
+### 设计器相关 (designer)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -347,7 +368,7 @@
 | save-tip-before-open-another-file | 保存提示的弹窗 | [./samples/designer/save-tip-before-open-another-file/](./samples/designer/save-tip-before-open-another-file/) |
 | designer-menu-add-spinner-input | 设计器菜单添加步进输入框 | [./samples/designer/designer-menu-add-spinner-input/](./samples/designer/designer-menu-add-spinner-input/) |
 
-## 复制粘贴 (copy-paste)
+### 复制粘贴 (copy-paste)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -372,7 +393,7 @@
 | ignore-hidden-row-when-copy | 复制时忽略隐藏行 | [./samples/copy-paste/ignore-hidden-row-when-copy/](./samples/copy-paste/ignore-hidden-row-when-copy/) |
 | ctrl-c-performance-optimize-under-big-data | Ctrl+C复制卡死问题优化 | [./samples/copy-paste/ctrl-c-performance-optimize-under-big-data/](./samples/copy-paste/ctrl-c-performance-optimize-under-big-data/) |
 
-## 数据校验 (data-validation)
+### 数据校验 (data-validation)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -389,7 +410,7 @@
 | datavalidator-cascading-dropdown | 数据验证实现级联下拉列表 | [./samples/data-validation/datavalidator-cascading-dropdown/](./samples/data-validation/datavalidator-cascading-dropdown/) |
 | cell-input-limited-in-numbers | 限制单元格只能输入数字 | [./samples/data-validation/cell-input-limited-in-numbers/](./samples/data-validation/cell-input-limited-in-numbers/) |
 
-## 菜单相关 (menu)
+### 菜单相关 (menu)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -418,7 +439,7 @@
 | add-designer-multi-level-context-menu | 新增设计器-右键多层级菜单 | [./samples/menu/add-designer-multi-level-context-menu/](./samples/menu/add-designer-multi-level-context-menu/) |
 | context-menu-add-seperator | 右键菜单添加分隔符 | [./samples/menu/context-menu-add-seperator/](./samples/menu/context-menu-add-seperator/) |
 
-## 其他 (others)
+### 其他 (others)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
@@ -447,20 +468,10 @@
 | pivottable-custom-sorting | 透视表自定义排序 | [./samples/others/pivottable-custom-sorting/](./samples/others/pivottable-custom-sorting/) |
 | custom-range-selector | 自定义区域选择器 | [./samples/others/custom-range-selector/](./samples/others/custom-range-selector/) |
 
-## 注册模板 (register-template)
+### 注册模板 (register-template)
 
 | 英文名 | 中文名 | 链接 |
 |---|---|---|
 | register-linkage-selector-dialog-template | 联动弹窗 | [./samples/register-template/register-linkage-selector-dialog-template/](./samples/register-template/register-linkage-selector-dialog-template/) |
 | add-customize-dialog | 自定义对话框 | [./samples/register-template/add-customize-dialog/](./samples/register-template/add-customize-dialog/) |
 | remove-some-template-page | 删除Template部分功能 | [./samples/register-template/remove-some-template-page/](./samples/register-template/remove-some-template-page/) |
-
-For more information about SpreadJS, please visit:
-
-SpreadJS Official Website: https://www.grapecity.com.cn/developer/spreadjs
-
-SpreadJS API Document: https://demo.grapecity.com.cn/spreadjs/help/api/classes/GC.Spread.Sheets.Worksheet
-
-SpreadJS Product Document: https://demo.grapecity.com.cn/spreadjs/help/docs/started-guide
-
-SpreadJS Tutorial Samples: https://demo.grapecity.com.cn/spreadjs/SpreadJSTutorial/#/samples
